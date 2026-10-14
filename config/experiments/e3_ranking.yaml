@@ -3,4 +3,4 @@ phase: phase1
 models: [deepseek_v41_flash]
 occupations: all
 experiments:
-  e3: {samples: 5}
+  e3: {samples: 3}

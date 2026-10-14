@@ -29,6 +29,9 @@ dev = [
     "pytest-asyncio>=0.23",
 ]
 
+[project.scripts]
+audit = "audit.cli:app"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

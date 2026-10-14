@@ -5,6 +5,6 @@ occupations: [software_engineer, administrative_assistant]   # 1 male-dom high-t
 experiments:
   e1: {samples: 5}
   e2: {samples: 5}
-  e3: {samples: 5}
+  e3: {samples: 3}
   e4: {samples: 3}     # trimmed from 5 to keep pilot under $5 phase cap at peak pricing; documented in QUESTIONS.md
   e5: {enabled: false}
