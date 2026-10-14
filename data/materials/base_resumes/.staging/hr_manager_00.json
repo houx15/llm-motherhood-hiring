@@ -1,0 +1,85 @@
+{
+  "resume_id": "hr_manager_00",
+  "occupation_id": "hr_manager",
+  "source": "kaggle",
+  "summary": "Results-driven HR professional with over 10 years of experience in recruiting, employee relations, and personnel management. Skilled in talent acquisition, training, and fostering positive workplace environments.",
+  "experience": [
+    {
+      "title": "HR Associate",
+      "employer": "a national retail chain",
+      "start": "2015-01",
+      "end": "Present",
+      "bullets": [
+        "Recruit and interview at least 10 applicants per week.",
+        "Answer employee questions regarding benefits and company protocol, resolving issues.",
+        "Conduct new employee orientation to foster positive attitude toward organizational objectives.",
+        "Direct personnel, training, and labor relations activities.",
+        "Identify staff vacancies and recruit, interview, and select applicants.",
+        "Serve as a link between management and employees by handling questions, interpreting and administering contracts, and helping resolve work-related problems."
+      ]
+    },
+    {
+      "title": "Cashier Captain",
+      "employer": "a regional grocery chain",
+      "start": "2014-10",
+      "end": "2014-12",
+      "bullets": [
+        "Maintained knowledge of current promotions, policies regarding payment and exchanges, and security practices.",
+        "Operated a cash register to process cash, check and credit card transactions.",
+        "Administered all point of sale opening and closing procedures.",
+        "Offered exceptional customer service to differentiate and promote the company brand.",
+        "Offered direction and gave constructive feedback to motivate team members."
+      ]
+    },
+    {
+      "title": "Sales Associate",
+      "employer": "a national clothing retailer",
+      "start": "2014-07",
+      "end": "2014-09",
+      "bullets": [
+        "Explained information about the quality, value and style of products to influence customer buying decisions.",
+        "Guided customers in choosing items that reflected personal style and shape.",
+        "Recommended merchandise based on customer needs."
+      ]
+    },
+    {
+      "title": "Administrative Assistant",
+      "employer": "a local community organization",
+      "start": "2014-02",
+      "end": "2014-06",
+      "bullets": [
+        "Managed the receptionist area, including greeting visitors and responding to telephone and in-person requests for information.",
+        "Designed electronic file systems and maintained electronic and paper files.",
+        "Maintained the front desk and reception area in a neat and organized fashion.",
+        "Dispersed incoming mail to correct recipients throughout the office.",
+        "Organized files, developed spreadsheets, faxed reports and scanned documents.",
+        "Made copies, sent faxes and handled all incoming and outgoing correspondence."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Arts in Culture and Media Studies",
+      "institution": "a state university",
+      "year": 2015
+    }
+  ],
+  "skills": [
+    "Recruiting",
+    "Employee Relations",
+    "Training and Development",
+    "New Hire Orientation",
+    "Personnel Records Maintenance",
+    "Hiring and Retention",
+    "Exceptional Interpersonal Skills",
+    "Communication",
+    "Problem Solving",
+    "Time Management",
+    "Critical Thinking",
+    "Organizational Skills",
+    "Administrative Management"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

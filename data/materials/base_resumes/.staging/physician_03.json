@@ -1,0 +1,92 @@
+{
+  "resume_id": "physician_03",
+  "occupation_id": "physician",
+  "source": "synthetic",
+  "summary": "Board-certified physician with 10 years of continuous full-time experience delivering comprehensive primary care in mid-size regional and community practice settings. Skilled in chronic disease management, preventive care, and coordinating multidisciplinary teams to improve patient outcomes.",
+  "experience": [
+    {
+      "title": "Physician",
+      "employer": "a mid-size regional multispecialty group",
+      "start": "2022-07",
+      "end": "Present",
+      "bullets": [
+        "Manage a panel of approximately 2,100 patients, providing continuity of care for acute and chronic conditions including hypertension, diabetes, and hyperlipidemia.",
+        "Order and interpret laboratory, imaging, and diagnostic studies; discuss results and treatment plans with patients in shared decision-making visits.",
+        "Prescribe and adjust medications, administer adult and pediatric vaccinations, and perform minor office procedures within scope of practice.",
+        "Direct and coordinate the work of nurses, medical assistants, and referral coordinators, improving average clinic visit throughput by 12%.",
+        "Refer patients to cardiology, endocrinology, behavioral health, and other specialists, tracking closed-loop follow-up within 30 days.",
+        "Counsel patients on diet, activity, hygiene, and disease prevention, contributing to a 15% increase in completed preventive screenings."
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a community health system",
+      "start": "2019-02",
+      "end": "2022-06",
+      "bullets": [
+        "Delivered full-spectrum outpatient primary care for a diverse urban and suburban population across all age groups.",
+        "Monitored patient conditions and progress, reevaluating treatment plans at follow-up visits and through patient portal outreach.",
+        "Collected, recorded, and maintained accurate patient histories, examination findings, and care plans in the electronic health record.",
+        "Precepted medical residents and nurse practitioner students during clinic sessions, supervising histories, exams, and documentation.",
+        "Led a quality improvement initiative on diabetes management that raised the proportion of patients meeting A1c targets by 18%."
+      ]
+    },
+    {
+      "title": "Physician",
+      "employer": "a regional primary care clinic",
+      "start": "2016-09",
+      "end": "2019-01",
+      "bullets": [
+        "Provided preventive care, health maintenance visits, and same-day acute care for patients of all ages.",
+        "Diagnosed and treated common acute illnesses and injuries, ordering and interpreting tests to confirm clinical impressions.",
+        "Administered vaccinations and prescribed therapies in accordance with evidence-based guidelines and formulary requirements.",
+        "Educated patients and community members on nutrition, physical activity, and chronic disease prevention through clinic-based outreach.",
+        "Collaborated with nursing and front-office staff to standardize hypertension follow-up protocols, reducing missed follow-ups by 20%."
+      ]
+    },
+    {
+      "title": "Physician",
+      "employer": "a nonprofit community practice",
+      "start": "2015-07",
+      "end": "2016-08",
+      "bullets": [
+        "Completed comprehensive outpatient care for an underserved population, including preventive visits and chronic disease follow-up.",
+        "Recorded patient medical histories, physical exam findings, and treatment plans accurately and promptly.",
+        "Ordered and interpreted routine diagnostic tests and communicated results and next steps to patients.",
+        "Referred patients needing specialized care to appropriate specialists and community resources.",
+        "Participated in daily huddles with nurses, assistants, and care coordinators to review high-risk patients and coordinate care."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Medicine (MD)",
+      "institution": "a state university school of medicine",
+      "year": 2015
+    },
+    {
+      "degree": "Bachelor of Science in Biology",
+      "institution": "a public university",
+      "year": 2011
+    }
+  ],
+  "skills": [
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Speaking",
+    "Active Learning",
+    "Monitoring",
+    "Science",
+    "Learning Strategies",
+    "Mathematics",
+    "Chronic Disease Management",
+    "Preventive Care",
+    "Electronic Health Records",
+    "Care Coordination"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

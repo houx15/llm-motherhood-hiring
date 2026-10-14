@@ -1,0 +1,509 @@
+[
+  {
+    "resume_id": "administrative_assistant_00",
+    "occupation_id": "administrative_assistant",
+    "source": "kaggle",
+    "summary": "Administrative professional with 9 years of experience in nonprofit administration, budgeting, grant management, and office coordination. Skilled in Microsoft Office, QuickBooks, scheduling, and supporting leadership and teams.",
+    "experience": [
+      {
+        "title": "Administrative Coordinator",
+        "employer": "a regional nonprofit arts organization",
+        "start": "2017-10",
+        "end": "Present",
+        "bullets": [
+          "Coordinate daily office operations, including scheduling, correspondence, and meeting logistics.",
+          "Process and track grant applications and prepare reports for funders.",
+          "Maintain budgets and financial records using QuickBooks and spreadsheets.",
+          "Recruit, schedule, and support volunteers and event participants."
+        ]
+      },
+      {
+        "title": "Office Administrator",
+        "employer": "a national maritime services company",
+        "start": "2015-03",
+        "end": "2017-09",
+        "bullets": [
+          "Provided administrative support to site leadership, including travel coordination and performance review tracking.",
+          "Developed and maintained a qualifications and certifications tracking system for operational staff.",
+          "Supported contract documentation, RFP preparation, and vendor communication.",
+          "Delivered training on human resource and workplace policies."
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "employer": "a regional logistics company",
+        "start": "2014-03",
+        "end": "2015-02",
+        "bullets": [
+          "Managed daily schedules, event coordination, and work site communications.",
+          "Maintained filing systems and prepared routine reports for management.",
+          "Assisted with procurement, invoicing, and preventive maintenance records.",
+          "Handled confidential correspondence and document control."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Arts in Business Administration",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Associate of Applied Science in Office Administration",
+        "institution": "a community college",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Microsoft Office",
+      "QuickBooks",
+      "Spreadsheets",
+      "Calendar management",
+      "Travel coordination",
+      "Record keeping",
+      "Report preparation",
+      "Budget tracking",
+      "Grant administration",
+      "Event coordination",
+      "Volunteer coordination",
+      "Customer service",
+      "Written communication",
+      "Document control"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "administrative_assistant_01",
+    "occupation_id": "administrative_assistant",
+    "source": "kaggle",
+    "summary": "Detail-oriented professional with 10 years of experience in education and administrative coordination. Skilled in scheduling, records management, budget tracking, and cross-team communication to support efficient office operations.",
+    "experience": [
+      {
+        "title": "Administrative Assistant",
+        "employer": "a regional public school district",
+        "start": "2023-08",
+        "end": "Present",
+        "bullets": [
+          "Provide administrative support to multiple departments, including calendar management, meeting scheduling, and document preparation.",
+          "Maintain organized digital and paper filing systems for student, staff, and compliance records.",
+          "Assist with budget tracking, purchase requisitions, and reconciliation of departmental funds.",
+          "Draft and distribute internal communications, agendas, and meeting minutes to staff and administration.",
+          "Coordinate logistics for events, trainings, and community meetings, including room bookings and materials preparation."
+        ]
+      },
+      {
+        "title": "Department Coordinator",
+        "employer": "a public high school",
+        "start": "2020-07",
+        "end": "2023-07",
+        "bullets": [
+          "Planned and scheduled recurring departmental meetings, prepared agendas, and recorded meeting minutes.",
+          "Tracked and allocated departmental funds, processed invoices, and maintained expense records.",
+          "Served as liaison between administration and staff, disseminating information and collecting feedback.",
+          "Maintained filing systems for curriculum documents, staff records, and compliance reports.",
+          "Supported onboarding and scheduling needs for departmental staff and substitute coverage."
+        ]
+      },
+      {
+        "title": "Program Advisor",
+        "employer": "a public high school",
+        "start": "2017-07",
+        "end": "2020-06",
+        "bullets": [
+          "Coordinated student program activities, including scheduling meetings, events, and facilities.",
+          "Maintained participant records, attendance logs, and program documentation.",
+          "Managed program communications, including announcements, permission forms, and follow-up correspondence.",
+          "Ordered supplies and tracked program expenditures within approved budgets.",
+          "Collaborated with staff and administrators to plan and execute school-wide initiatives."
+        ]
+      },
+      {
+        "title": "Assistant Teacher",
+        "employer": "a public high school",
+        "start": "2014-08",
+        "end": "2017-06",
+        "bullets": [
+          "Maintained organized records of assignments, attendance, and student progress.",
+          "Prepared instructional materials, reports, and correspondence for staff and administration.",
+          "Scheduled meetings and coordinated logistics for department activities and events.",
+          "Supported document management and data entry using standard office software.",
+          "Communicated with staff and administration to ensure timely completion of administrative tasks."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Teaching in Secondary Education",
+        "institution": "a state university",
+        "year": 2012
+      },
+      {
+        "degree": "Bachelor of Arts in English",
+        "institution": "a state university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Calendar management",
+      "Meeting scheduling and minutes",
+      "Records management",
+      "Data entry",
+      "Microsoft Office Suite",
+      "Google Workspace",
+      "Budget tracking",
+      "Purchase requisitions",
+      "Written and verbal communication",
+      "Event coordination",
+      "Document preparation",
+      "Customer service",
+      "Filing systems",
+      "Time management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "administrative_assistant_02",
+    "occupation_id": "administrative_assistant",
+    "source": "synthetic",
+    "summary": "Detail-oriented administrative professional with over nine years of experience supporting office operations in industry-leading organizations. Skilled in scheduling, records management, and database upkeep, with a strong record of accurate, efficient front-desk and clerical support.",
+    "experience": [
+      {
+        "title": "Administrative Assistant",
+        "employer": "an industry-leading healthcare organization",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Answer and route an average of 60 daily calls, taking messages and transferring callers to appropriate departments.",
+          "Greet visitors, handle inquiries, and direct them to the correct staff members according to their needs.",
+          "Create and maintain electronic databases tracking appointments, visitor logs, and department correspondence.",
+          "Set up and manage paper and digital filing systems, updating attendance records and paperwork as needed.",
+          "Schedule and confirm appointments for supervisors and coordinate calendars across three departments.",
+          "Operate office equipment such as copiers and phone systems, arranging repairs when malfunctions occur."
+        ]
+      },
+      {
+        "title": "Office Assistant",
+        "employer": "a leading professional services firm",
+        "start": "2019-04",
+        "end": "2022-06",
+        "bullets": [
+          "Operated electronic mail systems to coordinate internal and external information flow, reducing response times by 20%.",
+          "Entered and updated client records in a database with 99% accuracy across thousands of entries.",
+          "Handled incoming calls, screened inquiries, and forwarded messages to appropriate individuals.",
+          "Maintained electronic and paper filing systems for contracts, correspondence, and attendance documentation.",
+          "Scheduled and confirmed client appointments, managing a shared calendar for six team members."
+        ]
+      },
+      {
+        "title": "Receptionist and Data Entry Clerk",
+        "employer": "a nationally recognized retail organization",
+        "start": "2016-05",
+        "end": "2019-03",
+        "bullets": [
+          "Greeted up to 80 visitors daily and directed them to the appropriate persons based on their needs.",
+          "Answered a multi-line phone system, providing information to callers and taking accurate messages.",
+          "Used word processing and database software to prepare reports, labels, and correspondence.",
+          "Organized and updated paper files, recording information and maintaining attendance and supply records.",
+          "Coordinated the flow of information through email systems between store locations and headquarters."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2016
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Monitoring",
+      "Critical Thinking",
+      "Database Management",
+      "Records and Filing Systems",
+      "Appointment Scheduling",
+      "Email and Calendar Coordination",
+      "Office Equipment Operation",
+      "Data Entry Accuracy",
+      "Customer Service",
+      "Time Management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "administrative_assistant_03",
+    "occupation_id": "administrative_assistant",
+    "source": "synthetic",
+    "summary": "Administrative Assistant with over nine years of continuous experience supporting front-office operations, scheduling, records management, and database upkeep at well-established local employers. Skilled at handling high call and visitor volumes while keeping filing systems accurate and office equipment running smoothly.",
+    "experience": [
+      {
+        "title": "Administrative Assistant",
+        "employer": "a well-established local healthcare services employer",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Answer and route an average of 60 incoming calls daily, taking messages and transferring callers to appropriate departments.",
+          "Greet visitors and patients, verify appointments, and notify staff of arrivals, handling up to 40 check-ins per day.",
+          "Maintain and update electronic filing systems for attendance records, correspondence, and patient paperwork with 99% accuracy.",
+          "Schedule and confirm appointments for six supervisors and clinical staff using shared calendar systems.",
+          "Operate fax machines, copiers, and the multi-line phone system, and coordinate service calls when equipment malfunctions."
+        ]
+      },
+      {
+        "title": "Office Assistant",
+        "employer": "a well-established local property management firm",
+        "start": "2019-01",
+        "end": "2022-06",
+        "bullets": [
+          "Entered and maintained tenant and vendor information in a property database, keeping more than 1,200 records current.",
+          "Coordinated internal and external email flow, distributing notices and following up on maintenance requests within one business day.",
+          "Set up and managed paper and electronic lease filing systems, recording updates to documents and correspondence.",
+          "Scheduled and confirmed appointments for prospective tenants and inspectors, reducing missed showings by 20%."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a well-established local professional services employer",
+        "start": "2016-05",
+        "end": "2018-12",
+        "bullets": [
+          "Answered a busy switchboard, provided general information to callers, and forwarded messages to the correct staff members.",
+          "Greeted clients and visitors, handled inquiries, and directed them to the appropriate individuals according to their needs.",
+          "Maintained attendance records and office supply logs, updating paperwork and filing documents daily.",
+          "Used word processing and spreadsheet applications to prepare correspondence, labels, and internal reports."
+        ]
+      },
+      {
+        "title": "Clerical Assistant",
+        "employer": "a well-established local retail distribution employer",
+        "start": "2014-09",
+        "end": "2016-04",
+        "bullets": [
+          "Created and maintained paper filing systems for shipping documents, invoices, and employee records.",
+          "Operated copiers, fax machines, and phone systems, arranging repairs when equipment failed.",
+          "Entered inventory and contact information into databases and verified data for completeness.",
+          "Supported appointment scheduling for the office manager and confirmed meetings with external vendors."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Office Administration",
+        "institution": "a local community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public regional high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Monitoring",
+      "Critical Thinking",
+      "Active Learning",
+      "Database Management",
+      "Records and Filing Systems",
+      "Appointment Scheduling",
+      "Multi-line Phone Systems",
+      "Office Equipment Operation",
+      "Email Coordination",
+      "Data Entry"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "administrative_assistant_04",
+    "occupation_id": "administrative_assistant",
+    "source": "synthetic",
+    "summary": "Detail-oriented administrative assistant with over 10 years of experience supporting fast-paced offices in an industry-leading organization. Proven ability to manage front-desk operations, scheduling, and record-keeping while maintaining a high level of accuracy and professionalism.",
+    "experience": [
+      {
+        "title": "Administrative Assistant",
+        "employer": "an industry-leading healthcare organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Answer and route an average of 75 calls daily, taking messages and transferring callers to appropriate departments.",
+          "Greet visitors and patients, handle inquiries, and direct them to the correct personnel according to their needs.",
+          "Maintain and update electronic health record databases, entering patient information with 99% accuracy.",
+          "Manage paper and electronic filing systems for attendance records, correspondence, and confidential documents.",
+          "Schedule and confirm appointments for multiple providers, reducing no-show rates by 15%."
+        ]
+      },
+      {
+        "title": "Office Administrative Assistant",
+        "employer": "a regional financial services firm",
+        "start": "2018-01",
+        "end": "2021-05",
+        "bullets": [
+          "Operated multi-line phone system, providing information to callers and taking detailed messages.",
+          "Created and maintained client databases, ensuring accurate entry and retrieval of account information.",
+          "Used word processing and spreadsheet software to prepare correspondence, reports, and memos.",
+          "Coordinated internal and external email communications, distributing information to staff and clients.",
+          "Operated office equipment including copiers and fax machines and arranged for repairs when needed."
+        ]
+      },
+      {
+        "title": "Administrative Support Assistant",
+        "employer": "a state university department",
+        "start": "2016-03",
+        "end": "2017-12",
+        "bullets": [
+          "Served as first point of contact, greeting students and visitors and directing them to appropriate offices.",
+          "Set up and managed electronic filing systems for student records, attendance, and department correspondence.",
+          "Scheduled appointments for faculty advisors and confirmed meetings via phone and email.",
+          "Entered data into departmental databases and generated routine reports using word processing software."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a local property management company",
+        "start": "2014-08",
+        "end": "2016-02",
+        "bullets": [
+          "Answered and forwarded telephone calls, took messages, and provided basic information to tenants.",
+          "Greeted visitors and handled inquiries, directing them to the appropriate staff members.",
+          "Maintained filing systems for lease agreements, maintenance requests, and office correspondence.",
+          "Operated office equipment such as phone systems and copiers and reported malfunctions."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Monitoring",
+      "Critical Thinking",
+      "Active Learning",
+      "Database Management",
+      "Word Processing",
+      "Email Systems",
+      "Appointment Scheduling",
+      "Office Equipment Operation",
+      "Filing Systems",
+      "Data Entry"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "administrative_assistant_05",
+    "occupation_id": "administrative_assistant",
+    "source": "synthetic",
+    "summary": "Administrative Assistant with over nine years of continuous experience supporting office operations in a growing mid-market company. Skilled in front-desk reception, database entry, scheduling, and electronic records management.",
+    "experience": [
+      {
+        "title": "Administrative Assistant",
+        "employer": "a growing mid-market healthcare services company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Answer and direct an average of 60 incoming calls per day, taking messages and transferring callers to appropriate staff.",
+          "Greet visitors and callers, handle inquiries, and direct them to the correct departments or individuals.",
+          "Create and maintain client records in the customer database, entering and updating more than 200 entries weekly.",
+          "Set up and manage electronic filing systems for correspondence and attendance records, reducing document retrieval time by 25%.",
+          "Schedule and confirm appointments for supervisors and clients using shared calendar systems."
+        ]
+      },
+      {
+        "title": "Office Assistant",
+        "employer": "a growing mid-market logistics company",
+        "start": "2019-03",
+        "end": "2021-05",
+        "bullets": [
+          "Operated office equipment including copiers, fax machines, and phone systems, arranging repairs when malfunctions occurred.",
+          "Coordinated internal and external email correspondence to support the flow of information between departments.",
+          "Maintained paper and electronic filing systems for contracts and vendor paperwork, updating records as needed.",
+          "Used word processing and database software to prepare reports and enter shipment tracking information.",
+          "Monitored office supply levels and submitted orders to keep daily operations running smoothly."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a growing mid-market property management firm",
+        "start": "2016-08",
+        "end": "2019-02",
+        "bullets": [
+          "Answered multi-line telephone system and gave information to callers or transferred calls to appropriate individuals.",
+          "Greeted visitors, handled their inquiries, and directed them to the appropriate persons according to their needs.",
+          "Entered tenant and vendor information into databases and updated records to ensure accuracy.",
+          "Operated electronic mail systems to distribute announcements and coordinate appointments for property managers.",
+          "Set up and maintained filing systems for lease documents and correspondence."
+        ]
+      },
+      {
+        "title": "Administrative Clerk",
+        "employer": "a growing mid-market retail distribution company",
+        "start": "2015-06",
+        "end": "2016-07",
+        "bullets": [
+          "Used computers for word processing and database management to support daily office tasks.",
+          "Recorded attendance and updated paperwork in paper and electronic files.",
+          "Operated fax machines and copiers to transmit and duplicate documents for staff.",
+          "Scheduled and confirmed appointments for supervisors and external partners."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Monitoring",
+      "Critical Thinking",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Database Management",
+      "Telephone Systems",
+      "Records Management",
+      "Appointment Scheduling",
+      "Office Equipment Operation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

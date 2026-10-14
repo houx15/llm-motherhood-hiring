@@ -1,0 +1,507 @@
+[
+  {
+    "resume_id": "customer_service_representative_00",
+    "occupation_id": "customer_service_representative",
+    "source": "kaggle",
+    "summary": "Dedicated customer service professional with strong active listening, time management, and problem-solving skills. Adept at handling multiple customer needs simultaneously in fast-paced environments while maintaining a courteous and professional demeanor.",
+    "experience": [
+      {
+        "title": "Community Advocate",
+        "employer": "a regional community services organization",
+        "start": "2022-11",
+        "end": "Present",
+        "bullets": [
+          "Provided exceptional customer service to promote and differentiate the organization's brand.",
+          "Managed daily office operations and maintained community and consumer relations.",
+          "Balanced the needs of multiple customers simultaneously in a fast-paced environment.",
+          "Collaborated with team members to deliver a positive and supportive service experience.",
+          "Built and maintained effective relationships with peers and management."
+        ]
+      },
+      {
+        "title": "Lead Human Resource Recruiter",
+        "employer": "a national staffing and recruitment firm",
+        "start": "2019-05",
+        "end": "2022-10",
+        "bullets": [
+          "Answered customer questions and addressed problems and complaints in person and via phone.",
+          "Helped customers select products and services that best fit their personal needs.",
+          "Maintained visually appealing and effective displays for the entire office.",
+          "Built customer confidence by actively listening to concerns and giving appropriate feedback.",
+          "Offered direction and constructive feedback to motivate team members."
+        ]
+      },
+      {
+        "title": "Exhibit Creator",
+        "employer": "a regional exhibition and events company",
+        "start": "2015-08",
+        "end": "2019-04",
+        "bullets": [
+          "Maintained visually appealing and effective displays for the entire building.",
+          "Offered exceptional customer service to differentiate and promote the company brand.",
+          "Collaborated with customer service team members to deliver exceptional service.",
+          "Balanced the needs of multiple customers simultaneously in a fast-paced retail environment.",
+          "Communicated policy violations to the leadership team in a timely manner."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Science in Social and Behavioral Sciences",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "active listening",
+      "time management",
+      "courteous demeanor",
+      "detail-oriented",
+      "telecommunication skills",
+      "problem solving",
+      "team collaboration",
+      "organizational skills",
+      "customer service",
+      "flexible schedule",
+      "multi-tasking",
+      "professional communication"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "customer_service_representative_01",
+    "occupation_id": "customer_service_representative",
+    "source": "kaggle",
+    "summary": "Customer-focused professional with 9 years of experience in retail sales, cashiering, and front-line service roles. Skilled in resolving customer issues, processing transactions accurately, and maintaining strong interpersonal communication.",
+    "experience": [
+      {
+        "title": "Cashier Captain",
+        "employer": "a national retail chain",
+        "start": "2017-01",
+        "end": "Present",
+        "bullets": [
+          "Maintained knowledge of current promotions, payment and exchange policies, and security practices.",
+          "Operated a cash register to process cash, check, and credit card transactions.",
+          "Administered all point of sale opening and closing procedures.",
+          "Offered exceptional customer service to differentiate and promote the company brand.",
+          "Offered direction and gave constructive feedback to motivate team members."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a regional retail company",
+        "start": "2016-07",
+        "end": "2016-12",
+        "bullets": [
+          "Explained information about the quality, value, and style of products to influence customer buying decisions.",
+          "Guided customers in choosing items that reflected personal style and shape.",
+          "Recommended merchandise based on customer needs."
+        ]
+      },
+      {
+        "title": "Cashier and Shipment Associate",
+        "employer": "a national supermarket chain",
+        "start": "2016-02",
+        "end": "2016-06",
+        "bullets": [
+          "Computed sales prices, total purchases, and processed payments.",
+          "Maintained knowledge of current promotions, payment and exchange policies, and security practices.",
+          "Operated a cash register to process cash, check, and credit card transactions.",
+          "Replenished floor stock and processed shipments to ensure product availability for customers."
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "employer": "a local office services company",
+        "start": "2015-01",
+        "end": "2016-01",
+        "bullets": [
+          "Managed the receptionist area, including greeting visitors and responding to telephone and in-person requests for information.",
+          "Designed electronic file systems and maintained electronic and paper files.",
+          "Maintained the front desk and reception area in a neat and organized fashion.",
+          "Dispersed incoming mail to correct recipients throughout the office.",
+          "Organized files, developed spreadsheets, faxed reports, and scanned documents.",
+          "Made copies, sent faxes, and handled all incoming and outgoing correspondence."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Arts in Culture and Media Studies",
+        "institution": "a state university",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Customer Service",
+      "Cash Handling",
+      "POS Systems",
+      "Problem Solving",
+      "Communication",
+      "Interpersonal Skills",
+      "Time Management",
+      "Organizational Skills",
+      "Critical Thinking",
+      "Attention to Detail",
+      "Team Collaboration",
+      "Conflict Resolution"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "customer_service_representative_02",
+    "occupation_id": "customer_service_representative",
+    "source": "synthetic",
+    "summary": "Customer service representative with over nine years of continuous experience handling high-volume inquiries, billing questions, and complaint resolution by phone and in person. Recognized for accurate recordkeeping and effective de-escalation in a well-established local employer's service center.",
+    "experience": [
+      {
+        "title": "Senior Customer Service Representative",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Confer with customers by telephone and in person to provide product and service information, enter orders, and process account cancellations.",
+          "Keep detailed records of customer interactions, inquiries, complaints, and actions taken in the customer management system, maintaining 98% accuracy on audits.",
+          "Determine charges for requested services, collect payments and deposits, and arrange billing adjustments averaging 45 transactions per week.",
+          "Refer unresolved grievances to designated departments and follow up to confirm appropriate changes resolved the customer's problem.",
+          "Complete contract forms, change of address records, and service discontinuance orders using internal computer applications."
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "employer": "a regional retail services company",
+        "start": "2017-09",
+        "end": "2021-05",
+        "bullets": [
+          "Resolved customer service and billing complaints by exchanging merchandise, refunding money, and adjusting bills, closing roughly 30 cases per day.",
+          "Contacted customers to respond to inquiries and to notify them of claim investigation results and planned adjustments.",
+          "Checked accounts after resolution to ensure appropriate changes were made and documented the outcome in the interaction log.",
+          "Handled an average of 70 inbound calls per shift while maintaining a 94% first-contact resolution rate.",
+          "Assisted new hires with system navigation and call-handling procedures as an informal peer mentor."
+        ]
+      },
+      {
+        "title": "Customer Service Associate",
+        "employer": "a local financial services office",
+        "start": "2015-04",
+        "end": "2017-08",
+        "bullets": [
+          "Answered customer questions about products and services by phone and at the front counter, logging every inquiry and comment in the records system.",
+          "Entered orders, updated change of address records, and prepared contract forms using computer-based tools.",
+          "Collected deposits and payments and explained charges for requested services to customers.",
+          "Escalated complex or unresolved complaints to the appropriate department for further investigation."
+        ]
+      },
+      {
+        "title": "Call Center Representative",
+        "employer": "a community service organization",
+        "start": "2014-06",
+        "end": "2015-03",
+        "bullets": [
+          "Provided information about services and took orders over the phone while recording details of each interaction.",
+          "Documented complaints and comments and routed unresolved issues to designated departments.",
+          "Verified that promised changes were completed and contacted customers with the results of claim investigations."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate Degree in Business Administration",
+        "institution": "a local community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Records Management",
+      "Complaint Resolution",
+      "Billing and Payment Processing",
+      "Order Entry",
+      "Conflict De-escalation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "customer_service_representative_03",
+    "occupation_id": "customer_service_representative",
+    "source": "synthetic",
+    "summary": "Customer Service Representative with 9 years of experience resolving billing, order, and service complaints for high-volume contact centers. Skilled at de-escalating issues, documenting interactions accurately, and coordinating with internal departments to ensure lasting resolutions.",
+    "experience": [
+      {
+        "title": "Senior Customer Service Representative",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Handle 60-80 inbound calls per day, providing product and service information, entering orders, processing cancellations, and capturing complaint details in the customer relationship management system.",
+          "Resolve billing disputes by researching charges, issuing refunds or account adjustments, and confirming that corrections post correctly before closing each case.",
+          "Refer complex or unresolved grievances to the billing, technical, and claims departments and follow up with customers to communicate investigation results and planned adjustments.",
+          "Maintain detailed records of inquiries, comments, and actions taken, achieving a 97% documentation accuracy score in quarterly quality reviews.",
+          "Complete contract forms, change-of-address records, and service discontinuance orders while verifying customer identity and account details."
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "employer": "a national retail services company",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Conferred with customers by telephone and in person to answer questions about products, process exchanges, refund money, and adjust bills for service complaints.",
+          "Collected deposits and payments, determined charges for requested services, and arranged billing for new and modified accounts.",
+          "Checked account records after each adjustment to confirm that appropriate changes were made and that customer problems were fully resolved.",
+          "Contacted customers proactively to relay claim investigation results and notify them of approved adjustments, reducing repeat callbacks by 18%.",
+          "Met or exceeded monthly resolution targets for 12 consecutive quarters while averaging a 92% first-contact resolution rate."
+        ]
+      },
+      {
+        "title": "Customer Support Associate",
+        "employer": "a regional telecommunications provider",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Responded to telephone and written inquiries about services, orders, and account status, recording every interaction and the actions taken.",
+          "Processed service discontinuance orders, change-of-address records, and contract forms using company computer systems.",
+          "Escalated unresolved customer grievances to designated departments and tracked each case through to final resolution.",
+          "Assisted customers with payment arrangements and deposit collection, maintaining accurate billing notes for each transaction."
+        ]
+      },
+      {
+        "title": "Call Center Agent",
+        "employer": "a consumer services organization",
+        "start": "2015-02",
+        "end": "2015-12",
+        "bullets": [
+          "Answered inbound customer calls to provide information about products and services and to take or enter orders.",
+          "Recorded details of inquiries and complaints and documented the actions taken to resolve each issue.",
+          "Directed unresolved complaints to the appropriate department for further investigation and followed up on outcomes."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Service Orientation",
+      "Customer Complaint Resolution",
+      "Billing and Refund Processing",
+      "Order Entry and Account Management",
+      "CRM Documentation",
+      "Conflict De-escalation",
+      "Mathematics"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "customer_service_representative_04",
+    "occupation_id": "customer_service_representative",
+    "source": "synthetic",
+    "summary": "Customer Service Representative with over 9 years of experience resolving billing issues, processing orders, and documenting customer interactions in high-volume call center environments. Known for de-escalating complaints and coordinating cross-departmental follow-up to ensure accurate account resolutions.",
+    "experience": [
+      {
+        "title": "Senior Customer Service Representative",
+        "employer": "an industry-leading organization",
+        "start": "2022-09",
+        "end": "Present",
+        "bullets": [
+          "Confer with customers by telephone and in person to provide product and service information, enter orders, and process account cancellations.",
+          "Keep detailed records of inquiries, complaints, and actions taken in the customer relationship system for more than 60 interactions per day.",
+          "Resolve billing complaints by adjusting bills, issuing refunds, and arranging merchandise exchanges, maintaining a 96% first-contact resolution rate.",
+          "Determine charges for requested services, collect payments, and arrange billing, handling an average of $18,000 in monthly transactions.",
+          "Refer unresolved grievances to designated departments and follow up to confirm that appropriate changes were made to resolve customers' problems."
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "employer": "a national service provider",
+        "start": "2019-04",
+        "end": "2022-08",
+        "bullets": [
+          "Responded to customer inquiries by phone regarding claims and account status, notifying customers of claim investigation results and planned adjustments.",
+          "Completed contract forms, prepared change-of-address records, and issued service discontinuance orders using internal computer systems.",
+          "Contacted customers proactively to communicate resolution timelines, reducing inbound escalation calls by 22%.",
+          "Checked accounts after resolution to ensure that corrections were applied and documented each transaction accurately."
+        ]
+      },
+      {
+        "title": "Customer Support Associate",
+        "employer": "a regional retail organization",
+        "start": "2016-06",
+        "end": "2019-03",
+        "bullets": [
+          "Assisted customers with orders, returns, and service complaints by phone and in person while maintaining composure during high-volume periods.",
+          "Processed refunds, exchanges, and billing adjustments in accordance with company policy and documented all actions taken.",
+          "Collected deposits and payments, arranged billing for services requested, and balanced a daily cash drawer with zero discrepancies.",
+          "Escalated complex grievances to designated departments and tracked them to completion to confirm appropriate changes were made."
+        ]
+      },
+      {
+        "title": "Customer Service Trainee",
+        "employer": "a local business services organization",
+        "start": "2015-02",
+        "end": "2016-05",
+        "bullets": [
+          "Learned to confer with customers by telephone to provide information about products and services and to obtain details of complaints.",
+          "Recorded details of customer inquiries, complaints, and comments, along with actions taken, in the company database.",
+          "Supported senior representatives with order entry and account updates while developing active listening and speaking skills."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Complaint Resolution",
+      "Billing and Payment Processing",
+      "Order Entry",
+      "CRM Data Documentation",
+      "Cross-Departmental Referral"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "customer_service_representative_05",
+    "occupation_id": "customer_service_representative",
+    "source": "synthetic",
+    "summary": "Customer Service Representative with over 9 years of experience handling high-volume inbound and outbound customer interactions across retail and service environments. Skilled in complaint resolution, order processing, billing adjustments, and maintaining detailed records of customer transactions.",
+    "experience": [
+      {
+        "title": "Senior Customer Service Representative",
+        "employer": "a mid-size regional firm",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Serve as first point of contact for an average of 70 inbound customer calls per day, providing product and service information, entering orders, and processing account cancellations.",
+          "Document all customer interactions, inquiries, and complaints in the CRM system, recording actions taken and ensuring follow-up within 24 hours.",
+          "Resolve billing disputes by reviewing charges, issuing refunds, and adjusting invoices, achieving a 92% first-contact resolution rate.",
+          "Refer unresolved grievances to the claims and escalations department and monitor cases to confirm customers receive timely updates and final adjustments.",
+          "Train and mentor 4 new representatives on call handling procedures, system navigation, and active listening techniques."
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "employer": "a national retail services company",
+        "start": "2019-02",
+        "end": "2022-03",
+        "bullets": [
+          "Handled 60-80 daily customer inquiries by phone and in person regarding orders, returns, exchanges, and service discontinuance.",
+          "Processed merchandise exchanges and refunds while verifying eligibility and updating transaction records accurately.",
+          "Collected deposits and payments, arranged billing, and completed contract forms and change-of-address records using company systems.",
+          "Contacted customers proactively to communicate claim investigation results and planned billing adjustments.",
+          "Maintained a 95% customer satisfaction score across quarterly quality evaluations."
+        ]
+      },
+      {
+        "title": "Customer Support Associate",
+        "employer": "a regional utility services provider",
+        "start": "2016-06",
+        "end": "2019-01",
+        "bullets": [
+          "Responded to telephone and walk-in inquiries about service plans, account status, and payment options.",
+          "Entered service orders, scheduled appointments, and issued discontinuance orders through internal account management software.",
+          "Investigated and resolved routine service and billing complaints, escalating complex cases to supervisors when needed.",
+          "Kept detailed logs of customer comments, complaints, and corrective actions for quality reporting."
+        ]
+      },
+      {
+        "title": "Call Center Agent",
+        "employer": "a local business services firm",
+        "start": "2014-05",
+        "end": "2016-05",
+        "bullets": [
+          "Managed inbound calls to answer questions about products and services and direct customers to appropriate departments.",
+          "Recorded customer inquiries and comments in the ticketing system and followed up to confirm issues were resolved.",
+          "Assisted customers with order entry, account updates, and payment collection while adhering to verification procedures.",
+          "Met or exceeded monthly targets for call handling, accuracy, and customer follow-up."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Arts in Business Administration",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Customer Relationship Management (CRM)",
+      "Complaint Resolution",
+      "Order Processing",
+      "Billing and Refunds",
+      "Data Entry",
+      "Time Management",
+      "Conflict De-escalation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

@@ -1,0 +1,557 @@
+[
+  {
+    "resume_id": "hr_manager_00",
+    "occupation_id": "hr_manager",
+    "source": "kaggle",
+    "summary": "Results-driven HR professional with over 10 years of experience in recruiting, employee relations, and personnel management. Skilled in talent acquisition, training, and fostering positive workplace environments.",
+    "experience": [
+      {
+        "title": "HR Associate",
+        "employer": "a national retail chain",
+        "start": "2015-01",
+        "end": "Present",
+        "bullets": [
+          "Recruit and interview at least 10 applicants per week.",
+          "Answer employee questions regarding benefits and company protocol, resolving issues.",
+          "Conduct new employee orientation to foster positive attitude toward organizational objectives.",
+          "Direct personnel, training, and labor relations activities.",
+          "Identify staff vacancies and recruit, interview, and select applicants.",
+          "Serve as a link between management and employees by handling questions, interpreting and administering contracts, and helping resolve work-related problems."
+        ]
+      },
+      {
+        "title": "Cashier Captain",
+        "employer": "a regional grocery chain",
+        "start": "2014-10",
+        "end": "2014-12",
+        "bullets": [
+          "Maintained knowledge of current promotions, policies regarding payment and exchanges, and security practices.",
+          "Operated a cash register to process cash, check and credit card transactions.",
+          "Administered all point of sale opening and closing procedures.",
+          "Offered exceptional customer service to differentiate and promote the company brand.",
+          "Offered direction and gave constructive feedback to motivate team members."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a national clothing retailer",
+        "start": "2014-07",
+        "end": "2014-09",
+        "bullets": [
+          "Explained information about the quality, value and style of products to influence customer buying decisions.",
+          "Guided customers in choosing items that reflected personal style and shape.",
+          "Recommended merchandise based on customer needs."
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "employer": "a local community organization",
+        "start": "2014-02",
+        "end": "2014-06",
+        "bullets": [
+          "Managed the receptionist area, including greeting visitors and responding to telephone and in-person requests for information.",
+          "Designed electronic file systems and maintained electronic and paper files.",
+          "Maintained the front desk and reception area in a neat and organized fashion.",
+          "Dispersed incoming mail to correct recipients throughout the office.",
+          "Organized files, developed spreadsheets, faxed reports and scanned documents.",
+          "Made copies, sent faxes and handled all incoming and outgoing correspondence."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Arts in Culture and Media Studies",
+        "institution": "a state university",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Recruiting",
+      "Employee Relations",
+      "Training and Development",
+      "New Hire Orientation",
+      "Personnel Records Maintenance",
+      "Hiring and Retention",
+      "Exceptional Interpersonal Skills",
+      "Communication",
+      "Problem Solving",
+      "Time Management",
+      "Critical Thinking",
+      "Organizational Skills",
+      "Administrative Management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "hr_manager_01",
+    "occupation_id": "hr_manager",
+    "source": "kaggle",
+    "summary": "Experienced Human Resources professional with a background in mobilizing employees for international assignments and supporting HR operations. Skilled in policy development, employee relations, benefits administration, and cross-cultural HR support.",
+    "experience": [
+      {
+        "title": "HR Generalist",
+        "employer": "a multinational oil and gas company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Mobilized high-volume employees overseas on short/long-term assignments in accompanied/unaccompanied status.",
+          "Served as primary point of contact for expatriate and inpatriate assignments from start to finish.",
+          "Directed and implemented HR policies and procedures and provided guidance to field HR managers.",
+          "Created assignment offers including compensation packages, uplifts, base pay, per diem, additional payments, and benefits.",
+          "Managed employee relations, policy development, training, recruitment, payroll, and benefits administration.",
+          "Attended corporate planning meetings and assisted in rewriting international assignment policies and procedures.",
+          "Conducted interviews and trained new employees.",
+          "Administered the Goods and Services review program twice a year.",
+          "Evaluated new hire documents and employee evaluations and provided extensive training to staff.",
+          "Prepared and presented training seminars to HR professionals.",
+          "Assisted employees with benefits, payroll, HR systems, and administrative issues.",
+          "Managed regions including Germany, Kuwait, Brazil, Australia, Italy, Mexico, China, Zambia, and Angola."
+        ]
+      },
+      {
+        "title": "HR Associate Mobilization Coordinator",
+        "employer": "a global engineering and construction firm",
+        "start": "2019-06",
+        "end": "2021-05",
+        "bullets": [
+          "Handled unemployment and workers' compensation claims, maintained personnel files, and updated the affirmative action plan.",
+          "Responded with sensitivity and in a timely manner to employee problems and concerns.",
+          "Presented company policies, procedures, philosophy, and benefits to new employees.",
+          "Attended corporate planning meetings and assisted in writing policies and procedures.",
+          "Arranged medical appointments, assignment paperwork, travel, hotel, car rental, temporary housing, and tax briefings.",
+          "Prepared and processed personnel transfer paperwork.",
+          "Prepared and distributed correspondence to internal and external candidates.",
+          "Applied for entry and work visas.",
+          "Managed regions including Nigeria, Chad, Indonesia, Algeria, Canada, and Qatar."
+        ]
+      },
+      {
+        "title": "Administrative Specialist / Tax Assistant",
+        "employer": "a global energy services company",
+        "start": "2018-06",
+        "end": "2019-05",
+        "bullets": [
+          "Managed the Tax Equalization Program for expatriates and inpatriates.",
+          "Collected check payments, verified amounts, and sent to payroll for endorsement.",
+          "Assisted expatriates with completing tax forms and answered questions.",
+          "Completed check requests for reimbursement of P&I on employees and IRS notices.",
+          "Initiated move notices.",
+          "Administered the Certificate of Coverage program for expatriates on assignment.",
+          "Ordered office materials and supplies from various vendors.",
+          "Composed and typed collection letters and other correspondence via email or certified mail.",
+          "Backed up timesheet keeper and Web pan initiator.",
+          "Coded and processed invoices and overhead financial numbers."
+        ]
+      },
+      {
+        "title": "Administrative Associate",
+        "employer": "a regional business services firm",
+        "start": "2018-01",
+        "end": "2018-05",
+        "bullets": [
+          "Provided administrative or secretarial support to a department.",
+          "Completed defined tasks in accordance with standard procedures.",
+          "Supported general business operations by providing administrative support activities.",
+          "Compiled, copied, sorted, and filed records of office activities, business transactions, and other activities.",
+          "Collected and distributed department and employee mail.",
+          "Set up pouch mail for new projects.",
+          "Took passport and visa photos.",
+          "Notified payroll, HR, and A&F of employees' new assignments or completions.",
+          "Structured and maintained a clean and organized office area."
+        ]
+      },
+      {
+        "title": "HR Management VP",
+        "employer": "a university SHRM student chapter",
+        "start": "2017-06",
+        "end": "2017-12",
+        "bullets": [
+          "Served as HR Management VP for the SHRM student chapter.",
+          "Supported chapter activities related to HR management."
+        ]
+      },
+      {
+        "title": "Member",
+        "employer": "a professional HR association",
+        "start": "2017-01",
+        "end": "2017-05",
+        "bullets": [
+          "Member of SHRM Houston from 2009 to 2017.",
+          "Member of HR Houston from 2009 to 2018.",
+          "Member of Houston International HR Roundtable LLC from 2011 to 2015."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "A.A. in General Studies",
+        "institution": "a state college",
+        "year": 2007
+      },
+      {
+        "degree": "B.A. in Business Management",
+        "institution": "a state university",
+        "year": 2010
+      }
+    ],
+    "skills": [
+      "Employee Relations",
+      "Benefits Administration",
+      "Policy Development",
+      "Recruitment",
+      "Payroll Administration",
+      "HR Systems (SAP)",
+      "Applicant Tracking Systems",
+      "Training and Development",
+      "Compensation and Benefits",
+      "International HR",
+      "Expatriate Management",
+      "Immigration and Visa Processing"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "hr_manager_02",
+    "occupation_id": "hr_manager",
+    "source": "synthetic",
+    "summary": "HR Manager with over a decade of progressive experience aligning workforce strategy with business goals at an industry-leading organization. Skilled in employee relations, labor negotiations, and compensation program design, with a record of reducing turnover and resolving complex staffing disputes.",
+    "experience": [
+      {
+        "title": "HR Manager",
+        "employer": "an industry-leading organization",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Serve as the primary link between management and 600+ employees, interpreting and administering contracts and resolving work-related problems with a 92% first-contact resolution rate.",
+          "Direct and supervise a team of four HR generalists covering employment, compensation, labor relations, and employee relations activities.",
+          "Negotiate bargaining agreements with two union chapters, reaching settlements without work stoppage in three consecutive cycles.",
+          "Advise managers on equal employment opportunity and harassment policy matters, delivering quarterly training that cut formal complaints by 30%.",
+          "Analyze and modify compensation and benefits policies against market benchmarks, keeping total rewards competitive and legally compliant."
+        ]
+      },
+      {
+        "title": "Senior HR Generalist",
+        "employer": "a national manufacturing company",
+        "start": "2019-04",
+        "end": "2022-06",
+        "bullets": [
+          "Performed difficult staffing duties, including refereeing disputes, administering disciplinary procedures, and managing reductions in force across three sites.",
+          "Represented the organization at personnel-related hearings and investigations, sustaining a favorable outcome in 11 of 13 cases.",
+          "Planned and conducted new employee orientation for 200+ hires annually, improving 90-day retention by 18%.",
+          "Partnered with finance to redesign the bonus structure, aligning payouts with measurable performance targets."
+        ]
+      },
+      {
+        "title": "HR Generalist",
+        "employer": "a regional healthcare services provider",
+        "start": "2016-05",
+        "end": "2019-03",
+        "bullets": [
+          "Administered employee relations programs and interpreted labor contracts for a workforce of 350 clinical and administrative staff.",
+          "Coordinated recruitment and onboarding, trimming average time-to-fill from 52 to 34 days.",
+          "Supported compensation surveys and benefits enrollment, maintaining full compliance with legal requirements.",
+          "Monitored employee satisfaction data and recommended policy changes adopted by leadership."
+        ]
+      },
+      {
+        "title": "HR Assistant",
+        "employer": "a mid-sized logistics firm",
+        "start": "2014-08",
+        "end": "2016-04",
+        "bullets": [
+          "Supported daily HR operations, maintaining personnel records and answering employee questions on benefits and policies.",
+          "Assisted with new employee orientation sessions and background check processing for 400+ annual hires.",
+          "Compiled monthly staffing and turnover reports used by management for workforce planning."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Human Resource Management",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Certificate in Labor Relations",
+        "institution": "a community college",
+        "year": 2018
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Reading Comprehension",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Active Learning",
+      "Monitoring",
+      "Learning Strategies",
+      "Employee Relations",
+      "Labor Negotiation",
+      "Compensation and Benefits Design",
+      "Conflict Resolution",
+      "HR Compliance",
+      "Workforce Planning"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "hr_manager_03",
+    "occupation_id": "hr_manager",
+    "source": "synthetic",
+    "summary": "HR Manager with over 10 years of progressive experience in employee relations, labor negotiations, and benefits administration, primarily within mid-size regional firms. Skilled at aligning HR strategy with business goals while ensuring compliance and fostering positive employee engagement.",
+    "experience": [
+      {
+        "title": "HR Manager",
+        "employer": "a mid-size regional healthcare services firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Serve as primary liaison between management and 600+ employees, resolving complex employee relations issues and interpreting HR policies, reducing grievance escalations by 25% year-over-year.",
+          "Plan and direct work activities of a team of 5 HR generalists, overseeing employment, compensation, labor relations, and employee engagement functions.",
+          "Administer disciplinary procedures and conduct sensitive termination meetings, ensuring consistent application of policy and minimizing legal risk.",
+          "Represent the organization at unemployment hearings and personnel-related investigations, achieving favorable outcomes in 90% of cases.",
+          "Advise managers on equal employment opportunity and harassment prevention, leading mandatory training that lowered reported incidents by 30%.",
+          "Analyze and modify compensation and benefits policies annually, benchmarking against regional market data to maintain competitiveness and legal compliance."
+        ]
+      },
+      {
+        "title": "HR Business Partner",
+        "employer": "a mid-size regional manufacturing company",
+        "start": "2018-02",
+        "end": "2021-05",
+        "bullets": [
+          "Partnered with operations leaders to address staffing shortfalls, redesigning recruiting workflows that cut time-to-fill by 20% across production roles.",
+          "Negotiated and administered collective bargaining agreement provisions, participating in labor-management meetings and interpreting contract language for supervisors.",
+          "Conducted new employee orientation for 200+ hires annually, improving 90-day retention by 15% through structured onboarding and mentorship.",
+          "Refereed workplace disputes and mediated conflicts between employees and supervisors, resolving 85% of cases without formal escalation.",
+          "Monitored HR metrics and advised management on policy changes related to leave, attendance, and performance management."
+        ]
+      },
+      {
+        "title": "HR Generalist",
+        "employer": "a mid-size regional financial services firm",
+        "start": "2016-01",
+        "end": "2018-01",
+        "bullets": [
+          "Handled employee questions regarding contracts, benefits, and workplace policies, serving as first point of contact for a 300-person workforce.",
+          "Supported compensation analyses and annual benefits enrollment, ensuring accurate data and timely communication to employees.",
+          "Assisted in disciplinary meetings and documentation, maintaining confidentiality and adherence to legal requirements.",
+          "Coordinated new employee orientation sessions and tracked completion of required compliance training.",
+          "Maintained HRIS records and generated reports on turnover, headcount, and equal employment opportunity statistics for leadership review."
+        ]
+      },
+      {
+        "title": "HR Assistant",
+        "employer": "a mid-size regional logistics firm",
+        "start": "2015-03",
+        "end": "2015-12",
+        "bullets": [
+          "Provided administrative support for recruitment, onboarding, and benefits administration, processing new hire paperwork for 100+ employees.",
+          "Responded to routine employee inquiries regarding policies, payroll, and leave balances, escalating complex issues to senior HR staff.",
+          "Assisted with scheduling interviews, maintaining personnel files, and preparing materials for orientation sessions.",
+          "Helped track compliance with employment regulations and supported HR manager in preparing for audits."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Business Administration",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Reading Comprehension",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Active Learning",
+      "Monitoring",
+      "Learning Strategies",
+      "Employee Relations",
+      "Labor Relations",
+      "Compensation and Benefits",
+      "HR Policy Compliance",
+      "Dispute Resolution",
+      "Onboarding and Orientation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "hr_manager_04",
+    "occupation_id": "hr_manager",
+    "source": "synthetic",
+    "summary": "HR Manager with over a decade of progressive experience in employee relations, compensation, and labor compliance, primarily within a mid-size regional firm. Skilled at aligning HR strategy with business goals while resolving complex staffing and policy issues.",
+    "experience": [
+      {
+        "title": "HR Manager",
+        "employer": "a mid-size regional firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Serve as primary link between management and employees, handling questions, interpreting contracts, and resolving work-related problems across 400+ staff.",
+          "Plan, direct, and supervise HR staff activities covering employment, compensation, labor relations, and employee relations.",
+          "Advise managers on equal employment opportunity, sexual harassment, and other organizational policy matters, recommending changes that reduced employee grievances by 18%.",
+          "Negotiate and administer bargaining agreements, representing the organization at personnel-related hearings and investigations."
+        ]
+      },
+      {
+        "title": "Senior HR Generalist",
+        "employer": "a mid-size regional firm",
+        "start": "2018-08",
+        "end": "2021-05",
+        "bullets": [
+          "Performed difficult staffing duties, including addressing understaffing, refereeing disputes, and administering disciplinary procedures and terminations.",
+          "Analyzed and modified compensation and benefits policies to establish competitive programs and ensure legal compliance, improving retention by 12%.",
+          "Conducted new employee orientation to foster positive attitude toward organizational objectives, onboarding over 150 new hires."
+        ]
+      },
+      {
+        "title": "HR Generalist",
+        "employer": "a regional manufacturing company",
+        "start": "2015-09",
+        "end": "2018-07",
+        "bullets": [
+          "Supported employee relations by interpreting and administering HR contracts and resolving workplace concerns.",
+          "Assisted in planning and conducting new employee orientation and coordinating employment and compensation activities.",
+          "Maintained compliance with labor regulations and prepared documentation for personnel-related hearings."
+        ]
+      },
+      {
+        "title": "HR Coordinator",
+        "employer": "a local business services firm",
+        "start": "2014-02",
+        "end": "2015-08",
+        "bullets": [
+          "Coordinated employment, compensation, and employee relations activities under HR management supervision.",
+          "Maintained personnel records and supported disciplinary and dispute resolution processes.",
+          "Helped administer benefits programs and ensured compliance with legal requirements."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Human Resources Management",
+        "institution": "a state university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Reading Comprehension",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Active Learning",
+      "Monitoring",
+      "Learning Strategies",
+      "Mathematics",
+      "Employee Relations",
+      "Compensation and Benefits",
+      "Labor Relations",
+      "HR Policy Compliance",
+      "Conflict Resolution"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "hr_manager_05",
+    "occupation_id": "hr_manager",
+    "source": "synthetic",
+    "summary": "HR Manager with 10+ years of progressive experience in employee relations, total rewards, and labor compliance across growing mid-market organizations. Skilled at aligning people strategy with business goals while keeping management and staff connected through clear, legally sound policy.",
+    "experience": [
+      {
+        "title": "Senior HR Manager",
+        "employer": "a growing mid-market healthcare services company",
+        "start": "2021-07",
+        "end": "Present",
+        "bullets": [
+          "Lead a team of 4 HR generalists supporting 600+ employees across three sites, directing employment, compensation, labor relations, and employee relations activities.",
+          "Advise managers on equal employment opportunity, harassment prevention, and disciplinary procedures, reducing escalated grievances by 28% year over year.",
+          "Redesign compensation and benefits programs after market benchmarking, keeping total rewards competitive while maintaining legal compliance.",
+          "Negotiate and interpret two collective bargaining agreements covering 180 hourly staff and represent the organization at personnel-related hearings.",
+          "Partner with leadership on workforce planning to address chronic understaffing in clinical support roles, cutting time-to-fill by 22%."
+        ]
+      },
+      {
+        "title": "HR Manager",
+        "employer": "a growing mid-market logistics company",
+        "start": "2018-02",
+        "end": "2021-06",
+        "bullets": [
+          "Managed day-to-day HR operations for 350 employees, handling questions, contract interpretation, and work-related problem resolution as the link between management and staff.",
+          "Planned and conducted new employee orientation and onboarding, improving 90-day retention by 15%.",
+          "Administered difficult staffing duties including dispute mediation, disciplinary actions, and terminations in coordination with legal counsel.",
+          "Analyzed and modified benefits policies to establish competitive programs while ensuring compliance with federal and state requirements.",
+          "Supervised two HR coordinators and coordinated employment, compensation, and employee relations workflows."
+        ]
+      },
+      {
+        "title": "HR Generalist",
+        "employer": "a growing mid-market manufacturing firm",
+        "start": "2015-09",
+        "end": "2018-01",
+        "bullets": [
+          "Served as first point of contact for employee questions on policies, contracts, and workplace concerns, resolving 85% at the manager level.",
+          "Supported labor relations activities including grievance documentation and preparation for personnel-related investigations.",
+          "Advised supervisors on policy matters such as equal employment opportunity and anti-harassment practices, recommending process improvements.",
+          "Assisted with compensation analysis and open enrollment, contributing to a 12% increase in benefits participation."
+        ]
+      },
+      {
+        "title": "HR Assistant",
+        "employer": "a growing mid-market retail group",
+        "start": "2014-06",
+        "end": "2015-08",
+        "bullets": [
+          "Maintained personnel records and supported recruiting, orientation, and benefits administration for a 200-person workforce.",
+          "Prepared documentation for disciplinary meetings and personnel hearings, ensuring accuracy and confidentiality.",
+          "Responded to employee inquiries on compensation, leave, and policy, escalating complex matters to senior HR staff."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Business Administration",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Certificate in Human Resource Management",
+        "institution": "a community college",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Reading Comprehension",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Active Learning",
+      "Monitoring",
+      "Learning Strategies",
+      "Employee Relations",
+      "Compensation and Benefits Administration",
+      "Labor Relations and Contract Negotiation",
+      "Policy Development and Compliance",
+      "Conflict Resolution and Mediation",
+      "HR Information Systems"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

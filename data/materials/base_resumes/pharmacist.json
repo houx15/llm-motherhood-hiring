@@ -1,0 +1,519 @@
+[
+  {
+    "resume_id": "pharmacist_00",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over nine years of progressive experience across community and hospital pharmacy settings, focused on medication safety and patient counseling. Skilled at collaborating with multidisciplinary care teams to optimize drug therapy and improve adherence.",
+    "experience": [
+      {
+        "title": "Clinical Staff Pharmacist",
+        "employer": "a mid-size regional firm",
+        "start": "2021-07",
+        "end": "Present",
+        "bullets": [
+          "Review and verify an average of 180 prescriptions daily for accuracy, ingredient suitability, and potential contraindications prior to dispensing.",
+          "Collaborate with physicians and nursing staff on multidisciplinary rounds to evaluate drug regimen effectiveness and recommend therapy adjustments for 40+ inpatients.",
+          "Provide specialized counseling for patients managing diabetes, asthma, and hypertension, improving documented adherence rates by 18% over two years.",
+          "Analyze prescribing trends and generate monthly compliance reports that flag excessive usage and harmful drug interactions for review by the pharmacy committee.",
+          "Prepare sterile infusions and IV admixtures for surgical and emergency department use in compliance with USP 797 standards.",
+          "Maintain patient profiles, controlled substance registries, and narcotic inventory records with zero audit discrepancies."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a regional retail pharmacy chain",
+        "start": "2018-09",
+        "end": "2021-06",
+        "bullets": [
+          "Dispensed prescriptions and counseled patients on dosage, side effects, drug interactions, and proper medication storage.",
+          "Launched a smoking cessation support program that served more than 120 participants annually with a 35% quit rate at six months.",
+          "Advised prescribers on drug applications and characteristics, resolving roughly 25 therapy questions per week.",
+          "Monitored controlled drug inventories and completed required state and federal control records accurately."
+        ]
+      },
+      {
+        "title": "Pharmacist",
+        "employer": "a community health clinic",
+        "start": "2016-08",
+        "end": "2018-08",
+        "bullets": [
+          "Reviewed prescriptions for accuracy and evaluated therapeutic suitability for a diverse patient panel of approximately 4,000 individuals.",
+          "Delivered medication therapy management sessions for patients with diabetes and high blood pressure, reducing avoidable emergency visits.",
+          "Partnered with care teams to plan and monitor drug regimens and document interventions in electronic health records.",
+          "Trained pharmacy technicians on sterile compounding procedures and safety protocols."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2016
+      },
+      {
+        "degree": "Bachelor of Science in Biology",
+        "institution": "a public university",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Learning Strategies",
+      "Medication Therapy Management",
+      "Sterile Compounding",
+      "Patient Counseling",
+      "Prescription Verification"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "pharmacist_01",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over nine years of progressive experience across community, hospital, and national retail pharmacy settings, focused on medication safety and chronic disease management. Recognized for collaborating with multidisciplinary care teams to optimize drug therapy and improve patient outcomes.",
+    "experience": [
+      {
+        "title": "Clinical Pharmacist",
+        "employer": "a regional teaching hospital",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Review prescriptions and medication orders for accuracy, ingredient suitability, and dosing appropriateness, intervening on an average of 25 therapy issues per week.",
+          "Collaborate with physicians, nurses, and case managers to plan, monitor, and evaluate drug regimens for patients in oncology and cardiology units.",
+          "Prepare sterile infusions and compounded solutions for surgical and emergency department use while maintaining full compliance with USP standards.",
+          "Provide drug interaction, side effect, dosage, and storage counseling to patients and caregivers during discharge consultations.",
+          "Analyze prescribing trends and patient profiles to flag non-compliance and prevent harmful interactions, reducing reported adverse drug events by 18% in one year.",
+          "Maintain narcotic, controlled-substance, and inventory records with zero discrepancies across quarterly audits."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a large national retail pharmacy chain",
+        "start": "2019-04",
+        "end": "2022-06",
+        "bullets": [
+          "Dispensed an average of 180 prescriptions daily while verifying accuracy, legality, and therapeutic suitability.",
+          "Delivered specialized counseling services for diabetes, asthma, smoking cessation, and hypertension management, supporting more than 300 patients enrolled in condition-management programs.",
+          "Advise prescribers on drug applications and characteristics, clarifying alternatives and dosage adjustments to improve therapeutic effectiveness.",
+          "Monitored dispensing and prescribing patterns to detect excessive usage or harmful interactions and escalated concerns to the pharmacy manager.",
+          "Maintained patient profiles, charge system files, inventories, and controlled-drug registries in compliance with state and federal regulations.",
+          "Trained and mentored six pharmacy interns and technicians on verification workflows and patient consultation standards."
+        ]
+      },
+      {
+        "title": "Pharmacist",
+        "employer": "a community health center",
+        "start": "2016-07",
+        "end": "2019-03",
+        "bullets": [
+          "Reviewed and dispensed prescriptions for a diverse outpatient population, ensuring accuracy and evaluating ingredient suitability.",
+          "Served as a medication consultant to primary care teams, providing advice on drug applications, interactions, and regimen adjustments.",
+          "Provided information and counseling on dosage, side effects, storage, and proper administration to patients and caregivers.",
+          "Prepared sterile solutions and infusions for an on-site urgent care clinic and administered inventory controls for vaccines and biologics.",
+          "Analyzed refill and prescribing trends to monitor patient compliance and reduce excessive usage of high-risk medications.",
+          "Maintained pharmacy files, inventories, and poison and narcotic registries while supporting immunization clinics."
+        ]
+      },
+      {
+        "title": "Pharmacy Intern",
+        "employer": "a large national retail pharmacy chain",
+        "start": "2014-06",
+        "end": "2016-06",
+        "bullets": [
+          "Assisted licensed pharmacists in reviewing prescriptions for accuracy and ascertaining needed ingredients under direct supervision.",
+          "Provided information to patients regarding dosage, side effects, and proper medication storage while escalating clinical questions to the pharmacist on duty.",
+          "Maintained pharmacy files, patient profiles, inventories, and controlled-substance records in accordance with company policy.",
+          "Supported medication therapy management outreach for patients managing diabetes and high blood pressure."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2014
+      },
+      {
+        "degree": "Bachelor of Science in Biology",
+        "institution": "a public university",
+        "year": 2010
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Learning Strategies",
+      "Medication Therapy Management",
+      "Drug Interaction Analysis",
+      "Sterile Compounding",
+      "Patient Counseling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "pharmacist_02",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over a decade of experience across community and hospital settings, focused on medication safety, patient counseling, and collaborative care. Skilled in clinical review, sterile compounding, and compliance with controlled-substance regulations.",
+    "experience": [
+      {
+        "title": "Clinical Pharmacist",
+        "employer": "a growing mid-market health system",
+        "start": "2022-06",
+        "end": "Present",
+        "bullets": [
+          "Collaborate with physicians and nursing staff to review and optimize drug regimens for patients across medical and surgical units, recommending dose adjustments and alternative therapies.",
+          "Verify prescriptions for accuracy, ingredient suitability, and potential contraindications, catching an average of 12 clinically significant issues per month.",
+          "Prepare sterile solutions and infusions for surgical and emergency department use, maintaining full compliance with USP compounding standards.",
+          "Provide patient education on drug interactions, side effects, dosage, and proper medication storage during discharge counseling."
+        ]
+      },
+      {
+        "title": "Pharmacist",
+        "employer": "a regional community pharmacy group",
+        "start": "2019-05",
+        "end": "2022-05",
+        "bullets": [
+          "Dispensed prescriptions and counseled patients on diabetes, asthma, and hypertension management, helping improve adherence through targeted follow-up.",
+          "Analyzed prescribing trends and patient profiles to monitor compliance and flag excessive or potentially harmful medication usage.",
+          "Administered immunizations and supported smoking-cessation programs, contributing to a 20% increase in quarterly service participation.",
+          "Maintained pharmacy files, controlled-drug registries, and inventory records in full compliance with state and federal requirements."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a mid-sized hospital pharmacy",
+        "start": "2016-06",
+        "end": "2019-04",
+        "bullets": [
+          "Reviewed medication orders for accuracy and appropriateness, escalating concerns to the medical team to support safe prescribing.",
+          "Served as a pharmacy consultant on interdisciplinary rounds, advising on drug applications, dosing, and potential interactions.",
+          "Compounded sterile preparations for surgical procedures and monitored inventory of drugs and controlled substances.",
+          "Educated patients and caregivers on side effects, dosage schedules, and proper medication storage at discharge."
+        ]
+      },
+      {
+        "title": "Pharmacy Intern",
+        "employer": "a community health clinic",
+        "start": "2015-06",
+        "end": "2016-05",
+        "bullets": [
+          "Assisted licensed pharmacists with prescription review, patient profile maintenance, and inventory control.",
+          "Provided information to patients regarding drug interactions, side effects, and proper medication storage under pharmacist supervision.",
+          "Supported medication adherence outreach for patients managing chronic conditions such as diabetes and high blood pressure."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2015
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "institution": "a public university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Learning Strategies",
+      "Medication Therapy Management",
+      "Sterile Compounding",
+      "Patient Counseling",
+      "Controlled Substance Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "pharmacist_03",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over a decade of experience in hospital and community settings, specializing in medication therapy management and sterile compounding. Proven track record of optimizing drug regimens through interprofessional collaboration and data-driven prescribing trend analysis.",
+    "experience": [
+      {
+        "title": "Clinical Pharmacist",
+        "employer": "an industry-leading academic medical center",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Review and verify an average of 180 prescriptions daily for accuracy, ingredient suitability, and potential contraindications, maintaining a 99.8% verification accuracy rate.",
+          "Collaborate with oncology and critical care teams to design and monitor drug regimens, contributing to a 15% reduction in adverse drug events over two years.",
+          "Lead medication therapy management clinics for patients with diabetes and hypertension, achieving a 22% improvement in A1C control among enrolled patients.",
+          "Prepare sterile infusions and hazardous drugs for surgical and emergency departments, adhering to USP 797 and 800 standards with zero compliance deficiencies."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a regional community health system",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Dispensed prescriptions and provided counseling on drug interactions, side effects, dosage, and proper storage to over 300 patients weekly.",
+          "Analyzed prescribing trends and patient compliance data, flagging excessive usage patterns that prevented 40+ potential harmful interactions annually.",
+          "Developed smoking cessation and asthma management programs, resulting in a 30% quit rate among program participants.",
+          "Maintained controlled substance inventories and narcotic registries in full compliance with state and federal regulations across three pharmacy sites."
+        ]
+      },
+      {
+        "title": "Pharmacist",
+        "employer": "a national retail pharmacy chain",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Reviewed prescriptions for accuracy and evaluated suitability, consulting with prescribers to resolve 50+ therapy discrepancies monthly.",
+          "Advised patients on drug interactions, side effects, and dosage adjustments, improving medication adherence scores by 18%.",
+          "Managed pharmacy files, patient profiles, and charge system records for a high-volume location processing 500+ prescriptions daily."
+        ]
+      },
+      {
+        "title": "Pharmacy Intern",
+        "employer": "a community hospital",
+        "start": "2014-06",
+        "end": "2014-12",
+        "bullets": [
+          "Assisted in preparing sterile solutions and infusions for surgical and emergency room use under pharmacist supervision.",
+          "Supported medication reconciliation and inventory control for narcotics and controlled drug registries."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2014
+      },
+      {
+        "degree": "BS in Pharmaceutical Sciences",
+        "institution": "a state university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Medication Therapy Management",
+      "Sterile Compounding",
+      "Prescription Verification",
+      "Patient Counseling",
+      "Interprofessional Collaboration"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "pharmacist_04",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over 10 years of experience across community and health-system settings, specializing in medication therapy management and chronic disease support. Skilled at collaborating with multidisciplinary care teams to optimize drug regimens and improve patient outcomes.",
+    "experience": [
+      {
+        "title": "Clinical Pharmacist",
+        "employer": "a large national healthcare company",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Review prescriptions for accuracy, ingredient suitability, and dosing appropriateness, resolving an average of 40 clinical interventions per month.",
+          "Collaborate with physicians, nurses, and care managers to plan and monitor drug regimens for patients with diabetes, asthma, and hypertension.",
+          "Provide specialized counseling services for diabetes management and smoking cessation, supporting a 22% improvement in patient adherence scores.",
+          "Prepare sterile infusions and intravenous solutions for outpatient infusion services while maintaining USP compliance records.",
+          "Analyze prescribing trends to flag potential overuse and harmful drug interactions, reducing reported adverse events by 15% year over year."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a national retail pharmacy chain",
+        "start": "2019-06",
+        "end": "2022-03",
+        "bullets": [
+          "Dispensed an average of 300 prescriptions daily while verifying accuracy, dosage, and compatibility with existing therapies.",
+          "Advised patients on drug interactions, side effects, dosage, and proper medication storage, fielding roughly 50 consultations per shift.",
+          "Maintained pharmacy files, patient profiles, inventories, and controlled-substance records in full compliance with state and federal regulations.",
+          "Led a medication synchronization program that improved refill compliance for chronic-condition patients by 18%.",
+          "Trained and supervised pharmacy interns and technicians on prescription verification and patient counseling protocols."
+        ]
+      },
+      {
+        "title": "Pharmacist",
+        "employer": "a regional hospital system",
+        "start": "2016-09",
+        "end": "2019-05",
+        "bullets": [
+          "Served as a medical team consultant on rounds, providing advice on drug applications, characteristics, and therapeutic alternatives.",
+          "Prepared sterile solutions and infusions for surgical, emergency, and inpatient use, adhering to strict aseptic technique.",
+          "Evaluated the quality and effectiveness of drug regimens for oncology and general-medicine patients in collaboration with prescribers.",
+          "Monitored patient profiles for excessive usage or harmful interactions, documenting interventions in the electronic health record.",
+          "Supported medication reconciliation at admission and discharge, reducing discrepancies by 25% across assigned units."
+        ]
+      },
+      {
+        "title": "Pharmacy Intern",
+        "employer": "a community health clinic",
+        "start": "2015-08",
+        "end": "2016-08",
+        "bullets": [
+          "Assisted licensed pharmacists with prescription review, ingredient verification, and patient counseling under direct supervision.",
+          "Compiled inventories and control records for narcotics and other regulated drugs, ensuring accurate documentation.",
+          "Provided information to patients on dosage schedules, side effects, and proper storage of medications.",
+          "Participated in blood pressure and diabetes screening events, offering medication adherence guidance to clinic patients."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2015
+      },
+      {
+        "degree": "Bachelor of Science in Chemistry",
+        "institution": "a public university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Learning Strategies",
+      "Medication Therapy Management",
+      "Sterile Compounding",
+      "Patient Counseling",
+      "Regulatory Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "pharmacist_05",
+    "occupation_id": "pharmacist",
+    "source": "synthetic",
+    "summary": "Licensed pharmacist with over 10 years of experience across community, hospital, and managed care settings, specializing in medication therapy management and patient counseling. Proven track record of optimizing drug regimens, improving adherence, and collaborating with multidisciplinary care teams.",
+    "experience": [
+      {
+        "title": "Clinical Pharmacist",
+        "employer": "a growing mid-market health system",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Review and verify prescriptions for accuracy, ingredient suitability, and potential interactions, averaging 200 prescriptions per shift with a 99.8% accuracy rate.",
+          "Collaborate with physicians, nurses, and dietitians to plan and monitor drug regimens for patients with diabetes, asthma, and hypertension, contributing to a 15% reduction in readmissions.",
+          "Provide specialized counseling services for smoking cessation and blood pressure management, helping 120+ patients achieve target health metrics annually.",
+          "Prepare sterile infusions and IV solutions for surgical and emergency departments, maintaining strict compliance with USP 797 standards.",
+          "Analyze prescribing trends and patient compliance data to flag excessive usage or harmful interactions, preventing an estimated 40 adverse drug events per year."
+        ]
+      },
+      {
+        "title": "Staff Pharmacist",
+        "employer": "a regional community pharmacy chain",
+        "start": "2018-02",
+        "end": "2021-05",
+        "bullets": [
+          "Dispensed prescriptions and advised patients on drug interactions, side effects, dosage, and proper medication storage, serving up to 300 customers daily.",
+          "Developed and led diabetes management workshops, improving medication adherence among participants by 22% over six months.",
+          "Maintained pharmacy records, patient profiles, and controlled substance inventories in full compliance with state and federal regulations.",
+          "Trained and supervised four pharmacy interns and technicians on prescription verification and counseling best practices."
+        ]
+      },
+      {
+        "title": "Pharmacy Resident",
+        "employer": "a nonprofit community hospital",
+        "start": "2016-07",
+        "end": "2018-01",
+        "bullets": [
+          "Completed rotations in oncology, critical care, and ambulatory care, gaining hands-on experience in specialized drug therapy areas.",
+          "Participated in multidisciplinary rounds to evaluate the quality and effectiveness of drug regimens and provide evidence-based recommendations.",
+          "Prepared sterile solutions for surgical procedures and emergency room use, adhering to aseptic technique and safety protocols.",
+          "Conducted medication reconciliation for 50+ patients weekly, identifying and resolving discrepancies to reduce potential harm."
+        ]
+      },
+      {
+        "title": "Pharmacy Intern",
+        "employer": "an independent retail pharmacy",
+        "start": "2014-09",
+        "end": "2016-06",
+        "bullets": [
+          "Assisted licensed pharmacists with prescription intake, insurance verification, and inventory management.",
+          "Provided front-line customer service, answering questions about over-the-counter medications and referring clinical inquiries to pharmacists.",
+          "Maintained charge system files and registries of narcotics and controlled drugs under pharmacist supervision."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Doctor of Pharmacy (PharmD)",
+        "institution": "a state university college of pharmacy",
+        "year": 2016
+      },
+      {
+        "degree": "Bachelor of Science in Biochemistry",
+        "institution": "a public university",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Science",
+      "Learning Strategies",
+      "Medication Therapy Management",
+      "Patient Counseling",
+      "Sterile Compounding",
+      "Regulatory Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

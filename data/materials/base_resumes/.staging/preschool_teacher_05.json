@@ -1,0 +1,93 @@
+{
+  "resume_id": "preschool_teacher_05",
+  "occupation_id": "preschool_teacher",
+  "source": "synthetic",
+  "summary": "Dedicated preschool teacher with over a decade of experience fostering early childhood development through play-based and structured learning. Skilled in adapting instruction to diverse needs and building strong partnerships with guardians to support each child's growth.",
+  "experience": [
+    {
+      "title": "Lead Preschool Teacher",
+      "employer": "a growing mid-market early learning center",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Design and implement daily lesson plans focused on color, shape, number, and letter recognition, raising kindergarten-readiness assessment scores by 22% over two years.",
+        "Establish and enforce clear behavioral rules and classroom routines, reducing daily disruptions and improving observed social cooperation among students.",
+        "Adapt teaching methods and materials for students with varying developmental needs and interests, including those requiring individualized learning strategies.",
+        "Organize and lead activities such as arts and crafts, music, storytelling, and supervised field trips that promote physical, mental, and social development.",
+        "Meet regularly with guardians to discuss progress, needs, and priorities, and to suggest home activities that reinforce learning and development.",
+        "Provide diverse materials and resources for exploration, imaginative play, and hands-on manipulation in both structured and free-choice learning centers.",
+        "Serve meals and snacks in accordance with nutritional guidelines, and attend to basic care needs including feeding, dressing, and diapering."
+      ]
+    },
+    {
+      "title": "Preschool Teacher",
+      "employer": "a mid-sized community child development center",
+      "start": "2018-01",
+      "end": "2021-05",
+      "bullets": [
+        "Taught foundational skills in number and letter recognition, personal hygiene, and social interaction to classes of up to 18 students.",
+        "Maintained classroom order through consistent behavior expectations, positive reinforcement, and age-appropriate conflict resolution strategies.",
+        "Developed and sourced instructional materials tailored to mixed-age and mixed-ability groups, supporting active learning and critical thinking.",
+        "Led daily music, movement, and storytelling sessions that boosted student engagement and early literacy participation.",
+        "Conducted biannual guardian conferences to review developmental milestones and co-create learning goals.",
+        "Collaborated with co-teachers to monitor student progress and adjust instructional approaches accordingly."
+      ]
+    },
+    {
+      "title": "Assistant Preschool Teacher",
+      "employer": "a regional nonprofit early education program",
+      "start": "2015-09",
+      "end": "2017-12",
+      "bullets": [
+        "Supported lead teachers in delivering lessons on color, shape, number, and letter recognition and personal hygiene routines.",
+        "Prepared and organized learning materials for arts, crafts, and imaginative play activities.",
+        "Supervised meal and snack times, ensuring adherence to nutritional guidelines and assisting with feeding and dressing as needed.",
+        "Observed and documented student behavior and development to inform instructional planning and guardian updates.",
+        "Helped maintain a safe, orderly classroom by reinforcing rules and procedures consistently."
+      ]
+    },
+    {
+      "title": "Preschool Teaching Aide",
+      "employer": "a local early childhood learning center",
+      "start": "2014-06",
+      "end": "2015-08",
+      "bullets": [
+        "Assisted with daily classroom activities promoting physical, mental, and social development through games, crafts, and storytelling.",
+        "Provided one-on-one support to students needing extra help with basic skills and classroom routines.",
+        "Helped set up and rotate learning materials to keep exploration and play areas engaging and safe.",
+        "Attended to basic care needs including diapering, dressing, and mealtime assistance under teacher supervision."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Applied Science in Early Childhood Education",
+      "institution": "a community college",
+      "year": 2014
+    },
+    {
+      "degree": "Child Development Associate (CDA) Credential",
+      "institution": "a professional credentialing institute",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Active Listening",
+    "Learning Strategies",
+    "Reading Comprehension",
+    "Critical Thinking",
+    "Monitoring",
+    "Active Learning",
+    "Writing",
+    "Mathematics",
+    "Science",
+    "Classroom Management",
+    "Lesson Planning",
+    "Child Development Assessment",
+    "Guardian Communication"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

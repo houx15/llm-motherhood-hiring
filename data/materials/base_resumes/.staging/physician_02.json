@@ -1,0 +1,78 @@
+{
+  "resume_id": "physician_02",
+  "occupation_id": "physician",
+  "source": "synthetic",
+  "summary": "Board-certified primary care physician with 10 years of continuous full-time experience delivering comprehensive primary care in outpatient and community health settings. Proven record of managing chronic disease panels, preventive care, and multidisciplinary care coordination within a growing mid-market healthcare organization.",
+  "experience": [
+    {
+      "title": "Physician (Primary Care)",
+      "employer": "a growing mid-market healthcare group",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Manage a panel of approximately 1,800 patients, providing continuity of care across preventive, acute, and chronic conditions in an outpatient clinic setting.",
+        "Order, perform, and interpret diagnostic tests and imaging, using results alongside patient history to diagnose conditions and adjust treatment plans.",
+        "Prescribe medications, vaccinations, and specialized therapies, monitoring patient response and reevaluating treatments at follow-up visits.",
+        "Counsel patients on diet, activity, hygiene, and disease prevention, contributing to a 22% increase in completed preventive screenings over two years.",
+        "Direct and coordinate care activities of nurses, medical assistants, and advanced practice providers, including supervising clinical workflows and precepting trainees."
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a regional primary care network",
+      "start": "2018-05",
+      "end": "2021-05",
+      "bullets": [
+        "Delivered full-spectrum primary care to a diverse patient population, documenting medical histories, examination findings, and treatment plans in the electronic health record.",
+        "Diagnosed and managed chronic conditions such as diabetes, hypertension, and asthma, monitoring progress and escalating care when clinically indicated.",
+        "Explained procedures, test results, and prescribed treatments to patients and caregivers, improving patient understanding and adherence.",
+        "Referred patients to medical specialists and coordinated follow-up care, reducing avoidable emergency department visits among high-risk patients by an estimated 15%.",
+        "Collaborated with nursing and ancillary staff to standardize vaccination and chronic care workflows across two clinic sites."
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a community health organization",
+      "start": "2016-01",
+      "end": "2018-04",
+      "bullets": [
+        "Provided outpatient evaluation and treatment for acute and chronic illnesses, ordering and interpreting laboratory and diagnostic studies.",
+        "Maintained accurate, timely patient records including medical history, reports, and examination results.",
+        "Advised patients and community members on preventive care, hygiene, and lifestyle modification during individual visits and group education sessions.",
+        "Participated in on-call coverage and coordinated with specialists to ensure continuity for patients requiring referral.",
+        "Supervised medical students and residents during clinical rotations, reviewing treatment plans and documentation."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Medicine (MD)",
+      "institution": "a state university school of medicine",
+      "year": 2015
+    },
+    {
+      "degree": "Bachelor of Science in Biology",
+      "institution": "a public university",
+      "year": 2011
+    }
+  ],
+  "skills": [
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Speaking",
+    "Active Learning",
+    "Monitoring",
+    "Science",
+    "Learning Strategies",
+    "Mathematics",
+    "Clinical Diagnosis",
+    "Treatment Planning",
+    "Patient Education",
+    "Care Coordination"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

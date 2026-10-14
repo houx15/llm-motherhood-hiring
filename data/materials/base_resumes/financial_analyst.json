@@ -1,0 +1,503 @@
+[
+  {
+    "resume_id": "financial_analyst_00",
+    "occupation_id": "financial_analyst",
+    "source": "kaggle",
+    "summary": "Strategic and analytical finance professional with over 10 years of experience in financial reporting, planning and analysis, treasury, and payments. Skilled in financial modeling, data analysis, and cross-functional collaboration to support senior management decision-making.",
+    "experience": [
+      {
+        "title": "Finance Consultant",
+        "employer": "a national telecommunications company",
+        "start": "2018-02",
+        "end": "Present",
+        "bullets": [
+          "Prepares monthly payment reporting and analytics dashboard for senior management.",
+          "Performs ad hoc reporting from data warehouses utilizing Teradata SQL and Oracle Business Intelligence.",
+          "Conducts data analysis and tracking leveraging Access databases and Excel pivot tables, charts, and VBA macros.",
+          "Supports M&A/divestitures and new product launches.",
+          "Provides analysis to assist negotiations with credit card companies and payment processors."
+        ]
+      },
+      {
+        "title": "Senior Financial Analyst",
+        "employer": "a national telecommunications company",
+        "start": "2016-01",
+        "end": "2018-01",
+        "bullets": [
+          "Served as finance liaison for indirect sales channel, providing financial reporting and analysis to Sales and Marketing across numerous agents and locations.",
+          "Developed credit review processes in preparation of major product launches.",
+          "Acted as active stakeholder on behalf of FP&A for multiple initiatives, providing insightful recommendations for decision-making.",
+          "Participated in development of business cases for projects.",
+          "Developed and implemented B2B payment acceptance strategy, including optimization of commercial credit cards.",
+          "Generated annual credit card interchange savings of $3.9M+ through various programs.",
+          "Presented strategy and performance tracking to senior management.",
+          "Served as system administrator and project manager for reconciliation and journalization system, managing support costs and development expenses within budget.",
+          "Supported Sarbanes Oxley testing, internal/external audits, and month-end close.",
+          "Temporary assignment as Finance Manager to oversee launch of mobile wallet payment processing in trial markets."
+        ]
+      },
+      {
+        "title": "Retail Analyst",
+        "employer": "a national retail chain",
+        "start": "2015-02",
+        "end": "2015-12",
+        "bullets": [
+          "Prepared and distributed weekly/monthly aging reports for executive management.",
+          "Partnered with fraud, audit, and compliance teams to identify and address risk management concerns.",
+          "Reconciled sales versus deposits for approximately 90 retail locations daily.",
+          "Investigated and reported significant variances."
+        ]
+      },
+      {
+        "title": "Treasury Assistant",
+        "employer": "a regional banking institution",
+        "start": "2014-05",
+        "end": "2015-01",
+        "bullets": [
+          "Processed journal entries and assisted with month-end close duties.",
+          "Led recovery of lost revenue associated with returned check payments."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Technology Management",
+        "institution": "a private technical university",
+        "year": 2014
+      },
+      {
+        "degree": "Bachelor of Science in Business Administration Finance",
+        "institution": "a private university",
+        "year": 2005
+      }
+    ],
+    "skills": [
+      "Financial modeling",
+      "Financial reporting",
+      "FP&A",
+      "Data analysis",
+      "SQL",
+      "Teradata",
+      "Oracle Business Intelligence",
+      "Excel VBA",
+      "Access",
+      "Treasury",
+      "Payment processing",
+      "Risk management",
+      "Sarbanes Oxley",
+      "Budget management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "financial_analyst_01",
+    "occupation_id": "financial_analyst",
+    "source": "kaggle",
+    "summary": "Detail-oriented finance professional with experience in accounting operations, financial reporting, and process improvement. Skilled in reconciliation, variance analysis, and financial modeling within banking and corporate finance environments.",
+    "experience": [
+      {
+        "title": "Finance Specialist",
+        "employer": "a regional banking institution",
+        "start": "2017-01",
+        "end": "Present",
+        "bullets": [
+          "Performed accounts payable, prepaid expenses, and fixed assets management within a five-person finance team.",
+          "Led purchase loan accounting process for an acquisition that generated an additional 40% of monthly income.",
+          "Served as team leader for implementation of SaaS financial software, coordinating with consultants and staff to meet project deadlines.",
+          "Calculated fair value of acquired loan portfolio for regulatory reporting and assisted with 10-Q and 10-K proofing and financial table updates.",
+          "Conducted general ledger and bank account reconciliations and supported investment activity reporting."
+        ]
+      },
+      {
+        "title": "Deposit Operations Associate",
+        "employer": "a regional banking institution",
+        "start": "2016-08",
+        "end": "2016-12",
+        "bullets": [
+          "Processed items, verified ACH files, and supported incoming and outgoing wire operations.",
+          "Performed general ledger reconciliations and wrote and updated departmental procedures."
+        ]
+      },
+      {
+        "title": "Accounting Associate",
+        "employer": "a financial services company",
+        "start": "2014-06",
+        "end": "2016-07",
+        "bullets": [
+          "Managed accounts payable and receivable processes and set up an automated 1099 process in the accounting system.",
+          "Reconciled lending bank account and booked principal and interest for loans receivable.",
+          "Uploaded lending activity via Salesforce to financial software and booked realized and unrealized FX gains, losses, and hedging adjustments.",
+          "Worked closely with the Controller to produce financial statements using accounting software.",
+          "Ensured consistency and accuracy of data relayed across multiple departments."
+        ]
+      },
+      {
+        "title": "Community Consultant",
+        "employer": "a microfinance organization",
+        "start": "2014-01",
+        "end": "2014-05",
+        "bullets": [
+          "Volunteered to help a microfinance organization improve community outreach through marketing and sales campaigns.",
+          "Managed a team of eight to conduct sales and market research for solar products in urban and rural areas.",
+          "Translated qualitative data into quantitative data in Excel and presented findings via PowerPoint."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Finance",
+        "institution": "a state university",
+        "year": 2012
+      },
+      {
+        "degree": "Study Abroad Program in International Business",
+        "institution": "a university in Spain",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Variance analysis",
+      "Financial modeling",
+      "Account reconciliation",
+      "Advanced Excel",
+      "Salesforce",
+      "Board report preparation",
+      "10-Q and 10-K reporting",
+      "Accounts payable",
+      "Fixed assets management",
+      "General ledger reconciliation",
+      "Financial statements preparation",
+      "Foreign exchange accounting",
+      "Process improvement",
+      "SaaS implementation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "financial_analyst_02",
+    "occupation_id": "financial_analyst",
+    "source": "synthetic",
+    "summary": "Financial Analyst with 10+ years of experience advising clients on capitalization, debt restructuring, and investment assessment. Proven record of delivering data-driven financial analysis and client presentations within an industry-leading organization.",
+    "experience": [
+      {
+        "title": "Senior Financial Analyst",
+        "employer": "an industry-leading financial services organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Advise clients on capitalization strategies, including optimal amounts, sources, and timing of funding to support growth objectives.",
+          "Conduct financial analyses for green construction and retrofitting investments, evaluating projected returns and risk exposure.",
+          "Create and deliver client presentations detailing financial plans, restructuring options, and investment recommendations.",
+          "Collaborate with investment bankers to attract new corporate clients and expand advisory engagements."
+        ]
+      },
+      {
+        "title": "Financial Analyst",
+        "employer": "a national investment advisory firm",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Analyzed financial and operational performance of companies facing financial difficulties and recommended remedial actions.",
+          "Conferred with clients to restructure debt, refinance obligations, and raise new capital.",
+          "Assessed companies as potential investments by examining facilities and operational metrics on-site.",
+          "Partnered with legal and accounting professionals on cross-functional client projects."
+        ]
+      },
+      {
+        "title": "Junior Financial Analyst",
+        "employer": "a regional corporate finance consultancy",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Supported senior analysts in preparing capitalization recommendations and financial models for corporate clients.",
+          "Compiled performance data and drafted sections of client presentations on financing alternatives.",
+          "Assisted in evaluating investment opportunities and summarizing findings for internal review."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Finance",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Financial modeling",
+      "Capitalization strategy",
+      "Debt restructuring",
+      "Investment analysis",
+      "Financial statement analysis",
+      "Valuation",
+      "Client presentations",
+      "Risk assessment",
+      "Data analysis",
+      "Microsoft Excel",
+      "Collaboration",
+      "Report writing"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "financial_analyst_03",
+    "occupation_id": "financial_analyst",
+    "source": "synthetic",
+    "summary": "Financial Analyst with 10 years of experience in investment analysis, debt restructuring, and client advisory work at mid-size regional firms. Skilled at building financial models, assessing company performance, and presenting actionable recommendations to clients and internal partners.",
+    "experience": [
+      {
+        "title": "Senior Financial Analyst",
+        "employer": "a mid-size regional investment advisory firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead financial analysis for mid-market clients evaluating capitalization options, assessing optimal debt-to-equity mixes and timing of raises; supported 14 transactions totaling over $310M in new capital.",
+          "Analyze operational and financial performance of underperforming portfolio companies, recommending remediation plans that improved average EBITDA margins by 4.2 percentage points across six engagements.",
+          "Collaborate with investment bankers and legal counsel on client engagements, preparing capitalization summaries and supporting due diligence for new corporate mandates.",
+          "Create client presentations of restructuring and refinancing plans, translating complex models into clear recommendations for executive audiences."
+        ]
+      },
+      {
+        "title": "Financial Analyst",
+        "employer": "a regional boutique advisory group",
+        "start": "2018-02",
+        "end": "2021-05",
+        "bullets": [
+          "Built and maintained three-statement financial models to evaluate investment opportunities and advise clients on raising new debt and refinancing existing obligations.",
+          "Assessed companies as investment targets by reviewing facilities, asset quality, and capital expenditure needs during on-site and virtual diligence visits.",
+          "Partnered with accountants and public relations specialists on 9 recapitalization projects, aligning financial narratives with stakeholder communications.",
+          "Prepared quarterly performance dashboards tracking liquidity, leverage, and coverage ratios for 20+ client accounts."
+        ]
+      },
+      {
+        "title": "Junior Financial Analyst",
+        "employer": "a mid-size regional financial services firm",
+        "start": "2016-01",
+        "end": "2018-01",
+        "bullets": [
+          "Supported senior analysts in conducting financial analyses for investment in green construction and green retrofitting projects, screening 30+ proposals.",
+          "Compiled industry and comparable-company data to benchmark client performance and identify capitalization gaps.",
+          "Assisted in drafting client presentations of plan details, including scenario analyses for debt restructuring alternatives."
+        ]
+      },
+      {
+        "title": "Financial Analyst Intern",
+        "employer": "a community development financial institution",
+        "start": "2015-01",
+        "end": "2015-12",
+        "bullets": [
+          "Conducted financial statement analysis for small-business lending clients and summarized findings for credit committee review.",
+          "Maintained spreadsheets tracking portfolio performance metrics, including delinquency and debt-service coverage ratios."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Finance",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "MS in Applied Economics",
+        "institution": "a regional public university",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Financial modeling",
+      "Valuation analysis",
+      "Debt restructuring",
+      "Capitalization advisory",
+      "Scenario analysis",
+      "Financial statement analysis",
+      "Investment due diligence",
+      "Client presentation development",
+      "Excel and VBA",
+      "Power BI",
+      "Cash flow forecasting",
+      "Leverage and coverage ratio analysis",
+      "Stakeholder collaboration",
+      "Report writing"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "financial_analyst_04",
+    "occupation_id": "financial_analyst",
+    "source": "synthetic",
+    "summary": "Financial Analyst with 10+ years of experience across investment analysis, corporate finance, and client advisory, including leadership of valuation and capital structure engagements at an industry-leading organization.",
+    "experience": [
+      {
+        "title": "Senior Financial Analyst",
+        "employer": "an industry-leading organization",
+        "start": "2022-01",
+        "end": "Present",
+        "bullets": [
+          "Lead financial analysis for corporate and institutional clients, advising on capitalization amounts, sources, and timing across debt and equity issuances.",
+          "Build and review valuation models to assess companies as investments, including facility-level reviews and scenario analyses supporting client presentations.",
+          "Collaborate with investment bankers and legal teams to attract and onboard new corporate clients, supporting due diligence and deal structuring.",
+          "Present plan details to client leadership, translating complex analyses into clear recommendations that inform financing decisions."
+        ]
+      },
+      {
+        "title": "Financial Analyst",
+        "employer": "a mid-sized investment advisory firm",
+        "start": "2019-04",
+        "end": "2021-12",
+        "bullets": [
+          "Analyzed operational and financial performance of companies facing financial difficulties, recommending restructuring remedies and capital actions.",
+          "Conferred with clients to restructure and refinance debt, modeling repayment scenarios and evaluating refinancing alternatives.",
+          "Conducted financial analyses of investments in green construction and green retrofitting projects, assessing returns and risk profiles.",
+          "Partnered with accountants and public relations experts on cross-functional client engagements and disclosures."
+        ]
+      },
+      {
+        "title": "Financial Analyst",
+        "employer": "a regional corporate finance consultancy",
+        "start": "2016-08",
+        "end": "2019-03",
+        "bullets": [
+          "Advised clients on capitalization strategies, comparing funding sources and timing to support growth and refinancing objectives.",
+          "Developed client presentations of plan details, including pro forma statements, cash flow forecasts, and sensitivity analyses.",
+          "Supported assessments of companies as investment targets, including on-site facility reviews and operational benchmarking.",
+          "Collaborated on projects with lawyers and accountants to align financial analyses with transaction and compliance requirements."
+        ]
+      },
+      {
+        "title": "Junior Financial Analyst",
+        "employer": "a boutique financial research firm",
+        "start": "2015-06",
+        "end": "2016-07",
+        "bullets": [
+          "Performed financial statement analysis and ratio benchmarking across sectors to support investment recommendations.",
+          "Prepared recurring performance reports and client dashboards, improving reporting turnaround time by 20%.",
+          "Assisted senior analysts with market research and data gathering for valuation and capital structure analyses."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Finance",
+        "institution": "a state university",
+        "year": 2015
+      },
+      {
+        "degree": "Master of Science in Applied Finance",
+        "institution": "a private university",
+        "year": 2019
+      }
+    ],
+    "skills": [
+      "Financial modeling",
+      "Valuation",
+      "Debt restructuring and refinancing",
+      "Capital structure advisory",
+      "Financial statement analysis",
+      "Scenario and sensitivity analysis",
+      "Investment research",
+      "Client presentations",
+      "Due diligence",
+      "Cross-functional collaboration",
+      "Excel and data analysis",
+      "Market and industry research",
+      "Risk assessment",
+      "Stakeholder communication"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "financial_analyst_05",
+    "occupation_id": "financial_analyst",
+    "source": "synthetic",
+    "summary": "Financial Analyst with over 9 years of experience in financial modeling, investment analysis, and client advisory services. Proven track record of supporting capital raising and operational turnarounds for a growing mid-market company and its clients.",
+    "experience": [
+      {
+        "title": "Senior Financial Analyst",
+        "employer": "a growing mid-market manufacturing company",
+        "start": "2021-07",
+        "end": "Present",
+        "bullets": [
+          "Advise executive leadership on capitalization strategy, including the timing and sourcing of a $15M debt refinancing that reduced annual interest expense by 12%.",
+          "Analyze operational and financial performance of underperforming business units to recommend remedies, contributing to a 9% EBITDA improvement across two divisions.",
+          "Collaborate with legal and accounting teams on quarterly debt covenant compliance and investor reporting packages.",
+          "Develop and present detailed financial plans and scenario analyses to the board of directors, supporting a green retrofitting initiative that qualified for $2M in tax incentives."
+        ]
+      },
+      {
+        "title": "Financial Analyst",
+        "employer": "a regional investment advisory firm",
+        "start": "2018-02",
+        "end": "2021-06",
+        "bullets": [
+          "Assessed companies as investment candidates by examining facilities, operational efficiency, and competitive positioning across 20+ mid-market engagements.",
+          "Conducted financial analyses related to green construction projects, evaluating ROI and risk for clients considering sustainable retrofits.",
+          "Conferred with clients to restructure $30M in debt obligations, improving liquidity and extending maturity profiles.",
+          "Partnered with investment bankers to attract new corporate clients, supporting pitch development and due diligence."
+        ]
+      },
+      {
+        "title": "Junior Financial Analyst",
+        "employer": "a boutique corporate finance consultancy",
+        "start": "2015-06",
+        "end": "2018-01",
+        "bullets": [
+          "Built and maintained financial models to support client capital raising efforts, including equity and debt placements totaling $45M.",
+          "Analyzed financial statements and operational metrics for companies facing financial difficulties, identifying cost reduction opportunities and restructuring options.",
+          "Created client presentations of plan details for debt refinancing and capital structure advisory projects.",
+          "Collaborated with accountants and legal advisors on transaction documentation and financial due diligence."
+        ]
+      },
+      {
+        "title": "Financial Analyst Intern",
+        "employer": "a mid-sized commercial bank",
+        "start": "2014-06",
+        "end": "2015-05",
+        "bullets": [
+          "Supported senior analysts in credit analysis and risk assessment for commercial loan portfolios.",
+          "Prepared financial spreadsheets and reports to evaluate borrower capitalization and repayment capacity.",
+          "Assisted in the preparation of client presentations for loan restructuring proposals."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Finance",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Master of Business Administration",
+        "institution": "a public university",
+        "year": 2018
+      }
+    ],
+    "skills": [
+      "Financial Modeling",
+      "Valuation",
+      "Capital Structure Analysis",
+      "Debt Restructuring",
+      "Investment Analysis",
+      "Risk Assessment",
+      "Financial Reporting",
+      "Scenario Analysis",
+      "Client Advisory",
+      "Due Diligence",
+      "Microsoft Excel",
+      "Power BI",
+      "SQL",
+      "Communication"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

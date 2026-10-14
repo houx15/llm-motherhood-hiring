@@ -1,0 +1,81 @@
+{
+  "resume_id": "preschool_teacher_00",
+  "occupation_id": "preschool_teacher",
+  "source": "kaggle",
+  "summary": "Enthusiastic early childhood educator with experience providing high-quality instruction and fostering a positive learning environment for young students. Skilled in curriculum development, classroom organization, and building trusting relationships with students, colleagues, and administrators.",
+  "experience": [
+    {
+      "title": "Preschool Teacher",
+      "employer": "a local elementary school",
+      "start": "2017-09",
+      "end": "Present",
+      "bullets": [
+        "Created lesson plans in accordance with state curriculum and school-wide curriculum standards.",
+        "Established positive relationships with students, colleagues and school administrators.",
+        "Strengthened communication with families by holding regular conferences.",
+        "Named Teacher of the Year by peers in 2015."
+      ]
+    },
+    {
+      "title": "Assistant Teacher",
+      "employer": "a community childcare center",
+      "start": "2016-08",
+      "end": "2017-08",
+      "bullets": [
+        "Supervised twenty students ages five to eight in a before and after school childcare setting.",
+        "Provided full-time summer camp care for ages five to eleven, including chaperoning weekly field trips.",
+        "Maintained first aid procedures and ensured student safety during transport and activities."
+      ]
+    },
+    {
+      "title": "Senior Support Representative",
+      "employer": "a national online advertising service",
+      "start": "2015-05",
+      "end": "2016-07",
+      "bullets": [
+        "Served as resource for customer service and technical problems for eight on-line support technicians.",
+        "Troubleshot system issues and provided internal and external customer support via email."
+      ]
+    },
+    {
+      "title": "Customer Service Administrator",
+      "employer": "a regional classifieds company",
+      "start": "2014-06",
+      "end": "2015-04",
+      "bullets": [
+        "Created and maintained a Customer Service Training manual for an online classifieds company.",
+        "Provided internal and external customer service via e-mail and system troubleshooting."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "AA in Child Development",
+      "institution": "a community college",
+      "year": 1998
+    },
+    {
+      "degree": "BS in Psychology",
+      "institution": "a state university",
+      "year": 2002
+    }
+  ],
+  "skills": [
+    "Curriculum development",
+    "Long-term planning",
+    "Classroom management",
+    "Critical thinking",
+    "Calm under pressure",
+    "Decisive decision-making",
+    "Mediation and advocacy",
+    "Highly organized",
+    "Excellent work ethic",
+    "Proficiency with Promethean Board",
+    "Computer literacy",
+    "Interpersonal skills",
+    "Communication"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

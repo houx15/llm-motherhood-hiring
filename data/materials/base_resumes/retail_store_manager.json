@@ -1,0 +1,495 @@
+[
+  {
+    "resume_id": "retail_store_manager_00",
+    "occupation_id": "retail_store_manager",
+    "source": "kaggle",
+    "summary": "Retail professional with progressive experience in sales, team leadership, and store operations. Skilled in customer service, merchandising, and driving sales goals in fast-paced environments.",
+    "experience": [
+      {
+        "title": "Sales Lead",
+        "employer": "a national mobile retail chain",
+        "start": "2015-10",
+        "end": "2017-04",
+        "bullets": [
+          "Opened and closed the store, including counting cash, managing registers, and creating staff assignments.",
+          "Consistently met monthly sales goals while maintaining strong product knowledge.",
+          "Delivered excellent customer service to every customer entering the retail location."
+        ]
+      },
+      {
+        "title": "Senior Sales Associate",
+        "employer": "a regional retail company",
+        "start": "2015-03",
+        "end": "2015-09",
+        "bullets": [
+          "Led a team of 6-10 associates, teaching sales steps and techniques to improve performance.",
+          "Developed strategies to expand existing customer sales, resulting in a 45% increase in monthly sales.",
+          "Verified that all merchandising standards were maintained daily."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a national retail chain",
+        "start": "2014-06",
+        "end": "2015-02",
+        "bullets": [
+          "Ensured outstanding customer service by greeting and acknowledging every customer and maintaining product knowledge.",
+          "Completed daily sales goals and corporate tasks to improve store performance.",
+          "Maintained sales floor readiness using established steps and techniques with each customer."
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "employer": "a hospitality company",
+        "start": "2017-05",
+        "end": "Present",
+        "bullets": [
+          "Maintained sales goals while providing high-quality service to each guest.",
+          "Provided product suggestions based on knowledge and customer preferences.",
+          "Engaged with guests to create a welcoming atmosphere and enhance their experience."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      },
+      {
+        "degree": "Some college coursework",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Customer Service",
+      "Sales Leadership",
+      "Team Training",
+      "Merchandising",
+      "Cash Handling",
+      "Store Opening/Closing",
+      "Inventory Management",
+      "Microsoft Office",
+      "Communication",
+      "Multi-tasking",
+      "Decision Making",
+      "Punctuality",
+      "Reliability",
+      "Product Knowledge"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "retail_store_manager_01",
+    "occupation_id": "retail_store_manager",
+    "source": "kaggle",
+    "summary": "Customer-focused sales professional with over eight years of experience in retail and direct sales, recognized for exceeding revenue targets and delivering exceptional service. Skilled in team leadership, client relationship management, and strategic business development.",
+    "experience": [
+      {
+        "title": "Sales Associate",
+        "employer": "a national fitness studio chain",
+        "start": "2017-09",
+        "end": "Present",
+        "bullets": [
+          "Exceeded monthly sales goals by up to 224% through strategic sales tactics and community outreach.",
+          "Generated new leads by building professional relationships within the local community and through business-to-business networking.",
+          "Assisted the Store Manager in maintaining team motivation and a positive, customer-friendly environment.",
+          "Increased retail revenue by consistently exceeding monthly retail sales targets.",
+          "Conducted follow-up calls with prospective and new members to drive enrollment and retention.",
+          "Onboarded new clients using intake forms and ensured smooth handoffs to coaching staff."
+        ]
+      },
+      {
+        "title": "Sales Representative",
+        "employer": "a regional sales company",
+        "start": "2016-10",
+        "end": "2017-08",
+        "bullets": [
+          "Established new customer accounts and updated the database with accurate sales information.",
+          "Generated a high volume of referrals through proactive customer engagement.",
+          "Cold-called prospective customers to build relationships and expand the client base."
+        ]
+      },
+      {
+        "title": "Residential Sales Specialist",
+        "employer": "a telecommunications provider",
+        "start": "2015-10",
+        "end": "2016-09",
+        "bullets": [
+          "Sold television, internet, and phone services at residential properties, increasing revenue penetration to 97% across multiple sites.",
+          "Managed VIP and major customer accounts, ensuring high satisfaction and retention.",
+          "Upsold add-on services to existing customers, generating incremental revenue.",
+          "Trained sales teams on products and strategies at seminars and special events.",
+          "Collaborated with executives to identify new business opportunities and secure contracts.",
+          "Prepared monthly commission payroll reports for over 10 sales representatives.",
+          "Developed and executed annual sales plans for assigned territories, monitoring market conditions and adjusting strategies accordingly."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Media Production (incomplete)",
+        "institution": "a state university",
+        "year": 2004
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2002
+      }
+    ],
+    "skills": [
+      "Sales strategy",
+      "Customer service",
+      "Team leadership",
+      "Business development",
+      "Client relationship management",
+      "Retail operations",
+      "Lead generation",
+      "Account management",
+      "Cold calling",
+      "Upselling",
+      "Bilingual (Spanish)",
+      "CRM database management",
+      "Training and development",
+      "Revenue growth"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "retail_store_manager_02",
+    "occupation_id": "retail_store_manager",
+    "source": "synthetic",
+    "summary": "Retail Store Manager with over 9 years of progressive experience in mid-market retail environments. Proven ability to lead teams, drive sales, and maintain operational excellence while delivering outstanding customer service.",
+    "experience": [
+      {
+        "title": "Retail Store Manager",
+        "employer": "a growing mid-market retail company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct and supervise a team of 25+ employees engaged in sales, inventory-taking, and reconciling cash receipts, ensuring adherence to company policies and procedures.",
+          "Greet and assist customers, resolving inquiries and complaints to maintain a 95% customer satisfaction rating.",
+          "Monitor sales activities to ensure customers receive satisfactory service and quality goods, implementing strategies that increased monthly sales by 12%.",
+          "Examine merchandise to ensure correct pricing, display, and functionality, coordinating with vendors to resolve discrepancies.",
+          "Instruct staff on handling difficult and complicated sales, leading to a 20% reduction in escalated customer issues.",
+          "Assign employees to specific duties based on strengths and operational needs, optimizing shift coverage and reducing overtime costs by 15%.",
+          "Keep accurate records of purchases, sales, and requisitions, conducting regular audits to ensure compliance and accuracy."
+        ]
+      },
+      {
+        "title": "Assistant Store Manager",
+        "employer": "a regional retail chain",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Supported the Store Manager in daily operations, supervising 15+ associates and ensuring smooth workflow during peak hours.",
+          "Performed work activities of subordinates, including cleaning, organizing shelves, and selling merchandise, to maintain a customer-ready environment.",
+          "Monitored inventory levels and coordinated replenishment, reducing out-of-stock instances by 30%.",
+          "Trained new hires on customer service and sales techniques, contributing to a 10% increase in repeat customers.",
+          "Assisted in reconciling cash receipts and preparing daily bank deposits with 100% accuracy."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a national retail corporation",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Oversaw shifts of 10+ employees, ensuring adherence to sales goals and customer service standards.",
+          "Handled customer complaints and escalated issues, maintaining a calm and professional demeanor.",
+          "Assigned tasks to associates and monitored performance to ensure timely completion.",
+          "Maintained records of sales and inventory, preparing reports for management review."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a local retail store",
+        "start": "2014-06",
+        "end": "2014-12",
+        "bullets": [
+          "Provided excellent customer service by greeting and assisting customers and responding to inquiries.",
+          "Operated cash register and processed transactions accurately.",
+          "Organized shelves and displays to enhance store appearance and accessibility."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Business Administration",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Critical Thinking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Service",
+      "Inventory Management",
+      "Team Leadership",
+      "Sales Analysis",
+      "Cash Handling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "retail_store_manager_03",
+    "occupation_id": "retail_store_manager",
+    "source": "synthetic",
+    "summary": "Retail Store Manager with over 9 years of progressive experience leading teams, driving sales, and maintaining high customer service standards at well-established local employers. Skilled in staff supervision, inventory control, and resolving complex customer issues to support smooth daily operations.",
+    "experience": [
+      {
+        "title": "Retail Store Manager",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct and supervise a team of 18 sales associates engaged in sales, inventory-taking, and reconciling cash receipts, ensuring accurate daily reporting.",
+          "Greet and assist customers and resolve escalated inquiries and complaints, maintaining a 95% customer satisfaction rating over the past year.",
+          "Monitor sales activities and assign employees to specific duties to ensure customers receive satisfactory service and quality goods.",
+          "Instruct staff on handling difficult and complicated sales, reducing unresolved escalations by 30%.",
+          "Examine merchandise to confirm correct pricing and display and that items function as advertised, cutting pricing errors by 25%."
+        ]
+      },
+      {
+        "title": "Assistant Store Manager",
+        "employer": "a regional retail chain",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Supervised 12 employees during shifts, assigning tasks and monitoring sales activities to meet daily targets.",
+          "Kept records of purchases, sales, and requisitions, improving inventory accuracy to 98%.",
+          "Performed work activities of subordinates, including cleaning and organizing shelves and displays and selling merchandise during peak hours.",
+          "Trained new hires on customer service and cash reconciliation procedures, lowering register discrepancies by 20%."
+        ]
+      },
+      {
+        "title": "Retail Supervisor",
+        "employer": "a local specialty goods retailer",
+        "start": "2015-08",
+        "end": "2018-02",
+        "bullets": [
+          "Assisted customers with product selection and responded to inquiries, supporting consistent daily sales goals.",
+          "Oversaw inventory-taking and reconciled cash receipts at shift close for a team of 8 associates.",
+          "Examined merchandise displays for correct pricing and presentation, coordinating with staff to fix issues promptly."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a well-established local employer",
+        "start": "2014-06",
+        "end": "2015-07",
+        "bullets": [
+          "Greeted and assisted customers on the sales floor, responding to questions and directing them to products.",
+          "Maintained organized shelves and displays and supported inventory counts and stocking.",
+          "Processed sales transactions and helped reconcile cash receipts at the end of each shift."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Critical Thinking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Service",
+      "Staff Supervision",
+      "Inventory Management",
+      "Cash Reconciliation",
+      "Merchandise Display"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "retail_store_manager_04",
+    "occupation_id": "retail_store_manager",
+    "source": "synthetic",
+    "summary": "Retail Store Manager with over a decade of experience leading teams in high-volume retail environments. Proven ability to drive sales, optimize inventory, and deliver exceptional customer service while managing daily store operations for a large national company.",
+    "experience": [
+      {
+        "title": "Retail Store Manager",
+        "employer": "a large national retail company",
+        "start": "2019-06",
+        "end": "Present",
+        "bullets": [
+          "Direct and supervise a team of 25+ employees engaged in sales, inventory-taking, and reconciling cash receipts, achieving a 15% increase in annual sales.",
+          "Provide customer service by greeting and assisting customers, resolving escalated complaints, and ensuring a satisfactory shopping experience.",
+          "Examine merchandise to ensure correct pricing, display, and functionality, reducing return rate by 8%.",
+          "Monitor sales activities to ensure customers receive quality goods and service, implementing daily performance huddles that improved customer satisfaction scores by 12%.",
+          "Instruct staff on handling difficult and complicated sales, leading to a 20% improvement in conversion rates for high-ticket items.",
+          "Assign employees to specific duties and manage scheduling to optimize coverage during peak hours.",
+          "Keep records of purchases, sales, and requisitions, maintaining accurate inventory levels and reducing shrink by 10%."
+        ]
+      },
+      {
+        "title": "Assistant Store Manager",
+        "employer": "a national retail chain",
+        "start": "2016-05",
+        "end": "2019-05",
+        "bullets": [
+          "Performed work activities of subordinates, such as cleaning and organizing shelves and displays and selling merchandise, while overseeing daily operations.",
+          "Monitored sales activities to ensure customers received satisfactory service and quality goods, resulting in a 10% increase in repeat customers.",
+          "Assigned employees to specific duties and supervised inventory-taking, reconciling cash receipts, and customer service tasks.",
+          "Examined merchandise for correct pricing and display, coordinating with vendors to resolve discrepancies.",
+          "Instructed staff on handling difficult sales and complex customer inquiries, improving team problem-solving skills."
+        ]
+      },
+      {
+        "title": "Department Supervisor",
+        "employer": "a regional retail company",
+        "start": "2014-03",
+        "end": "2016-04",
+        "bullets": [
+          "Provided customer service by greeting and assisting customers and responding to inquiries and complaints.",
+          "Directed and supervised employees in sales, inventory-taking, and reconciling cash receipts for the department.",
+          "Kept records of purchases, sales, and requisitions, ensuring accurate reporting to store management.",
+          "Performed cleaning and organizing of shelves and displays to maintain a safe and appealing shopping environment."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Management",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Critical Thinking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Service",
+      "Inventory Management",
+      "Team Leadership",
+      "Sales Optimization",
+      "Cash Handling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "retail_store_manager_05",
+    "occupation_id": "retail_store_manager",
+    "source": "synthetic",
+    "summary": "Retail Store Manager with over 10 years of progressive leadership experience in mid-size regional firms, specializing in team supervision, inventory control, and customer satisfaction. Proven record of driving sales growth while maintaining operational excellence and developing high-performing staff.",
+    "experience": [
+      {
+        "title": "Store Manager",
+        "employer": "a mid-size regional retail firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct and supervise 18-25 employees engaged in sales, inventory-taking, and reconciling cash receipts, reducing shrinkage by 22% year over year.",
+          "Greet and assist customers, resolving escalated inquiries and complaints with a 95% satisfaction rating.",
+          "Monitor sales activities and assign employees to specific duties across shifts to ensure adequate coverage and quality service.",
+          "Examine merchandise to ensure correct pricing and display, coordinating with vendors to correct discrepancies within 48 hours."
+        ]
+      },
+      {
+        "title": "Assistant Store Manager",
+        "employer": "a regional retail chain",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Supervised a team of 12-15 associates, instructing staff on handling difficult and complicated sales to improve conversion rates by 18%.",
+          "Maintained records of purchases, sales, and requisitions, ensuring accurate reporting to district leadership each week.",
+          "Performed work activities of subordinates, including organizing shelves, cleaning displays, and selling merchandise during peak periods.",
+          "Led inventory counts and reconciled cash receipts, achieving 99.5% accuracy across quarterly audits."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a mid-size regional retail firm",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Oversaw daily floor operations, greeting customers and responding to inquiries to maintain high service standards.",
+          "Monitored merchandise presentation and pricing, restocking fast-moving items to prevent lost sales.",
+          "Assigned tasks to 8-10 associates per shift and tracked completion against daily sales and service goals.",
+          "Trained new hires on cash handling, customer engagement, and store policies, reducing onboarding time by 30%."
+        ]
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "a regional retail company",
+        "start": "2015-04",
+        "end": "2015-12",
+        "bullets": [
+          "Provided direct customer service by greeting shoppers, answering product questions, and resolving complaints.",
+          "Assisted with inventory-taking and organized shelves and displays to support store presentation standards.",
+          "Operated point-of-sale systems and reconciled cash receipts at the end of each shift."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Business Administration",
+        "institution": "a state university",
+        "year": 2015
+      },
+      {
+        "degree": "Associate of Arts in General Studies",
+        "institution": "a community college",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Critical Thinking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Customer Service",
+      "Inventory Management",
+      "Staff Supervision",
+      "Cash Reconciliation",
+      "Merchandise Display"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

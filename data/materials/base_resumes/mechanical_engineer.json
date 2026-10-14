@@ -1,0 +1,501 @@
+[
+  {
+    "resume_id": "mechanical_engineer_00",
+    "occupation_id": "mechanical_engineer",
+    "source": "kaggle",
+    "summary": "Mechanical Engineer with experience teaching undergraduate engineering courses and supporting design projects, including HVAC and chilled water system layouts. Skilled in CAD, MATLAB, data analysis, and optimization methods applied to engineering and construction contexts.",
+    "experience": [
+      {
+        "title": "Mechanical Engineering Tutor",
+        "employer": "a private educational services provider",
+        "start": "2024-09",
+        "end": "Present",
+        "bullets": [
+          "Tutored undergraduate students in mechanics, probability and statistics, MATLAB, operations research, and calculus.",
+          "Helped students understand foundational physics and calculus concepts through individualized instruction."
+        ]
+      },
+      {
+        "title": "Mechanical Engineering Instructor",
+        "employer": "a state university",
+        "start": "2022-10",
+        "end": "2024-08",
+        "bullets": [
+          "Developed coursework and delivered lectures to approximately 120 undergraduate students.",
+          "Taught heat and mass transfer and strength of materials.",
+          "Mentored a group of four undergraduate students on a final-year project focused on generating fuel from algae.",
+          "Served as faculty advisor for the mechanical engineering student association chapter.",
+          "Led the campus chapter of a professional heating, refrigeration, and air conditioning engineering society."
+        ]
+      },
+      {
+        "title": "Engineering Intern",
+        "employer": "a national engineering design firm",
+        "start": "2021-05",
+        "end": "2022-09",
+        "bullets": [
+          "Supported development of a central chilled water plant system layout for a 45,000 sq. ft. retail outlet.",
+          "Studied project life cycle management of the chilled water system.",
+          "Led the intern team and presented weekly progress reports to the lead design engineer."
+        ]
+      },
+      {
+        "title": "Engineering Trainee",
+        "employer": "a regional manufacturing company",
+        "start": "2021-03",
+        "end": "2021-04",
+        "bullets": [
+          "Assisted with engineering analysis tasks and documentation.",
+          "Gained exposure to project workflows and technical reporting."
+        ]
+      },
+      {
+        "title": "Mechanical Engineering Assistant",
+        "employer": "a regional manufacturing company",
+        "start": "2016-04",
+        "end": "2021-02",
+        "bullets": [
+          "Assisted with engineering analysis tasks and documentation.",
+          "Gained exposure to project workflows and technical reporting."
+        ]
+      },
+      {
+        "title": "Junior Mechanical Engineer",
+        "employer": "a local engineering consultancy",
+        "start": "2014-04",
+        "end": "2016-03",
+        "bullets": [
+          "Supported mechanical design calculations and drafting for building services projects.",
+          "Assisted with site surveys and technical documentation."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Science in Industrial Engineering",
+        "institution": "a state university",
+        "year": 2024
+      },
+      {
+        "degree": "Bachelor of Engineering in Mechanical Engineering",
+        "institution": "a public university",
+        "year": 2019
+      }
+    ],
+    "skills": [
+      "AutoCAD",
+      "MATLAB",
+      "Microsoft Excel",
+      "Microsoft Word",
+      "Microsoft PowerPoint",
+      "Microsoft Outlook",
+      "MySQL",
+      "VBA",
+      "heat and mass transfer",
+      "strength of materials",
+      "HVAC system design",
+      "project life cycle management",
+      "design of experiments",
+      "optimization and scheduling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "mechanical_engineer_01",
+    "occupation_id": "mechanical_engineer",
+    "source": "kaggle",
+    "summary": "Mechanical engineer with about 10 years of product design experience focused on non-metallic materials for oil field equipment, plus HVAC project experience. Proficient in CAD and FEA software, ISO document control, and ASTM/API/NORSOK material qualification.",
+    "experience": [
+      {
+        "title": "Engineering Supervisor",
+        "employer": "a global precision components manufacturer",
+        "start": "2016-10",
+        "end": "Present",
+        "bullets": [
+          "Lead designer of high pressure choke and gate valve seals used throughout oil field applications",
+          "Maintained quality standards that earned the facility ISO 9001 and AS9100 certification",
+          "Created material specifications and performed physical property testing to ASTM standards",
+          "Developed and conducted process qualification for PEEK injection molding and PTFE compression molding",
+          "Oversaw NORSOK and API qualification of PEEK and PTFE materials",
+          "Led building and implementation of HPHT testing equipment"
+        ]
+      },
+      {
+        "title": "Design Engineer",
+        "employer": "a global sealing components manufacturer",
+        "start": "2016-02",
+        "end": "2016-09",
+        "bullets": [
+          "Designed sealing solutions for oil field service applications including pumps, downhole tools, and subsea equipment using rubber, plastic, and composite materials",
+          "Performed material evaluation for chemical and physical compatibility with customer applications",
+          "Created custom application testing such as compression force, pressure blow downs, and cyclic bending, and wrote test reports for customers"
+        ]
+      },
+      {
+        "title": "Project Engineer",
+        "employer": "a regional HVAC testing and balance services firm",
+        "start": "2015-09",
+        "end": "2016-01",
+        "bullets": [
+          "Qualified installation of HVAC systems in new and renovated academic facilities",
+          "Performed flow calculations using multimeters, vibration measurements, and electrical measurements",
+          "Participated in weekly site meetings with contractors to review and report open action items, keeping projects on schedule",
+          "Delegated work to other contractors to ensure timely completion"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Mechanical Engineering",
+        "institution": "a state university",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "CAD",
+      "SolidWorks",
+      "AutoCAD",
+      "ProE",
+      "Ansys",
+      "Algor FEA",
+      "Matlab",
+      "LabView",
+      "Bluehill testing software",
+      "ISO 9001/AS9100 standards",
+      "ASTM material testing",
+      "API and NORSOK requirements",
+      "Plastics manufacturing processes",
+      "Process engineering and QA management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "mechanical_engineer_02",
+    "occupation_id": "mechanical_engineer",
+    "source": "synthetic",
+    "summary": "Mechanical engineer with 10 years of experience in product design, systems integration, and equipment reliability across industrial and manufacturing environments. Skilled at translating technical drawings and customer specifications into cost-effective, code-compliant mechanical solutions.",
+    "experience": [
+      {
+        "title": "Senior Mechanical Engineer",
+        "employer": "a regional industrial equipment manufacturer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead design and evaluation of custom rotating equipment packages, interpreting blueprints, schematics, and computer-generated reports to meet performance and environmental requirements.",
+          "Specify system components and direct product modifications that reduced field failure rates by 18% over two years.",
+          "Confer with manufacturing, controls, and field service personnel to implement operating procedures and resolve system malfunctions.",
+          "Investigate equipment failures to diagnose faulty operation and recommend remedial design changes, cutting repeat service calls by 22%.",
+          "Provide technical customer service and feasibility, cost, and maintenance assessments for proposed design changes."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer",
+        "employer": "a well-established local employer in the HVAC sector",
+        "start": "2018-02",
+        "end": "2021-05",
+        "bullets": [
+          "Researched, designed, and maintained mechanical assemblies for air-handling and thermal systems, ensuring conformance with engineering design and performance specifications.",
+          "Read and interpreted technical drawings and schematics to support installation, operation, and maintenance of mechanical products.",
+          "Analyzed customer design proposals and manuals to evaluate feasibility, cost, and maintenance requirements.",
+          "Partnered with cross-functional engineers to troubleshoot system malfunctions and document technical information for operations teams."
+        ]
+      },
+      {
+        "title": "Mechanical Design Engineer",
+        "employer": "a mid-sized manufacturing firm",
+        "start": "2015-05",
+        "end": "2018-01",
+        "bullets": [
+          "Designed and modified mechanical components and fixtures, specifying materials and components to meet design and regulatory requirements.",
+          "Investigated equipment difficulties and recommended design modifications that eliminated recurring machine malfunctions.",
+          "Supported installation and operation of process equipment across two production lines.",
+          "Prepared drawings and reports and presented findings to engineering and production staff."
+        ]
+      },
+      {
+        "title": "Junior Mechanical Engineer",
+        "employer": "a local engineering services company",
+        "start": "2014-03",
+        "end": "2015-04",
+        "bullets": [
+          "Assisted senior engineers in evaluating mechanical systems and reviewing technical documentation and schematics.",
+          "Performed calculations and analyses in support of design feasibility and cost studies.",
+          "Maintained project records and coordinated with vendors on component specifications."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Mechanical Engineering",
+        "institution": "a state university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Mathematics",
+      "Speaking",
+      "Writing",
+      "Active Listening",
+      "Mechanical Design",
+      "Blueprint and Schematic Interpretation",
+      "Systems Troubleshooting",
+      "Failure Analysis",
+      "Component Specification",
+      "Cost and Feasibility Analysis",
+      "Technical Documentation",
+      "Customer Technical Support"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "mechanical_engineer_03",
+    "occupation_id": "mechanical_engineer",
+    "source": "synthetic",
+    "summary": "Mechanical engineer with 10 years of experience designing, evaluating, and maintaining mechanical systems for industrial and consumer products. Skilled at interpreting technical drawings, diagnosing equipment failures, and delivering cost-effective design modifications.",
+    "experience": [
+      {
+        "title": "Senior Mechanical Engineer",
+        "employer": "a mid-size regional manufacturing firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead design and modification of mechanical assemblies for production equipment, reviewing blueprints and computer-generated reports to ensure conformance with performance and environmental specifications.",
+          "Investigate recurring equipment failures and recommend remedial actions, reducing unplanned downtime by 22% over two years.",
+          "Collaborate with process and controls engineers to implement operating procedures and resolve system malfunctions across three production lines.",
+          "Evaluate customer design proposals and specifications for feasibility, cost, and maintenance requirements, supporting technical customer service inquiries."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer",
+        "employer": "a regional industrial equipment supplier",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Designed and specified system components for custom material-handling equipment, interpreting technical drawings and schematics to meet client requirements.",
+          "Conducted feasibility and cost analyses of design proposals, presenting recommendations that trimmed component costs by 12% on a flagship product.",
+          "Diagnosed faulty operation in field installations and directed design modifications to eliminate machine malfunctions.",
+          "Provided technical information and support to installation teams and customers during equipment commissioning."
+        ]
+      },
+      {
+        "title": "Mechanical Design Engineer",
+        "employer": "a mid-size regional engineering services company",
+        "start": "2015-07",
+        "end": "2018-02",
+        "bullets": [
+          "Researched, designed, and evaluated mechanical components and subsystems for HVAC and fluid-handling applications.",
+          "Prepared and interpreted schematics and computer-generated reports to support installation, operation, and maintenance activities.",
+          "Conferred with project engineers to implement operating procedures and resolve design and performance issues.",
+          "Analyzed customer specifications and manuals to assess maintenance requirements and recommend design improvements."
+        ]
+      },
+      {
+        "title": "Junior Mechanical Engineer",
+        "employer": "a regional fabrication and assembly firm",
+        "start": "2014-08",
+        "end": "2015-06",
+        "bullets": [
+          "Supported senior engineers in reviewing blueprints and technical drawings for fabricated mechanical parts.",
+          "Assisted with evaluation and testing of mechanical products to verify conformance with engineering design specifications.",
+          "Documented equipment failure investigations and recommended corrective actions to maintenance personnel."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Mechanical Engineering",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Blueprint and schematic interpretation",
+      "Mechanical design and evaluation",
+      "Equipment failure diagnosis",
+      "Design modification and remediation",
+      "Feasibility and cost analysis",
+      "Component specification",
+      "Technical documentation",
+      "Computer-generated report review",
+      "Critical thinking",
+      "Reading comprehension",
+      "Mathematics",
+      "Speaking",
+      "Writing",
+      "Active listening"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "mechanical_engineer_04",
+    "occupation_id": "mechanical_engineer",
+    "source": "synthetic",
+    "summary": "Mechanical engineer with over 10 years of experience in product design, equipment maintenance, and manufacturing support, specializing in interpreting technical drawings, diagnosing failures, and implementing cost-effective design modifications. Proven ability to collaborate with cross-functional teams and provide technical customer service in mid-size regional firm environments.",
+    "experience": [
+      {
+        "title": "Senior Mechanical Engineer",
+        "employer": "a mid-size regional manufacturing firm",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Lead the redesign of a critical conveyor system, reducing downtime by 23% and maintenance costs by 18% through improved component specifications and failure analysis.",
+          "Interpret blueprints, schematics, and computer-generated reports to direct modifications ensuring conformance with performance and environmental regulations.",
+          "Confer with production engineers and maintenance personnel to resolve system malfunctions and implement revised operating procedures.",
+          "Investigate equipment failures, diagnose faulty operation, and recommend remedial actions; documented findings reduced recurring issues by 30%."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer",
+        "employer": "a regional industrial equipment supplier",
+        "start": "2019-04",
+        "end": "2022-06",
+        "bullets": [
+          "Researched and evaluated customer design proposals and specifications, assessing feasibility, cost, and maintenance requirements for custom machinery.",
+          "Specified system components and directed product modifications to meet engineering design and performance specifications, cutting lead times by 15%.",
+          "Provided technical customer service, translating complex mechanical concepts into actionable solutions for clients and internal teams.",
+          "Collaborated with a team of engineers to install and operate new mechanical systems, achieving a 98% first-pass acceptance rate."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer",
+        "employer": "a mid-size regional engineering services company",
+        "start": "2016-01",
+        "end": "2019-03",
+        "bullets": [
+          "Designed and analyzed mechanical components using CAD software, interpreting technical drawings and schematics to meet project requirements.",
+          "Conducted failure investigations on HVAC and pump systems, recommending design modifications that eliminated machine malfunctions in 85% of cases.",
+          "Researched and analyzed customer manuals and data to evaluate maintenance requirements, reducing unexpected breakdowns by 20%.",
+          "Conferred with senior engineers to implement operating procedures and provided technical information for project documentation."
+        ]
+      },
+      {
+        "title": "Junior Mechanical Engineer",
+        "employer": "a regional manufacturing solutions firm",
+        "start": "2014-06",
+        "end": "2015-12",
+        "bullets": [
+          "Assisted in reading and interpreting blueprints and computer-generated reports for product design evaluations.",
+          "Supported the research, design, and testing of mechanical products and processes to meet customer specifications.",
+          "Helped investigate equipment difficulties and recommended basic remedial actions under senior engineer guidance.",
+          "Provided technical support to customers regarding design proposals and maintenance requirements."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Mechanical Engineering",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Mathematics",
+      "Speaking",
+      "Writing",
+      "Active Listening",
+      "Blueprint Interpretation",
+      "CAD Software",
+      "Failure Analysis",
+      "Design Modification",
+      "Technical Customer Service",
+      "Equipment Maintenance",
+      "System Component Specification",
+      "Cost Feasibility Analysis"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "mechanical_engineer_05",
+    "occupation_id": "mechanical_engineer",
+    "source": "synthetic",
+    "summary": "Mechanical engineer with 10 years of experience in product design, systems integration, and equipment troubleshooting across large-scale manufacturing environments. Skilled in translating technical drawings and customer specifications into reliable, cost-effective mechanical solutions.",
+    "experience": [
+      {
+        "title": "Senior Mechanical Engineer",
+        "employer": "a large national manufacturing company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead design and evaluation of mechanical systems and components for high-volume production lines, ensuring conformance with performance specifications and environmental regulations.",
+          "Read and interpret blueprints, technical drawings, schematics, and computer-generated reports to guide modifications and resolve system malfunctions.",
+          "Confer with cross-functional engineers to implement operating procedures and provide technical information that reduced unplanned downtime by 18%.",
+          "Investigate equipment failures and recommend design modifications that extended mean time between failures by 22%."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer",
+        "employer": "a national industrial equipment provider",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Researched, designed, and installed mechanical products and processes to meet customer requirements and cost targets.",
+          "Specified system components and directed product modifications to align with engineering design and performance specifications.",
+          "Analyzed customer design proposals, specifications, and manuals to evaluate feasibility, cost, and maintenance requirements.",
+          "Provided technical customer service and troubleshooting support for installed equipment across multiple regional sites."
+        ]
+      },
+      {
+        "title": "Mechanical Engineer I",
+        "employer": "a large national engineering services firm",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Supported senior engineers in evaluating and maintaining mechanical equipment and systems for industrial clients.",
+          "Assisted in diagnosing faulty operation of machinery and recommended remedial actions to restore performance.",
+          "Prepared technical documentation and reports from schematics and computer-generated data to support design reviews.",
+          "Collaborated with project teams to implement operating procedures and resolve system malfunctions."
+        ]
+      },
+      {
+        "title": "Engineering Associate",
+        "employer": "a regional mechanical systems contractor",
+        "start": "2014-01",
+        "end": "2014-12",
+        "bullets": [
+          "Reviewed technical drawings and schematics to support installation and maintenance of mechanical systems.",
+          "Gathered and organized data from customer specifications and manuals for feasibility and cost analysis."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Mechanical Engineering",
+        "institution": "a state university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Mathematics",
+      "Speaking",
+      "Writing",
+      "Active Listening",
+      "Blueprint Interpretation",
+      "Technical Drawing Analysis",
+      "Mechanical Systems Design",
+      "Equipment Failure Investigation",
+      "Component Specification",
+      "Cost and Feasibility Analysis",
+      "Technical Customer Service",
+      "Cross-functional Collaboration"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

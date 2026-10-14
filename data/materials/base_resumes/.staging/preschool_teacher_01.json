@@ -1,0 +1,60 @@
+{
+  "resume_id": "preschool_teacher_01",
+  "occupation_id": "preschool_teacher",
+  "source": "kaggle",
+  "summary": "Passionate, creative educator with over 8 years of experience in bilingual elementary classrooms. Skilled in designing engaging, standards-aligned instruction and fostering positive, inclusive learning environments.",
+  "experience": [
+    {
+      "title": "Bilingual Elementary Teacher",
+      "employer": "a public school district",
+      "start": "2017-06",
+      "end": "Present",
+      "bullets": [
+        "Designed and delivered bilingual instruction across all content areas, achieving 90-100% passing rates each year.",
+        "Served as a consultant for a Spanish reading program, supporting literacy development.",
+        "Led school-wide initiatives including behavior support, robotics camp, and vertical alignment teams.",
+        "Presented at regional conferences on behavior support and student engagement.",
+        "Launched and coordinated an annual talent show celebrating student creativity and school community."
+      ]
+    },
+    {
+      "title": "Kindergarten Bilingual Teacher",
+      "employer": "a public school district",
+      "start": "2014-06",
+      "end": "2017-05",
+      "bullets": [
+        "Managed a self-contained kindergarten bilingual classroom and a team-taught classroom.",
+        "Served as a cultural liaison and board member for the school's parent-teacher association."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master's in Educational Leadership",
+      "institution": "a state university",
+      "year": 2015
+    },
+    {
+      "degree": "Bachelor of Business in Marketing",
+      "institution": "a state university",
+      "year": 1999
+    }
+  ],
+  "skills": [
+    "Bilingual instruction (English/Spanish)",
+    "Early childhood education",
+    "Classroom management",
+    "Lesson planning",
+    "Literacy development",
+    "Mathematics instruction",
+    "Behavior support (PBIS)",
+    "Parent-teacher communication",
+    "Public speaking",
+    "Microsoft Office",
+    "Adobe Creative Suite (Photoshop, Illustrator)",
+    "Project management"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

@@ -1,0 +1,541 @@
+[
+  {
+    "resume_id": "lawyer_00",
+    "occupation_id": "lawyer",
+    "source": "kaggle",
+    "summary": "Agile legal professional with nearly a decade of experience in litigation support, campaign management, and fundraising strategy. Skilled at leading cross-functional teams, managing budgets, and using data insights to inform decision making.",
+    "experience": [
+      {
+        "title": "Senior Advisor and National Fundraising Director",
+        "employer": "a national political campaign organization",
+        "start": "2020-09",
+        "end": "Present",
+        "bullets": [
+          "Created project plan to implement a new business strategy and organizational structure to optimize workflow, leading team to raise $2.25MM in two months, the largest congressional raise in the country over that period.",
+          "Led 14-person staff composed of digital marketing, data, communications, and sales teams to surpass engagement and fundraising KPIs.",
+          "Managed $4.25MM budget and all fundraising-related projects including launching a mobile-compatible website, and an activist-targeted digital marketing campaign that increased engagement across all digital channels by 43%."
+        ]
+      },
+      {
+        "title": "Campaign and Fundraising Special Projects Advisor",
+        "employer": "a regional political consulting firm",
+        "start": "2020-01",
+        "end": "2020-08",
+        "bullets": [
+          "Developed budgets, timelines, deliverables, and KPIs for a portfolio of 8 congressional campaigns throughout the Midwest, leading each campaign to increase money raised by at least 100%.",
+          "Collaborated with heads of event, operations, and fundraising departments to flawlessly execute over 100 appearances from former presidents and high-profile celebrities."
+        ]
+      },
+      {
+        "title": "Campaign Chief of Staff and Fundraising Director",
+        "employer": "a congressional campaign committee",
+        "start": "2019-03",
+        "end": "2019-12",
+        "bullets": [
+          "Built and oversaw a $4MM budget and all campaign projects ranging from external communications and fundraising strategies to lawn sign placement.",
+          "Advised the Congressman on all political decisions and developments involving re-election efforts."
+        ]
+      },
+      {
+        "title": "Litigation Legal Assistant",
+        "employer": "a national law firm",
+        "start": "2016-07",
+        "end": "2019-02",
+        "bullets": [
+          "Voted best legal assistant in the litigation department.",
+          "Supported litigation team with legal research, document management, and case preparation."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Arts in US History",
+        "institution": "a state university",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Legal Research",
+      "Litigation Support",
+      "Budget Management",
+      "Project Management",
+      "Fundraising Strategy",
+      "CRM Databases",
+      "Data Analysis",
+      "Digital Marketing",
+      "Direct Mail",
+      "Business Development",
+      "Strategic Planning",
+      "Spanish Language",
+      "Microsoft Excel",
+      "Google Sheets"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "lawyer_01",
+    "occupation_id": "lawyer",
+    "source": "kaggle",
+    "summary": "Certified advocate with extensive experience in individual counseling, group facilitation, risk assessment, and court advocacy for survivors of domestic violence and sexual assault. Skilled in program development, outreach, and community training, with a strong background in legal research and client support.",
+    "experience": [
+      {
+        "title": "Domestic Violence and Sexual Assault Advocate",
+        "employer": "a regional social services organization",
+        "start": "2021-03",
+        "end": "Present",
+        "bullets": [
+          "Provided one-on-one counseling addressing emotional needs, coping skills, goals and planning for survivors, maintaining a caseload of up to 15 clients.",
+          "Cross-trained as court advocate, assisting individuals in accessing restraining orders at a district courthouse.",
+          "Created and facilitated a successful support group for survivors, with regular attendance of 10-20 participants.",
+          "Built and maintained relationships with outside agencies to secure donations and resources for clients and programs.",
+          "Conducted community training and presentations on healthy relationships, domestic violence, sexual assault, technology safety, and coping skills across all age groups.",
+          "Developed an empowerment group for youth ages 10-14, which became a popular after-school program and expanded to other schools."
+        ]
+      },
+      {
+        "title": "Student Intern",
+        "employer": "a criminal defense law firm",
+        "start": "2020-10",
+        "end": "2021-02",
+        "bullets": [
+          "Assisted an attorney during a major homicide trial, including input on trial strategy.",
+          "Conducted client interviews on behalf of the attorney.",
+          "Organized case files and discovery materials to prepare for trial.",
+          "Attended criminal and civil court proceedings, depositions, and other case-related meetings.",
+          "Performed legal research and background research on clients and plaintiffs to aid case strategy."
+        ]
+      },
+      {
+        "title": "Student Advocate and Assistant Outreach Coordinator",
+        "employer": "a university sexual assault prevention program",
+        "start": "2019-03",
+        "end": "2020-09",
+        "bullets": [
+          "Organized a volunteer group focused on sexual harassment and rape prevention.",
+          "Planned and arranged presentations and participation programs in classrooms, residence halls, and university events.",
+          "Designed and implemented new work flow processes to improve productivity.",
+          "Digitized archives of newspaper articles related to sexual assault from around New England dated back to 1980.",
+          "Staffed the emergency help line and provided one-on-one guidance, phone-based counseling, and referrals for survivors."
+        ]
+      },
+      {
+        "title": "Research Assistant, Legal Socialization Lab",
+        "employer": "a university research laboratory",
+        "start": "2017-09",
+        "end": "2019-02",
+        "bullets": [
+          "Conducted graduate-level statistical analysis and research during undergraduate years.",
+          "Presented and defended original research on legal socialization, youth behavior, criminal behavior, violent video games, and bullying.",
+          "Gained proficiency using SPSS, Microsoft Excel, Microsoft Office and other software.",
+          "Edited manuscripts and original research in a collaborative but fast-paced and competitive environment."
+        ]
+      },
+      {
+        "title": "Legal Research Assistant",
+        "employer": "a community legal aid office",
+        "start": "2015-06",
+        "end": "2017-08",
+        "bullets": [
+          "Supported attorneys with legal research on housing, employment, and benefits matters.",
+          "Organized client intake files and maintained case management records.",
+          "Drafted summaries of statutes and regulations for attorney review.",
+          "Assisted with outreach events and legal information clinics for community members."
+        ]
+      },
+      {
+        "title": "Volunteer Peer Advocate",
+        "employer": "a campus counseling center",
+        "start": "2014-06",
+        "end": "2015-05",
+        "bullets": [
+          "Provided peer support and referrals for students seeking counseling services.",
+          "Assisted with workshop planning on stress management, conflict resolution, and healthy relationships.",
+          "Maintained confidential records and helped coordinate advocacy appointments.",
+          "Participated in training on crisis intervention and trauma-informed communication."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of the Arts in Psychology and Justice Studies Forensics",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Individual Counseling",
+      "Group Facilitation",
+      "Risk Assessment",
+      "Program Development",
+      "Youth Advocacy",
+      "Court Advocacy",
+      "Outreach",
+      "Case Management",
+      "Conflict Resolution",
+      "Legal Research",
+      "Crisis Intervention",
+      "Community Training",
+      "Client Interviewing",
+      "Statistical Analysis"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "lawyer_02",
+    "occupation_id": "lawyer",
+    "source": "synthetic",
+    "summary": "Attorney with over nine years of experience advising individuals and businesses on litigation, contracts, and regulatory matters. Proven record of representing clients in court and before government agencies while managing complex case strategy from intake through resolution.",
+    "experience": [
+      {
+        "title": "Senior Associate Attorney",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Manage a caseload of 35-45 active civil and commercial matters, representing clients in court and before government agencies with a favorable resolution rate above 85%.",
+          "Interpret laws, rulings, and regulations for individual and business clients, advising on claim liability, legal rights and obligations, and the advisability of prosecuting or defending lawsuits.",
+          "Analyze probable case outcomes using legal precedents and develop strategies and arguments for presentation at hearings, mediations, and trials.",
+          "Draft, review, and negotiate contracts, leases, deeds, and settlement agreements, reducing client exposure through targeted risk provisions.",
+          "Supervise two junior associates and one paralegal, reviewing filings and coordinating evidence gathering through client and witness interviews."
+        ]
+      },
+      {
+        "title": "Associate Attorney",
+        "employer": "a regional law practice",
+        "start": "2018-04",
+        "end": "2021-05",
+        "bullets": [
+          "Gathered evidence to formulate defenses and initiate legal actions by interviewing clients and witnesses and coordinating documentary discovery.",
+          "Examined legal data to determine the advisability of defending or prosecuting lawsuits, preparing memoranda that shaped case strategy.",
+          "Represented clients in court appearances and administrative proceedings, securing favorable rulings in more than 70 contested matters.",
+          "Prepared and reviewed legal documents including wills, mortgages, leases, and commercial contracts for small business clients.",
+          "Advised clients on business transactions and regulatory compliance, supporting closings and license applications before government agencies."
+        ]
+      },
+      {
+        "title": "Litigation Associate",
+        "employer": "a downtown legal services firm",
+        "start": "2015-09",
+        "end": "2018-03",
+        "bullets": [
+          "Conducted legal research and analyzed precedents to evaluate the probable outcomes of pending cases for senior counsel.",
+          "Interviewed clients and witnesses to ascertain facts, assembling evidence for defense strategies and affirmative claims.",
+          "Drafted pleadings, motions, and discovery responses, managing a docket of 20-30 matters under partner supervision.",
+          "Represented clients at preliminary hearings and settlement conferences before courts and government agencies.",
+          "Reviewed and revised contracts and lease agreements, flagging liability and compliance issues for client review."
+        ]
+      },
+      {
+        "title": "Attorney",
+        "employer": "a community legal practice",
+        "start": "2014-06",
+        "end": "2015-08",
+        "bullets": [
+          "Provided legal research and writing support on civil disputes, interpreting statutes and regulations for client matters.",
+          "Assisted with client and witness interviews to gather facts and document evidence for case files.",
+          "Prepared initial drafts of legal documents such as contracts, deeds, and demand letters.",
+          "Observed and supported court appearances and agency hearings, preparing case summaries for the supervising attorney."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Juris Doctor",
+        "institution": "a state university school of law",
+        "year": 2014
+      },
+      {
+        "degree": "BA in Political Science",
+        "institution": "a state university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Reading Comprehension",
+      "Active Listening",
+      "Critical Thinking",
+      "Writing",
+      "Active Learning",
+      "Monitoring",
+      "Legal Research",
+      "Case Analysis",
+      "Negotiation",
+      "Legal Drafting",
+      "Litigation Strategy",
+      "Client Counseling",
+      "Regulatory Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "lawyer_03",
+    "occupation_id": "lawyer",
+    "source": "synthetic",
+    "summary": "Litigation and transactional attorney with over nine years of continuous practice advising individuals and businesses on legal rights, obligations, and dispute strategy. Experienced in interpreting statutes and precedents, managing discovery and evidence gathering, and representing clients in court and before government agencies.",
+    "experience": [
+      {
+        "title": "Senior Counsel",
+        "employer": "an industry-leading organization",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Interpret laws, rulings, and regulations for corporate and individual clients across contract, liability, and regulatory matters.",
+          "Analyze probable outcomes of pending cases using legal precedent research, producing risk assessments that supported favorable settlements in 18 of 22 matters.",
+          "Evaluate findings and develop case strategies and arguments in preparation for presentation at trial and administrative hearings.",
+          "Advise clients on business transactions, claim liability, and the advisability of prosecuting or defending lawsuits.",
+          "Prepare, draft, and review complex contracts, leases, and settlement agreements valued at up to $14M."
+        ]
+      },
+      {
+        "title": "Litigation Attorney",
+        "employer": "a regional law firm",
+        "start": "2019-04",
+        "end": "2022-06",
+        "bullets": [
+          "Represented clients in court and before government agencies in civil and administrative proceedings, serving as first or second chair in 30+ hearings.",
+          "Gathered evidence to initiate legal actions by interviewing clients and witnesses and coordinating document production and depositions.",
+          "Examined legal data to determine the advisability of defending or prosecuting lawsuits, drafting memoranda that guided client decisions.",
+          "Drafted pleadings, motions, and discovery responses while maintaining a docket of 40+ active matters.",
+          "Negotiated settlements that resolved 85% of assigned cases before trial."
+        ]
+      },
+      {
+        "title": "Associate Attorney",
+        "employer": "a boutique legal practice",
+        "start": "2017-02",
+        "end": "2019-03",
+        "bullets": [
+          "Conducted legal research and interpreted rulings and regulations to support active litigation and advisory engagements.",
+          "Interviewed clients and witnesses to ascertain facts and assemble evidence for defense and plaintiff-side matters.",
+          "Prepared and reviewed wills, deeds, mortgages, leases, and contracts for individual and small-business clients.",
+          "Advised clients on legal rights, obligations, and claim liability in initial consultations and written opinions.",
+          "Maintained case files and monitored deadlines for a caseload of 25+ matters."
+        ]
+      },
+      {
+        "title": "Law Clerk",
+        "employer": "a public legal services office",
+        "start": "2016-06",
+        "end": "2017-01",
+        "bullets": [
+          "Researched statutes and precedents and summarized findings for supervising attorneys.",
+          "Drafted legal memoranda, client correspondence, and draft pleadings for review.",
+          "Observed court proceedings and prepared hearing summaries and case chronologies.",
+          "Organized discovery materials and indexed evidence for active matters."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Juris Doctor",
+        "institution": "a state university school of law",
+        "year": 2016
+      },
+      {
+        "degree": "Bachelor of Arts in Political Science",
+        "institution": "a public university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Reading Comprehension",
+      "Active Listening",
+      "Critical Thinking",
+      "Writing",
+      "Active Learning",
+      "Monitoring",
+      "Legal Research",
+      "Case Analysis",
+      "Negotiation",
+      "Legal Document Drafting",
+      "Litigation Strategy",
+      "Client Advising",
+      "Evidence Gathering"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "lawyer_04",
+    "occupation_id": "lawyer",
+    "source": "synthetic",
+    "summary": "Litigation and transactional attorney with over nine years of continuous experience advising corporate and individual clients on regulatory compliance, contract disputes, and civil litigation. Proven record of managing complex caseloads, negotiating favorable settlements, and representing clients before courts and government agencies.",
+    "experience": [
+      {
+        "title": "Senior Counsel",
+        "employer": "a large national company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Interpret federal and state regulations to advise business units on compliance obligations, reducing regulatory exposure in three product lines.",
+          "Manage a portfolio of 30+ active civil matters, analyzing probable outcomes using legal precedent and developing defense strategies that resolved 85% of cases without trial.",
+          "Draft and review commercial contracts, leases, and vendor agreements averaging $2M in value, incorporating liability and indemnification protections.",
+          "Represent the company before administrative agencies in contested proceedings, securing favorable rulings in four of five hearings.",
+          "Gather evidence by interviewing internal stakeholders and external witnesses to formulate defenses and initiate legal actions."
+        ]
+      },
+      {
+        "title": "Litigation Associate",
+        "employer": "a regional law firm",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Represented individual and business clients in court on contract, tort, and employment disputes, conducting bench and jury trials.",
+          "Examined legal data and prepared memoranda assessing the advisability of prosecuting or defending lawsuits, informing case strategy for 40+ matters.",
+          "Prepared and drafted pleadings, motions, discovery requests, and settlement agreements, achieving favorable resolutions in 90% of negotiated cases.",
+          "Advised clients on claim liability, legal rights, and obligations, and negotiated settlements that saved clients an average of 20% of claimed damages.",
+          "Conducted witness interviews and depositions to gather evidence supporting client positions."
+        ]
+      },
+      {
+        "title": "Associate Attorney",
+        "employer": "a boutique law practice",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Researched statutes, rulings, and regulations to evaluate legal rights and obligations for individuals and small businesses.",
+          "Drafted wills, deeds, mortgages, leases, and contracts, ensuring compliance with applicable law and client objectives.",
+          "Assisted senior counsel in preparing cases for presentation, organizing exhibits and evaluating findings to develop arguments.",
+          "Interviewed clients to ascertain facts, assess claim viability, and recommend strategies for prosecution or defense.",
+          "Represented clients before local government agencies on permitting and zoning matters."
+        ]
+      },
+      {
+        "title": "Junior Associate",
+        "employer": "a general practice law office",
+        "start": "2014-09",
+        "end": "2015-12",
+        "bullets": [
+          "Conducted legal research and analyzed precedents to support case strategy across civil and transactional matters.",
+          "Reviewed and summarized discovery materials, identifying key evidence for use in litigation.",
+          "Drafted routine legal documents including demand letters, affidavits, and simple contracts under supervision.",
+          "Maintained case files and monitored deadlines, ensuring timely filings and compliance with court schedules."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Juris Doctor",
+        "institution": "a state university school of law",
+        "year": 2014
+      },
+      {
+        "degree": "BA in Political Science",
+        "institution": "a public university",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Reading Comprehension",
+      "Active Listening",
+      "Critical Thinking",
+      "Writing",
+      "Active Learning",
+      "Monitoring",
+      "Learning Strategies",
+      "Legal Research",
+      "Negotiation",
+      "Litigation Strategy",
+      "Contract Drafting",
+      "Regulatory Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "lawyer_05",
+    "occupation_id": "lawyer",
+    "source": "synthetic",
+    "summary": "Attorney with 10 years of experience spanning complex commercial litigation and in-house counsel work at a large national company. Skilled at interpreting statutes and regulations, managing discovery and motion practice, and advising business clients on risk, liability, and contractual obligations.",
+    "experience": [
+      {
+        "title": "Senior Counsel",
+        "employer": "a large national company",
+        "start": "2022-07",
+        "end": "Present",
+        "bullets": [
+          "Advise business units on contract drafting, review, and negotiation across vendor, licensing, and services agreements valued at over $200M annually.",
+          "Manage a portfolio of 30+ active litigation and pre-litigation matters, developing defense strategies and evaluating probable outcomes based on precedent and regulatory guidance.",
+          "Interpret evolving federal and state regulations for internal stakeholders and translate requirements into practical compliance guidance.",
+          "Direct outside counsel on discovery, depositions, and motions, reducing average matter resolution time by 18% over two years."
+        ]
+      },
+      {
+        "title": "Litigation Associate",
+        "employer": "a regional law firm",
+        "start": "2019-02",
+        "end": "2022-06",
+        "bullets": [
+          "Represented corporate and individual clients in court and before administrative agencies in commercial disputes, contract claims, and employment matters.",
+          "Gathered evidence and interviewed clients and witnesses to establish case facts and formulate defense and prosecution strategies.",
+          "Drafted and argued motions, briefs, and settlement agreements, securing favorable outcomes in roughly 75% of contested matters.",
+          "Analyzed legal data and precedent to assess advisability of defending or prosecuting claims, preparing written risk assessments for clients."
+        ]
+      },
+      {
+        "title": "Associate Attorney",
+        "employer": "a boutique law practice",
+        "start": "2016-09",
+        "end": "2019-01",
+        "bullets": [
+          "Prepared, drafted, and reviewed contracts, leases, wills, and deeds for individual and small-business clients.",
+          "Advised clients on business transactions, claim liability, and legal rights and obligations.",
+          "Conducted legal research and evaluated findings to develop arguments and case strategies for negotiation and courtroom presentation.",
+          "Maintained active case files across 40+ matters while meeting all court and filing deadlines."
+        ]
+      },
+      {
+        "title": "Law Clerk",
+        "employer": "a mid-sized law firm",
+        "start": "2016-02",
+        "end": "2016-08",
+        "bullets": [
+          "Researched statutes, rulings, and regulations and summarized findings for supervising attorneys.",
+          "Assisted with document review, evidence organization, and preparation of legal memoranda and client correspondence."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Juris Doctor",
+        "institution": "a state university school of law",
+        "year": 2015
+      },
+      {
+        "degree": "Bachelor of Arts in Political Science",
+        "institution": "a public university",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Legal research and writing",
+      "Critical thinking",
+      "Reading comprehension",
+      "Active listening",
+      "Speaking and oral advocacy",
+      "Contract drafting and review",
+      "Litigation strategy",
+      "Regulatory interpretation",
+      "Client counseling",
+      "Negotiation",
+      "Case analysis",
+      "Legal document preparation",
+      "Attention to detail",
+      "Active learning"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

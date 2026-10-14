@@ -1,0 +1,79 @@
+{
+  "resume_id": "hr_manager_04",
+  "occupation_id": "hr_manager",
+  "source": "synthetic",
+  "summary": "HR Manager with over a decade of progressive experience in employee relations, compensation, and labor compliance, primarily within a mid-size regional firm. Skilled at aligning HR strategy with business goals while resolving complex staffing and policy issues.",
+  "experience": [
+    {
+      "title": "HR Manager",
+      "employer": "a mid-size regional firm",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Serve as primary link between management and employees, handling questions, interpreting contracts, and resolving work-related problems across 400+ staff.",
+        "Plan, direct, and supervise HR staff activities covering employment, compensation, labor relations, and employee relations.",
+        "Advise managers on equal employment opportunity, sexual harassment, and other organizational policy matters, recommending changes that reduced employee grievances by 18%.",
+        "Negotiate and administer bargaining agreements, representing the organization at personnel-related hearings and investigations."
+      ]
+    },
+    {
+      "title": "Senior HR Generalist",
+      "employer": "a mid-size regional firm",
+      "start": "2018-08",
+      "end": "2021-05",
+      "bullets": [
+        "Performed difficult staffing duties, including addressing understaffing, refereeing disputes, and administering disciplinary procedures and terminations.",
+        "Analyzed and modified compensation and benefits policies to establish competitive programs and ensure legal compliance, improving retention by 12%.",
+        "Conducted new employee orientation to foster positive attitude toward organizational objectives, onboarding over 150 new hires."
+      ]
+    },
+    {
+      "title": "HR Generalist",
+      "employer": "a regional manufacturing company",
+      "start": "2015-09",
+      "end": "2018-07",
+      "bullets": [
+        "Supported employee relations by interpreting and administering HR contracts and resolving workplace concerns.",
+        "Assisted in planning and conducting new employee orientation and coordinating employment and compensation activities.",
+        "Maintained compliance with labor regulations and prepared documentation for personnel-related hearings."
+      ]
+    },
+    {
+      "title": "HR Coordinator",
+      "employer": "a local business services firm",
+      "start": "2014-02",
+      "end": "2015-08",
+      "bullets": [
+        "Coordinated employment, compensation, and employee relations activities under HR management supervision.",
+        "Maintained personnel records and supported disciplinary and dispute resolution processes.",
+        "Helped administer benefits programs and ensured compliance with legal requirements."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Human Resources Management",
+      "institution": "a state university",
+      "year": 2013
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Reading Comprehension",
+    "Speaking",
+    "Writing",
+    "Critical Thinking",
+    "Active Learning",
+    "Monitoring",
+    "Learning Strategies",
+    "Mathematics",
+    "Employee Relations",
+    "Compensation and Benefits",
+    "Labor Relations",
+    "HR Policy Compliance",
+    "Conflict Resolution"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

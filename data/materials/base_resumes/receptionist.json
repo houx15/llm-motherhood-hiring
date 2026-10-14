@@ -1,0 +1,517 @@
+[
+  {
+    "resume_id": "receptionist_00",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Receptionist with 9 years of continuous experience in growing mid-market companies, handling multi-line switchboards, front-desk operations, and appointment scheduling. Known for resolving customer concerns promptly and maintaining accurate records.",
+    "experience": [
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "a growing mid-market healthcare services company",
+        "start": "2022-06",
+        "end": "Present",
+        "bullets": [
+          "Operate a 12-line telephone switchboard to answer, screen, and forward an average of 180 calls per day, taking messages and scheduling appointments for 8 departments.",
+          "Greet and direct approximately 90 visitors daily, verifying appointment details and escorting guests to appropriate offices.",
+          "Receive payments and record receipts for services, reconciling a daily cash drawer averaging $1,500 with zero discrepancies.",
+          "Maintain and update appointment calendars for 15 staff members, reducing scheduling conflicts by 30% through proactive coordination.",
+          "Hear and resolve customer complaints, escalating complex issues to management and achieving a 92% first-contact resolution rate."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a growing mid-market professional services firm",
+        "start": "2019-03",
+        "end": "2022-05",
+        "bullets": [
+          "Answered and routed calls on a multi-line switchboard, providing information about departments, employees, and services to clients and the public.",
+          "Transmitted documents to customers via email, mail, and fax, tracking 200+ outgoing items weekly with a 99% delivery accuracy rate.",
+          "Filed and maintained records for 6 departments, digitizing 1,200 paper files and improving retrieval time by 40%.",
+          "Scheduled appointments and maintained calendars for 10 consultants, coordinating 50+ meetings per week.",
+          "Welcomed visitors and determined the nature and purpose of each visit, directing them to specific destinations within the building."
+        ]
+      },
+      {
+        "title": "Office Receptionist",
+        "employer": "a growing mid-market logistics company",
+        "start": "2016-06",
+        "end": "2019-02",
+        "bullets": [
+          "Operated the telephone switchboard to answer, screen, and forward calls, taking messages and providing location and service information.",
+          "Greeted persons entering the establishment, determined the nature of each visit, and directed or escorted them to specific destinations.",
+          "Received payment and recorded receipts for shipping services, processing an average of 40 transactions per day.",
+          "Scheduled appointments and maintained appointment calendars for the operations team, reducing double-bookings by 25%.",
+          "Filed and maintained front-desk records and transmitted information or documents to customers using computer, mail, and facsimile machine."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Telephone Switchboard Operation",
+      "Appointment Scheduling",
+      "Records Management",
+      "Customer Complaint Resolution",
+      "Payment Processing"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "receptionist_01",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Receptionist with over 9 years of continuous front-desk experience in a growing mid-market company environment. Skilled in handling high-volume switchboard operations, greeting and directing visitors, scheduling appointments, and processing payments while maintaining accurate records.",
+    "experience": [
+      {
+        "title": "Receptionist",
+        "employer": "a growing mid-market healthcare services company",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Operate a multi-line switchboard to answer, screen, and forward an average of 120 calls daily, providing information and taking messages accurately.",
+          "Greet and direct over 60 visitors per day, determining the nature and purpose of each visit and notifying appropriate staff.",
+          "Schedule appointments and maintain electronic calendars for 12 providers, coordinating changes and reminders to reduce missed appointments.",
+          "Receive and record payments for services, issuing receipts and reconciling daily cash and card transactions.",
+          "Transmit documents and information to customers via email, mail, and fax, ensuring confidentiality and timely delivery.",
+          "Resolve routine customer complaints and escalate complex issues to management, maintaining a professional and calm demeanor.",
+          "File and maintain records, updating contact lists and departmental directories to support front-office operations."
+        ]
+      },
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "a growing mid-market professional services firm",
+        "start": "2019-06",
+        "end": "2022-03",
+        "bullets": [
+          "Answered and directed incoming calls on a 10-line telephone system, screening solicitations and forwarding messages to appropriate departments.",
+          "Welcomed clients and guests, verified appointments, and escorted visitors to meeting rooms or staff offices.",
+          "Maintained and updated appointment calendars for three executives, coordinating internal and external meetings.",
+          "Processed payments for services and recorded receipts in a daily log, achieving 100% accuracy in monthly reconciliations.",
+          "Prepared and distributed documents, memos, and faxes to clients, supporting timely communication across teams.",
+          "Handled customer inquiries and complaints by phone and in person, resolving issues or referring them to the right contact.",
+          "Organized and filed client records, keeping both physical and digital filing systems current."
+        ]
+      },
+      {
+        "title": "Office Assistant / Receptionist",
+        "employer": "a growing mid-market logistics company",
+        "start": "2016-09",
+        "end": "2019-05",
+        "bullets": [
+          "Operated the main telephone switchboard, answering, screening, and forwarding calls to a staff of 50+ employees.",
+          "Greeted visitors, determined the purpose of their visit, and directed them to the correct department or individual.",
+          "Scheduled appointments and maintained the office appointment calendar, confirming meetings and sending reminders.",
+          "Received cash and check payments for shipping services, recorded receipts, and balanced the cash drawer daily.",
+          "Sent and received documents by mail and fax, logging incoming and outgoing correspondence for tracking purposes.",
+          "Listened to and resolved customer complaints regarding deliveries, escalating unresolved issues to the operations manager.",
+          "Filed and maintained shipping records, vendor contacts, and office supply inventories."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a growing mid-market retail company",
+        "start": "2015-03",
+        "end": "2016-08",
+        "bullets": [
+          "Answered incoming calls on a busy switchboard, providing store information, hours, and directions to callers.",
+          "Greeted customers entering the establishment, determining the nature of their visit and directing them to the appropriate department.",
+          "Scheduled appointments for in-store services and maintained the appointment calendar for multiple staff members.",
+          "Accepted payment for services, recorded receipts, and issued change and refunds accurately.",
+          "Transmitted documents and information to customers via mail and fax, confirming receipt when needed.",
+          "Handled customer complaints in person and by phone, resolving issues or referring them to a supervisor.",
+          "Filed and maintained customer records and daily transaction logs."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Telephone Switchboard Operation",
+      "Appointment Scheduling",
+      "Payment Processing",
+      "Records Management",
+      "Customer Complaint Resolution",
+      "Visitor Reception and Direction"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "receptionist_02",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Receptionist with over 10 years of continuous experience in fast-paced, client-facing environments. Skilled in managing multi-line phone systems, greeting visitors, scheduling appointments, and handling payments while delivering professional and efficient front-desk support.",
+    "experience": [
+      {
+        "title": "Receptionist",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Operate a 12-line telephone switchboard to answer, screen, and forward an average of 120 calls daily, providing information and taking accurate messages.",
+          "Greet and direct 60-80 visitors per day, determining the nature and purpose of each visit and escorting guests to appropriate destinations.",
+          "Schedule and maintain appointment calendars for 15 staff members, reducing scheduling conflicts by 25% through proactive coordination.",
+          "Receive payments and record receipts for services, processing an average of $1,500 in daily transactions with 100% reconciliation accuracy.",
+          "Hear and resolve customer complaints in person and by phone, escalating complex issues to management while maintaining a 95% satisfaction rating.",
+          "File and maintain records, including visitor logs, appointment records, and departmental documents, ensuring compliance with organizational policies."
+        ]
+      },
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "a regional healthcare provider",
+        "start": "2018-01",
+        "end": "2021-05",
+        "bullets": [
+          "Answered and routed calls on a multi-line phone system, averaging 90 calls per shift, and scheduled appointments for 20 practitioners.",
+          "Greeted patients and visitors, verified appointment details, and directed them to the correct departments or offices.",
+          "Processed payments, recorded receipts, and balanced daily cash drawers, handling co-pays and service fees accurately.",
+          "Transmitted information and documents to patients and departments via computer, mail, and fax, ensuring timely delivery.",
+          "Maintained and updated appointment calendars, reducing no-show rates by 18% through reminder calls and rescheduling support."
+        ]
+      },
+      {
+        "title": "Office Receptionist",
+        "employer": "a national service company",
+        "start": "2015-09",
+        "end": "2017-12",
+        "bullets": [
+          "Operated telephone switchboard to answer, screen, and forward calls, providing information and taking messages for 30+ employees.",
+          "Greeted persons entering the establishment, determined the nature of their visit, and directed them to specific destinations.",
+          "Scheduled appointments and maintained appointment calendars for multiple departments, coordinating across time zones.",
+          "Received payments and recorded receipts, issuing invoices and processing mail and fax correspondence.",
+          "Filed and maintained records, and provided information about services, department locations, and staff members."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a local business services firm",
+        "start": "2014-06",
+        "end": "2015-08",
+        "bullets": [
+          "Answered incoming calls on a switchboard, screened and forwarded calls, and took detailed messages for staff.",
+          "Welcomed visitors, determined the purpose of their visit, and escorted them to meeting rooms or offices.",
+          "Maintained and updated appointment calendars, scheduling meetings and conference rooms for 10+ team members.",
+          "Transmitted documents to customers via mail and fax, and provided general information about the establishment and its services."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Telephone Switchboard Operation",
+      "Appointment Scheduling",
+      "Payment Processing",
+      "Record Filing and Maintenance",
+      "Customer Complaint Resolution"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "receptionist_03",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Front-desk professional with over nine years of continuous experience greeting visitors, managing multi-line switchboards, and coordinating appointments for high-traffic offices. Known for calm problem resolution and accurate records in fast-paced, customer-facing settings.",
+    "experience": [
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Operate a multi-line telephone switchboard to answer, screen, and forward 80-120 calls per day, taking messages and routing urgent requests to the correct department.",
+          "Greet an average of 60 visitors daily, determine the nature and purpose of each visit, and direct or escort them to specific destinations within the building.",
+          "Schedule appointments and maintain up-to-date calendars for six staff members, reducing double-bookings and missed meetings.",
+          "Receive payment and record receipts for walk-in services, reconciling daily cash and card transactions with zero discrepancies over the past year.",
+          "Hear and resolve routine complaints from customers and the public, escalating complex issues to management with written summaries."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a regional services firm",
+        "start": "2018-09",
+        "end": "2021-05",
+        "bullets": [
+          "Staffed the main lobby switchboard, answering and forwarding calls while providing information about departments, office locations, and available services.",
+          "Transmitted information and documents to customers via computer, mail, and fax, tracking outgoing correspondence to confirm delivery.",
+          "Filed and maintained records for over 2,000 client accounts, updating contact details and appointment histories in the office database.",
+          "Supported four departments by scheduling meetings, confirming appointments by phone, and preparing visitor sign-in materials.",
+          "Trained two new front-desk employees on call handling, greeting protocols, and payment recording procedures."
+        ]
+      },
+      {
+        "title": "Office Assistant / Relief Receptionist",
+        "employer": "a community professional center",
+        "start": "2016-02",
+        "end": "2018-08",
+        "bullets": [
+          "Covered the reception desk during peak hours, greeting persons entering the establishment and directing them to appropriate offices.",
+          "Answered incoming calls, took messages, and scheduled appointments for shared conference and consultation rooms.",
+          "Maintained and updated appointment calendars for multiple tenants, coordinating room availability and notifying staff of changes.",
+          "Received payments and recorded receipts for room rentals and copying services, issuing accurate change and documentation.",
+          "Filed and maintained records, assisted with mail distribution, and provided general information about building services to the public."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Office Administration",
+        "institution": "a local community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a regional public high school",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Writing",
+      "Critical Thinking",
+      "Monitoring",
+      "Active Learning",
+      "Telephone switchboard operation",
+      "Appointment scheduling",
+      "Records filing and maintenance",
+      "Payment processing and receipting",
+      "Customer complaint resolution",
+      "Visitor greeting and direction",
+      "Calendar management"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "receptionist_04",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Receptionist with over 9 years of front-desk experience in fast-paced, customer-facing environments. Skilled at managing high call volumes, greeting visitors, and keeping appointment and records systems accurate and organized.",
+    "experience": [
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "an industry-leading healthcare organization",
+        "start": "2021-07",
+        "end": "Present",
+        "bullets": [
+          "Answer and route an average of 90+ calls per day on a multi-line switchboard, screening inquiries and transferring callers to appropriate departments.",
+          "Greet and check in 60-80 visitors daily, verifying appointment details and directing or escorting them to correct offices.",
+          "Schedule and reschedule patient appointments using electronic calendar software, reducing scheduling conflicts by 25%.",
+          "Collect and record payments for services, issuing receipts and reconciling daily cash and card totals.",
+          "File and maintain confidential records, and transmit documents to clients via mail, fax, and secure email."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a regional professional services firm",
+        "start": "2019-02",
+        "end": "2021-06",
+        "bullets": [
+          "Operated a 6-line telephone switchboard, taking messages and forwarding calls for a staff of 120.",
+          "Scheduled appointments and maintained shared calendars for three conference rooms and five executives.",
+          "Resolved customer complaints in person and by phone, escalating complex issues to management when needed.",
+          "Provided information about company services, office locations, and staff assignments to callers and guests.",
+          "Processed incoming and outgoing mail and faxes, logging deliveries and notifying recipients."
+        ]
+      },
+      {
+        "title": "Office Assistant / Receptionist",
+        "employer": "a community services organization",
+        "start": "2017-05",
+        "end": "2019-01",
+        "bullets": [
+          "Greeted clients entering the facility, determined the purpose of each visit, and directed them to the correct program area.",
+          "Answered and screened incoming calls, scheduling intake appointments and documenting messages for staff.",
+          "Received payment for program fees and recorded receipts in a daily transaction log.",
+          "Filed and updated client records, ensuring documentation was complete and easy to retrieve.",
+          "Addressed routine questions and complaints from the public, referring unresolved matters to supervisors."
+        ]
+      },
+      {
+        "title": "Front Desk Clerk",
+        "employer": "a local hospitality group",
+        "start": "2015-09",
+        "end": "2017-04",
+        "bullets": [
+          "Welcomed guests, confirmed reservations, and directed visitors to rooms and on-site amenities.",
+          "Answered telephone inquiries, took messages, and forwarded calls to the appropriate departments.",
+          "Scheduled appointments for facility tours and maintained an up-to-date booking calendar.",
+          "Handled cash and card payments for services and issued itemized receipts.",
+          "Maintained front-desk files and transmitted confirmations to guests by mail and fax."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Mathematics",
+      "Telephone switchboard operation",
+      "Appointment scheduling",
+      "Records filing and maintenance",
+      "Payment processing and receipting",
+      "Customer complaint resolution",
+      "Microsoft Office and calendar software"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "receptionist_05",
+    "occupation_id": "receptionist",
+    "source": "synthetic",
+    "summary": "Front-desk professional with over nine years of continuous experience in reception, call handling, scheduling, and customer service across mid-size regional firms. Known for calm, accurate triage of high call and walk-in volumes and for keeping appointment calendars and records running without gaps.",
+    "experience": [
+      {
+        "title": "Front Desk Receptionist",
+        "employer": "a mid-size regional healthcare services firm",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Operate a multi-line telephone switchboard to answer, screen, and forward an average of 90 calls per day, taking messages and booking appointments for 12 provider calendars.",
+          "Greet 40–60 visitors daily, determine the nature and purpose of each visit, and direct or escort them to the appropriate department or staff member.",
+          "Receive payments for services, record receipts, and reconcile the daily cash log against the point-of-sale report with a 99.8% accuracy rate.",
+          "Schedule and reschedule appointments and maintain and update calendars in the electronic scheduling system, cutting double-bookings to near zero.",
+          "Transmit information and documents to customers by email, mail, and fax, and maintain correspondence and filing records for the front office.",
+          "Listen to and resolve visitor and caller complaints, escalating only the cases that require clinical or management judgment and following up until closed."
+        ]
+      },
+      {
+        "title": "Receptionist and Appointment Coordinator",
+        "employer": "a mid-size regional staffing agency",
+        "start": "2019-08",
+        "end": "2022-03",
+        "bullets": [
+          "Answered and screened a high-volume switchboard, forwarding calls to recruiters and account managers and logging messages in the shared tracker.",
+          "Scheduled interviews and appointments and maintained and updated multiple appointment calendars for four branch teams.",
+          "Received and recorded payments for job-fair and training services, issued receipts, and filed daily transaction records.",
+          "Greeted candidates and clients entering the branch, verified the purpose of each visit, and escorted them to interview rooms or waiting areas.",
+          "Filed and maintained paper and digital records for approximately 200 active candidates, keeping document retention and confidentiality standards.",
+          "Provided information about branch location, departments, staff roles, and services to callers and walk-in visitors when inquiries were routine."
+        ]
+      },
+      {
+        "title": "Front Office Receptionist",
+        "employer": "a mid-size regional property management firm",
+        "start": "2017-02",
+        "end": "2019-07",
+        "bullets": [
+          "Operated the telephone switchboard to answer, screen, and forward tenant and vendor calls, taking messages and scheduling service appointments.",
+          "Met tenants and contractors at the front desk, determined the nature and purpose of each visit, and directed or escorted them to the correct office.",
+          "Transmitted lease notices, invoices, and maintenance documents to customers using the computer, mail, and fax machine.",
+          "Heard and helped resolve complaints from tenants and the public, documenting each case and routing unresolved issues to the property manager.",
+          "Maintained and updated the front-desk appointment calendar and filed work-order and vendor records each week."
+        ]
+      },
+      {
+        "title": "Receptionist",
+        "employer": "a mid-size regional professional services firm",
+        "start": "2015-06",
+        "end": "2017-01",
+        "bullets": [
+          "Answered and directed incoming calls on a multi-line switchboard, providing callers with basic information about the firm's offices, departments, and services.",
+          "Greeted arriving guests, determined the nature and purpose of each visit, and notified the appropriate employee for pickup or escort.",
+          "Scheduled appointments and maintained and updated the shared appointment calendar for the administrative team.",
+          "Received payment for copy, notary, and meeting-room services and recorded receipts in the daily log.",
+          "Filed and maintained client intake records and transmitted documents to customers by mail and facsimile."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Arts in General Studies",
+        "institution": "a community college",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Writing",
+      "Monitoring",
+      "Active Learning",
+      "Multi-line telephone switchboard operation",
+      "Appointment scheduling and calendar management",
+      "Cash handling and receipt recording",
+      "Records filing and maintenance",
+      "Customer complaint resolution",
+      "Visitor greeting and escorting",
+      "Information and document transmission"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

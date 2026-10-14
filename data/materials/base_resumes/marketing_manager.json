@@ -1,0 +1,483 @@
+[
+  {
+    "resume_id": "marketing_manager_00",
+    "occupation_id": "marketing_manager",
+    "source": "kaggle",
+    "summary": "Results-driven marketing professional with over a decade of experience in digital marketing, lead generation, and brand strategy. Proven ability to lead cross-functional teams and drive measurable growth across paid search, content marketing, and eCommerce channels.",
+    "experience": [
+      {
+        "title": "Senior Marketing Manager",
+        "employer": "a national technology solutions provider",
+        "start": "2016-05",
+        "end": "Present",
+        "bullets": [
+          "Improved organic traffic by over 40% through best-practice content marketing strategies",
+          "Grew online subscriptions 50% while revenue grew 43%",
+          "Improved email marketing open rates by 37% and click-through rates by 117% via A/B testing",
+          "Grew OEM partner marketplace downloads 4x through app store optimization",
+          "Developed paid search strategy yielding year-over-year MQL growth of 330% to 617%"
+        ]
+      },
+      {
+        "title": "Digital Marketing Consultant",
+        "employer": "a boutique marketing consultancy",
+        "start": "2014-09",
+        "end": "2016-04",
+        "bullets": [
+          "Identified growth opportunities through data analytics and optimization",
+          "Developed program roadmaps for client marketing campaigns",
+          "Managed B2B lead generation campaigns across multiple channels",
+          "Collaborated with client marketing vendors on relaunches and optimization"
+        ]
+      },
+      {
+        "title": "Digital Media Manager",
+        "employer": "a regional media and advertising company",
+        "start": "2014-04",
+        "end": "2014-08",
+        "bullets": [
+          "Partnered with product, sales, and marketing teams on new product releases",
+          "Managed a team of 9 account managers",
+          "Decreased advertiser churn rate by 37% through optimization best practices",
+          "Developed quarterly strategic plans to address sales goals",
+          "Drove team to generate $16 million in ad revenue"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Business Administration",
+        "institution": "a state university",
+        "year": 2015
+      },
+      {
+        "degree": "Bachelor of Science in Public Relations",
+        "institution": "a state university",
+        "year": 2004
+      }
+    ],
+    "skills": [
+      "Marketing Automation",
+      "Strategic Partnerships",
+      "Business Development",
+      "Analytics",
+      "Paid Social",
+      "Paid Search",
+      "Email Marketing",
+      "Branding",
+      "Content Marketing",
+      "Lead Generation",
+      "SEO",
+      "eCommerce",
+      "Conversion Rate Optimization",
+      "B2B & B2C Marketing"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "marketing_manager_01",
+    "occupation_id": "marketing_manager",
+    "source": "kaggle",
+    "summary": "Analytically minded marketing professional with experience in search engine marketing, statistical analysis, and data-driven campaign optimization. Skilled at translating complex datasets into actionable marketing strategies that drive revenue growth.",
+    "experience": [
+      {
+        "title": "Marketing Analytics Specialist",
+        "employer": "a national automotive digital marketing company",
+        "start": "2017-06",
+        "end": "Present",
+        "bullets": [
+          "Enabled precision micro-targeting and bid optimization for search engine marketing campaigns at the zip-code level, improving client campaign performance.",
+          "Built interactive geographic dashboards using SAS and R to track page views, sales, and market share, identifying high-opportunity areas for SEM investment.",
+          "Estimated to increase annual revenues by $3.5 million through improved targeting strategy and campaign allocation."
+        ]
+      },
+      {
+        "title": "Marketing Data Analyst",
+        "employer": "a regional digital marketing agency",
+        "start": "2016-05",
+        "end": "2017-05",
+        "bullets": [
+          "Conducted statistical analyses on survey research to identify significant differences in consumer preferences across demographic segments.",
+          "Applied ANOVA and T-test procedures to inform audience segmentation and messaging strategies for marketing campaigns.",
+          "Presented findings to internal stakeholders to guide campaign planning and targeting decisions."
+        ]
+      },
+      {
+        "title": "Business Intelligence Analyst",
+        "employer": "a local real estate analytics firm",
+        "start": "2015-06",
+        "end": "2016-04",
+        "bullets": [
+          "Analyzed housing data and appraisal records using SAS correlation procedures to identify statistically significant valuation discrepancies.",
+          "Produced analytical reports that supported residents in a successful legal challenge against county appraisals.",
+          "Collaborated with cross-functional teams to translate data insights into actionable business recommendations."
+        ]
+      },
+      {
+        "title": "Junior Marketing Analyst",
+        "employer": "a regional consumer insights company",
+        "start": "2014-06",
+        "end": "2015-05",
+        "bullets": [
+          "Supported marketing research projects through data collection, cleaning, and statistical analysis.",
+          "Assisted in developing customer segmentation models to improve targeting and campaign effectiveness.",
+          "Prepared summaries and visualizations of research findings for client presentations."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Sociology and Statistics",
+        "institution": "a state university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Search Engine Marketing (SEM)",
+      "Statistical Analysis",
+      "SAS",
+      "R",
+      "SQL",
+      "Data Visualization",
+      "Market Segmentation",
+      "Campaign Optimization",
+      "A/B Testing",
+      "Predictive Modeling",
+      "Customer Insights",
+      "Microsoft Office",
+      "Research Design",
+      "Presentation Skills"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "marketing_manager_02",
+    "occupation_id": "marketing_manager",
+    "source": "synthetic",
+    "summary": "Marketing Manager with over a decade of experience directing multi-channel campaigns, market research, and pricing strategy for established regional organizations. Proven record of using sales forecasting and ROI analysis to guide product positioning and drive profitable growth.",
+    "experience": [
+      {
+        "title": "Marketing Manager",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Formulate and direct marketing activities and policies for a portfolio of product lines, coordinating with advertising and promotion managers to align campaigns across digital, print, and in-store channels.",
+          "Use sales forecasting and strategic planning to ensure sale and profitability of offerings, monitoring market trends and presenting quarterly business development reviews to leadership.",
+          "Direct the hiring, training, and performance evaluation of a marketing and sales support team of eight, overseeing daily activities and professional development plans.",
+          "Evaluate financial aspects of product development, including budgets, expenditures, and return-on-investment projections, reallocating spend to channels delivering the strongest profit-loss results."
+        ]
+      },
+      {
+        "title": "Senior Marketing Specialist",
+        "employer": "a regional consumer goods distributor",
+        "start": "2018-02",
+        "end": "2021-05",
+        "bullets": [
+          "Developed and evaluated marketing strategy based on establishment objectives, market characteristics, and cost and markup factors, supporting annual revenue growth of 14 percent.",
+          "Initiated market research studies and analyzed findings to refine customer segmentation, resulting in a 20 percent lift in campaign response rates.",
+          "Developed pricing strategies balancing firm objectives and customer satisfaction, adjusting tiers for three product categories after competitive benchmarking.",
+          "Compiled lists describing product and service offerings for sales enablement and coordinated launch communications with promotion partners."
+        ]
+      },
+      {
+        "title": "Marketing Analyst",
+        "employer": "a well-established local employer",
+        "start": "2016-03",
+        "end": "2018-01",
+        "bullets": [
+          "Analyzed business developments and market trends to support strategic planning, delivering monthly reports that informed budget allocation decisions.",
+          "Assisted in evaluating the financial aspects of campaigns, tracking expenditures and profit-loss projections against planned return on investment.",
+          "Supported market research design and analysis, translating findings into recommendations for product positioning and promotional messaging.",
+          "Maintained competitor and pricing intelligence used by marketing and sales staff in daily account planning."
+        ]
+      },
+      {
+        "title": "Marketing Coordinator",
+        "employer": "a regional services firm",
+        "start": "2014-04",
+        "end": "2016-02",
+        "bullets": [
+          "Coordinated execution of marketing activities and policies, maintaining campaign calendars and liaising with advertising and promotion vendors.",
+          "Compiled lists describing product and service offerings and prepared collateral for trade events and client presentations.",
+          "Tracked campaign budgets and expenditures, flagging variances to support return-on-investment reporting.",
+          "Gathered market characteristics and customer feedback to assist senior staff in marketing strategy evaluation."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Marketing",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Marketing strategy",
+      "Sales forecasting",
+      "Strategic planning",
+      "Market research",
+      "Pricing strategy",
+      "Budget management",
+      "Return-on-investment analysis",
+      "Team leadership",
+      "Staff training and evaluation",
+      "Critical thinking",
+      "Active listening",
+      "Speaking",
+      "Writing",
+      "Reading comprehension"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "marketing_manager_03",
+    "occupation_id": "marketing_manager",
+    "source": "synthetic",
+    "summary": "Marketing Manager with over a decade of experience directing integrated campaigns, market research, and pricing strategy for regional consumer brands. Track record of growing revenue through data-driven planning, team leadership, and disciplined budget management.",
+    "experience": [
+      {
+        "title": "Marketing Manager",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct a team of six marketing and sales support staff, handling hiring, training, and quarterly performance evaluations.",
+          "Formulate annual marketing plans and pricing strategies across three product lines, balancing margin targets with customer retention goals.",
+          "Lead sales forecasting and strategic planning reviews that improved quarterly forecast accuracy by 18%.",
+          "Oversee a $1.4M promotional budget, reallocating spend toward channels with the strongest return on investment."
+        ]
+      },
+      {
+        "title": "Senior Marketing Specialist",
+        "employer": "a regional consumer products company",
+        "start": "2018-01",
+        "end": "2021-05",
+        "bullets": [
+          "Developed and evaluated marketing strategy for new product launches based on market characteristics and cost and markup factors.",
+          "Initiated market research studies and translated findings into positioning and messaging recommendations for leadership.",
+          "Coordinated with advertising and promotion managers to execute multi-channel campaigns across print, digital, and in-store.",
+          "Compiled product and service offering lists and analyzed business developments to monitor shifting market trends."
+        ]
+      },
+      {
+        "title": "Marketing Specialist",
+        "employer": "a mid-sized retail services firm",
+        "start": "2015-03",
+        "end": "2017-12",
+        "bullets": [
+          "Evaluated the financial aspects of campaign proposals, including budgets, expenditures, and profit-loss projections.",
+          "Supported pricing analysis that lifted gross margin on core offerings by 6% over two years.",
+          "Wrote campaign briefs, landing page copy, and promotional materials for seasonal initiatives.",
+          "Monitored competitor activity and prepared monthly reports on market and sales performance."
+        ]
+      },
+      {
+        "title": "Marketing Assistant",
+        "employer": "a local advertising agency",
+        "start": "2014-03",
+        "end": "2015-02",
+        "bullets": [
+          "Assisted account teams with campaign scheduling, vendor coordination, and budget tracking.",
+          "Compiled research summaries and maintained lists describing client products and service offerings.",
+          "Drafted social media and email content under the direction of promotion managers."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Marketing",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Certificate in Market Research",
+        "institution": "a community college",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Marketing strategy",
+      "Sales forecasting",
+      "Strategic planning",
+      "Market research",
+      "Pricing strategy",
+      "Budget management",
+      "Return-on-investment analysis",
+      "Team leadership",
+      "Performance evaluation",
+      "Campaign coordination",
+      "Critical thinking",
+      "Active listening",
+      "Writing",
+      "Speaking"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "marketing_manager_04",
+    "occupation_id": "marketing_manager",
+    "source": "synthetic",
+    "summary": "Marketing Manager with over a decade of experience leading cross-functional teams to develop and execute data-driven marketing strategies. Proven record of driving revenue growth, optimizing product portfolios, and aligning marketing initiatives with business objectives in competitive markets.",
+    "experience": [
+      {
+        "title": "Marketing Manager",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct the formulation and execution of comprehensive marketing plans, coordinating with advertising and promotion managers to launch campaigns that increased market share by 12% year-over-year.",
+          "Lead sales forecasting and strategic planning initiatives to ensure product line profitability, analyzing business developments and monitoring market trends to inform executive decision-making.",
+          "Oversee hiring, training, and performance evaluations for a team of 8 marketing and sales staff, fostering professional development and daily operational excellence.",
+          "Evaluate financial aspects of product development, including budgets, expenditures, and ROI projections, achieving a 15% reduction in cost-per-acquisition while maintaining profit-loss targets.",
+          "Develop pricing strategies that balance firm objectives and customer satisfaction, resulting in a 9% increase in customer retention for key product categories.",
+          "Initiate market research studies and analyze findings to identify new market opportunities, compiling detailed lists of product and service offerings for targeted segments."
+        ]
+      },
+      {
+        "title": "Senior Marketing Specialist",
+        "employer": "a national retail corporation",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Developed and evaluated marketing strategy based on establishment objectives, market characteristics, and cost and markup factors, driving a 20% increase in qualified leads.",
+          "Collaborated with cross-functional teams to align advertising and promotion efforts, ensuring consistent brand messaging across all channels.",
+          "Analyzed sales forecasts and market trends to recommend product line adjustments, contributing to a 7% growth in annual revenue.",
+          "Managed marketing budgets totaling $1.2M, tracking expenditures and preparing return-on-investment analyses for senior leadership."
+        ]
+      },
+      {
+        "title": "Marketing Coordinator",
+        "employer": "a regional consumer goods company",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Assisted in the development of marketing strategies and pricing approaches, balancing customer satisfaction with firm profitability goals.",
+          "Compiled and maintained lists describing product and service offerings, supporting the launch of 5 new product lines.",
+          "Conducted market research and analyzed findings to inform promotional campaigns, increasing engagement by 18%.",
+          "Coordinated with advertising managers to execute promotional activities, ensuring alignment with overall marketing objectives."
+        ]
+      },
+      {
+        "title": "Marketing Assistant",
+        "employer": "a growing startup",
+        "start": "2014-01",
+        "end": "2014-12",
+        "bullets": [
+          "Supported the marketing team in executing promotional campaigns and compiling product offering lists.",
+          "Conducted basic market research and prepared reports on market trends and competitor activities.",
+          "Assisted with budget tracking and expenditure documentation for marketing initiatives."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Marketing",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Master of Business Administration",
+        "institution": "a private university",
+        "year": 2019
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Active Learning",
+      "Monitoring",
+      "Writing",
+      "Learning Strategies",
+      "Mathematics",
+      "Strategic Planning",
+      "Market Research",
+      "Budget Management",
+      "Team Leadership",
+      "Data Analysis"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "marketing_manager_05",
+    "occupation_id": "marketing_manager",
+    "source": "synthetic",
+    "summary": "Marketing Manager with over a decade of experience directing marketing strategy, product positioning, and cross-functional teams at large national companies. Skilled in market research, pricing, and financial analysis to drive product profitability and brand growth.",
+    "experience": [
+      {
+        "title": "Senior Marketing Manager",
+        "employer": "a large national consumer goods company",
+        "start": "2019-06",
+        "end": "Present",
+        "bullets": [
+          "Lead a team of 12 marketing and sales staff, overseeing hiring, training, and daily performance evaluations to ensure alignment with annual revenue targets.",
+          "Develop and execute comprehensive marketing strategies for a $45M product portfolio, using sales forecasting and strategic planning to achieve a 14% year-over-year increase in profitability.",
+          "Direct market research studies and analyze findings to identify emerging trends, resulting in the launch of three new product lines and a 9% gain in market share.",
+          "Evaluate financial aspects of product development, including $2.5M in R&D appropriations and ROI projections, to guide budget allocation and pricing decisions."
+        ]
+      },
+      {
+        "title": "Marketing Manager",
+        "employer": "a large national retail chain",
+        "start": "2016-04",
+        "end": "2019-05",
+        "bullets": [
+          "Formulated and coordinated promotional activities with advertising managers across 200+ locations, driving a 12% lift in quarterly sales.",
+          "Initiated pricing strategies that balanced firm objectives with customer satisfaction, improving gross margin by 5% while maintaining competitive positioning.",
+          "Compiled detailed product and service offering lists for national campaigns, ensuring consistent messaging across digital and traditional channels.",
+          "Monitored market trends and competitor activity to refine marketing tactics, reducing customer acquisition cost by 8%."
+        ]
+      },
+      {
+        "title": "Assistant Marketing Manager",
+        "employer": "a large national financial services firm",
+        "start": "2014-02",
+        "end": "2016-03",
+        "bullets": [
+          "Supported the development of marketing strategy based on establishment objectives, market characteristics, and cost/markup factors for new financial products.",
+          "Analyzed business developments and sales data to forecast product profitability, contributing to a 7% increase in cross-sell rates.",
+          "Coordinated with research teams to evaluate market research findings and recommend adjustments to campaign targeting.",
+          "Assisted in managing a $1.2M marketing budget, tracking expenditures and preparing return-on-investment reports for senior leadership."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Marketing",
+        "institution": "a state university",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Marketing Strategy",
+      "Sales Forecasting",
+      "Strategic Planning",
+      "Market Research",
+      "Pricing Strategy",
+      "Budget Management",
+      "Team Leadership",
+      "Performance Evaluation",
+      "Financial Analysis",
+      "Critical Thinking",
+      "Active Listening",
+      "Speaking",
+      "Writing",
+      "Monitoring"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

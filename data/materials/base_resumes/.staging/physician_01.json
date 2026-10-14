@@ -1,0 +1,95 @@
+{
+  "resume_id": "physician_01",
+  "occupation_id": "physician",
+  "source": "synthetic",
+  "summary": "Board-certified physician with over a decade of continuous full-time experience delivering comprehensive primary care across outpatient and community settings. Skilled in chronic disease management, preventive care, and coordinating multidisciplinary care teams to improve patient outcomes.",
+  "experience": [
+    {
+      "title": "Physician",
+      "employer": "a well-established regional health system",
+      "start": "2020-07",
+      "end": "Present",
+      "bullets": [
+        "Provide comprehensive primary care to a panel of approximately 2,200 patients, prescribing medications, vaccinations, and therapies for acute and chronic conditions.",
+        "Diagnose conditions by ordering and interpreting laboratory, imaging, and diagnostic tests, integrating results with patient history and examination findings.",
+        "Document patient encounters, medical histories, and treatment plans in the electronic health record, maintaining accuracy and regulatory compliance.",
+        "Monitor patient progress and adjust treatment plans through structured follow-up, reducing avoidable emergency department visits by 18% over two years.",
+        "Counsel patients on diet, activity, hygiene, and disease prevention, and explain test results and treatment options in accessible language.",
+        "Direct and coordinate care activities with nurses, medical assistants, and specialists to ensure continuity across the care team.",
+        "Refer patients to appropriate specialists when advanced or focused care is required, tracking outcomes and closing the loop on consultations."
+      ]
+    },
+    {
+      "title": "Physician",
+      "employer": "a community health clinic",
+      "start": "2017-08",
+      "end": "2020-06",
+      "bullets": [
+        "Delivered full-spectrum outpatient care to a diverse, underserved patient population, including preventive screenings and chronic disease management.",
+        "Ordered and interpreted diagnostic tests to identify conditions such as diabetes, hypertension, and respiratory illness.",
+        "Prescribed and administered vaccinations, medications, and therapies in accordance with evidence-based guidelines.",
+        "Collected and maintained detailed patient records, ensuring complete medical histories and examination documentation.",
+        "Educated patients and community members on lifestyle modification, nutrition, and preventive health practices.",
+        "Supervised and mentored nursing staff and rotating students in clinical procedures and patient communication."
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a multi-specialty physician group",
+      "start": "2015-07",
+      "end": "2017-07",
+      "bullets": [
+        "Managed a primary care panel, evaluating and treating common acute and chronic conditions in an outpatient setting.",
+        "Performed comprehensive histories and physical examinations and documented findings in patient records.",
+        "Ordered and interpreted routine laboratory and diagnostic studies to support accurate diagnosis.",
+        "Prescribed treatment regimens and monitored patient response, refining plans based on progress and test results.",
+        "Collaborated with an interdisciplinary team of nurses, therapists, and specialists to coordinate patient care.",
+        "Advised patients on hygiene, activity, and disease prevention strategies during routine visits and follow-up."
+      ]
+    },
+    {
+      "title": "Resident Physician",
+      "employer": "a teaching hospital",
+      "start": "2014-07",
+      "end": "2015-06",
+      "bullets": [
+        "Completed supervised clinical training across outpatient, inpatient, and emergency settings.",
+        "Conducted patient interviews, examinations, and record-keeping under attending physician oversight.",
+        "Ordered and interpreted diagnostic tests and presented findings during rounds and case conferences.",
+        "Administered treatments, medications, and vaccinations while monitoring patient conditions and progress.",
+        "Explained procedures and test results to patients and provided preventive health counseling."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Medicine (MD)",
+      "institution": "a state university school of medicine",
+      "year": 2014
+    },
+    {
+      "degree": "Bachelor of Science in Biology",
+      "institution": "a public university",
+      "year": 2010
+    }
+  ],
+  "skills": [
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Speaking",
+    "Active Learning",
+    "Monitoring",
+    "Science",
+    "Learning Strategies",
+    "Mathematics",
+    "Clinical Diagnosis",
+    "Treatment Planning",
+    "Chronic Disease Management",
+    "Patient Education"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

@@ -1,0 +1,514 @@
+[
+  {
+    "resume_id": "construction_laborer_00",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with over 10 years of hands-on experience on large commercial and residential projects. Skilled in site preparation, material handling, and operating hand and power tools to support crews and meet project deadlines.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "a large national construction company",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Load, unload, and distribute building materials, machinery, and tools to appropriate locations according to project plans and specifications, handling up to 80 pounds repeatedly.",
+          "Dig trenches and backfill excavations, compacting and leveling earth to grade specifications using picks, shovels, pneumatic tampers, and rakes.",
+          "Clean and prepare construction sites to eliminate possible hazards, maintaining a safe work environment for a crew of 15+ workers.",
+          "Signal equipment operators to facilitate alignment, movement, and adjustment of machinery and materials on active job sites."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a regional general contractor",
+        "start": "2019-08",
+        "end": "2022-03",
+        "bullets": [
+          "Tended pumps, compressors, and generators to provide power for tools and equipment and to heat and move materials such as asphalt.",
+          "Measured, marked, and recorded openings and distances to lay out areas where construction work would be performed.",
+          "Lubricated, cleaned, and repaired machinery, equipment, and tools to keep them in safe working condition.",
+          "Read plans, instructions, and specifications to determine daily work activities and coordinate with supervisors."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a national infrastructure services firm",
+        "start": "2017-01",
+        "end": "2019-07",
+        "bullets": [
+          "Assisted with site preparation and cleanup on roadway and utility projects, removing debris and hazards to prepare for excavation.",
+          "Operated hand and power tools to cut, shape, and assemble materials under the direction of skilled trades workers.",
+          "Loaded and unloaded construction materials and tools, distributing them to work areas based on project plans.",
+          "Maintained daily records of materials used and work completed to support project tracking."
+        ]
+      },
+      {
+        "title": "Construction Helper",
+        "employer": "a local building contractor",
+        "start": "2015-06",
+        "end": "2016-12",
+        "bullets": [
+          "Supported carpenters, masons, and equipment operators by moving materials and preparing work areas.",
+          "Used shovels, rakes, and pneumatic tampers to dig ditches, backfill excavations, and compact earth to grade.",
+          "Cleaned and prepared construction sites, removing debris to eliminate possible hazards.",
+          "Listened to and followed verbal instructions to complete tasks safely and efficiently."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Material Handling",
+      "Site Preparation",
+      "Equipment Operation",
+      "Trenching and Backfilling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "construction_laborer_01",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with over 10 years of continuous experience on commercial and residential sites, skilled in site preparation, material handling, and supporting equipment operations to keep projects on schedule and safe.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "a growing mid-market general contractor",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Load, unload, and distribute building materials and tools to appropriate locations according to project plans, reducing staging delays by roughly 20% per shift.",
+          "Dig trenches and backfill excavations, compacting and leveling earth to grade specifications using picks, shovels, pneumatic tampers, and rakes.",
+          "Clean and prepare construction sites to eliminate hazards, removing debris and maintaining clear access routes for crews and equipment.",
+          "Tend compressors and generators that power pneumatic tools, and lubricate, clean, and perform minor repairs on machinery and equipment.",
+          "Signal equipment operators to facilitate alignment and movement of machinery and materials in tight site conditions."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a mid-sized commercial construction company",
+        "start": "2019-07",
+        "end": "2021-05",
+        "bullets": [
+          "Measured, marked, and recorded openings and distances to lay out work areas per specifications, maintaining accuracy within a quarter inch.",
+          "Read plans and instructions to determine daily work activities and coordinated task sequence with crew leads.",
+          "Assisted with asphalt heating and material movement by tending heaters and pumps, supporting paving operations year-round.",
+          "Maintained tools and equipment through routine cleaning and lubrication, extending service life and cutting downtime."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a regional site development firm",
+        "start": "2017-05",
+        "end": "2019-06",
+        "bullets": [
+          "Supported excavation crews by digging ditches, backfilling, and compacting soil to grade using hand and powered tools.",
+          "Loaded and unloaded deliveries of lumber, pipe, and aggregate, verifying counts against project specifications before distribution.",
+          "Cleaned sites and installed temporary safety barriers, contributing to a record of zero lost-time incidents over two years."
+        ]
+      },
+      {
+        "title": "Construction Helper",
+        "employer": "a local residential builder",
+        "start": "2015-04",
+        "end": "2017-04",
+        "bullets": [
+          "Prepared sites by clearing debris and marking layout distances under the direction of site supervisors.",
+          "Carried and distributed materials to trade crews, keeping workflow continuous across multiple active units.",
+          "Operated and tended small pumps and generators for power tools, performing basic maintenance and refueling.",
+          "Listened to and followed verbal instructions, communicating status and needs to keep daily goals on track."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2014
+      },
+      {
+        "degree": "Certificate in Building Trades Fundamentals",
+        "institution": "a community technical institute",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Mathematics",
+      "Equipment Maintenance",
+      "Material Handling",
+      "Site Preparation",
+      "Trenching and Grading",
+      "Hand and Power Tool Operation",
+      "Safety Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "construction_laborer_02",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with over a decade of continuous experience on residential, commercial, and municipal job sites. Skilled in site preparation, material handling, and supporting equipment operators to keep projects on schedule and safe.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "a well-established local employer",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Prepare and clean construction sites daily, removing debris and eliminating hazards that could cause injury or delay inspections.",
+          "Dig trenches and excavations for utility lines and footings, then backfill and compact earth to grade specifications using shovels, pneumatic tampers, and rakes.",
+          "Load and unload building materials, machinery, and tools, distributing them to appropriate locations according to project plans and specifications.",
+          "Signal equipment operators to facilitate alignment, movement, and adjustment of machinery, equipment, and materials on tight urban sites."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a regional general contractor",
+        "start": "2019-01",
+        "end": "2022-03",
+        "bullets": [
+          "Tended pumps, compressors, and generators to provide power for tools and equipment and to heat asphalt materials during road repair projects.",
+          "Measured and marked openings and distances to lay out areas where construction work would be performed, reducing rework on framing crews.",
+          "Read plans, instructions, and specifications to determine work activities and confirmed daily assignments with site supervisors.",
+          "Lubricated, cleaned, and performed minor repairs on machinery, equipment, and tools, extending service life and reducing downtime."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a local site development company",
+        "start": "2016-08",
+        "end": "2018-12",
+        "bullets": [
+          "Assisted crews with site grading, excavation, and compaction, consistently meeting grade tolerances specified by project engineers.",
+          "Loaded and distributed materials to appropriate locations according to daily project plans, keeping crews supplied without stockpile delays.",
+          "Maintained clean and organized work areas, contributing to a strong site safety record across multiple consecutive projects."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a local construction services company",
+        "start": "2014-05",
+        "end": "2016-07",
+        "bullets": [
+          "Performed manual excavation and trenching for residential utility and foundation work using picks, shovels, and hand tools.",
+          "Cleaned and prepared construction sites to eliminate possible hazards before trade crews arrived each morning.",
+          "Carried, loaded, and unloaded building materials and tools at active job sites under direction of site supervisors."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2014
+      },
+      {
+        "degree": "Certificate in Construction Trades",
+        "institution": "a local vocational training center",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Mathematics",
+      "Equipment Operation Support",
+      "Site Preparation",
+      "Material Handling",
+      "Trenching and Backfilling",
+      "Hand and Power Tool Use",
+      "Workplace Safety"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "construction_laborer_03",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with over 10 years of continuous full-time experience on residential, commercial, and municipal projects, skilled in site preparation, equipment support, and material handling. Known for safe, precise work and the ability to read plans and follow instructions with minimal supervision.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "a well-established local general contractor",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Prepare commercial and residential construction sites by clearing debris, removing hazards, and setting up barricades and signage to protect crews and the public.",
+          "Dig trenches and footings and backfill or compact excavations to grade specifications using picks, shovels, pneumatic tampers, and rakes.",
+          "Operate and tend pumps, compressors, and generators to supply power for tools and equipment, performing routine lubrication, cleaning, and minor repairs.",
+          "Load, unload, and distribute building materials, machinery, and tools to appropriate locations according to project plans and specifications.",
+          "Measure, mark, and record openings and distances to lay out work areas, and signal equipment operators to align and move machinery and materials safely."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a regional site-work and excavation company",
+        "start": "2019-08",
+        "end": "2022-03",
+        "bullets": [
+          "Supported excavation and grading crews by hand-digging around utilities, compacting subgrade, and leveling earth to specified grades.",
+          "Cleaned and prepared sites daily, removing hazards and maintaining clear access routes that reduced crew downtime.",
+          "Maintained and repaired hand and power tools, small machinery, and compressors, extending equipment service life.",
+          "Read plans and work instructions to determine daily tasks and material needs, coordinating with operators and supervisors.",
+          "Signaled equipment operators during trenching and material movement, helping complete utility installations without damage to existing lines."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a local paving and asphalt contractor",
+        "start": "2017-05",
+        "end": "2019-07",
+        "bullets": [
+          "Tended asphalt heaters, compressors, and generators to keep paving and compaction equipment running through full shifts.",
+          "Loaded and unloaded asphalt, aggregate, and tools, distributing materials to the correct locations per project plans.",
+          "Cleaned and prepared paving sites, swept and tacked surfaces, and removed debris to eliminate trip and equipment hazards.",
+          "Measured and marked distances and openings for patch and overlay work, recording quantities for daily production reports.",
+          "Assisted with routine maintenance and cleaning of paving machinery, rollers, and hand tools."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a well-established local homebuilder",
+        "start": "2014-06",
+        "end": "2017-04",
+        "bullets": [
+          "Performed general site labor for new home construction, including digging footings, backfilling foundations, and compacting soil to grade.",
+          "Loaded, unloaded, and identified building materials and tools, distributing them to appropriate locations according to project plans.",
+          "Read basic plans and instructions to determine work activities and material requirements for each phase of construction.",
+          "Cleaned and prepared construction sites to eliminate possible hazards, maintaining safe walking and working surfaces.",
+          "Lubricated, cleaned, and made minor repairs to hand and power tools, generators, and small equipment."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a regional public high school",
+        "year": 2014
+      },
+      {
+        "degree": "OSHA 30-Hour Construction Safety Certificate",
+        "institution": "a local trade training center",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Site preparation and cleanup",
+      "Trenching and backfilling",
+      "Earth compaction and grading",
+      "Equipment tending and fueling",
+      "Tool and machinery maintenance",
+      "Material loading and distribution",
+      "Reading plans and specifications",
+      "Measuring and layout marking",
+      "Signaling equipment operators",
+      "Active listening",
+      "Speaking",
+      "Critical thinking",
+      "Monitoring",
+      "Mathematics"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "construction_laborer_04",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with 10 years of continuous full-time experience on commercial and residential sites, supporting skilled trades with site preparation, material handling, and equipment operation. Known for safe work practices, accurate measurements, and dependable support of crew and project timelines.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "an industry-leading organization",
+        "start": "2022-06",
+        "end": "Present",
+        "bullets": [
+          "Operate pumps, compressors, and generators to supply power for pneumatic tools and equipment across multiple active work zones.",
+          "Signal equipment operators to guide alignment and movement of machinery and materials, reducing rework from misaligned placements.",
+          "Load, unload, and distribute building materials and tools to appropriate locations according to project plans and specifications.",
+          "Clean and prepare construction sites to eliminate hazards, removing debris and maintaining safe access routes for crews and inspectors."
+        ]
+      },
+      {
+        "title": "Construction Laborer",
+        "employer": "a regional general contractor",
+        "start": "2019-04",
+        "end": "2022-05",
+        "bullets": [
+          "Dug trenches and ditches and backfilled excavations, compacting and leveling earth to grade specifications with picks, shovels, and pneumatic tampers.",
+          "Measured, marked, and recorded openings and distances to lay out work areas in line with project drawings and instructions.",
+          "Lubricated, cleaned, and performed minor repairs on hand and power tools to keep crew equipment in serviceable condition.",
+          "Assisted with site prep and material staging for concrete, framing, and utility crews across residential and light commercial projects."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a commercial construction firm",
+        "start": "2016-03",
+        "end": "2019-03",
+        "bullets": [
+          "Read plans, instructions, and specifications to determine daily work activities and sequence of tasks.",
+          "Loaded and unloaded building materials and equipment, distributing items to correct locations per project plans.",
+          "Supported excavation and grading crews by hand-digging around utilities and compacting soil to required specifications.",
+          "Maintained clean and hazard-free work areas by clearing debris, securing cords, and storing tools at shift end."
+        ]
+      },
+      {
+        "title": "Construction Helper",
+        "employer": "a local building services company",
+        "start": "2015-06",
+        "end": "2016-02",
+        "bullets": [
+          "Provided general site support by moving materials, mixing small batches of concrete, and assisting skilled trades with setup and cleanup.",
+          "Operated small pumps and generators to power tools and equipment at remote work locations.",
+          "Followed verbal instructions and safety protocols while working around heavy equipment and active excavation areas."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2015
+      },
+      {
+        "degree": "OSHA 10-Hour Construction Safety Certification",
+        "institution": "a regional training center",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Equipment Operation",
+      "Material Handling",
+      "Site Preparation",
+      "Measurement and Layout"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "construction_laborer_05",
+    "occupation_id": "construction_laborer",
+    "source": "synthetic",
+    "summary": "Reliable construction laborer with 9 years of hands-on experience supporting site preparation, material handling, and equipment operation across residential and commercial projects. Proven ability to follow plans, maintain safe work areas, and coordinate with crews to keep projects on schedule.",
+    "experience": [
+      {
+        "title": "Construction Laborer",
+        "employer": "a growing mid-market construction company",
+        "start": "2023-06",
+        "end": "Present",
+        "bullets": [
+          "Tend compressors and generators to power pneumatic tools and equipment across active commercial build sites.",
+          "Signal equipment operators during trenching and grading operations to ensure precise alignment and safe movement.",
+          "Load and distribute building materials to appropriate locations based on daily project plans and specifications.",
+          "Clean and prepare construction sites each morning, removing debris and eliminating potential hazards before crews arrive."
+        ]
+      },
+      {
+        "title": "General Laborer",
+        "employer": "a regional site development contractor",
+        "start": "2020-03",
+        "end": "2023-05",
+        "bullets": [
+          "Dug ditches and trenches for utility lines, then backfilled and compacted excavations to grade specifications using shovels and pneumatic tampers.",
+          "Measured and marked distances to lay out work areas according to construction plans and supervisor instructions.",
+          "Lubricated and performed minor repairs on hand tools and small machinery, reducing downtime on the job site.",
+          "Assisted equipment operators by guiding machinery movement and monitoring clearance around structures."
+        ]
+      },
+      {
+        "title": "Construction Worker",
+        "employer": "a mid-sized residential builder",
+        "start": "2017-01",
+        "end": "2020-02",
+        "bullets": [
+          "Read plans and instructions to determine daily work activities and material requirements for framing crews.",
+          "Loaded and unloaded trucks of lumber, concrete forms, and tools, distributing items to correct work zones.",
+          "Operated pumps to move water and slurry materials during foundation and site prep work.",
+          "Maintained clean work areas and monitored tool conditions, reporting equipment issues to supervisors."
+        ]
+      },
+      {
+        "title": "Laborer",
+        "employer": "a local general contractor",
+        "start": "2016-08",
+        "end": "2016-12",
+        "bullets": [
+          "Cleaned construction sites to remove hazards and keep pathways clear for workers and equipment.",
+          "Loaded and unloaded building materials and tools, moving them to designated locations as directed.",
+          "Used picks, shovels, and rakes to level earth and assist with site grading tasks."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Speaking",
+      "Active Listening",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Equipment Operation",
+      "Material Handling",
+      "Site Preparation",
+      "Trenching and Grading"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

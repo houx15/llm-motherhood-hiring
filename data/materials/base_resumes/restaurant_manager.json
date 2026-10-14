@@ -1,0 +1,516 @@
+[
+  {
+    "resume_id": "restaurant_manager_00",
+    "occupation_id": "restaurant_manager",
+    "source": "kaggle",
+    "summary": "Experienced culinary and front-of-house professional with a strong background in kitchen management, cost control, and staff development. Seeking a management position in a high-volume dining environment.",
+    "experience": [
+      {
+        "title": "Kitchen Manager",
+        "employer": "a regional hospitality group",
+        "start": "2016-09",
+        "end": "2021-08",
+        "bullets": [
+          "Recommended measures for improving work procedures and worker performance.",
+          "Created work schedules and organized employee timesheets.",
+          "Assigned duties, responsibilities, and work stations according to work requirements.",
+          "Performed financial activities such as cash handling, deposits, and payroll.",
+          "Observed and evaluated workers to ensure quality and standards.",
+          "Completed disciplinary write-ups and performance reports."
+        ]
+      },
+      {
+        "title": "Sous Chef",
+        "employer": "a full-service restaurant",
+        "start": "2021-09",
+        "end": "2023-08",
+        "bullets": [
+          "Trained, developed, and grew kitchen staff.",
+          "Planned, prepared, and directed food operations in the kitchen and for outgoing catering orders.",
+          "Ensured all kitchen staff worked to the highest culinary standards.",
+          "Checked quality and quantity of food received from suppliers.",
+          "Provided positive and constructive feedback to staff daily.",
+          "Implemented in-house kitchen and catering policies."
+        ]
+      },
+      {
+        "title": "Executive Chef",
+        "employer": "a high-volume dining establishment",
+        "start": "2023-09",
+        "end": "Present",
+        "bullets": [
+          "Developed and planned innovative menus.",
+          "Controlled food and labor costs.",
+          "Managed food presentation and preparation.",
+          "Oversaw special events.",
+          "Managed purchasing and inventory.",
+          "Handled one-on-one customer relations with clientele.",
+          "Requisitioned supplies and equipment to ensure quality and timely delivery of services.",
+          "Trained and developed employees."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Restaurant/Hotel Management",
+        "institution": "a state university",
+        "year": 2017
+      },
+      {
+        "degree": "Serve Safe Certified",
+        "institution": "a culinary institute",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Kitchen Operations",
+      "Bar & Dining Room Operations",
+      "Integrated Inventory Control",
+      "Promotions & Up-selling",
+      "Budgeting / Profit & Loss Management",
+      "Safety & Sanitation Compliance",
+      "Innovative Menu Planning",
+      "Vendor Management & Negotiation",
+      "Strategic Kitchen Planning",
+      "Budget Management",
+      "Culinary Staff Training and Development",
+      "Menu Management",
+      "Team Building and Leadership",
+      "Outstanding Guest Relations"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "restaurant_manager_01",
+    "occupation_id": "restaurant_manager",
+    "source": "kaggle",
+    "summary": "Experienced culinary and food service professional with a strong background in kitchen leadership, staff training, and operational management. Skilled in menu planning, cost control, sanitation compliance, and special event catering.",
+    "experience": [
+      {
+        "title": "Senior Executive Chef",
+        "employer": "a national food service company",
+        "start": "2021-01",
+        "end": "Present",
+        "bullets": [
+          "Manage and provide leadership and culinary training to 23 direct reports",
+          "Work under budgeted costs through effective menu planning",
+          "Received gold scores in sanitation, safety and compliance audits",
+          "Demonstrated hands-on leadership skills in training and staff development",
+          "Implemented branded foods marketing program for retail",
+          "Introduced sustainable products, local produce and farmers markets",
+          "Created special per diem menus for conference center increasing catering sales"
+        ]
+      },
+      {
+        "title": "Executive Corporate Chef",
+        "employer": "a regional hospitality group",
+        "start": "2018-01",
+        "end": "2020-12",
+        "bullets": [
+          "Collaborated with corporate RD/RN in creating and implementing upscale guest dining room and room service menus",
+          "Led culinary team in implementation and support of corporate strategies for new property openings and special events",
+          "Developed workplace safety and sanitation training schedule for culinary associates and dining room servers",
+          "Received top percentile in silver chair training and state health department audits"
+        ]
+      },
+      {
+        "title": "Executive Chef / Event Consultant",
+        "employer": "a special events catering company",
+        "start": "2015-01",
+        "end": "2017-12",
+        "bullets": [
+          "Liaison in consulting and planning of special events",
+          "Planned private parties and fundraisers for various organizations and dignitaries",
+          "Created catering menus targeting specific lifestyle demographics",
+          "Hired, trained and counseled culinary and server staff of 25",
+          "Initiated program with vendors on wine tastings and culinary workshops"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Arts in Culinary Arts",
+        "institution": "a trade school",
+        "year": 1985
+      },
+      {
+        "degree": "Associate of Arts",
+        "institution": "a state university",
+        "year": 1987
+      }
+    ],
+    "skills": [
+      "staff training",
+      "menu planning",
+      "cost control",
+      "sanitation compliance",
+      "safety audits",
+      "culinary leadership",
+      "retail food marketing",
+      "sustainable sourcing",
+      "special event catering",
+      "vendor negotiation",
+      "workplace safety training",
+      "team development",
+      "budget management",
+      "customer service"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "restaurant_manager_02",
+    "occupation_id": "restaurant_manager",
+    "source": "synthetic",
+    "summary": "Restaurant manager with over a decade of progressive experience leading front- and back-of-house operations at locally owned dining establishments. Skilled in staffing, inventory control, budget oversight, and maintaining high standards for service quality and regulatory compliance.",
+    "experience": [
+      {
+        "title": "Restaurant Manager",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Schedule staff hours and assign duties for a team of 30+ employees across two dining rooms, keeping labor within 2% of the monthly payroll budget.",
+          "Monitor budgets and payroll records, reviewing financial transactions to confirm all expenditures are authorized and properly coded.",
+          "Investigate and resolve guest complaints regarding food quality, service, and accommodations, raising overall satisfaction scores by 11% year over year.",
+          "Maintain food and equipment inventories and keep detailed inventory records, reducing spoilage costs by 9% through weekly reconciliation.",
+          "Establish personnel performance and customer service standards, conducting quarterly reviews and coaching sessions for shift supervisors.",
+          "Keep records required by government agencies regarding sanitation and food handling, and prepare documentation for annual health inspections with zero critical violations across three consecutive reviews."
+        ]
+      },
+      {
+        "title": "Assistant Restaurant Manager",
+        "employer": "a regional dining group",
+        "start": "2019-03",
+        "end": "2021-05",
+        "bullets": [
+          "Counted money and made bank deposits daily, reconciling cash drawers and card transactions with a 99.8% accuracy rate.",
+          "Managed front-of-house scheduling for 20+ staff, adjusting assignments in real time to match forecasted covers and cut overtime hours by 15%.",
+          "Performed food preparation and service tasks such as cooking during peak periods, clearing tables, and serving food and drinks when short-staffed.",
+          "Tracked equipment inventory and coordinated maintenance requests, reducing unplanned downtime of kitchen equipment by 20%.",
+          "Reviewed nightly sales and payroll reports to flag unauthorized expenditures and recommend budget adjustments to the general manager."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a neighborhood restaurant",
+        "start": "2017-08",
+        "end": "2019-02",
+        "bullets": [
+          "Supervised shifts of 10-15 employees, assigning daily duties and monitoring performance against established customer service standards.",
+          "Maintained inventory records for food and supplies, placing orders and checking deliveries to control costs and prevent stockouts.",
+          "Resolved guest complaints in person regarding food quality and service, escalating complex issues to the restaurant manager with written summaries.",
+          "Ensured sanitation and food safety compliance during each shift, completing required temperature and cleaning logs for regulatory review."
+        ]
+      },
+      {
+        "title": "Server / Lead Server",
+        "employer": "a local eatery",
+        "start": "2014-05",
+        "end": "2017-07",
+        "bullets": [
+          "Served food and drinks, cleared tables, and supported kitchen staff with basic food preparation during high-volume service.",
+          "Trained new servers on service standards, menu knowledge, and point-of-sale procedures, shortening onboarding time by roughly one week.",
+          "Handled cash and card payments and balanced the server bank at the end of each shift with consistent accuracy."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate Degree in Hospitality Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Active Learning",
+      "Learning Strategies",
+      "Writing",
+      "Mathematics",
+      "Staff Scheduling",
+      "Inventory Management",
+      "Budget and Payroll Oversight",
+      "Customer Complaint Resolution",
+      "Sanitation Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "restaurant_manager_03",
+    "occupation_id": "restaurant_manager",
+    "source": "synthetic",
+    "summary": "Restaurant manager with over a decade of progressive experience running high-volume dining operations for well-established local employers. Skilled at scheduling staff, controlling inventory and payroll budgets, and resolving service complaints to keep customer satisfaction and costs in line.",
+    "experience": [
+      {
+        "title": "Restaurant Manager",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Count money and prepare daily bank deposits, reconciling cash drawers and credit card batches with zero unexplained variances for 18 consecutive months.",
+          "Schedule staff hours and assign duties for a team of 35 across front and back of house, holding labor cost at 27% of revenue.",
+          "Investigate and resolve guest complaints regarding food quality, service, and accommodations, raising average review scores from 3.9 to 4.6 stars.",
+          "Maintain food and equipment inventories and keep inventory records, cutting spoilage and waste by 14% through weekly counts and par-level ordering.",
+          "Monitor budgets and payroll records and review financial transactions to ensure all expenditures are authorized and budgeted, closing monthly P&L within 1% of forecast.",
+          "Establish standards for personnel performance and customer service, onboarding and certifying all new hires on sanitation and service protocols."
+        ]
+      },
+      {
+        "title": "Assistant Restaurant Manager",
+        "employer": "a regional dining group",
+        "start": "2019-02",
+        "end": "2021-05",
+        "bullets": [
+          "Kept records required by government agencies regarding sanitation and food subsidies, passing every health inspection with a 95+ score.",
+          "Scheduled staff hours and assigned duties for a 22-person crew, reducing overtime hours by 30% year over year.",
+          "Maintained food and equipment inventories and inventory records, negotiating vendor deliveries that lowered food cost by 3.5 percentage points.",
+          "Performed food preparation and service tasks such as cooking on the line, clearing tables, and serving food and drinks during peak rushes.",
+          "Resolved complaints about food quality and service on the floor, recovering at-risk guests and retaining repeat business."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a well-established local employer",
+        "start": "2017-01",
+        "end": "2019-01",
+        "bullets": [
+          "Counted money and made bank deposits at the close of each shift, balancing registers for a 12-person team.",
+          "Assigned duties and adjusted staff hours mid-shift to match customer traffic and keep service times under 12 minutes.",
+          "Maintained inventory records for food and supplies and flagged shortages to the manager before service was affected.",
+          "Performed service tasks including clearing tables, serving food and drinks, and preparing simple menu items when needed."
+        ]
+      },
+      {
+        "title": "Server and Trainer",
+        "employer": "a local restaurant",
+        "start": "2014-09",
+        "end": "2016-12",
+        "bullets": [
+          "Served food and drinks and cleared tables in a 120-seat dining room while maintaining top guest satisfaction ratings.",
+          "Trained new servers on service standards, menu knowledge, and sanitation requirements.",
+          "Supported inventory counts of food and supplies and reported low-stock items to management."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Hospitality Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Active Learning",
+      "Learning Strategies",
+      "Writing",
+      "Mathematics",
+      "Staff Scheduling",
+      "Inventory Management",
+      "Budget and Payroll Monitoring",
+      "Customer Complaint Resolution",
+      "Sanitation Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "restaurant_manager_04",
+    "occupation_id": "restaurant_manager",
+    "source": "synthetic",
+    "summary": "Restaurant Manager with over a decade of progressive experience leading front-of-house and back-of-house operations at high-volume establishments. Proven record of managing budgets, controlling inventory, and developing service teams that consistently meet customer and regulatory standards.",
+    "experience": [
+      {
+        "title": "Restaurant Manager",
+        "employer": "an industry-leading organization",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Direct daily operations for a 180-seat full-service restaurant, supervising a team of 45 staff across kitchen and dining room shifts.",
+          "Establish and enforce service and performance standards, reducing customer complaint escalations by 28% year over year.",
+          "Monitor a $3.2M annual operating budget and payroll records, reviewing transactions to keep all expenditures authorized and within plan.",
+          "Maintain food, beverage, and equipment inventories and inventory records, cutting waste by 15% through weekly audits and par-level adjustments.",
+          "Count daily receipts and prepare bank deposits; reconcile cash drawers and POS reports with zero unresolved discrepancies over the past year.",
+          "Keep sanitation and food-subsidy records required by government agencies, passing all health inspections with scores above 95%."
+        ]
+      },
+      {
+        "title": "Assistant Restaurant Manager",
+        "employer": "a regional hospitality group",
+        "start": "2019-08",
+        "end": "2022-03",
+        "bullets": [
+          "Scheduled staff hours and assigned duties for a 30-person team, holding labor cost to 24% of sales while maintaining service coverage.",
+          "Investigated and resolved complaints regarding food quality, service, and accommodations, recovering 90% of dissatisfied guests within 48 hours.",
+          "Reconciled daily sales and prepared bank deposits, and reviewed financial transactions for authorization and budget compliance.",
+          "Assisted with food preparation and service during peak periods, including cooking line support and clearing tables to reduce guest wait times.",
+          "Trained new hires on service standards and monitored performance through structured shift evaluations."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a national casual dining chain",
+        "start": "2017-02",
+        "end": "2019-07",
+        "bullets": [
+          "Ran high-volume shifts of up to 20 employees, assigning duties and monitoring service flow during dinner rushes.",
+          "Maintained front-of-house inventory records and restocked supplies to prevent mid-shift shortages.",
+          "Handled guest complaints about food quality and service, escalating recurring issues to management with recommended fixes.",
+          "Counted register tills and prepared deposits at shift close, verifying accuracy against sales reports.",
+          "Enforced sanitation and safety standards, documenting temperature checks and cleaning logs required by inspectors."
+        ]
+      },
+      {
+        "title": "Server / Shift Lead",
+        "employer": "a local restaurant group",
+        "start": "2014-09",
+        "end": "2017-01",
+        "bullets": [
+          "Provided table service while coordinating seating and side-work assignments for a team of eight during peak hours.",
+          "Trained new servers on menu knowledge, service standards, and cash-handling procedures.",
+          "Supported inventory counts of food and supplies and reported shortages to the kitchen manager.",
+          "Processed payments and balanced the server bank at the end of each shift."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Hospitality Management",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Active Learning",
+      "Learning Strategies",
+      "Writing",
+      "Mathematics",
+      "Inventory Management",
+      "Budget and Payroll Oversight",
+      "Staff Scheduling",
+      "Complaint Resolution",
+      "Sanitation Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "restaurant_manager_05",
+    "occupation_id": "restaurant_manager",
+    "source": "synthetic",
+    "summary": "Restaurant manager with over nine years of progressive experience leading front- and back-of-house operations at high-volume, growth-oriented dining concepts. Skilled at building service standards, controlling costs, and developing teams that consistently meet financial and guest-satisfaction targets.",
+    "experience": [
+      {
+        "title": "Restaurant Manager",
+        "employer": "a growing mid-market restaurant group",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Direct daily operations for a 120-seat location generating $3.2M in annual revenue, supervising a team of 35 across kitchen, bar, and service.",
+          "Schedule staff hours and assign shift duties for all departments, holding labor cost at 27% of sales while maintaining coverage during peak periods.",
+          "Establish personnel performance and customer-service standards, onboarding and training 18 new hires in the past year with 85% first-year retention.",
+          "Investigate and resolve guest complaints regarding food quality, service, and accommodations, raising online review scores from 3.9 to 4.5 stars.",
+          "Monitor budgets, payroll records, and financial transactions to verify expenditures are authorized and within budget, reducing supply waste by 12%."
+        ]
+      },
+      {
+        "title": "Assistant Restaurant Manager",
+        "employer": "a regional casual-dining company",
+        "start": "2018-09",
+        "end": "2021-05",
+        "bullets": [
+          "Oversaw evening operations for a busy 90-seat restaurant, coordinating a staff of 22 and covering service tasks such as clearing tables and serving food during rush periods.",
+          "Maintained food and equipment inventories and kept detailed inventory records, conducting weekly cycle counts that cut stockouts by 30%.",
+          "Counted money and prepared bank deposits nightly, reconciling registers with zero unresolved variances over 30 consecutive months.",
+          "Kept records required by government agencies regarding sanitation and food-subsidy programs, passing all health inspections with scores above 95%.",
+          "Performed food preparation and service duties as needed, including cooking on the line and expediting orders during high-volume shifts."
+        ]
+      },
+      {
+        "title": "Shift Supervisor",
+        "employer": "a fast-casual dining concept",
+        "start": "2016-04",
+        "end": "2018-08",
+        "bullets": [
+          "Supervised shifts of 10-14 employees, assigning duties and monitoring service pace to keep ticket times under 12 minutes.",
+          "Trained new team members on food safety, cash handling, and guest-service standards, certifying 25 employees over two years.",
+          "Resolved customer complaints regarding food quality and service on the spot, recovering 90% of escalated issues without further action.",
+          "Assisted with inventory counts, payroll record review, and daily sales reporting to support the general manager."
+        ]
+      },
+      {
+        "title": "Line Cook",
+        "employer": "an independent neighborhood bistro",
+        "start": "2014-07",
+        "end": "2016-03",
+        "bullets": [
+          "Prepared menu items across grill, saute, and prep stations during lunch and dinner service.",
+          "Maintained sanitation records and equipment inventory, supporting the kitchen's 98% health-inspection score.",
+          "Supported front-of-house staff by expediting orders and restocking service supplies during peak hours."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Hospitality Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "ServSafe Food Protection Manager Certification",
+        "institution": "a national food-safety training provider",
+        "year": 2017
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Monitoring",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Active Learning",
+      "Learning Strategies",
+      "Writing",
+      "Mathematics",
+      "Staff Scheduling",
+      "Inventory Management",
+      "Budget and Payroll Oversight",
+      "Customer Complaint Resolution",
+      "Sanitation Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

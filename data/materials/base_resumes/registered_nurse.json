@@ -1,0 +1,541 @@
+[
+  {
+    "resume_id": "registered_nurse_00",
+    "occupation_id": "registered_nurse",
+    "source": "kaggle",
+    "summary": "Experienced Registered Nurse with a background in surgical, neonatal intensive care, and patient management. Skilled in patient advocacy, emergency care, and collaborative healthcare delivery.",
+    "experience": [
+      {
+        "title": "Registered Nurse",
+        "employer": "a regional healthcare system",
+        "start": "2022-01",
+        "end": "Present",
+        "bullets": [
+          "Provided direct patient care in a surgical unit, assisting with procedures and patient education.",
+          "Managed patient insurance claims and prior authorizations.",
+          "Collaborated with interdisciplinary teams to ensure optimal patient outcomes."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a community hospital",
+        "start": "2019-01",
+        "end": "2021-12",
+        "bullets": [
+          "Delivered nursing care in the neonatal intensive care unit (NICU).",
+          "Monitored and assessed critically ill infants, administering medications and treatments.",
+          "Educated parents on infant care and discharge planning."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a surgical center",
+        "start": "2017-01",
+        "end": "2018-12",
+        "bullets": [
+          "Served as a surgical nurse, assisting in operating room management and patient advocacy during surgery.",
+          "Recorded all events and tasks during surgical procedures.",
+          "Ensured adherence to sterile techniques and patient safety protocols."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a local clinic",
+        "start": "2014-01",
+        "end": "2016-12",
+        "bullets": [
+          "Provided patient care in a clinic setting, including triage, assessments, and medication administration.",
+          "Assisted with minor procedures and patient education on chronic disease management.",
+          "Maintained accurate patient records and coordinated referrals."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Nursing",
+        "institution": "a state university",
+        "year": 2000
+      },
+      {
+        "degree": "Associate of Arts",
+        "institution": "a community college",
+        "year": 1997
+      }
+    ],
+    "skills": [
+      "patient care",
+      "surgical assistance",
+      "neonatal intensive care",
+      "patient advocacy",
+      "emergency care",
+      "palliative care",
+      "medication administration",
+      "patient education",
+      "insurance claims",
+      "prior authorizations",
+      "operating room management",
+      "vital signs monitoring",
+      "electronic health records",
+      "interdisciplinary collaboration"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "registered_nurse_01",
+    "occupation_id": "registered_nurse",
+    "source": "kaggle",
+    "summary": "A licensed vocational nurse with extensive experience in patient-centered care across acute, rehabilitative, and home health settings. Skilled in medication administration, wound care, IV therapy, and patient education.",
+    "experience": [
+      {
+        "title": "Field Nurse",
+        "employer": "a regional home health agency",
+        "start": "2023-01",
+        "end": "Present",
+        "bullets": [
+          "Assisted physicians with examinations, treatments, injections, and suture removal.",
+          "Monitored treatment efficacy and coordinated care plans with physicians and registered nurses.",
+          "Recorded medical histories, vital statistics, and test results in medical records.",
+          "Performed lab tests, monitored acute conditions, and tested blood glucose levels.",
+          "Educated patients on treatment plans and served as liaison between patients and physicians."
+        ]
+      },
+      {
+        "title": "Staff Nurse",
+        "employer": "a regional medical center",
+        "start": "2021-01",
+        "end": "2022-12",
+        "bullets": [
+          "Provided nursing care including medication distribution, wound care, and carrying out physician orders.",
+          "Worked closely with physicians during patient evaluations and transcribed orders.",
+          "Supervised certified nursing assistants and coordinated patient transfers to other facilities."
+        ]
+      },
+      {
+        "title": "Staff Nurse / Detox Specialist",
+        "employer": "a behavioral health treatment center",
+        "start": "2018-12",
+        "end": "2020-12",
+        "bullets": [
+          "Provided education to patients on detox, withdrawal, medications, addiction, and recovery resources.",
+          "Acted as patient advocate and delivered total patient care for 10+ high-acuity patients per shift.",
+          "Documented nursing assessments, treatments, medications, discharge instructions, and follow-up care.",
+          "Coordinated with doctors and registered nurses to develop individualized care plans."
+        ]
+      },
+      {
+        "title": "Home Health Care Nurse",
+        "employer": "a home care services provider",
+        "start": "2014-12",
+        "end": "2018-11",
+        "bullets": [
+          "Provided care for home-bound ventilator-dependent patients, including gastrointestinal feedings and suctioning.",
+          "Performed tracheotomy care, range-of-motion exercises, and daily mobility assistance.",
+          "Escorted patients to medical appointments and supported caregivers."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Arts in Nursing",
+        "institution": "a community college",
+        "year": 2016
+      },
+      {
+        "degree": "Bachelor of Science in Business Administration",
+        "institution": "a state university",
+        "year": 1999
+      }
+    ],
+    "skills": [
+      "Patient-centered care",
+      "Medication administration",
+      "Wound cleaning and care",
+      "IV drug therapy management",
+      "Acute and rehabilitative care",
+      "Mobility assistance",
+      "Colostomy care",
+      "Gastroenteral nutrition education",
+      "Specimen collection and processing",
+      "Vital signs monitoring",
+      "Patient education",
+      "Care plan coordination",
+      "Electronic medical records documentation",
+      "Team collaboration"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "registered_nurse_02",
+    "occupation_id": "registered_nurse",
+    "source": "synthetic",
+    "summary": "Registered Nurse with more than nine years of continuous full-time experience across medical-surgical, rehabilitation, and unit-based nursing roles. Skilled in patient assessment, medication administration, care plan coordination, and supervising less-skilled nursing personnel.",
+    "experience": [
+      {
+        "title": "Registered Nurse, Medical-Surgical Unit",
+        "employer": "a well-established regional medical center",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Record patients' medical information and vital signs for a 32-bed unit, documenting assessments within required timeframes on every shift.",
+          "Administer medications and monitor patients for reactions or side effects, catching and escalating adverse reactions promptly.",
+          "Monitor, record, and report symptoms or changes in patients' conditions to physicians and charge nurses in real time.",
+          "Consult and coordinate with healthcare team members to assess, plan, implement, and evaluate individualized patient care plans.",
+          "Direct and supervise less-skilled nursing and healthcare personnel, including orienting new staff and delegating daily assignments.",
+          "Maintain accurate, detailed reports and records in the electronic health record, supporting quality audits with complete documentation."
+        ]
+      },
+      {
+        "title": "Registered Nurse, Inpatient Rehabilitation",
+        "employer": "a well-established community hospital",
+        "start": "2019-01",
+        "end": "2022-03",
+        "bullets": [
+          "Provided health care, first aid, and assistance in convalescence and rehabilitation for patients recovering from stroke, surgery, and injury.",
+          "Monitored all aspects of patient care, including diet and physical activity, and adjusted care approaches with the interdisciplinary team.",
+          "Administered medications and treatments, tracking responses and side effects across a 24-bed rehabilitation unit.",
+          "Coordinated with physical, occupational, and speech therapists to align nursing care with rehabilitation goals.",
+          "Supervised nursing assistants and student nurses, verifying competency on mobility, transfer, and fall-prevention techniques.",
+          "Educated patients and caregivers on medication schedules, wound care, and warning signs requiring follow-up."
+        ]
+      },
+      {
+        "title": "Registered Nurse, General Medical Unit",
+        "employer": "a well-established local employer",
+        "start": "2017-06",
+        "end": "2018-12",
+        "bullets": [
+          "Assessed and documented vital signs, medical histories, and current symptoms for an average of six patients per shift.",
+          "Administered oral, subcutaneous, and intravenous medications while monitoring for reactions and side effects.",
+          "Monitored and reported changes in patient conditions to the care team, escalating deteriorating patients appropriately.",
+          "Partnered with physicians, pharmacists, and case managers to implement and revise patient care plans.",
+          "Maintained accurate, detailed records and reports consistent with unit and regulatory documentation standards."
+        ]
+      },
+      {
+        "title": "Registered Nurse, Post-Acute Care",
+        "employer": "a well-established senior care organization",
+        "start": "2016-02",
+        "end": "2017-05",
+        "bullets": [
+          "Recorded patients' medical information and vital signs during admission and ongoing assessments.",
+          "Administered medications and immunizations, monitoring patients for reactions or side effects.",
+          "Delivered first aid and daily nursing care supporting recovery and rehabilitation goals.",
+          "Maintained accurate reports and records and communicated condition changes to supervising clinicians.",
+          "Assisted in coordinating care plan reviews with the interdisciplinary healthcare team."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Nursing",
+        "institution": "a state university",
+        "year": 2016
+      },
+      {
+        "degree": "Associate Degree in Nursing",
+        "institution": "a local community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Patient Assessment",
+      "Medication Administration",
+      "Vital Signs Documentation",
+      "Care Plan Coordination",
+      "Electronic Health Records",
+      "Nursing Staff Supervision",
+      "Patient Education",
+      "Rehabilitation Support"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "registered_nurse_03",
+    "occupation_id": "registered_nurse",
+    "source": "synthetic",
+    "summary": "Registered Nurse with over ten years of progressive experience in hospital and outpatient settings, providing patient-centered care, administering medications, and coordinating with interdisciplinary teams. Skilled in monitoring patient conditions and maintaining accurate clinical documentation to support positive outcomes.",
+    "experience": [
+      {
+        "title": "Registered Nurse",
+        "employer": "a mid-size regional medical center",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Deliver direct patient care for a 30-bed medical-surgical unit, monitoring vital signs, recording medical information, and reporting changes in condition to the care team.",
+          "Administer medications and intravenous therapies to an average of 12 patients per shift, monitoring for adverse reactions and documenting outcomes promptly.",
+          "Coordinate with physicians, pharmacists, and therapists to assess, plan, and evaluate individualized care plans, reducing avoidable readmissions by 14% over one year.",
+          "Supervise two licensed practical nurses and three nursing assistants, ensuring adherence to care standards and accurate documentation."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a community hospital in the region",
+        "start": "2018-09",
+        "end": "2021-05",
+        "bullets": [
+          "Provided health care, first aid, and assistance in rehabilitation for post-surgical patients, monitoring all aspects of care including diet and physical activity.",
+          "Maintained accurate, detailed reports and records for 15 to 18 patients per shift, supporting seamless care transitions and compliance audits.",
+          "Educated patients and caregivers on medication regimens and recovery plans, improving post-discharge adherence scores by 20%.",
+          "Collaborated with an interdisciplinary team to implement evidence-based care plans, contributing to a 10% reduction in patient falls on the unit."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a regional outpatient clinic network",
+        "start": "2016-02",
+        "end": "2018-08",
+        "bullets": [
+          "Administered immunizations and routine treatments for pediatric and adult populations, monitoring patients for reactions and documenting all interventions.",
+          "Recorded patients' medical information and vital signs during intake, ensuring accurate charts for 40 to 50 visits per day.",
+          "Consulted with healthcare team members to evaluate care plans and coordinate follow-up services for patients with chronic conditions.",
+          "Directed and supervised less-skilled nursing personnel, providing guidance on clinical procedures and patient communication."
+        ]
+      },
+      {
+        "title": "Staff Nurse",
+        "employer": "a mid-size regional firm",
+        "start": "2014-03",
+        "end": "2016-01",
+        "bullets": [
+          "Monitored, recorded, and reported symptoms and changes in patients' conditions on a busy telemetry floor, escalating concerns to supervising nurses.",
+          "Assisted with activities of daily living and rehabilitation support for patients recovering from cardiac events.",
+          "Participated in care planning meetings with the healthcare team to assess and adjust interventions based on patient progress.",
+          "Maintained detailed records of patient care, medications, and vital signs in compliance with facility protocols."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Nursing",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Associate Degree in Nursing",
+        "institution": "a community college",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Medication Administration",
+      "Vital Signs Monitoring",
+      "Patient Care Planning",
+      "Clinical Documentation",
+      "Interdisciplinary Collaboration",
+      "Supervision",
+      "Patient Education",
+      "Care Coordination",
+      "Attention to Detail"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "registered_nurse_04",
+    "occupation_id": "registered_nurse",
+    "source": "synthetic",
+    "summary": "Registered Nurse with over 10 years of continuous full-time experience across medical-surgical and progressive care settings. Skilled in patient assessment, medication administration, care plan coordination, and supervising nursing support personnel.",
+    "experience": [
+      {
+        "title": "Registered Nurse, Progressive Care Unit",
+        "employer": "a mid-size regional hospital",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Record patients' medical information and vital signs for a 28-bed progressive care unit, maintaining detailed reports and records for an average of 40 patients per week.",
+          "Administer medications and intravenous therapies, monitoring patients for reactions or side effects and escalating concerns to the care team promptly.",
+          "Monitor, record, and report symptoms or changes in patients' conditions, coordinating with physicians, respiratory therapists, and case managers to evaluate and update care plans.",
+          "Direct and supervise less-skilled nursing and healthcare personnel, including orienting 6 new graduate nurses and overseeing shift assignments for nursing assistants.",
+          "Monitor all aspects of patient care, including diet and physical activity, and provide patient education to support convalescence and rehabilitation goals."
+        ]
+      },
+      {
+        "title": "Registered Nurse, Medical-Surgical Unit",
+        "employer": "a community medical center",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Provided direct nursing care for a 30-bed medical-surgical unit, recording vital signs, medical histories, and ongoing assessments in the electronic health record.",
+          "Administered medications, immunizations, and treatments while monitoring for adverse reactions and documenting outcomes in accurate, detailed reports.",
+          "Consulted and coordinated with healthcare team members to assess, plan, implement, and evaluate individualized patient care plans during daily interdisciplinary rounds.",
+          "Monitored all aspects of patient care, including diet and physical activity, and delivered first aid and assistance during rehabilitation and recovery.",
+          "Supervised nursing assistants and student nurses, delegating tasks and verifying competency in basic patient care procedures."
+        ]
+      },
+      {
+        "title": "Registered Nurse, Post-Acute Rehabilitation",
+        "employer": "a regional skilled nursing facility",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Recorded patients' medical information and vital signs for a 45-bed rehabilitation unit, maintaining accurate and detailed records across admissions and discharges.",
+          "Administered medications and monitored patients for reactions or side effects, adjusting documentation and communicating changes to the interdisciplinary team.",
+          "Monitored, recorded, and reported symptoms or changes in patients' conditions, supporting timely interventions and continuity of care.",
+          "Provided health care, first aid, immunizations, and assistance in convalescence and rehabilitation for patients recovering from surgery and acute illness.",
+          "Consulted and coordinated with physical therapists, occupational therapists, and physicians to assess, plan, implement, and evaluate patient care plans."
+        ]
+      },
+      {
+        "title": "Registered Nurse, Acute Care",
+        "employer": "a mid-size regional firm",
+        "start": "2014-08",
+        "end": "2015-12",
+        "bullets": [
+          "Recorded patients' medical information and vital signs on a busy acute care floor, maintaining detailed reports and records for up to 6 patients per shift.",
+          "Administered medications to patients and monitored for reactions or side effects, documenting all interventions and patient responses.",
+          "Monitored, recorded, and reported symptoms or changes in patients' conditions to charge nurses and physicians in a timely manner.",
+          "Consulted and coordinated with healthcare team members to assess, plan, implement, and evaluate patient care plans.",
+          "Monitored all aspects of patient care, including diet and physical activity, and assisted with first aid, immunizations, and rehabilitation support."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a small community clinic",
+        "start": "2014-01",
+        "end": "2014-07",
+        "bullets": [
+          "Recorded patients' medical information and vital signs during intake, maintaining accurate and detailed records.",
+          "Administered medications and immunizations, monitoring patients for reactions or side effects.",
+          "Monitored, recorded, and reported symptoms or changes in patients' conditions to supervising clinicians.",
+          "Consulted and coordinated with healthcare team members to assess, plan, implement, and evaluate patient care plans."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Nursing",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Associate Degree in Nursing",
+        "institution": "a community college",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Patient Assessment",
+      "Medication Administration",
+      "Vital Signs Recording",
+      "Care Plan Coordination",
+      "Clinical Documentation",
+      "Patient Education",
+      "Team Supervision",
+      "Electronic Health Records",
+      "Infection Control"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "registered_nurse_05",
+    "occupation_id": "registered_nurse",
+    "source": "synthetic",
+    "summary": "Dedicated Registered Nurse with over 10 years of continuous experience across medical-surgical, telemetry, and long-term care settings. Adept at patient assessment, medication administration, and coordinating interdisciplinary care to improve patient outcomes.",
+    "experience": [
+      {
+        "title": "Registered Nurse",
+        "employer": "a growing mid-market healthcare company",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Record patients' medical information and vital signs, maintaining accurate, detailed reports and records for a 30-bed unit.",
+          "Administer medications and monitor patients for reactions or side effects, consistently achieving 99% medication administration accuracy.",
+          "Monitor, record, and report symptoms or changes in patients' conditions to the healthcare team, facilitating timely interventions.",
+          "Consult and coordinate with healthcare team members to assess, plan, implement, and evaluate patient care plans for up to 6 patients per shift.",
+          "Direct and supervise less-skilled nursing personnel, including 4 nursing assistants, ensuring adherence to care standards."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a regional medical center",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Provided health care, first aid, immunizations, and assistance in convalescence and rehabilitation for post-surgical patients.",
+          "Monitored all aspects of patient care, including diet and physical activity, documenting progress in electronic health records.",
+          "Collaborated with interdisciplinary teams to evaluate patient care plans, reducing readmission rates by 12% over two years.",
+          "Administered medications and treatments, monitoring for side effects and documenting patient responses accurately."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a community health network",
+        "start": "2015-06",
+        "end": "2018-02",
+        "bullets": [
+          "Recorded patients' medical information and vital signs in outpatient and urgent care settings.",
+          "Monitored, recorded, and reported symptoms or changes in patients' conditions to physicians and nurse practitioners.",
+          "Provided immunizations and first aid, supporting public health initiatives and seasonal vaccination clinics.",
+          "Maintained accurate, detailed reports and records, ensuring compliance with regulatory standards."
+        ]
+      },
+      {
+        "title": "Registered Nurse",
+        "employer": "a long-term care facility",
+        "start": "2014-01",
+        "end": "2015-05",
+        "bullets": [
+          "Recorded patients' medical information and vital signs for residents in a 120-bed skilled nursing facility.",
+          "Administered medications and monitored patients for reactions or side effects, coordinating with pharmacy staff.",
+          "Provided assistance in convalescence and rehabilitation, supporting residents' physical activity and dietary needs.",
+          "Monitored all aspects of patient care and reported changes to supervising nurses and physicians."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Nursing",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Associate Degree in Nursing",
+        "institution": "a community college",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Medication Administration",
+      "Patient Assessment",
+      "Vital Signs Monitoring",
+      "Electronic Health Records",
+      "Care Plan Coordination",
+      "Supervision",
+      "Reporting and Documentation",
+      "Patient Education",
+      "Infection Control"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

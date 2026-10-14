@@ -1,0 +1,87 @@
+{
+  "resume_id": "preschool_teacher_04",
+  "occupation_id": "preschool_teacher",
+  "source": "synthetic",
+  "summary": "Experienced preschool teacher with a decade of continuous classroom practice, skilled at designing play-based learning experiences that build early literacy, numeracy, and social skills. Known for adapting instruction to diverse developmental needs while maintaining a structured, nurturing classroom environment.",
+  "experience": [
+    {
+      "title": "Lead Preschool Teacher",
+      "employer": "an industry-leading early learning organization",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Design and lead daily activities that teach color, shape, number, and letter recognition, personal hygiene, and social skills to a classroom of 18 students.",
+        "Establish and enforce clear behavior rules and routines, reducing daily transition disruptions by roughly 30 percent within the first year.",
+        "Adapt teaching methods and materials for students with varying needs and interests, including dual-language learners and children with individualized education plans.",
+        "Meet with guardians each quarter to discuss progress, priorities, and strategies that promote learning and development at home.",
+        "Organize games, arts and crafts, music, storytelling, and field trips that support physical, mental, and social growth."
+      ]
+    },
+    {
+      "title": "Preschool Teacher",
+      "employer": "a community child development center",
+      "start": "2018-08",
+      "end": "2021-05",
+      "bullets": [
+        "Provided a variety of materials and resources for children to explore, manipulate, and use in both learning activities and imaginative play.",
+        "Served meals and snacks in accordance with nutritional guidelines and attended to basic needs such as feeding, dressing, and diapering.",
+        "Monitored developmental milestones and documented observations to inform instructional planning and guardian conferences.",
+        "Led small-group learning strategies sessions that improved letter-sound recognition scores across the classroom by an average of 25 percent."
+      ]
+    },
+    {
+      "title": "Assistant Preschool Teacher",
+      "employer": "a non-profit youth and learning agency",
+      "start": "2015-09",
+      "end": "2018-07",
+      "bullets": [
+        "Supported lead instruction in color, shape, number, and letter recognition, personal hygiene, and social skills for two classrooms of 15 students each.",
+        "Prepared and organized hands-on learning materials for daily activities and imaginative play stations.",
+        "Supervised outdoor games and arts and crafts, maintaining safety procedures and positive behavior expectations.",
+        "Communicated daily observations to lead teachers and participated in guardian progress meetings."
+      ]
+    },
+    {
+      "title": "Early Childhood Teaching Aide",
+      "employer": "a regional early education services provider",
+      "start": "2014-06",
+      "end": "2015-08",
+      "bullets": [
+        "Assisted with daily routines including meals, snacks, dressing, and diapering in accordance with health and nutritional guidelines.",
+        "Read stories and guided simple music and movement activities that supported early language and social development.",
+        "Maintained classroom order by reinforcing established rules and procedures during group activities."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Applied Science in Early Childhood Education",
+      "institution": "a community college",
+      "year": 2014
+    },
+    {
+      "degree": "Child Development Associate Credential",
+      "institution": "a professional development institute",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Active Listening",
+    "Learning Strategies",
+    "Reading Comprehension",
+    "Critical Thinking",
+    "Monitoring",
+    "Active Learning",
+    "Writing",
+    "Early Literacy Instruction",
+    "Classroom Behavior Management",
+    "Developmental Assessment",
+    "Parent-Teacher Conferencing",
+    "Play-Based Curriculum Design",
+    "Meal and Hygiene Routines"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

@@ -1,0 +1,481 @@
+[
+  {
+    "resume_id": "software_engineer_00",
+    "occupation_id": "software_engineer",
+    "source": "kaggle",
+    "summary": "Solution-focused software and web development professional with extensive experience in project management, requirements gathering, and leading technical teams to deliver enterprise solutions. Skilled at translating business needs into technical specifications and managing full software development lifecycles.",
+    "experience": [
+      {
+        "title": "Web Development Manager",
+        "employer": "a state university",
+        "start": "2023-08",
+        "end": "Present",
+        "bullets": [
+          "Lead a web development and IT team, managing multiple websites and software platforms running various technologies.",
+          "Implement Software Development Lifecycle Methodology and translate detailed program requirements into technical specifications.",
+          "Oversee strategic initiatives, supervise technical staff, and coordinate communication between faculty, staff, and central IT.",
+          "Collect and report technical and operational data to internal groups and national agencies."
+        ]
+      },
+      {
+        "title": "Web Communications Manager",
+        "employer": "a national financial services company",
+        "start": "2019-09",
+        "end": "2023-07",
+        "bullets": [
+          "Directed web development teams of project managers and programmers for internal and external users.",
+          "Developed and managed websites and web software projects within a $2 million departmental budget.",
+          "Led rollout of the company-wide intranet one month ahead of schedule.",
+          "Built a new corporate website from scratch and implemented corporate web design standards."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a regional technology solutions company",
+        "start": "2016-08",
+        "end": "2019-08",
+        "bullets": [
+          "Developed and maintained web applications using JavaScript, HTML, and CSS.",
+          "Collaborated with cross-functional teams to gather requirements and deliver software solutions.",
+          "Participated in code reviews and contributed to internal development standards."
+        ]
+      },
+      {
+        "title": "Junior Software Developer",
+        "employer": "a local software consulting firm",
+        "start": "2014-06",
+        "end": "2016-07",
+        "bullets": [
+          "Assisted in building and testing web-based applications for clients.",
+          "Learned multiple programming languages to support development efforts.",
+          "Worked with senior developers to implement new features and resolve defects."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Marketing",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Graduate Certificate in Financial Planning",
+        "institution": "a state university",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Web Development",
+      "Project Management",
+      "Requirements Gathering",
+      "Software Development Lifecycle",
+      "Team Leadership",
+      "Data Analysis",
+      "Strategic Planning",
+      "Process Improvement",
+      "Technical Documentation",
+      "Cross-functional Collaboration"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "software_engineer_01",
+    "occupation_id": "software_engineer",
+    "source": "kaggle",
+    "summary": "Senior technical leader with over a decade of experience directing IT operations, infrastructure, and software delivery teams. Skilled in systems engineering, project management, and enterprise technology solutions.",
+    "experience": [
+      {
+        "title": "Software Engineering Manager",
+        "employer": "a state government technology bureau",
+        "start": "2020-09",
+        "end": "Present",
+        "bullets": [
+          "Lead infrastructure and operations engineering across four divisions, supervising 140 staff and contractors.",
+          "Direct an enterprise network serving 9,300 users across 250 sites.",
+          "Evaluate and implement technology solutions for 53 concurrent IT projects."
+        ]
+      },
+      {
+        "title": "Software Engineering Lead",
+        "employer": "a vocational rehabilitation agency",
+        "start": "2018-05",
+        "end": "2020-08",
+        "bullets": [
+          "Provided technical leadership for a data center supporting 900 employees.",
+          "Developed an innovation and technology project portfolio across the agency.",
+          "Supported documentation digitization initiatives for a labor department."
+        ]
+      },
+      {
+        "title": "Software Project Manager",
+        "employer": "a water treatment utility",
+        "start": "2016-01",
+        "end": "2018-04",
+        "bullets": [
+          "Delivered technical direction for a multimillion-dollar monitoring and control system spanning 185 plants and 1,540 facilities.",
+          "Supervised software analysts, programmers, and database administrators during development and implementation.",
+          "Implemented SCADA and compliance systems for the department of health."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a regional healthcare network",
+        "start": "2014-01",
+        "end": "2015-12",
+        "bullets": [
+          "Engineered and integrated computer network and voice systems across 11 medical center locations.",
+          "Consulted on information technology business solutions for healthcare organizations.",
+          "Managed software development and implementation for clinical support systems."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "PhD in Organization and Management",
+        "institution": "a state university",
+        "year": 2012
+      },
+      {
+        "degree": "BS in Finance & Computers",
+        "institution": "a state university",
+        "year": 2006
+      }
+    ],
+    "skills": [
+      "Software Engineering",
+      "IT Infrastructure",
+      "Data Center Operations",
+      "Project Management",
+      "Cloud Computing",
+      "Database Management",
+      "Network Engineering",
+      "Systems Analysis",
+      "Programming",
+      "SQL",
+      "VMware",
+      "Linux",
+      "Technical Leadership",
+      "Process Improvement"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "software_engineer_02",
+    "occupation_id": "software_engineer",
+    "source": "synthetic",
+    "summary": "Software engineer with 9 years of experience designing, building, and validating large-scale systems at an industry-leading organization. Skilled at translating user needs into feasible designs and improving performance of existing platforms.",
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "an industry-leading technology organization",
+        "start": "2023-04",
+        "end": "Present",
+        "bullets": [
+          "Analyze user needs and software requirements to determine feasibility of design within time and cost constraints for a customer-facing platform serving 4M monthly users.",
+          "Confer with systems analysts, engineers, and product partners to define performance requirements and interfaces for a distributed service architecture, cutting average response latency by 38%.",
+          "Develop and direct system testing and validation procedures, including automated regression suites that reduced production defects by 27%."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a national enterprise software company",
+        "start": "2019-08",
+        "end": "2023-03",
+        "bullets": [
+          "Designed and modified software systems using scientific analysis and mathematical models to predict throughput and storage outcomes for a data pipeline processing 12TB daily.",
+          "Modified existing software to correct errors, adapt to new hardware, and upgrade interfaces, improving batch completion reliability from 94% to 99.6%.",
+          "Stored, retrieved, and manipulated data to analyze system capabilities, producing reports and correspondence on project specifications and status for engineering leadership."
+        ]
+      },
+      {
+        "title": "Software Engineer I",
+        "employer": "a regional software solutions provider",
+        "start": "2016-06",
+        "end": "2019-07",
+        "bullets": [
+          "Analyzed information to determine, recommend, and plan installation of new system modules and modifications to existing client systems across 30 deployments.",
+          "Collaborated with programmers and systems analysts to obtain information on project limitations, capabilities, and interfaces for scheduling software used by 200+ client sites.",
+          "Wrote documentation and validation procedures that shortened onboarding time for new engineers by two weeks."
+        ]
+      },
+      {
+        "title": "Junior Software Developer",
+        "employer": "a mid-sized IT services firm",
+        "start": "2015-05",
+        "end": "2016-05",
+        "bullets": [
+          "Developed and tested software components under senior guidance, resolving 150+ tracked defects in legacy applications.",
+          "Gathered user requirements and prepared status reports for project stakeholders on feature delivery timelines."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Computer Science",
+        "institution": "a state university",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Active Listening",
+      "Writing",
+      "Speaking",
+      "Monitoring",
+      "Mathematics",
+      "Software Design",
+      "System Testing and Validation",
+      "Performance Optimization",
+      "Data Analysis",
+      "Requirements Analysis",
+      "Technical Documentation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "software_engineer_03",
+    "occupation_id": "software_engineer",
+    "source": "synthetic",
+    "summary": "Software engineer with 10 years of experience building and maintaining web and backend systems at a mid-size regional firm. Skilled in translating user needs into feasible designs, improving performance of existing software, and validating releases through structured testing.",
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "a mid-size regional firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead design and development of internal workflow systems, analyzing user needs and requirements to confirm feasibility within time and cost constraints.",
+          "Direct system testing and validation procedures, raising automated test coverage from 54% to 88% across two core services.",
+          "Confer with systems analysts, engineers, and programmers to define project limitations, performance requirements, and system interfaces.",
+          "Modify existing software to correct errors, adapt it to new hardware, and upgrade interfaces, cutting average page load time by 37%.",
+          "Prepare reports and correspondence on project specifications, activities, and status for stakeholders across three business units."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a regional software consultancy",
+        "start": "2018-01",
+        "end": "2021-05",
+        "bullets": [
+          "Developed and modified software systems using scientific analysis and mathematical models to predict and measure design outcomes.",
+          "Stored, retrieved, and manipulated data for analysis of system capabilities and requirements, supporting reporting for 12 client engagements.",
+          "Analyzed information to recommend and plan installation of new systems and modifications to existing systems.",
+          "Collaborated with engineers and analysts to resolve defects, reducing recurring production incidents by 25% over one year.",
+          "Wrote technical documentation and validation procedures adopted as the team standard for release sign-off."
+        ]
+      },
+      {
+        "title": "Junior Software Engineer",
+        "employer": "a mid-size regional firm",
+        "start": "2016-01",
+        "end": "2017-12",
+        "bullets": [
+          "Built and maintained application features under senior review, focusing on data retrieval and manipulation for system analysis.",
+          "Participated in requirements analysis to assess design feasibility and identify constraints early in the project cycle.",
+          "Corrected software errors and improved interface performance, resolving an average of 18 tracked defects per quarter.",
+          "Documented programming changes and validation steps to support system testing procedures."
+        ]
+      },
+      {
+        "title": "Associate Software Developer",
+        "employer": "a small technology services company",
+        "start": "2014-08",
+        "end": "2015-12",
+        "bullets": [
+          "Assisted in developing and testing software modules while learning team coding, testing, and documentation standards.",
+          "Gathered information on project limitations and capabilities from senior engineers to support system design discussions.",
+          "Maintained data storage and retrieval routines used for analysis of system capabilities and requirements."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Computer Science",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Active Listening",
+      "Writing",
+      "Speaking",
+      "Monitoring",
+      "Mathematics",
+      "Software Design",
+      "Software Testing and Validation",
+      "Data Manipulation",
+      "Performance Optimization",
+      "Requirements Analysis",
+      "Technical Documentation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "software_engineer_04",
+    "occupation_id": "software_engineer",
+    "source": "synthetic",
+    "summary": "Software engineer with over 10 years of experience designing, developing, and validating software systems across multiple industries. Skilled in translating user needs into technical solutions and collaborating with cross-functional teams to deliver high-performance applications.",
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Lead design and development of a cloud-based platform serving 2M+ users, improving system responsiveness by 35%.",
+          "Confer with systems analysts and engineers to define project limitations, performance requirements, and interfaces.",
+          "Develop and direct testing and validation procedures, reducing production defects by 40%."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a global technology firm",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Modified existing software to correct errors and upgrade interfaces, improving performance by 25%.",
+          "Analyzed information to recommend and plan installation of new system modules.",
+          "Stored, retrieved, and manipulated data to analyze system capabilities and requirements."
+        ]
+      },
+      {
+        "title": "Junior Software Engineer",
+        "employer": "a mid-sized software company",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Analyzed user needs and software requirements to determine feasibility of design within time and cost constraints.",
+          "Prepared reports and correspondence concerning project specifications and status.",
+          "Designed and modified software systems using mathematical models to predict outcomes."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Computer Science",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Active Listening",
+      "Writing",
+      "Speaking",
+      "Monitoring",
+      "Mathematics",
+      "Learning Strategies",
+      "Science",
+      "Software Design",
+      "System Testing",
+      "Data Analysis",
+      "Programming"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "software_engineer_05",
+    "occupation_id": "software_engineer",
+    "source": "synthetic",
+    "summary": "Software engineer with experience designing and validating systems for growing mid-market companies. Skilled in translating user needs into efficient, scalable software solutions.",
+    "experience": [
+      {
+        "title": "Senior Software Engineer",
+        "employer": "a growing mid-market healthcare technology company",
+        "start": "2022-06",
+        "end": "Present",
+        "bullets": [
+          "Lead the analysis of user needs and software requirements to assess feasibility of design within time and cost constraints.",
+          "Direct testing and validation procedures for new software modules, reducing post-release defects by 30%.",
+          "Collaborate with systems analysts, engineers, and programmers to design system interfaces and establish performance requirements.",
+          "Prepare detailed project status reports and technical documentation for internal stakeholders."
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "employer": "a mid-sized enterprise software firm",
+        "start": "2019-03",
+        "end": "2022-05",
+        "bullets": [
+          "Modified existing software to correct errors, adapt to new hardware, and improve overall system performance.",
+          "Analyzed information to recommend and plan installation of new system features, resulting in 25% faster deployment cycles.",
+          "Designed and developed data manipulation scripts to store, retrieve, and analyze system capability data.",
+          "Conferred with cross-functional teams to obtain project limitations and capability information for system interface design."
+        ]
+      },
+      {
+        "title": "Junior Software Developer",
+        "employer": "a growing e-commerce solutions company",
+        "start": "2016-01",
+        "end": "2019-02",
+        "bullets": [
+          "Developed and modified software systems using scientific analysis and mathematical models to predict outcomes of design changes.",
+          "Participated in software testing and validation procedures, documenting results and programming fixes.",
+          "Gathered user requirements and prepared correspondence concerning project specifications and activities.",
+          "Stored and retrieved data for analysis of system capabilities and requirements to support senior engineers."
+        ]
+      },
+      {
+        "title": "Software Engineering Intern",
+        "employer": "a regional software services company",
+        "start": "2015-06",
+        "end": "2015-12",
+        "bullets": [
+          "Assisted in modifying existing software to correct errors and upgrade interfaces.",
+          "Supported testing and documentation efforts for client-facing applications."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS in Computer Science",
+        "institution": "a state university",
+        "year": 2015
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "a technical institute",
+        "year": 2019
+      }
+    ],
+    "skills": [
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Active Listening",
+      "Writing",
+      "Speaking",
+      "Monitoring",
+      "Mathematics",
+      "Learning Strategies",
+      "Science",
+      "Software Design",
+      "System Testing",
+      "Requirements Analysis",
+      "Data Manipulation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

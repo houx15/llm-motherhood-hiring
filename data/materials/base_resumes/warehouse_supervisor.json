@@ -1,0 +1,513 @@
+[
+  {
+    "resume_id": "warehouse_supervisor_00",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse Supervisor with over 9 years of progressive experience leading shipping, receiving, and inventory teams in mid-size regional distribution environments. Proven record of improving fill rates, reducing shrinkage, and maintaining strict safety and compliance standards across high-volume operations.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a mid-size regional distribution firm",
+        "start": "2023-08",
+        "end": "Present",
+        "bullets": [
+          "Direct daily operations for a 145,000 sq ft distribution center with 38 hourly associates across two shifts, covering receiving, put-away, picking, packing, and outbound loading.",
+          "Raised on-time shipment rate from 91% to 98.4% within the first year by rebalancing pick paths and implementing a wave-planning schedule tied to carrier cutoffs.",
+          "Cut annual inventory shrinkage from 1.8% to 0.6% through cycle-count disciplines, root-cause reviews, and tighter access controls on high-value stock.",
+          "Maintain OSHA compliance and lead monthly safety walkthroughs, reducing recordable incidents by 42% year over year.",
+          "Coach and develop 4 team leads; three have advanced into supervisor-track roles since 2024."
+        ]
+      },
+      {
+        "title": "Shipping and Receiving Supervisor",
+        "employer": "a regional third-party logistics provider",
+        "start": "2020-02",
+        "end": "2023-07",
+        "bullets": [
+          "Managed inbound and outbound dock operations handling 220+ trailers per week, supervising 25 associates and coordinating with carrier dispatch on appointment scheduling.",
+          "Reduced dock-to-stock time by 27% by standardizing receiving SOPs and introducing barcode-verified put-away.",
+          "Improved order accuracy to 99.5% by implementing double-check audits for high-value and multi-line orders.",
+          "Tracked and reported KPIs including cases per hour, dwell time, and damage rates; presented weekly performance reviews to site leadership.",
+          "Facilitated cross-training program that raised shift flexibility and cut overtime spend by 18%."
+        ]
+      },
+      {
+        "title": "Inventory Control Lead",
+        "employer": "a mid-size regional retail supplier",
+        "start": "2017-06",
+        "end": "2020-01",
+        "bullets": [
+          "Led cycle-count and reconciliation activities for 6,000+ SKUs, investigating variances and correcting system records in the WMS.",
+          "Coordinated physical inventory counts twice per year with zero unplanned shutdowns and results within a 0.4% variance threshold.",
+          "Built location-audit routines that recovered 12% additional bin capacity without adding racking.",
+          "Trained 15 associates on scanning procedures and inventory documentation standards."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a regional logistics and storage firm",
+        "start": "2015-03",
+        "end": "2017-05",
+        "bullets": [
+          "Performed picking, packing, and loading duties across a fast-paced 3PL facility, consistently exceeding 110% of productivity targets.",
+          "Operated forklifts, pallet jacks, and RF scanners safely; served as informal trainer for new hires on equipment and scanning workflows.",
+          "Supported receiving team with unloading, staging, and put-away during peak seasonal volumes."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Logistics Management",
+        "institution": "a regional community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Warehouse operations management",
+      "Inventory control and cycle counting",
+      "Shipping and receiving coordination",
+      "WMS and RF scanner systems",
+      "Forklift and powered equipment operation",
+      "OSHA safety compliance",
+      "Team leadership and shift scheduling",
+      "KPI tracking and reporting",
+      "Lean and continuous improvement",
+      "Order accuracy and quality auditing",
+      "Carrier and dock scheduling",
+      "Cross-training and employee development",
+      "Space utilization and layout planning",
+      "Vendor and returns coordination"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "warehouse_supervisor_01",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse supervisor with over nine years of continuous experience leading receiving, storage, and outbound operations in growing mid-market distribution environments. Proven record of improving inventory accuracy, safety compliance, and shift productivity through team coaching and process discipline.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a growing mid-market consumer goods distributor",
+        "start": "2022-03",
+        "end": "Present",
+        "bullets": [
+          "Supervise 28 warehouse associates across receiving, putaway, picking, and shipping on a two-shift operation, maintaining 99.2% on-time outbound order completion.",
+          "Led a cycle-count redesign that raised inventory record accuracy from 94% to 99.1% within two quarters, reducing expedited replenishment spend by 18%.",
+          "Coordinate daily staffing and workload balancing against volume forecasts, cutting overtime hours by 22% while absorbing a 15% volume increase.",
+          "Enforce OSHA-aligned safety procedures and conduct monthly audits; achieved 310 consecutive days without a recordable incident.",
+          "Train and coach lead associates on WMS transactions, forklift certification, and standard work, supporting two internal promotions to lead roles."
+        ]
+      },
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a regional third-party logistics provider",
+        "start": "2019-08",
+        "end": "2022-02",
+        "bullets": [
+          "Managed a 65,000-square-foot staging and cross-dock area with 20+ associates, improving dock-to-stock cycle time by 27%.",
+          "Implemented a slotting review that reduced pick travel time by 14% and lifted lines picked per hour from 82 to 96.",
+          "Partnered with transportation coordinators to reduce late trailer departures from 9% to 2.5% over 12 months.",
+          "Maintained accurate receiving documentation and resolved vendor discrepancy claims, recovering approximately $41K in credits annually."
+        ]
+      },
+      {
+        "title": "Warehouse Team Lead",
+        "employer": "a mid-market building products supplier",
+        "start": "2017-01",
+        "end": "2019-07",
+        "bullets": [
+          "Led a 12-person receiving and putaway crew, assigning tasks, monitoring productivity, and covering for the supervisor during absences.",
+          "Trained new hires on scanner use, pallet building, and inventory handling, reducing 90-day new-hire turnover by 19%.",
+          "Performed daily inventory checks and damage investigations, cutting shrinkage by 11% year over year."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a growing mid-market retail distribution company",
+        "start": "2015-06",
+        "end": "2016-12",
+        "bullets": [
+          "Picked, packed, and staged customer orders while meeting a 99% accuracy standard across an average of 110 lines per shift.",
+          "Operated sit-down and reach forklifts to move pallets, load trailers, and replenish forward pick locations.",
+          "Assisted with periodic physical inventories and supported the receiving team with unloading and verification tasks."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Logistics and Supply Chain Management",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      }
+    ],
+    "skills": [
+      "Warehouse operations management",
+      "Receiving and putaway",
+      "Order picking and packing",
+      "Shipping and dock coordination",
+      "Inventory cycle counting",
+      "WMS and RF scanner operation",
+      "Forklift operation and certification",
+      "Shift scheduling and staffing",
+      "Safety compliance and audits",
+      "Team training and coaching",
+      "Process improvement",
+      "KPI tracking and reporting",
+      "Cross-docking",
+      "Vendor discrepancy resolution"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "warehouse_supervisor_02",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse Supervisor with over 9 years of progressive experience leading high-volume distribution operations. Proven track record of improving inventory accuracy, throughput, and safety performance within an industry-leading organization.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "an industry-leading logistics organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Supervise a team of 35+ warehouse associates across receiving, picking, packing, and shipping functions on a 24/5 operation.",
+          "Improved inventory accuracy from 96.2% to 99.6% by implementing cycle-count routines and root-cause correction tracking.",
+          "Increased outbound pick rate by 18% through slotting optimization and shift-level performance coaching.",
+          "Reduced recordable safety incidents by 42% over two years through hazard assessments and daily toolbox talks.",
+          "Coordinate with transportation and customer service teams to maintain on-time shipment rate above 98%."
+        ]
+      },
+      {
+        "title": "Assistant Warehouse Supervisor",
+        "employer": "a national distribution company",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Assisted in managing daily warehouse operations for a 180,000 sq. ft. facility handling 12,000+ orders per week.",
+          "Led a continuous improvement project that cut order cycle time by 22% using lean principles.",
+          "Trained and cross-trained 20 associates on forklift safety, RF scanning, and standard operating procedures.",
+          "Maintained accurate records of inventory, labor hours, and equipment maintenance in the WMS."
+        ]
+      },
+      {
+        "title": "Warehouse Team Lead",
+        "employer": "a regional fulfillment company",
+        "start": "2016-08",
+        "end": "2018-02",
+        "bullets": [
+          "Directed a 12-person team in receiving and put-away, achieving 99% on-time unloading of inbound freight.",
+          "Performed quality audits on 500+ outbound orders per week, reducing mis-shipments by 30%.",
+          "Operated and certified others on forklifts, pallet jacks, and order pickers while enforcing OSHA standards."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a regional fulfillment company",
+        "start": "2015-03",
+        "end": "2016-07",
+        "bullets": [
+          "Picked, packed, and staged customer orders with a 99.5% accuracy rate in a fast-paced environment.",
+          "Loaded and unloaded trucks, verified shipments against manifests, and reported discrepancies.",
+          "Maintained clean and organized aisles, contributing to a successful annual safety audit."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Business Management",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Warehouse operations management",
+      "Inventory control and cycle counting",
+      "Team leadership and coaching",
+      "Forklift operation and certification",
+      "WMS and RF scanner proficiency",
+      "Order picking and packing",
+      "Shipping and receiving",
+      "Safety compliance (OSHA)",
+      "Lean and continuous improvement",
+      "Performance metrics and reporting",
+      "Labor scheduling",
+      "Cross-docking",
+      "Quality assurance audits",
+      "Microsoft Excel and inventory software"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "warehouse_supervisor_03",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse Supervisor with over 10 years of experience leading teams in fast-paced distribution environments. Proven track record of improving inventory accuracy, optimizing workflow, and maintaining strict safety compliance.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a mid-size regional distribution firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Supervise a team of 25 warehouse associates across receiving, picking, and shipping operations.",
+          "Reduced order fulfillment errors by 18% through updated barcode scanning procedures and staff training.",
+          "Maintain 99.2% inventory accuracy via cycle counts and root-cause analysis of discrepancies.",
+          "Enforce OSHA safety standards, resulting in zero lost-time incidents over the past two years."
+        ]
+      },
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a national logistics company",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Managed daily warehouse activities for a 150,000 sq ft facility, including scheduling and workflow assignment.",
+          "Improved on-time shipment rate from 88% to 96% by redesigning pick paths and staging areas.",
+          "Conducted performance reviews and coached 30+ associates, reducing turnover by 12%.",
+          "Collaborated with transportation team to reduce loading dock turnaround time by 20%."
+        ]
+      },
+      {
+        "title": "Warehouse Lead",
+        "employer": "a regional e-commerce fulfillment center",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Led a team of 12 pickers and packers during peak seasons, ensuring daily targets were met.",
+          "Implemented a new bin location system that cut search time by 25%.",
+          "Trained new hires on equipment operation and safety protocols.",
+          "Assisted supervisor with inventory audits and reporting."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a mid-size regional retail distributor",
+        "start": "2014-02",
+        "end": "2015-12",
+        "bullets": [
+          "Performed receiving, put-away, and order picking using RF scanners.",
+          "Operated forklifts and pallet jacks safely to move materials.",
+          "Achieved 100% attendance and recognized as employee of the month twice.",
+          "Supported annual physical inventory counts with high accuracy."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Logistics Management",
+        "institution": "a state technical college",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Inventory Management",
+      "Team Leadership",
+      "Safety Compliance (OSHA)",
+      "Forklift Operation",
+      "Order Fulfillment",
+      "Warehouse Management Systems (WMS)",
+      "RF Scanning",
+      "Process Improvement",
+      "Staff Training",
+      "Performance Management",
+      "Cycle Counting",
+      "Shipping and Receiving",
+      "Time Management",
+      "Conflict Resolution"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "warehouse_supervisor_04",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse Supervisor with over 9 years of progressive experience leading teams in mid-size regional distribution and fulfillment operations. Skilled in inventory accuracy, shipping and receiving workflows, and safety compliance, with a record of improving productivity and reducing shrinkage.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a mid-size regional distribution firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Supervise a team of 24 warehouse associates across two shifts, coordinating receiving, put-away, picking, packing, and shipping activities to meet daily order targets.",
+          "Improved inventory record accuracy from 94% to 99.2% within one year by implementing cycle-count routines and root-cause reviews of discrepancies.",
+          "Reduced average order fulfillment time by 18% through revised pick-path layouts and cross-training associates on multiple zones.",
+          "Maintain OSHA compliance and lead monthly safety audits, cutting recordable incidents by 40% over two years.",
+          "Track KPIs in the warehouse management system and deliver weekly performance reports to operations management."
+        ]
+      },
+      {
+        "title": "Shipping and Receiving Lead",
+        "employer": "a regional logistics and warehousing company",
+        "start": "2019-02",
+        "end": "2021-05",
+        "bullets": [
+          "Led a 10-person shipping and receiving crew, scheduling inbound dock appointments and outbound carrier pickups for a 180,000-square-foot facility.",
+          "Verified inbound shipments against bills of lading and purchase orders, resolving vendor shortages and damage claims that recovered over $45,000 annually.",
+          "Cut dock turnaround times by 22% by reorganizing staging lanes and standardizing unloading procedures.",
+          "Trained new hires on forklift operation, RF scanner use, and safe material handling practices."
+        ]
+      },
+      {
+        "title": "Inventory Control Specialist",
+        "employer": "a mid-size regional retail supplier",
+        "start": "2016-09",
+        "end": "2019-01",
+        "bullets": [
+          "Conducted daily cycle counts and quarterly physical inventories for a 12,000-SKU catalog, maintaining 98% location accuracy.",
+          "Investigated and reconciled inventory variances, reducing unexplained shrinkage by 30% year over year.",
+          "Built spreadsheet-based tracking tools that flagged slow-moving stock and supported replenishment decisions.",
+          "Coordinated with receiving and returns teams to correct mislabeled and misrouted inventory."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a regional consumer goods distributor",
+        "start": "2014-08",
+        "end": "2016-08",
+        "bullets": [
+          "Picked, packed, and staged customer orders while consistently exceeding productivity standards.",
+          "Operated sit-down and reach forklifts to move pallets and replenish pick locations.",
+          "Assisted with unloading inbound trailers and scanning freight into the inventory system.",
+          "Maintained a clean, organized work area in line with company safety and 5S guidelines."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Logistics and Supply Chain Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Warehouse operations management",
+      "Inventory control and cycle counting",
+      "Shipping and receiving",
+      "Order picking and packing",
+      "Forklift operation",
+      "Warehouse management systems (WMS)",
+      "RF scanner use",
+      "OSHA safety compliance",
+      "Team leadership and scheduling",
+      "KPI tracking and reporting",
+      "Process improvement",
+      "Cycle count reconciliation",
+      "Cross-training and onboarding",
+      "Dock scheduling"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "warehouse_supervisor_05",
+    "occupation_id": "warehouse_supervisor",
+    "source": "synthetic",
+    "summary": "Warehouse Supervisor with over a decade of experience leading receiving, inventory, and outbound operations in mid-market distribution environments. Skilled at coaching teams, improving inventory accuracy, and implementing safety and process improvements that reduce cost and cycle time.",
+    "experience": [
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a growing mid-market company",
+        "start": "2022-03",
+        "end": "Present",
+        "bullets": [
+          "Supervise 24 warehouse associates across receiving, putaway, picking, and shipping on two shifts.",
+          "Increased inventory accuracy from 94% to 99.2% by introducing cycle-count routines and root-cause review of discrepancies.",
+          "Cut average order cycle time by 18% through slotting optimization and staged wave picking.",
+          "Maintain OSHA compliance and lead monthly safety audits, reducing recordable incidents by 40% over two years.",
+          "Train and coach team leads on forklift certification, RF scanner use, and standard work instructions."
+        ]
+      },
+      {
+        "title": "Warehouse Supervisor",
+        "employer": "a regional logistics and distribution firm",
+        "start": "2019-08",
+        "end": "2022-02",
+        "bullets": [
+          "Oversaw daily inbound and outbound operations for a 180,000 sq ft facility with 15 direct reports.",
+          "Reduced overtime spending by 22% by aligning labor schedules with demand forecasts.",
+          "Implemented 5S practices across staging areas, improving space utilization and pick-path efficiency.",
+          "Coordinated with transportation carriers to improve on-time shipment rate from 91% to 97%."
+        ]
+      },
+      {
+        "title": "Inventory Control Lead",
+        "employer": "a mid-sized wholesale distributor",
+        "start": "2016-06",
+        "end": "2019-07",
+        "bullets": [
+          "Led inventory audits and reconciliation for 6,000+ SKUs, resolving variances within 48 hours.",
+          "Built weekly reports on stock levels, shrinkage, and slow-moving items for operations leadership.",
+          "Trained 10 associates on barcode scanning, cycle counting, and damage-reduction procedures."
+        ]
+      },
+      {
+        "title": "Warehouse Associate",
+        "employer": "a growing mid-market company",
+        "start": "2014-05",
+        "end": "2016-05",
+        "bullets": [
+          "Performed picking, packing, receiving, and putaway while meeting 99% accuracy targets.",
+          "Operated forklifts, pallet jacks, and RF scanners safely in a high-volume environment.",
+          "Cross-trained in shipping documentation and returned-goods processing."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Logistics Management",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Warehouse operations management",
+      "Inventory control and cycle counting",
+      "Shipping and receiving",
+      "Order picking and packing",
+      "Team supervision and scheduling",
+      "Forklift operation and certification",
+      "Safety and OSHA compliance",
+      "5S and lean process improvement",
+      "RF scanner and WMS proficiency",
+      "Data reporting and KPI tracking",
+      "Labor planning and cost control",
+      "Coaching and employee training",
+      "Carrier coordination",
+      "Root-cause problem solving"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

@@ -109,7 +109,18 @@ def test_e3_pool_genders_balanced_and_distinct_names():
 def test_validate_resume_flags_cues():
     bad = {
         "resume_id": "x", "occupation_id": "x", "source": "synthetic", "role": "base",
-        "summary": "Great with kids", "experience": [], "education": [], "skills": [], "volunteer": [],
+        "summary": "Proud mother of two children", "experience": [], "education": [], "skills": [], "volunteer": [],
     }
     v = validate_resume(bad)
     assert any("cue" in s for s in v)
+
+
+def test_validate_resume_allows_occupation_terms():
+    """Teacher resumes may say 'children'/'parents' about students, not the applicant."""
+    teacher = {
+        "resume_id": "x", "occupation_id": "x", "source": "synthetic", "role": "base",
+        "summary": "Preschool teacher skilled in early childhood development and parent communication.",
+        "experience": [], "education": [], "skills": [], "volunteer": [],
+    }
+    v = validate_resume(teacher)
+    assert not any("cue" in s for s in v)

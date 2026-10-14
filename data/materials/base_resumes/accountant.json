@@ -1,0 +1,511 @@
+[
+  {
+    "resume_id": "accountant_00",
+    "occupation_id": "accountant",
+    "source": "kaggle",
+    "summary": "Degreed accountant with over 10 years of diversified accounting experience, specializing in tax preparation, bookkeeping, and financial reporting for individuals and small businesses.",
+    "experience": [
+      {
+        "title": "Accountant",
+        "employer": "a small business accounting firm",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Prepared federal tax returns for individuals and small businesses.",
+          "Performed bookkeeping and prepared financial statements for small business clients.",
+          "Completed special projects and short-term accounting assignments as needed."
+        ]
+      },
+      {
+        "title": "Tax Accountant",
+        "employer": "a regional tax services company",
+        "start": "2021-10",
+        "end": "2022-03",
+        "bullets": [
+          "Prepared simple and complex tax returns for individuals and small businesses.",
+          "Answered client inquiries regarding tax filing status and resolved filing issues.",
+          "Prepared and reviewed financial statements needed for tax return preparation."
+        ]
+      },
+      {
+        "title": "Accounting Manager",
+        "employer": "a mid-sized commercial company",
+        "start": "2017-01",
+        "end": "2021-09",
+        "bullets": [
+          "Restructured the accounting department, improving overall efficiency by 40%.",
+          "Reduced accounts receivable turnover by 50% through improved collection strategies.",
+          "Prepared general ledger journal entries, bank reconciliations, and periodic financial statements.",
+          "Processed weekly and monthly invoices for accounts receivable."
+        ]
+      },
+      {
+        "title": "Tax Accountant",
+        "employer": "a local accounting practice",
+        "start": "2015-12",
+        "end": "2016-12",
+        "bullets": [
+          "Prepared individual and business tax returns and assisted with corporate returns.",
+          "Prepared quarterly and annual payroll reports including 940s and 941s and state sales taxes.",
+          "Reconciled monthly bank statements and prepared detailed financial statements."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor's degree in Accounting",
+        "institution": "a state university",
+        "year": 2005
+      }
+    ],
+    "skills": [
+      "tax preparation",
+      "bookkeeping",
+      "financial statement preparation",
+      "bank reconciliation",
+      "accounts receivable",
+      "general ledger",
+      "QuickBooks",
+      "PeopleSoft",
+      "Microsoft Excel",
+      "Microsoft Access",
+      "payroll reporting",
+      "sales tax filing",
+      "deadline management",
+      "analytical skills"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "accountant_01",
+    "occupation_id": "accountant",
+    "source": "kaggle",
+    "summary": "Accountant with extensive experience in corporate and small business accounting, tax preparation, and accounting services. Skilled in period-end close, general ledger maintenance, and financial statement preparation, with a track record of accurate and timely reporting.",
+    "experience": [
+      {
+        "title": "Accountant",
+        "employer": "a multinational manufacturing corporation",
+        "start": "2017-06",
+        "end": "Present",
+        "bullets": [
+          "Responsible for consistent, accurate and timely period end close",
+          "Calculate, process and analyze journal entries and accruals",
+          "Maintain general ledger for multiple entities worldwide",
+          "Prepare account reconciliations for multiple accounts across multiple entities",
+          "Work as member of team to prepare 10-Q and 10-K reports",
+          "Prepare XBRL instance document for submission to SEC",
+          "Responsible for completion of various U.S. Government surveys",
+          "Monthly sales tax reporting."
+        ]
+      },
+      {
+        "title": "Accountant",
+        "employer": "a regional professional services firm",
+        "start": "2014-05",
+        "end": "2017-05",
+        "bullets": [
+          "Supported company ownership by providing accounting insight and technical knowledge",
+          "Responsible for all accounting functions, including AR, AP, GL, payroll, period-end close processes, account reconciliations and sales tax reporting",
+          "Monitor accurate and appropriate recording of revenues and expenses",
+          "Monitor cash flow and balances; project future cash balances and needs",
+          "Monitor and analyze monthly operating results against budget"
+        ]
+      },
+      {
+        "title": "Staff Accountant",
+        "employer": "a local accounting services company",
+        "start": "2014-04",
+        "end": "2014-04",
+        "bullets": [
+          "Maintained general ledger for multiple clients",
+          "Prepared journal entries and adjusting journal entries",
+          "Responsible for monthly reconciliations",
+          "Prepared financial statement compilations",
+          "Prepared individual income tax returns",
+          "Calculated and prepared monthly payroll deposits",
+          "Prepared quarterly and annual payroll reports for multiple clients",
+          "Prepared annual Form 1099 for multiple clients",
+          "Assisted in preparation of financial and operating reports."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.S. in Business Administration Accounting",
+        "institution": "a state university",
+        "year": 2005
+      },
+      {
+        "degree": "B.S. in Accounting",
+        "institution": "a private university",
+        "year": 2003
+      }
+    ],
+    "skills": [
+      "Accounts Receivable/Payable",
+      "General Ledger Accounting",
+      "Sales Tax Reporting",
+      "GAAP Knowledge",
+      "Period End Close",
+      "Tax Preparation",
+      "Financial Statement Preparation",
+      "Microsoft Office",
+      "ERP Systems",
+      "Account Reconciliations",
+      "Payroll Processing",
+      "Journal Entries",
+      "XBRL Reporting",
+      "SEC Reporting"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "accountant_02",
+    "occupation_id": "accountant",
+    "source": "synthetic",
+    "summary": "Detail-oriented accountant with over a decade of experience in financial reporting, reconciliation, and tax compliance for local organizations. Proven ability to prepare accurate statements, resolve discrepancies, and support audit processes.",
+    "experience": [
+      {
+        "title": "Senior Accountant",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Prepare and analyze monthly financial statements and annual reports, ensuring conformance to reporting standards.",
+          "Review accounts for discrepancies and reconcile general ledger differences, reducing unresolved items by 40%.",
+          "Compute taxes owed and prepare federal and state returns, ensuring timely compliance with payment and reporting requirements.",
+          "Prepare adjusting journal entries and inspect accounting systems for efficiency and adherence to accepted procedures."
+        ]
+      },
+      {
+        "title": "Accountant",
+        "employer": "a regional manufacturing company",
+        "start": "2018-04",
+        "end": "2021-05",
+        "bullets": [
+          "Processed invoices for payment and verified supporting documentation for accuracy and completeness.",
+          "Prepared detailed reports on audit findings and assisted external auditors with testing and documentation.",
+          "Analyzed financial records using statistical procedures to assess financial condition and facilitate planning.",
+          "Reconciled bank and vendor accounts monthly, resolving discrepancies within established deadlines."
+        ]
+      },
+      {
+        "title": "Staff Accountant",
+        "employer": "a local retail business",
+        "start": "2016-03",
+        "end": "2018-03",
+        "bullets": [
+          "Examined accounting records and financial reports for completeness and conformance to procedural standards.",
+          "Computed sales and payroll taxes owed and prepared corresponding returns for compliance.",
+          "Prepared adjusting journal entries and maintained accurate general ledger records.",
+          "Verified annual reports and other financial records using accepted accounting procedures."
+        ]
+      },
+      {
+        "title": "Junior Accountant",
+        "employer": "a community service organization",
+        "start": "2014-06",
+        "end": "2016-02",
+        "bullets": [
+          "Processed invoices for payment and reviewed accounts for discrepancies.",
+          "Assisted in preparing financial statements and detailed reports for internal review.",
+          "Inspected account books for efficiency and supported month-end close activities.",
+          "Maintained accurate records of transactions using established accounting procedures."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Accounting",
+        "institution": "a state university",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Writing",
+      "Critical Thinking",
+      "Speaking",
+      "Mathematics",
+      "Active Learning",
+      "Monitoring",
+      "Financial Reporting",
+      "Account Reconciliation",
+      "Tax Preparation",
+      "Journal Entries",
+      "Audit Support",
+      "GAAP Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "accountant_03",
+    "occupation_id": "accountant",
+    "source": "synthetic",
+    "summary": "Detail-oriented accountant with over a decade of progressive experience in financial reporting, reconciliation, and tax compliance. Proven ability to improve accuracy and efficiency across full-cycle accounting operations within an industry-leading organization.",
+    "experience": [
+      {
+        "title": "Senior Accountant",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Prepare, examine, and analyze monthly financial statements and management reports, ensuring conformance to reporting and procedural standards.",
+          "Reconcile complex general ledger accounts and resolve discrepancies, reducing unreconciled balances by 35% within the first year.",
+          "Compute quarterly and annual tax obligations and prepare federal, state, and local returns, maintaining full compliance with payment and reporting requirements.",
+          "Prepare adjusting journal entries and support external audit requests by delivering detailed reports on audit findings."
+        ]
+      },
+      {
+        "title": "Staff Accountant",
+        "employer": "a regional professional services firm",
+        "start": "2019-02",
+        "end": "2021-05",
+        "bullets": [
+          "Processed and reviewed accounts payable invoices for payment, verifying accuracy and proper authorization across 200+ vendors monthly.",
+          "Inspected account books and accounting systems for efficiency and adherence to accepted accounting procedures, recommending two process improvements adopted firm-wide.",
+          "Prepared detailed reports on audit findings and assisted in drafting annual financial statements for client engagements.",
+          "Reviewed accounts for discrepancies and reconciled differences between subsidiary ledgers and general ledger balances."
+        ]
+      },
+      {
+        "title": "Junior Accountant",
+        "employer": "a growing manufacturing company",
+        "start": "2016-09",
+        "end": "2019-01",
+        "bullets": [
+          "Prepared and verified annual reports and supporting records using accepted accounting procedures to assess financial condition.",
+          "Assisted in computing taxes owed and compiling documentation for corporate tax return preparation.",
+          "Prepared adjusting journal entries and maintained accurate month-end close schedules.",
+          "Analyzed accounting records for completeness and flagged variances for controller review."
+        ]
+      },
+      {
+        "title": "Accounting Assistant",
+        "employer": "a mid-sized distribution company",
+        "start": "2014-06",
+        "end": "2016-08",
+        "bullets": [
+          "Processed vendor invoices for payment and maintained organized accounts payable files.",
+          "Reviewed accounts for discrepancies and escalated unresolved differences to accounting management.",
+          "Supported preparation of quarterly financial reports and verified supporting documentation."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Accounting",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Writing",
+      "Critical Thinking",
+      "Speaking",
+      "Mathematics",
+      "Active Learning",
+      "Monitoring",
+      "Financial Reporting",
+      "Account Reconciliation",
+      "Tax Preparation",
+      "Journal Entries",
+      "Audit Support",
+      "GAAP Compliance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "accountant_04",
+    "occupation_id": "accountant",
+    "source": "synthetic",
+    "summary": "Detail-oriented accountant with over a decade of experience in financial reporting, tax compliance, and reconciliation within mid-size regional firms. Proven ability to prepare accurate financial statements, analyze discrepancies, and support audit processes while ensuring adherence to reporting standards.",
+    "experience": [
+      {
+        "title": "Senior Accountant",
+        "employer": "a mid-size regional accounting firm",
+        "start": "2020-03",
+        "end": "Present",
+        "bullets": [
+          "Prepare and analyze monthly financial statements and annual reports, ensuring conformance to reporting and procedural standards for 30+ clients.",
+          "Compute taxes owed and prepare federal and state tax returns, achieving 100% on-time filing compliance over three consecutive years.",
+          "Review accounts for discrepancies and reconcile differences, reducing month-end close time by 15%.",
+          "Prepare adjusting journal entries and inspect account books for efficiency, identifying process improvements that saved 200+ hours annually."
+        ]
+      },
+      {
+        "title": "Staff Accountant",
+        "employer": "a regional business services firm",
+        "start": "2017-06",
+        "end": "2020-02",
+        "bullets": [
+          "Processed invoices for payment and verified supporting documentation for accounts payable, handling 500+ invoices monthly with 99.8% accuracy.",
+          "Assisted in preparing detailed reports on audit findings, helping resolve 40+ audit queries per cycle.",
+          "Verified financial records using accepted accounting and statistical procedures to assess financial condition and facilitate planning.",
+          "Reconciled bank and general ledger accounts, identifying and correcting discrepancies before escalation."
+        ]
+      },
+      {
+        "title": "Junior Accountant",
+        "employer": "a mid-size regional firm",
+        "start": "2015-01",
+        "end": "2017-05",
+        "bullets": [
+          "Examined accounting records and financial reports for accuracy and completeness under senior supervision.",
+          "Prepared adjusting journal entries and maintained general ledger accuracy for multiple client accounts.",
+          "Supported tax return preparation by compiling supporting schedules and verifying compliance with payment and reporting requirements.",
+          "Analyzed account discrepancies and prepared reconciliation summaries for management review."
+        ]
+      },
+      {
+        "title": "Accounting Assistant",
+        "employer": "a local accounting practice",
+        "start": "2014-01",
+        "end": "2014-12",
+        "bullets": [
+          "Processed invoices for payment and maintained vendor records with attention to accuracy and timeliness.",
+          "Assisted in preparing financial reports and statements using accepted accounting procedures.",
+          "Reviewed accounts for discrepancies and flagged issues for senior accountants to resolve.",
+          "Organized and inspected account books to support efficient transaction recording."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Accounting",
+        "institution": "a state university",
+        "year": 2013
+      },
+      {
+        "degree": "Associate of Arts in Business Administration",
+        "institution": "a community college",
+        "year": 2011
+      }
+    ],
+    "skills": [
+      "Reading Comprehension",
+      "Active Listening",
+      "Writing",
+      "Critical Thinking",
+      "Speaking",
+      "Mathematics",
+      "Active Learning",
+      "Monitoring",
+      "Financial Reporting",
+      "Tax Preparation",
+      "Account Reconciliation",
+      "Journal Entries",
+      "Audit Support",
+      "Financial Analysis"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "accountant_05",
+    "occupation_id": "accountant",
+    "source": "synthetic",
+    "summary": "Detail-oriented accountant with 10 years of progressive experience in financial reporting, tax compliance, and general ledger management within large national organizations. Skilled in reconciling complex accounts, preparing audit-ready statements, and improving reporting accuracy through rigorous analysis.",
+    "experience": [
+      {
+        "title": "Senior Accountant",
+        "employer": "a large national retail company",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Prepare and analyze monthly financial statements for 40+ retail locations, ensuring conformance to GAAP and internal reporting standards.",
+          "Reconcile balance sheet accounts totaling over $85M, investigating and resolving discrepancies within a three-day close window.",
+          "Compute sales and use tax owed across 12 states and prepare corresponding returns, maintaining full compliance with payment and reporting deadlines.",
+          "Prepare adjusting journal entries and detailed audit findings reports that reduced external audit adjustments by 22% year over year.",
+          "Inspect account books and accounting systems for efficiency, recommending procedural changes that cut manual reconciliation time by 15 hours per month."
+        ]
+      },
+      {
+        "title": "Staff Accountant",
+        "employer": "a large national manufacturing company",
+        "start": "2019-06",
+        "end": "2022-03",
+        "bullets": [
+          "Processed an average of 1,200 vendor invoices per month for payment, verifying accuracy and proper general ledger coding.",
+          "Reviewed accounts for discrepancies and reconciled differences between subsidiary ledgers and the general ledger.",
+          "Assisted in preparing annual reports and financial statements used by leadership to assess financial condition and support planning.",
+          "Prepared federal and state tax returns for three entities, ensuring compliance with all reporting requirements.",
+          "Performed statistical analysis of expense trends that identified $140K in recoverable duplicate payments."
+        ]
+      },
+      {
+        "title": "Junior Accountant",
+        "employer": "a large national insurance company",
+        "start": "2016-09",
+        "end": "2019-05",
+        "bullets": [
+          "Examined accounting records and financial reports to assess accuracy, completeness, and conformance to reporting standards.",
+          "Prepared adjusting journal entries for premium accruals and reinsurance transactions during monthly and quarterly closes.",
+          "Processed invoices for payment and maintained vendor records for more than 300 active suppliers.",
+          "Reconciled bank and investment accounts, clearing an average of 95% of reconciling items within the first close cycle.",
+          "Compiled supporting documentation for external audits and prepared detailed reports on audit findings."
+        ]
+      },
+      {
+        "title": "Accounting Assistant",
+        "employer": "a large national logistics company",
+        "start": "2014-08",
+        "end": "2016-08",
+        "bullets": [
+          "Verified and entered accounts payable transactions, matching invoices to purchase orders and receiving documents.",
+          "Assisted with monthly account reviews, flagging discrepancies for senior staff reconciliation.",
+          "Maintained organized records of journal entries and supporting schedules for internal and external review.",
+          "Prepared routine financial reports and statistical summaries used in departmental budget monitoring."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Science in Accounting",
+        "institution": "a state university",
+        "year": 2014
+      },
+      {
+        "degree": "Associate of Applied Science in Business Administration",
+        "institution": "a community college",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Financial statement preparation",
+      "Account reconciliation",
+      "Tax return preparation and compliance",
+      "Adjusting journal entries",
+      "Generally accepted accounting principles (GAAP)",
+      "Accounts payable processing",
+      "Audit support and findings reporting",
+      "General ledger management",
+      "Critical thinking",
+      "Reading comprehension",
+      "Active listening",
+      "Mathematics",
+      "Financial analysis",
+      "Attention to detail"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

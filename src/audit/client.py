@@ -88,7 +88,7 @@ class OpenRouterClient:
         cfg_out = cfg.price_per_mtok.get("output", 0.0)
         return max(live["input"], cfg_in), max(live["output"], cfg_out)
 
-    async def chat(self, cfg: ModelCfg, user_prompt: str, system_prompt: str | None = None):
+    async def chat(self, cfg: ModelCfg, user_prompt: str, system_prompt: str | None = None, max_tokens: int | None = None):
         """One chat completion. Returns dict with content/usage/finish/provider.
 
         Raises TransportFailure / RefusalError.
@@ -101,7 +101,7 @@ class OpenRouterClient:
         body: dict[str, Any] = {
             "model": cfg.slug,
             "messages": messages,
-            "max_tokens": cfg.max_tokens,
+            "max_tokens": max_tokens or cfg.max_tokens,
             "provider": cfg.provider.model_dump(exclude_none=True),
         }
         if cfg.temperature is not None:

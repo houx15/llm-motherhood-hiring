@@ -1,0 +1,90 @@
+{
+  "resume_id": "physician_04",
+  "occupation_id": "physician",
+  "source": "synthetic",
+  "summary": "Board-certified primary care physician with 9 years of continuous full-time experience delivering comprehensive care in high-volume outpatient settings. Recognized for evidence-based chronic disease management, preventive care, and collaborative leadership of multidisciplinary clinical teams.",
+  "experience": [
+    {
+      "title": "Physician (Primary Care)",
+      "employer": "an industry-leading integrated health system",
+      "start": "2022-04",
+      "end": "Present",
+      "bullets": [
+        "Provide comprehensive primary care to a panel of approximately 2,100 patients, prescribing medications, vaccinations, and targeted therapies for acute and chronic conditions.",
+        "Ordered, performed, and interpreted diagnostic tests, imaging, and laboratory panels to diagnose conditions and adjust treatment plans, improving hypertension and diabetes control rates by 18% year over year.",
+        "Documented medical histories, examination results, and treatment progress in the electronic health record while maintaining compliance with quality and regulatory standards.",
+        "Directed and coordinated care activities of nurses, medical assistants, and care coordinators, leading daily huddle reviews that reduced avoidable emergency department visits by 12%.",
+        "Counseled patients on diet, activity, hygiene, and disease prevention, and referred complex cases to specialists with timely follow-up to ensure continuity of care."
+      ]
+    },
+    {
+      "title": "Physician (Primary Care)",
+      "employer": "a community health network",
+      "start": "2019-03",
+      "end": "2022-03",
+      "bullets": [
+        "Managed a diverse outpatient panel across all age groups, delivering preventive screenings, immunizations, and same-day acute care visits averaging 22 patients per day.",
+        "Monitored patient conditions and reevaluated treatments at follow-up intervals, reducing hospital readmissions among attributed patients by 15%.",
+        "Interpreted test results and discussed diagnoses and treatment options with patients and caregivers, earning consistently high patient satisfaction scores.",
+        "Supervised and mentored nursing staff, residents, and students during clinical rotations, supporting skill development in history-taking and evidence-based prescribing.",
+        "Collaborated with behavioral health and pharmacy teams to implement medication reconciliation and chronic care outreach programs."
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a regional primary care group",
+      "start": "2016-06",
+      "end": "2019-02",
+      "bullets": [
+        "Delivered full-spectrum primary care services, including preventive care, chronic disease management, and minor procedures for a growing patient panel.",
+        "Collected and maintained detailed patient histories, reports, and examination findings to support accurate diagnosis and longitudinal care planning.",
+        "Prescribed and administered vaccines and therapies in accordance with clinical guidelines, achieving above-target immunization rates for pediatric and adult populations.",
+        "Advised community members on lifestyle, nutrition, and disease prevention through health education sessions and individual counseling.",
+        "Referred patients to medical specialists and coordinated multidisciplinary care for complex or high-risk cases."
+      ]
+    },
+    {
+      "title": "Resident Physician, Primary Care",
+      "employer": "a teaching hospital and affiliated clinics",
+      "start": "2014-07",
+      "end": "2016-05",
+      "bullets": [
+        "Completed supervised clinical training in outpatient and inpatient settings, performing histories, examinations, and diagnostic workups under attending oversight.",
+        "Prescribed treatments and medications and monitored patient progress across continuity clinics and hospital rotations.",
+        "Ordered and interpreted laboratory and imaging studies, presenting findings during rounds and adjusting care plans accordingly.",
+        "Participated in quality improvement initiatives focused on preventive screening and patient education."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Medicine (MD)",
+      "institution": "a state university school of medicine",
+      "year": 2014
+    },
+    {
+      "degree": "Bachelor of Science in Biology",
+      "institution": "a public research university",
+      "year": 2010
+    }
+  ],
+  "skills": [
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Speaking",
+    "Active Learning",
+    "Monitoring",
+    "Science",
+    "Learning Strategies",
+    "Mathematics",
+    "Chronic Disease Management",
+    "Preventive Care",
+    "Electronic Health Records",
+    "Multidisciplinary Team Leadership"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

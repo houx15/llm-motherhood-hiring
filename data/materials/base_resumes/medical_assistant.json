@@ -1,0 +1,522 @@
+[
+  {
+    "resume_id": "medical_assistant_00",
+    "occupation_id": "medical_assistant",
+    "source": "kaggle",
+    "summary": "Dedicated medical assistant with experience in patient care, administrative support, and clinical procedures. Skilled at prioritizing tasks, managing multi-line phone systems, and maintaining accurate medical records in fast-paced healthcare environments.",
+    "experience": [
+      {
+        "title": "Medical Assistant",
+        "employer": "a regional healthcare clinic",
+        "start": "2017-01",
+        "end": "Present",
+        "bullets": [
+          "Managed the receptionist area, greeting visitors and responding to telephone and in-person requests for information.",
+          "Prepared patient rooms prior to arrival and kept facility stocked with necessary supplies, equipment, and instruments.",
+          "Collected urine and fecal samples and performed phlebotomy, injections, urinalysis, ECG, and PFT procedures.",
+          "Maintained electronic and paper medical files and designed electronic file systems to improve record accuracy."
+        ]
+      },
+      {
+        "title": "Home Healthcare Provider",
+        "employer": "a home healthcare agency",
+        "start": "2015-06",
+        "end": "2016-12",
+        "bullets": [
+          "Completed and submitted clinical documentation in accordance with agency guidelines.",
+          "Observed and documented patient status and reported patient complaints to the case manager.",
+          "Assisted with transferring residents in and out of wheelchairs and adaptive equipment.",
+          "Planned, prepared, and served meals and snacks according to prescribed diets."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a community medical office",
+        "start": "2014-10",
+        "end": "2015-05",
+        "bullets": [
+          "Managed the receptionist area, including greeting visitors and responding to telephone and in-person requests for information.",
+          "Kept facility stocked with necessary supplies, equipment, and instruments.",
+          "Prepared patient rooms prior to their arrival and collected urine and fecal samples.",
+          "Designed electronic file systems and maintained electronic and paper files."
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "employer": "a national retail chain",
+        "start": "2014-01",
+        "end": "2014-09",
+        "bullets": [
+          "Managed the receptionist area, greeting visitors and responding to telephone and in-person requests for information.",
+          "Dispersed incoming mail to correct recipients throughout the office.",
+          "Made copies, sent faxes, and handled all incoming and outgoing correspondence.",
+          "Managed daily office operations and maintenance of equipment."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Science in Business Management",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "Diploma in Medical Assistant",
+        "institution": "a technical school",
+        "year": 2005
+      }
+    ],
+    "skills": [
+      "patient care",
+      "phlebotomy",
+      "injections",
+      "urinalysis",
+      "ECG",
+      "PFT",
+      "BLS",
+      "medical records",
+      "data entry",
+      "Microsoft Office",
+      "multi-line phone systems",
+      "customer service",
+      "scheduling",
+      "infection control"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "medical_assistant_01",
+    "occupation_id": "medical_assistant",
+    "source": "kaggle",
+    "summary": "Detail-oriented healthcare administrator with experience supervising clinical and administrative staff and improving office workflows, billing procedures, and compliance. Skilled in staff development, operations management, and patient-facing medical office support.",
+    "experience": [
+      {
+        "title": "Healthcare Administrator",
+        "employer": "a multi-specialty medical practice",
+        "start": "2020-10",
+        "end": "Present",
+        "bullets": [
+          "Supervised a clinical and administrative staff including medical assistants, clerks, and physicians, overseeing scheduling, training, and daily operations.",
+          "Implemented compliance controls and staff accountability measures, including weekly meetings and documented task timelines.",
+          "Managed vendor relationships, payroll reporting, bookkeeping, and medical billing coordination to streamline office finances."
+        ]
+      },
+      {
+        "title": "Operations Coordinator",
+        "employer": "a regional healthcare services organization",
+        "start": "2017-09",
+        "end": "2020-09",
+        "bullets": [
+          "Coordinated operational and staff reorganization projects for a growing medical office, improving front-desk and clinical workflow.",
+          "Reduced accounts receivable through reconstructed billing procedures, collections enforcement, and small-debt write-offs.",
+          "Maintained credentialing files, continuing education records, and hospital affiliation documentation for clinical staff."
+        ]
+      },
+      {
+        "title": "Project Analyst",
+        "employer": "a national financial services company",
+        "start": "2015-05",
+        "end": "2017-08",
+        "bullets": [
+          "Supported compliance-related projects by performing gap analysis, root cause analysis, and process documentation.",
+          "Facilitated meetings with cross-functional teams, prepared reports, and tracked project timelines and budgets.",
+          "Provided research and analytical support for project design, development, and implementation."
+        ]
+      },
+      {
+        "title": "Medical Office Assistant",
+        "employer": "a community health clinic",
+        "start": "2014-06",
+        "end": "2015-04",
+        "bullets": [
+          "Supported front-office operations including patient scheduling, records maintenance, and insurance documentation.",
+          "Assisted with billing, payment posting, and coordination between clinical staff and administrative personnel.",
+          "Maintained office supplies, equipment records, and confidential patient files in compliance with privacy standards."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Science in Health Administration",
+        "institution": "a state college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Medical office administration",
+      "Patient scheduling",
+      "Electronic health records",
+      "Medical billing and coding",
+      "Accounts receivable management",
+      "Staff supervision and training",
+      "Compliance and OSHA standards",
+      "Credentialing and CME tracking",
+      "Payroll and bookkeeping",
+      "MS Office and MS Project",
+      "QuickBooks",
+      "Data analysis and reporting",
+      "Vendor coordination",
+      "Written and verbal communication"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "medical_assistant_02",
+    "occupation_id": "medical_assistant",
+    "source": "synthetic",
+    "summary": "Certified Medical Assistant with 10 years of continuous clinical experience in outpatient and specialty settings, supporting physicians with patient intake, specimen collection, and treatment preparation. Known for accurate vitals documentation, efficient room turnover, and clear patient instruction that keeps visits running on schedule.",
+    "experience": [
+      {
+        "title": "Lead Medical Assistant",
+        "employer": "a growing mid-market multi-specialty clinic",
+        "start": "2022-08",
+        "end": "Present",
+        "bullets": [
+          "Interview up to 30 patients per day to obtain medical information and measure vital signs, weight, and height, entering all data into the EHR before the physician enters the room.",
+          "Prepare and maintain 12 exam and treatment rooms, keeping rooms neat and clean and reducing average room turnover time to under 4 minutes.",
+          "Collect blood, tissue, and other laboratory specimens from roughly 25 patients weekly, log specimens accurately, and prepare them for outside testing with a 99% labeling accuracy rate.",
+          "Explain treatment procedures, medications, diets, and physician instructions to patients, and document patient understanding in the medical record.",
+          "Clean and sterilize instruments, dispose of contaminated supplies per OSHA standards, and maintain autoclave logs for monthly compliance audits.",
+          "Help physicians examine and treat patients by handing instruments and materials and performing tasks such as giving injections and removing sutures.",
+          "Show patients to examination rooms, prepare them for the physician, and coordinate daily schedules for three providers and two float assistants."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a mid-market primary care group",
+        "start": "2019-04",
+        "end": "2022-07",
+        "bullets": [
+          "Recorded patients' medical history, vital statistics, and test results in medical records for a panel of about 2,000 active patients.",
+          "Performed venipuncture and specimen collection for 15 to 20 patients daily, logging specimens and preparing them for the reference laboratory.",
+          "Sterilized and maintained instruments and exam rooms, supporting infection-control goals and passing two consecutive state inspections without deficiencies.",
+          "Administered injections and assisted physicians with minor in-office procedures such as suture removal and dressing changes.",
+          "Reviewed medication and diet instructions with patients and answered follow-up questions to support adherence between visits."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a growing mid-market specialty practice",
+        "start": "2016-06",
+        "end": "2019-03",
+        "bullets": [
+          "Greeted and escorted patients to examination rooms and prepared them for physician exams, averaging 28 patients per shift.",
+          "Measured vital signs, weight, and height and documented findings, flagging abnormal readings to the clinical team for immediate review.",
+          "Collected blood and tissue specimens, logged them in the specimen tracking system, and prepared them for testing, maintaining a zero-loss record.",
+          "Prepared treatment rooms, cleaned and sterilized instruments, and disposed of contaminated supplies in line with practice policy.",
+          "Assisted physicians during exams and treatments by handing instruments, giving injections, and removing sutures as directed."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a community health clinic",
+        "start": "2014-09",
+        "end": "2016-05",
+        "bullets": [
+          "Interviewed patients to obtain medical information and recorded medical history, vital statistics, and test results in patient charts.",
+          "Showed patients to examination rooms, prepared them for the physician, and kept exam rooms neat and clean between visits.",
+          "Collected blood and other laboratory specimens from approximately 15 patients daily, logged specimens, and prepared them for testing.",
+          "Explained treatment procedures and physician instructions to patients and documented the education provided.",
+          "Sterilized instruments and disposed of contaminated supplies while following safety and infection-control procedures."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Medical Assisting",
+        "institution": "a regional community college",
+        "year": 2014
+      },
+      {
+        "degree": "Certified Medical Assistant (CMA) credential",
+        "institution": "a national medical assistant certification body",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Vital signs measurement",
+      "Venipuncture and specimen collection",
+      "Electronic health records",
+      "Instrument sterilization and infection control",
+      "Patient education",
+      "Appointment and room preparation",
+      "Clinical documentation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "medical_assistant_03",
+    "occupation_id": "medical_assistant",
+    "source": "synthetic",
+    "summary": "Certified Medical Assistant with over 10 years of continuous experience supporting busy clinical practices, from a community health center to an industry-leading organization. Skilled in patient intake, vital signs, specimen collection, and assisting physicians with examinations and minor procedures.",
+    "experience": [
+      {
+        "title": "Medical Assistant",
+        "employer": "an industry-leading organization",
+        "start": "2021-07",
+        "end": "Present",
+        "bullets": [
+          "Interview up to 30 patients daily to obtain medical information and measure vital signs, weight, and height, entering data accurately into the electronic medical record.",
+          "Assist physicians with examinations and treatments, handing instruments, administering injections, and removing sutures as directed.",
+          "Collect blood, tissue, and other laboratory specimens, log them in the laboratory system, and prepare them for testing.",
+          "Explain treatment procedures, medications, diets, and physician instructions to patients, confirming understanding before discharge.",
+          "Prepare and maintain examination rooms, clean and sterilize instruments, and dispose of contaminated supplies according to safety protocols."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a regional multispecialty clinic",
+        "start": "2018-04",
+        "end": "2021-06",
+        "bullets": [
+          "Recorded patients' medical history, vital statistics, and test results in medical records, maintaining a 98% documentation accuracy rate during chart audits.",
+          "Showed patients to examination rooms and prepared them for the physician, reducing average room turnover time by 15%.",
+          "Performed venipuncture and specimen collection for an average of 25 patients per shift, ensuring proper labeling and chain-of-custody documentation.",
+          "Sterilized instruments and restocked treatment rooms daily, supporting compliance with infection-control standards."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a community health center",
+        "start": "2015-06",
+        "end": "2018-03",
+        "bullets": [
+          "Measured and recorded vital signs, weight, and height for pediatric and adult patients during high-volume intake sessions.",
+          "Assisted physicians during minor procedures by handing instruments and materials and preparing sterile fields.",
+          "Collected laboratory specimens and packaged them for outside testing, maintaining accurate specimen logs.",
+          "Cleaned and disinfected examination rooms and equipment between patients to keep rooms neat and ready for use."
+        ]
+      },
+      {
+        "title": "Clinical Support Assistant",
+        "employer": "a local outpatient practice",
+        "start": "2014-05",
+        "end": "2015-05",
+        "bullets": [
+          "Greeted patients, verified intake information, and escorted them to examination rooms for provider visits.",
+          "Recorded basic vital statistics and updated patient charts under the supervision of clinical staff.",
+          "Maintained inventory of examination-room supplies and prepared rooms for daily appointments."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Certificate in Medical Assisting",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Vital Signs Measurement",
+      "Venipuncture and Specimen Collection",
+      "Electronic Health Records",
+      "Instrument Sterilization",
+      "Infection Control",
+      "Patient Intake and Interviewing",
+      "Treatment Room Preparation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "medical_assistant_04",
+    "occupation_id": "medical_assistant",
+    "source": "synthetic",
+    "summary": "Detail-oriented Medical Assistant with 10 years of continuous experience supporting physicians in high-volume clinical settings. Skilled in patient intake, vital sign measurement, specimen collection, and treatment room preparation, with a strong record of accurate documentation and compassionate patient communication.",
+    "experience": [
+      {
+        "title": "Medical Assistant",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Interview up to 30 patients per shift to obtain medical information and measure vital signs, weight, and height, routing intake data to physicians before examinations.",
+          "Explain treatment procedures, medications, diets, and physician instructions to patients, confirming comprehension and answering questions to support adherence.",
+          "Collect blood, tissue, and other laboratory specimens, log them accurately, and prepare them for testing, maintaining a 99% labeling accuracy rate.",
+          "Clean and sterilize instruments and dispose of contaminated supplies in compliance with infection-control protocols.",
+          "Prepare treatment rooms for patient examinations, keeping rooms neat, clean, and stocked so physicians can begin appointments without delay."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a regional multi-specialty clinic",
+        "start": "2018-08",
+        "end": "2021-05",
+        "bullets": [
+          "Recorded patients' medical history, vital statistics, and test results in electronic medical records, contributing to a 15% reduction in documentation errors.",
+          "Showed patients to examination rooms and prepared them for the physician, improving average room turnover time by 10%.",
+          "Helped physicians examine and treat patients by handing them instruments and materials and by performing tasks such as giving injections and removing sutures.",
+          "Sterilized instruments and disposed of contaminated supplies according to clinic policy, passing all internal infection-control audits."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a community health center",
+        "start": "2016-03",
+        "end": "2018-07",
+        "bullets": [
+          "Measured and recorded vital signs, weight, and height for an average of 25 patients per day during peak clinic hours.",
+          "Collected blood and tissue specimens, logged them, and prepared them for laboratory testing while maintaining specimen integrity.",
+          "Prepared treatment rooms for examinations and kept them neat and clean between appointments.",
+          "Explained medications, diets, and physician instructions to patients, supporting comprehension of care plans."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a private primary care practice",
+        "start": "2015-04",
+        "end": "2016-02",
+        "bullets": [
+          "Interviewed patients to obtain medical information and documented vital statistics and test results in medical records.",
+          "Cleaned and sterilized instruments and disposed of contaminated supplies to uphold safety standards.",
+          "Assisted physicians during examinations and treatments, handing them instruments and materials as requested.",
+          "Maintained organized, fully stocked treatment rooms and prepared them for patient examinations."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Applied Science in Medical Assisting",
+        "institution": "a community college",
+        "year": 2015
+      },
+      {
+        "degree": "Certified Medical Assistant (CMA) credential",
+        "institution": "a national certification body",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Patient Intake and Vital Signs",
+      "Specimen Collection and Logging",
+      "Electronic Medical Records",
+      "Infection Control and Instrument Sterilization"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  },
+  {
+    "resume_id": "medical_assistant_05",
+    "occupation_id": "medical_assistant",
+    "source": "synthetic",
+    "summary": "Certified Medical Assistant with 10 years of continuous experience in outpatient and specialty clinics, supporting physicians with patient intake, specimen collection, and treatment room readiness. Known for accurate vitals documentation and clear patient instruction in high-volume practices.",
+    "experience": [
+      {
+        "title": "Medical Assistant",
+        "employer": "a mid-size regional firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Interview up to 30 patients daily to obtain medical information and measure vital signs, weight, and height, entering data into the electronic medical record.",
+          "Assist physicians with examinations and treatments, handing instruments, administering injections, and removing sutures as directed.",
+          "Collect blood, tissue, and other laboratory specimens, log them accurately, and prepare them for outside testing, maintaining a 99% labeling accuracy rate.",
+          "Explain treatment procedures, medications, and physician instructions to patients, improving follow-up compliance.",
+          "Clean and sterilize instruments and dispose of contaminated supplies according to clinic safety protocols."
+        ]
+      },
+      {
+        "title": "Medical Assistant",
+        "employer": "a multi-specialty clinic",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Prepared treatment rooms for patient examinations and kept rooms neat, clean, and stocked between visits.",
+          "Showed patients to examination rooms and prepared them for the physician, reducing average room turnover time by 15%.",
+          "Recorded patients' medical history, vital statistics, and test results in medical records with consistent accuracy.",
+          "Supported two physicians during minor in-office procedures, maintaining sterile fields and passing instruments on request."
+        ]
+      },
+      {
+        "title": "Clinical Support Assistant",
+        "employer": "a community health center",
+        "start": "2015-06",
+        "end": "2018-02",
+        "bullets": [
+          "Measured and recorded vital signs, weight, and height for pediatric and adult patients during intake.",
+          "Collected blood and tissue specimens and logged them for laboratory processing.",
+          "Cleaned, sterilized, and organized instruments and clinical supplies at the end of each shift.",
+          "Reviewed physician instructions with patients on diets, medications, and treatment steps."
+        ]
+      },
+      {
+        "title": "Medical Office Assistant",
+        "employer": "a regional physician practice",
+        "start": "2014-06",
+        "end": "2015-05",
+        "bullets": [
+          "Greeted patients, verified basic medical information, and escorted them to examination rooms.",
+          "Recorded test results and vital statistics in paper and electronic charts for physician review.",
+          "Maintained clean examination rooms and restocked supplies ahead of each clinic session."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Certificate in Medical Assisting",
+        "institution": "a community college",
+        "year": 2014
+      },
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2012
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Speaking",
+      "Reading Comprehension",
+      "Critical Thinking",
+      "Monitoring",
+      "Writing",
+      "Active Learning",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Vital Signs Measurement",
+      "Specimen Collection",
+      "Instrument Sterilization",
+      "Electronic Medical Records"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "extra"
+  }
+]

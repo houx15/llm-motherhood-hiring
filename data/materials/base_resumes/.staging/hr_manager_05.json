@@ -1,0 +1,88 @@
+{
+  "resume_id": "hr_manager_05",
+  "occupation_id": "hr_manager",
+  "source": "synthetic",
+  "summary": "HR Manager with 10+ years of progressive experience in employee relations, total rewards, and labor compliance across growing mid-market organizations. Skilled at aligning people strategy with business goals while keeping management and staff connected through clear, legally sound policy.",
+  "experience": [
+    {
+      "title": "Senior HR Manager",
+      "employer": "a growing mid-market healthcare services company",
+      "start": "2021-07",
+      "end": "Present",
+      "bullets": [
+        "Lead a team of 4 HR generalists supporting 600+ employees across three sites, directing employment, compensation, labor relations, and employee relations activities.",
+        "Advise managers on equal employment opportunity, harassment prevention, and disciplinary procedures, reducing escalated grievances by 28% year over year.",
+        "Redesign compensation and benefits programs after market benchmarking, keeping total rewards competitive while maintaining legal compliance.",
+        "Negotiate and interpret two collective bargaining agreements covering 180 hourly staff and represent the organization at personnel-related hearings.",
+        "Partner with leadership on workforce planning to address chronic understaffing in clinical support roles, cutting time-to-fill by 22%."
+      ]
+    },
+    {
+      "title": "HR Manager",
+      "employer": "a growing mid-market logistics company",
+      "start": "2018-02",
+      "end": "2021-06",
+      "bullets": [
+        "Managed day-to-day HR operations for 350 employees, handling questions, contract interpretation, and work-related problem resolution as the link between management and staff.",
+        "Planned and conducted new employee orientation and onboarding, improving 90-day retention by 15%.",
+        "Administered difficult staffing duties including dispute mediation, disciplinary actions, and terminations in coordination with legal counsel.",
+        "Analyzed and modified benefits policies to establish competitive programs while ensuring compliance with federal and state requirements.",
+        "Supervised two HR coordinators and coordinated employment, compensation, and employee relations workflows."
+      ]
+    },
+    {
+      "title": "HR Generalist",
+      "employer": "a growing mid-market manufacturing firm",
+      "start": "2015-09",
+      "end": "2018-01",
+      "bullets": [
+        "Served as first point of contact for employee questions on policies, contracts, and workplace concerns, resolving 85% at the manager level.",
+        "Supported labor relations activities including grievance documentation and preparation for personnel-related investigations.",
+        "Advised supervisors on policy matters such as equal employment opportunity and anti-harassment practices, recommending process improvements.",
+        "Assisted with compensation analysis and open enrollment, contributing to a 12% increase in benefits participation."
+      ]
+    },
+    {
+      "title": "HR Assistant",
+      "employer": "a growing mid-market retail group",
+      "start": "2014-06",
+      "end": "2015-08",
+      "bullets": [
+        "Maintained personnel records and supported recruiting, orientation, and benefits administration for a 200-person workforce.",
+        "Prepared documentation for disciplinary meetings and personnel hearings, ensuring accuracy and confidentiality.",
+        "Responded to employee inquiries on compensation, leave, and policy, escalating complex matters to senior HR staff."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BS in Business Administration",
+      "institution": "a state university",
+      "year": 2014
+    },
+    {
+      "degree": "Certificate in Human Resource Management",
+      "institution": "a community college",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Reading Comprehension",
+    "Speaking",
+    "Writing",
+    "Critical Thinking",
+    "Active Learning",
+    "Monitoring",
+    "Learning Strategies",
+    "Employee Relations",
+    "Compensation and Benefits Administration",
+    "Labor Relations and Contract Negotiation",
+    "Policy Development and Compliance",
+    "Conflict Resolution and Mediation",
+    "HR Information Systems"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

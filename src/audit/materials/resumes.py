@@ -59,12 +59,17 @@ INDUSTRY_SEEDS = [
     "a well-established local employer", "an industry-leading organization",
 ]
 
-CUE_WORDS = [
-    "mother", "father", " mom ", " mum ", " dad ", "wife", "husband", "spouse", "married",
-    "marital", "children", "child", "kids", "baby", "babies", "pregnan", "maternity",
-    "paternity", "parental", "parent", "pta", "family", "son", "daughter", "single",
-    "divorced", "widow", " he ", " she ", " his ", " her ", "himself", "herself",
-    "mr.", "ms.", "mrs.", "miss",
+# Family/marital cues about the APPLICANT. Word-boundary phrases; occupation-inherent
+# uses ("early childhood", "parent communication" for teachers) are allowed.
+CUE_PATTERNS = [
+    r"\bmother\b", r"\bfather\b", r"\bwife\b", r"\bhusband\b", r"\bspouse\b",
+    r"\bmarried\b", r"\bmarital\b", r"\bpregnan\w*\b", r"\bmaternity\b",
+    r"\bparental\b", r"\bpta\b", r"\bson\b", r"\bdaughter\b", r"\bdivorced\b",
+    r"\bwidow\w*\b", r"\bsingle parent\b", r"\bsingle mother\b", r"\bsingle father\b",
+    r"\bmother of\b", r"\bfather of\b", r"\bparent of\b",
+    r"\b(?:two|three|four|2|3|4|my|his|her)\s+(?:children|kids|child)\b",
+    r"\bhe\b", r"\bshe\b", r"\bhis\b", r"\bher\b", r"\bhimself\b", r"\bherself\b",
+    r"\bmr\.", r"\bms\.", r"\bmrs\.",
 ]
 
 PII_PATTERNS = {
@@ -88,10 +93,9 @@ def validate_resume(r: dict) -> list[str]:
     """Return list of violations (empty = valid)."""
     v: list[str] = []
     text = json.dumps(r, ensure_ascii=False).lower()
-    for w in CUE_WORDS:
-        word = w.strip()
-        if re.search(rf"\b{re.escape(word)}\b", text):
-            v.append(f"cue word: {word}")
+    for pat in CUE_PATTERNS:
+        if re.search(pat, text):
+            v.append(f"cue pattern: {pat}")
     for name, pat in PII_PATTERNS.items():
         if pat.search(json.dumps(r, ensure_ascii=False)):
             v.append(f"PII pattern: {name}")
@@ -100,13 +104,19 @@ def validate_resume(r: dict) -> list[str]:
         v.append(f"experience entries {len(exp)} not in 2-6")
         return v
     # total experience months (no gaps: contiguous), ends Present
+    if not isinstance(exp, list) or not exp:
+        v.append("experience must be a non-empty list (wrong schema?)")
+        return v
+    if any(not isinstance(e, dict) or not e.get("start") for e in exp):
+        v.append("experience entry missing 'start' (wrong schema?)")
+        return v
     starts = [month_index(e["start"]) for e in exp]
-    ends = [month_index(e.get("end", "Present")) for e in exp]
+    ends = [month_index(e.get("end") or "Present") for e in exp]
     order = sorted(range(len(exp)), key=lambda i: starts[i])
     for a, b in zip(order, order[1:]):
-        if starts[b] > ends[a]:
+        if starts[b] > ends[a] + 1:
             v.append(f"gap between entries {a}->{b}")
-        if starts[b] < ends[a]:
+        if starts[b] <= ends[a]:
             v.append(f"overlap between entries {a}->{b}")
     if str(exp[order[-1]].get("end", "Present")).lower() != "present":
         v.append("last job does not end at Present")
@@ -156,20 +166,39 @@ def select_kaggle_sources(occ: str, k: int = 2) -> list[tuple[int, str]]:
     return out
 
 
+STRICT_DATE_RULES = """
+DATE RULES (critical):
+- Jobs are listed reverse-chronologically (most recent first).
+- The most recent job ends "Present".
+- Jobs must be CONTIGUOUS: each job starts the month immediately after the previous job ends (e.g., one ends 2021-05, the next starts 2021-06). NO gaps, NO overlaps.
+- The oldest job starts between 2014 and 2017 so that TOTAL experience is 8-12 years (96-144 months).
+- Discard any earlier jobs to satisfy this window.
+"""
+
+EXAMPLE_OUTPUT = """{"resume_id": "", "occupation_id": "", "source": "", "summary": "One or two sentences.", "experience": [{"title": "Job title", "employer": "a generic company descriptor", "start": "2016-03", "end": "2021-05", "bullets": ["achievement one", "achievement two"]}], "education": [{"degree": "BS in Field", "institution": "a state university", "year": 2015}], "skills": ["skill one", "skill two"], "volunteer": [], "notes": ""}"""
+
+SCHEMA_LINE = (
+    "OUTPUT ONLY one JSON object with EXACTLY these keys (this structure, not the "
+    "'JSON Resume' standard): resume_id, occupation_id, source, summary, experience "
+    "(a list of objects with keys title, employer, start, end, bullets), education "
+    "(a list of objects with keys degree, institution, year), skills (list of strings), "
+    "volunteer (empty list), notes. Example skeleton:\n" + EXAMPLE_OUTPUT
+)
+
 STRUCTURE_TMPL = """You are preparing anonymized research materials for a hiring study.
 
-Convert the RAW RESUME TEXT below into a structured, anonymized, normalized JSON resume for the occupation "{title}".
+Convert the RAW RESUME TEXT below into a structured, anonymized, normalized JSON object describing the candidate's resume, for the occupation "{title}".
+{dates}
 
 STRICT RULES:
 1. Remove ALL personal information: names, emails, phones, addresses, URLs, dates of birth, photos, citizenship. Employers become generic descriptors (e.g., "a regional logistics company", "a national retail chain") — no real company names.
-2. Remove ALL mentions of gender, family, marital or parental status; use gender-neutral phrasing only.
+2. Remove ALL mentions of gender, family, marital or parental status; NEVER use words like "family", "parent", "mother", "father", "married", "children"; use gender-neutral phrasing only.
 3. Normalize work history: exactly 3-4 jobs, continuous full-time employment covering 8-12 years total with NO gaps or overlaps, most recent job ending "Present" (end "2026-09" is also acceptable ONLY if a Present job exists — always make the LAST job end "Present").
 4. Keep only experience/skills plausibly relevant to {title}; do not inflate seniority beyond ~10 years.
 5. Dates strictly "YYYY-MM"; education 1-2 entries, institution generic ("a state university").
 6. summary: 1-2 sentences, gender-neutral. skills: 10-14 items. volunteer: [] (empty). notes: "".
 
-OUTPUT ONLY a JSON object with keys:
-resume_id (leave ""), occupation_id ("{occ}"), source ("kaggle"), summary, experience (list of title, employer, start, end, bullets[2-3 each]), education (list of degree, institution, year), skills, volunteer, notes.
+{schema}
 
 RAW RESUME TEXT:
 {raw}"""
@@ -177,6 +206,7 @@ RAW RESUME TEXT:
 SYNTH_TMPL = """You are preparing synthetic research materials for a hiring study.
 
 Create ONE realistic, anonymized resume for the occupation "{title}" ({soc}).
+{dates}
 
 GROUNDING — representative work activities for this occupation:
 {tasks}
@@ -186,14 +216,13 @@ COMMON SKILLS: {skills}
 PROFILE VARIANT (use for diversity): {variant}
 
 STRICT RULES:
-1. NO personal information, NO real company names (use generic descriptors like "{industry}"), NO gender or family or marital cues; gender-neutral phrasing only.
+1. NO personal information, NO real company names (use generic descriptors like "{industry}"), NO gender or family or marital cues (never use words like "family", "parent", "mother", "father", "married", "children"); gender-neutral phrasing only.
 2. Exactly 3-4 jobs covering 8-12 years of continuous full-time experience, no gaps, no overlaps; LAST job ends "Present". Dates strictly "YYYY-MM".
 3. Bullets grounded in the work activities above; quantified achievements fine. Do not exceed ~10 years total experience.
 4. Education 1-2 entries, generic institutions; degree year consistent with experience start.
 5. summary: 1-2 sentences. skills: 10-14 items. volunteer: [] (empty). notes: "".
 
-OUTPUT ONLY a JSON object with keys:
-resume_id (leave ""), occupation_id ("{occ}"), source ("synthetic"), summary, experience (list of title, employer, start, end, bullets[2-3]), education (list of degree, institution, year), skills, volunteer, notes."""
+{schema}"""
 
 
 def _onet_grounding(occ_row) -> tuple[str, str]:
@@ -217,11 +246,21 @@ def _onet_grounding(occ_row) -> tuple[str, str]:
     return " | ".join(tl), ", ".join(sl)
 
 
+def _staging_dir() -> Path:
+    d = MATERIALS_DIR / "base_resumes" / ".staging"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 def build_jobs(force: bool = False) -> list[dict]:
-    """Assemble generation jobs for all occupations (4 base + 2 extras each)."""
+    """Assemble generation jobs for all occupations (4 base + 2 extras each).
+
+    Valid drafts are cached in .staging/ so reruns only regenerate failures.
+    """
     occs = load_occupations_built().occupations
     by_id = {o.id: o for o in occs}
     occ_df = {o.id: o.model_dump() for o in occs}
+    staging = _staging_dir()
     jobs: list[dict] = []
     rng = random.Random(20261014)
     for occ in occs:
@@ -233,17 +272,24 @@ def build_jobs(force: bool = False) -> list[dict]:
         jobs_for_occ: list[dict] = []
         for idx in range(6):  # 0-3 base, 4-5 extras
             rid = f"{occ.id}_{idx:02d}"
+            staged = staging / f"{rid}.json"
+            if staged.exists() and not force:
+                continue  # already have a valid draft
             if idx < len(kaggle):
                 kaggle_id, raw = kaggle[idx]
-                prompt = STRUCTURE_TMPL.format(title=occ.title, occ=occ.id, raw=raw[:6000])
+                prompt = STRUCTURE_TMPL.format(
+                    title=occ.title, occ=occ.id, raw=raw[:6000],
+                    dates=STRICT_DATE_RULES, schema=SCHEMA_LINE,
+                )
                 job = {"kind": "structure", "resume_id": rid, "occ": occ.id,
                        "kaggle_id": kaggle_id, "prompt": prompt}
             else:
                 variant = INDUSTRY_SEEDS[(idx + rng.randrange(3)) % len(INDUSTRY_SEEDS)]
                 prompt = SYNTH_TMPL.format(
-                    title=occ.title, soc=occ.soc, tasks=tasks or "typical occupation duties",
+                    title=occ.title, soc=occ.soc,
+                    tasks=tasks or "typical occupation duties",
                     skills=skills or "core occupational skills", variant=variant,
-                    occ=occ.id, industry=variant,
+                    occ=occ.id, industry=variant, dates=STRICT_DATE_RULES, schema=SCHEMA_LINE,
                 )
                 job = {"kind": "synth", "resume_id": rid, "occ": occ.id, "prompt": prompt}
             job["role"] = "base" if idx < 4 else "extra"
@@ -282,8 +328,14 @@ async def generate_materials(
     print(f"[budget] {msg}")
     if not ok:
         raise SystemExit(f"BUDGET GUARD REFUSED: {msg}")
-
+    staging_dir = _staging_dir()
     results: dict[str, dict] = {}
+    # seed results from staging cache so freezing works across runs
+    for f in staging_dir.glob("*.json"):
+        try:
+            results[f.stem] = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            continue
     problems: list[str] = []
     async with OpenRouterClient(os.environ["OPENROUTER_API_KEY"]) as client:
         live = None
@@ -308,9 +360,10 @@ async def generate_materials(
                     "model_key": model_key, "slug": mcfg.slug, "occupation_id": job["occ"],
                     "resume_ids": job["resume_id"], "request_ts": req_ts,
                 }
+                prompt = job["prompt"]
                 for attempt in range(1 + max_retries):
                     try:
-                        resp = await client.chat(mcfg, job["prompt"])
+                        resp = await client.chat(mcfg, prompt, max_tokens=1600)
                     except (RefusalError, TransportFailure) as e:
                         _append(log_path, {**base, "finish_reason": "error", "cost_usd": 0.0,
                                            "parse_ok": False, "refusal_flag": isinstance(e, RefusalError),
@@ -321,6 +374,12 @@ async def generate_materials(
                     if cost is None:
                         cost = ((resp["input_tokens"] or 0) * pin + (resp["output_tokens"] or 0) * pout) / 1e6
                     total_cost += float(cost)
+                    if resp["finish_reason"] == "length":
+                        _append(log_path, {**base, "finish_reason": "length", "cost_usd": cost,
+                                           "parse_ok": False, "refusal_flag": False,
+                                           "raw_response": resp["content"][:4000], "error": "truncated by max_tokens"})
+                        problems.append(f"{job['resume_id']}: truncated")
+                        return
                     try:
                         obj = extract_json(resp["content"])
                     except Exception:
@@ -342,8 +401,26 @@ async def generate_materials(
                     if violations:
                         problems.append(f"{job['resume_id']}: {violations}")
                         if attempt < max_retries:
+                            # violation-feedback repair: make the model fix its own draft
+                            prompt = (
+                                "This JSON resume draft (for the occupation "
+                                f"\"{job['occ']}\") had these validation problems:\n- "
+                                + "\n- ".join(violations)
+                                + "\n\nThe draft:\n"
+                                + json.dumps(obj, ensure_ascii=False)
+                                + "\n\nReturn the corrected FULL JSON object only, with EXACTLY the keys from the "
+                                "original schema (summary, experience[title, employer, start, end, bullets], education, "
+                                "skills, volunteer, notes). Keep the same occupation content. "
+                                "Remember: jobs contiguous (next starts the month after previous ends), "
+                                "most recent job ends \"Present\", oldest job starts 2014-2017, total 8-12 years, "
+                                "no personal/family/gender wording, skills 10-14, volunteer []."
+                            )
                             continue
+                        return  # invalid after all attempts: do NOT freeze an invalid draft
                     results[job["resume_id"]] = obj
+                    (staging_dir / f"{job['resume_id']}.json").write_text(
+                        json.dumps(obj, indent=2, ensure_ascii=False)
+                    )
                     return
                 return
 

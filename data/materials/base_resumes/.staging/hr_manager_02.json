@@ -1,0 +1,87 @@
+{
+  "resume_id": "hr_manager_02",
+  "occupation_id": "hr_manager",
+  "source": "synthetic",
+  "summary": "HR Manager with over a decade of progressive experience aligning workforce strategy with business goals at an industry-leading organization. Skilled in employee relations, labor negotiations, and compensation program design, with a record of reducing turnover and resolving complex staffing disputes.",
+  "experience": [
+    {
+      "title": "HR Manager",
+      "employer": "an industry-leading organization",
+      "start": "2022-07",
+      "end": "Present",
+      "bullets": [
+        "Serve as the primary link between management and 600+ employees, interpreting and administering contracts and resolving work-related problems with a 92% first-contact resolution rate.",
+        "Direct and supervise a team of four HR generalists covering employment, compensation, labor relations, and employee relations activities.",
+        "Negotiate bargaining agreements with two union chapters, reaching settlements without work stoppage in three consecutive cycles.",
+        "Advise managers on equal employment opportunity and harassment policy matters, delivering quarterly training that cut formal complaints by 30%.",
+        "Analyze and modify compensation and benefits policies against market benchmarks, keeping total rewards competitive and legally compliant."
+      ]
+    },
+    {
+      "title": "Senior HR Generalist",
+      "employer": "a national manufacturing company",
+      "start": "2019-04",
+      "end": "2022-06",
+      "bullets": [
+        "Performed difficult staffing duties, including refereeing disputes, administering disciplinary procedures, and managing reductions in force across three sites.",
+        "Represented the organization at personnel-related hearings and investigations, sustaining a favorable outcome in 11 of 13 cases.",
+        "Planned and conducted new employee orientation for 200+ hires annually, improving 90-day retention by 18%.",
+        "Partnered with finance to redesign the bonus structure, aligning payouts with measurable performance targets."
+      ]
+    },
+    {
+      "title": "HR Generalist",
+      "employer": "a regional healthcare services provider",
+      "start": "2016-05",
+      "end": "2019-03",
+      "bullets": [
+        "Administered employee relations programs and interpreted labor contracts for a workforce of 350 clinical and administrative staff.",
+        "Coordinated recruitment and onboarding, trimming average time-to-fill from 52 to 34 days.",
+        "Supported compensation surveys and benefits enrollment, maintaining full compliance with legal requirements.",
+        "Monitored employee satisfaction data and recommended policy changes adopted by leadership."
+      ]
+    },
+    {
+      "title": "HR Assistant",
+      "employer": "a mid-sized logistics firm",
+      "start": "2014-08",
+      "end": "2016-04",
+      "bullets": [
+        "Supported daily HR operations, maintaining personnel records and answering employee questions on benefits and policies.",
+        "Assisted with new employee orientation sessions and background check processing for 400+ annual hires.",
+        "Compiled monthly staffing and turnover reports used by management for workforce planning."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "BS in Human Resource Management",
+      "institution": "a state university",
+      "year": 2014
+    },
+    {
+      "degree": "Certificate in Labor Relations",
+      "institution": "a community college",
+      "year": 2018
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Reading Comprehension",
+    "Speaking",
+    "Writing",
+    "Critical Thinking",
+    "Active Learning",
+    "Monitoring",
+    "Learning Strategies",
+    "Employee Relations",
+    "Labor Negotiation",
+    "Compensation and Benefits Design",
+    "Conflict Resolution",
+    "HR Compliance",
+    "Workforce Planning"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

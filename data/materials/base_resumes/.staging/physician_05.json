@@ -1,0 +1,76 @@
+{
+  "resume_id": "physician_05",
+  "occupation_id": "physician",
+  "source": "synthetic",
+  "summary": "Board-certified primary care physician with 10 years of continuous full-time clinical experience across outpatient and urgent care settings at a large national health system. Skilled in comprehensive primary care, chronic disease management, preventive medicine, and multidisciplinary team leadership.",
+  "experience": [
+    {
+      "title": "Primary Care Physician",
+      "employer": "a large national healthcare company",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Provide comprehensive primary care to a panel of approximately 1,800 patients, diagnosing and treating acute and chronic conditions across the lifespan",
+        "Prescribe medications, administer vaccinations, and manage therapies for diabetes, hypertension, asthma, and hyperlipidemia, achieving documented improvement in A1c and blood pressure control for 70% of patients in the chronic care registry",
+        "Order, perform, and interpret diagnostic tests including EKGs, spirometry, and laboratory panels, and explain results and treatment plans clearly during shared decision-making visits",
+        "Direct and coordinate care activities of two nurses, one medical assistant, and rotating residents, standardizing intake workflows and reducing average visit cycle time by 15%",
+        "Counsel patients on diet, activity, hygiene, and disease prevention, and refer to specialists when clinically indicated"
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a regional multispecialty medical group",
+      "start": "2018-09",
+      "end": "2021-05",
+      "bullets": [
+        "Delivered outpatient primary care services with an average of 20 patient encounters per day, collecting and maintaining medical histories, examination findings, and treatment documentation in the electronic health record",
+        "Monitored patient conditions and progress, reevaluating treatment plans at follow-up visits and reducing avoidable emergency department utilization among high-risk patients by 12%",
+        "Performed minor office procedures including joint injections, wound care, and skin lesion excisions",
+        "Collaborated with nursing staff and care coordinators to launch a preventive screening outreach program that increased colorectal cancer screening completion by 22%"
+      ]
+    },
+    {
+      "title": "Primary Care Physician",
+      "employer": "a national integrated health network",
+      "start": "2016-01",
+      "end": "2018-08",
+      "bullets": [
+        "Managed a full-spectrum primary care panel in a community clinic, diagnosing and treating illnesses and injuries and providing same-day access for acute concerns",
+        "Administered vaccinations and preventive care services, including annual wellness visits, and advised patients on lifestyle and disease prevention",
+        "Reviewed records, reports, and examination information to diagnose conditions and ordered appropriate laboratory and imaging studies",
+        "Supervised medical assistants and mentored two students during clinical rotations, coordinating daily team huddles to improve continuity of care"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "MD, Medicine",
+      "institution": "a state university school of medicine",
+      "year": 2013
+    },
+    {
+      "degree": "Residency, Primary Care",
+      "institution": "a university-affiliated medical center",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Speaking",
+    "Active Learning",
+    "Monitoring",
+    "Science",
+    "Learning Strategies",
+    "Mathematics",
+    "Patient Assessment and Diagnosis",
+    "Chronic Disease Management",
+    "Electronic Health Records",
+    "Care Team Coordination"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "extra"
+}

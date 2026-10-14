@@ -1,0 +1,90 @@
+{
+  "resume_id": "preschool_teacher_03",
+  "occupation_id": "preschool_teacher",
+  "source": "synthetic",
+  "summary": "Dedicated preschool teacher with over nine years of continuous classroom experience in early childhood education, specializing in play-based learning and individualized instruction. Proven ability to design engaging activities that support physical, mental, and social development while maintaining a safe, structured environment.",
+  "experience": [
+    {
+      "title": "Lead Preschool Teacher",
+      "employer": "a mid-size regional early learning center",
+      "start": "2022-08",
+      "end": "Present",
+      "bullets": [
+        "Plan and lead daily activities for a class of 18 students, including games, arts and crafts, music, storytelling, and field trips that promote physical, mental, and social growth",
+        "Teach foundational skills such as color, shape, number and letter recognition, personal hygiene, and social skills through hands-on materials and imaginative play",
+        "Establish and enforce behavior rules and classroom procedures, reducing incident reports by 30% over two years",
+        "Meet with guardians quarterly to discuss student progress, developmental needs, and strategies to promote learning at home",
+        "Adapt teaching methods and instructional materials to meet varying needs and interests, including for students with developmental delays"
+      ]
+    },
+    {
+      "title": "Preschool Teacher",
+      "employer": "a community child development program",
+      "start": "2019-06",
+      "end": "2022-07",
+      "bullets": [
+        "Organized and led developmentally appropriate activities for 15 children aged 3-4, focusing on social-emotional learning and early literacy",
+        "Provided a variety of materials and resources for children to explore, manipulate, and use in both learning and imaginative play",
+        "Served meals and snacks in accordance with nutritional guidelines and attended to basic needs including feeding, dressing, and diapering",
+        "Monitored student progress and maintained written records, using active listening and observation to inform instructional adjustments",
+        "Collaborated with co-teachers to design learning strategies that improved kindergarten readiness scores by 25%"
+      ]
+    },
+    {
+      "title": "Assistant Preschool Teacher",
+      "employer": "a non-profit early education agency",
+      "start": "2016-09",
+      "end": "2019-05",
+      "bullets": [
+        "Supported lead teachers in implementing daily lesson plans and classroom routines for up to 20 students",
+        "Led small-group activities in reading comprehension, early mathematics, and science exploration through guided play",
+        "Assisted with behavior management and maintained a safe, orderly classroom environment",
+        "Communicated daily with guardians regarding student activities, meals, and developmental milestones",
+        "Prepared classroom materials and ensured cleanliness and organization of learning stations"
+      ]
+    },
+    {
+      "title": "Teacher Aide",
+      "employer": "a regional youth services organization",
+      "start": "2015-08",
+      "end": "2016-08",
+      "bullets": [
+        "Assisted in supervising children during structured play, meals, and rest periods",
+        "Helped prepare and distribute learning materials for arts, crafts, and storytelling activities",
+        "Supported personal hygiene routines and basic care needs under teacher supervision",
+        "Observed student interactions and reported behavioral or developmental concerns to lead staff"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Applied Science in Early Childhood Education",
+      "institution": "a community college",
+      "year": 2015
+    },
+    {
+      "degree": "Child Development Associate Credential",
+      "institution": "a professional development institute",
+      "year": 2017
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Active Listening",
+    "Learning Strategies",
+    "Reading Comprehension",
+    "Critical Thinking",
+    "Monitoring",
+    "Active Learning",
+    "Writing",
+    "Mathematics",
+    "Science",
+    "Classroom Management",
+    "Lesson Planning",
+    "Child Development",
+    "Parent-Teacher Communication"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}
