@@ -1,0 +1,165 @@
+# 20 occupations on a 3 (gender composition) x 2 (wage) grid (spec §4.1).
+# female_share / median_wage / time_demands are filled by `audit materials build`
+# from data/raw (BLS CPS Table 11, BLS OEWS, O*NET Work Context). null = not yet filled.
+# in_e4 is set to true for the 4 highest and 4 lowest time_demands occupations.
+- id: software_engineer
+  title: Software Engineer
+  soc: "15-1252"
+  cell: {gender: male, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: financial_analyst
+  title: Financial Analyst
+  soc: "13-2051"
+  cell: {gender: male, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: mechanical_engineer
+  title: Mechanical Engineer
+  soc: "17-2141"
+  cell: {gender: male, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: heavy_truck_driver
+  title: Heavy Truck Driver
+  soc: "53-3032"
+  cell: {gender: male, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: construction_laborer
+  title: Construction Laborer
+  soc: "47-2061"
+  cell: {gender: male, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: warehouse_supervisor
+  title: Warehouse Supervisor
+  soc: "53-1047"
+  cell: {gender: male, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: lawyer
+  title: Lawyer
+  soc: "23-1011"
+  cell: {gender: mixed, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: physician
+  title: Physician (Family Medicine)
+  soc: "29-1215"
+  cell: {gender: mixed, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: marketing_manager
+  title: Marketing Manager
+  soc: "11-2021"
+  cell: {gender: mixed, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: retail_store_manager
+  title: Retail Store Manager
+  soc: "41-1011"
+  cell: {gender: mixed, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: restaurant_manager
+  title: Restaurant Manager
+  soc: "11-9051"
+  cell: {gender: mixed, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: customer_service_representative
+  title: Customer Service Representative
+  soc: "43-4051"
+  cell: {gender: mixed, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: registered_nurse
+  title: Registered Nurse
+  soc: "29-1141"
+  cell: {gender: female, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: hr_manager
+  title: HR Manager
+  soc: "11-3121"
+  cell: {gender: female, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: pharmacist
+  title: Pharmacist
+  soc: "29-1251"          # 2022 SOC; this data vintage (O*NET 31.0 / OEWS May 2025) still codes Pharmacists as 29-1051
+  soc_aliases: ["29-1051"]
+  cell: {gender: female, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: accountant
+  title: Accountant
+  soc: "13-2011"
+  cell: {gender: female, wage: high}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: administrative_assistant
+  title: Administrative Assistant
+  soc: "43-6014"
+  cell: {gender: female, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: preschool_teacher
+  title: Preschool Teacher
+  soc: "25-2011"
+  cell: {gender: female, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: medical_assistant
+  title: Medical Assistant
+  soc: "31-9092"
+  cell: {gender: female, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false
+- id: receptionist
+  title: Receptionist
+  soc: "43-4171"
+  cell: {gender: female, wage: low}
+  female_share: null
+  median_wage: null
+  time_demands: null
+  in_e4: false

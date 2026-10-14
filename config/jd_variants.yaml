@@ -1,0 +1,7 @@
+# JD add-on paragraphs for E4 (spec §4.6), appended as final paragraph of base JD.
+variants:
+  base: null
+  greedy: "This is a fast-paced role. Candidates must be available after hours and on weekends as needed, and travel up to 40% of the time."
+  family_friendly: "We offer 16 weeks of paid parental leave for all parents, flexible working hours, and hybrid remote options."
+  greedy_ff: "This is a fast-paced role. Candidates must be available after hours and on weekends as needed, and travel up to 40% of the time. We offer 16 weeks of paid parental leave for all parents, flexible working hours, and hybrid remote options."
+  eeo: "We are an equal opportunity employer and do not discriminate on the basis of sex, pregnancy, or family status."

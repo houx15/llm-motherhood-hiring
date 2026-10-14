@@ -1,0 +1,7 @@
+name: e5_advice
+phase: phase2
+enabled: false          # disabled by default (spec §5 E5 OPTIONAL)
+models: [deepseek_v41_flash]
+occupations: all
+experiments:
+  e5: {samples: 3}

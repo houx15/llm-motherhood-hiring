@@ -1,0 +1,6 @@
+name: e2_full
+phase: phase1
+models: [deepseek_v41_flash]
+occupations: all
+experiments:
+  e2: {samples: 5}

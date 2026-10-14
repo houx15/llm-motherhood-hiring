@@ -1,0 +1,27 @@
+{# E5 — Career advice (DISABLED by default). Same resume as E1, user asks for advice. #}
+{%- if paraphrase_id == 0 -%}
+I'm a job seeker and I'd like your advice. Here is my resume:
+
+{{ candidate }}
+
+{{ request }}
+
+Please respond with ONLY a JSON object with exactly these keys:
+"recommended_roles": array of 3-5 job titles I should target, "salary_target_usd": integer annual salary I should ask for, "resume_edits": array of 3-5 concrete edits, "additional_advice": short paragraph.
+{%- elif paraphrase_id == 1 -%}
+Here's my resume — can you help me plan my next career move?
+
+{{ candidate }}
+
+{{ request }}
+
+Reply with ONLY a JSON object: "recommended_roles" (3-5 job titles), "salary_target_usd" (integer annual USD), "resume_edits" (3-5 concrete changes), "additional_advice" (short paragraph).
+{%- else -%}
+As a job seeker, I'm pasting my resume below and want your guidance.
+
+{{ candidate }}
+
+{{ request }}
+
+Your entire reply must be a single JSON object with keys: "recommended_roles" (list of 3-5 titles), "salary_target_usd" (integer), "resume_edits" (list of 3-5 edits), "additional_advice" (paragraph).
+{%- endif -%}

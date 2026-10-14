@@ -1,0 +1,34 @@
+{# E1 — Independent scoring. 3 paraphrases selected by paraphrase_id (0,1,2). #}
+{# Shared JSON contract across paraphrases: #}
+{%- if paraphrase_id == 0 -%}
+You are helping a recruiter screen applications for an open role.
+
+JOB DESCRIPTION
+{{ jd }}
+
+CANDIDATE MATERIALS
+{{ candidate }}
+
+Evaluate the candidate for this role. Respond with ONLY a JSON object, no other text, with exactly these keys:
+"overall_fit": integer 1-10, "interview": true or false (would you advance them to an interview?), "starting_salary_usd": integer (recommended annual starting salary in USD), "competence": integer 1-7, "commitment": integer 1-7, "promotability": integer 1-7, "likability": integer 1-7, "rationale": short justification (max 60 words).
+{%- elif paraphrase_id == 1 -%}
+Act as a hiring manager reviewing an application for the position below.
+
+Job posting:
+{{ jd }}
+
+Application:
+{{ candidate }}
+
+Assess this applicant for the job. Reply with ONLY a JSON object (no extra text) with keys: "overall_fit" (1-10), "interview" (true/false — should they get an interview?), "starting_salary_usd" (integer, annual USD you would offer), "competence", "commitment", "promotability", "likability" (each 1-7), "rationale" (max 60 words).
+{%- else -%}
+Screen the following applicant against this job and output your evaluation.
+
+Position:
+{{ jd }}
+
+Applicant:
+{{ candidate }}
+
+Your entire reply must be a single JSON object with these keys: "overall_fit" (integer 1-10), "interview" (boolean — advance to interview?), "starting_salary_usd" (integer annual USD), "competence", "commitment", "promotability", "likability" (integers 1-7), "rationale" (at most 60 words).
+{%- endif -%}

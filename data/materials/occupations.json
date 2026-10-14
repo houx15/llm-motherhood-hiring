@@ -1,0 +1,322 @@
+[
+  {
+    "id":"software_engineer",
+    "title":"Software Engineer",
+    "soc":"15-1252",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"high"
+    },
+    "female_share":0.203,
+    "median_wage":135980.0,
+    "time_demands":-0.7616593473,
+    "in_e4":true
+  },
+  {
+    "id":"financial_analyst",
+    "title":"Financial Analyst",
+    "soc":"13-2051",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"high"
+    },
+    "female_share":0.418,
+    "median_wage":102740.0,
+    "time_demands":-0.0071722628,
+    "in_e4":false
+  },
+  {
+    "id":"mechanical_engineer",
+    "title":"Mechanical Engineer",
+    "soc":"17-2141",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"high"
+    },
+    "female_share":0.112,
+    "median_wage":104110.0,
+    "time_demands":-0.1602108007,
+    "in_e4":false
+  },
+  {
+    "id":"heavy_truck_driver",
+    "title":"Heavy Truck Driver",
+    "soc":"53-3032",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"low"
+    },
+    "female_share":0.077,
+    "median_wage":58640.0,
+    "time_demands":1.0968398509,
+    "in_e4":true
+  },
+  {
+    "id":"construction_laborer",
+    "title":"Construction Laborer",
+    "soc":"47-2061",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"low"
+    },
+    "female_share":0.047,
+    "median_wage":47120.0,
+    "time_demands":1.0240657207,
+    "in_e4":true
+  },
+  {
+    "id":"warehouse_supervisor",
+    "title":"Warehouse Supervisor",
+    "soc":"53-1047",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"male",
+      "wage":"low"
+    },
+    "female_share":0.278,
+    "median_wage":62890.0,
+    "time_demands":0.5483306662,
+    "in_e4":true
+  },
+  {
+    "id":"lawyer",
+    "title":"Lawyer",
+    "soc":"23-1011",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"high"
+    },
+    "female_share":0.429,
+    "median_wage":159670.0,
+    "time_demands":0.0719152334,
+    "in_e4":false
+  },
+  {
+    "id":"physician",
+    "title":"Physician (Family Medicine)",
+    "soc":"29-1215",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"high"
+    },
+    "female_share":0.417,
+    "median_wage":244180.0,
+    "time_demands":0.0389766629,
+    "in_e4":false
+  },
+  {
+    "id":"marketing_manager",
+    "title":"Marketing Manager",
+    "soc":"11-2021",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"high"
+    },
+    "female_share":0.594,
+    "median_wage":166790.0,
+    "time_demands":0.4105477669,
+    "in_e4":true
+  },
+  {
+    "id":"retail_store_manager",
+    "title":"Retail Store Manager",
+    "soc":"41-1011",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"low"
+    },
+    "female_share":0.439,
+    "median_wage":48520.0,
+    "time_demands":-0.0912524612,
+    "in_e4":false
+  },
+  {
+    "id":"restaurant_manager",
+    "title":"Restaurant Manager",
+    "soc":"11-9051",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"low"
+    },
+    "female_share":0.488,
+    "median_wage":69390.0,
+    "time_demands":-0.0987344663,
+    "in_e4":false
+  },
+  {
+    "id":"customer_service_representative",
+    "title":"Customer Service Representative",
+    "soc":"43-4051",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"mixed",
+      "wage":"low"
+    },
+    "female_share":0.648,
+    "median_wage":44770.0,
+    "time_demands":-0.0069793409,
+    "in_e4":false
+  },
+  {
+    "id":"registered_nurse",
+    "title":"Registered Nurse",
+    "soc":"29-1141",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"high"
+    },
+    "female_share":0.873,
+    "median_wage":97550.0,
+    "time_demands":-0.0356820231,
+    "in_e4":false
+  },
+  {
+    "id":"hr_manager",
+    "title":"HR Manager",
+    "soc":"11-3121",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"high"
+    },
+    "female_share":0.796,
+    "median_wage":149280.0,
+    "time_demands":0.0034354674,
+    "in_e4":false
+  },
+  {
+    "id":"pharmacist",
+    "title":"Pharmacist",
+    "soc":"29-1251",
+    "soc_aliases":[
+      "29-1051"
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"high"
+    },
+    "female_share":0.627,
+    "median_wage":140910.0,
+    "time_demands":-0.0289634919,
+    "in_e4":false
+  },
+  {
+    "id":"accountant",
+    "title":"Accountant",
+    "soc":"13-2011",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"high"
+    },
+    "female_share":0.591,
+    "median_wage":83680.0,
+    "time_demands":0.123379637,
+    "in_e4":false
+  },
+  {
+    "id":"administrative_assistant",
+    "title":"Administrative Assistant",
+    "soc":"43-6014",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"low"
+    },
+    "female_share":0.919,
+    "median_wage":47540.0,
+    "time_demands":-0.4652748578,
+    "in_e4":false
+  },
+  {
+    "id":"preschool_teacher",
+    "title":"Preschool Teacher",
+    "soc":"25-2011",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"low"
+    },
+    "female_share":0.971,
+    "median_wage":38140.0,
+    "time_demands":-1.4400500755,
+    "in_e4":true
+  },
+  {
+    "id":"medical_assistant",
+    "title":"Medical Assistant",
+    "soc":"31-9092",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"low"
+    },
+    "female_share":0.908,
+    "median_wage":45690.0,
+    "time_demands":-0.548834273,
+    "in_e4":true
+  },
+  {
+    "id":"receptionist",
+    "title":"Receptionist",
+    "soc":"43-4171",
+    "soc_aliases":[
+
+    ],
+    "cell":{
+      "gender":"female",
+      "wage":"low"
+    },
+    "female_share":0.896,
+    "median_wage":38010.0,
+    "time_demands":-1.1468199562,
+    "in_e4":true
+  }
+]

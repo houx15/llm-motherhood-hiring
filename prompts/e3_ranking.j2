@@ -1,0 +1,33 @@
+{# E3 — Ranking pools of 6 candidates labeled C1..C6 by screen position. #}
+{%- if paraphrase_id == 0 -%}
+You are helping a recruiter build a shortlist from a pool of applicants for one open role.
+
+JOB DESCRIPTION
+{{ jd }}
+
+APPLICANT POOL
+{{ pool }}
+
+Rank all six candidates from strongest (1) to weakest (6) for this role. Respond with ONLY a JSON object, no other text, with exactly these keys:
+"ranking": array of the six candidate labels in order from best to worst, e.g. ["C3","C1","C5","C2","C6","C4"], "top_reason": why your top-ranked candidate leads (max 60 words).
+{%- elif paraphrase_id == 1 -%}
+Act as a hiring manager reviewing a pool of six applicants and selecting a shortlist.
+
+Job posting:
+{{ jd }}
+
+Candidates:
+{{ pool }}
+
+Order the six candidates from best to worst fit. Reply with ONLY a JSON object: "ranking" (array of all six labels "C1".."C6", best first), "top_reason" (max 60 words explaining your top pick).
+{%- else -%}
+Six people applied for this job. Rank them.
+
+Position:
+{{ jd }}
+
+Applicants:
+{{ pool }}
+
+Your entire reply must be one JSON object: "ranking" = list of all six labels "C1" through "C6" ordered strongest to weakest, and "top_reason" = one sentence (≤ 60 words) on your #1 pick.
+{%- endif -%}

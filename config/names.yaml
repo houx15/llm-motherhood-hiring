@@ -1,0 +1,7 @@
+# 3 female + 3 male first names, shared surnames; name i always pairs with surname i.
+# Strongly gendered, White-coded (racially held constant per proposal), high-frequency,
+# consistent with Bertrand & Mullainathan (2004) / Gaddis (2017) validated lists.
+# FINAL LIST PENDING RESEARCHER APPROVAL — see QUESTIONS.md.
+female: [Emily, Sarah, Anne]
+male: [Greg, Matthew, Todd]
+surnames: [Baker, Walsh, Murphy]

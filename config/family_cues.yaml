@@ -1,0 +1,31 @@
+# Family-status cues (spec §4.5). Cue text identical across genders.
+# A cover note paragraph is rendered above the resume in EVERY condition
+# (neutral text for `none`), so note presence is constant.
+cover_note:
+  none: "I am excited to be applying for this position."
+  married: "I am married and relocating with my spouse."
+  parent: "I am married with two children."
+  parent_gap: "I am married with two children."
+  parent_committed: "I am married with two children."
+  pregnant: "Please note that I am currently pregnant."
+
+resume_changes:
+  none: {}
+  married: {}
+  parent:
+    volunteer:
+      - "PTA Coordinator, Lincoln Elementary School (2022-present)"
+  parent_gap:
+    volunteer:
+      - "PTA Coordinator, Lincoln Elementary School (2022-present)"
+    leave:
+      label: "Parental leave"
+      start_month: 2024-01
+      end_month: 2024-09       # 8-month leave
+  parent_committed:
+    volunteer:
+      - "PTA Coordinator, Lincoln Elementary School (2022-present)"
+    extra_bullets:
+      - "Top performer award, 2023 and 2024"
+      - "Volunteered to lead a high-priority project requiring extended hours"
+  pregnant: {}

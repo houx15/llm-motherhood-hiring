@@ -1,0 +1,14 @@
+# Patterns marking a refusal / non-evaluation (spec §9). Used when JSON parsing fails.
+patterns:
+  - "I can't"
+  - "I cannot"
+  - "I can’t"
+  - "I'm unable"
+  - "I am unable"
+  - "not appropriate"
+  - "I'm sorry"
+  - "I am sorry"
+  - "cannot evaluate"
+  - "cannot provide"
+  - "against my guidelines"
+  - "as an AI"

@@ -1,0 +1,14 @@
+# Human benchmark effect sizes, Correll, Benard & Paik (2007), Table/Figures
+# (childless reference). Standardized where noted. Used for E2 comparison.
+# Values entered from published paper; researcher to verify.
+correll_2007:
+  study: "Correll, Benard & Paik (2007), lab study"
+  # Evaluated-on-childless = 0 reference; mothers/fathers relative effects
+  competence_mother: -0.36    # std diff vs childless women (approx from Fig 2)
+  commitment_mother: -0.87
+  competence_father: 0.10
+  commitment_father: 0.15
+  salary_penalty_mother_pct: -7.4   # recommended starting salary, % vs childless women
+  salary_bonus_father_pct: 6.0
+  hire_mother_penalty_pp: -27.0     # recommend hire probability, pp vs childless women
+  hire_father_bonus_pp: 4.0

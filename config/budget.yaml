@@ -1,0 +1,11 @@
+total_cap_usd: 200.00
+weekly_cap_usd: 200.00        # OpenRouter key weekly cap set by researcher
+reserve_usd: 20.00            # never spend into the reserve without --allow-reserve
+phase_caps:
+  pilot: 5.00
+  phase1_deepseek: 35.00
+  phase2_other_models: 140.00
+assume_peak_pricing: true     # estimates use peak price unless run scheduled off-peak
+estimate_safety_factor: 1.15  # buffer on output tokens for repairs/overruns
+kill_switch:
+  overrun_fraction: 0.20      # stop if actual run spend exceeds estimate by 20%

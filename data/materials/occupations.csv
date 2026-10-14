@@ -1,0 +1,21 @@
+id,title,soc,soc_aliases,cell,female_share,median_wage,time_demands,in_e4
+software_engineer,Software Engineer,15-1252,[],"{'gender': 'male', 'wage': 'high'}",0.203,135980.0,-0.7616593472825982,True
+financial_analyst,Financial Analyst,13-2051,[],"{'gender': 'male', 'wage': 'high'}",0.418,102740.0,-0.007172262768515486,False
+mechanical_engineer,Mechanical Engineer,17-2141,[],"{'gender': 'male', 'wage': 'high'}",0.11199999999999999,104110.0,-0.1602108007410314,False
+heavy_truck_driver,Heavy Truck Driver,53-3032,[],"{'gender': 'male', 'wage': 'low'}",0.077,58640.0,1.0968398508673738,True
+construction_laborer,Construction Laborer,47-2061,[],"{'gender': 'male', 'wage': 'low'}",0.047,47120.0,1.0240657207294508,True
+warehouse_supervisor,Warehouse Supervisor,53-1047,[],"{'gender': 'male', 'wage': 'low'}",0.278,62890.0,0.5483306662396104,True
+lawyer,Lawyer,23-1011,[],"{'gender': 'mixed', 'wage': 'high'}",0.429,159670.0,0.07191523341802453,False
+physician,Physician (Family Medicine),29-1215,[],"{'gender': 'mixed', 'wage': 'high'}",0.41700000000000004,244180.0,0.038976662949094264,False
+marketing_manager,Marketing Manager,11-2021,[],"{'gender': 'mixed', 'wage': 'high'}",0.594,166790.0,0.410547766930668,True
+retail_store_manager,Retail Store Manager,41-1011,[],"{'gender': 'mixed', 'wage': 'low'}",0.439,48520.0,-0.09125246119258464,False
+restaurant_manager,Restaurant Manager,11-9051,[],"{'gender': 'mixed', 'wage': 'low'}",0.488,69390.0,-0.09873446625307476,False
+customer_service_representative,Customer Service Representative,43-4051,[],"{'gender': 'mixed', 'wage': 'low'}",0.648,44770.0,-0.006979340903466265,False
+registered_nurse,Registered Nurse,29-1141,[],"{'gender': 'female', 'wage': 'high'}",0.873,97550.0,-0.03568202311503588,False
+hr_manager,HR Manager,11-3121,[],"{'gender': 'female', 'wage': 'high'}",0.7959999999999999,149280.0,0.003435467412281947,False
+pharmacist,Pharmacist,29-1251,['29-1051'],"{'gender': 'female', 'wage': 'high'}",0.627,140910.0,-0.028963491886304427,False
+accountant,Accountant,13-2011,[],"{'gender': 'female', 'wage': 'high'}",0.591,83680.0,0.12337963703579613,False
+administrative_assistant,Administrative Assistant,43-6014,[],"{'gender': 'female', 'wage': 'low'}",0.919,47540.0,-0.4652748577628529,False
+preschool_teacher,Preschool Teacher,25-2011,[],"{'gender': 'female', 'wage': 'low'}",0.971,38140.0,-1.4400500755218066,True
+medical_assistant,Medical Assistant,31-9092,[],"{'gender': 'female', 'wage': 'low'}",0.9079999999999999,45690.0,-0.5488342730192411,True
+receptionist,Receptionist,43-4171,[],"{'gender': 'female', 'wage': 'low'}",0.8959999999999999,38010.0,-1.1468199561760881,True

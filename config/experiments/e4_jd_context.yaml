@@ -1,0 +1,6 @@
+name: e4_full
+phase: phase1
+models: [deepseek_v41_flash]
+occupations: in_e4     # the 8 occupations flagged in config/occupations.yaml
+experiments:
+  e4: {samples: 5}
