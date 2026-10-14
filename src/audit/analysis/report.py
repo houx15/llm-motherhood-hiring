@@ -143,7 +143,7 @@ def make_report(run_id: str) -> Path:
         for ax, y in zip(axes, ["overall_fit", "competence", "commitment", "likability"]):
             data = [e1[e1["family_code"] == c][y].dropna() for c in ORDER if c in set(e1["family_code"])]
             labels = [c for c in ORDER if c in set(e1["family_code"])]
-            ax.boxplot(data, labels=labels, showmeans=True)
+            ax.boxplot(data, tick_labels=labels, showmeans=True)
             ax.set_title(y)
             ax.tick_params(axis="x", rotation=45)
             ax.grid(axis="y", alpha=0.3)

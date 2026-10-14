@@ -64,20 +64,20 @@ def build_prompt(row: dict) -> tuple[str, str]:
     para = int(row["paraphrase_id"])
     if exp in ("e1", "e4"):
         cand = render_resume(
-            resumes[ctx["resume_id"]], ctx["gender"], ctx["name_idx"], ctx["family_code"]
+            resumes[ctx["resume_id"]], ctx["gender"], int(ctx["name_idx"]), ctx["family_code"]
         )
         text = _tpl("e1_scoring").render(jd=jd, candidate=cand, paraphrase_id=para)
     elif exp == "e2":
         names = load_names()
-        child = render_resume(resumes[ctx["childless_resume"]], ctx["gender"], ctx["childless_name_idx"], "none")
-        parent = render_resume(resumes[ctx["parent_resume"]], ctx["gender"], ctx["parent_name_idx"], ctx["contrast"])
+        child = render_resume(resumes[ctx["childless_resume"]], ctx["gender"], int(ctx["childless_name_idx"]), "none")
+        parent = render_resume(resumes[ctx["parent_resume"]], ctx["gender"], int(ctx["parent_name_idx"]), ctx["contrast"])
         a, b = (child, parent) if ctx["childless_position"] == "A" else (parent, child)
         text = _tpl("e2_paired").render(jd=jd, candidate_a=a, candidate_b=b, paraphrase_id=para)
     elif exp == "e3":
         blocks = []
         for c in ctx["pool"]:
             blocks.append(
-                f"[{c['label']}]\n" + render_resume(resumes[c["resume_id"]], c["gender"], c["name_idx"], c["family_code"])
+                f"[{c['label']}]\n" + render_resume(resumes[c["resume_id"]], c["gender"], int(c["name_idx"]), c["family_code"])
             )
         text = _tpl("e3_ranking").render(jd=jd, pool="\n\n".join(blocks), paraphrase_id=para)
     else:
@@ -376,7 +376,7 @@ async def run_plan(
             if stop.is_set():
                 break
             chunk = list(pending.iloc[c0 : c0 + CHUNK].iterrows())
-            await asyncio.gather(*(one((i, r)) for i, r in enumerate(chunk)))
+            await asyncio.gather(*(one(r) for r in chunk))
             Ledger().flush(pd.DataFrame(ledger_rows))
             print(
                 f"[run] {min(c0 + CHUNK, len(pending))}/{len(pending)} dispatched | "

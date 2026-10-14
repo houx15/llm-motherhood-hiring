@@ -12,18 +12,23 @@ OUTCOMES = ["overall_fit", "interview", "starting_salary_usd"] + RATINGS
 
 
 def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
-    """Y ~ C(family_code)*female + C(resume_id) + C(name_idx) + C(occupation_id),
-    SEs clustered by resume_id. Returns tidy coefficient table."""
+    """Y ~ C(family_code)*C(female) + resume FE + name FE + occupation FE,
+    SEs clustered by resume. Returns tidy coefficient table."""
     rows = []
+    order = [c for c in ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
+             if c in set(e1["family_code"])]
+    sub0 = e1.dropna(subset=["family_code"]).copy()
+    sub0["family_code"] = pd.Categorical(sub0["family_code"], categories=order)
     for y in outcomes:
-        sub = e1.dropna(subset=[y]).copy()
+        sub = sub0.dropna(subset=[y]).copy()
+        sub[y] = sub[y].astype(float)
         if sub.empty:
             continue
         try:
             m = smf.ols(
-                f"{y} ~ C(family_code) * C(female) + C(resume_id) + C(name_idx) + C(occupation_id)",
+                f"{y} ~ C(family_code) * C(female) + C(resume_ids) + C(name_idx) + C(occupation_id)",
                 data=sub,
-            ).fit(cov_type="cluster", cov_kwds={"groups": sub["resume_id"]})
+            ).fit(cov_type="cluster", cov_kwds={"groups": sub["resume_ids"]})
         except Exception as e:  # noqa: BLE001
             rows.append({"outcome": y, "error": str(e)[:120]})
             continue
@@ -37,25 +42,28 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
         ]:
             if term in base:
                 rows.append(_row(m, y, term, label))
-        inter = "C(family_code)[T.parent]:C(female)"
-        mother = base.get("C(family_code)[T.parent]", np.nan) + base.get(inter, np.nan)
-        se_int = m.bse.get(inter, np.nan)
-        se_par = m.bse.get("C(family_code)[T.parent]", np.nan)
-        c = m.cov_params()
-        k1, k2 = "C(family_code)[T.parent]", inter
-        if k1 in c.index and k2 in c.index:
-            var = c.loc[k1, k1] + c.loc[k2, k2] + 2 * c.loc[k1, k2]
-            se = np.sqrt(var)
-        else:
-            se = np.sqrt(se_par**2 + se_int**2)
-        rows.append(
-            {
-                "outcome": y, "term": "parent (women) = motherhood effect",
-                "coef": mother, "se": se, "tstat": mother / se if se else np.nan,
-                "pvalue": 2 * (1 - _norm_cdf(abs(mother / se))) if se else np.nan, "n": int(m.nobs),
-            }
-        )
-    return pd.DataFrame(rows)
+        k_par = "C(family_code)[T.parent]"
+        k_inter_candidates = [k for k in m.params.index if "T.parent]" in k and ":C(female)" in k]
+        if k_par in base and k_inter_candidates:
+            k_inter = k_inter_candidates[0]
+            mother = base[k_par] + base.get(k_inter, np.nan)
+            c = m.cov_params()
+            if k_par in c.index and k_inter in c.index:
+                var = c.loc[k_par, k_par] + c.loc[k_inter, k_inter] + 2 * c.loc[k_par, k_inter]
+                se = float(np.sqrt(var))
+            else:
+                se = np.nan
+            rows.append(
+                {
+                    "outcome": y, "term": "parent (women) = motherhood effect",
+                    "coef": mother, "se": se, "tstat": mother / se if se else np.nan,
+                    "pvalue": 2 * (1 - _norm_cdf(abs(mother / se))) if se else np.nan, "n": int(m.nobs),
+                }
+            )
+    df = pd.DataFrame(rows)
+    if "error" in df.columns and df["error"].notna().all():
+        return df
+    return df[df.get("error", pd.Series(index=df.index, dtype=object)).isna()]
 
 
 def _norm_cdf(x):

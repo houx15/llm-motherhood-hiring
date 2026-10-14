@@ -31,9 +31,23 @@ def _moderators() -> pd.DataFrame:
     )
 
 
+def _ctx_from_plan(run_id: str) -> pd.Series:
+    """call_id -> render_ctx, recovered from the plan parquet (manifest points to it)."""
+    mf = RUNS_DIR / run_id / "manifest.json"
+    if not mf.exists():
+        return pd.Series(dtype=object)
+    plan_path = json.loads(mf.read_text()).get("plan")
+    if not plan_path or not Path(plan_path).exists():
+        return pd.Series(dtype=object)
+    plan = pd.read_parquet(plan_path, columns=["call_id", "render_ctx"])
+    return plan.set_index("call_id")["render_ctx"]
+
+
 def build_tables(run_id: str) -> dict[str, pd.DataFrame]:
     logs = load_run_logs(run_id)
     logs = logs[logs["experiment"].isin(["e1", "e2", "e3", "e4"])]
+    if "render_ctx" not in logs.columns:
+        logs["render_ctx"] = logs["call_id"].map(_ctx_from_plan(run_id))
     mod = _moderators()
     out: dict[str, pd.DataFrame] = {}
 
@@ -63,11 +77,11 @@ def build_tables(run_id: str) -> dict[str, pd.DataFrame]:
         e2["parent_chosen"] = (e2["chosen"] == e2["parent_position"]).astype(int)
         e2["position_a"] = (e2["chosen"] == "A").astype(int)
         e2["female"] = (e2["gender"] == "female").astype(int)
-        # paired differences: parent minus childless
+        # paired differences: parent minus childless (json_normalize flattens A/B to dotted cols)
         def _diff(row, key):
             parent_side = row["parent_position"]
             child_side = "A" if parent_side == "B" else "B"
-            return row[parent_side][key] - row[child_side][key]
+            return row[f"{parent_side}.{key}"] - row[f"{child_side}.{key}"]
         for key in ["starting_salary_usd", "overall_fit", "commitment", "competence", "promotability", "likability"]:
             e2[f"diff_{key}"] = e2.apply(lambda r: _diff(r, key), axis=1)
         e2 = e2.merge(mod, on="occupation_id", how="left")
