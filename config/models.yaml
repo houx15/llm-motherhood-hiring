@@ -4,14 +4,17 @@
 models:
   - key: deepseek_v41_flash
     slug: deepseek/deepseek-v4.1-flash
-    verified: true            # slug + prices confirmed live on OpenRouter 2026-10-14
-    provider: {order: ["DeepSeek"], allow_fallbacks: false}
-    reasoning: {enabled: false}   # identical across all runs
+    verified: true            # slug + routing + prices verified live on OpenRouter 2026-10-14
+    # NOTE: first-party "DeepSeek" endpoint is removed by this account's guardrails
+    # ("Paid model training violation (account settings)"). Pinned to DeepInfra (fp8,
+    # $0.14/$0.42 per Mtok) — single endpoint for run consistency; provider_served is
+    # logged per call and flagged if it drifts. See QUESTIONS.md #2b.
+    provider: {order: ["DeepInfra"], allow_fallbacks: false}
+    reasoning: {enabled: false}   # identical across all runs (verified: reasoning_tokens=0)
     temperature: null             # null = omit (provider default, consumer-like)
     max_tokens: 600
-    price_per_mtok: {input: 0.016, output: 0.891}   # live OpenRouter price 2026-10-14
-    peak_multiplier: 2.0          # DeepSeek peak hours (UTC 00:30-16:30) double price
-    peak_hours_utc: ["00:30", "16:30"]
+    price_per_mtok: {input: 0.14, output: 0.42}   # DeepInfra endpoint price 2026-10-14
+    peak_multiplier: 1.0          # DeepInfra pricing is flat (DeepSeek peak doubling N/A)
   - key: claude_haiku_55
     slug: anthropic/claude-haiku-5.5
     verified: false           # verify slug + price before Phase 2

@@ -9,6 +9,13 @@ import yaml
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parents[2]
+
+try:  # load .env if present (never committed)
+    from dotenv import load_dotenv
+
+    load_dotenv(ROOT / ".env")
+except ImportError:
+    pass
 CONFIG_DIR = ROOT / "config"
 DATA_DIR = ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"

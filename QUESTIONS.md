@@ -53,6 +53,23 @@ Notable coding decisions:
 
 ---
 
+## 2b. OpenRouter routing: first-party DeepSeek blocked by account guardrails (2026-10-14)
+
+Requests pinned to `provider: {order: ["DeepSeek"], allow_fallbacks: false}` fail with
+404: *"Filter by Guardrails removed deepseek (Paid model training violation (account
+settings))"* — the key's account excludes the first-party endpoint. The same model slug
+routes fine to third-party endpoints. **Decision:** pin the single endpoint **DeepInfra**
+(fp8, $0.14 in / $0.42 out per Mtok) with `allow_fallbacks: false` for cross-condition
+consistency; `provider_served` is logged on every call and any drift is flagged in
+analysis. Actual per-call cost comes from OpenRouter `usage.cost`.
+
+Caveat: fp8 third-party serving may differ from first-party DeepSeek behavior; acceptable
+because the audit compares conditions *within* one fixed endpoint. If the researcher
+prefers first-party serving, the account guardrail setting must be changed (or a different
+key provided) — flag this before Phase 1.
+
+---
+
 ## 3. Pilot scope decisions (2026-10-14)
 
 - **Pilot E4**: per spec §5 ("if both are in_e4; else skip"), only `software_engineer`
