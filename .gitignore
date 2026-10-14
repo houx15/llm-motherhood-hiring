@@ -1,0 +1,50 @@
+# === SECRETS — never commit ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.python-version
+
+# === Virtual envs ===
+.venv/
+venv/
+env/
+
+# === Tooling caches ===
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# === Data: large / raw / regenerable ===
+data/raw/
+data/plans/*.parquet
+
+# === Kaggle ===
+.kaggle/
+kaggle.json
+
+# === OS / editor ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# === Notebook scratch ===
+scratch/
+*.log
+
+# === Runs (logs are large; keep placeholder) ===
+runs/*
+!runs/.gitkeep
