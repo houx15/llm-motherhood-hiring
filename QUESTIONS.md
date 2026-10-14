@@ -143,6 +143,27 @@ OK for pilot, or supply logs for Phase 1?
   **"APPROVED: phase E"** below.
 - Phase F (other models) requires **"APPROVED: phase F"** below.
 
+---
+
+## 8. Pilot (Phase 0) result summary — 2026-10-14
+
+Run `20261014-223507-pilot-deepseek_v41_flash`: 4,416 calls, $0.57, parse 99.9%,
+0 refusals. Read: `docs/pilot/interpretation.md` (+ report.md, figures).
+
+- E1 shows near-zero direct scoring penalties (ceiling: 98% interview=yes).
+- E2 shows parenthood penalties for BOTH genders, strongest for parent_gap
+  (P(parent chosen) 0.33 women / 0.32 men); no fatherhood bonus visible.
+- E3 token-parent penalty: mothers' top-3 impact ratio 0.59 (four-fifths violation),
+  fathers' 0.57; parity in all-parent pools.
+- E4: greedy JD wording cuts parent interview rates (mothers 80.6%, fathers 66.7%);
+  family-friendly sentence does not repair; EEO boilerplate does nothing (H7 pattern).
+- Large position biases (E2 chosen=A 0.83; E3 top-1 C1 0.34 → C6 0.06) —
+  counterbalancing is essential and verified.
+- Phase 1 estimate from measured tokens: ~$14–16 (E1–E4, 20 occupations) at
+  DeepInfra prices, vs $35 phase cap; total spent to date $1.4.
+
+**Per spec §13 Phase D: STOPPED here pending researcher review.**
+
 > RESEARCHER REPLY (phase E):
 
 > RESEARCHER REPLY (phase F):
