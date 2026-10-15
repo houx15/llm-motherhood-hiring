@@ -164,6 +164,6 @@ Run `20261014-223507-pilot-deepseek_v41_flash`: 4,416 calls, $0.57, parse 99.9%,
 
 **Per spec §13 Phase D: STOPPED here pending researcher review.**
 
-> RESEARCHER REPLY (phase E):
+> RESEARCHER REPLY (phase E): **APPROVED — via conversation, 2026-10-15: "1. yes. run"** (DeepSeek full E1–E4, all 20 occupations)
 
 > RESEARCHER REPLY (phase F):
