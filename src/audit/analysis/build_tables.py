@@ -21,6 +21,14 @@ def load_run_logs(run_id: str | None = None) -> pd.DataFrame:
             except json.JSONDecodeError:
                 continue
     df = pd.DataFrame(rows)
+    if df.empty:
+        return df
+    # pooled mode (run_id=None): dedup by call_id, preferring valid parses (repairs,
+    # re-runs) and the latest attempt
+    if run_id is None and "call_id" in df.columns:
+        df["_ok"] = df.get("parse_ok", False).fillna(False).astype(int)
+        df = df.sort_values(["_ok", "request_ts"], ascending=[False, False])
+        df = df.drop_duplicates("call_id", keep="first").drop(columns=["_ok"])
     return df
 
 

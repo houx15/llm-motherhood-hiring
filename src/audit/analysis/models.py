@@ -66,6 +66,107 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
     return df[df.get("error", pd.Series(index=df.index, dtype=object)).isna()]
 
 
+def _find_key(keys, family: str, female: bool, z: str | None):
+    """Exact patsy term lookup: right family level, optionally x female, optionally x Z."""
+    want = {f"C(family_code)[T.{family}]"}
+    if female:
+        want.add("C(female)[T.1]")
+    if z:
+        want.add(z)
+    for k in keys:
+        parts = k.split(":")
+        if len(parts) != len(want):
+            continue
+        # strip level suffix from C(female)[T.1] for set comparison, keep Z exact
+        norm = set()
+        for p in parts:
+            if p.startswith("C(female)"):
+                norm.add("C(female)[T.1]")
+            elif p == "Intercept":
+                norm.add("Intercept")
+            else:
+                norm.add(p)
+        if norm == want:
+            return k
+    return None
+
+
+def e1_moderator_regressions(e1: pd.DataFrame, outcomes=None) -> pd.DataFrame:
+    """Spec §10 core model, run separately per standardized occupation moderator Z:
+
+    Y ~ C(family_code) * C(female) * Z + resume FE + name FE, cluster SE by resume.
+
+    Key terms (P = parent indicator):
+      - parent x female: how much the motherhood effect differs from the fatherhood
+        effect at the occupation mean of Z (H1 vs H2)
+      - parent x female x Z: does the mother-minus-father gap grow with Z
+        (H3 greedy jobs for Z=time_demands; H4 gender typing for Z=female_share)
+    Needs the full 20-occupation grid (Phase 1).
+    """
+    if outcomes is None:
+        outcomes = ["interview", "starting_salary_usd", "commitment", "competence", "overall_fit"]
+    rows = []
+    order = [c for c in ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
+             if c in set(e1["family_code"])]
+    zs = {}
+    for z in ["female_share", "median_wage", "time_demands"]:
+        if z in e1.columns and e1[z].notna().sum() > 15:
+            zs[z] = e1[z]
+    if e1["occupation_id"].nunique() < 10:
+        return pd.DataFrame([{"note": "moderator regressions need >= 10 occupations (Phase 1)"}])
+    sub0 = e1.dropna(subset=["family_code"]).copy()
+    sub0["family_code"] = pd.Categorical(sub0["family_code"], categories=order)
+    for z_name in zs:
+        sub = sub0.dropna(subset=[z_name]).copy()
+        sub[z_name] = (sub[z_name] - sub[z_name].mean()) / sub[z_name].std(ddof=0)
+        for y in outcomes:
+            s = sub.dropna(subset=[y]).copy()
+            s[y] = s[y].astype(float)
+            if s.empty:
+                continue
+            s["zmod"] = s[z_name]
+            zcol = "zmod"
+            try:
+                m = smf.ols(
+                    f"{y} ~ C(family_code) * C(female) * {zcol} + C(resume_ids) + C(name_idx)",
+                    data=s,
+                ).fit(cov_type="cluster", cov_kwds={"groups": s["resume_ids"]})
+            except Exception as e:  # noqa: BLE001
+                rows.append({"Z": z_name, "outcome": y, "error": str(e)[:120]})
+                continue
+            wanted = [
+                ("C(family_code)[T.parent]", "fatherhood effect @ mean Z"),
+                ("C(family_code)[T.parent_gap]", "parent_gap (men) @ mean Z"),
+                ("C(family_code)[T.pregnant]", "pregnant (women) @ mean Z"),
+            ]
+            for pat, label in wanted:
+                if pat in m.params.index:
+                    r = _row(m, y, pat, label)
+                    r["Z"] = z_name
+                    rows.append(r)
+            zcol = "zmod"
+            inter_specs = [
+                (True, None, "mother-minus-father gap @ mean Z"),
+                (False, zcol, "fatherhood x Z"),
+                (True, zcol, "mother-minus-father gap x Z (H3/H4)"),
+            ]
+            if any(f == "parent_gap" for f in s["family_code"].unique()):
+                inter_specs.append(("gap", zcol, "parent_gap gender gap x Z"))
+            for spec in inter_specs:
+                if spec[0] == "gap":
+                    k = _find_key(m.params.index, "parent_gap", True, zcol)
+                else:
+                    k = _find_key(m.params.index, "parent", spec[0], spec[1])
+                if k:
+                    r = _row(m, y, k, spec[2])
+                    r["Z"] = z_name
+                    rows.append(r)
+    df = pd.DataFrame(rows)
+    if "error" in df.columns and df["error"].notna().all():
+        return df
+    return df[df.get("error", pd.Series(index=df.index, dtype=object)).isna()]
+
+
 def _norm_cdf(x):
     from statistics import NormalDist
 

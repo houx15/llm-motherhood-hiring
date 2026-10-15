@@ -14,7 +14,7 @@ import pandas as pd
 from ..budget import TOKEN_EST, Ledger
 from ..config import RUNS_DIR
 from .build_tables import build_tables
-from .models import diagnostics, e1_regressions, e2_analysis, e3_analysis
+from .models import diagnostics, e1_moderator_regressions, e1_regressions, e2_analysis, e3_analysis
 
 ORDER = ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
 
@@ -24,25 +24,27 @@ def _fmt_p(p):
 
 
 def make_report(run_id: str) -> Path:
-    run_dir = RUNS_DIR / run_id
+    pooled = run_id in ("pooled", "all")
+    run_dir = RUNS_DIR / ("pooled" if pooled else run_id)
     figdir = run_dir / "figures"
     figdir.mkdir(parents=True, exist_ok=True)
-    tables = build_tables(run_id)
-    lines = [f"# Pilot report — {run_id}", ""]
+    tables = build_tables(None if pooled else run_id)
+    lines = [f"# {'Pooled' if pooled else 'Run'} report — {run_id}", ""]
     manifest = {}
-    mf = run_dir / "manifest.json"
-    if mf.exists():
-        manifest = json.loads(mf.read_text())
-        lines += [
-            f"- Model: `{manifest.get('model', {}).get('slug')}` · plan: `{manifest.get('plan')}`",
-            f"- Calls planned: {manifest.get('plan_calls')} · estimate: ${manifest.get('estimate_usd', 0):.2f}",
-        ]
-    ledger = Ledger().load()
-    if not ledger.empty and not (ledger["run_id"] == run_id).any():
-        pass
-    run_rows = ledger[ledger["run_id"] == run_id] if not ledger.empty else pd.DataFrame()
-    if not run_rows.empty:
-        lines.append(f"- Actual ledger cost: ${run_rows['cost_usd'].sum():.2f}")
+    if not pooled:
+        mf = run_dir / "manifest.json"
+        if mf.exists():
+            manifest = json.loads(mf.read_text())
+            lines += [
+                f"- Model: `{manifest.get('model', {}).get('slug')}` · plan: `{manifest.get('plan')}`",
+                f"- Calls planned: {manifest.get('plan_calls')} · estimate: ${manifest.get('estimate_usd', 0):.2f}",
+            ]
+        ledger = Ledger().load()
+        run_rows = ledger[ledger["run_id"] == run_id] if not ledger.empty else pd.DataFrame()
+        if not run_rows.empty:
+            lines.append(f"- Actual ledger cost: ${run_rows['cost_usd'].sum():.2f}")
+    else:
+        lines.append("- Aggregates ALL runs' logs (deduped by call_id, valid parses kept)")
     lines.append("")
 
     diag = tables.get("diagnostics", pd.DataFrame())
@@ -167,6 +169,26 @@ def make_report(run_id: str) -> Path:
                 )
             lines.append("")
         lines += ["![E1 outcomes](figures/e1_outcomes.png)", "", "![E1 distributions](figures/e1_distributions.png)", ""]
+
+        # ---- moderator regressions (spec §10; needs >= 10 occupations) ----
+        mod_reg = e1_moderator_regressions(e1[~e1["family_code"].isna()])
+        if mod_reg is not None and not mod_reg.empty:
+            if "note" in mod_reg.columns:
+                lines += [f"*Moderator regressions: {mod_reg['note'].iloc[0]}*", ""]
+            elif not mod_reg.empty:
+                lines += [
+                    "### Occupation-moderator regressions (H3/H4):",
+                    "Y ~ family * female * Z + resume FE, cluster SE; Z standardized (female_share / median_wage / time_demands)",
+                    "",
+                    "| Z | outcome | term | coef | SE | p | n |",
+                    "| --- | --- | --- | --- | --- | --- | --- |",
+                ]
+                for _, r in mod_reg.iterrows():
+                    lines.append(
+                        f"| {r.get('Z','')} | {r['outcome']} | {r['term']} | {r['coef']:+.4f} | "
+                        f"{r['se']:.4f} | {_fmt_p(r['pvalue'])} | {int(r['n'])} |"
+                    )
+                lines.append("")
 
     # ---- 3. E2 ----
     e2 = tables.get("e2")
