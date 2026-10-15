@@ -15,10 +15,14 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
     """Y ~ C(family_code)*C(female) + resume FE + name FE + occupation FE,
     SEs clustered by resume. Returns tidy coefficient table."""
     rows = []
-    order = [c for c in ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
+    order = [c for c in ["none", "married", "parent", "parent_gap", "parent_committed"]
              if c in set(e1["family_code"])]
-    sub0 = e1.dropna(subset=["family_code"]).copy()
-    sub0["family_code"] = pd.Categorical(sub0["family_code"], categories=order)
+    sub0 = e1[e1["family_code"].notna()].copy()
+    # pregnant is female-only: separate full-rank indicator instead of a collinear interaction
+    sub0["pregnant_flag"] = ((sub0["family_code"] == "pregnant") & (sub0["female"] == 1)).astype(float)
+    sub0 = sub0[sub0["family_code"].isin(order + ["pregnant"])]
+    sub0["family_code"] = pd.Categorical(sub0["family_code"], categories=order + ["pregnant"])
+    sub0.loc[sub0["family_code"] == "pregnant", "family_code"] = "none"  # absorbed by flag
     for y in outcomes:
         sub = sub0.dropna(subset=[y]).copy()
         sub[y] = sub[y].astype(float)
@@ -26,7 +30,7 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
             continue
         try:
             m = smf.ols(
-                f"{y} ~ C(family_code) * C(female) + C(resume_ids) + C(name_idx) + C(occupation_id)",
+                f"{y} ~ C(family_code) * C(female) + pregnant_flag + C(resume_ids) + C(name_idx) + C(occupation_id)",
                 data=sub,
             ).fit(cov_type="cluster", cov_kwds={"groups": sub["resume_ids"]})
         except Exception as e:  # noqa: BLE001
@@ -38,7 +42,7 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
             ("C(family_code)[T.parent]", "parent (men) = fatherhood effect"),
             ("C(family_code)[T.parent_gap]", "parent_gap (men)"),
             ("C(family_code)[T.parent_committed]", "parent_committed (men)"),
-            ("C(family_code)[T.pregnant]", "pregnant (women)"),
+            ("pregnant_flag", "pregnant (women vs childless women)"),
         ]:
             if term in base:
                 rows.append(_row(m, y, term, label))
@@ -106,15 +110,17 @@ def e1_moderator_regressions(e1: pd.DataFrame, outcomes=None) -> pd.DataFrame:
     if outcomes is None:
         outcomes = ["interview", "starting_salary_usd", "commitment", "competence", "overall_fit"]
     rows = []
-    order = [c for c in ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
-             if c in set(e1["family_code"])]
+    COMMON = ["none", "married", "parent", "parent_gap", "parent_committed"]
+    order = [c for c in COMMON if c in set(e1["family_code"])]
+    # pregnant exists only for women -> its interactions are collinear; excluded here
+    # (reported separately by e1_regressions' pregnant term)
     zs = {}
     for z in ["female_share", "median_wage", "time_demands"]:
         if z in e1.columns and e1[z].notna().sum() > 15:
             zs[z] = e1[z]
     if e1["occupation_id"].nunique() < 10:
         return pd.DataFrame([{"note": "moderator regressions need >= 10 occupations (Phase 1)"}])
-    sub0 = e1.dropna(subset=["family_code"]).copy()
+    sub0 = e1[e1["family_code"].isin(order)].dropna(subset=["family_code"]).copy()
     sub0["family_code"] = pd.Categorical(sub0["family_code"], categories=order)
     for z_name in zs:
         sub = sub0.dropna(subset=[z_name]).copy()
@@ -125,40 +131,25 @@ def e1_moderator_regressions(e1: pd.DataFrame, outcomes=None) -> pd.DataFrame:
             if s.empty:
                 continue
             s["zmod"] = s[z_name]
-            zcol = "zmod"
             try:
-                m = smf.ols(
-                    f"{y} ~ C(family_code) * C(female) * {zcol} + C(resume_ids) + C(name_idx)",
-                    data=s,
-                ).fit(cov_type="cluster", cov_kwds={"groups": s["resume_ids"]})
+                m = _fit_moderator_ols(s, y)
             except Exception as e:  # noqa: BLE001
                 rows.append({"Z": z_name, "outcome": y, "error": str(e)[:120]})
                 continue
             wanted = [
-                ("C(family_code)[T.parent]", "fatherhood effect @ mean Z"),
-                ("C(family_code)[T.parent_gap]", "parent_gap (men) @ mean Z"),
-                ("C(family_code)[T.pregnant]", "pregnant (women) @ mean Z"),
+                ("fam_parent", "fatherhood effect @ mean Z"),
+                ("fam_parent_gap", "parent_gap (men) @ mean Z"),
+                ("fam_parent_committed", "parent_committed (men) @ mean Z"),
+                ("fam_married", "married (men) @ mean Z"),
+                ("fam_parent:F", "mother-minus-father gap @ mean Z"),
+                ("fam_parent:z", "fatherhood x Z"),
+                ("fam_parent:F:z", "mother-minus-father gap x Z (H3/H4)"),
+                ("fam_parent_gap:F", "parent_gap gender gap @ mean Z"),
+                ("fam_parent_gap:F:z", "parent_gap gender gap x Z"),
             ]
-            for pat, label in wanted:
-                if pat in m.params.index:
-                    r = _row(m, y, pat, label)
-                    r["Z"] = z_name
-                    rows.append(r)
-            zcol = "zmod"
-            inter_specs = [
-                (True, None, "mother-minus-father gap @ mean Z"),
-                (False, zcol, "fatherhood x Z"),
-                (True, zcol, "mother-minus-father gap x Z (H3/H4)"),
-            ]
-            if any(f == "parent_gap" for f in s["family_code"].unique()):
-                inter_specs.append(("gap", zcol, "parent_gap gender gap x Z"))
-            for spec in inter_specs:
-                if spec[0] == "gap":
-                    k = _find_key(m.params.index, "parent_gap", True, zcol)
-                else:
-                    k = _find_key(m.params.index, "parent", spec[0], spec[1])
-                if k:
-                    r = _row(m, y, k, spec[2])
+            for col, label in wanted:
+                if col in m._term_names:
+                    r = _row(m, y, col, label)
                     r["Z"] = z_name
                     rows.append(r)
     df = pd.DataFrame(rows)
@@ -173,10 +164,56 @@ def _norm_cdf(x):
     return NormalDist().cdf(x)
 
 
+def _fit_moderator_ols(s: pd.DataFrame, y: str):
+    """Manual full-rank moderator design (patsy `- term` triggers redundant coding):
+
+    intercept + family dummies + female + family:female + female:z + family:z +
+    family:female:z + resume FE + name FE. The z MAIN effect is excluded by
+    construction (occupation-level z is absorbed by resume FE). Returns an
+    statsmodels OLSResults with cluster SEs by resume.
+    """
+    import statsmodels.api as sm
+
+    fam = pd.get_dummies(s["family_code"], prefix="fam", drop_first=False).astype(float)
+    fam_levels = [c for c in fam.columns if c != "fam_none"]
+    fem = s["female"].astype(float).values
+    z = s["zmod"].astype(float).values
+    X = pd.DataFrame(index=s.index)
+    for lv in fam_levels:  # family main effects (reference: none)
+        X[lv] = fam[lv].values
+    X["female"] = fem
+    for lv in fam_levels:  # family x female
+        X[f"{lv}:F"] = fam[lv].values * fem
+    X["F:z"] = fem * z  # female x z
+    for lv in fam_levels:  # family x z
+        X[f"{lv}:z"] = fam[lv].values * z
+    for lv in fam_levels:  # family x female x z
+        X[f"{lv}:F:z"] = fam[lv].values * fem * z
+    rd = pd.get_dummies(s["resume_ids"], prefix="r", drop_first=True).astype(float)
+    for c in rd.columns:
+        X[c] = rd[c].values
+    nd = pd.get_dummies(s["name_idx"], prefix="n", drop_first=True).astype(float)
+    for c in nd.columns:
+        X[c] = nd[c].values
+    X = sm.add_constant(X, has_constant="add")
+    model = sm.OLS(s[y].astype(float).values, X.values)
+    res = model.fit(cov_type="cluster", cov_kwds={"groups": s["resume_ids"].values})
+    res._term_names = list(X.columns)
+    return res
+
+
 def _row(m, y, term, label):
+    """Works for formula fits (term=str) and manual fits (term=column name or index)."""
+    if isinstance(term, str) and not hasattr(m, "_term_names"):
+        coef, se, p = m.params[term], m.bse[term], m.pvalues[term]
+    elif isinstance(term, str):
+        i = m._term_names.index(term)
+        coef, se, p = m.params[i], m.bse[i], m.pvalues[i]
+    else:
+        coef, se, p = m.params[term], m.bse[term], m.pvalues[term]
     return {
-        "outcome": y, "term": label, "coef": m.params[term], "se": m.bse[term],
-        "tstat": m.tvalues[term], "pvalue": m.pvalues[term], "n": int(m.nobs),
+        "outcome": y, "term": label, "coef": coef, "se": se,
+        "tstat": coef / se if se else np.nan, "pvalue": p, "n": int(m.nobs),
     }
 
 

@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from ..config import MATERIALS_DIR, RUNS_DIR, load_occupations_built
+from ..config import MATERIALS_DIR, PLANS_DIR, RUNS_DIR, load_occupations_built
 
 
 def load_run_logs(run_id: str | None = None) -> pd.DataFrame:
@@ -39,8 +39,15 @@ def _moderators() -> pd.DataFrame:
     )
 
 
-def _ctx_from_plan(run_id: str) -> pd.Series:
-    """call_id -> render_ctx, recovered from the plan parquet (manifest points to it)."""
+def _ctx_from_plan(run_id: str | None) -> pd.Series:
+    """call_id -> render_ctx, recovered from plan parquets (manifest points to it)."""
+    if run_id is None:  # pooled: load every experiment plan
+        plans = sorted(PLANS_DIR.glob("*.parquet"))
+        dfs = [pd.read_parquet(p, columns=["call_id", "render_ctx"]) for p in plans]
+        if not dfs:
+            return pd.Series(dtype=object)
+        plan = pd.concat(dfs, ignore_index=True)
+        return plan.drop_duplicates("call_id").set_index("call_id")["render_ctx"]
     mf = RUNS_DIR / run_id / "manifest.json"
     if not mf.exists():
         return pd.Series(dtype=object)

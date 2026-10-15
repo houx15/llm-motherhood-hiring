@@ -164,6 +164,21 @@ Run `20261014-223507-pilot-deepseek_v41_flash`: 4,416 calls, $0.57, parse 99.9%,
 
 **Per spec §13 Phase D: STOPPED here pending researcher review.**
 
-> RESEARCHER REPLY (phase E): **APPROVED — via conversation, 2026-10-15: "1. yes. run"** (DeepSeek full E1–E4, all 20 occupations)
+---
+
+## 9. Phase 1 (E) completed — 2026-10-15
+
+Runs `20261015-012900` (E1), `20261015-023251` (E2), `20261015-040328` (E3),
+`20261015-042916` (E4). **47,760/47,760 valid (99.91%), 0 refusals, $5.76.**
+Acceptance criteria met (parse ≥ 98% ✓, spend ≤ estimate+20% ✓).
+Read `docs/phase1/interpretation.md`. Highlights: relational discrimination
+(E1 ≈ 0, E2 P(parent)=0.31–0.42, E3 token-parent impact ratio 0.53–0.56);
+no fatherhood bonus; leave-gap cue dominates; greedy JD wording triples the
+parent-gap penalty and doubles it for mothers; EEO boilerplate null; occupation
+time-demand gradient null (H3 fails observationally but E4 supports the mechanism
+experimentally); female_share *amplifies* the mother competence gap (opposite H4,
+exploratory). Budget remaining $192.91.
+
+> RESEARCHER REPLY (phase E): **APPROVED — via conversation, 2026-10-15: "1. yes. run"** (executed same day; see §9)
 
 > RESEARCHER REPLY (phase F):
