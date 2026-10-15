@@ -172,5 +172,17 @@ def compare(out: Path = typer.Option(RUNS_DIR / "pooled")) -> None:
     print(f"\n[compare] table + figure -> {out}")
 
 
+@app.command()
+def repair(
+    run_glob: str = typer.Option("*/logs.jsonl", help="glob of logs.jsonl files to scan"),
+    model: str = typer.Option(...),
+    max_calls: int = typer.Option(None),
+) -> None:
+    """Targeted second repair pass for invalid non-refusal calls (documented deviation)."""
+    from .repair import run_repair
+
+    run_repair(run_glob, model, max_calls)
+
+
 if __name__ == "__main__":
     app()

@@ -186,3 +186,28 @@ exploratory). Budget remaining $192.91.
 > Note: "gpt-6 luna" resolved to the pinned dated slug `openai/gpt-6-luna` (never
 > the `gpt-luna-latest` alias, spec §0.3). All three verified live on OpenRouter
 > (first-party endpoints Anthropic/OpenAI/Alibaba, reasoning off, JSON mode OK).
+
+---
+
+## 10. Qwen3.8 Flash E2 scale-overflow — decision (2026-10-15)
+
+Qwen emits **out-of-range ratings (mostly 8, sometimes 9) on 1–7 scales in ~23% of
+E2 calls**, condition-correlated: parent_gap ~32% > parent ~26% > committed ~21%,
+and the overflow lands on the **childless candidate 3:1** (position-counterbalanced).
+E1 is unaffected (0.65% invalid). Reading: differential enthusiasm that breaks the
+scale precisely when a childless candidate is compared against a leave-gap parent —
+listwise deletion would bias Qwen's estimated parenthood penalty toward zero.
+
+Decisions:
+1. Primary analysis keeps strict validity (spec §9: clamp nothing).
+2. A **targeted second repair pass** (`audit repair`) re-asks invalid non-refusal
+   calls with an explicit field-level correction; repairs are logged with
+   `repair_of` links and counted in the ledger. (Test batch: 25/25 repaired.)
+   This exceeds spec §9's "one automatic repair attempt" — documented deviation.
+3. A **winsorized robustness re-parse** (8→7, 9→7 on ratings only) will be reported
+   alongside, to show both bounds (strict deletion vs recovered data).
+4. Claude Haiku 5.5 shows ~1% condition-correlated soft refusals (valid JSON with
+   all-zero scores + "protected characteristic" rationale), concentrated in
+   family-cue cells; analyzed as refusal-rate-by-condition per spec §10.
+
+---
