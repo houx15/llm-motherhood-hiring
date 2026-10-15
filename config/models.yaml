@@ -17,8 +17,17 @@ models:
     peak_multiplier: 1.0          # DeepInfra pricing is flat (DeepSeek peak doubling N/A)
   - key: claude_haiku_55
     slug: anthropic/claude-haiku-5.5
-    verified: false           # verify slug + price before Phase 2
+    verified: true            # slug + first-party routing + prices verified live 2026-10-15
     provider: {order: ["Anthropic"], allow_fallbacks: false}
+    reasoning: {enabled: false}
+    temperature: null
+    max_tokens: 600
+    price_per_mtok: {input: 0.10, output: 0.50}
+    peak_multiplier: 1.0
+  - key: gpt6_luna
+    slug: openai/gpt-6-luna
+    verified: true            # pinned dated slug (never gpt-luna-latest); verified 2026-10-15
+    provider: {order: ["OpenAI"], allow_fallbacks: false}
     reasoning: {enabled: false}
     temperature: null
     max_tokens: 600
@@ -26,7 +35,7 @@ models:
     peak_multiplier: 1.0
   - key: qwen38_flash
     slug: qwen/qwen3.8-flash
-    verified: false
+    verified: true
     provider: {order: ["Alibaba"], allow_fallbacks: false}
     reasoning: {enabled: false}
     temperature: null

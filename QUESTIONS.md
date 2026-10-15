@@ -181,4 +181,8 @@ exploratory). Budget remaining $192.91.
 
 > RESEARCHER REPLY (phase E): **APPROVED — via conversation, 2026-10-15: "1. yes. run"** (executed same day; see §9)
 
-> RESEARCHER REPLY (phase F):
+> RESEARCHER REPLY (phase F): **APPROVED — via conversation, 2026-10-15: "use claude haiku 5.5, gpt-6 luna, qwen 3.8 flash"**
+>
+> Note: "gpt-6 luna" resolved to the pinned dated slug `openai/gpt-6-luna` (never
+> the `gpt-luna-latest` alias, spec §0.3). All three verified live on OpenRouter
+> (first-party endpoints Anthropic/OpenAI/Alibaba, reasoning off, JSON mode OK).

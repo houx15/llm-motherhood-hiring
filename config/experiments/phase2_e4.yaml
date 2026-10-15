@@ -1,0 +1,6 @@
+name: phase2_e4
+phase: phase2_other_models
+models: [claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: in_e4
+experiments:
+  e4: {samples: 5}

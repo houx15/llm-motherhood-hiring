@@ -1,0 +1,8 @@
+name: phase2_e123
+phase: phase2_other_models
+models: [claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: all
+experiments:
+  e1: {samples: 5}
+  e2: {samples: 5}
+  e3: {samples: 3}
