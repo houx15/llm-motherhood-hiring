@@ -9,7 +9,7 @@ import pandas as pd
 from ..config import MATERIALS_DIR, PLANS_DIR, RUNS_DIR, load_occupations_built
 
 
-def load_run_logs(run_id: str | None = None) -> pd.DataFrame:
+def load_run_logs(run_id: str | None = None, model_key: str | None = None) -> pd.DataFrame:
     rows = []
     files = [RUNS_DIR / run_id / "logs.jsonl"] if run_id else sorted(RUNS_DIR.glob("*/logs.jsonl"))
     for f in files:
@@ -23,6 +23,8 @@ def load_run_logs(run_id: str | None = None) -> pd.DataFrame:
     df = pd.DataFrame(rows)
     if df.empty:
         return df
+    if model_key and "model_key" in df.columns:
+        df = df[df["model_key"] == model_key]
     # pooled mode (run_id=None): dedup by call_id, preferring valid parses (repairs,
     # re-runs) and the latest attempt
     if run_id is None and "call_id" in df.columns:
@@ -58,8 +60,8 @@ def _ctx_from_plan(run_id: str | None) -> pd.Series:
     return plan.set_index("call_id")["render_ctx"]
 
 
-def build_tables(run_id: str) -> dict[str, pd.DataFrame]:
-    logs = load_run_logs(run_id)
+def build_tables(run_id: str | None, model_key: str | None = None) -> dict[str, pd.DataFrame]:
+    logs = load_run_logs(run_id, model_key=model_key)
     logs = logs[logs["experiment"].isin(["e1", "e2", "e3", "e4"])]
     if "render_ctx" not in logs.columns:
         logs["render_ctx"] = logs["call_id"].map(_ctx_from_plan(run_id))

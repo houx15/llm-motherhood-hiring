@@ -156,5 +156,21 @@ def report(run: str = typer.Option(..., "--run")) -> None:
     make_report(run)
 
 
+@app.command()
+def compare(out: Path = typer.Option(RUNS_DIR / "pooled")) -> None:
+    """Cross-model comparison table + figure (all models in the ledger)."""
+    from .analysis.compare import compare_models
+
+    table = compare_models(out)
+    cols = ["model_key", "slug", "parse_ok", "refusal",
+            "e2_P_parent_parent_female", "e2_P_parent_parent_male",
+            "e2_P_parent_parent_gap_female", "e2_P_parent_parent_gap_male",
+            "e3_impact_parent_female", "e3_impact_parent_male",
+            "e2_salary_gap_mother", "e4_greedy_gap_mother_pp"]
+    cols = [c for c in cols if c in table.columns]
+    print(table[cols].to_string(index=False))
+    print(f"\n[compare] table + figure -> {out}")
+
+
 if __name__ == "__main__":
     app()
