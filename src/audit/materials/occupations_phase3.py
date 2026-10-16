@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import io
 import itertools
+import json
 import zipfile
 from pathlib import Path
 
@@ -264,6 +265,7 @@ def build_phase3(verbose: bool = True) -> pd.DataFrame:
     df = pd.DataFrame(all_rows)
     MATERIALS_DIR.mkdir(parents=True, exist_ok=True)
     df.to_csv(MATERIALS_DIR / "occupations_phase3.csv", index=False)
+    _write_registry(combo)
 
     before = pd.DataFrame(rows).dropna(subset=["female_share"])
     after = pd.concat([before, pd.DataFrame(combo)])
@@ -273,6 +275,79 @@ def build_phase3(verbose: bool = True) -> pd.DataFrame:
     if verbose:
         print(doc)
     return df
+
+
+def build_phase3_jds() -> None:
+    """One JD per O8 occupation from O*NET tasks + skills (only if missing),
+    with the required license/credential in the Requirements line (§5.3)."""
+    from ..config import load_occupations_built
+
+    tasks = _load_onet_excel(RAW_DIR, "Task Statements")
+    ratings = _load_onet_excel(RAW_DIR, "Task Ratings")
+    skills = _load_onet_excel(RAW_DIR, "Essential Skills")
+    out_dir = MATERIALS_DIR / "job_descriptions"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    written = []
+    for occ in load_occupations_built().occupations:
+        if occ.cohort != "o8":
+            continue
+        out = out_dir / f"{occ.id}.json"
+        if out.exists():
+            continue
+        prefixes = tuple((occ.onet_soc or occ.soc).split("+")) + (occ.soc,)
+        task_list: list[str] = []
+        if tasks is not None and ratings is not None:
+            r_imp = ratings[ratings["Scale ID"] == "IM"][["Task ID", "Data Value"]]
+            tr = tasks.merge(r_imp, on="Task ID", how="left")
+            tr = tr[tr["O*NET-SOC Code"].astype(str).str.startswith(prefixes)]
+            task_list = tr.sort_values("Data Value", ascending=False).head(5)["Task"].tolist()
+        skill_list: list[str] = []
+        if skills is not None:
+            s = skills[
+                skills["O*NET-SOC Code"].astype(str).str.startswith(prefixes)
+                & (skills["Scale ID"] == "IM")
+            ]
+            skill_list = s.sort_values("Data Value", ascending=False).head(6)["Element Name"].tolist()
+        bullets = "\n".join(f"- {str(t).rstrip('.').capitalize()}" for t in task_list)
+        skills_txt = ", ".join(skill_list) if skill_list else "relevant domain skills"
+        cred = f"; {occ.license}" if occ.license else ""
+        jd = (
+            f"{occ.title} - Hiring Announcement\n\n"
+            f"Our company is hiring a {occ.title.lower()} to join our team. The role involves the "
+            f"core work of the occupation summarized below.\n\n"
+            f"Key responsibilities:\n{bullets}\n\n"
+            f"Requirements: {skills_txt}{cred}; several years of relevant experience; strong "
+            f"communication skills and reliability. Competitive salary and benefits offered.\n\n"
+            f"To apply, submit a resume and a short cover note."
+        )
+        rec = {"occupation_id": occ.id, "soc": occ.soc, "jd": jd, "word_count": len(jd.split())}
+        out.write_text(json.dumps(rec, indent=2))
+        written.append(occ.id)
+    if written:
+        print(f"[phase3-jd] wrote JDs for: {', '.join(written)}")
+
+
+def _write_registry(combo: list[dict]) -> None:
+    """Registry JSON for the selected O8 (consumed by load_occupations_built)."""
+    import json
+
+    cur = pd.read_csv(MATERIALS_DIR / "occupations.csv").set_index("id")
+    recs = []
+    for c in combo:
+        cell_gender = "female" if c["female_share"] >= 0.5 else "male"
+        cell_wage = "high" if c["median_wage"] >= 80000 else "low"
+        recs.append({
+            "id": c["id"], "title": c["title"], "soc": c["soc"],
+            "soc_aliases": [], "cell": {"gender": cell_gender, "wage": cell_wage},
+            "female_share": round(float(c["female_share"]), 4),
+            "median_wage": float(c["median_wage"]),
+            "time_demands": None, "in_e4": False,
+            "cohort": "o8", "onet_soc": c["onet_soc"],
+            "physical": round(float(c["physical"]), 4), "care": round(float(c["care"]), 4),
+            "analytic": round(float(c["analytic"]), 4), "manage": round(float(c["manage"]), 4),
+            "license": c["licensed"] or None,
+        })
+    (MATERIALS_DIR / "occupations_phase3.json").write_text(json.dumps(recs, indent=2))
 
 
 def _frontier(rows: list[dict], usable: list[dict]) -> list[tuple[float, float, float, list[str]]]:

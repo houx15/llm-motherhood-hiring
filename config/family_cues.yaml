@@ -1,4 +1,5 @@
-# Family-status cues (spec §4.5). Cue text identical across genders.
+# Family-status cues (spec §4.5, main run) + phase-3 placebos (SPEC_PHASE3 §3).
+# Cue text identical across genders.
 # A cover note paragraph is rendered above the resume in EVERY condition
 # (neutral text for `none`), so note presence is constant.
 cover_note:
@@ -8,6 +9,10 @@ cover_note:
   parent_gap: "I am married with two children."
   parent_committed: "I am married with two children."
   pregnant: "Please note that I am currently pregnant."
+  # --- phase-3 placebos (PENDING researcher approval, QUESTIONS.md §11) ---
+  personal: "Outside work, I enjoy distance running and recently completed my third marathon."
+  gap_travel: "I am excited to be applying for this position."
+  gap_parental_only: "I am excited to be applying for this position."
 
 resume_changes:
   none: {}
@@ -29,3 +34,23 @@ resume_changes:
       - "Top performer award, 2023 and 2024"
       - "Volunteered to lead a high-priority project requiring extended hours"
   pregnant: {}
+  # --- phase-3 placebos: differ from `none` ONLY in the lines below.
+  # `personal` volunteer line is length-matched to the `parent` PTA line
+  # (59 vs 55 chars, +7%); same years. No family wording (validator-enforced).
+  personal:
+    volunteer:
+      - "Volunteer Coordinator, Riverside Pet Shelter (2022-present)"
+  # Both gap placebos reuse the `parent_gap` date arithmetic exactly
+  # (2024-01 .. 2024-09, later entries shifted by 9 months); they differ
+  # from `parent_gap` only in the leave label, the absence of the PTA
+  # volunteer line, and the neutral cover note.
+  gap_travel:
+    leave:
+      label: "Career break — extended travel"
+      start_month: 2024-01
+      end_month: 2024-09
+  gap_parental_only:
+    leave:
+      label: "Parental leave"
+      start_month: 2024-01
+      end_month: 2024-09

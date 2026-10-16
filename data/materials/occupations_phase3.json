@@ -1,0 +1,170 @@
+[
+  {
+    "id": "housekeeper",
+    "title": "Housekeeper (Maids and Housekeeping Cleaners)",
+    "soc": "37-2012",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "female",
+      "wage": "low"
+    },
+    "female_share": 0.864,
+    "median_wage": 35510.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "37-2012",
+    "physical": 0.154,
+    "care": 0.4818,
+    "analytic": -1.8031,
+    "manage": -1.0537,
+    "license": null
+  },
+  {
+    "id": "childcare_worker",
+    "title": "Childcare Worker",
+    "soc": "39-9011",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "female",
+      "wage": "low"
+    },
+    "female_share": 0.932,
+    "median_wage": 34980.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "39-9011",
+    "physical": 0.2595,
+    "care": 0.6361,
+    "analytic": -0.9359,
+    "manage": -0.0809,
+    "license": null
+  },
+  {
+    "id": "police_officer",
+    "title": "Police Officer (Patrol)",
+    "soc": "33-3051",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "male",
+      "wage": "low"
+    },
+    "female_share": 0.164,
+    "median_wage": 76210.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "33-3051",
+    "physical": 0.9002,
+    "care": 1.3149,
+    "analytic": 0.6587,
+    "manage": -0.0545,
+    "license": "POST law-enforcement certification"
+  },
+  {
+    "id": "emt_paramedic",
+    "title": "EMT / Paramedic",
+    "soc": "29-2040",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "male",
+      "wage": "low"
+    },
+    "female_share": 0.3514,
+    "median_wage": 48150.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "29-2043",
+    "physical": 1.3878,
+    "care": 1.961,
+    "analytic": -0.0965,
+    "manage": 0.41,
+    "license": "National Registry EMT / paramedic certification"
+  },
+  {
+    "id": "veterinarian",
+    "title": "Veterinarian",
+    "soc": "29-1131",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "female",
+      "wage": "high"
+    },
+    "female_share": 0.709,
+    "median_wage": 130100.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "29-1131",
+    "physical": -0.2234,
+    "care": 1.1396,
+    "analytic": -0.2058,
+    "manage": 0.1502,
+    "license": "DVM and state veterinary license"
+  },
+  {
+    "id": "health_services_manager",
+    "title": "Medical and Health Services Manager",
+    "soc": "11-9111",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "female",
+      "wage": "high"
+    },
+    "female_share": 0.753,
+    "median_wage": 123860.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "11-9111",
+    "physical": -0.7776,
+    "care": 0.5323,
+    "analytic": 0.9684,
+    "manage": 2.1573,
+    "license": null
+  },
+  {
+    "id": "electrician",
+    "title": "Electrician",
+    "soc": "47-2111",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "male",
+      "wage": "low"
+    },
+    "female_share": 0.035,
+    "median_wage": 63190.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "47-2111",
+    "physical": 1.6274,
+    "care": -0.1115,
+    "analytic": 0.1922,
+    "manage": 1.6382,
+    "license": "Journeyman electrician license"
+  },
+  {
+    "id": "security_guard",
+    "title": "Security Guard",
+    "soc": "33-9032",
+    "soc_aliases": [],
+    "cell": {
+      "gender": "male",
+      "wage": "low"
+    },
+    "female_share": 0.229,
+    "median_wage": 38020.0,
+    "time_demands": null,
+    "in_e4": false,
+    "cohort": "o8",
+    "onet_soc": "33-9032",
+    "physical": 0.7753,
+    "care": 1.478,
+    "analytic": 0.6685,
+    "manage": 1.5907,
+    "license": "State guard card"
+  }
+]

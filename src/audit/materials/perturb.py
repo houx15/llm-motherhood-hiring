@@ -1,11 +1,16 @@
-"""Render base résumé JSON into prompt text, applying name + family-status cues.
+"""Render base résumé JSON into prompt text, applying name + family-status cues
+and (phase 3) gender-cue levels.
 
 Design guarantees (tested in tests/):
 - A rendered résumé differs from the `none` condition ONLY in the cue lines
   specified by config/family_cues.yaml and the name line.
-- Female and male versions of a condition differ only in the name.
-- Dates are deterministic month arithmetic; `parent_gap` splits the straddling
-  entry so no incidental gap is created.
+- Female and male versions of a condition differ only in the name
+  (and the gender field line where the cue level has one).
+- L2 vs L1 differ only in the name line (initial vs full first name).
+- Placebo conditions differ from `none` only in the lines specified in
+  config/family_cues.yaml (volunteer line / leave entry / cover note).
+- Dates are deterministic month arithmetic; `parent_gap` and both gap placebos
+  share identical date arithmetic (leave 2024-01..2024-09, later entries shifted).
 """
 from __future__ import annotations
 
@@ -13,7 +18,7 @@ import copy
 import json
 from datetime import date
 
-from ..config import load_family_cues, load_names
+from ..config import load_cue_levels, load_family_cues, load_names
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -118,14 +123,47 @@ def _fmt_int(t: int) -> str:
     return f"{y:04d}-{m + 1:02d}"
 
 
-def render_resume(resume: dict, gender: str, name_idx: int, family_code: str) -> str:
-    """Render one candidate packet: cover note + named resume text."""
+def _candidate_header(gender: str, name_idx: int, cue_level: str, initial_idx: int | None) -> str:
+    """Name/identity block per cue level (SPEC_PHASE3 §2.1).
+
+    L0 name: gendered first name + surname. L1 name_field: + "Gender: ..." line.
+    L2 initial_field: initial + surname + field. L3 blind: initial + surname only.
+    """
+    levels = load_cue_levels()["levels"]
+    if cue_level not in levels:
+        raise ValueError(f"unknown cue level {cue_level!r}")
     names = load_names()
-    full = names.full_name(gender, name_idx)
+    surname = names.surnames[name_idx % len(names.surnames)]
+    spec = levels[cue_level]
+    if spec["use_initial"]:
+        initials = load_cue_levels()["initials"]
+        ii = (initial_idx if initial_idx is not None else name_idx) % len(initials)
+        header = f"{initials[ii]} {surname}"
+    else:
+        first = names.first_names(gender)[name_idx % len(names.first_names(gender))]  # type: ignore[arg-type]
+        header = f"{first} {surname}"
+    if spec["gender_field"]:
+        header += "\n" + load_cue_levels()["field_line"][gender]
+    return header
+
+
+def render_resume(
+    resume: dict,
+    gender: str,
+    name_idx: int,
+    family_code: str,
+    cue_level: str = "name",
+    initial_idx: int | None = None,
+) -> str:
+    """Render one candidate packet: cover note + named resume text.
+
+    `cue_level` defaults to L0 (`name`) so main-run plans render identically.
+    """
+    header = _candidate_header(gender, name_idx, cue_level, initial_idx)
     r = apply_family_cue(resume, family_code)
     cues = load_family_cues()
     note = cues["cover_note"].get(family_code, cues["cover_note"]["none"])
-    lines = [f"Cover note: \"{note}\"", "", full, ""]
+    lines = [f"Cover note: \"{note}\"", "", header, ""]
     lines.append(f"Summary: {r['summary']}")
     lines.append("Experience:")
     for e in r["experience"]:

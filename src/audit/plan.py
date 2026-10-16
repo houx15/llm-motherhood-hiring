@@ -82,6 +82,7 @@ def _base_row(experiment: str, model_key: str, phase: str, occ: str, **kw) -> di
         "contrast": None,
         "draw": None,
         "name_pair": None,
+        "cue_level": None,
         "render_ctx": None,
     }
     row.update(kw)

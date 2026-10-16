@@ -73,7 +73,8 @@ class NamesCfg(BaseModel):
         return self.female if gender == "female" else self.male
 
     def full_name(self, gender: Literal["female", "male"], idx: int) -> str:
-        return f"{self.first_names(gender)[idx]} {self.surnames[idx]}"
+        first = self.first_names(gender)[idx % len(self.first_names(gender))]
+        return f"{first} {self.surnames[idx % len(self.surnames)]}"
 
 
 class Occupation(BaseModel):
@@ -86,6 +87,14 @@ class Occupation(BaseModel):
     median_wage: float | None = None
     time_demands: float | None = None
     in_e4: bool = False
+    # phase-3 fields (optional so the main-run registry stays valid)
+    cohort: str = "o20"          # "o20" main run | "o8" phase-3 additions
+    onet_soc: str | None = None  # O*NET 31.0 codes used for work-activity scores
+    physical: float | None = None
+    care: float | None = None
+    analytic: float | None = None
+    manage: float | None = None
+    license: str | None = None   # credential that MUST appear on résumés/JDs
 
 
 class OccupationsCfg(BaseModel):
@@ -109,6 +118,7 @@ class ExperimentCfg(BaseModel):
     models: list[str]
     occupations: str | list[str] = "all"  # "all" | "in_e4" | list of ids
     experiments: dict[str, Any] = Field(default_factory=dict)
+    pilot: bool = False  # phase-3 pilot mode (1 sample per cell)
 
 
 def _load_yaml(path: Path) -> dict:
@@ -128,6 +138,11 @@ def load_budget() -> BudgetCfg:
 @lru_cache(maxsize=None)
 def load_names() -> NamesCfg:
     return NamesCfg(**_load_yaml(CONFIG_DIR / "names.yaml"))
+
+
+@lru_cache(maxsize=None)
+def load_cue_levels() -> dict:
+    return _load_yaml(CONFIG_DIR / "cue_levels.yaml")
 
 
 @lru_cache(maxsize=None)
@@ -156,10 +171,19 @@ def load_experiment(name: str) -> ExperimentCfg:
 
 
 def load_occupations_built() -> OccupationsCfg:
-    """Occupations with moderators filled (data/materials/occupations.json)."""
+    """Occupations with moderators filled (data/materials/occupations.json),
+    merged with the phase-3 O8 registry when present (occupations_phase3.json)."""
+    import json
+
+    occs: list[Occupation] = []
     path = MATERIALS_DIR / "occupations.json"
     if path.exists():
-        import json
-
-        return OccupationsCfg(occupations=[Occupation(**o) for o in json.loads(path.read_text())])
-    return OccupationsCfg.load()
+        occs = [Occupation(**o) for o in json.loads(path.read_text())]
+    else:
+        occs = OccupationsCfg.load().occupations or []
+    p3 = MATERIALS_DIR / "occupations_phase3.json"
+    if p3.exists():
+        known = {o.id for o in occs}
+        extra = [Occupation(**o) for o in json.loads(p3.read_text())]
+        occs += [o for o in extra if o.id not in known]
+    return OccupationsCfg(occupations=occs)

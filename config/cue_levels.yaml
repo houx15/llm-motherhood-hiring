@@ -1,0 +1,13 @@
+# Gender-cue levels for phase 3 (SPEC_PHASE3 §2.1).
+# The gender field is one line in the résumé header, directly under the name,
+# identical wording across genders. Initials are not strongly gendered as initials
+# and rotate like names.
+levels:
+  name:          {code: L0, gender_field: false, use_initial: false}
+  name_field:    {code: L1, gender_field: true,  use_initial: false}
+  initial_field: {code: L2, gender_field: true,  use_initial: true}
+  blind:         {code: L3, gender_field: false, use_initial: true}
+field_line:
+  female: "Gender: Female"
+  male: "Gender: Male"
+initials: ["J.", "M.", "K.", "R.", "T.", "D."]

@@ -1,0 +1,9 @@
+# Lawyer-cells rerun with corrected attorney résumés (SPEC_PHASE3 §4.4):
+# E1 original 11 cells x lawyer_00/01 (3 names x 5 samples, main-run geometry)
+# + E2 original 3 contrasts x 2 genders on pair (0,1), main-run geometry.
+name: phase3_lawyer
+phase: phase3_main
+models: [deepseek_v41_flash, claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: [lawyer]
+experiments:
+  lawyer_fix: {}

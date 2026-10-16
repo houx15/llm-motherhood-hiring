@@ -1,0 +1,10 @@
+# Phase-3 main run (SPEC_PHASE3 §4). All four models; run DeepSeek first, then
+# the other three after researcher approval of the DeepSeek short report.
+name: phase3_main
+phase: phase3_main
+models: [deepseek_v41_flash, claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: all
+experiments:
+  e1v3: {samples: 6}   # reps per cell (6 names rotated)
+  e2v3: {samples: 2}   # 6 name-draws = 3 name pairs x 2 samples per cell part
+  e3v3: {samples: 1}   # 36 pools per composition/occupation/level

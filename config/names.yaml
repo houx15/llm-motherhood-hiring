@@ -1,7 +1,9 @@
-# 3 female + 3 male first names, shared surnames; name i always pairs with surname i.
-# Strongly gendered, White-coded (racially held constant per proposal), high-frequency,
-# consistent with Bertrand & Mullainathan (2004) / Gaddis (2017) validated lists.
-# FINAL LIST PENDING RESEARCHER APPROVAL — see QUESTIONS.md.
-female: [Emily, Sarah, Anne]
-male: [Greg, Matthew, Todd]
+# 6 female + 6 male first names, shared surnames; name i pairs with surname i mod 3.
+# White-coded and frequency-matched from the Bertrand & Mullainathan (2004) list
+# (validated in Gaddis 2017), per SPEC_PHASE3 §2.3. The first three per gender are
+# the main-run names (phases 1-2); phase 3 adds three more per gender and rotates
+# all six by a balanced hash so each name appears equally often within every cell.
+# PENDING researcher approval (QUESTIONS.md §11) before any paid phase-3 run.
+female: [Emily, Sarah, Anne, Allison, Laurie, Meredith]
+male: [Greg, Matthew, Todd, Brad, Geoffrey, Neil]
 surnames: [Baker, Walsh, Murphy]

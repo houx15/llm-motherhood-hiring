@@ -78,7 +78,7 @@ PII_PATTERNS = {
     "url": re.compile(r"https?://|www\.|linkedin|github\.com|\.com/\w", re.I),
     "street": re.compile(r"\d+\s+[A-Z][a-z]+\s+(Street|St|Avenue|Ave|Road|Rd|Blvd|Drive|Dr|Lane|Ln)\b"),
     "dob": re.compile(r"\b(19[5-9]\d|200[0-5])\b.*(born|birth|date of birth)|(born|dob).*(19[5-9]\d)", re.I),
-    "study_names": re.compile(r"\b(Emily|Sarah|Anne|Greg|Matthew|Todd)\b"),
+    "study_names": re.compile(r"\b(Emily|Sarah|Anne|Greg|Matthew|Todd|Allison|Laurie|Meredith|Brad|Geoffrey|Neil)\b"),
 }
 
 
@@ -214,13 +214,33 @@ GROUNDING — representative work activities for this occupation:
 COMMON SKILLS: {skills}
 
 PROFILE VARIANT (use for diversity): {variant}
-
+{credential}
 STRICT RULES:
 1. NO personal information, NO real company names (use generic descriptors like "{industry}"), NO gender or family or marital cues (never use words like "family", "parent", "mother", "father", "married", "children"); gender-neutral phrasing only.
 2. Exactly 3-4 jobs covering 8-12 years of continuous full-time experience, no gaps, no overlaps; LAST job ends "Present". Dates strictly "YYYY-MM".
 3. Bullets grounded in the work activities above; quantified achievements fine. Do not exceed ~10 years total experience.
 4. Education 1-2 entries, generic institutions; degree year consistent with experience start.
 5. summary: 1-2 sentences. skills: 10-14 items. volunteer: [] (empty). notes: "".
+
+{schema}"""
+
+
+# Phase-3 lawyer fix (SPEC_PHASE3 §4.4): qualified attorneys only.
+LAWYER_TMPL = """You are preparing synthetic research materials for a hiring study.
+
+Create ONE realistic, anonymized resume for a qualified practicing "{title}".
+{dates}
+
+The candidate MUST be a qualified attorney:
+- Juris Doctor (J.D.) from an accredited law school (generic institution).
+- Active admission to a state bar (list it in the education or a "Credentials" note inside the education entry, e.g. "Admitted to the State Bar (2016)").
+- 8-12 years of actual attorney experience (e.g., associate/counsel at law firms or in-house legal departments), with litigation or transactional accomplishments.
+
+STRICT RULES:
+1. NO personal information, NO real company names (use generic descriptors like "a regional law firm"), NO gender or family or marital cues; gender-neutral phrasing only.
+2. Exactly 3-4 attorney jobs covering 8-12 years of continuous full-time experience, no gaps, no overlaps; LAST job ends "Present". Dates strictly "YYYY-MM".
+3. Do not exceed ~10 years total experience. Degree year consistent with experience start.
+4. Education 1-2 entries, generic institutions. skills: 10-14 items. volunteer: [] (empty). notes: "".
 
 {schema}"""
 
@@ -264,6 +284,8 @@ def build_jobs(force: bool = False) -> list[dict]:
     jobs: list[dict] = []
     rng = random.Random(20261014)
     for occ in occs:
+        if occ.cohort == "o8":
+            continue  # phase-3 occupations built by build_phase3_jobs
         out = MATERIALS_DIR / "base_resumes" / f"{occ.id}.json"
         if out.exists() and not force:
             continue
@@ -290,12 +312,106 @@ def build_jobs(force: bool = False) -> list[dict]:
                     tasks=tasks or "typical occupation duties",
                     skills=skills or "core occupational skills", variant=variant,
                     occ=occ.id, industry=variant, dates=STRICT_DATE_RULES, schema=SCHEMA_LINE,
+                    credential="",
                 )
                 job = {"kind": "synth", "resume_id": rid, "occ": occ.id, "prompt": prompt}
             job["role"] = "base" if idx < 4 else "extra"
             jobs_for_occ.append(job)
         jobs.extend(jobs_for_occ)
     return jobs
+
+
+def build_phase3_jobs(force: bool = False) -> list[dict]:
+    """Phase-3 materials jobs (SPEC_PHASE3 §4.4, §5.3):
+    4 base resumes per O8 occupation (licensed ones must show the credential)
+    and replacement attorney drafts for lawyer_00 / lawyer_01."""
+    occs = load_occupations_built().occupations
+    by_id = {o.id: o for o in occs}
+    occ_df = {o.id: o.model_dump() for o in occs}
+    staging = _staging_dir()
+    jobs: list[dict] = []
+    rng = random.Random(20261016)
+    for occ in occs:
+        if occ.cohort != "o8":
+            continue
+        out = MATERIALS_DIR / "base_resumes" / f"{occ.id}.json"
+        if out.exists() and not force:
+            continue
+        tasks, skills = _onet_grounding(occ_df[occ.id])
+        for idx in range(4):  # O8 is not in E3: 4 base resumes, no extras
+            rid = f"{occ.id}_{idx:02d}"
+            staged = staging / f"{rid}.json"
+            if staged.exists() and not force:
+                continue
+            variant = INDUSTRY_SEEDS[(idx + rng.randrange(3)) % len(INDUSTRY_SEEDS)]
+            cred = (
+                f'REQUIRED CREDENTIAL: the resume must clearly show "{occ.license}" '
+                "(in education, a certification entry, or the most recent job title).\n"
+                if occ.license else ""
+            )
+            prompt = SYNTH_TMPL.format(
+                title=occ.title, soc=occ.soc,
+                tasks=tasks or "typical occupation duties",
+                skills=skills or "core occupational skills", variant=variant,
+                occ=occ.id, industry=variant, dates=STRICT_DATE_RULES, schema=SCHEMA_LINE,
+                credential=cred,
+            )
+            jobs.append({"kind": "synth", "resume_id": rid, "occ": occ.id,
+                         "prompt": prompt, "role": "base"})
+    # lawyer fix: replace the two unqualified Kaggle-derived attorneys
+    lawyer = by_id["lawyer"]
+    for idx in (0, 1):
+        rid = f"lawyer_{idx:02d}"
+        staged = staging / f"{rid}.json"
+        if staged.exists() and not force:
+            continue
+        prompt = LAWYER_TMPL.format(
+            title=lawyer.title, dates=STRICT_DATE_RULES, schema=SCHEMA_LINE,
+        )
+        jobs.append({"kind": "lawyer_fix", "resume_id": rid, "occ": "lawyer",
+                     "prompt": prompt, "role": "base"})
+    return jobs
+
+
+def freeze_phase3() -> list[str]:
+    """Freeze O8 files (4 valid each) and rewrite lawyer.json with the new
+    attorney drafts for 00/01 (02-05 kept). Returns problems."""
+    problems: list[str] = []
+    staging = _staging_dir()
+    results: dict[str, dict] = {}
+    for f in staging.glob("*.json"):
+        try:
+            obj = json.loads(f.read_text())
+            results[f.stem] = obj
+        except json.JSONDecodeError:
+            continue
+    occs = {o.id: o for o in load_occupations_built().occupations}
+    for occ in occs.values():
+        if occ.cohort != "o8":
+            continue
+        items = sorted(
+            (r for rid, r in results.items() if r.get("occupation_id") == occ.id),
+            key=lambda r: r["resume_id"],
+        )[:4]
+        if len(items) == 4:
+            out = MATERIALS_DIR / "base_resumes" / f"{occ.id}.json"
+            out.write_text(json.dumps(items, indent=2, ensure_ascii=False))
+        else:
+            problems.append(f"{occ.id}: only {len(items)}/4 valid drafts; file NOT written")
+    # lawyer: replace 00/01, keep the (already frozen) 02-05
+    lawyer_path = MATERIALS_DIR / "base_resumes" / "lawyer.json"
+    current = json.loads(lawyer_path.read_text())
+    new00 = results.get("lawyer_00")
+    new01 = results.get("lawyer_01")
+    if new00 and new01:
+        merged = sorted(
+            [r for r in current if r["resume_id"] not in ("lawyer_00", "lawyer_01")] + [new00, new01],
+            key=lambda r: r["resume_id"],
+        )
+        lawyer_path.write_text(json.dumps(merged, indent=2, ensure_ascii=False))
+    else:
+        problems.append("lawyer: replacement drafts for 00/01 not both valid; file NOT rewritten")
+    return problems
 
 
 async def generate_materials(

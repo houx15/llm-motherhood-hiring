@@ -12,11 +12,13 @@ from .config import RUNS_DIR, BudgetCfg, ModelCfg, load_budget
 
 # Default token estimates per call (input, output) before pilot measurement (spec §7).
 TOKEN_EST = {
-    "e1": (1300, 300),
-    "e2": (2100, 350),
-    "e3": (4850, 200),
+    # calibrated to ledger means (2026-10-16, ~196k calls) + ~5% for phase-3 cue lines
+    "e1": (1140, 130),
+    "e2": (1760, 240),
+    "e3": (4570, 120),
     "e4": (1350, 300),
     "e5": (1000, 700),
+    "manip": (1150, 40),
     "pretest": (1300, 300),
     "materials_gen": (1500, 700),
 }

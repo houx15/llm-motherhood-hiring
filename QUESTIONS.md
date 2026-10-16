@@ -224,3 +224,81 @@ Decisions:
    family-cue cells; analyzed as refusal-rate-by-condition per spec §10.
 
 ---
+
+## 11. Phase 3 (SPEC_PHASE3.md) — decisions & approval gate (2026-10-16)
+
+### 11.1 PENDING APPROVAL — wording gate before any paid phase-3 run
+
+Per SPEC_PHASE3 §3/§6.2, the following need "APPROVED: phase3 wording" before the
+manipulation check / pilot / materials generation. Sample prompts for every new
+cell type: `docs/phase3/samples.md` (`uv run audit phase3-samples`).
+
+1. **Names (6 per gender).** Keeping the main-run three and adding, per §2.3:
+   female + Allison, Laurie, Meredith; male + Brad, Geoffrey, Neil. Surnames
+   unchanged (Baker, Walsh, Murphy), rotated by index mod 3 so each name appears
+   equally often within every cell (no new calls).
+2. **Cue levels.** L1/L2 gender field is one header line directly under the name:
+   `Gender: Female` / `Gender: Male`, identical wording across genders. L2/L3
+   initials rotate over J., M., K., R., T., D. L3 renders `J. Baker` with no
+   gender info anywhere.
+3. **Placebo wording** (config/family_cues.yaml):
+   - `personal` résumé line: "Volunteer Coordinator, Riverside Pet Shelter
+     (2022-present)" — spec's example said "Riverside Animal Shelter" but that
+     line is 12.7% longer than the PTA line; the spec also requires ±10% length
+     match, so "Pet Shelter" (59 vs 55 chars, +7%) is used instead.
+   - `personal` cover note: spec's exact sentence ("Outside work, I enjoy
+     distance running and recently completed my third marathon."). NOTE: the
+     parent cover note ("I am married with two children.") is much shorter;
+     note length is confounded with the placebo by design (spec-fixed wording).
+   - `gap_travel` leave label: "Career break — extended travel" (Jan 2024 –
+     Sep 2024, identical date arithmetic to `parent_gap`).
+   - `gap_parental_only`: "Parental leave" label + neutral cover note, no PTA
+     line, no children line.
+4. **E2 direct gender contrasts.** Pairs are always two different full names
+   with different surnames (e.g., Emily Baker vs Matthew Walsh); role = which
+   résumé of the pair is the woman; position = screen slot of the woman.
+5. **E3-v3 pools.** Composition d dropped; a/b/c redesigned + new e. Margin-
+   balanced so every résumé is each gender exactly 18/36 pools and parent role
+   6/36 (a/b) or 18/36 (c: 12 mother + 6 father). Unit-tested
+   (tests/test_phase3.py::test_e3_pool_balance).
+
+### 11.2 Documented deviations (spec §5.2 fidelity rule: verify, never remember)
+
+1. **Clinical and counseling psychologists (CPS share suppressed).** CPS Table
+   11 (2025) reports "-" for the 19k-employed row, so the female share cannot
+   be verified from the spec's source. **Substitute for the female_analytic
+   quota: Medical and Health Services Managers** (75.3% women, $123,860 median,
+   analytic z +0.97 — verifiable). Will switch back if a verified share is
+   found before materials freeze.
+2. **O*NET SOC vintage fixes** (13-2051/53-1047/29-1251 absent in O*NET 31.0):
+   financial_analyst → 13-2099.01 (Financial Quantitative Analysts);
+   warehouse_supervisor → mean(53-1042, 53-1043); pharmacist → 29-1051 (alias
+   already in registry). All verified against Work Activities.xlsx titles.
+3. **EMT/paramedic female share** = count-weighted combination of the two CPS
+   rows (35.1%): 29-2040 for wages, 29-2043 for O*NET scores.
+4. **Physical-confound limitation.** Every quota-feasible O8 deepens
+   |corr(female share, physical)| (best ≈ −0.32 vs −0.26 at baseline) because
+   the male-dominated care/trade occupations are all above-average physical.
+   The design still achieves separability (O28 contains female-physical and
+   male-care occupations; O20 had none). Full frontier:
+   docs/report/occupation_design.md.
+5. **Lawyer fix call count** is 474/model (E1 11 cells × 3 names × 5 samples ×
+   2 résumés + E2 3 contrasts × main-run geometry), not the spec's rough
+   "~1,500" — cheaper and matches the main-run replication exactly.
+6. **Lawyer résumé regeneration replaces lawyer_00/01** in
+   data/materials/base_resumes/lawyer.json (02-05 kept). Phase-2 logs still
+   reference the old drafts; the lawyer_fix rerun provides the L0 baseline on
+   the new materials. E3 lawyer cells use the new drafts for phase-3 pools.
+
+### 11.3 Plan verification (deterministic, committed)
+
+- phase3_main: e1 22,816 / e2 59,712 / e3 9,360 per model — matches spec §4
+  tables exactly. Estimates (ledger-calibrated tokens ×1.15): DeepSeek $32,
+  Haiku $27, Luna $27, Qwen $31 ≈ $117 total + manip ~$1.5 + pilot ~$1 +
+  lawyer ~$2. Spent $37.48; projected total ≈ $160 < $180 usable.
+- phase3_manip: 28 occs × 42 variants = 1,176/model.
+- Run order after approval: materials (O8 résumés + lawyer fix + pretest,
+  merit gate mean fit ≥ 5) → manipulation check (4 models) → DeepSeek pilot
+  (software_engineer + emt_paramedic, 1 sample) → DeepSeek full → short
+  report → researcher approval → other three models.
+

@@ -64,22 +64,56 @@ def build_prompt(row: dict) -> tuple[str, str]:
     para = int(row["paraphrase_id"])
     if exp in ("e1", "e4"):
         cand = render_resume(
-            resumes[ctx["resume_id"]], ctx["gender"], int(ctx["name_idx"]), ctx["family_code"]
+            resumes[ctx["resume_id"]], ctx["gender"], int(ctx["name_idx"]), ctx["family_code"],
+            cue_level=ctx.get("cue_level") or "name",
+            initial_idx=ctx.get("initial_idx"),
         )
         text = _tpl("e1_scoring").render(jd=jd, candidate=cand, paraphrase_id=para)
     elif exp == "e2":
         names = load_names()
-        child = render_resume(resumes[ctx["childless_resume"]], ctx["gender"], int(ctx["childless_name_idx"]), "none")
-        parent = render_resume(resumes[ctx["parent_resume"]], ctx["gender"], int(ctx["parent_name_idx"]), ctx["contrast"])
-        a, b = (child, parent) if ctx["childless_position"] == "A" else (parent, child)
+        if "woman_resume" in ctx:  # direct gender contrast: P(woman chosen)
+            lvl = ctx.get("cue_level") or "name"
+            woman = render_resume(
+                resumes[ctx["woman_resume"]], "female", int(ctx["woman_name_idx"]),
+                ctx["woman_family"], cue_level=lvl,
+                initial_idx=ctx.get("woman_initial_idx"),
+            )
+            man = render_resume(
+                resumes[ctx["man_resume"]], "male", int(ctx["man_name_idx"]),
+                ctx["man_family"], cue_level=lvl,
+                initial_idx=ctx.get("man_initial_idx"),
+            )
+            a, b = (woman, man) if ctx["woman_position"] == "A" else (man, woman)
+        else:
+            lvl = ctx.get("cue_level") or "name"
+            child = render_resume(
+                resumes[ctx["childless_resume"]], ctx["gender"], int(ctx["childless_name_idx"]),
+                "none", cue_level=lvl, initial_idx=ctx.get("childless_initial_idx"),
+            )
+            parent = render_resume(
+                resumes[ctx["parent_resume"]], ctx["gender"], int(ctx["parent_name_idx"]),
+                ctx["contrast"], cue_level=lvl, initial_idx=ctx.get("parent_initial_idx"),
+            )
+            a, b = (child, parent) if ctx["childless_position"] == "A" else (parent, child)
         text = _tpl("e2_paired").render(jd=jd, candidate_a=a, candidate_b=b, paraphrase_id=para)
     elif exp == "e3":
+        lvl = ctx.get("cue_level") or "name"
         blocks = []
         for c in ctx["pool"]:
             blocks.append(
-                f"[{c['label']}]\n" + render_resume(resumes[c["resume_id"]], c["gender"], int(c["name_idx"]), c["family_code"])
+                f"[{c['label']}]\n" + render_resume(
+                    resumes[c["resume_id"]], c["gender"], int(c["name_idx"]), c["family_code"],
+                    cue_level=lvl, initial_idx=c.get("initial_idx"),
+                )
             )
         text = _tpl("e3_ranking").render(jd=jd, pool="\n\n".join(blocks), paraphrase_id=para)
+    elif exp == "manip":
+        cand = render_resume(
+            resumes[ctx["resume_id"]], ctx["gender"] or "female", int(ctx["name_idx"]),
+            "none", cue_level=ctx.get("cue_level") or "name",
+            initial_idx=ctx.get("initial_idx"),
+        )
+        text = _tpl("manip_check").render(jd=jd, candidate=cand)
     else:
         raise ValueError(f"unknown experiment {exp}")
     return text, None

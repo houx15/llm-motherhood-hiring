@@ -149,7 +149,20 @@ class E3Output(BaseModel):
         return [str(x).strip().upper() for x in v]
 
 
-SCHEMAS = {"e1": E1Output, "e4": E1Output, "e2": E2Output, "e3": E3Output}
+class ManipOutput(BaseModel):
+    """Phase-3 gender-perception manipulation check."""
+    perceived_gender: str
+
+    @field_validator("perceived_gender", mode="before")
+    @classmethod
+    def _gender(cls, v):
+        s = str(v).strip().lower()
+        if s not in ("female", "male", "unknown"):
+            raise ValueError(f"perceived_gender must be female/male/unknown: {v!r}")
+        return s
+
+
+SCHEMAS = {"e1": E1Output, "e4": E1Output, "e2": E2Output, "e3": E3Output, "manip": ManipOutput}
 
 FENCE_RE = re.compile(r"```(?:json)?\s*(.*?)```", re.DOTALL)
 OBJ_RE = re.compile(r"\{.*\}", re.DOTALL)

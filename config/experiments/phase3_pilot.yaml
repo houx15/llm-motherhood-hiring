@@ -1,0 +1,12 @@
+# Phase-3 pilot (SPEC_PHASE3 §6.4): DeepSeek, 2 occupations (1 O20 + 1 O8),
+# all cells, 1 sample. Checks parse rates, refusals, salary withholding by cue
+# level, and position bias before the full run.
+name: phase3_pilot
+phase: phase3_pilot
+models: [deepseek_v41_flash]
+occupations: [software_engineer, emt_paramedic]
+pilot: true
+experiments:
+  e1v3: {samples: 1}
+  e2v3: {samples: 1}
+  e3v3: {samples: 1}

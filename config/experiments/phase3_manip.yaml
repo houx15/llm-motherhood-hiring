@@ -1,0 +1,8 @@
+# Gender-perception manipulation check (SPEC_PHASE3 §2.2): 1 resume per
+# occupation x 42 variants (L0/L1: 12 each, L2: 12, L3: 6) x 28 occupations.
+name: phase3_manip
+phase: phase3_manip
+models: [deepseek_v41_flash, claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: all
+experiments:
+  manip: {}
