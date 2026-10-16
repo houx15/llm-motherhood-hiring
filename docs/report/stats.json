@@ -1,0 +1,1126 @@
+{
+ "deepseek_v41_flash": {
+  "e2_parent_female": {
+   "p": 0.356,
+   "lo": 0.338,
+   "hi": 0.376,
+   "pval": 0.0,
+   "n": 2393
+  },
+  "e2_parent_male": {
+   "p": 0.349,
+   "lo": 0.33,
+   "hi": 0.368,
+   "pval": 0.0,
+   "n": 2395
+  },
+  "e2_parent_committed_female": {
+   "p": 0.419,
+   "lo": 0.399,
+   "hi": 0.439,
+   "pval": 2.220446049250313e-15,
+   "n": 2394
+  },
+  "e2_parent_committed_male": {
+   "p": 0.411,
+   "lo": 0.391,
+   "hi": 0.43,
+   "pval": 0.0,
+   "n": 2397
+  },
+  "e2_parent_gap_female": {
+   "p": 0.31,
+   "lo": 0.291,
+   "hi": 0.328,
+   "pval": 0.0,
+   "n": 2393
+  },
+  "e2_parent_gap_male": {
+   "p": 0.307,
+   "lo": 0.289,
+   "hi": 0.326,
+   "pval": 0.0,
+   "n": 2387
+  },
+  "e2_parent_f_salary": {
+   "diff": -1854,
+   "lo": -2336,
+   "hi": -1373,
+   "pct": -2.15,
+   "base": 86169
+  },
+  "e2_parent_f_commit": {
+   "d": -0.227,
+   "lo": -0.271,
+   "hi": -0.183,
+   "std_effect": -0.208
+  },
+  "e2_parent_gap_f_salary": {
+   "diff": -2464,
+   "lo": -2999,
+   "hi": -1929,
+   "pct": -2.84,
+   "base": 86707
+  },
+  "e2_parent_gap_f_commit": {
+   "d": -0.857,
+   "lo": -0.907,
+   "hi": -0.807,
+   "std_effect": -0.689
+  },
+  "e1_int_parent_gap_f": -1.5,
+  "e1_sal_preg_f": -852,
+  "e1_int_parent_gap_m": -0.17,
+  "e1_sal_preg_m": null,
+  "e3_ratio_f": 0.557,
+  "e3_ratio_m": 0.535,
+  "e4_greedy_gap_f": -3.33,
+  "e4_base_gap_f": -0.62,
+  "e4_greedy_gap_m": -1.67,
+  "parse_ok": 0.9991,
+  "refusal_pct": 0.0,
+  "n_calls": 47760
+ },
+ "claude_haiku_55": {
+  "e2_parent_female": {
+   "p": 0.232,
+   "lo": 0.216,
+   "hi": 0.25,
+   "pval": 0.0,
+   "n": 2379
+  },
+  "e2_parent_male": {
+   "p": 0.275,
+   "lo": 0.258,
+   "hi": 0.294,
+   "pval": 0.0,
+   "n": 2382
+  },
+  "e2_parent_committed_female": {
+   "p": 0.266,
+   "lo": 0.248,
+   "hi": 0.284,
+   "pval": 0.0,
+   "n": 2371
+  },
+  "e2_parent_committed_male": {
+   "p": 0.331,
+   "lo": 0.312,
+   "hi": 0.35,
+   "pval": 0.0,
+   "n": 2371
+  },
+  "e2_parent_gap_female": {
+   "p": 0.111,
+   "lo": 0.099,
+   "hi": 0.124,
+   "pval": 0.0,
+   "n": 2355
+  },
+  "e2_parent_gap_male": {
+   "p": 0.131,
+   "lo": 0.118,
+   "hi": 0.145,
+   "pval": 0.0,
+   "n": 2372
+  },
+  "e2_parent_f_salary": {
+   "diff": -1332,
+   "lo": -1681,
+   "hi": -982,
+   "pct": -1.69,
+   "base": 79004
+  },
+  "e2_parent_f_commit": {
+   "d": -0.325,
+   "lo": -0.363,
+   "hi": -0.287,
+   "std_effect": -0.345
+  },
+  "e2_parent_gap_f_salary": {
+   "diff": -942,
+   "lo": -1278,
+   "hi": -607,
+   "pct": -1.19,
+   "base": 79168
+  },
+  "e2_parent_gap_f_commit": {
+   "d": -1.0,
+   "lo": -1.042,
+   "hi": -0.959,
+   "std_effect": -0.978
+  },
+  "e1_int_parent_gap_f": 0.0,
+  "e1_sal_preg_f": -18713,
+  "e1_int_parent_gap_m": 0.99,
+  "e1_sal_preg_m": null,
+  "e3_ratio_f": 0.137,
+  "e3_ratio_m": 0.154,
+  "e4_greedy_gap_f": -3.13,
+  "e4_base_gap_f": 0.83,
+  "e4_greedy_gap_m": -2.71,
+  "parse_ok": 0.9851,
+  "refusal_pct": 0.482,
+  "n_calls": 47760
+ },
+ "gpt6_luna": {
+  "e2_parent_female": {
+   "p": 0.299,
+   "lo": 0.28,
+   "hi": 0.318,
+   "pval": 0.0,
+   "n": 2307
+  },
+  "e2_parent_male": {
+   "p": 0.303,
+   "lo": 0.285,
+   "hi": 0.322,
+   "pval": 0.0,
+   "n": 2321
+  },
+  "e2_parent_committed_female": {
+   "p": 0.235,
+   "lo": 0.218,
+   "hi": 0.252,
+   "pval": 0.0,
+   "n": 2315
+  },
+  "e2_parent_committed_male": {
+   "p": 0.254,
+   "lo": 0.236,
+   "hi": 0.272,
+   "pval": 0.0,
+   "n": 2315
+  },
+  "e2_parent_gap_female": {
+   "p": 0.193,
+   "lo": 0.177,
+   "hi": 0.209,
+   "pval": 0.0,
+   "n": 2320
+  },
+  "e2_parent_gap_male": {
+   "p": 0.19,
+   "lo": 0.174,
+   "hi": 0.206,
+   "pval": 0.0,
+   "n": 2322
+  },
+  "e2_parent_f_salary": {
+   "diff": -1548,
+   "lo": -1977,
+   "hi": -1120,
+   "pct": -1.67,
+   "base": 92941
+  },
+  "e2_parent_f_commit": {
+   "d": -0.502,
+   "lo": -0.534,
+   "hi": -0.47,
+   "std_effect": -0.636
+  },
+  "e2_parent_gap_f_salary": {
+   "diff": -2127,
+   "lo": -2601,
+   "hi": -1653,
+   "pct": -2.28,
+   "base": 93348
+  },
+  "e2_parent_gap_f_commit": {
+   "d": -0.561,
+   "lo": -0.59,
+   "hi": -0.532,
+   "std_effect": -0.79
+  },
+  "e1_int_parent_gap_f": 0.58,
+  "e1_sal_preg_f": -1074,
+  "e1_int_parent_gap_m": 0.42,
+  "e1_sal_preg_m": null,
+  "e3_ratio_f": 0.588,
+  "e3_ratio_m": 0.602,
+  "e4_greedy_gap_f": -0.83,
+  "e4_base_gap_f": 0.0,
+  "e4_greedy_gap_m": -0.83,
+  "parse_ok": 0.9895,
+  "refusal_pct": 0.0,
+  "n_calls": 47760
+ },
+ "qwen38_flash": {
+  "e2_parent_female": {
+   "p": 0.387,
+   "lo": 0.368,
+   "hi": 0.407,
+   "pval": 0.0,
+   "n": 2396
+  },
+  "e2_parent_male": {
+   "p": 0.398,
+   "lo": 0.379,
+   "hi": 0.418,
+   "pval": 0.0,
+   "n": 2395
+  },
+  "e2_parent_committed_female": {
+   "p": 0.407,
+   "lo": 0.387,
+   "hi": 0.427,
+   "pval": 0.0,
+   "n": 2397
+  },
+  "e2_parent_committed_male": {
+   "p": 0.43,
+   "lo": 0.41,
+   "hi": 0.45,
+   "pval": 7.785772027091298e-12,
+   "n": 2397
+  },
+  "e2_parent_gap_female": {
+   "p": 0.229,
+   "lo": 0.213,
+   "hi": 0.247,
+   "pval": 0.0,
+   "n": 2398
+  },
+  "e2_parent_gap_male": {
+   "p": 0.256,
+   "lo": 0.239,
+   "hi": 0.274,
+   "pval": 0.0,
+   "n": 2397
+  },
+  "e2_parent_f_salary": {
+   "diff": -1775,
+   "lo": -2329,
+   "hi": -1222,
+   "pct": -2.3,
+   "base": 77262
+  },
+  "e2_parent_f_commit": {
+   "d": -1.136,
+   "lo": -1.216,
+   "hi": -1.055,
+   "std_effect": -0.567
+  },
+  "e2_parent_gap_f_salary": {
+   "diff": -3145,
+   "lo": -3698,
+   "hi": -2593,
+   "pct": -4.04,
+   "base": 77886
+  },
+  "e2_parent_gap_f_commit": {
+   "d": -1.558,
+   "lo": -1.629,
+   "hi": -1.488,
+   "std_effect": -0.882
+  },
+  "e1_int_parent_gap_f": -1.08,
+  "e1_sal_preg_f": -1562,
+  "e1_int_parent_gap_m": 0.17,
+  "e1_sal_preg_m": null,
+  "e3_ratio_f": 0.568,
+  "e3_ratio_m": 0.589,
+  "e4_greedy_gap_f": -1.67,
+  "e4_base_gap_f": 0.42,
+  "e4_greedy_gap_m": -1.04,
+  "parse_ok": 0.9983,
+  "refusal_pct": 0.0,
+  "n_calls": 47760
+ },
+ "meta_e2_mother_parent": {
+  "pooled_pp": -18.12,
+  "se": 0.51,
+  "z": -35.3,
+  "i2_pct": 97.7,
+  "effects": {
+   "deepseek_v41_flash": -14.4,
+   "claude_haiku_55": -26.8,
+   "gpt6_luna": -20.1,
+   "qwen38_flash": -11.3
+  }
+ },
+ "meta_e2_mother_gap": {
+  "pooled_pp": -28.87,
+  "se": 0.51,
+  "z": -56.2,
+  "i2_pct": 98.5
+ },
+ "moderators": {
+  "deepseek_v41_flash": [
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -182.9167,
+    "se": 711.574,
+    "p": 0.7971
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 309.6221,
+    "se": 652.617,
+    "p": 0.6352
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1271.25,
+    "se": 523.3599,
+    "p": 0.0151
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 194.1893,
+    "se": 328.7394,
+    "p": 0.5547
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.09,
+    "se": 0.0288,
+    "p": 0.0018
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0346,
+    "se": 0.0278,
+    "p": 0.2131
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.1233,
+    "se": 0.0325,
+    "p": 0.0001
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.0115,
+    "se": 0.0288,
+    "p": 0.6896
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -182.9167,
+    "se": 710.8523,
+    "p": 0.7969
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -419.8703,
+    "se": 719.1934,
+    "p": 0.5594
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1271.25,
+    "se": 511.342,
+    "p": 0.0129
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": -1005.9627,
+    "se": 606.879,
+    "p": 0.0974
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.09,
+    "se": 0.029,
+    "p": 0.0019
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0083,
+    "se": 0.0301,
+    "p": 0.7822
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.1233,
+    "se": 0.0325,
+    "p": 0.0001
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0014,
+    "se": 0.0311,
+    "p": 0.9629
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -182.9167,
+    "se": 709.1282,
+    "p": 0.7964
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 606.7173,
+    "se": 583.2115,
+    "p": 0.2982
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1271.25,
+    "se": 523.812,
+    "p": 0.0152
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": -24.8673,
+    "se": 284.0273,
+    "p": 0.9302
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.09,
+    "se": 0.029,
+    "p": 0.0019
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0135,
+    "se": 0.024,
+    "p": 0.5751
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.1233,
+    "se": 0.0325,
+    "p": 0.0001
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0078,
+    "se": 0.03,
+    "p": 0.7941
+   }
+  ],
+  "claude_haiku_55": [
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 98.3103,
+    "se": 321.0255,
+    "p": 0.7594
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 424.7626,
+    "se": 262.2318,
+    "p": 0.1053
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -246.3936,
+    "se": 446.6833,
+    "p": 0.5812
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 544.2816,
+    "se": 347.526,
+    "p": 0.1173
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0608,
+    "se": 0.0162,
+    "p": 0.0002
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0103,
+    "se": 0.0164,
+    "p": 0.5288
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0502,
+    "se": 0.0224,
+    "p": 0.0254
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.0018,
+    "se": 0.024,
+    "p": 0.9412
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 98.352,
+    "se": 323.521,
+    "p": 0.7611
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 235.0054,
+    "se": 382.5419,
+    "p": 0.539
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -246.1356,
+    "se": 447.2263,
+    "p": 0.5821
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 521.3756,
+    "se": 465.0981,
+    "p": 0.2623
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0608,
+    "se": 0.0161,
+    "p": 0.0002
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0185,
+    "se": 0.0116,
+    "p": 0.1114
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0502,
+    "se": 0.0224,
+    "p": 0.0247
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0188,
+    "se": 0.016,
+    "p": 0.2421
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 98.3521,
+    "se": 323.9955,
+    "p": 0.7615
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 174.6042,
+    "se": 147.4153,
+    "p": 0.2362
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -247.6149,
+    "se": 450.8227,
+    "p": 0.5828
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 60.592,
+    "se": 249.2674,
+    "p": 0.8079
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0608,
+    "se": 0.0161,
+    "p": 0.0002
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0164,
+    "se": 0.0109,
+    "p": 0.1311
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0502,
+    "se": 0.0224,
+    "p": 0.0253
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0073,
+    "se": 0.0172,
+    "p": 0.6712
+   }
+  ],
+  "gpt6_luna": [
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 22.5,
+    "se": 250.7896,
+    "p": 0.9285
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 102.8712,
+    "se": 214.5431,
+    "p": 0.6316
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -224.1667,
+    "se": 277.5515,
+    "p": 0.4193
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 373.3299,
+    "se": 226.7214,
+    "p": 0.0996
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 0.0308,
+    "se": 0.0186,
+    "p": 0.0973
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0152,
+    "se": 0.0183,
+    "p": 0.4074
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": 0.005,
+    "se": 0.0214,
+    "p": 0.8152
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.0045,
+    "se": 0.0166,
+    "p": 0.7852
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 22.5,
+    "se": 244.0542,
+    "p": 0.9265
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 521.2636,
+    "se": 296.92,
+    "p": 0.0792
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -224.1667,
+    "se": 278.1891,
+    "p": 0.4204
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": -334.0893,
+    "se": 250.9341,
+    "p": 0.1831
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 0.0308,
+    "se": 0.0184,
+    "p": 0.0943
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0269,
+    "se": 0.0202,
+    "p": 0.1823
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": 0.005,
+    "se": 0.0211,
+    "p": 0.8131
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.0287,
+    "se": 0.0247,
+    "p": 0.2465
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 22.5,
+    "se": 249.8049,
+    "p": 0.9282
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 221.8235,
+    "se": 175.1787,
+    "p": 0.2054
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -224.1667,
+    "se": 280.7145,
+    "p": 0.4245
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 32.0918,
+    "se": 147.803,
+    "p": 0.8281
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": 0.0308,
+    "se": 0.0185,
+    "p": 0.0963
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0197,
+    "se": 0.0211,
+    "p": 0.3506
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": 0.005,
+    "se": 0.0213,
+    "p": 0.8147
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.0142,
+    "se": 0.0179,
+    "p": 0.426
+   }
+  ],
+  "qwen38_flash": [
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -690.8333,
+    "se": 680.0688,
+    "p": 0.3097
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 808.523,
+    "se": 607.0523,
+    "p": 0.1829
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1053.3333,
+    "se": 779.0198,
+    "p": 0.1763
+   },
+   {
+    "Z": "female_share",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 625.0853,
+    "se": 673.8638,
+    "p": 0.3536
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0042,
+    "se": 0.043,
+    "p": 0.9227
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -0.0775,
+    "se": 0.0448,
+    "p": 0.084
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0442,
+    "se": 0.0462,
+    "p": 0.339
+   },
+   {
+    "Z": "female_share",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0136,
+    "se": 0.0451,
+    "p": 0.7635
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -690.8333,
+    "se": 685.5053,
+    "p": 0.3136
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -268.4316,
+    "se": 608.1033,
+    "p": 0.6589
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1053.3333,
+    "se": 781.2766,
+    "p": 0.1776
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": 338.8886,
+    "se": 723.0264,
+    "p": 0.6393
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0042,
+    "se": 0.0438,
+    "p": 0.9241
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0247,
+    "se": 0.0327,
+    "p": 0.4506
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0442,
+    "se": 0.0462,
+    "p": 0.339
+   },
+   {
+    "Z": "median_wage",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": 0.012,
+    "se": 0.0334,
+    "p": 0.7204
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -690.8333,
+    "se": 680.0914,
+    "p": 0.3097
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": -807.0309,
+    "se": 468.8466,
+    "p": 0.0852
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -1053.3333,
+    "se": 782.0507,
+    "p": 0.178
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "starting_salary_usd",
+    "term": "parent_gap gender gap x Z",
+    "coef": -141.5301,
+    "se": 376.9673,
+    "p": 0.7073
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap @ mean Z",
+    "coef": -0.0042,
+    "se": 0.0437,
+    "p": 0.924
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "mother-minus-father gap x Z (H3/H4)",
+    "coef": 0.0306,
+    "se": 0.0463,
+    "p": 0.5079
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap @ mean Z",
+    "coef": -0.0442,
+    "se": 0.0462,
+    "p": 0.3387
+   },
+   {
+    "Z": "time_demands",
+    "outcome": "commitment",
+    "term": "parent_gap gender gap x Z",
+    "coef": -0.0188,
+    "se": 0.0349,
+    "p": 0.5903
+   }
+  ]
+ }
+}

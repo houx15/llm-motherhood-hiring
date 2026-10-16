@@ -160,6 +160,14 @@ def report(
 
 
 @app.command()
+def figures(out: Path = typer.Option("docs/report/figures")) -> None:
+    """Generate all report figures as vector PDFs."""
+    from .analysis.figures import generate_all
+
+    generate_all(out)
+
+
+@app.command()
 def compare(out: Path = typer.Option(RUNS_DIR / "pooled")) -> None:
     """Cross-model comparison table + figure (all models in the ledger)."""
     from .analysis.compare import compare_models
