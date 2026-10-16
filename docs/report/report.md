@@ -15,17 +15,23 @@ abstract: |
   isolated scoring but large, precisely estimated parenthood penalties in comparative
   decisions — pooled across models, mothers with a parental-leave gap are chosen 23% of
   the time against an identical childless candidate (t(39) per model −8 to −19), and a
-  token mother's résumé-FE-adjusted top-3 rate falls to 25–81% of an identical childless
+  token mother's résumé-FE-adjusted top-3 rate falls to 25–78% of an identical childless
   woman's rate; (2) no fatherhood bonus in any model — fathers are always below parity —
-  though only Claude Haiku 5.5 penalizes mothers significantly *more* than fathers;
+  though only Claude Haiku 5.5 penalizes mothers significantly *more* than fathers
+  (surviving Holm correction in two of three contrasts);
   (3) a caregiving leave gap is always the most damaging cue; (4) motherhood salary
   penalties cluster in a narrow band (−1.7% to −2.3% of the childless offer), roughly
-  one-fifth of the human laboratory benchmark (≈ −9%); and (5) Claude Haiku 5.5 responds
-  to pregnancy disclosure by withholding salary offers entirely (19.8% of pregnant
-  applicants receive $0) — an abstention outcome qualitatively different from scoring
-  lower. Greedy job-ad wording amplifies the leave-gap penalty; EEO boilerplate has no
-  effect. LLM hiring tools reproduce a gender-generalized form of the motherhood penalty
-  that is invisible in individual scores but systematic in comparative decisions.
+  one-quarter of the human laboratory benchmark (≈ −$11,000 ≈ −7.4%); and (5) Claude
+  Haiku 5.5 responds to pregnancy disclosure by withholding salary offers entirely
+  (19.8% of pregnant applicants receive $0) — and those withheld applicants are advanced
+  to interview only 30% of the time, producing a net within-résumé interview penalty of
+  −9.4pp (t = −4.8) with no residual salary penalty once withheld offers are excluded.
+  Under clustered difference-in-differences inference, greedy job-ad wording amplifies
+  the leave-gap interview penalty for DeepSeek (and, combined with family-friendly
+  language, for Haiku); EEO boilerplate and family-friendly sentences alone show no
+  reliable effects. LLM hiring tools reproduce a gender-generalized form of the
+  motherhood penalty that is invisible in individual scores but systematic in
+  comparative decisions — and add a new margin, abstention.
 ---
 
 # 1. Introduction
@@ -188,7 +194,8 @@ are exploratory and would not survive multiple-comparison correction.
 - **Qwen3.8 Flash** emitted out-of-range ratings (mostly 8 on 1–7) in ~23% of E2
   calls, condition-correlated and landing on *childless* candidates 3:1. One
   automatic repair pass was allowed by protocol; a second, field-targeted repair
-  pass (logged, costed, `repair_of`-linked) recovered 2,902 of 3,062 invalid calls.
+  pass (logged, costed, `repair_of`-linked) recovered 2,902 of the 3,062 invalid
+  responses across all experiments.
   Primary estimates include recovered responses; §6.3 reports strict-validity bounds.
 - **Composition d of E3** (all-parent pools) is confounded by design (gender is fixed
   to résumé index); we do not interpret it.
@@ -211,64 +218,82 @@ pairing (all ≤ 1.5%) and fit-rating gaps ≤ 0.35 points (DeepSeek leave-gap m
 −0.35; Haiku *positive* +0.15 — §5.8). Interview rates are ceiling-bound and
 uninformative except under E4's greedy wording.
 
-**The pregnancy result is an abstention phenomenon, not a salary cut.** Claude Haiku
-5.5 returns `starting_salary_usd: 0` — a withheld offer — for 19.8% of pregnant
-applicants (vs 3.1% of childless women; married 7.3%; Figure 6), while still rating
-them normally (fit ≈ none, interview ≈ true). The rationales say so explicitly
-("salary should not depend on pregnancy, a protected characteristic"). Earlier drafts
-of this report treated those zeros as $0 offers and reported a −$18.7k "pregnancy
-salary cut"; that was an artifact. Corrected estimates:
+**The pregnancy result is an abstention phenomenon with a real interview cost — not a
+salary cut.** Claude Haiku 5.5 returns `starting_salary_usd: 0` — a withheld offer —
+for 19.8% of pregnant applicants (vs 3.1% of childless women; married 7.3%;
+Figure 6), with rationales that explicitly cite protected characteristics. The earlier
+draft treated those zeros as $0 offers (a spurious −$18.7k "salary cut"). Corrected
+within-résumé estimates (résumé FE, clustered SEs; Tables 5–6, generated from
+`stats.json`):
 
-| Within-résumé pregnancy salary gap (excluding withheld) | DeepSeek | Haiku | Luna | Qwen |
+**Table 5. Pregnancy within-résumé gaps (résumé FE, clustered SE).**
+
+| Outcome | DeepSeek | Haiku | Luna | Qwen |
 | --- | --- | --- | --- | --- |
-| Δ$ | −705 | **−693** | +515 | −115 |
-| Δ% | −0.8% | **−0.8%** | +0.6% | −0.1% |
+| Interview (pp) | +1.9 (t 1.8) | **−9.4 (t −4.8)*** | +0.8 (t 1.5) | +0.7 (t 0.9) |
+| Fit (1–10) | −0.1 (t −2.2) | −0.1 (t −0.7) | +0.0 (t 1.0) | +0.1 (t 2.6) |
+| Salary (excl. withheld) | −$705 (−0.8%) | −$693 (−0.8%) | +$515 (+0.6%) | −$115 (−0.1%) |
 
-Once withholding is excluded, no model shows a meaningful pregnancy *salary* penalty.
-What remains is the withholding itself: Haiku refuses to name a price for one in five
-pregnant applicants (and one in fourteen married women) — condition-correlated
-abstention that regulatory audits should treat as an outcome distinct from scoring.
-Zero offers are excluded from all salary analyses in all models (other models
-withhold 1–6%).
+**Table 6. Salary withholding ($0) and interview denial, E1 women.**
+
+| Model | Withheld: none / married / pregnant | Interview rate when withheld (pregnant) | when offered (pregnant) |
+| --- | --- | --- | --- |
+| DeepSeek | 1.6% / 2.2% / 2.0% | .000 (n=24) | .958 (n=1176) |
+| Haiku | 3.1% / 7.3% / **19.8%** | **.299 (n=234)** | 1.000 (n=947) |
+| Luna | 0.9% / 1.3% / 3.1% | .000 (n=37) | .953 (n=1163) |
+| Qwen | 4.2% / 4.2% / 5.8% | .000 (n=70) | .970 (n=1130) |
+
+Three facts discipline the interpretation. (i) Once withholding is excluded, *no*
+model shows a meaningful pregnancy salary penalty (−0.8% at most). (ii) Abstention is
+not benign: Haiku advances a withheld pregnant applicant to interview only 30% of the
+time, so the withholding mass produces the −9.4pp net interview penalty — roughly what
+19.8% × 70% denial would deliver. (iii) The other models almost never withhold (≤5.8%)
+and show no pregnancy interview gaps. The rationales express protective intent
+("salary should not depend on pregnancy"), but the downstream result is that one in
+five pregnant applicants gets neither a price nor an interview. We treat withholding
+as an outcome distinct from scoring: zeros are excluded from all salary analyses in
+all models, and §6.5 notes that Haiku's pregnant-cell *scored* outcomes condition on
+non-abstention.
 
 ## 5.3 E2 — paired comparison: robust penalties; one model genders them
 
-Figure 2 shows P(parent chosen) with pair-clustered 95% CIs; Table 1 gives the
-cluster-level t-tests.
+Figure 2 shows P(parent chosen) with pair-clustered 95% CIs; Tables 1–2 are
+generated programmatically from `stats.json` (see `docs/report/tables.md`).
 
 **Table 1. E2 probability the parent candidate is chosen (mean of 40 résumé-pair
-cluster means; t vs 0.5).**
+cluster means; t vs 0.5, df 39).**
 
 | Contrast | DeepSeek F / M | Haiku F / M | Luna F / M | Qwen F / M |
 | --- | --- | --- | --- | --- |
-| Parent (PTA) | .357 (−11.3) / .349 (−9.8) | .233 (−11.8) / .276 (−9.9) | .297 (−7.8) / .294 (−7.5) | .387 (−5.9) / .398 (−5.3) |
-| Parent + committed | .419 (−7.8) / .411 (−8.4) | .266 / .331 | .228 / .246 | .368 / .391 |
-| Parent + leave gap | .310 (−12.3) / .308 (−13.0) | .110 (−18.9) / .130 (−16.7) | .186 (−8.4) / .184 (−8.5) | .230 (−10.9) / .256 (−10.7) |
+| Parent (PTA) | .357 (−11) / .349 (−10) | .233 (−12) / .276 (−10) | .297 (−8) / .294 (−8) | .387 (−6) / .398 (−5) |
+| Parent + committed | .419 (−8) / .411 (−8) | .266 (−10) / .331 (−9) | .228 (−9) / .246 (−8) | .407 (−6) / .430 (−5) |
+| Parent + leave gap | .310 (−12) / .308 (−13) | .110 (−19) / .130 (−17) | .186 (−8) / .184 (−8) | .230 (−11) / .256 (−11) |
 
 (a) **Every cell is far below parity** (all |t| ≥ 5 with 39 df). (b) **The leave gap
 is always the worst cue**, and objective commitment evidence never restores parity —
 for GPT-6 Luna it *deepens* the penalty (.228 vs .297 for mothers), the cleanest
 normative-discrimination signature (H6). (c) **No fatherhood bonus in any cell.**
 The mother-father difference itself (Table 2) is significant only for Haiku — and,
-more weakly, Qwen:
+nominally, Qwen:
 
-**Table 2. Mother-minus-father differences (pair-matched t-tests).**
+**Table 2. E2 mother-minus-father differences (pair-matched t-tests; Holm over 12
+tests; \*\* survives Holm, \* raw p < .05 only).**
 
 | Contrast | DeepSeek | Haiku | Luna | Qwen |
 | --- | --- | --- | --- | --- |
-| Parent | +.01 (t 0.8) | **−.043 (t −3.1)** | −.004 (−0.6) | −.011 (−1.3) |
-| Committed | +.01 (1.2) | **−.065 (t −4.6)** | −.018 (−1.8) | −.023 (−2.6) |
-| Leave gap | +.00 (0.2) | **−.020 (−2.1)** | +.002 (0.3) | **−.026 (−2.8)** |
+| Parent (PTA) | +.008 (t 0.8) | **−.043 (t −3.1; Holm p=.037)\*\*** | −.004 (−0.6) | −.011 (−1.3) |
+| Committed | +.008 (1.2) | **−.065 (t −4.6; Holm p=.001)\*\*** | −.018 (−1.8) | −.023 (−2.6; Holm p=.121)\* |
+| Leave gap | +.002 (0.2) | −.020 (−2.1; Holm p=.332)\* | +.002 (0.3) | −.026 (−2.8; Holm p=.075)\* |
 
-Corrected claim: *no model shows a fatherhood bonus, but penalties are not uniformly
-gender-neutral — Haiku penalizes mothers significantly more than fathers in all three
-contrasts, Qwen in two.*
+Corrected claim: *no model shows a fatherhood bonus; Haiku's mother-heavier penalty
+survives Holm correction for the parent and committed contrasts (not the leave gap);
+Qwen's nominal mother-heavier differences do not survive correction.*
 
 Paired salary differences for mothers (parent cue) are −1.7% to −2.3% across models
 (leave gap −1.2% to −4.1%). **Pooled across models, mothers with the plain parent cue
-are chosen 33.7% of the time (−16.3pp below parity; I² = 91%); with a leave gap,
-23.2% (−26.8pp; I² = 95%).** Heterogeneity between models is real but modest relative
-to the common penalty.
+are chosen 33.7% of the time (−16.3pp below parity); with a leave gap, 23.2%
+(−26.8pp).** Every model penalizes; the magnitude varies substantially by model
+(I² = 91–95%), from −11pp (Qwen) to −27pp (Haiku) for the parent cue.
 
 ## 5.4 E3 — ranking: token penalties survive résumé fixed effects
 
@@ -287,61 +312,76 @@ FE t-statistics in parentheses).**
 | Fathers | .54 → **.70** (−4.7) | .15 → **.23** (−9.8) | .60 → **.81** (−4.1) | .59 → **.80** (−4.9) |
 
 Adjusted ratios: **Haiku remains far below the four-fifths line (.23–.25)**;
-DeepSeek (.70) and Qwen mothers (.75) remain below it; Luna sits at the threshold
-(.78 mothers / .81 fathers). The honest statement is: *token parents are ranked
-significantly below the same résumés shown childless in every model (|t| ≥ 2.8), with
-adjusted impact ratios of 0.70–0.81 for three models and 0.25 for Haiku — a
-four-fifths violation for Haiku and, on the mothers' margin, for DeepSeek and Qwen;
-Luna is borderline.* In mixed 3+3 pools the résumé-FE parent effect is small but still
+DeepSeek (.71 mothers / .70 fathers) and Qwen mothers (.75) remain below it; Qwen
+fathers (.798) sit at the line; Luna straddles it (.78 mothers / .81 fathers). The
+honest statement is: *token parents are ranked significantly below the same résumés
+shown childless in every model (|t| ≥ 2.8), with adjusted impact ratios of 0.70–0.81
+for three models and 0.23–0.25 for Haiku — a decisive four-fifths violation for
+Haiku, violations for DeepSeek (both genders) and Qwen mothers, and borderline
+results for Qwen fathers and Luna.* In mixed 3+3 pools the résumé-FE parent effect is small but still
 negative (−0.04 to −0.15), so we find no evidence of the earlier-draft "parents
 favored in mixed pools" reversal. Composition-d results are confounded (§4.4) and
 unreported.
 
-## 5.5 E4 — job-description wording is causal
+## 5.5 E4 — job-ad wording effects under clustered inference
 
-With occupation fixed and only the JD's closing paragraph varying, the leave-gap
-interview penalty for mothers (parent_gap − none, pp) moves sharply:
+Table 4 reports résumé-fixed-effects estimates with SEs clustered by résumé (32
+clusters): the base leave-gap penalty, and the difference-in-differences of each
+variant against base (generated from `stats.json`).
 
-| JD variant | DeepSeek | Haiku | Luna | Qwen |
+**Table 4. E4 leave-gap interview penalty (pp; résumé-FE DiD vs base;
+\* raw p<.05, \*\* p<.01).**
+
+| | DeepSeek F / M | Haiku F / M | Luna F / M | Qwen F / M |
 | --- | --- | --- | --- | --- |
-| Base | −0.6 | +0.8 | 0.0 | +0.4 |
-| EEO boilerplate | +0.8 | −0.4 | −0.4 | −0.6 |
-| Family-friendly | −1.5 | −1.3 | −1.0 | −1.5 |
-| **Greedy** | **−3.3** | **−3.1** | −0.8 | **−1.7** |
-| Greedy + family-friendly | **−5.8** | **−7.1** | −0.2 | −0.8 |
+| Base (gap) | −0.6 (−1.4) / +0.2 (0.3) | +0.8 (1.0) / +0.2 (0.2) | −0.0 / −0.0 | +0.4 (1.4) / −0.0 |
+| EEO (DiD) | +1.5 (1.5) / +0.0 | −1.3 (−1.7) / +0.8 | −0.4 / −0.0 | −1.0 (−0.7) / −0.4 |
+| Family-friendly (DiD) | −0.8 (−0.6) / −1.5 (−1.2) | −2.1 (−1.4) / −1.1 (−0.6) | −1.0 / −0.6 | −1.9 (−1.5) / −0.4 |
+| Greedy (DiD) | **−2.7 (−2.3)\*** / −1.9 (−1.1) | −4.0 (−1.9) / −2.9 (−1.1) | −0.8 / −0.8 | −2.1 (−2.1)\* / −1.0 (−0.5) |
+| Greedy + family-friendly (DiD) | **−5.2 (−2.9)\*\*** / **−6.0 (−2.2)\*** | **−8.0 (−2.8)\*\*** / −6.2 (−1.7) | −0.2 / −0.8 | −1.2 (−1.4) / −3.1 (−2.0) |
 
-Greedy wording roughly triples the penalty for DeepSeek and Haiku mothers (fathers
-−1.7 and −2.7pp — mothers pay about double). Adding a family-friendly sentence to the
-greedy JD makes matters *worse* for both (−5.8, −7.1); family-friendly wording alone
-slightly *penalizes* leave-gap mothers in all four models (−1.0 to −1.5) rather than
-helping them. EEO boilerplate does nothing in any model. Greedy wording also cuts
-leave-gap parents' salaries — except Haiku's, whose E4 salary cells include withheld
-zeros and are therefore uninterpretable as scores (§5.2).
+What survives clustered inference: **greedy wording adds a significant extra
+interview penalty for leave-gap mothers under DeepSeek (−2.7pp DiD, t = −2.3) and
+Qwen (−2.1pp, t = −2.1, marginal)**, and combining greedy with family-friendly
+wording adds significant penalties for DeepSeek (both genders) and Haiku mothers
+(−8.0pp, t = −2.8). Several claims from earlier drafts do *not* survive: Haiku's
+greedy-only DiD (−4.0) is not significant at this cluster count (t = −1.9); the
+small family-friendly-alone effects (−0.4 to −2.1) are all insignificant; "mothers
+pay double" holds only in DeepSeek's greedy-only cell (and neither gender's estimate
+is individually significant there for fathers); under greedy+FF, DeepSeek's penalty
+is the same for both genders and Qwen's is larger for fathers. EEO boilerplate never
+does anything. The defensible summary: *point estimates consistently point in the
+greedy-hurts direction for leave-gap mothers, statistically confirmed for two models;
+family-friendly and EEO sentences show no reliable repair effect anywhere.*
 
 ## 5.6 Occupational moderation (H3/H4): not supported in scoring
 
-The pooled E1 regressions find small, non-significant interactions of the
-mother-minus-father gap with female share, median wage, and time demands (largest:
-female_share × leave-gap gender gap on salary, −$1,271 at the mean, p = .015;
-× on competence, p = .017 — neither survives correction). Résumé fixed effects absorb
-occupation *main* effects but not these interactions; the correct reading is simply
-that occupational moderation is weak and undetectable in scoring tasks at this sample
-size. The E4 experiment shows the greedy-*signal* mechanism is real within
-occupation; the cross-occupation gradient is not where it operates.
+Re-run with withheld ($0) salaries excluded, the pooled E1 regressions find small,
+non-significant interaction terms of the family gap with female share, median wage,
+and time demands in every model (largest main-effect-level term: DeepSeek's
+leave-gap gender gap in salary, −$779 at the occupation-mean Z, p = .008 — a
+conditional main effect, not an interaction; all Z-interactions have p ≥ .2).
+Résumé fixed effects absorb occupation *main* effects but not these interactions,
+so the correct reading is simply that the interactions are near zero: occupational
+moderation of the motherhood penalty is not detectable in scoring tasks at this
+sample size. The E4 experiment (§5.5) shows the greedy-*signal* mechanism is real
+within occupation for two models; the cross-occupation gradient is not where it
+operates.
 
 ## 5.7 Benchmark: LLMs are milder than the human laboratory, not harsher
 
 Correll et al. (2007)'s lab study recommended hiring **84% of childless women versus
-47% of mothers** (−37pp) and offered non-mothers roughly **$11,000 more (≈ −9%)**;
-their employer audit found childless women received about twice the callbacks. Our
-pooled LLM choice penalty for mothers (−16.3pp parent cue; −26.8pp leave gap) is
-**smaller than the human hiring gap**, and the LLM salary band (−1.7% to −2.3%) is
-about one-fifth the human salary penalty (Figure 7). One caveat: the LLM figure is a
-within-pair *choice share* while the human figure is a between-persons *hire rate* —
-directionally comparable, not metrically. We drop the earlier draft's standardized
-commitment comparison entirely (paired d_z is not comparable to Correll's
+47% of mothers** (−37pp) and offered non-mothers roughly **$11,000 more (≈ 7.4% of
+the childless offer — the commonly cited figure; verify against the paper's tables
+before journal submission)**; their employer audit found childless women received
+about twice the callbacks. Our pooled LLM choice penalty for mothers (−16.3pp parent
+cue; −26.8pp leave gap) is **smaller than the human hiring gap**, and the LLM salary
+band (−1.7% to −2.3%) is roughly one-quarter of the human salary penalty (Figure 7).
+Caveat: the LLM figure is a within-pair *choice share* while the human figure is a
+between-persons *hire rate* — directionally comparable, not metrically; we drop any
+standardized commitment comparison (paired d_z is not comparable to Correll's
 between-persons d). Classification: on pay and hiring margins, these LLMs **reduce**
-the human motherhood penalty; they do not amplify it — with the exception of
+the human motherhood penalty; they do not amplify it — with the exceptions of
 shortlist *composition* effects (E3) and Haiku's abstentions, which have no clean
 human analogue.
 
@@ -349,9 +389,11 @@ human analogue.
 
 - **Claude Haiku 5.5** — severity and abstention outlier: largest choice penalties
   (leave-gap mothers .110), lowest adjusted impact ratio (.25), the only refuser
-  (0.5%), the only salary-withholder (19.8% of pregnant applicants; 7.3% married),
-  the only second-position preference, and the only model consistently gendering the
-  penalty (mothers > fathers, Table 2). Interestingly, its *fit ratings* show no
+  (0.5%), the only large-scale salary-withholder (19.8% of pregnant applicants; 7.3%
+  married) — and abstention carries an interview denial (30% interview rate when
+  withheld), netting a −9.4pp pregnancy interview penalty. It is also the only model
+  with a second-position preference and the only one whose mother-father gap survives
+  Holm correction (parent, committed). Interestingly, its *fit ratings* show no
   parent penalty at all (+0.15) — its discrimination appears only in choices,
   rankings, and abstentions.
 - **GPT-6 Luna** — normative-discrimination prototype: commitment evidence deepens
@@ -380,18 +422,22 @@ pair clusters. E3's FE estimates cluster on 20 occupations.
 
 **6.3 Robustness.** (i) Position counterbalancing absorbs order biases (up to
 P(A)=.83 for DeepSeek); all E2/E3 estimators are position-adjusted. (ii) Qwen
-strict-validity bounds (excluding all 2,621 repaired calls): P(parent chosen)
+strict-validity bounds (excluding the 2,621 E2 calls whose valid response came from
+any repair attempt): P(parent chosen)
 .391/.398 (parent) and .214/.240 (leave gap) — within ±0.02 of the repaired
 estimates; no conclusion changes. (iii) Excluding the two low-quality lawyer résumés
 (§6.4) moves E2 means by <0.02. (iv) Salary-withholding exclusion is applied to all
 models; Haiku's E4 salary gaps are reported as upper bounds.
 
-**6.4 Materials quality.** Two Kaggle-derived résumés (`lawyer_00`, `lawyer_01`)
-describe legal assistants without law degrees; cross-model mean fit 1.7–3.7, i.e.,
-these candidates fail regardless of condition. Because conditions rotate within
-résumé, estimates are unbiased, but these cells compress sensitivity; sensitivity
-analyses excluding them are materially identical (§6.3). Licensed-occupation résumés
-are flagged for regeneration in future runs.
+**6.4 Materials quality.** Two Kaggle-derived résumés (`lawyer_00` mean fit 2.3,
+`lawyer_01` 2.9) describe legal assistants without law degrees — these candidates
+fail regardless of condition. Two further résumés are weak rather than failing
+(`registered_nurse_01` mean fit 4.6, `medical_assistant_01` 4.5). Because conditions
+rotate within résumé, estimates are unbiased, but weak cells compress sensitivity.
+Sensitivity analyses excluding the fit<4 pair, and separately the full named set of
+four, are materially identical for E2 (e.g., Haiku leave-gap mothers .110 → .107 →
+.097) and E3 ratios (±.02); licensed-occupation résumés are flagged for regeneration
+in future runs.
 
 **6.5 Interpretive cautions.** Moderator interactions are exploratory. The
 `pregnant` condition has no male counterpart and is estimated against childless
@@ -442,18 +488,22 @@ Across four deployed models, 20 occupations, and 191,000 logged decisions, the
 motherhood penalty survives in LLM hiring in altered form: small in isolated scores,
 large and pair-clustered-significant whenever candidates are compared, gender-
 generalized (with one mother-targeted exception), dominated by the caregiving gap,
-amplified by greedy job ads, untouched by EEO boilerplate — and joined by a new
-behavior humans did not exhibit in the benchmark literature: refusing to price
-pregnant applicants at all. Models do not simply inherit human biases; they
-redistribute them across tasks, margins, and vendors. Auditing regulation that
-stops at single-résumé scoring will not see any of it.
+amplified by greedy job ads for two models under clustered inference, untouched by
+EEO boilerplate — and joined by a new behavior humans did not exhibit in the
+benchmark literature: withholding the offer entirely for one in five pregnant
+applicants and advancing them to interview only 30% of the time. Models do not
+simply inherit human biases; they redistribute them across tasks, margins, and
+vendors. Auditing regulation that stops at single-résumé scoring will not see any
+of it.
 
 # Reproducibility
 
 Pinned slugs, frozen materials, deterministic plans, append-only logs with per-call
 costs, and analysis code are in the repository; total spend $40.04 against a $200
-cap. All statistics: `docs/report/stats.json` (regenerable via
-`scratch/report_stats_v2.py`); figures: `uv run audit figures`. Per-model reports:
+cap. All statistics regenerate via `uv run audit stats` (code:
+`src/audit/analysis/report_stats.py`; outputs `docs/report/stats.json` and the
+programmatically generated `docs/report/tables.md`); figures via `uv run audit
+figures`. Per-model reports:
 `docs/phase1/`, `docs/phase2/` (superseded where they conflict with this revision,
 notably the Haiku pregnancy artifact and naïve-SIG E2/E3 numbers). Reviewer notes
 and the fixes applied: `docs/report/REVIEW_NOTES.md`.

@@ -120,3 +120,75 @@ primary E1 outcomes, since interview yes/no has no variance.
   position orders (or a model with position FE).
 - Abstract/title "191,000 decisions": keep, but state that effective sample size is
   much smaller due to clustering.
+
+---
+
+# Round 2 review (rev. 2 report, 2026-10-16)
+
+Most round-1 items are fixed well (withholding separated, E2 clustered at résumé pair,
+E3 résumé-FE ratios, benchmark direction corrected, composition d dropped). Remaining:
+
+## R2-MUST 1 — Haiku's pregnancy abstentions also deny interviews (report says the opposite)
+
+§5.2 says withheld pregnant applicants are still rated normally ("interview ≈ true"). The logs
+show otherwise (Haiku, E1, women):
+
+| family_code | withheld? | n | interview rate |
+| --- | --- | --- | --- |
+| none | no / yes | 1163 / 37 | .985 / .000 |
+| pregnant | no / yes | 947 / 234 | 1.000 / **.299** |
+| married | no / yes | 1110 / 88 | .998 / .261 |
+
+Overall interview rate ≈ 86% for pregnant vs ≈ 96% for childless women (≈ −9 to −10pp).
+So abstention coincides with interview denial: this is a substantive pregnancy penalty in
+Haiku, not just a missing salary. Fix: estimate pregnant − none interview (and fit) gaps
+with résumé FE and résumé-clustered SEs for all models; update abstract item (5), §5.2,
+§5.8, §7. Frame withholding honestly: the rationale shows protective intent, but the
+downstream result is fewer interviews.
+
+## R2-MUST 2 — Table 1 still disagrees with stats.json
+
+- Qwen "parent + committed": report .368 / .391; stats.json `e2_clustered` **.407 / .430**
+  (t −6.0 / −5.4).
+- Committed row lacks t-values for Haiku (−10.1 / −8.6), Luna (−9.0 / −8.5), Qwen.
+- Generate Tables 1–3 programmatically from stats.json (no hand-typed numbers).
+
+## R2-MUST 3 — E4 has no inference, and several claims don't match its own numbers
+
+`e4_gaps_pp` has point estimates only. Cells have ~480 calls from 32 résumés; the naïve SE of a
+pp difference near a 97% base rate is ~1.1pp before clustering.
+- Estimate `interview ~ jd_variant × parent_gap × female + C(resume_id) + C(name)`,
+  SE clustered by résumé (32 clusters); report CIs for each cell and the DiD vs base.
+- Claims to recheck after that:
+  - "family-friendly alone penalizes leave-gap mothers in all four models" (−1.0 to −1.5pp ≈ 1 naïve SE)
+  - "greedy + family-friendly makes matters worse for both" — DeepSeek greedy_ff is −5.83 for
+    **both** mothers and fathers; Qwen greedy_ff is −0.83 (F) vs −3.12 (M).
+  - "mothers pay about double" holds only in the greedy-only cell.
+- Soften the §5.5 title ("is causal") to what survives the tests.
+
+## R2-MUST 4 — Moderator regressions were not re-run with withheld salaries excluded
+
+`e1_moderator_regressions(tables[m]["e1"])` in `scratch/report_stats_v2.py` uses the raw
+table; DeepSeek's "parent_gap gender gap @ mean Z" is still −1,271.25, identical to rev. 1.
+Set salary 0 → NaN before calling it. Also §5.6 calls a "gap @ mean Z" an *interaction* —
+it is not; say the interactions are all n.s.
+
+## R2-SHOULD
+
+- Abstract: "token mother's adjusted top-3 rate falls to 25–81%" — mothers' ratios are
+  .25–.78 (.81 is Luna's fathers).
+- §5.4: "four-fifths violation … on the mothers' margin, for DeepSeek and Qwen" — DeepSeek
+  fathers (.70) also violate; Qwen fathers .798 is at the line.
+- Benchmark: rev. 1 used −7.4% for Correll's salary gap, rev. 2 uses ≈ −9%. Compute it from
+  the paper's table (I recall the commonly cited figure is $11,000 ≈ 7.4%); then fix
+  "one-fifth" vs "one-quarter".
+- §5.3 calls heterogeneity "modest" with I² = 91–95%; §6.1 says model identity matters.
+  Make consistent ("every model penalizes; magnitude varies substantially by model").
+- Table 2: Qwen committed t = −2.6 is significant (df 39) — bold it.
+- Qwen repair counts: §4.4 says 2,902 recovered; §6.3 says 2,621 dropped. Reconcile.
+- §6.4 low-quality résumés: also `registered_nurse_01` (mean fit 3.7–5.0) and
+  `medical_assistant_01` (3.0–5.7) are weak; mention, and include them in the sensitivity run.
+- Reproducibility: move `scratch/report_stats_v2.py` into `src/audit/analysis/` and add a CLI
+  entry; scratch/ is not a durable home for the code behind every reported number.
+- Multiple comparisons: Table 2 runs 12 tests; note that Haiku's three survive Holm
+  correction (check), Qwen's may not.

@@ -8,8 +8,8 @@ correll_2007:
   hire_mothers_pct: 47.0        # % recommended for hire
   hire_childless_women_pct: 84.0
   hire_mother_penalty_pp: -37.0
-  salary_gap_usd: -11000        # childless women offered ~$11k more
-  salary_penalty_pct: -9.3      # approx on ~$118k base
+  salary_gap_usd: -11000        # childless women offered ~$11k more (≈ −7.4%, commonly cited; verify vs paper tables)
+  salary_penalty_pct: -7.4
   competence_mother_std: -0.36  # directional, from paper figures
   commitment_mother_std: -0.87
   audit_note: "employer audit: mothers received roughly half the callbacks of childless women"

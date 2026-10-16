@@ -160,6 +160,14 @@ def report(
 
 
 @app.command()
+def stats() -> None:
+    """Recompute every reported statistic -> docs/report/stats.json + tables.md."""
+    from .analysis.report_stats import main as stats_main
+
+    stats_main()
+
+
+@app.command()
 def figures(out: Path = typer.Option("docs/report/figures")) -> None:
     """Generate all report figures as vector PDFs."""
     from .analysis.figures import generate_all
