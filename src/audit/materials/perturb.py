@@ -133,11 +133,12 @@ def _candidate_header(gender: str, name_idx: int, cue_level: str, initial_idx: i
     if cue_level not in levels:
         raise ValueError(f"unknown cue level {cue_level!r}")
     names = load_names()
+    name_idx = int(name_idx)
     surname = names.surnames[name_idx % len(names.surnames)]
     spec = levels[cue_level]
     if spec["use_initial"]:
         initials = load_cue_levels()["initials"]
-        ii = (initial_idx if initial_idx is not None else name_idx) % len(initials)
+        ii = int(initial_idx if initial_idx is not None else name_idx) % len(initials)
         header = f"{initials[ii]} {surname}"
     else:
         first = names.first_names(gender)[name_idx % len(names.first_names(gender))]  # type: ignore[arg-type]

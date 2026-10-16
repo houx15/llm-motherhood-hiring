@@ -71,7 +71,7 @@ def build_prompt(row: dict) -> tuple[str, str]:
         text = _tpl("e1_scoring").render(jd=jd, candidate=cand, paraphrase_id=para)
     elif exp == "e2":
         names = load_names()
-        if "woman_resume" in ctx:  # direct gender contrast: P(woman chosen)
+        if ctx.get("woman_resume"):  # direct gender contrast: P(woman chosen)
             lvl = ctx.get("cue_level") or "name"
             woman = render_resume(
                 resumes[ctx["woman_resume"]], "female", int(ctx["woman_name_idx"]),
