@@ -1,3 +1,5 @@
+> **SUPERSEDED NOTICE (2026-10-16):** parts of this document were corrected after independent review — see `docs/report/report.md` (rev. 2). Key corrections: rev.2 of docs/report/report.md corrects: Haiku's −$18.7k pregnancy salary cut is a withholding artifact (excluding $0 offers: −$693, −0.8%); E2/E3 inference now résumé-pair clustered with FE-adjusted ratios; pooled/meta figures updated.
+
 # Phase F results — the audit across four models
 
 Runs of 2026-10-15/16: `deepseek/deepseek-v4.1-flash` (DeepInfra), `anthropic/claude-haiku-5.5`

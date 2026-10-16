@@ -1,3 +1,5 @@
+> **SUPERSEDED NOTICE (2026-10-16):** parts of this document were corrected after independent review — see `docs/report/report.md` (rev. 2). Key corrections: rev.2 of docs/report/report.md corrects: E2/E3 significance re-estimated with résumé-pair clustering and résumé fixed effects, and several E4/naïve figures updated.
+
 # Phase 1 results — DeepSeek V4.1 Flash, full E1–E4, 20 occupations
 
 Pooled runs 2026-10-15 (`e1_scoring`, `e2_paired`, `e3_ranking`, `e4_jd_context`) ·

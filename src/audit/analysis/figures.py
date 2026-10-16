@@ -47,8 +47,11 @@ def _tables() -> dict[str, dict]:
     return {m: build_tables(None, model_key=m) for m in MODELS}
 
 
-def fig_design(tables, out=OUT):
-    """E2 forest: P(parent chosen) with Wilson 95% CIs — model x contrast x gender."""
+def fig_design(tables, out=OUT, stats_path="docs/report/stats.json"):
+    """E2 forest: P(parent chosen) marginal means with pair-clustered 95% CIs."""
+    import json as _json
+
+    stats = _json.loads(Path(stats_path).read_text()) if Path(stats_path).exists() else None
     fig, axes = plt.subplots(1, 3, figsize=(10.5, 6.2), sharey=True)
     contrasts = ["parent", "parent_committed", "parent_gap"]
     titles = {"parent": "Parent (PTA cue)", "parent_committed": "Parent + high commitment", "parent_gap": "Parent + leave gap"}
@@ -56,25 +59,25 @@ def fig_design(tables, out=OUT):
     for ax, contrast in zip(axes, contrasts):
         rows = []
         for m in MODELS:
-            e2 = tables[m].get("e2")
-            if e2 is None or e2.empty:
-                continue
             for gender in ["female", "male"]:
-                sub = e2[(e2["contrast"] == contrast) & (e2["gender"] == gender)]
-                n = len(sub)
-                k = sub["parent_chosen"].sum()
-                p, lo, hi = wilson_ci(k, n)
-                pval = binom_test_phalf(int(k), n)
-                rows.append((SHORT[m], gender, p, lo, hi, pval, n))
+                if stats:
+                    c = stats["models"][m]["e2_clustered"]["cells"][f"{contrast}|{gender}"]
+                    p, se, z = c["p"], c["se"], c["z_vs_half"]
+                else:  # fallback: naive Wilson
+                    e2 = tables[m].get("e2")
+                    sub = e2[(e2["contrast"] == contrast) & (e2["gender"] == gender)]
+                    p, lo, hi = wilson_ci(sub["parent_chosen"].sum(), len(sub))
+                    se, z = (hi - lo) / 3.92, None
+                rows.append((SHORT[m], gender, p, 1.96 * se, z))
         ypos = np.arange(len(rows))[::-1]
-        for y, (label, gender, p, lo, hi, pval, n) in zip(ypos, rows):
+        for y, (label, gender, p, w, z) in zip(ypos, rows):
             color = COLORS[gender]
-            ax.errorbar(p, y, xerr=[[p - lo], [hi - p]], fmt="o", color=color,
-                        capsize=2.5, lw=1.2, ms=4.5)
-            star = "***" if pval < 0.001 else ("**" if pval < 0.01 else ("*" if pval < 0.05 else ""))
-            ax.text(hi + 0.02, y, star, va="center", fontsize=7, color="0.35")
+            ax.errorbar(p, y, xerr=[[w], [w]], fmt="o", color=color, capsize=2.5, lw=1.2, ms=4.5)
+            if z is not None:
+                star = "***" if abs(z) > 3.3 else ("**" if abs(z) > 2.6 else ("*" if abs(z) > 2.0 else ""))
+                ax.text(min(p + w + 0.02, 0.88), y, star, va="center", fontsize=7, color="0.35")
             if first:
-                ylabels.append(f"{label}\n{'women' if gender=='female' else 'men'}")
+                ylabels.append(f"{label}\n{'women' if gender == 'female' else 'men'}")
                 yvals.append(y)
         first = False
         ax.axvline(0.5, color="0.4", ls="--", lw=0.9)
@@ -84,17 +87,20 @@ def fig_design(tables, out=OUT):
         ax.grid(axis="x", alpha=0.25)
     axes[0].set_yticks(yvals)
     axes[0].set_yticklabels(ylabels, fontsize=7.5)
-    fig.suptitle("Figure 2. Paired comparison (E2): probability the parent candidate is chosen\n(binomial test vs 0.5; * p<.05, ** p<.01, *** p<.001)", y=1.02, fontsize=10)
+    fig.suptitle("Figure 2. Paired comparison (E2): probability the parent candidate is chosen\n"
+                 "marginal means ± 95% CI, SEs clustered by résumé pair (40 clusters); * |z|>2, ** >2.6, *** >3.3",
+                 y=1.04, fontsize=9.5)
     fig.savefig(out / "fig2_e2_forest.pdf")
     plt.close(fig)
 
 
 def fig_e1_cells(tables, out=OUT):
-    """E1 cell means: interview rate + salary by family x gender, per model."""
+    """E1 cell means: interview rate + salary (excluding withheld zeros) by family x gender."""
     order = ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
     fig, axes = plt.subplots(2, 4, figsize=(11.5, 5.2), sharex=True)
     for c, m in enumerate(MODELS):
-        e1 = tables[m].get("e1")
+        e1 = tables[m].get("e1").copy()
+        e1.loc[e1["starting_salary_usd"].fillna(0) == 0, "starting_salary_usd"] = np.nan
         ax = axes[0, c]
         if e1 is not None and not e1.empty:
             piv = e1.groupby(["family_code", "gender"])["interview"].mean().unstack()
@@ -118,15 +124,18 @@ def fig_e1_cells(tables, out=OUT):
         lab = [o.replace("_", "\n") for o in (piv.index if piv is not None else [])]
         ax.set_xticklabels(lab, fontsize=6.5)
         if c == 0:
-            ax.set_ylabel("Mean salary ($1,000)")
+            ax.set_ylabel("Mean salary ($1,000)\n(withheld $0 excluded)")
     fig.suptitle("Figure 3. E1 independent scoring: interview rate and recommended salary by condition", y=1.01)
     fig.tight_layout()
     fig.savefig(out / "fig3_e1_cells.pdf")
     plt.close(fig)
 
 
-def fig_e3_impact(tables, out=OUT):
-    """E3: top-3 rates by candidate type per model + impact ratios vs 0.80 line."""
+def fig_e3_impact(tables, out=OUT, stats_path="docs/report/stats.json"):
+    """E3: top-3 rates per model + naive AND resume-FE-adjusted impact ratios."""
+    import json as _json
+
+    stats = _json.loads(Path(stats_path).read_text()) if Path(stats_path).exists() else None
     fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.2))
     ax = axes[0]
     width = 0.38
@@ -149,23 +158,24 @@ def fig_e3_impact(tables, out=OUT):
     ax.grid(axis="y", alpha=0.25)
     ax = axes[1]
     for i, m in enumerate(MODELS):
-        e3 = tables[m].get("e3")
-        ratios = []
-        for comp, fam, g in [("a", "parent", "female"), ("b", "parent", "male")]:
-            sub = e3[e3["composition"] == comp]
-            rate = sub.groupby(["family_code", "gender"])["top3"].mean()
-            ratios.append(rate.loc[(fam, g)] / rate.loc[("none", g)])
-        ax.plot([i - 0.12, i + 0.12], ratios, "o-", color="#6a9f58", ms=6)
-        ax.annotate("F" if ratios[1] > ratios[0] else "M", (i + 0.12, ratios[1]), fontsize=7, xytext=(4, 4), textcoords="offset points")
+        if stats:
+            r = stats["models"][m]["e3_fe"]
+            naive = [r["F"]["naive_ratio"], r["M"]["naive_ratio"]]
+            adj = [r["F"]["adjusted_ratio"], r["M"]["adjusted_ratio"]]
+        else:
+            naive = adj = [float("nan"), float("nan")]
+        ax.plot([i - 0.14, i + 0.14], naive, "o", color="0.62", ms=6, label="naïve" if i == 0 else None)
+        ax.plot([i - 0.14, i + 0.14], adj, "s-", color="#6a9f58", ms=6, label="résumé-FE adjusted" if i == 0 else None)
     ax.axhline(0.80, color="darkred", ls="--", lw=1.2)
     ax.text(3.42, 0.805, "four-fifths rule", color="darkred", fontsize=7, ha="right")
     ax.set_xticks(range(len(MODELS)))
     ax.set_xticklabels([SHORT[m].replace("\n", " ") for m in MODELS], fontsize=7)
-    ax.set_ylabel("Top-3 impact ratio\n(parent / childless, same gender)")
-    ax.set_ylim(0, 1.0)
-    ax.set_title("Adverse-impact ratios (● left = mothers, ● right = fathers)")
+    ax.set_ylabel("Top-3 impact ratio (parent / childless)\n● naïve  ■ résumé-FE adjusted")
+    ax.set_ylim(0, 1.05)
+    ax.set_title("Adverse-impact ratios (left = mothers, right = fathers)")
+    ax.legend(fontsize=7)
     ax.grid(axis="y", alpha=0.25)
-    fig.suptitle("Figure 4. Ranking pools (E3): token parents vs childless candidates", y=1.02)
+    fig.suptitle("Figure 4. Ranking pools (E3): token parents vs childless candidates", y=1.03)
     fig.tight_layout()
     fig.savefig(out / "fig4_e3_impact.pdf")
     plt.close(fig)
@@ -204,8 +214,8 @@ def fig_e4_context(tables, out=OUT):
 
 
 def fig_quality(tables, out=OUT):
-    """Data quality: parse/refusal rates; E2 position bias; E3 position decay."""
-    fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.6))
+    """Data quality: parse rates; salary withholding; E2 position bias; E3 decay."""
+    fig, axes = plt.subplots(2, 2, figsize=(10.5, 6.4))
     names = [SHORT[m].replace("\n", " ") for m in MODELS]
     parse, refusal = [], []
     for m in MODELS:
@@ -213,7 +223,7 @@ def fig_quality(tables, out=OUT):
         eff = diag.assign(_ok=diag["parse_ok"].fillna(False)).groupby("call_id")["_ok"].max()
         parse.append(100 * eff.mean())
         refusal.append(100 * diag["refusal_flag"].fillna(False).mean())
-    ax = axes[0]
+    ax = axes[0, 0]
     ax.bar(names, parse, color="#4e7fc2", width=0.6)
     ax.axhline(98, color="darkred", ls="--", lw=1)
     ax.text(0.02, 98.15, "98% acceptance bar", color="darkred", fontsize=6.5, transform=ax.get_yaxis_transform())
@@ -225,8 +235,24 @@ def fig_quality(tables, out=OUT):
     for i, (p, r) in enumerate(zip(parse, refusal)):
         ax.text(i, p + 0.15, f"{p:.1f}%", ha="center", fontsize=7)
         if r > 0:
-            ax.text(i, 91, f"refusals\n{r:.1f}%", ha="center", fontsize=6, color="#c25b4e")
-    ax = axes[1]
+            ax.text(i, 91, f"refusals {r:.1f}%", ha="center", fontsize=6, color="#c25b4e")
+    ax = axes[0, 1]
+    order = ["none", "married", "parent", "parent_gap", "parent_committed", "pregnant"]
+    palette = {"deepseek_v41_flash": "#4e7fc2", "claude_haiku_55": "#c25b4e", "gpt6_luna": "#6a9f58", "qwen38_flash": "#c8a03c"}
+    for m in MODELS:
+        e1 = tables[m]["e1"]
+        w = e1[e1.gender == "female"].copy()
+        w["withheld"] = (w["starting_salary_usd"].fillna(0) == 0)
+        rates = w.groupby("family_code")["withheld"].mean().reindex([o for o in order if o in set(w.family_code)])
+        ax.plot(range(len(rates)), 100 * rates.values, "o-", color=palette[m], ms=4,
+                label=SHORT[m].replace("\n", " "))
+    ax.set_xticks(range(len(order)))
+    ax.set_xticklabels([o.replace("_", " ") for o in order], rotation=30, fontsize=6.5)
+    ax.set_ylabel("Salary withheld ($0), % of E1 women")
+    ax.set_title("Salary withholding by condition")
+    ax.legend(fontsize=6.5)
+    ax.grid(alpha=0.25)
+    ax = axes[1, 0]
     posA = []
     for m in MODELS:
         e2 = tables[m].get("e2")
@@ -240,7 +266,7 @@ def fig_quality(tables, out=OUT):
     ax.grid(axis="y", alpha=0.25)
     for i, p in enumerate(posA):
         ax.text(i, p + 0.02, f"{p:.2f}", ha="center", fontsize=7)
-    ax = axes[2]
+    ax = axes[1, 1]
     for m in MODELS:
         e3 = tables[m].get("e3")
         if e3 is None or e3.empty:
@@ -252,50 +278,62 @@ def fig_quality(tables, out=OUT):
     ax.set_title("E3 position decay")
     ax.legend(fontsize=6.5)
     ax.grid(alpha=0.25)
-    fig.suptitle("Figure 6. Data quality and positional robustness checks", y=1.03)
+    fig.suptitle("Figure 6. Data quality, salary withholding, and positional robustness checks", y=1.01)
     fig.tight_layout()
     fig.savefig(out / "fig6_quality.pdf")
     plt.close(fig)
 
 
-def fig_benchmark(tables, out=OUT):
-    """E2 mothers: paired effects vs Correll et al. (2007) human benchmark."""
+def fig_benchmark(tables, out=OUT, stats_path="docs/report/stats.json"):
+    """Benchmark vs Correll et al. (2007): salary % penalty and hire-rate gaps.
+
+    Human benchmark (lab study): recommended hire 84% childless women vs 47% mothers
+    (−37pp); salary ≈ −$11,000 (≈ −9%). LLM E2 choice gap is within-decision;
+    human hire rate is between-persons — scale caveat in caption.
+    """
+    import json as _json
+
+    stats = _json.loads(Path(stats_path).read_text()) if Path(stats_path).exists() else None
     fig, axes = plt.subplots(1, 2, figsize=(10.2, 4.0))
     ax = axes[0]
     xs, labels = [], []
-    for i, m in enumerate(MODELS):
-        e2 = tables[m].get("e2")
-        sub = e2[(e2["contrast"] == "parent") & (e2["gender"] == "female")]
-        d = 100 * (sub["diff_starting_salary_usd"].mean() / sub["A.starting_salary_usd"].mean()) if "A.starting_salary_usd" in sub else float("nan")
+    for m in MODELS:
+        if stats:
+            d = stats["models"][m]["e2_parent_salary_f"]["pct"]
+        else:
+            e2 = tables[m].get("e2")
+            sub = e2[(e2["contrast"] == "parent") & (e2["gender"] == "female")]
+            base = sub[[c for c in sub.columns if c.startswith("A.starting")][0]].mean()
+            d = 100 * sub["diff_starting_salary_usd"].mean() / base
         xs.append(d)
         labels.append(SHORT[m].replace("\n", " "))
     ax.bar(labels, xs, color="#c25b4e", width=0.55)
-    ax.axhline(-7.4, color="0.2", ls=":", lw=1.4)
-    ax.text(2.9, -7.0, "Human lab benchmark\n(Correll et al. 2007: −7.4%)", fontsize=6.5, ha="center")
+    ax.axhline(-9.3, color="0.2", ls=":", lw=1.4)
+    ax.text(1.5, -10.6, "human lab benchmark ≈ −9%\n(Correll et al. 2007)", fontsize=6.5, ha="center")
     ax.set_ylabel("Mother salary penalty (% of childless offer)")
     ax.set_title("E2 mothers: recommended-salary penalty")
     ax.tick_params(axis="x", labelsize=6.5)
     ax.grid(axis="y", alpha=0.25)
     for i, v in enumerate(xs):
-        ax.text(i, v - 0.25, f"{v:.1f}%", ha="center", fontsize=7)
+        ax.text(i, v - 0.35, f"{v:.1f}%", ha="center", fontsize=7)
     ax = axes[1]
-    ys, ylabels = [], []
+    # hire/choice-rate gap in pp: humans (84−47); LLMs: 100*(0.5 − P(parent chosen))
+    gaps = []
     for m in MODELS:
-        e2 = tables[m].get("e2")
-        sub = e2[(e2["contrast"] == "parent") & (e2["gender"] == "female")]
-        d, lo, hi, n = paired_d(sub["diff_commitment"])
-        ys.append((d, lo, hi))
-        ylabels.append(SHORT[m].replace("\n", " "))
-    ypos = np.arange(len(ys))[::-1]
-    for y, (d, lo, hi) in zip(ypos, ys):
-        ax.errorbar(d, y, xerr=[[d - lo], [hi - d]], fmt="s", color="#6a9f58", capsize=3, ms=5)
-    ax.axvline(0, color="0.4", lw=0.9)
-    ax.set_yticks(ypos)
-    ax.set_yticklabels(ylabels, fontsize=7.5)
-    ax.set_xlabel("Paired difference in commitment rating (parent − childless), 95% CI")
-    ax.set_title("E2 mothers: commitment penalty")
-    ax.grid(axis="x", alpha=0.25)
-    fig.suptitle("Figure 7. Benchmarking LLM penalties against human evaluators", y=1.03)
+        p = stats["models"][m]["e2_clustered"]["cells"]["parent|female"]["p"] if stats else float("nan")
+        gaps.append(100 * (0.5 - p))
+    ax.bar(names := [SHORT[m].replace("\n", " ") for m in MODELS], gaps, color="#4e7fc2", width=0.55)
+    ax.axhline(37.0, color="0.2", ls=":", lw=1.4)
+    ax.text(1.5, 38.2, "human lab benchmark: 84% vs 47%\nrecommended hire (−37pp)", fontsize=6.5, ha="center")
+    ax.set_ylabel("Childless-women advantage (pp)")
+    ax.set_title("Selection gap: E2 choice (LLMs) vs hire rate (human lab)")
+    ax.tick_params(axis="x", labelsize=6.5)
+    ax.grid(axis="y", alpha=0.25)
+    for i, v in enumerate(gaps):
+        ax.text(i, v + 0.6, f"{v:.1f}", ha="center", fontsize=7)
+    fig.suptitle("Figure 7. LLM penalties vs human evaluators (Correll et al. 2007). NB: LLM gap is a\n"
+                 "within-pair choice share; human gap is a between-persons hire rate — directionally, not metrically, comparable.",
+                 y=1.10, fontsize=8.5)
     fig.tight_layout()
     fig.savefig(out / "fig7_benchmark.pdf")
     plt.close(fig)
