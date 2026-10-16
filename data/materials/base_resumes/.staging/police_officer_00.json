@@ -1,0 +1,78 @@
+{
+  "resume_id": "police_officer_00",
+  "occupation_id": "police_officer",
+  "source": "synthetic",
+  "summary": "POST-certified patrol officer with over a decade of experience in municipal and federal law enforcement, specializing in emergency response, criminal investigation, and community-oriented policing. Proven record of de-escalating crises, enforcing traffic and criminal statutes, and producing accurate incident documentation.",
+  "experience": [
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a large national company",
+      "start": "2022-04",
+      "end": "Present",
+      "bullets": [
+        "Patrol designated sectors to detect law violators, issue citations, and make arrests, averaging 14 traffic stops and 3 custodial arrests per week while maintaining a complaint rate below 2%.",
+        "Respond to emergency calls for service including domestic disturbances, traffic collisions, and medical crises, rendering first aid and coordinating with EMS until transport.",
+        "Investigate suspicious activities and illegal conduct, interviewing witnesses and suspects, reviewing incident facts, and determining applicable statute violations before filing charges.",
+        "Prepare detailed incident and arrest reports documenting facts, evidence, and legal charges; reports are routinely cited by prosecutors for accuracy and completeness.",
+        "Engage in community relations activities including neighborhood meetings, school presentations, and business security consultations to strengthen public trust."
+      ]
+    },
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a municipal police department",
+      "start": "2019-08",
+      "end": "2022-03",
+      "bullets": [
+        "Conducted high-visibility patrols in a district of 45,000 residents, responding to an average of 20 calls per shift covering crimes against persons and property.",
+        "Pursued and apprehended suspects fleeing from felony offenses, achieving a 92% arrest rate on assigned priority cases.",
+        "Rendered emergency first aid at accident scenes, including CPR and tourniquet application, contributing to 8 successful life-saving interventions over 30 months.",
+        "Verified legal charges with supervising officers and court liaison personnel to ensure statutory compliance before booking.",
+        "Documented incident facts in a records management system, producing clear reports that reduced follow-up investigative requests by 18%."
+      ]
+    },
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a state law enforcement agency",
+      "start": "2016-05",
+      "end": "2019-07",
+      "bullets": [
+        "Patrolled state highways and rural areas to enforce motor vehicle and criminal laws, issuing citations and making arrests for impaired driving, drug possession, and warrant service.",
+        "Investigated suspicious activities and illegal operations, gathering evidence and preparing probable cause affidavits for search and arrest warrants.",
+        "Assisted accident survivors and persons requiring first aid, stabilizing injuries until medical personnel arrived and documenting statements on scene.",
+        "Maintained order at public events and emergencies, protecting people and property while coordinating with fire and emergency medical services.",
+        "Reviewed incident facts to determine whether criminal acts or statute violations occurred, forwarding cases to detectives when appropriate."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Science in Criminal Justice",
+      "institution": "a community college",
+      "year": 2016
+    },
+    {
+      "degree": "POST Law Enforcement Certification",
+      "institution": "a state POST academy",
+      "year": 2016
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Critical Thinking",
+    "Speaking",
+    "Reading Comprehension",
+    "Writing",
+    "Active Learning",
+    "Incident Reporting",
+    "Emergency Response",
+    "First Aid and CPR",
+    "Traffic Law Enforcement",
+    "Criminal Investigation",
+    "Arrest and Booking Procedures",
+    "De-escalation",
+    "Community Relations"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

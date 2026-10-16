@@ -1,0 +1,87 @@
+{
+  "resume_id": "security_guard_03",
+  "occupation_id": "security_guard",
+  "source": "synthetic",
+  "summary": "Detail-oriented security professional with over 9 years of experience in access control, patrol operations, and emergency response. Proven ability to maintain order and protect assets in high-traffic commercial and industrial environments.",
+  "experience": [
+    {
+      "title": "Security Guard",
+      "employer": "an industry-leading organization",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Monitor and authorize entrance and departure of employees, visitors, and other persons to guard against theft and maintain security of premises, processing an average of 300 access requests per shift.",
+        "Patrol industrial and commercial premises to prevent and detect signs of intrusion, ensuring security of doors, windows, and gates across a 12-acre facility.",
+        "Respond to alarms and investigate disturbances, resolving an average of 15 incidents per month with zero unresolved breaches.",
+        "Write detailed reports of daily activities and irregularities, including equipment damage, theft, and unauthorized persons, maintaining 100% incident documentation accuracy."
+      ]
+    },
+    {
+      "title": "Security Officer",
+      "employer": "a regional commercial property management firm",
+      "start": "2018-09",
+      "end": "2021-05",
+      "bullets": [
+        "Locked doors and gates of entrances and exits to secure a multi-tenant office complex, performing 40+ lock-up checks weekly.",
+        "Circulated among visitors, patrons, and employees to preserve order and protect property, de-escalating an average of 10 disputes per month.",
+        "Warned persons of rule infractions or violations and evicted violators from premises, using force only when necessary and in accordance with company policy.",
+        "Administered basic first aid and obtained assistance from paramedics during 8 medical emergencies, achieving a 100% response rate within 3 minutes."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "a national retail chain",
+      "start": "2016-02",
+      "end": "2018-08",
+      "bullets": [
+        "Monitored entrance and departure of customers and staff to guard against theft, reducing shoplifting incidents by 22% within the first year.",
+        "Answered alarms and investigated disturbances, coordinating with local law enforcement on 30+ occasions.",
+        "Maintained daily activity logs and irregularity reports, ensuring timely submission to management.",
+        "Patrolled store premises and parking areas to detect signs of intrusion and ensure safety of customers and property."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "a local event security contractor",
+      "start": "2014-03",
+      "end": "2016-01",
+      "bullets": [
+        "Controlled access at gates and entrances for concerts and sporting events with attendances up to 5,000 people.",
+        "Circulated among patrons to preserve order and protect property, resolving crowd control issues swiftly.",
+        "Responded to medical emergencies by administering basic first aid or obtaining assistance from paramedics, assisting 12 individuals during tenure.",
+        "Wrote reports of daily activities and irregularities, including unauthorized entry attempts and property damage."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "High School Diploma",
+      "institution": "a public high school",
+      "year": 2013
+    },
+    {
+      "degree": "State guard card",
+      "institution": "a state licensing board",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Monitoring",
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Learning",
+    "Writing",
+    "Learning Strategies",
+    "Mathematics",
+    "Access Control",
+    "Incident Reporting",
+    "Emergency Response",
+    "Patrol Operations",
+    "De-escalation"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

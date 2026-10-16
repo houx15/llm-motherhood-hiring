@@ -1,0 +1,89 @@
+{
+  "resume_id": "veterinarian_01",
+  "occupation_id": "veterinarian",
+  "source": "synthetic",
+  "summary": "Licensed veterinarian with 10 years of continuous clinical experience across small-animal general practice, emergency care, and shelter medicine. Skilled in diagnostics, surgery, preventive care, and client education, with a record of improving patient outcomes and clinic efficiency in growing mid-market practices.",
+  "experience": [
+    {
+      "title": "Veterinarian (DVM, State Veterinary License)",
+      "employer": "a growing mid-market small-animal clinic",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Examine 20-25 animals per day to detect and determine the nature of diseases and injuries, documenting findings in the practice management system.",
+        "Treat sick or injured animals by prescribing medication, setting bones, dressing wounds, and performing soft-tissue surgeries including spays, neuters, and mass removals.",
+        "Collect body tissue, feces, blood, urine, and other fluids for laboratory examination and analysis, interpreting results to guide treatment plans.",
+        "Operate radiographic and ultrasound equipment and interpret resulting images to diagnose fractures, foreign bodies, and abdominal conditions.",
+        "Inoculate animals against rabies, distemper, parvovirus, and other diseases, maintaining a 95% on-time vaccination rate across the patient panel.",
+        "Counsel clients about pet loss, hospice care, and euthanasia decisions with empathy while ensuring informed consent and comfort-focused protocols."
+      ]
+    },
+    {
+      "title": "Associate Veterinarian",
+      "employer": "a regional multi-doctor animal hospital",
+      "start": "2018-04",
+      "end": "2021-05",
+      "bullets": [
+        "Diagnosed and treated medical and surgical cases across a caseload of 4,000+ patients, collaborating with senior veterinarians on complex presentations.",
+        "Performed emergency triage, wound management, and stabilization for after-hours cases, reducing average patient wait time by 18%.",
+        "Educated the public about zoonotic diseases such as rabies and leptospirosis through community outreach and client handouts.",
+        "Advised owners on sanitary measures, feeding, general care, medical conditions, and treatment options during 15-20 consultations per shift.",
+        "Maintained accurate controlled-substance and medical records in compliance with state and DEA requirements."
+      ]
+    },
+    {
+      "title": "Veterinarian",
+      "employer": "a nonprofit animal shelter and community clinic",
+      "start": "2016-01",
+      "end": "2018-03",
+      "bullets": [
+        "Provided high-volume spay/neuter surgery and preventive care for shelter animals and low-income community clients.",
+        "Examined animals to identify injuries and illnesses and developed treatment plans within resource constraints.",
+        "Administered vaccinations against rabies and distemper and conducted wellness screenings for intake and adoption clearance.",
+        "Trained veterinary assistants on patient restraint, sample collection, and diagnostic equipment operation."
+      ]
+    },
+    {
+      "title": "Veterinary Intern / Extern",
+      "employer": "a mid-market mixed-animal practice",
+      "start": "2014-06",
+      "end": "2015-12",
+      "bullets": [
+        "Assisted licensed veterinarians with examinations, diagnostic imaging, and surgical preparation for small and large animals.",
+        "Collected blood, urine, and tissue samples and performed routine in-house laboratory testing under supervision.",
+        "Documented patient histories and client communications, supporting continuity of care across appointments."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Veterinary Medicine (DVM)",
+      "institution": "a state university college of veterinary medicine",
+      "year": 2014
+    },
+    {
+      "degree": "Bachelor of Science in Animal Science",
+      "institution": "a state university",
+      "year": 2010
+    }
+  ],
+  "skills": [
+    "Reading Comprehension",
+    "Active Listening",
+    "Active Learning",
+    "Speaking",
+    "Science",
+    "Critical Thinking",
+    "Writing",
+    "Monitoring",
+    "Mathematics",
+    "Learning Strategies",
+    "Small-Animal Surgery",
+    "Diagnostic Imaging",
+    "Preventive Care",
+    "Client Education"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

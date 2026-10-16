@@ -1,0 +1,93 @@
+{
+  "resume_id": "health_services_manager_00",
+  "occupation_id": "health_services_manager",
+  "source": "synthetic",
+  "summary": "Results-driven Medical and Health Services Manager with over 10 years of progressive experience overseeing clinical and administrative operations in growing mid-market healthcare organizations. Skilled in fiscal management, staff supervision, regulatory compliance, and implementing technology solutions to improve patient care and operational efficiency.",
+  "experience": [
+    {
+      "title": "Director of Health Services Management",
+      "employer": "a growing mid-market healthcare organization",
+      "start": "2021-07",
+      "end": "Present",
+      "bullets": [
+        "Direct, supervise, and evaluate work activities of 85+ medical, nursing, technical, clerical, and service personnel across three facilities, achieving a 92% employee satisfaction rate.",
+        "Developed and maintained a computerized record management system to store and process personnel and patient data, reducing reporting time by 40% and improving data accuracy.",
+        "Plan, implement, and administer programs and services including personnel administration, training, and coordination of medical, nursing, and physical plant staff, resulting in a 25% increase in operational efficiency.",
+        "Conduct and administer fiscal operations including accounting, budget planning, authorizing expenditures, establishing rates for services, and coordinating financial reporting for a $12M annual budget.",
+        "Maintain awareness of advances in medicine, diagnostic equipment, data processing technology, government regulations, and health insurance changes, implementing 5 new compliance protocols within 18 months.",
+        "Monitor use of diagnostic services, inpatient beds, facilities, and staff to ensure effective resource use and assess need for additional staff, equipment, and services, reducing patient wait times by 30%."
+      ]
+    },
+    {
+      "title": "Health Services Manager",
+      "employer": "a regional medical center",
+      "start": "2018-02",
+      "end": "2021-06",
+      "bullets": [
+        "Directed recruitment, hiring, and training of 60+ clinical and administrative staff, reducing turnover by 22% through improved onboarding and mentorship programs.",
+        "Established work schedules and assignments for staff according to workload, space, and equipment availability, optimizing coverage and reducing overtime costs by 18%.",
+        "Managed fiscal operations including accounting, budget planning, and authorizing expenditures for a $7M department budget while coordinating monthly financial reporting.",
+        "Implemented computerized record management system upgrades to process personnel activities and generate reports, cutting administrative processing time by 35%.",
+        "Monitored use of diagnostic services and inpatient beds, assessing need for additional equipment and services, which led to the acquisition of two new imaging machines."
+      ]
+    },
+    {
+      "title": "Assistant Health Services Manager",
+      "employer": "a community health system",
+      "start": "2015-09",
+      "end": "2018-01",
+      "bullets": [
+        "Assisted in supervising work activities of medical, nursing, technical, and clerical personnel, conducting performance evaluations and coordinating training sessions.",
+        "Supported fiscal operations including budget planning, expenditure authorization, and coordination of financial reporting for a $4M annual budget.",
+        "Developed and maintained computerized record management systems to store and process personnel information, improving report generation speed by 30%.",
+        "Helped plan and implement programs and services, coordinating medical, nursing, and physical plant staff to ensure smooth daily operations.",
+        "Established work schedules for 40+ staff members, balancing workload and equipment availability to maintain optimal staffing levels.",
+        "Monitored use of inpatient beds and facilities, identifying resource gaps and recommending staffing adjustments to leadership."
+      ]
+    },
+    {
+      "title": "Administrative Coordinator",
+      "employer": "a growing mid-market healthcare company",
+      "start": "2014-06",
+      "end": "2015-08",
+      "bullets": [
+        "Coordinated recruitment, hiring, and training activities for clinical and administrative personnel, processing 150+ applications annually.",
+        "Maintained computerized record management systems to store and process personnel activities and information and to produce regular reports.",
+        "Assisted with fiscal operations including accounting, budget tracking, and expenditure authorization for a $2M departmental budget.",
+        "Established work schedules and assignments for 25 staff members according to workload and space availability.",
+        "Monitored use of diagnostic services and facilities, compiling data to support resource utilization assessments."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Health Administration",
+      "institution": "a state university",
+      "year": 2016
+    },
+    {
+      "degree": "Bachelor of Science in Health Services Management",
+      "institution": "a public university",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Monitoring",
+    "Active Learning",
+    "Learning Strategies",
+    "Mathematics",
+    "Science",
+    "Fiscal Management",
+    "Staff Supervision",
+    "Regulatory Compliance",
+    "Health Information Systems"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

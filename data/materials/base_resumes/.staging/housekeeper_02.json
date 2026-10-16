@@ -1,0 +1,82 @@
+{
+  "resume_id": "housekeeper_02",
+  "occupation_id": "housekeeper",
+  "source": "synthetic",
+  "summary": "Detail-oriented housekeeper with over 10 years of experience maintaining cleanliness and hygiene standards in hospitality and institutional settings. Proven ability to manage time efficiently while delivering thorough cleaning services and restocking supplies.",
+  "experience": [
+    {
+      "title": "Housekeeper",
+      "employer": "an industry-leading hospitality organization",
+      "start": "2021-08",
+      "end": "Present",
+      "bullets": [
+        "Clean and maintain guest rooms, hallways, lobbies, and restrooms to meet health standards, completing up to 16 rooms per shift.",
+        "Replenish linens, towels, drinking glasses, and bathroom amenities, ensuring all supplies are fully stocked.",
+        "Operate vacuum cleaners and shampooers to clean carpets, rugs, and upholstered furniture.",
+        "Empty wastebaskets, transport trash to disposal areas, and maintain cleanliness of storage areas and carts."
+      ]
+    },
+    {
+      "title": "Housekeeping Cleaner",
+      "employer": "a regional healthcare facility",
+      "start": "2018-06",
+      "end": "2021-07",
+      "bullets": [
+        "Cleaned patient rooms, corridors, elevators, and stairways, adhering to strict infection control protocols.",
+        "Swept, mopped, waxed, and polished floors using brooms, mops, and powered scrubbing machines.",
+        "Washed windows, walls, ceilings, and woodwork, including waxing and polishing as needed.",
+        "Restocked cleaning supplies and linens on wheeled carts, ensuring efficient daily operations."
+      ]
+    },
+    {
+      "title": "Room Attendant",
+      "employer": "a national hotel chain",
+      "start": "2016-04",
+      "end": "2018-05",
+      "bullets": [
+        "Cleaned and sanitized guest rooms, bathrooms, and common areas, maintaining a 95% cleanliness inspection score.",
+        "Vacuumed and shampooed carpets, draperies, and upholstered furniture to maintain appearance.",
+        "Replenished guest supplies such as writing utensils, glasses, and toiletries.",
+        "Reported maintenance issues and safety hazards to supervisors promptly."
+      ]
+    },
+    {
+      "title": "Cleaning Assistant",
+      "employer": "a local commercial cleaning service",
+      "start": "2014-09",
+      "end": "2016-03",
+      "bullets": [
+        "Assisted with cleaning offices, restrooms, and break rooms, following checklists to ensure all areas were addressed.",
+        "Emptied wastebaskets and transported waste to disposal areas, maintaining a tidy work environment.",
+        "Swept and mopped floors, and helped stock cleaning carts with necessary supplies.",
+        "Used active listening to follow instructions and communicate supply needs to team members."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "High School Diploma",
+      "institution": "a public high school",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Monitoring",
+    "Reading Comprehension",
+    "Writing",
+    "Active Learning",
+    "Learning Strategies",
+    "Mathematics",
+    "Time Management",
+    "Attention to Detail",
+    "Cleaning Equipment Operation",
+    "Supply Restocking",
+    "Team Coordination"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

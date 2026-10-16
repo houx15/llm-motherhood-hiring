@@ -1,0 +1,63 @@
+{
+  "resume_id": "lawyer_01",
+  "occupation_id": "lawyer",
+  "source": "synthetic",
+  "summary": "Practicing attorney with 10 years of experience in commercial litigation and transactional matters, licensed and in good standing with a state bar since 2016. Proven record managing complex cases from inception through resolution and advising clients on regulatory compliance and contract negotiations.",
+  "experience": [
+    {
+      "title": "Senior Litigation Associate",
+      "employer": "a regional full-service law firm",
+      "start": "2019-06",
+      "end": "Present",
+      "bullets": [
+        "Manage a portfolio of 30+ commercial litigation matters, including contract disputes, tort claims, and employment actions, with cumulative exposure exceeding $15M.",
+        "Lead discovery strategy, depose fact and expert witnesses, and argue dispositive motions in state and federal courts.",
+        "Second-chair two jury trials and negotiate favorable settlements in approximately 85% of mediated cases.",
+        "Supervise two junior associates and a paralegal, reviewing pleadings and providing mentorship on case strategy."
+      ]
+    },
+    {
+      "title": "Transactional Associate",
+      "employer": "a boutique corporate law practice",
+      "start": "2016-06",
+      "end": "2019-05",
+      "bullets": [
+        "Drafted and negotiated asset purchase agreements, shareholder agreements, and commercial leases for small and mid-sized businesses.",
+        "Advised clients on entity formation, corporate governance, and regulatory compliance matters across multiple industries.",
+        "Conducted legal due diligence for mergers and acquisitions ranging from $1M to $20M in transaction value.",
+        "Collaborated with tax and finance professionals to structure deals and close transactions on schedule."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Juris Doctor (J.D.)",
+      "institution": "an accredited law school",
+      "year": 2016
+    },
+    {
+      "degree": "Bachelor of Arts in Political Science",
+      "institution": "a public state university",
+      "year": 2013
+    }
+  ],
+  "skills": [
+    "Commercial litigation",
+    "Legal research and writing",
+    "Contract drafting and negotiation",
+    "Deposition and trial preparation",
+    "Regulatory compliance",
+    "Corporate governance",
+    "Mergers and acquisitions due diligence",
+    "Client counseling",
+    "Case management",
+    "E-discovery tools",
+    "Westlaw and LexisNexis",
+    "Alternative dispute resolution",
+    "Legal project management",
+    "Team supervision and mentorship"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

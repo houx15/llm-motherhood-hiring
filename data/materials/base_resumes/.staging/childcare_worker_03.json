@@ -1,0 +1,87 @@
+{
+  "resume_id": "childcare_worker_03",
+  "occupation_id": "childcare_worker",
+  "source": "synthetic",
+  "summary": "Dedicated childcare worker with over 10 years of experience maintaining safe, engaging environments for young children in group care settings. Skilled in developmental monitoring, parent communication, and hygiene protocols.",
+  "experience": [
+    {
+      "title": "Lead Childcare Worker",
+      "employer": "a mid-size regional early learning center",
+      "start": "2022-06",
+      "end": "Present",
+      "bullets": [
+        "Maintain a safe and sanitary play environment for up to 18 children daily, sanitizing toys and equipment each session.",
+        "Observe and document children's play activities and behaviors, keeping daily records on meals, activities, and medications administered.",
+        "Communicate with guardians about daily activities, behaviors, and developmental progress through written logs and brief conferences.",
+        "Support emotional and social development by modeling positive interactions and encouraging understanding of others."
+      ]
+    },
+    {
+      "title": "Childcare Assistant",
+      "employer": "a regional group childcare program",
+      "start": "2019-09",
+      "end": "2022-05",
+      "bullets": [
+        "Monitored indoor and outdoor play activities for groups of 12-15 children, intervening promptly to prevent unsafe situations.",
+        "Assisted with dressing, diaper changes, and toileting routines while maintaining children's dignity and hygiene.",
+        "Sanitized play equipment and rest areas throughout the day, reducing illness-related absences by an estimated 20%.",
+        "Kept individual records of daily observations, meals served, and medication administration for guardian review."
+      ]
+    },
+    {
+      "title": "Childcare Aide",
+      "employer": "a mid-size private nursery school",
+      "start": "2017-06",
+      "end": "2019-08",
+      "bullets": [
+        "Observed and monitored children's play activities, noting developmental milestones and sharing observations with lead staff.",
+        "Supported children's emotional and social growth by facilitating cooperative play and positive self-concept activities.",
+        "Maintained a clean and safe classroom environment, routinely sanitizing toys and play surfaces.",
+        "Communicated with guardians about daily activities and any behavioral or health-related concerns."
+      ]
+    },
+    {
+      "title": "Early Childhood Care Provider",
+      "employer": "a regional school for children with disabilities",
+      "start": "2015-09",
+      "end": "2017-05",
+      "bullets": [
+        "Cared for children in an institutional setting, providing individualized attention to support daily routines and safety.",
+        "Observed and documented play activities and behaviors to inform care plans and guardian updates.",
+        "Assisted with dressing, feeding, and diaper changes as needed, following health and safety protocols.",
+        "Sanitized toys and adaptive play equipment daily to maintain a hygienic environment."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Applied Science in Early Childhood Education",
+      "institution": "a regional community college",
+      "year": 2015
+    },
+    {
+      "degree": "Child Development Associate Credential",
+      "institution": "a professional development institute",
+      "year": 2017
+    }
+  ],
+  "skills": [
+    "Monitoring",
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Active Learning",
+    "Learning Strategies",
+    "Child Supervision",
+    "Safety Compliance",
+    "Record Keeping",
+    "Sanitation Procedures",
+    "Developmental Observation",
+    "Parent Communication",
+    "Diaper Changing and Dressing",
+    "Emotional Support"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

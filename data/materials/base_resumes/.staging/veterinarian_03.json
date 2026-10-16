@@ -1,0 +1,75 @@
+{
+  "resume_id": "veterinarian_03",
+  "occupation_id": "veterinarian",
+  "source": "synthetic",
+  "summary": "Compassionate and detail-oriented veterinarian with over 10 years of experience in small animal medicine and surgery. Skilled in diagnosing and treating a wide range of conditions, performing surgical procedures, and educating clients on preventive care.",
+  "experience": [
+    {
+      "title": "Veterinarian",
+      "employer": "a well-established local animal hospital",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Examine animals to detect and determine the nature of diseases or injuries, performing comprehensive physical assessments and diagnostic testing.",
+        "Treat sick or injured animals by prescribing medication, setting bones, dressing wounds, and performing surgery, including spays, neuters, and dental extractions.",
+        "Operate diagnostic equipment such as radiographic and ultrasound equipment, and interpret resulting images to guide treatment plans.",
+        "Counsel clients about the deaths of their pets or about euthanasia decisions, providing empathetic support during difficult times.",
+        "Educate the public about diseases that can be spread from animals to humans, emphasizing zoonotic disease prevention."
+      ]
+    },
+    {
+      "title": "Associate Veterinarian",
+      "employer": "a local veterinary clinic",
+      "start": "2018-01",
+      "end": "2021-05",
+      "bullets": [
+        "Inoculated animals against various diseases, such as rabies and distemper, ensuring compliance with local and state regulations.",
+        "Collected body tissue, feces, blood, urine, and other body fluids for examination and analysis, interpreting laboratory results to diagnose conditions.",
+        "Advised animal owners regarding sanitary measures, feeding, general care, medical conditions, and treatment options, improving client compliance and animal health outcomes.",
+        "Performed routine and emergency surgeries, including soft tissue procedures and orthopedic fracture repairs, with a 98% surgical success rate."
+      ]
+    },
+    {
+      "title": "Veterinarian",
+      "employer": "a regional animal care center",
+      "start": "2015-09",
+      "end": "2017-12",
+      "bullets": [
+        "Provided preventive care services, including vaccinations, wellness exams, and nutritional counseling for a caseload of over 1,200 animals annually.",
+        "Diagnosed and treated medical conditions in small animals, utilizing critical thinking and active listening to develop effective treatment plans.",
+        "Collaborated with a team of veterinary technicians to monitor anesthesia and post-operative recovery, ensuring patient safety and comfort."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Veterinary Medicine (DVM)",
+      "institution": "a state university",
+      "year": 2015
+    },
+    {
+      "degree": "Bachelor of Science in Animal Science",
+      "institution": "a state college",
+      "year": 2011
+    }
+  ],
+  "skills": [
+    "Reading Comprehension",
+    "Active Listening",
+    "Active Learning",
+    "Speaking",
+    "Science",
+    "Critical Thinking",
+    "Writing",
+    "Monitoring",
+    "Mathematics",
+    "Learning Strategies",
+    "Surgical Skills",
+    "Diagnostic Imaging",
+    "Client Education",
+    "Empathy"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

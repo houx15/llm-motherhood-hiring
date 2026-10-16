@@ -2,73 +2,70 @@
   {
     "resume_id": "lawyer_00",
     "occupation_id": "lawyer",
-    "source": "kaggle",
-    "summary": "Agile legal professional with nearly a decade of experience in litigation support, campaign management, and fundraising strategy. Skilled at leading cross-functional teams, managing budgets, and using data insights to inform decision making.",
+    "source": "synthetic",
+    "summary": "Qualified attorney with over 9 years of continuous experience in litigation and commercial law. Proven record of managing complex cases, negotiating settlements, and providing strategic legal counsel to clients across various industries.",
     "experience": [
       {
-        "title": "Senior Advisor and National Fundraising Director",
-        "employer": "a national political campaign organization",
-        "start": "2020-09",
+        "title": "Senior Counsel",
+        "employer": "a national law firm",
+        "start": "2021-07",
         "end": "Present",
         "bullets": [
-          "Created project plan to implement a new business strategy and organizational structure to optimize workflow, leading team to raise $2.25MM in two months, the largest congressional raise in the country over that period.",
-          "Led 14-person staff composed of digital marketing, data, communications, and sales teams to surpass engagement and fundraising KPIs.",
-          "Managed $4.25MM budget and all fundraising-related projects including launching a mobile-compatible website, and an activist-targeted digital marketing campaign that increased engagement across all digital channels by 43%."
+          "Lead counsel in complex commercial litigation matters, achieving favorable outcomes in 90% of cases.",
+          "Manage a team of junior associates and paralegals, overseeing case strategy and discovery.",
+          "Negotiated multi-million dollar settlements and advised corporate clients on risk mitigation."
         ]
       },
       {
-        "title": "Campaign and Fundraising Special Projects Advisor",
-        "employer": "a regional political consulting firm",
-        "start": "2020-01",
-        "end": "2020-08",
+        "title": "Litigation Associate",
+        "employer": "a regional law firm",
+        "start": "2018-03",
+        "end": "2021-06",
         "bullets": [
-          "Developed budgets, timelines, deliverables, and KPIs for a portfolio of 8 congressional campaigns throughout the Midwest, leading each campaign to increase money raised by at least 100%.",
-          "Collaborated with heads of event, operations, and fundraising departments to flawlessly execute over 100 appearances from former presidents and high-profile celebrities."
+          "Represented clients in state and federal courts in contract disputes, employment matters, and tort claims.",
+          "Conducted legal research, drafted pleadings, motions, and briefs, and argued motions in court.",
+          "Successfully resolved cases through mediation and arbitration, saving clients time and resources."
         ]
       },
       {
-        "title": "Campaign Chief of Staff and Fundraising Director",
-        "employer": "a congressional campaign committee",
-        "start": "2019-03",
-        "end": "2019-12",
+        "title": "Associate Attorney",
+        "employer": "a boutique law firm",
+        "start": "2016-09",
+        "end": "2018-02",
         "bullets": [
-          "Built and oversaw a $4MM budget and all campaign projects ranging from external communications and fundraising strategies to lawn sign placement.",
-          "Advised the Congressman on all political decisions and developments involving re-election efforts."
-        ]
-      },
-      {
-        "title": "Litigation Legal Assistant",
-        "employer": "a national law firm",
-        "start": "2016-07",
-        "end": "2019-02",
-        "bullets": [
-          "Voted best legal assistant in the litigation department.",
-          "Supported litigation team with legal research, document management, and case preparation."
+          "Handled a diverse caseload of civil litigation matters from inception through trial.",
+          "Drafted and reviewed contracts, leases, and corporate governance documents.",
+          "Conducted depositions, witness interviews, and e-discovery management."
         ]
       }
     ],
     "education": [
       {
-        "degree": "Bachelor of Arts in US History",
-        "institution": "a state university",
+        "degree": "Juris Doctor (J.D.)",
+        "institution": "an accredited law school",
         "year": 2016
+      },
+      {
+        "degree": "Bachelor of Arts in Political Science",
+        "institution": "a state university",
+        "year": 2013
       }
     ],
     "skills": [
       "Legal Research",
-      "Litigation Support",
-      "Budget Management",
-      "Project Management",
-      "Fundraising Strategy",
-      "CRM Databases",
-      "Data Analysis",
-      "Digital Marketing",
-      "Direct Mail",
-      "Business Development",
-      "Strategic Planning",
-      "Spanish Language",
-      "Microsoft Excel",
-      "Google Sheets"
+      "Litigation Management",
+      "Contract Negotiation",
+      "Legal Writing",
+      "Courtroom Advocacy",
+      "Client Counseling",
+      "Regulatory Compliance",
+      "Deposition Preparation",
+      "Case Management",
+      "Mediation & Arbitration",
+      "Corporate Law",
+      "Intellectual Property",
+      "Employment Law",
+      "E-Discovery"
     ],
     "volunteer": [],
     "notes": "",
@@ -77,108 +74,61 @@
   {
     "resume_id": "lawyer_01",
     "occupation_id": "lawyer",
-    "source": "kaggle",
-    "summary": "Certified advocate with extensive experience in individual counseling, group facilitation, risk assessment, and court advocacy for survivors of domestic violence and sexual assault. Skilled in program development, outreach, and community training, with a strong background in legal research and client support.",
+    "source": "synthetic",
+    "summary": "Practicing attorney with 10 years of experience in commercial litigation and transactional matters, licensed and in good standing with a state bar since 2016. Proven record managing complex cases from inception through resolution and advising clients on regulatory compliance and contract negotiations.",
     "experience": [
       {
-        "title": "Domestic Violence and Sexual Assault Advocate",
-        "employer": "a regional social services organization",
-        "start": "2021-03",
+        "title": "Senior Litigation Associate",
+        "employer": "a regional full-service law firm",
+        "start": "2019-06",
         "end": "Present",
         "bullets": [
-          "Provided one-on-one counseling addressing emotional needs, coping skills, goals and planning for survivors, maintaining a caseload of up to 15 clients.",
-          "Cross-trained as court advocate, assisting individuals in accessing restraining orders at a district courthouse.",
-          "Created and facilitated a successful support group for survivors, with regular attendance of 10-20 participants.",
-          "Built and maintained relationships with outside agencies to secure donations and resources for clients and programs.",
-          "Conducted community training and presentations on healthy relationships, domestic violence, sexual assault, technology safety, and coping skills across all age groups.",
-          "Developed an empowerment group for youth ages 10-14, which became a popular after-school program and expanded to other schools."
+          "Manage a portfolio of 30+ commercial litigation matters, including contract disputes, tort claims, and employment actions, with cumulative exposure exceeding $15M.",
+          "Lead discovery strategy, depose fact and expert witnesses, and argue dispositive motions in state and federal courts.",
+          "Second-chair two jury trials and negotiate favorable settlements in approximately 85% of mediated cases.",
+          "Supervise two junior associates and a paralegal, reviewing pleadings and providing mentorship on case strategy."
         ]
       },
       {
-        "title": "Student Intern",
-        "employer": "a criminal defense law firm",
-        "start": "2020-10",
-        "end": "2021-02",
+        "title": "Transactional Associate",
+        "employer": "a boutique corporate law practice",
+        "start": "2016-06",
+        "end": "2019-05",
         "bullets": [
-          "Assisted an attorney during a major homicide trial, including input on trial strategy.",
-          "Conducted client interviews on behalf of the attorney.",
-          "Organized case files and discovery materials to prepare for trial.",
-          "Attended criminal and civil court proceedings, depositions, and other case-related meetings.",
-          "Performed legal research and background research on clients and plaintiffs to aid case strategy."
-        ]
-      },
-      {
-        "title": "Student Advocate and Assistant Outreach Coordinator",
-        "employer": "a university sexual assault prevention program",
-        "start": "2019-03",
-        "end": "2020-09",
-        "bullets": [
-          "Organized a volunteer group focused on sexual harassment and rape prevention.",
-          "Planned and arranged presentations and participation programs in classrooms, residence halls, and university events.",
-          "Designed and implemented new work flow processes to improve productivity.",
-          "Digitized archives of newspaper articles related to sexual assault from around New England dated back to 1980.",
-          "Staffed the emergency help line and provided one-on-one guidance, phone-based counseling, and referrals for survivors."
-        ]
-      },
-      {
-        "title": "Research Assistant, Legal Socialization Lab",
-        "employer": "a university research laboratory",
-        "start": "2017-09",
-        "end": "2019-02",
-        "bullets": [
-          "Conducted graduate-level statistical analysis and research during undergraduate years.",
-          "Presented and defended original research on legal socialization, youth behavior, criminal behavior, violent video games, and bullying.",
-          "Gained proficiency using SPSS, Microsoft Excel, Microsoft Office and other software.",
-          "Edited manuscripts and original research in a collaborative but fast-paced and competitive environment."
-        ]
-      },
-      {
-        "title": "Legal Research Assistant",
-        "employer": "a community legal aid office",
-        "start": "2015-06",
-        "end": "2017-08",
-        "bullets": [
-          "Supported attorneys with legal research on housing, employment, and benefits matters.",
-          "Organized client intake files and maintained case management records.",
-          "Drafted summaries of statutes and regulations for attorney review.",
-          "Assisted with outreach events and legal information clinics for community members."
-        ]
-      },
-      {
-        "title": "Volunteer Peer Advocate",
-        "employer": "a campus counseling center",
-        "start": "2014-06",
-        "end": "2015-05",
-        "bullets": [
-          "Provided peer support and referrals for students seeking counseling services.",
-          "Assisted with workshop planning on stress management, conflict resolution, and healthy relationships.",
-          "Maintained confidential records and helped coordinate advocacy appointments.",
-          "Participated in training on crisis intervention and trauma-informed communication."
+          "Drafted and negotiated asset purchase agreements, shareholder agreements, and commercial leases for small and mid-sized businesses.",
+          "Advised clients on entity formation, corporate governance, and regulatory compliance matters across multiple industries.",
+          "Conducted legal due diligence for mergers and acquisitions ranging from $1M to $20M in transaction value.",
+          "Collaborated with tax and finance professionals to structure deals and close transactions on schedule."
         ]
       }
     ],
     "education": [
       {
-        "degree": "Bachelor of the Arts in Psychology and Justice Studies Forensics",
-        "institution": "a state university",
-        "year": 2014
+        "degree": "Juris Doctor (J.D.)",
+        "institution": "an accredited law school",
+        "year": 2016
+      },
+      {
+        "degree": "Bachelor of Arts in Political Science",
+        "institution": "a public state university",
+        "year": 2013
       }
     ],
     "skills": [
-      "Individual Counseling",
-      "Group Facilitation",
-      "Risk Assessment",
-      "Program Development",
-      "Youth Advocacy",
-      "Court Advocacy",
-      "Outreach",
-      "Case Management",
-      "Conflict Resolution",
-      "Legal Research",
-      "Crisis Intervention",
-      "Community Training",
-      "Client Interviewing",
-      "Statistical Analysis"
+      "Commercial litigation",
+      "Legal research and writing",
+      "Contract drafting and negotiation",
+      "Deposition and trial preparation",
+      "Regulatory compliance",
+      "Corporate governance",
+      "Mergers and acquisitions due diligence",
+      "Client counseling",
+      "Case management",
+      "E-discovery tools",
+      "Westlaw and LexisNexis",
+      "Alternative dispute resolution",
+      "Legal project management",
+      "Team supervision and mentorship"
     ],
     "volunteer": [],
     "notes": "",

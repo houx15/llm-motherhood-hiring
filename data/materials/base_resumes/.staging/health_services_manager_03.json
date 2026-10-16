@@ -1,0 +1,90 @@
+{
+  "resume_id": "health_services_manager_03",
+  "occupation_id": "health_services_manager",
+  "source": "synthetic",
+  "summary": "Medical and health services manager with over 9 years of progressive experience overseeing clinical and administrative operations in mid-size regional health care settings. Skilled in staff supervision, fiscal operations, and implementing record management systems that improve resource utilization and regulatory compliance.",
+  "experience": [
+    {
+      "title": "Health Services Manager",
+      "employer": "a mid-size regional health care organization",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Direct, supervise, and evaluate work activities of 45 nursing, technical, clerical, and service personnel across two outpatient departments.",
+        "Implemented a computerized record management system to store and process personnel and patient activity data, reducing report generation time by 30%.",
+        "Plan and administer clinical programs and services, coordinating medical, nursing, and physical plant staff to maintain continuous operations.",
+        "Manage fiscal operations including budget planning, authorizing expenditures, establishing service rates, and coordinating monthly financial reporting.",
+        "Monitor use of diagnostic services, inpatient beds, facilities, and staff to assess needs for additional resources and reallocate staffing accordingly."
+      ]
+    },
+    {
+      "title": "Practice Operations Manager",
+      "employer": "a regional multi-specialty clinic",
+      "start": "2019-03",
+      "end": "2021-05",
+      "bullets": [
+        "Directed recruitment, hiring, and training for clinical and administrative staff, filling 20 positions within budget targets.",
+        "Established work schedules and assignments for staff based on workload, space, and equipment availability, improving appointment utilization by 18%.",
+        "Maintained awareness of advances in medicine, diagnostic equipment, data processing technology, and health insurance changes to guide operational decisions.",
+        "Conducted fiscal operations including accounting, budget planning, expenditure authorization, and coordination of financial reporting for three clinic sites.",
+        "Developed and maintained computerized record management systems to produce staffing and productivity reports for leadership."
+      ]
+    },
+    {
+      "title": "Assistant Health Services Administrator",
+      "employer": "a community health system",
+      "start": "2016-09",
+      "end": "2019-02",
+      "bullets": [
+        "Supervised and evaluated work activities of nursing, technical, and clerical personnel, conducting performance reviews and corrective action plans.",
+        "Planned, implemented, and administered personnel administration and training programs in coordination with medical and nursing leadership.",
+        "Monitored use of diagnostic services, inpatient beds, facilities, and staff to ensure effective resource use and identify equipment needs.",
+        "Assisted with fiscal operations including accounting, budget planning, and authorizing expenditures for departmental supplies and services.",
+        "Maintained awareness of government regulations and health insurance changes to support compliance and financing options."
+      ]
+    },
+    {
+      "title": "Administrative Coordinator",
+      "employer": "a mid-size regional medical center",
+      "start": "2015-01",
+      "end": "2016-08",
+      "bullets": [
+        "Coordinated work activities of clerical and service personnel supporting medical, nursing, and physical plant departments.",
+        "Developed and maintained computerized record management systems to store and process personnel activities and generate operational reports.",
+        "Established work schedules and assignments for staff according to workload, space, and equipment availability.",
+        "Supported recruitment, hiring, and training of personnel and maintained training documentation for compliance reviews."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Health Administration",
+      "institution": "a state university",
+      "year": 2014
+    },
+    {
+      "degree": "Bachelor of Science in Health Services Management",
+      "institution": "a regional university",
+      "year": 2012
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Monitoring",
+    "Active Learning",
+    "Learning Strategies",
+    "Mathematics",
+    "Science",
+    "Staff Supervision",
+    "Fiscal Operations",
+    "Record Management Systems",
+    "Regulatory Compliance"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

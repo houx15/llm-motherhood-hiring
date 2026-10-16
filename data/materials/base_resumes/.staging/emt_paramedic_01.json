@@ -1,0 +1,75 @@
+{
+  "resume_id": "emt_paramedic_01",
+  "occupation_id": "emt_paramedic",
+  "source": "synthetic",
+  "summary": "National Registry certified paramedic with over a decade of continuous prehospital care experience, primarily serving a well-established local employer. Skilled in advanced life support, patient assessment, and emergency response coordination.",
+  "experience": [
+    {
+      "title": "Paramedic",
+      "employer": "a well-established local employer",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Provide advanced life support on 1,200+ annual emergency calls, including cardiac arrests, trauma, and respiratory emergencies.",
+        "Serve as shift lead for a 4-person crew, coordinating scene triage and patient transport decisions.",
+        "Administer medications, interpret 12-lead ECGs, and perform advanced airway management per protocol.",
+        "Maintain unit inventory and controlled substance logs with 100% compliance across quarterly audits."
+      ]
+    },
+    {
+      "title": "EMT / Paramedic",
+      "employer": "a regional emergency medical services agency",
+      "start": "2018-03",
+      "end": "2021-05",
+      "bullets": [
+        "Responded to 2,000+ 911 calls across urban and rural coverage areas as a two-person crew member.",
+        "Performed patient assessments, vital sign monitoring, and basic life support interventions.",
+        "Documented patient care reports in electronic medical records within required timeframes.",
+        "Collaborated with fire and law enforcement on multi-agency emergency scenes."
+      ]
+    },
+    {
+      "title": "Emergency Medical Technician",
+      "employer": "a community hospital transport service",
+      "start": "2015-01",
+      "end": "2018-02",
+      "bullets": [
+        "Transported 1,500+ patients between facilities, monitoring condition throughout transit.",
+        "Assisted paramedics with equipment setup, CPR, and patient positioning during high-acuity calls.",
+        "Completed daily vehicle and equipment checks, ensuring readiness for immediate dispatch.",
+        "Trained 8 new EMTs on stretcher operations, oxygen delivery, and documentation standards."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Paramedic Certificate",
+      "institution": "a regional community college",
+      "year": 2018
+    },
+    {
+      "degree": "EMT-Basic Certificate",
+      "institution": "a state technical institute",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "National Registry EMT / Paramedic certification",
+    "Advanced Life Support (ALS)",
+    "Basic Life Support (BLS)",
+    "Cardiopulmonary Resuscitation (CPR)",
+    "12-Lead ECG interpretation",
+    "Advanced airway management",
+    "Patient assessment and triage",
+    "Emergency vehicle operation",
+    "Electronic patient care reporting",
+    "Medication administration",
+    "Trauma care",
+    "Scene safety and coordination",
+    "Vital sign monitoring",
+    "Controlled substance documentation"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

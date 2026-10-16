@@ -1,0 +1,91 @@
+{
+  "resume_id": "police_officer_03",
+  "occupation_id": "police_officer",
+  "source": "synthetic",
+  "summary": "POST-certified patrol officer with 10 years of continuous municipal law-enforcement experience, including emergency response, criminal enforcement, and community relations in a mid-sized jurisdiction. Recognized for accurate incident documentation, sound legal charging decisions, and calm first-aid response under pressure.",
+  "experience": [
+    {
+      "title": "Police Officer (Patrol) — POST Certified",
+      "employer": "a well-established local police department",
+      "start": "2022-04",
+      "end": "Present",
+      "bullets": [
+        "Patrol assigned sector by vehicle and on foot, maintaining order and responding to emergency calls for service; consistently among the top responders with an average 8-minute response time on priority-one calls.",
+        "Identify, pursue, and arrest suspects and perpetrators of criminal acts, completing 60+ custodial arrests over the past two years with a 94% case-filing acceptance rate.",
+        "Verify that proper legal charges are made against law offenders by reviewing incident facts against applicable statutes before presenting cases to the district attorney.",
+        "Render first aid to accident survivors and injured persons, including CPR and Stop the Bleed application, stabilizing 20+ individuals prior to EMS arrival.",
+        "Record facts and prepare detailed incident reports documenting observations, statements, and evidence; reports are routinely cited as model documentation during shift briefings.",
+        "Investigate illegal and suspicious activities, conducting field interviews, canvassing, and evidence collection for burglary, assault, and narcotics cases."
+      ]
+    },
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a municipal law-enforcement agency",
+      "start": "2019-02",
+      "end": "2022-03",
+      "bullets": [
+        "Drove patrol vehicles across designated areas to detect law violators, issuing 1,400+ traffic citations and making 45 DUI arrests over three years.",
+        "Enforced motor vehicle and criminal laws while promoting good community relations through foot patrols, business checks, and neighborhood meetings.",
+        "Responded to domestic disturbance, alarm, and accident calls, de-escalating confrontations and connecting affected residents with victim-services resources.",
+        "Documented incidents and reviewed facts to determine whether criminal acts or statute violations occurred, referring cases to detectives when warranted.",
+        "Provided first-aid response to accident survivors and other persons requiring physical injury care, coordinating with fire and EMS units on scene."
+      ]
+    },
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a county law-enforcement agency",
+      "start": "2016-03",
+      "end": "2019-01",
+      "bullets": [
+        "Maintained public safety by patrolling high-crime areas, responding to emergencies, and protecting people and property throughout the assigned district.",
+        "Served as initial responder on burglary, theft, and assault calls; gathered statements and physical evidence supporting 200+ closed cases during tenure.",
+        "Identified and pursued suspects, executing traffic stops and foot pursuits resulting in 30+ arrests for felony and misdemeanor offenses.",
+        "Prepared reports documenting incident facts and legal charge verifications, ensuring timely submission within the shift-end deadline.",
+        "Completed crisis-intervention and defensive tactics training, applying verbal de-escalation techniques on 150+ mental-health-related calls."
+      ]
+    },
+    {
+      "title": "Police Officer (Patrol)",
+      "employer": "a city police department",
+      "start": "2015-03",
+      "end": "2016-02",
+      "bullets": [
+        "Completed field-training program and assumed solo patrol duties, enforcing traffic and criminal laws within an urban beat.",
+        "Responded to emergency calls for service, rendering first aid to accident survivors and other injured persons ahead of medical transport.",
+        "Recorded incident facts and prepared daily activity and arrest reports reviewed by supervisory staff.",
+        "Supported community-relations events and directed traffic at collisions and public gatherings."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "POST Law-Enforcement Certification, Basic Peace Officer Academy",
+      "institution": "a regional law-enforcement training academy",
+      "year": 2015
+    },
+    {
+      "degree": "Associate of Science in Criminal Justice",
+      "institution": "a community college",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Critical Thinking",
+    "Speaking",
+    "Reading Comprehension",
+    "Active Learning",
+    "Writing",
+    "De-escalation",
+    "Emergency Response",
+    "First Aid and CPR",
+    "Incident Report Writing",
+    "Traffic Law Enforcement",
+    "Criminal Investigation",
+    "Community Relations",
+    "Crisis Intervention"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

@@ -229,6 +229,12 @@ Decisions:
 
 ### 11.1 PENDING APPROVAL — wording gate before any paid phase-3 run
 
+> **APPROVED: phase3 wording — researcher, 2026-10-16** (chat approval during the
+> phase-3 build session; scope: names, cue levels, placebo wording incl. the Pet
+> Shelter length fix, E2 direct-contrast naming, E3-v3 pools, O8 selection incl.
+> the health-services-manager substitution. Run scope approved through the
+> DeepSeek full run; the other three models wait for the short-report gate §6.5.)
+
 Per SPEC_PHASE3 §3/§6.2, the following need "APPROVED: phase3 wording" before the
 manipulation check / pilot / materials generation. Sample prompts for every new
 cell type: `docs/phase3/samples.md` (`uv run audit phase3-samples`).

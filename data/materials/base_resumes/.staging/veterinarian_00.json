@@ -1,0 +1,87 @@
+{
+  "resume_id": "veterinarian_00",
+  "occupation_id": "veterinarian",
+  "source": "synthetic",
+  "summary": "Licensed Doctor of Veterinary Medicine with 9 years of experience in small animal and exotic medicine, diagnostics, surgery, and client education. Adept at leading teams and improving patient outcomes in a growing mid-market company.",
+  "experience": [
+    {
+      "title": "Veterinarian",
+      "employer": "a growing mid-market animal hospital",
+      "start": "2019-07",
+      "end": "Present",
+      "bullets": [
+        "Diagnose and treat a diverse caseload of 40+ patients per week by examining animals, performing surgeries, setting fractures, and dressing wounds.",
+        "Inoculate animals against rabies, distemper, and other diseases, maintaining a 98% on-time vaccination rate.",
+        "Operate radiographic and ultrasound equipment, interpreting imaging to guide treatment decisions for complex medical and surgical cases.",
+        "Counsel clients on end-of-life care, including euthanasia decisions, and educate owners on zoonotic disease prevention, sanitation, feeding, and general care.",
+        "Mentor two veterinary technicians and one intern on diagnostic protocols, active listening, and client communication, boosting team efficiency by 15%."
+      ]
+    },
+    {
+      "title": "Associate Veterinarian",
+      "employer": "a mid-market veterinary clinic",
+      "start": "2017-08",
+      "end": "2019-06",
+      "bullets": [
+        "Collected blood, urine, feces, and tissue samples for laboratory analysis, interpreting results to detect diseases and injuries in over 600 cases.",
+        "Performed routine and emergency surgical procedures, including spays, neuters, and dental extractions, with a 99% surgical success rate.",
+        "Administered vaccinations and prescribed medications for rabies, distemper, and other infectious diseases.",
+        "Advised pet owners on treatment options, sanitary measures, and preventive care, improving client compliance with follow-up appointments by 20%."
+      ]
+    },
+    {
+      "title": "Veterinarian",
+      "employer": "a small animal practice",
+      "start": "2016-01",
+      "end": "2017-07",
+      "bullets": [
+        "Examined animals to determine the nature of diseases or injuries, documenting findings in electronic medical records.",
+        "Operated diagnostic equipment, including radiography and ultrasound, to support accurate diagnoses.",
+        "Educated clients on general care, medical conditions, and disease prevention, ensuring they understood treatment plans.",
+        "Collaborated with a team of three veterinarians to manage a busy caseload of 30+ patients daily."
+      ]
+    },
+    {
+      "title": "Veterinary Intern",
+      "employer": "a regional veterinary medical center",
+      "start": "2014-09",
+      "end": "2015-12",
+      "bullets": [
+        "Assisted senior veterinarians in examining animals, collecting body fluid samples, and performing surgical procedures.",
+        "Administered vaccines and monitored patients post-surgery, recording vital signs and recovery progress.",
+        "Educated clients about zoonotic diseases, feeding schedules, and treatment options under supervision."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Veterinary Medicine (DVM)",
+      "institution": "a state university",
+      "year": 2014
+    },
+    {
+      "degree": "Bachelor of Science in Animal Science",
+      "institution": "a public university",
+      "year": 2010
+    }
+  ],
+  "skills": [
+    "Reading Comprehension",
+    "Active Listening",
+    "Active Learning",
+    "Speaking",
+    "Science",
+    "Critical Thinking",
+    "Writing",
+    "Monitoring",
+    "Mathematics",
+    "Learning Strategies",
+    "Surgery",
+    "Diagnostic Imaging",
+    "Client Education",
+    "DVM and state veterinary license"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

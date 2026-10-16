@@ -1,0 +1,91 @@
+{
+  "resume_id": "childcare_worker_01",
+  "occupation_id": "childcare_worker",
+  "source": "synthetic",
+  "summary": "Compassionate childcare professional with over 10 years of experience creating safe, engaging environments for young learners. Skilled in monitoring play activities, supporting social-emotional development, and maintaining open communication with guardians and colleagues.",
+  "experience": [
+    {
+      "title": "Childcare Worker",
+      "employer": "a well-established local employer",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Maintain a safe and sanitary play environment for up to 16 children, sanitizing toys and equipment daily.",
+        "Observe and monitor children's play activities, documenting daily observations, meals, and medications administered.",
+        "Communicate with guardians about daily activities, behaviors, and developmental milestones during pickup and via written logs.",
+        "Support children's emotional and social development by encouraging sharing, empathy, and positive self-concepts.",
+        "Dress children and change diapers for toddlers, ensuring comfort and hygiene throughout the day."
+      ]
+    },
+    {
+      "title": "Childcare Assistant",
+      "employer": "a community nursery school",
+      "start": "2018-09",
+      "end": "2021-05",
+      "bullets": [
+        "Cared for children aged 2-5 in a group setting, maintaining a safe play environment and supervising outdoor activities.",
+        "Kept records on individual children, including daily observations, meals served, and medication administration.",
+        "Sanitized toys and play equipment throughout the day to reduce illness transmission.",
+        "Supported children's emotional and social development through guided group activities and positive reinforcement.",
+        "Communicated with guardians about daily behaviors and activities, both in person and through written notes."
+      ]
+    },
+    {
+      "title": "Childcare Provider",
+      "employer": "a private childcare center",
+      "start": "2016-04",
+      "end": "2018-08",
+      "bullets": [
+        "Observed and monitored children's play activities to ensure safety and encourage positive interactions.",
+        "Assisted with dressing and diaper changes for infants and toddlers.",
+        "Maintained daily records of activities, meals, and medications administered.",
+        "Communicated with guardians about daily activities and any behavioral or developmental concerns.",
+        "Sanitized play areas and equipment to uphold health and safety standards."
+      ]
+    },
+    {
+      "title": "Childcare Aide",
+      "employer": "a local early learning center",
+      "start": "2015-01",
+      "end": "2016-03",
+      "bullets": [
+        "Supported lead teachers in maintaining a safe and engaging play environment for children aged 1-4.",
+        "Monitored children during play activities, intervening to redirect unsafe behaviors.",
+        "Assisted with dressing, feeding, and diaper changes as needed.",
+        "Sanitized toys and equipment regularly to maintain cleanliness.",
+        "Recorded daily observations and communicated with guardians about activities and behaviors."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Associate of Arts in Early Childhood Education",
+      "institution": "a community college",
+      "year": 2014
+    },
+    {
+      "degree": "High School Diploma",
+      "institution": "a public high school",
+      "year": 2012
+    }
+  ],
+  "skills": [
+    "Monitoring",
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Learning Strategies",
+    "Active Learning",
+    "Social Perceptiveness",
+    "Coordination",
+    "Instructing",
+    "Service Orientation",
+    "Time Management",
+    "Patience",
+    "Creativity",
+    "Record Keeping"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

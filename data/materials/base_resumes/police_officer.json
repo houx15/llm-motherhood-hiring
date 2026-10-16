@@ -1,0 +1,321 @@
+[
+  {
+    "resume_id": "police_officer_00",
+    "occupation_id": "police_officer",
+    "source": "synthetic",
+    "summary": "POST-certified patrol officer with over a decade of experience in municipal and federal law enforcement, specializing in emergency response, criminal investigation, and community-oriented policing. Proven record of de-escalating crises, enforcing traffic and criminal statutes, and producing accurate incident documentation.",
+    "experience": [
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a large national company",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Patrol designated sectors to detect law violators, issue citations, and make arrests, averaging 14 traffic stops and 3 custodial arrests per week while maintaining a complaint rate below 2%.",
+          "Respond to emergency calls for service including domestic disturbances, traffic collisions, and medical crises, rendering first aid and coordinating with EMS until transport.",
+          "Investigate suspicious activities and illegal conduct, interviewing witnesses and suspects, reviewing incident facts, and determining applicable statute violations before filing charges.",
+          "Prepare detailed incident and arrest reports documenting facts, evidence, and legal charges; reports are routinely cited by prosecutors for accuracy and completeness.",
+          "Engage in community relations activities including neighborhood meetings, school presentations, and business security consultations to strengthen public trust."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a municipal police department",
+        "start": "2019-08",
+        "end": "2022-03",
+        "bullets": [
+          "Conducted high-visibility patrols in a district of 45,000 residents, responding to an average of 20 calls per shift covering crimes against persons and property.",
+          "Pursued and apprehended suspects fleeing from felony offenses, achieving a 92% arrest rate on assigned priority cases.",
+          "Rendered emergency first aid at accident scenes, including CPR and tourniquet application, contributing to 8 successful life-saving interventions over 30 months.",
+          "Verified legal charges with supervising officers and court liaison personnel to ensure statutory compliance before booking.",
+          "Documented incident facts in a records management system, producing clear reports that reduced follow-up investigative requests by 18%."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a state law enforcement agency",
+        "start": "2016-05",
+        "end": "2019-07",
+        "bullets": [
+          "Patrolled state highways and rural areas to enforce motor vehicle and criminal laws, issuing citations and making arrests for impaired driving, drug possession, and warrant service.",
+          "Investigated suspicious activities and illegal operations, gathering evidence and preparing probable cause affidavits for search and arrest warrants.",
+          "Assisted accident survivors and persons requiring first aid, stabilizing injuries until medical personnel arrived and documenting statements on scene.",
+          "Maintained order at public events and emergencies, protecting people and property while coordinating with fire and emergency medical services.",
+          "Reviewed incident facts to determine whether criminal acts or statute violations occurred, forwarding cases to detectives when appropriate."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Science in Criminal Justice",
+        "institution": "a community college",
+        "year": 2016
+      },
+      {
+        "degree": "POST Law Enforcement Certification",
+        "institution": "a state POST academy",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Incident Reporting",
+      "Emergency Response",
+      "First Aid and CPR",
+      "Traffic Law Enforcement",
+      "Criminal Investigation",
+      "Arrest and Booking Procedures",
+      "De-escalation",
+      "Community Relations"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "police_officer_01",
+    "occupation_id": "police_officer",
+    "source": "synthetic",
+    "summary": "POST-certified police officer with 10 years of patrol experience in mid-market communities, focused on public safety, criminal enforcement, and community relations. Recognized for sound judgment under pressure and clear, accurate incident documentation.",
+    "experience": [
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a growing mid-market municipal police department",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Patrol assigned sectors to detect law violators, issue citations, and make arrests, averaging 18 traffic stops and 6 citations per shift.",
+          "Respond to emergency calls for service and render first aid to accident survivors and injured persons until medical units arrive.",
+          "Identify, pursue, and arrest suspects in criminal cases, contributing to a 22% increase in successful apprehensions over two years.",
+          "Verify proper legal charges against offenders and prepare detailed incident reports documenting facts and actions taken.",
+          "Investigate suspicious activities and review incident facts to determine whether criminal acts or statute violations occurred.",
+          "Promote community relations through neighborhood meetings and school safety presentations, reaching 400+ residents annually."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a mid-market regional law enforcement agency",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Conducted high-visibility patrols to maintain order and protect people and property across a 12-square-mile jurisdiction.",
+          "Responded to accidents and medical emergencies, delivering first aid and securing scenes for investigators.",
+          "Recorded facts and prepared reports documenting incidents, arrests, and use-of-force encounters with 98% supervisory approval.",
+          "Reviewed case facts to confirm criminal act or statute violations before recommending charges to prosecutors.",
+          "Investigated illegal and suspicious activities, including narcotics complaints, resulting in 45 felony arrests.",
+          "Supported community outreach events to strengthen public trust and improve reporting of local crime."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a growing mid-market township public safety department",
+        "start": "2015-04",
+        "end": "2018-02",
+        "bullets": [
+          "Patrolled residential and commercial areas to detect law violators and enforce motor vehicle and criminal laws.",
+          "Responded to emergency calls and rendered aid to accident survivors and persons requiring first aid.",
+          "Identified and pursued suspects, making lawful arrests and completing booking documentation.",
+          "Recorded facts and prepared incident reports that documented activities and supported court proceedings.",
+          "Reviewed incident facts to determine whether criminal acts or statute violations were involved.",
+          "Engaged with residents and businesses to promote good community relations and crime prevention."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Associate of Science in Criminal Justice",
+        "institution": "a regional community college",
+        "year": 2015
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Writing",
+      "Active Learning",
+      "Incident Documentation",
+      "Emergency Response",
+      "Traffic Enforcement",
+      "Criminal Investigation",
+      "Arrest Procedures",
+      "First Aid",
+      "Community Relations",
+      "Legal Charge Verification"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "police_officer_02",
+    "occupation_id": "police_officer",
+    "source": "synthetic",
+    "summary": "POST-certified patrol officer with over a decade of continuous law-enforcement experience in mid-market communities. Skilled in emergency response, criminal investigation, and community-oriented policing with a record of accurate reporting and safe suspect apprehension.",
+    "experience": [
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a growing mid-market municipal police department",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Patrol assigned sectors to detect law violators, issue citations, and make arrests while maintaining order and protecting people and property.",
+          "Respond to emergency calls including accidents, disturbances, and crimes in progress; render first aid to accident survivors and others requiring immediate physical care.",
+          "Investigate suspicious activities and illegal conduct, identify and pursue suspects, and arrest perpetrators of criminal acts.",
+          "Verify that proper legal charges are made against law offenders through careful review of incident facts and statute applicability.",
+          "Record facts and prepare detailed incident and activity reports that document observations, evidence, and actions taken.",
+          "Promote good community relations through regular neighborhood contacts, school visits, and participation in community safety meetings."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a regional law-enforcement agency serving mid-sized communities",
+        "start": "2017-09",
+        "end": "2021-05",
+        "bullets": [
+          "Conducted routine and directed patrols by vehicle and on foot to deter crime and identify law violators.",
+          "Responded to emergency calls for service, secured crime scenes, and assisted accident survivors with first aid until medical personnel arrived.",
+          "Reviewed facts of incidents to determine whether criminal acts or statute violations were involved and documented findings in official reports.",
+          "Identified, pursued, and arrested suspects while using de-escalation and active listening to resolve tense encounters safely.",
+          "Issued citations for motor vehicle and criminal law violations and verified legal charges with supervisors and prosecutors."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a mid-market city police department",
+        "start": "2014-06",
+        "end": "2017-08",
+        "bullets": [
+          "Patrolled specific areas to detect law violators, maintain public safety, and respond to calls for service.",
+          "Rendered aid to accident survivors and persons requiring first aid for physical injuries prior to EMS arrival.",
+          "Recorded facts and prepared reports documenting incidents, activities, and enforcement actions.",
+          "Investigated illegal or suspicious activities and supported follow-up inquiries with detailed observations.",
+          "Engaged with residents and local businesses to strengthen community relations and encourage crime reporting."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "POST law-enforcement certification; Associate of Science in Criminal Justice",
+        "institution": "a regional community college and state POST academy",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Writing",
+      "Incident report documentation",
+      "Emergency response and first aid",
+      "Suspect identification and arrest",
+      "Criminal statute verification",
+      "Motor vehicle law enforcement",
+      "Community relations",
+      "Crime scene security",
+      "De-escalation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "police_officer_03",
+    "occupation_id": "police_officer",
+    "source": "synthetic",
+    "summary": "POST-certified patrol officer with 10 years of continuous municipal law-enforcement experience, including emergency response, criminal enforcement, and community relations in a mid-sized jurisdiction. Recognized for accurate incident documentation, sound legal charging decisions, and calm first-aid response under pressure.",
+    "experience": [
+      {
+        "title": "Police Officer (Patrol) — POST Certified",
+        "employer": "a well-established local police department",
+        "start": "2022-04",
+        "end": "Present",
+        "bullets": [
+          "Patrol assigned sector by vehicle and on foot, maintaining order and responding to emergency calls for service; consistently among the top responders with an average 8-minute response time on priority-one calls.",
+          "Identify, pursue, and arrest suspects and perpetrators of criminal acts, completing 60+ custodial arrests over the past two years with a 94% case-filing acceptance rate.",
+          "Verify that proper legal charges are made against law offenders by reviewing incident facts against applicable statutes before presenting cases to the district attorney.",
+          "Render first aid to accident survivors and injured persons, including CPR and Stop the Bleed application, stabilizing 20+ individuals prior to EMS arrival.",
+          "Record facts and prepare detailed incident reports documenting observations, statements, and evidence; reports are routinely cited as model documentation during shift briefings.",
+          "Investigate illegal and suspicious activities, conducting field interviews, canvassing, and evidence collection for burglary, assault, and narcotics cases."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a municipal law-enforcement agency",
+        "start": "2019-02",
+        "end": "2022-03",
+        "bullets": [
+          "Drove patrol vehicles across designated areas to detect law violators, issuing 1,400+ traffic citations and making 45 DUI arrests over three years.",
+          "Enforced motor vehicle and criminal laws while promoting good community relations through foot patrols, business checks, and neighborhood meetings.",
+          "Responded to domestic disturbance, alarm, and accident calls, de-escalating confrontations and connecting affected residents with victim-services resources.",
+          "Documented incidents and reviewed facts to determine whether criminal acts or statute violations occurred, referring cases to detectives when warranted.",
+          "Provided first-aid response to accident survivors and other persons requiring physical injury care, coordinating with fire and EMS units on scene."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a county law-enforcement agency",
+        "start": "2016-03",
+        "end": "2019-01",
+        "bullets": [
+          "Maintained public safety by patrolling high-crime areas, responding to emergencies, and protecting people and property throughout the assigned district.",
+          "Served as initial responder on burglary, theft, and assault calls; gathered statements and physical evidence supporting 200+ closed cases during tenure.",
+          "Identified and pursued suspects, executing traffic stops and foot pursuits resulting in 30+ arrests for felony and misdemeanor offenses.",
+          "Prepared reports documenting incident facts and legal charge verifications, ensuring timely submission within the shift-end deadline.",
+          "Completed crisis-intervention and defensive tactics training, applying verbal de-escalation techniques on 150+ mental-health-related calls."
+        ]
+      },
+      {
+        "title": "Police Officer (Patrol)",
+        "employer": "a city police department",
+        "start": "2015-03",
+        "end": "2016-02",
+        "bullets": [
+          "Completed field-training program and assumed solo patrol duties, enforcing traffic and criminal laws within an urban beat.",
+          "Responded to emergency calls for service, rendering first aid to accident survivors and other injured persons ahead of medical transport.",
+          "Recorded incident facts and prepared daily activity and arrest reports reviewed by supervisory staff.",
+          "Supported community-relations events and directed traffic at collisions and public gatherings."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "POST Law-Enforcement Certification, Basic Peace Officer Academy",
+        "institution": "a regional law-enforcement training academy",
+        "year": 2015
+      },
+      {
+        "degree": "Associate of Science in Criminal Justice",
+        "institution": "a community college",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Critical Thinking",
+      "Speaking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Writing",
+      "De-escalation",
+      "Emergency Response",
+      "First Aid and CPR",
+      "Incident Report Writing",
+      "Traffic Law Enforcement",
+      "Criminal Investigation",
+      "Community Relations",
+      "Crisis Intervention"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "resume_id": "lawyer_00",
+  "occupation_id": "lawyer",
+  "source": "synthetic",
+  "summary": "Qualified attorney with over 9 years of continuous experience in litigation and commercial law. Proven record of managing complex cases, negotiating settlements, and providing strategic legal counsel to clients across various industries.",
+  "experience": [
+    {
+      "title": "Senior Counsel",
+      "employer": "a national law firm",
+      "start": "2021-07",
+      "end": "Present",
+      "bullets": [
+        "Lead counsel in complex commercial litigation matters, achieving favorable outcomes in 90% of cases.",
+        "Manage a team of junior associates and paralegals, overseeing case strategy and discovery.",
+        "Negotiated multi-million dollar settlements and advised corporate clients on risk mitigation."
+      ]
+    },
+    {
+      "title": "Litigation Associate",
+      "employer": "a regional law firm",
+      "start": "2018-03",
+      "end": "2021-06",
+      "bullets": [
+        "Represented clients in state and federal courts in contract disputes, employment matters, and tort claims.",
+        "Conducted legal research, drafted pleadings, motions, and briefs, and argued motions in court.",
+        "Successfully resolved cases through mediation and arbitration, saving clients time and resources."
+      ]
+    },
+    {
+      "title": "Associate Attorney",
+      "employer": "a boutique law firm",
+      "start": "2016-09",
+      "end": "2018-02",
+      "bullets": [
+        "Handled a diverse caseload of civil litigation matters from inception through trial.",
+        "Drafted and reviewed contracts, leases, and corporate governance documents.",
+        "Conducted depositions, witness interviews, and e-discovery management."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Juris Doctor (J.D.)",
+      "institution": "an accredited law school",
+      "year": 2016
+    },
+    {
+      "degree": "Bachelor of Arts in Political Science",
+      "institution": "a state university",
+      "year": 2013
+    }
+  ],
+  "skills": [
+    "Legal Research",
+    "Litigation Management",
+    "Contract Negotiation",
+    "Legal Writing",
+    "Courtroom Advocacy",
+    "Client Counseling",
+    "Regulatory Compliance",
+    "Deposition Preparation",
+    "Case Management",
+    "Mediation & Arbitration",
+    "Corporate Law",
+    "Intellectual Property",
+    "Employment Law",
+    "E-Discovery"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

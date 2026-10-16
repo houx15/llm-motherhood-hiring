@@ -1,0 +1,362 @@
+[
+  {
+    "resume_id": "security_guard_00",
+    "occupation_id": "security_guard",
+    "source": "synthetic",
+    "summary": "Security Guard with 10 years of continuous experience patrolling commercial and industrial premises, monitoring access points, and responding to alarms and disturbances. Holds a current State guard card and is trained in basic first aid and emergency response.",
+    "experience": [
+      {
+        "title": "Security Guard",
+        "employer": "a mid-size regional firm",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Patrol commercial premises on foot and by vehicle to detect signs of intrusion and verify that doors, windows, and gates remain secure.",
+          "Monitor and authorize entrance and departure of employees, visitors, and contractors at the main lobby and loading dock.",
+          "Answer alarms and investigate disturbances, resolving an average of 15 incidents per month and escalating accordingly.",
+          "Lock and unlock entrances, gates, and interior suites on a fixed schedule for a 4-building campus.",
+          "Write daily activity reports documenting property damage, theft attempts, unauthorized persons, and unusual occurrences.",
+          "Respond to medical emergencies by administering basic first aid and obtaining paramedic assistance when needed.",
+          "Warn persons of rule infractions and evict violators from premises while maintaining a calm, professional presence."
+        ]
+      },
+      {
+        "title": "Security Officer",
+        "employer": "a regional commercial property management company",
+        "start": "2019-01",
+        "end": "2021-05",
+        "bullets": [
+          "Circulated among visitors, patrons, and employees to preserve order and protect property at a busy retail center.",
+          "Monitored a 40-camera CCTV and access control system and dispatched patrols to investigate suspicious activity.",
+          "Conducted hourly perimeter checks and secured 12 entry and exit points at closing each night.",
+          "Investigated alarm activations and documented findings in incident reports reviewed by site management.",
+          "Assisted with basic first aid for minor injuries and coordinated with paramedics on two serious medical calls."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "an industrial logistics firm",
+        "start": "2016-09",
+        "end": "2018-12",
+        "bullets": [
+          "Patrolled a warehouse and distribution yard to prevent and detect signs of intrusion and protect inventory.",
+          "Verified employee and driver credentials at the gate, guarding against theft and unauthorized entry.",
+          "Wrote reports of daily activities, irregularities, and equipment or property damage for shift handoff.",
+          "Responded to fire and intrusion alarms and investigated disturbances before contacting emergency services.",
+          "Enforced site safety and conduct rules, warning violators and removing offenders when necessary."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a local retail chain",
+        "start": "2015-10",
+        "end": "2016-08",
+        "bullets": [
+          "Locked and secured store doors and gates at closing and unlocked them at opening each day.",
+          "Patrolled the sales floor and stockroom to deter theft and monitor for signs of intrusion.",
+          "Monitored entrances to guard against theft and maintain a safe environment for customers and staff.",
+          "Documented theft incidents, unauthorized persons, and unusual occurrences in written reports for store management."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "State guard card",
+        "institution": "state licensing authority",
+        "year": 2015
+      },
+      {
+        "degree": "High school diploma",
+        "institution": "a public high school",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Speaking",
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Writing",
+      "Access control",
+      "CCTV surveillance",
+      "Incident reporting",
+      "Basic first aid",
+      "Alarm response",
+      "Patrolling",
+      "Conflict de-escalation",
+      "Emergency response"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "security_guard_01",
+    "occupation_id": "security_guard",
+    "source": "synthetic",
+    "summary": "State-licensed security guard with 9 years of continuous experience patrolling commercial and industrial premises for a well-established local employer. Skilled in access control, alarm response, incident reporting, and de-escalation of rule violations.",
+    "experience": [
+      {
+        "title": "Security Guard (State Guard Card)",
+        "employer": "a well-established local employer",
+        "start": "2022-08",
+        "end": "Present",
+        "bullets": [
+          "Monitor and authorize entrance and departure of employees, visitors, and contractors at a multi-building commercial campus, checking credentials at two gates and logging approximately 300 entries per shift.",
+          "Patrol industrial and commercial premises on foot and by vehicle to detect signs of intrusion and confirm that doors, windows, and gates are secure; document and resolve an average of 12 security or maintenance irregularities per week.",
+          "Answer alarms and investigate disturbances, coordinating with local emergency services and clearing 100% of false-alarm calls within 15 minutes.",
+          "Lock and unlock entrances and exits on a fixed schedule, maintaining a zero-incident record for unauthorized after-hours access over the past year.",
+          "Write daily activity and incident reports covering property damage, theft, unauthorized persons, and unusual occurrences, producing 40+ reports per month with no errors found in supervisor audits.",
+          "Warn persons of rule infractions and evict violators from premises when necessary, defusing roughly 20 disputes per quarter without escalation to force.",
+          "Respond to medical emergencies by administering basic first aid and obtaining assistance from paramedics, completing annual CPR and first aid recertification."
+        ]
+      },
+      {
+        "title": "Security Officer",
+        "employer": "a regional property management firm",
+        "start": "2019-03",
+        "end": "2022-07",
+        "bullets": [
+          "Circulated among visitors, patrons, and employees in a retail and office complex to preserve order and protect property, supporting a site with up to 1,500 daily visitors.",
+          "Monitored and authorized entrance and departure of employees and visitors, issuing and tracking temporary badges and reducing tailgating incidents by 30% through stricter checkpoint procedures.",
+          "Investigated alarm activations and disturbances across a 6-acre property, documenting findings and notifying management within the same shift.",
+          "Patrolled parking areas and perimeter fencing, identifying and reporting 50+ security deficiencies that were subsequently repaired.",
+          "Maintained daily activity logs and irregularity reports, including equipment damage and suspected theft, in a digital reporting system.",
+          "Trained 4 newly hired guards on post orders, patrol routes, and report writing."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a local industrial services company",
+        "start": "2016-06",
+        "end": "2019-02",
+        "bullets": [
+          "Secured a warehouse and distribution yard by locking and unlocking gates and entrances at scheduled times and verifying seals on outbound trailers.",
+          "Patrolled the premises on rotating shifts to prevent and detect intrusion, checking doors, windows, gates, and perimeter lighting on every round.",
+          "Warned persons of rule infractions such as smoking in prohibited areas and unauthorized parking, and escorted violators off the premises when required.",
+          "Responded to medical emergencies by providing basic first aid and summoning paramedics for two workplace injuries.",
+          "Wrote reports of daily activities and irregularities, including equipment damage and unusual occurrences, for review by the site supervisor."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a local event and venue services contractor",
+        "start": "2014-09",
+        "end": "2016-05",
+        "bullets": [
+          "Monitored and authorized entrance and departure of patrons and staff at venues hosting up to 800 attendees, checking tickets and bags at entry points.",
+          "Circulated among visitors and employees to preserve order and protect property during events and overnight setup periods.",
+          "Answered alarms and investigated disturbances, coordinating with venue management and local police when necessary.",
+          "Wrote shift reports covering unauthorized persons, theft, and unusual occurrences, submitting them at the close of every shift.",
+          "Completed state guard card training and maintained the license in good standing throughout employment."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2014
+      },
+      {
+        "degree": "State Guard Card Certification",
+        "institution": "a state-approved security training academy",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Speaking",
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Writing",
+      "Access Control",
+      "Incident Reporting",
+      "Alarm Response",
+      "Patrol Procedures",
+      "Basic First Aid",
+      "De-escalation",
+      "CCTV Monitoring",
+      "Emergency Response"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "security_guard_02",
+    "occupation_id": "security_guard",
+    "source": "synthetic",
+    "summary": "Dedicated security professional with over 8 years of experience protecting commercial and industrial premises. Skilled in access control, patrol procedures, emergency response, and detailed incident reporting, with a commitment to maintaining safe and secure environments.",
+    "experience": [
+      {
+        "title": "Security Guard",
+        "employer": "an industry-leading organization",
+        "start": "2022-03",
+        "end": "Present",
+        "bullets": [
+          "Monitor and authorize entrance and departure of employees and visitors, checking identification and issuing temporary badges.",
+          "Patrol commercial premises on foot and via vehicle to detect signs of intrusion and ensure security of doors, windows, and gates.",
+          "Respond to alarms and investigate disturbances, coordinating with law enforcement when necessary.",
+          "Write detailed daily reports of activities and irregularities, such as equipment damage, theft, or unusual occurrences."
+        ]
+      },
+      {
+        "title": "Security Officer",
+        "employer": "a national facilities management company",
+        "start": "2018-07",
+        "end": "2022-02",
+        "bullets": [
+          "Locked and unlocked doors and gates of entrances and exits to secure buildings according to schedule.",
+          "Circulated among visitors and employees to preserve order and protect property, de-escalating conflicts as needed.",
+          "Administered basic first aid and obtained paramedic assistance during medical emergencies.",
+          "Warned persons of rule infractions and evicted violators from premises, using force only when necessary."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a regional property services firm",
+        "start": "2015-01",
+        "end": "2018-06",
+        "bullets": [
+          "Answered alarms and investigated disturbances, documenting findings in shift logs.",
+          "Monitored and authorized entrance and departure of personnel and visitors to guard against theft.",
+          "Conducted regular patrols of industrial premises, reporting security hazards and maintenance issues.",
+          "Wrote reports of daily activities and irregularities, including unauthorized persons and property damage."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a local commercial property group",
+        "start": "2014-01",
+        "end": "2014-12",
+        "bullets": [
+          "Patrolled commercial premises to prevent and detect signs of intrusion and ensure security of doors, windows, and gates.",
+          "Monitored entrance and departure of employees and visitors to maintain security of premises.",
+          "Responded to alarms and investigated disturbances, escalating to supervisors as needed.",
+          "Maintained daily activity logs and reported unusual occurrences."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      },
+      {
+        "degree": "State guard card",
+        "institution": "a state licensing authority",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Speaking",
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Writing",
+      "Learning Strategies",
+      "Mathematics",
+      "Science",
+      "Access Control",
+      "Patrol Procedures",
+      "Emergency Response",
+      "Incident Reporting"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "security_guard_03",
+    "occupation_id": "security_guard",
+    "source": "synthetic",
+    "summary": "Detail-oriented security professional with over 9 years of experience in access control, patrol operations, and emergency response. Proven ability to maintain order and protect assets in high-traffic commercial and industrial environments.",
+    "experience": [
+      {
+        "title": "Security Guard",
+        "employer": "an industry-leading organization",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Monitor and authorize entrance and departure of employees, visitors, and other persons to guard against theft and maintain security of premises, processing an average of 300 access requests per shift.",
+          "Patrol industrial and commercial premises to prevent and detect signs of intrusion, ensuring security of doors, windows, and gates across a 12-acre facility.",
+          "Respond to alarms and investigate disturbances, resolving an average of 15 incidents per month with zero unresolved breaches.",
+          "Write detailed reports of daily activities and irregularities, including equipment damage, theft, and unauthorized persons, maintaining 100% incident documentation accuracy."
+        ]
+      },
+      {
+        "title": "Security Officer",
+        "employer": "a regional commercial property management firm",
+        "start": "2018-09",
+        "end": "2021-05",
+        "bullets": [
+          "Locked doors and gates of entrances and exits to secure a multi-tenant office complex, performing 40+ lock-up checks weekly.",
+          "Circulated among visitors, patrons, and employees to preserve order and protect property, de-escalating an average of 10 disputes per month.",
+          "Warned persons of rule infractions or violations and evicted violators from premises, using force only when necessary and in accordance with company policy.",
+          "Administered basic first aid and obtained assistance from paramedics during 8 medical emergencies, achieving a 100% response rate within 3 minutes."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a national retail chain",
+        "start": "2016-02",
+        "end": "2018-08",
+        "bullets": [
+          "Monitored entrance and departure of customers and staff to guard against theft, reducing shoplifting incidents by 22% within the first year.",
+          "Answered alarms and investigated disturbances, coordinating with local law enforcement on 30+ occasions.",
+          "Maintained daily activity logs and irregularity reports, ensuring timely submission to management.",
+          "Patrolled store premises and parking areas to detect signs of intrusion and ensure safety of customers and property."
+        ]
+      },
+      {
+        "title": "Security Guard",
+        "employer": "a local event security contractor",
+        "start": "2014-03",
+        "end": "2016-01",
+        "bullets": [
+          "Controlled access at gates and entrances for concerts and sporting events with attendances up to 5,000 people.",
+          "Circulated among patrons to preserve order and protect property, resolving crowd control issues swiftly.",
+          "Responded to medical emergencies by administering basic first aid or obtaining assistance from paramedics, assisting 12 individuals during tenure.",
+          "Wrote reports of daily activities and irregularities, including unauthorized entry attempts and property damage."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "High School Diploma",
+        "institution": "a public high school",
+        "year": 2013
+      },
+      {
+        "degree": "State guard card",
+        "institution": "a state licensing board",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "Active Listening",
+      "Monitoring",
+      "Speaking",
+      "Critical Thinking",
+      "Reading Comprehension",
+      "Active Learning",
+      "Writing",
+      "Learning Strategies",
+      "Mathematics",
+      "Access Control",
+      "Incident Reporting",
+      "Emergency Response",
+      "Patrol Operations",
+      "De-escalation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  }
+]

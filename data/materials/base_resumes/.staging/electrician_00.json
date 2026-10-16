@@ -1,0 +1,79 @@
+{
+  "resume_id": "electrician_00",
+  "occupation_id": "electrician",
+  "source": "synthetic",
+  "summary": "Journeyman electrician with 10 years of continuous experience installing, maintaining, and repairing commercial and residential electrical systems. Skilled at reading blueprints, running conduit, and troubleshooting circuits while meeting building and safety codes.",
+  "experience": [
+    {
+      "title": "Journeyman Electrician",
+      "employer": "a growing mid-market electrical services company",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Plan layout and install electrical wiring, equipment, and fixtures for commercial tenant build-outs based on job specifications and local codes.",
+        "Prepare sketches from blueprints to determine wiring and equipment locations, verifying conformance to building and safety codes before rough-in.",
+        "Connect wires to circuit breakers, transformers, and other components, and test circuits with ammeters, oscilloscopes, and test lamps.",
+        "Place conduit, pipes, and tubing inside partitions and concealed areas, then pull insulated wires and cables to complete circuits between boxes.",
+        "Work from ladders, scaffolds, and roofs to install and repair lighting, panels, and fixtures.",
+        "Maintain a current journeyman electrician license and complete continuing education to meet governmental regulations."
+      ]
+    },
+    {
+      "title": "Electrician",
+      "employer": "a regional commercial construction contractor",
+      "start": "2018-01",
+      "end": "2021-05",
+      "bullets": [
+        "Assembled, installed, tested, and maintained electrical wiring, appliances, apparatus, and fixtures using hand tools and power tools.",
+        "Installed conduit and pulled wire for multi-story office and retail projects, completing 40+ circuits per week alongside a two-person crew.",
+        "Used measuring devices, power construction equipment, and testing equipment to diagnose faults and confirm correct grounding and polarity.",
+        "Read and interpreted blueprints to position outlets, switches, and panels, ensuring compliance with local electrical codes.",
+        "Coordinated with site supervisors to sequence electrical rough-in and trim-out work, reducing rework on assigned floors by roughly 15%."
+      ]
+    },
+    {
+      "title": "Electrical Apprentice",
+      "employer": "a local residential electrical contractor",
+      "start": "2016-01",
+      "end": "2017-12",
+      "bullets": [
+        "Assisted journeyman electricians with wiring, fixture installation, and service upgrades for single-family homes.",
+        "Cut, bent, and mounted conduit and ran cable through walls and concealed spaces under supervision.",
+        "Measured, cut, and stripped wire and used hand and power tools to prepare connections at outlets and breaker panels.",
+        "Tested circuits with lamps and meters to help identify shorts, overloads, and defective components.",
+        "Completed 4,000 hours of supervised field work and related classroom instruction toward journeyman licensure."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Certificate in Electrical Technology",
+      "institution": "a community college",
+      "year": 2015
+    },
+    {
+      "degree": "Journeyman electrician license",
+      "institution": "state licensing board",
+      "year": 2020
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Active Learning",
+    "Reading Comprehension",
+    "Monitoring",
+    "Writing",
+    "Mathematics",
+    "Science",
+    "Conduit installation and wire pulling",
+    "Blueprint and schematic reading",
+    "Electrical code compliance",
+    "Circuit testing and troubleshooting",
+    "Hand and power tool operation"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

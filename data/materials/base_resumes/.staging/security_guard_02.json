@@ -1,0 +1,87 @@
+{
+  "resume_id": "security_guard_02",
+  "occupation_id": "security_guard",
+  "source": "synthetic",
+  "summary": "Dedicated security professional with over 8 years of experience protecting commercial and industrial premises. Skilled in access control, patrol procedures, emergency response, and detailed incident reporting, with a commitment to maintaining safe and secure environments.",
+  "experience": [
+    {
+      "title": "Security Guard",
+      "employer": "an industry-leading organization",
+      "start": "2022-03",
+      "end": "Present",
+      "bullets": [
+        "Monitor and authorize entrance and departure of employees and visitors, checking identification and issuing temporary badges.",
+        "Patrol commercial premises on foot and via vehicle to detect signs of intrusion and ensure security of doors, windows, and gates.",
+        "Respond to alarms and investigate disturbances, coordinating with law enforcement when necessary.",
+        "Write detailed daily reports of activities and irregularities, such as equipment damage, theft, or unusual occurrences."
+      ]
+    },
+    {
+      "title": "Security Officer",
+      "employer": "a national facilities management company",
+      "start": "2018-07",
+      "end": "2022-02",
+      "bullets": [
+        "Locked and unlocked doors and gates of entrances and exits to secure buildings according to schedule.",
+        "Circulated among visitors and employees to preserve order and protect property, de-escalating conflicts as needed.",
+        "Administered basic first aid and obtained paramedic assistance during medical emergencies.",
+        "Warned persons of rule infractions and evicted violators from premises, using force only when necessary."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "a regional property services firm",
+      "start": "2015-01",
+      "end": "2018-06",
+      "bullets": [
+        "Answered alarms and investigated disturbances, documenting findings in shift logs.",
+        "Monitored and authorized entrance and departure of personnel and visitors to guard against theft.",
+        "Conducted regular patrols of industrial premises, reporting security hazards and maintenance issues.",
+        "Wrote reports of daily activities and irregularities, including unauthorized persons and property damage."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "a local commercial property group",
+      "start": "2014-01",
+      "end": "2014-12",
+      "bullets": [
+        "Patrolled commercial premises to prevent and detect signs of intrusion and ensure security of doors, windows, and gates.",
+        "Monitored entrance and departure of employees and visitors to maintain security of premises.",
+        "Responded to alarms and investigated disturbances, escalating to supervisors as needed.",
+        "Maintained daily activity logs and reported unusual occurrences."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "High School Diploma",
+      "institution": "a public high school",
+      "year": 2013
+    },
+    {
+      "degree": "State guard card",
+      "institution": "a state licensing authority",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Monitoring",
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Learning",
+    "Writing",
+    "Learning Strategies",
+    "Mathematics",
+    "Science",
+    "Access Control",
+    "Patrol Procedures",
+    "Emergency Response",
+    "Incident Reporting"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

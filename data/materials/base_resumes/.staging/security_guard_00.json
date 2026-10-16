@@ -1,0 +1,92 @@
+{
+  "resume_id": "security_guard_00",
+  "occupation_id": "security_guard",
+  "source": "synthetic",
+  "summary": "Security Guard with 10 years of continuous experience patrolling commercial and industrial premises, monitoring access points, and responding to alarms and disturbances. Holds a current State guard card and is trained in basic first aid and emergency response.",
+  "experience": [
+    {
+      "title": "Security Guard",
+      "employer": "a mid-size regional firm",
+      "start": "2021-06",
+      "end": "Present",
+      "bullets": [
+        "Patrol commercial premises on foot and by vehicle to detect signs of intrusion and verify that doors, windows, and gates remain secure.",
+        "Monitor and authorize entrance and departure of employees, visitors, and contractors at the main lobby and loading dock.",
+        "Answer alarms and investigate disturbances, resolving an average of 15 incidents per month and escalating accordingly.",
+        "Lock and unlock entrances, gates, and interior suites on a fixed schedule for a 4-building campus.",
+        "Write daily activity reports documenting property damage, theft attempts, unauthorized persons, and unusual occurrences.",
+        "Respond to medical emergencies by administering basic first aid and obtaining paramedic assistance when needed.",
+        "Warn persons of rule infractions and evict violators from premises while maintaining a calm, professional presence."
+      ]
+    },
+    {
+      "title": "Security Officer",
+      "employer": "a regional commercial property management company",
+      "start": "2019-01",
+      "end": "2021-05",
+      "bullets": [
+        "Circulated among visitors, patrons, and employees to preserve order and protect property at a busy retail center.",
+        "Monitored a 40-camera CCTV and access control system and dispatched patrols to investigate suspicious activity.",
+        "Conducted hourly perimeter checks and secured 12 entry and exit points at closing each night.",
+        "Investigated alarm activations and documented findings in incident reports reviewed by site management.",
+        "Assisted with basic first aid for minor injuries and coordinated with paramedics on two serious medical calls."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "an industrial logistics firm",
+      "start": "2016-09",
+      "end": "2018-12",
+      "bullets": [
+        "Patrolled a warehouse and distribution yard to prevent and detect signs of intrusion and protect inventory.",
+        "Verified employee and driver credentials at the gate, guarding against theft and unauthorized entry.",
+        "Wrote reports of daily activities, irregularities, and equipment or property damage for shift handoff.",
+        "Responded to fire and intrusion alarms and investigated disturbances before contacting emergency services.",
+        "Enforced site safety and conduct rules, warning violators and removing offenders when necessary."
+      ]
+    },
+    {
+      "title": "Security Guard",
+      "employer": "a local retail chain",
+      "start": "2015-10",
+      "end": "2016-08",
+      "bullets": [
+        "Locked and secured store doors and gates at closing and unlocked them at opening each day.",
+        "Patrolled the sales floor and stockroom to deter theft and monitor for signs of intrusion.",
+        "Monitored entrances to guard against theft and maintain a safe environment for customers and staff.",
+        "Documented theft incidents, unauthorized persons, and unusual occurrences in written reports for store management."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "State guard card",
+      "institution": "state licensing authority",
+      "year": 2015
+    },
+    {
+      "degree": "High school diploma",
+      "institution": "a public high school",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Monitoring",
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Writing",
+    "Access control",
+    "CCTV surveillance",
+    "Incident reporting",
+    "Basic first aid",
+    "Alarm response",
+    "Patrolling",
+    "Conflict de-escalation",
+    "Emergency response"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

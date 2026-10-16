@@ -1,0 +1,320 @@
+[
+  {
+    "resume_id": "emt_paramedic_00",
+    "occupation_id": "emt_paramedic",
+    "source": "synthetic",
+    "summary": "National Registry certified Paramedic with 10 years of continuous prehospital experience in high-volume 911 and inter-facility transport settings. Proven ability to deliver advanced life support, manage critical scenes, and mentor newer EMS personnel in growing mid-market organizations.",
+    "experience": [
+      {
+        "title": "Paramedic",
+        "employer": "a growing mid-market regional EMS provider",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Provide advanced life support on a 911 response unit averaging 12 calls per 12-hour shift, including cardiac arrests, traumas, and respiratory emergencies.",
+          "Perform patient assessments, 12-lead ECG acquisition and interpretation, IV/IO access, medication administration, and airway management under medical direction.",
+          "Document patient care electronically with 98% billing-compliant chart completion and participate in continuous quality improvement case reviews.",
+          "Precept newly hired EMTs and paramedic students, coaching scene safety, documentation standards, and clinical decision-making.",
+          "Maintain fleet readiness by checking controlled medications, defibrillators, and oxygen equipment at the start of every shift."
+        ]
+      },
+      {
+        "title": "Paramedic",
+        "employer": "a mid-sized municipal fire and rescue department",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Delivered ALS care as part of a two-person ambulance crew across a service area of approximately 60,000 residents.",
+          "Triaged and treated patients at multi-casualty incidents, coordinating with fire, law enforcement, and receiving hospital staff.",
+          "Operated and maintained cardiac monitors, ventilators, infusion pumps, and spinal immobilization equipment.",
+          "Served on the department safety committee, contributing to a 20% reduction in reported lifting injuries over two years.",
+          "Completed monthly training in pediatric emergencies, hazardous materials response, and mass casualty operations."
+        ]
+      },
+      {
+        "title": "EMT-Intermediate",
+        "employer": "a growing mid-market private ambulance company",
+        "start": "2016-01",
+        "end": "2018-02",
+        "bullets": [
+          "Responded to emergent and non-emergent calls, performing patient assessment, vital sign monitoring, and basic airway support.",
+          "Administered oxygen, assisted with prescribed medications, and supported paramedic partners during advanced procedures.",
+          "Transported patients between hospitals, skilled nursing facilities, and residences while maintaining comfort and dignity.",
+          "Verified insurance and billing documentation, reducing claim rejections through accurate run report submission.",
+          "Restocked and sanitized the ambulance after each transport to meet infection-control and readiness standards."
+        ]
+      },
+      {
+        "title": "EMT-Basic",
+        "employer": "a community-based emergency transport service",
+        "start": "2014-09",
+        "end": "2015-12",
+        "bullets": [
+          "Provided basic life support, hemorrhage control, splinting, and safe patient movement on emergency and transfer calls.",
+          "Conducted scene size-up and communicated patient condition to receiving facilities and oncoming crews.",
+          "Inspected and maintained medical supplies and vehicles, logging equipment checks each shift.",
+          "Completed continuing education hours in CPR, first aid, and emergency vehicle operations."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "National Registry EMT / Paramedic Certification",
+        "institution": "an accredited EMS training program",
+        "year": 2016
+      },
+      {
+        "degree": "Associate of Applied Science in Emergency Medical Services",
+        "institution": "a community college",
+        "year": 2018
+      }
+    ],
+    "skills": [
+      "Advanced life support (ALS)",
+      "Basic life support (BLS)",
+      "Patient assessment",
+      "12-lead ECG interpretation",
+      "IV and IO access",
+      "Medication administration",
+      "Airway management and ventilation",
+      "Cardiac monitoring and defibrillation",
+      "Trauma stabilization",
+      "Electronic patient care reporting",
+      "Scene safety and triage",
+      "Emergency vehicle operations",
+      "CPR and first aid instruction",
+      "Medical equipment maintenance"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "emt_paramedic_01",
+    "occupation_id": "emt_paramedic",
+    "source": "synthetic",
+    "summary": "National Registry certified paramedic with over a decade of continuous prehospital care experience, primarily serving a well-established local employer. Skilled in advanced life support, patient assessment, and emergency response coordination.",
+    "experience": [
+      {
+        "title": "Paramedic",
+        "employer": "a well-established local employer",
+        "start": "2021-06",
+        "end": "Present",
+        "bullets": [
+          "Provide advanced life support on 1,200+ annual emergency calls, including cardiac arrests, trauma, and respiratory emergencies.",
+          "Serve as shift lead for a 4-person crew, coordinating scene triage and patient transport decisions.",
+          "Administer medications, interpret 12-lead ECGs, and perform advanced airway management per protocol.",
+          "Maintain unit inventory and controlled substance logs with 100% compliance across quarterly audits."
+        ]
+      },
+      {
+        "title": "EMT / Paramedic",
+        "employer": "a regional emergency medical services agency",
+        "start": "2018-03",
+        "end": "2021-05",
+        "bullets": [
+          "Responded to 2,000+ 911 calls across urban and rural coverage areas as a two-person crew member.",
+          "Performed patient assessments, vital sign monitoring, and basic life support interventions.",
+          "Documented patient care reports in electronic medical records within required timeframes.",
+          "Collaborated with fire and law enforcement on multi-agency emergency scenes."
+        ]
+      },
+      {
+        "title": "Emergency Medical Technician",
+        "employer": "a community hospital transport service",
+        "start": "2015-01",
+        "end": "2018-02",
+        "bullets": [
+          "Transported 1,500+ patients between facilities, monitoring condition throughout transit.",
+          "Assisted paramedics with equipment setup, CPR, and patient positioning during high-acuity calls.",
+          "Completed daily vehicle and equipment checks, ensuring readiness for immediate dispatch.",
+          "Trained 8 new EMTs on stretcher operations, oxygen delivery, and documentation standards."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Paramedic Certificate",
+        "institution": "a regional community college",
+        "year": 2018
+      },
+      {
+        "degree": "EMT-Basic Certificate",
+        "institution": "a state technical institute",
+        "year": 2014
+      }
+    ],
+    "skills": [
+      "National Registry EMT / Paramedic certification",
+      "Advanced Life Support (ALS)",
+      "Basic Life Support (BLS)",
+      "Cardiopulmonary Resuscitation (CPR)",
+      "12-Lead ECG interpretation",
+      "Advanced airway management",
+      "Patient assessment and triage",
+      "Emergency vehicle operation",
+      "Electronic patient care reporting",
+      "Medication administration",
+      "Trauma care",
+      "Scene safety and coordination",
+      "Vital sign monitoring",
+      "Controlled substance documentation"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "emt_paramedic_02",
+    "occupation_id": "emt_paramedic",
+    "source": "synthetic",
+    "summary": "National Registry certified paramedic with nearly a decade of continuous full-time prehospital experience across busy 911 and interfacility transport systems. Recognized for strong clinical assessment, calm direction of high-acuity scenes, and consistent documentation and equipment readiness.",
+    "experience": [
+      {
+        "title": "Paramedic, Field Training Officer",
+        "employer": "an industry-leading metropolitan emergency medical services organization",
+        "start": "2022-08",
+        "end": "Present",
+        "bullets": [
+          "Provide advanced life support assessment and treatment for a 911 response area averaging 12-15 calls per 12-hour shift, covering cardiac, trauma, respiratory, and behavioral emergencies.",
+          "Direct scene operations as lead paramedic, delegating tasks to EMT partners and first responders during multi-patient incidents.",
+          "Serve as a field training officer for 6-8 new paramedics and EMTs per year, verifying competency in airway management, IV/IO access, 12-lead ECG interpretation, and medication administration.",
+          "Maintain 100% compliance with controlled-substance, equipment checkout, and patient care report documentation audits.",
+          "Coordinate with receiving emergency departments and specialty care centers to transmit ECGs and pre-arrival reports that reduce handoff time."
+        ]
+      },
+      {
+        "title": "Paramedic",
+        "employer": "a regional hospital-based ambulance service",
+        "start": "2019-03",
+        "end": "2022-07",
+        "bullets": [
+          "Delivered paramedic-level care on interfacility and 911 transports, managing ventilators, vasoactive infusions, and post-surgical patients during transfer.",
+          "Performed patient assessments, vital sign monitoring, cardiac rhythm interpretation, and medication administration within protocol and medical direction.",
+          "Operated and maintained advanced life support equipment, including defibrillators, infusion pumps, and oxygen delivery systems, with zero unresolved equipment failures.",
+          "Completed thorough electronic patient care reports and verbal handoffs for an average of 1,200 transports annually.",
+          "Supported mass-gathering standby coverage and surge response alongside local public safety agencies."
+        ]
+      },
+      {
+        "title": "EMT",
+        "employer": "a community ambulance and rescue agency",
+        "start": "2016-06",
+        "end": "2019-02",
+        "bullets": [
+          "Responded to emergency and non-emergency calls as part of a two-person crew, performing basic life support, vital signs, bleeding control, splinting, and oxygen therapy.",
+          "Assisted paramedic partners with airway adjuncts, CPR, stair-chair and stretcher movement, and scene safety at residences and public venues.",
+          "Documented patient encounters and insurance information accurately in electronic records.",
+          "Inspected and restocked ambulances at the start of each shift, maintaining readiness of oxygen, suction, and trauma supplies.",
+          "Recognized time-critical conditions such as stroke and cardiac arrest and initiated immediate transport and CPR."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Paramedic Certificate, Emergency Medical Services",
+        "institution": "a regional technical college",
+        "year": 2019
+      },
+      {
+        "degree": "EMT Certificate, Emergency Medical Services",
+        "institution": "a community college",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Advanced Life Support (ALS)",
+      "Basic Life Support (BLS)",
+      "12-lead ECG acquisition and interpretation",
+      "Airway management and ventilation",
+      "IV and IO access",
+      "Medication administration",
+      "Patient assessment and triage",
+      "Cardiopulmonary resuscitation (CPR)",
+      "Trauma and hemorrhage control",
+      "Emergency vehicle operations",
+      "Electronic patient care reporting",
+      "Scene safety and incident command support",
+      "Medical equipment inspection and readiness",
+      "National Registry EMT / paramedic certification"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  },
+  {
+    "resume_id": "emt_paramedic_03",
+    "occupation_id": "emt_paramedic",
+    "source": "synthetic",
+    "summary": "National Registry-certified Paramedic with over 10 years of continuous experience in 911 emergency response, critical care transport, and field training. Recognized for calm decision-making under pressure and for mentoring new EMTs at a well-established local employer.",
+    "experience": [
+      {
+        "title": "Paramedic",
+        "employer": "a well-established local employer",
+        "start": "2022-06",
+        "end": "Present",
+        "bullets": [
+          "Provide advanced life support on 911 responses, performing patient assessments, cardiac monitoring, IV and medication administration, and airway management for 1,200+ calls per year.",
+          "Serve as field training officer for 8 newly hired EMTs and paramedics, leading orientation, skills verification, and ride-along evaluations.",
+          "Collaborate with fire and law enforcement crews on multi-agency scenes, maintaining clear radio communication and incident documentation.",
+          "Maintain and restock advanced equipment and controlled medications, keeping unit readiness above 98% on quarterly audits."
+        ]
+      },
+      {
+        "title": "Paramedic",
+        "employer": "a regional emergency medical services provider",
+        "start": "2019-03",
+        "end": "2022-05",
+        "bullets": [
+          "Delivered emergency and interfacility critical care transport as part of a two-person ALS crew across a multi-county service area.",
+          "Triaged and treated patients during high-volume shifts, prioritizing care based on acuity and coordinating handoff reports with receiving emergency departments.",
+          "Documented patient care electronically in compliance with state and insurance requirements, reducing chart return rates through careful review.",
+          "Trained incoming EMTs on stretcher operations, splinting, oxygen delivery, and safe ambulance driving procedures."
+        ]
+      },
+      {
+        "title": "EMT",
+        "employer": "a municipal ambulance service",
+        "start": "2016-08",
+        "end": "2019-02",
+        "bullets": [
+          "Responded to basic life support calls, providing CPR, bleeding control, immobilization, oxygen therapy, and safe patient transport.",
+          "Assisted paramedics with advanced procedures, equipment setup, and lifting and moving patients with proper body mechanics.",
+          "Completed daily vehicle checks, infection control, and inventory of supplies to ensure unit readiness at shift start.",
+          "Communicated with dispatchers and receiving facilities to relay patient condition and transport status."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Paramedic Certificate, Emergency Medical Services",
+        "institution": "a community college",
+        "year": 2019
+      },
+      {
+        "degree": "National Registry EMT / Paramedic Certification",
+        "institution": "National Registry of Emergency Medical Technicians",
+        "year": 2016
+      }
+    ],
+    "skills": [
+      "Advanced life support",
+      "Patient assessment",
+      "Cardiac monitoring and ECG interpretation",
+      "IV and medication administration",
+      "Airway management and ventilation",
+      "CPR and defibrillation",
+      "Trauma and bleeding control",
+      "Emergency vehicle operations",
+      "Patient documentation and charting",
+      "Triage and acuity prioritization",
+      "Radio and dispatch communication",
+      "Field training and mentoring",
+      "Equipment inspection and readiness",
+      "Infection control and safety protocols"
+    ],
+    "volunteer": [],
+    "notes": "",
+    "role": "base"
+  }
+]

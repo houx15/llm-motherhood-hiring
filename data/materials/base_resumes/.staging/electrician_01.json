@@ -1,0 +1,76 @@
+{
+  "resume_id": "electrician_01",
+  "occupation_id": "electrician",
+  "source": "synthetic",
+  "summary": "Journeyman electrician with over a decade of hands-on experience installing, maintaining, and repairing residential, commercial, and light industrial electrical systems. Skilled at reading blueprints, running conduit, and troubleshooting complex circuits while ensuring strict adherence to local and national electrical codes.",
+  "experience": [
+    {
+      "title": "Journeyman Electrician",
+      "employer": "a well-established local employer",
+      "start": "2021-04",
+      "end": "Present",
+      "bullets": [
+        "Install, maintain, and repair electrical wiring, fixtures, and equipment in commercial buildings, working from blueprints and job specifications to ensure code-compliant layouts.",
+        "Run conduit and pull insulated wires through concealed walls, partitions, and ceilings to complete circuits between junction boxes and panels.",
+        "Connect wires to circuit breakers, transformers, and other components, then test circuits with ammeters, oscilloscopes, and test lamps to verify proper operation.",
+        "Use ladders, scaffolds, and lifts to access overhead wiring and equipment, consistently completing projects on schedule with zero safety incidents over the past two years.",
+        "Maintain current Journeyman electrician license and complete required continuing education to stay current with NEC updates."
+      ]
+    },
+    {
+      "title": "Electrician",
+      "employer": "a regional electrical contractor",
+      "start": "2018-02",
+      "end": "2021-03",
+      "bullets": [
+        "Prepared sketches and followed blueprints to determine wiring locations for new residential construction, ensuring conformance to building and safety codes.",
+        "Assembled, installed, and tested electrical wiring, appliances, and fixtures using hand tools and power tools on more than 150 residential projects.",
+        "Planned layout and installation of electrical equipment and fixtures based on job specifications and local code requirements.",
+        "Used power construction equipment, measuring devices, and testing instruments to diagnose faults and reduce average callback time by 20%."
+      ]
+    },
+    {
+      "title": "Apprentice Electrician",
+      "employer": "a local electrical services company",
+      "start": "2014-08",
+      "end": "2018-01",
+      "bullets": [
+        "Assisted journeyman electricians with installing conduit, pipes, and tubing inside designated partitions, walls, and other concealed areas.",
+        "Pulled insulated wires and cables through conduit to complete circuits between boxes under direct supervision.",
+        "Maintained tools and equipment, including power tools and testing devices such as ammeters and test lamps, ensuring safe daily operation.",
+        "Learned to read and interpret blueprints and electrical diagrams while completing related classroom instruction."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Certificate in Electrical Technology",
+      "institution": "a community technical college",
+      "year": 2014
+    },
+    {
+      "degree": "Journeyman electrician license",
+      "institution": "state licensing board",
+      "year": 2018
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Active Learning",
+    "Reading Comprehension",
+    "Monitoring",
+    "Writing",
+    "Mathematics",
+    "Science",
+    "Blueprint Reading",
+    "Conduit Bending",
+    "Electrical Troubleshooting",
+    "National Electrical Code Compliance",
+    "Circuit Testing"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

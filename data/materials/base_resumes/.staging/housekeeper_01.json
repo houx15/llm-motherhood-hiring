@@ -1,0 +1,73 @@
+{
+  "resume_id": "housekeeper_01",
+  "occupation_id": "housekeeper",
+  "source": "synthetic",
+  "summary": "Detail-oriented housekeeper with over a decade of experience maintaining cleanliness and hygiene standards in hotels, healthcare facilities, and private residences. Skilled in using cleaning equipment, managing supplies, and ensuring guest satisfaction through thorough and efficient work.",
+  "experience": [
+    {
+      "title": "Housekeeping Cleaner",
+      "employer": "a well-established local employer",
+      "start": "2019-06",
+      "end": "Present",
+      "bullets": [
+        "Clean and sanitize 20+ guest rooms daily, including bathrooms, bedrooms, and common areas, ensuring adherence to health standards.",
+        "Replenish linens, towels, and bathroom supplies in rooms and storage areas, maintaining adequate stock levels.",
+        "Operate vacuum cleaners and shampooers to clean carpets and upholstered furniture, and sweep, mop, and polish floors.",
+        "Empty wastebaskets and transport trash to disposal areas, promoting a clean and safe environment.",
+        "Wash windows, walls, and woodwork, and polish surfaces as needed to maintain a pristine appearance."
+      ]
+    },
+    {
+      "title": "Room Attendant",
+      "employer": "a well-established local hotel",
+      "start": "2016-04",
+      "end": "2019-05",
+      "bullets": [
+        "Cleaned and tidied guest rooms, hallways, and lobbies, ensuring a welcoming atmosphere for guests.",
+        "Stocked housekeeping carts with cleaning supplies and linens, and transported items to designated areas using wheeled carts.",
+        "Vacuumed rugs and carpets, and cleaned upholstered furniture and draperies to maintain a fresh environment.",
+        "Reported maintenance issues and safety hazards to supervisors, contributing to a well-maintained facility.",
+        "Received positive feedback from guests for attention to detail and responsiveness to requests."
+      ]
+    },
+    {
+      "title": "Housekeeper",
+      "employer": "a well-established local healthcare facility",
+      "start": "2014-08",
+      "end": "2016-03",
+      "bullets": [
+        "Performed cleaning duties in patient rooms, restrooms, corridors, and common areas, following infection control protocols.",
+        "Swept, scrubbed, and waxed floors using brooms, mops, and powered scrubbing machines.",
+        "Emptied wastebaskets and cleaned ashtrays, and transported waste to disposal areas.",
+        "Replenished supplies such as drinking glasses, linens, and bathroom items in patient rooms and storage areas.",
+        "Collaborated with nursing staff to ensure timely cleaning of discharged rooms for new admissions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "High School Diploma",
+      "institution": "a local high school",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Monitoring",
+    "Reading Comprehension",
+    "Writing",
+    "Active Learning",
+    "Learning Strategies",
+    "Mathematics",
+    "Science",
+    "Time Management",
+    "Attention to Detail",
+    "Cleaning Equipment Operation",
+    "Supply Management"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

@@ -1,0 +1,88 @@
+{
+  "resume_id": "electrician_03",
+  "occupation_id": "electrician",
+  "source": "synthetic",
+  "summary": "Journeyman electrician with 10 years of continuous experience in commercial and residential electrical installation, maintenance, and repair. Skilled in interpreting blueprints, running conduit, and troubleshooting systems to meet building and safety codes.",
+  "experience": [
+    {
+      "title": "Journeyman Electrician",
+      "employer": "a mid-size regional electrical contractor",
+      "start": "2021-04",
+      "end": "Present",
+      "bullets": [
+        "Plan layout and installation of electrical wiring, equipment, and fixtures for commercial projects based on job specifications and local codes.",
+        "Prepare sketches and follow blueprints to determine wiring locations and ensure conformance to building and safety codes.",
+        "Install conduit, pipes, and tubing inside partitions and concealed areas, pulling insulated wires to complete circuits between boxes.",
+        "Connect wires to circuit breakers, transformers, and other components, verifying proper function with ammeters and test lamps.",
+        "Work from ladders and scaffolds to install, maintain, and repair electrical wiring, equipment, and fixtures on multi-story sites.",
+        "Maintained a journeyman electrician license and completed 40 hours of continuing education annually to meet state regulations."
+      ]
+    },
+    {
+      "title": "Electrician",
+      "employer": "a regional facilities services company",
+      "start": "2018-05",
+      "end": "2021-03",
+      "bullets": [
+        "Assembled, installed, tested, and maintained electrical wiring, equipment, appliances, and fixtures using hand and power tools.",
+        "Used oscilloscopes, ammeters, and test lamps to diagnose faults and ensure system performance within specification.",
+        "Read and interpreted blueprints and technical diagrams to plan installations for commercial tenant improvements.",
+        "Pulled insulated wires through conduit and connected to circuit breakers and distribution panels in compliance with local codes."
+      ]
+    },
+    {
+      "title": "Apprentice Electrician",
+      "employer": "a mid-size regional electrical contractor",
+      "start": "2016-02",
+      "end": "2018-04",
+      "bullets": [
+        "Assisted journeyman electricians with layout and installation of wiring, conduit, and fixtures on residential and light commercial sites.",
+        "Worked from ladders and roofs to install and repair electrical components under supervision.",
+        "Measured, cut, and bent conduit using power tools and measuring devices to route wiring through concealed spaces.",
+        "Gained hands-on experience with circuit testing equipment and learned to interpret building and safety codes."
+      ]
+    },
+    {
+      "title": "Electrical Helper",
+      "employer": "a local construction services firm",
+      "start": "2014-08",
+      "end": "2016-01",
+      "bullets": [
+        "Supported electricians by gathering tools, materials, and equipment for daily installation tasks.",
+        "Assisted with pulling cable and placing conduit in walls and ceilings under direct supervision.",
+        "Maintained a clean and organized work area while observing safety protocols on active job sites."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Electrical Apprenticeship Program",
+      "institution": "a state technical college",
+      "year": 2016
+    },
+    {
+      "degree": "High School Diploma",
+      "institution": "a public high school",
+      "year": 2014
+    }
+  ],
+  "skills": [
+    "Active Listening",
+    "Speaking",
+    "Critical Thinking",
+    "Active Learning",
+    "Reading Comprehension",
+    "Monitoring",
+    "Writing",
+    "Mathematics",
+    "Learning Strategies",
+    "Science",
+    "Blueprint Reading",
+    "Conduit Bending",
+    "Electrical Troubleshooting",
+    "National Electrical Code Compliance"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

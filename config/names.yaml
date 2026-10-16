@@ -3,7 +3,7 @@
 # (validated in Gaddis 2017), per SPEC_PHASE3 §2.3. The first three per gender are
 # the main-run names (phases 1-2); phase 3 adds three more per gender and rotates
 # all six by a balanced hash so each name appears equally often within every cell.
-# PENDING researcher approval (QUESTIONS.md §11) before any paid phase-3 run.
+# APPROVED: phase3 wording — researcher, 2026-10-16 (QUESTIONS.md §11.1).
 female: [Emily, Sarah, Anne, Allison, Laurie, Meredith]
 male: [Greg, Matthew, Todd, Brad, Geoffrey, Neil]
 surnames: [Baker, Walsh, Murphy]

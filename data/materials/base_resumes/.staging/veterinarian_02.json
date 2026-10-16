@@ -1,0 +1,99 @@
+{
+  "resume_id": "veterinarian_02",
+  "occupation_id": "veterinarian",
+  "source": "synthetic",
+  "summary": "DVM and state veterinary license with 10 years of continuous small-animal and mixed-animal clinical experience. Skilled in diagnostic imaging, surgery, preventive care, and client education across growing mid-market veterinary practices.",
+  "experience": [
+    {
+      "title": "Lead Veterinarian",
+      "employer": "a growing mid-market small-animal veterinary group",
+      "start": "2023-03",
+      "end": "Present",
+      "bullets": [
+        "Examine animals to detect and determine the nature of diseases or injuries, completing 25-35 appointments per day.",
+        "Treat sick or injured animals by prescribing medication, setting bones, dressing wounds, and performing routine and emergency surgery.",
+        "Operate diagnostic equipment such as radiographic and ultrasound equipment and interpret resulting images to guide treatment plans.",
+        "Collect body tissue, feces, blood, urine, and other body fluids for examination and analysis; review laboratory results with clients.",
+        "Inoculate animals against rabies, distemper, and other diseases, maintaining immunization records for more than 4,000 patients.",
+        "Counsel clients about euthanasia decisions and the deaths of their pets, providing compassionate end-of-life guidance.",
+        "Advise animal owners regarding sanitary measures, feeding, general care, medical conditions, and treatment options.",
+        "Educate the public about diseases that can be spread from animals to humans through community outreach and clinic seminars."
+      ]
+    },
+    {
+      "title": "Associate Veterinarian",
+      "employer": "a mid-market mixed-animal veterinary practice",
+      "start": "2019-08",
+      "end": "2023-02",
+      "bullets": [
+        "Examined animals to detect and determine the nature of diseases or injuries during routine wellness and urgent-care visits.",
+        "Treated sick or injured animals by prescribing medication, setting bones, dressing wounds, and performing surgical procedures.",
+        "Operated radiographic and ultrasound diagnostic equipment and interpreted images to support accurate diagnoses.",
+        "Collected blood, urine, and tissue samples for laboratory examination and analysis, reducing average diagnostic turnaround by 15%.",
+        "Inoculated animals against rabies, distemper, and other preventable diseases in accordance with state and federal guidelines.",
+        "Advised animal owners on sanitary measures, feeding, general care, medical conditions, and treatment options.",
+        "Counseled clients about euthanasia decisions and the deaths of their pets with empathy and clear clinical communication."
+      ]
+    },
+    {
+      "title": "Veterinarian",
+      "employer": "a mid-market companion-animal clinic",
+      "start": "2016-06",
+      "end": "2019-07",
+      "bullets": [
+        "Examined animals to detect and determine the nature of diseases or injuries across a caseload of 20-30 patients daily.",
+        "Treated sick or injured animals by prescribing medication, setting bones, dressing wounds, and assisting in surgery.",
+        "Operated diagnostic radiographic and ultrasound equipment and interpreted resulting images for treatment planning.",
+        "Collected body tissue, feces, blood, urine, and other body fluids for examination and analysis.",
+        "Inoculated animals against rabies, distemper, and other diseases, supporting herd and community immunity.",
+        "Educated the public about zoonotic diseases and preventive care through client consultations and local events.",
+        "Advised animal owners regarding sanitary measures, feeding, general care, medical conditions, and treatment options."
+      ]
+    },
+    {
+      "title": "Veterinary Intern",
+      "employer": "a growing mid-market veterinary hospital",
+      "start": "2014-06",
+      "end": "2016-05",
+      "bullets": [
+        "Examined animals under supervision to detect and determine the nature of diseases or injuries.",
+        "Assisted in treating sick or injured animals by prescribing medication, setting bones, dressing wounds, and performing surgery.",
+        "Collected body tissue, feces, blood, urine, and other body fluids for examination and analysis.",
+        "Operated diagnostic radiographic and ultrasound equipment and interpreted resulting images with attending veterinarians.",
+        "Inoculated animals against rabies, distemper, and other diseases, documenting reactions and outcomes.",
+        "Advised animal owners regarding sanitary measures, feeding, general care, medical conditions, and treatment options."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Doctor of Veterinary Medicine (DVM)",
+      "institution": "a state university college of veterinary medicine",
+      "year": 2014
+    },
+    {
+      "degree": "BS in Animal Science",
+      "institution": "a public university",
+      "year": 2010
+    }
+  ],
+  "skills": [
+    "Reading Comprehension",
+    "Active Listening",
+    "Active Learning",
+    "Speaking",
+    "Science",
+    "Critical Thinking",
+    "Writing",
+    "Monitoring",
+    "Mathematics",
+    "Learning Strategies",
+    "Diagnostic Imaging",
+    "Surgery",
+    "Client Education",
+    "Preventive Care"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}

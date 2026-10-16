@@ -1,0 +1,89 @@
+{
+  "resume_id": "health_services_manager_01",
+  "occupation_id": "health_services_manager",
+  "source": "synthetic",
+  "summary": "Medical and Health Services Manager with over a decade of progressive experience directing clinical and administrative operations, fiscal planning, and staff development across outpatient and inpatient care settings. Skilled at leveraging data systems and resource monitoring to improve efficiency, compliance, and patient service delivery.",
+  "experience": [
+    {
+      "title": "Health Services Manager",
+      "employer": "a well-established local employer",
+      "start": "2022-04",
+      "end": "Present",
+      "bullets": [
+        "Direct, supervise, and evaluate work activities of nursing, technical, clerical, and support personnel across three service lines, conducting annual performance reviews for 60+ staff.",
+        "Develop and maintain computerized record management systems to store and process personnel activity data, producing monthly staffing and productivity reports for executive leadership.",
+        "Plan, implement, and administer facility programs and services, coordinating medical, nursing, and physical plant staff to support a 15% increase in patient volume without added headcount.",
+        "Conduct fiscal operations including budget planning, expenditure authorization, rate setting for services, and coordination of monthly financial reporting for a $12M operating budget.",
+        "Monitor use of diagnostic services, inpatient beds, facilities, and staff to ensure effective resource use, identifying needs for additional equipment and recommending two capital purchases.",
+        "Direct recruitment, hiring, and training of personnel, reducing average time-to-fill open clinical positions from 45 to 28 days."
+      ]
+    },
+    {
+      "title": "Assistant Health Services Manager",
+      "employer": "a regional medical center",
+      "start": "2019-06",
+      "end": "2022-03",
+      "bullets": [
+        "Supervised daily work activities of nursing, technical, and clerical personnel, evaluating performance and resolving scheduling conflicts for a 40-person department.",
+        "Developed and maintained computerized record management systems to process personnel activities and information and to produce weekly compliance and staffing reports.",
+        "Administered personnel administration, training, and coordination of medical and nursing staff, standardizing onboarding for 25 new hires per year.",
+        "Established work schedules and assignments for staff according to workload, space, and equipment availability, cutting overtime costs by 12%.",
+        "Maintained awareness of government regulations, health insurance changes, and financing options, leading a department-wide policy update that passed audit with zero findings."
+      ]
+    },
+    {
+      "title": "Practice Operations Coordinator",
+      "employer": "a community health clinic",
+      "start": "2016-09",
+      "end": "2019-05",
+      "bullets": [
+        "Coordinated work activities of medical, clerical, and service personnel in a multi-provider outpatient clinic serving 200 patients daily.",
+        "Monitored use of diagnostic services, facilities, and staff to ensure effective resource use and assessed needs for additional staff and equipment.",
+        "Assisted fiscal operations by planning budgets, authorizing expenditures, and coordinating financial reporting for a $3M annual clinic budget.",
+        "Helped direct recruitment, hiring, and training of clinical and administrative staff, improving new-hire retention by 18% over two years."
+      ]
+    },
+    {
+      "title": "Administrative Services Associate",
+      "employer": "a local health system",
+      "start": "2015-01",
+      "end": "2016-08",
+      "bullets": [
+        "Supported work activities of medical, nursing, technical, and clerical personnel through scheduling, recordkeeping, and reporting tasks.",
+        "Assisted with computerized record management systems to store and process personnel activities and information for a 300-employee system.",
+        "Maintained awareness of advances in medicine, data processing technology, and health insurance changes to support administrative decision-making."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Health Administration",
+      "institution": "a state university",
+      "year": 2014
+    },
+    {
+      "degree": "Master of Health Services Administration",
+      "institution": "a regional public university",
+      "year": 2018
+    }
+  ],
+  "skills": [
+    "Speaking",
+    "Critical Thinking",
+    "Reading Comprehension",
+    "Active Listening",
+    "Writing",
+    "Monitoring",
+    "Active Learning",
+    "Learning Strategies",
+    "Mathematics",
+    "Science",
+    "Fiscal Operations and Budgeting",
+    "Staff Supervision and Development",
+    "Health Information Systems",
+    "Regulatory Compliance"
+  ],
+  "volunteer": [],
+  "notes": "",
+  "role": "base"
+}
