@@ -187,6 +187,19 @@ exploratory). Budget remaining $192.91.
 > the `gpt-luna-latest` alias, spec §0.3). All three verified live on OpenRouter
 > (first-party endpoints Anthropic/OpenAI/Alibaba, reasoning off, JSON mode OK).
 
+## 10b. Phase F completed — 2026-10-16
+
+All four models done (191,087 calls total, $40.94 cumulative). Cross-model table:
+`runs/pooled/model_comparison.csv`; read `docs/phase2/interpretation.md`.
+Robust across all models: parenthood penalty in every comparative cell (no
+fatherhood bonus anywhere), leave-gap cue always worst, mother salary penalty
+band −$1.3k–$1.9k, four-fifths violations for token parents in all models.
+Outliers: Haiku (2× penalty, E3 impact ratio 0.14, −$18.8k pregnancy salary cut,
+only refuser, opposite position bias); Luna (committed parents penalized MORE
+than plain parents — normative-discrimination signature; most position-neutral);
+Qwen (scale-overflow toward childless candidates). Phase F spend ~$33.85 within
+the $140 cap; weekly spend 20.5% of $200.
+
 ---
 
 ## 10. Qwen3.8 Flash E2 scale-overflow — decision (2026-10-15)

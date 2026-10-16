@@ -149,11 +149,14 @@ def analyze(run: str = typer.Option(..., "--run")) -> None:
 
 
 @app.command()
-def report(run: str = typer.Option(..., "--run")) -> None:
+def report(
+    run: str = typer.Option(..., "--run"),
+    model: str = typer.Option(None, help="restrict to one model_key (e.g. for pooled per-model reports)"),
+) -> None:
     """Full markdown + figures report for a run."""
     from .analysis.report import make_report
 
-    make_report(run)
+    make_report(run, model_key=model)
 
 
 @app.command()

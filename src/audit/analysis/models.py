@@ -29,8 +29,10 @@ def e1_regressions(e1: pd.DataFrame, outcomes=OUTCOMES) -> pd.DataFrame:
         if sub.empty:
             continue
         try:
+            # resume FE absorb occupation FE (resumes nest within occupations);
+            # keeping both makes the design rank-deficient
             m = smf.ols(
-                f"{y} ~ C(family_code) * C(female) + pregnant_flag + C(resume_ids) + C(name_idx) + C(occupation_id)",
+                f"{y} ~ C(family_code) * C(female) + pregnant_flag + C(resume_ids) + C(name_idx)",
                 data=sub,
             ).fit(cov_type="cluster", cov_kwds={"groups": sub["resume_ids"]})
         except Exception as e:  # noqa: BLE001

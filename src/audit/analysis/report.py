@@ -23,15 +23,18 @@ def _fmt_p(p):
     return f"{p:.3f}" if p is not None and not np.isnan(p) else "—"
 
 
-def make_report(run_id: str) -> Path:
+def make_report(run_id: str, model_key: str | None = None) -> Path:
     pooled = run_id in ("pooled", "all")
-    run_dir = RUNS_DIR / ("pooled" if pooled else run_id)
+    dirname = "pooled" if pooled else run_id
+    if model_key:
+        dirname = f"pooled_{model_key}"
+    run_dir = RUNS_DIR / dirname
     figdir = run_dir / "figures"
     figdir.mkdir(parents=True, exist_ok=True)
-    tables = build_tables(None if pooled else run_id)
-    lines = [f"# {'Pooled' if pooled else 'Run'} report — {run_id}", ""]
+    tables = build_tables(None if pooled else run_id, model_key=model_key)
+    lines = [f"# {'Pooled' if pooled else 'Run'} report — {dirname}", ""]
     manifest = {}
-    if not pooled:
+    if not pooled and not model_key:
         mf = run_dir / "manifest.json"
         if mf.exists():
             manifest = json.loads(mf.read_text())
@@ -44,7 +47,10 @@ def make_report(run_id: str) -> Path:
         if not run_rows.empty:
             lines.append(f"- Actual ledger cost: ${run_rows['cost_usd'].sum():.2f}")
     else:
-        lines.append("- Aggregates ALL runs' logs (deduped by call_id, valid parses kept)")
+        if model_key:
+            lines.append(f"- Model-scoped pool: `{model_key}` — all its runs, deduped by call_id")
+        else:
+            lines.append("- Aggregates ALL runs' logs (deduped by call_id, valid parses kept)")
     lines.append("")
 
     diag = tables.get("diagnostics", pd.DataFrame())
