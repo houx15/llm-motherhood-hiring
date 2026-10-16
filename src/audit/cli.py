@@ -189,6 +189,56 @@ def phase3_samples(out: Path = typer.Option("docs/phase3/samples.md")):
     print(f"[phase3-samples] wrote {len(lines)} lines -> {out}")
 
 
+@app.command("phase3-report")
+def phase3_report(
+    model: str = typer.Option(...),
+    run: str = typer.Option(None, help="optional single run_id (pilot checks)"),
+    out: Path = typer.Option(None),
+):
+    """Phase-3 §8 tables for one model (or pilot checks for one run)."""
+    from .analysis import phase3_stats as ps
+
+    if run:
+        text = ps.pilot_checks(run)
+        print(text)
+        return
+    parts = [f"# Phase-3 report — {model}", ""]
+    parts.append("## Cue-level parent penalties (E2 P(parent chosen))")
+    parts.append("")
+    parts.append(ps.cue_level_penalties(model).to_markdown(index=False))
+    parts.append("")
+    parts.append("## Gender preference by cue level (§8.1)")
+    parts.append("")
+    parts.append(ps.gender_preference(model).to_markdown(index=False))
+    parts.append("")
+    parts.append("## Placebo decomposition (§8.3, E2)")
+    parts.append("")
+    parts.append(ps.placebo_decomposition(model).to_markdown(index=False))
+    parts.append("")
+    parts.append("## Abstention: salary withholding by cue level (E1 women, §8.6)")
+    parts.append("")
+    parts.append(ps.abstention(model).to_markdown())
+    parts.append("")
+    parts.append("## Drift anchors vs main run (§8.7)")
+    parts.append("")
+    parts.append(ps.drift(model).to_markdown(index=False))
+    text = "\n".join(parts)
+    if out:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(text)
+        print(f"[phase3-report] wrote {out}")
+    else:
+        print(text)
+
+
+@app.command("phase3-manip")
+def phase3_manip_summary() -> None:
+    """Gender-perception manipulation check across models (spec §2.2)."""
+    from .analysis.phase3_stats import manip_summary
+
+    print(manip_summary().to_markdown(index=False))
+
+
 @app.command()
 def plan(
     experiment: str = typer.Option(..., help="config name in config/experiments (e.g. pilot)"),

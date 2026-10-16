@@ -487,15 +487,15 @@ def expand_phase3(cfg) -> pd.DataFrame:
     pilot = bool(getattr(cfg, "pilot", False))
     e = cfg.experiments
     for model_key in cfg.models:
-        if e.get("e1v3"):
+        if "e1v3" in e:
             all_rows += expand_e1v3(cfg, model_key, occs, e["e1v3"].get("samples", 6), pilot=pilot)
-        if e.get("e2v3"):
+        if "e2v3" in e:
             all_rows += expand_e2v3(cfg, model_key, occs, e["e2v3"].get("samples", 2), pilot=pilot)
-        if e.get("e3v3"):
+        if "e3v3" in e:
             all_rows += expand_e3v3(cfg, model_key, occs, e["e3v3"].get("samples", 1), pilot=pilot)
-        if e.get("manip"):
+        if "manip" in e:
             all_rows += expand_manip(cfg, model_key)
-        if e.get("lawyer_fix"):
+        if "lawyer_fix" in e:
             all_rows += expand_lawyer_fix(cfg, model_key)
     if not all_rows:
         raise SystemExit(f"no phase-3 experiments found in config {cfg.name!r}")
