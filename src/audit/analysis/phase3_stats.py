@@ -224,6 +224,92 @@ def abstention(model_key: str) -> pd.DataFrame:
     return pv
 
 
+def mother_father_outcomes(model_key: str, level: str = "name") -> pd.DataFrame:
+    """§8.4: mother vs father across outcomes (E2 paired differences, E1 withheld)."""
+    tabs = _tables_for(model_key)
+    e2 = tabs.get("e2")
+    rows = []
+    if e2 is not None and not e2.empty:
+        sub = e2[(e2.cue_level == level) & e2.contrast.isin(["parent", "parent_gap", "parent_committed"])]
+        for contrast, g in sub.groupby("contrast"):
+            for outcome, col in [
+                ("P(parent chosen)", "parent_chosen"),
+                ("salary", "diff_starting_salary_usd"),
+                ("commitment", "diff_commitment"),
+                ("competence", "diff_competence"),
+                ("likability", "diff_likability"),
+                ("fit", "diff_overall_fit"),
+            ]:
+                for gender, label in [("female", "mothers"), ("male", "fathers")]:
+                    s = g[g.gender == gender][col].dropna()
+                    if outcome == "salary":
+                        s = s[s != 0]  # exclude withheld (0 diff) pairs
+                    if len(s):
+                        rows.append({"contrast": contrast, "outcome": outcome, "group": label,
+                                     "mean": round(float(s.astype(float).mean()), 3), "n": len(s)})
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return df
+    wide = df.pivot_table(index=["contrast", "outcome"], columns="group", values="mean")
+    wide["M-F"] = (wide.get("mothers") - wide.get("fathers")).round(3)
+    return wide.round(3).reset_index()
+
+
+def occupation_appendix(model_key: str) -> pd.DataFrame:
+    """§8.5: per-occupation penalties regressed on standardized O*NET scores.
+
+    Occupation-level effects: E2 P(parent chosen) by gender (L0+L1+L2 pooled),
+    mother-father gap, woman-manu direct-contrast share; then joint OLS on
+    z-scored female share, wage, physical, care, analytic, manage (n=28).
+    """
+    tabs = _tables_for(model_key)
+    e2 = tabs.get("e2")
+    if e2 is None or e2.empty:
+        return pd.DataFrame()
+    e2 = e2[~e2.cue_level.isin(["blind"])]
+    rows = []
+    for occ, g in e2.groupby("occupation_id"):
+        row = {"occupation_id": occ}
+        for contrast in ["parent", "parent_gap"]:
+            for gender, label in [("female", "F"), ("male", "M")]:
+                s = g[(g.contrast == contrast) & (g.gender == gender)]["parent_chosen"].dropna().astype(float)
+                row[f"p_{contrast}_{label}"] = round(float(s.mean()), 3) if len(s) else None
+        d = g[g.contrast == "gender_none"]["woman_chosen"].dropna().astype(float)
+        row["p_woman_none"] = round(float(d.mean()), 3) if len(d) else None
+        rows.append(row)
+    occ_df = pd.DataFrame(rows)
+    from .build_tables import _moderators
+
+    mod = _moderators()
+    occ_df = occ_df.merge(mod, on="occupation_id", how="left")
+    occ_df["parent_gap_MF"] = occ_df["p_parent_gap_F"] - occ_df["p_parent_gap_M"]
+    for c in ["female_share", "median_wage", "physical", "care", "analytic", "manage"]:
+        z = (occ_df[c] - occ_df[c].mean()) / occ_df[c].std(ddof=0)
+        occ_df[f"z_{c}"] = z.round(3)
+    return occ_df
+
+
+def occupation_regressions(model_key: str) -> pd.DataFrame:
+    """§8.5 joint regressions of occupation-level penalty on z-scores (n=28)."""
+    occ_df = occupation_appendix(model_key)
+    if occ_df.empty:
+        return pd.DataFrame()
+    import statsmodels.api as sm
+
+    zs = ["z_female_share", "z_median_wage", "z_physical", "z_care", "z_analytic", "z_manage"]
+    rows = []
+    for dep in ["p_parent_gap_F", "p_parent_gap_M", "parent_gap_MF", "p_woman_none"]:
+        d = occ_df.dropna(subset=[dep] + zs)
+        if len(d) < 15:
+            continue
+        X = sm.add_constant(d[zs])
+        m = sm.OLS(d[dep], X).fit()
+        for k in zs:
+            rows.append({"dependent": dep, "term": k, "coef": round(float(m.params[k]), 3),
+                         "se": round(float(m.bse[k]), 3), "p": round(float(m.pvalues[k]), 3), "n": int(m.nobs)})
+    return pd.DataFrame(rows)
+
+
 def drift(model_key: str) -> pd.DataFrame:
     """§8.7: compare phase-3 L0 anchor cells (none/parent) with the main run."""
     new = _tables_for(model_key).get("e1")

@@ -83,7 +83,8 @@ def build_tables(run_id: str | None, model_key: str | None = None) -> dict[str, 
         manip["true_gender"] = ctx.apply(lambda c: c.get("gender"))
         manip["correct"] = (manip["perceived_gender"] == manip["true_gender"]).astype(int)
         if "cue_level" not in manip.columns:
-            manip["cue_level"] = ctx.apply(lambda c: c.get("cue_level"))
+            manip["cue_level"] = None
+        manip["cue_level"] = manip["cue_level"].fillna(ctx.apply(lambda c: c.get("cue_level")))
         out["manip"] = manip
 
     # ---- E1 / E4 ----
@@ -94,8 +95,9 @@ def build_tables(run_id: str | None, model_key: str | None = None) -> dict[str, 
         e14["female"] = (e14["gender"] == "female").astype(int)
         e14["parent"] = e14["family_code"].isin(["parent", "parent_gap", "parent_committed"]).astype(int)
         if "cue_level" not in e14.columns:
-            _c = e14["render_ctx"].apply(lambda c: (json.loads(c) if isinstance(c, str) else (c or {})).get("cue_level"))
-            e14["cue_level"] = _c
+            e14["cue_level"] = None
+        _c = e14["render_ctx"].apply(lambda c: (json.loads(c) if isinstance(c, str) else (c or {})).get("cue_level"))
+        e14["cue_level"] = e14["cue_level"].fillna(_c)
         e14["cue_level"] = e14["cue_level"].fillna("name")
         e14["withheld"] = (e14["starting_salary_usd"].fillna(0) == 0).astype(int)
         e14 = e14.merge(mod, on="occupation_id", how="left")
@@ -129,7 +131,8 @@ def build_tables(run_id: str | None, model_key: str | None = None) -> dict[str, 
         e2["position_a"] = (e2["chosen"] == "A").astype(int)
         e2["female"] = (e2["gender"] == "female").astype(int)
         if "cue_level" not in e2.columns:
-            e2["cue_level"] = ctx.apply(lambda c: c.get("cue_level"))
+            e2["cue_level"] = None
+        e2["cue_level"] = e2["cue_level"].fillna(ctx.apply(lambda c: c.get("cue_level")))
         e2["cue_level"] = e2["cue_level"].fillna("name")
         # paired differences: treatment minus control (json_normalize flattens A/B to dotted cols)
         def _diff(row, key):
