@@ -215,6 +215,12 @@ def phase3_report(
     parts.append("")
     parts.append(ps.placebo_decomposition(model).to_markdown(index=False))
     parts.append("")
+    parts.append("## Mother vs father by outcome (§8.4, L0)")
+    parts.append("")
+    mf = ps.mother_father_outcomes(model)
+    if not mf.empty:
+        parts.append(mf.to_markdown(index=False))
+    parts.append("")
     parts.append("## Abstention: salary withholding by cue level (E1 women, §8.6)")
     parts.append("")
     parts.append(ps.abstention(model).to_markdown())
@@ -222,6 +228,12 @@ def phase3_report(
     parts.append("## Drift anchors vs main run (§8.7)")
     parts.append("")
     parts.append(ps.drift(model).to_markdown(index=False))
+    parts.append("")
+    parts.append("## Occupation-level regressions (§8.5, joint z-scores)")
+    parts.append("")
+    reg = ps.occupation_regressions(model)
+    if not reg.empty:
+        parts.append(reg.to_markdown(index=False))
     text = "\n".join(parts)
     if out:
         out.parent.mkdir(parents=True, exist_ok=True)
