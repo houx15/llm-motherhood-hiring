@@ -308,3 +308,16 @@ cell type: `docs/phase3/samples.md` (`uv run audit phase3-samples`).
   (software_engineer + emt_paramedic, 1 sample) → DeepSeek full → short
   report → researcher approval → other three models.
 
+### 11.4 Execution log
+
+| step | result | cost |
+| --- | --- | --- |
+| wording gate | APPROVED (§11.1) | — |
+| O8 résumés + lawyer regen | 34/34 valid, licenses shown | $0.01 |
+| pretest (merit gate ≥ 5) | all new résumés 8.2–10.0 | $0.05 |
+| manipulation check ×4 | 4,701/4,704 valid; docs/phase3/manipulation_check.md | $0.55 |
+| DeepSeek pilot (2 occs) | 2,513/2,513 valid, 0 refusals, 0 withholding | $0.64 |
+| lawyer rerun (DeepSeek) | 474/474 valid | $0.06 |
+| DeepSeek phase3_main | RUNNING (started 2026-10-16 20:13 local, conc. 40; endpoint congested ~1.5 calls/s) | est ~$27 |
+
+
