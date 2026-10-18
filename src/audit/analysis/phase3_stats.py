@@ -127,11 +127,13 @@ def cue_level_penalties(model_key: str) -> pd.DataFrame:
     for lvl in LEVELS:
         sub = e2[(e2.cue_level == lvl) & (e2.contrast.isin(["parent", "parent_gap", "parent_committed",
                                                             "personal", "gap_travel", "gap_parental_only"]))]
-        for contrast, g in sub.groupby("contrast"):
+        grp_cols = ["contrast"] if lvl == "blind" else ["contrast", "gender"]
+        for key, g in sub.groupby(grp_cols):
+            contrast = key[0] if not isinstance(key, tuple) else key[0]
+            gender = None if lvl == "blind" else (key[1] if isinstance(key, tuple) else key[1])
             row = {"level": LEVEL_NAMES[lvl], "contrast": contrast, "n": len(g),
-                   "P(parent)": round(float(g["parent_chosen"].astype(float).mean()), 3)}
-            if lvl != "blind":
-                row["gender"] = g["gender"].iloc[0] if g["gender"].notna().all() else None
+                   "P(parent)": round(float(g["parent_chosen"].astype(float).mean()), 3),
+                   "gender": gender}
             rows.append(row)
     return pd.DataFrame(rows)
 
@@ -311,16 +313,22 @@ def occupation_regressions(model_key: str) -> pd.DataFrame:
 
 
 def drift(model_key: str) -> pd.DataFrame:
-    """§8.7: compare phase-3 L0 anchor cells (none/parent) with the main run."""
+    """§8.7: compare phase-3 L0 anchor cells (none/parent) with the main run.
+    O20 occupations only (O8 have no main-run baseline)."""
+    from ..config import load_occupations_built
+
+    o20 = {o.id for o in load_occupations_built().occupations if o.cohort == "o20"}
     new = _tables_for(model_key).get("e1")
     old = build_tables(None, model_key=model_key).get("e1")
     if new is None or old is None:
         return pd.DataFrame()
     old = old[~old.run_id.str.contains("phase3")]
+    new = new[(new.run_id.str.contains("phase3")) & new.occupation_id.isin(o20)
+              & ~new.run_id.str.contains("phase3_pilot|phase3_lawyer")]
     rows = []
     for gender in ("female", "male"):
         for fam in ("none", "parent"):
-            o = old[(old.gender == gender) & (old.family_code == fam)]
+            o = old[(old.gender == gender) & (old.family_code == fam) & old.occupation_id.isin(o20)]
             n = new[(new.gender == gender) & (new.family_code == fam) & (new.cue_level == "name")]
             if len(o) and len(n):
                 rows.append({

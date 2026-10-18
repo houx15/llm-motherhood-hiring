@@ -318,6 +318,18 @@ cell type: `docs/phase3/samples.md` (`uv run audit phase3-samples`).
 | manipulation check ×4 | 4,701/4,704 valid; docs/phase3/manipulation_check.md | $0.55 |
 | DeepSeek pilot (2 occs) | 2,513/2,513 valid, 0 refusals, 0 withholding | $0.64 |
 | lawyer rerun (DeepSeek) | 474/474 valid | $0.06 |
-| DeepSeek phase3_main | RUNNING (started 2026-10-16 20:13 local, conc. 40; endpoint congested ~1.5 calls/s) | est ~$27 |
+| DeepSeek phase3_main | DONE: 91,844/91,888 valid (99.95%, one repair pass +158), 0 refusals | $24.34 |
+
+### 11.5 PENDING APPROVAL — §6.5 gate: other three models
+
+DeepSeek short report: `docs/phase3/SHORT_REPORT.md`; full tables
+`docs/phase3/report_deepseek.md`. Key results: penalty is gender-blind (L3 =
+gendered levels), decomposition shows the *interruption* + *family bundle* (not
+the caregiving label) drive the penalty, no explicit-gender amplification, no
+abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
+
+> **APPROVED: run Haiku / Luna / Qwen through phase-3 main + lawyer rerun —
+> researcher, 2026-10-18** (record answer here; chat approval suffices.)
+
 
 
