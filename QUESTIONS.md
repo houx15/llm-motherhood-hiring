@@ -320,6 +320,15 @@ cell type: `docs/phase3/samples.md` (`uv run audit phase3-samples`).
 | lawyer rerun (DeepSeek) | 474/474 valid | $0.06 |
 | DeepSeek phase3_main | DONE: 91,844/91,888 valid (99.95%, one repair pass +158), 0 refusals | $24.34 |
 
+### 11.6 Remaining models — execution mode (2026-10-18)
+
+§6.5 gate approved (§11.5). Throughput diagnosis: the cap is PER MODEL
+(~0.6–0.8 calls/s each; concurrency-invariant, latency just inflates), so
+Haiku/Luna/Qwen run in PARALLEL as detached nohup chains
+(runs/nohup/phase3_<model>.log): per model phase3_main → straggler retry →
+phase3_lawyer → targeted repair. Projected ~40h wall time for all three
+(DeepSeek needed ~29h solo; the parallel streams coexist at ~0.6/s each).
+
 ### 11.5 PENDING APPROVAL — §6.5 gate: other three models
 
 DeepSeek short report: `docs/phase3/SHORT_REPORT.md`; full tables
