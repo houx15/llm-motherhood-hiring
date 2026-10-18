@@ -329,7 +329,9 @@ the caregiving label) drive the penalty, no explicit-gender amplification, no
 abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
 
 > **APPROVED: run Haiku / Luna / Qwen through phase-3 main + lawyer rerun —
-> researcher, 2026-10-18** (record answer here; chat approval suffices.)
+> researcher, 2026-10-18** (chat approval during session; scope: phase3_main +
+> phase3_lawyer per model, sequential, with post-run repair passes; projected
+> spend ≈ $85 within the $180 usable cap.)
 
 
 
