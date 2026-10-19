@@ -31,7 +31,8 @@ $24.34. Ledger total $66.85 of $180 usable.
    cell; explicit gender does not trigger abstention in DeepSeek.
 6. **Occupation gradients (§8.5, joint regression, n=28, care ⊥ female share):**
    mothers' leave-gap penalty is *smaller* in female-dominated occupations
-   (z_female_share +.057, p=.025); care/physical/analytic/manage themselves are
+   (z_female_share +.057, i.e. P(parent chosen) is 5.7pp higher per +1 SD of
+   occupation female share, p=.025); care/physical/analytic/manage themselves are
    all n.s. — the moderation runs through gender composition, not task content.
 7. **Drift (§8.7):** phase-3 anchors run +2.4 to +3.5pp interviews above the main
    run (one cell crosses the 0.03 flag). Mild upward drift, likely prompt-version

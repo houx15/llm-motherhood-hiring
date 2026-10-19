@@ -20,12 +20,14 @@ abstract: |
   though only Claude Haiku 5.5 penalizes mothers significantly *more* than fathers
   (surviving Holm correction in two of three contrasts);
   (3) a caregiving leave gap is always the most damaging cue; (4) motherhood salary
-  penalties cluster in a narrow band (−1.7% to −2.3% of the childless offer), roughly
+  penalties cluster in a narrow band (−1.7% to −2.3% versus the same woman shown
+  childless in the same pairwise comparison), roughly
   one-quarter of the human laboratory benchmark (≈ −$11,000 ≈ −7.4%); and (5) Claude
   Haiku 5.5 responds to pregnancy disclosure by withholding salary offers entirely
   (19.8% of pregnant applicants receive $0) — and those withheld applicants are advanced
   to interview only 30% of the time, producing a net within-résumé interview penalty of
-  −9.4pp (t = −4.8) with no residual salary penalty once withheld offers are excluded.
+  −9.4pp (pregnant minus childless women, same résumés; t = −4.8) with no residual
+  salary penalty once withheld offers are excluded.
   Under clustered difference-in-differences inference, greedy job-ad wording amplifies
   the leave-gap interview penalty for DeepSeek (and, combined with family-friendly
   language, for Haiku); EEO boilerplate and family-friendly sentences alone show no
@@ -289,10 +291,13 @@ Corrected claim: *no model shows a fatherhood bonus; Haiku's mother-heavier pena
 survives Holm correction for the parent and committed contrasts (not the leave gap);
 Qwen's nominal mother-heavier differences do not survive correction.*
 
-Paired salary differences for mothers (parent cue) are −1.7% to −2.3% across models
-(leave gap −1.2% to −4.1%). **Pooled across models, mothers with the plain parent cue
-are chosen 33.7% of the time (−16.3pp below parity); with a leave gap, 23.2%
-(−26.8pp).** Every model penalizes; the magnitude varies substantially by model
+Paired salary differences — the mother's recommended salary minus that of the
+childless woman she is paired against (same occupation, same gender, same call) —
+are −1.7% to −2.3% across models for the parent cue (leave gap −1.2% to −4.1%).
+**Pooled across models, mothers with the plain parent cue are chosen 33.7% of the
+time in head-to-head pairs against an otherwise-identical childless woman (parity
+= 50%; −16.3pp); with a leave gap, 23.2% (−26.8pp).** Every model penalizes; the
+magnitude varies substantially by model
 (I² = 91–95%), from −11pp (Qwen) to −27pp (Haiku) for the parent cue.
 
 ## 5.4 E3 — ranking: token penalties survive résumé fixed effects
@@ -374,9 +379,13 @@ Correll et al. (2007)'s lab study recommended hiring **84% of childless women ve
 47% of mothers** (−37pp) and offered non-mothers roughly **$11,000 more (≈ 7.4% of
 the childless offer — the commonly cited figure; verify against the paper's tables
 before journal submission)**; their employer audit found childless women received
-about twice the callbacks. Our pooled LLM choice penalty for mothers (−16.3pp parent
-cue; −26.8pp leave gap) is **smaller than the human hiring gap**, and the LLM salary
-band (−1.7% to −2.3%) is roughly one-quarter of the human salary penalty (Figure 7).
+about twice the callbacks. Our pooled LLM choice penalty for mothers — P(mother
+chosen) in head-to-head pairs against an otherwise-identical childless woman,
+relative to 50% parity (−16.3pp parent
+cue; −26.8pp leave gap) — is **smaller than the human hiring gap** (mothers minus
+childless women, between-persons), and the LLM salary
+band (−1.7% to −2.3%, mother minus her paired childless woman) is roughly one-quarter
+of the human salary penalty (Figure 7).
 Caveat: the LLM figure is a within-pair *choice share* while the human figure is a
 between-persons *hire rate* — directionally comparable, not metrically; we drop any
 standardized commitment comparison (paired d_z is not comparable to Correll's
@@ -394,7 +403,8 @@ human analogue.
   withheld), netting a −9.4pp pregnancy interview penalty. It is also the only model
   with a second-position preference and the only one whose mother-father gap survives
   Holm correction (parent, committed). Interestingly, its *fit ratings* show no
-  parent penalty at all (+0.15) — its discrimination appears only in choices,
+  penalty for parents versus childless candidates in E1 (+0.15 points, parent minus
+  none) — its discrimination appears only in choices,
   rankings, and abstentions.
 - **GPT-6 Luna** — normative-discrimination prototype: commitment evidence deepens
   the penalty (.297 → .228); most position-neutral; smallest E4 context effects;
