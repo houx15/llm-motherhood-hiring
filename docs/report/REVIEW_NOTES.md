@@ -294,3 +294,189 @@ first comparative audit. (Full list in docs/proposal.md.)
    only interview. Note in §4 which tables are main-run vs phase-3, since prompt versions differ.
 6. **Abstract (2)** "statistically indistinguishable for two models" — add the test (O8 L0 vs L3,
    pair-clustered) to the table.
+
+---
+
+# Round 4 review (Draft 4.1, 2026-10-22)
+
+All round-3 items were addressed, and the framing (availability inference + normative bundle,
+implicit pronoun check, matched-set decomposition) is much stronger. Remaining issues are in the
+new `src/audit/analysis/round3.py` and the reference list.
+
+## R4-MUST 1 — round3.py clusters on *ordered* résumé strings (2× pseudo-clusters)
+
+`_pm`, `_wm`, `_pair_means`, and `direct_gender_inference` all use
+`groupby("resume_ids")`. `resume_ids` is ordered by role (`a+b` vs `b+a`), so each résumé pair
+becomes two clusters. Checked in the DeepSeek phase-3 logs: O8 `parent` has **32 ordered strings
+but 16 unordered pairs**; `gender_parent` has **112 ordered vs 56 unordered**. The two role-halves
+share résumés and are not independent.
+
+Fix: use the existing `pair_cluster()` from `report_stats.py` (sorted indices + occupation) in
+every round-3 function; rerun decomposition, invariance, direct-gender, and drift tests; update
+the report's n's ("32 pairs" for O8 → 16; "n = 112" → 56; §5.3 "40/32" → 40/16) and all t / Holm
+results. Expect smaller |t|. Results most at risk: Luna's label effect (5/6 Holm), Haiku's
+L1 − L0 = −4.6pp (t −3.3), the Holm counts in the decomposition table.
+
+## R4-MUST 2 — `mother_father_main()` salary filter is wrong; §4.4 table has no inference
+
+- `s = s[s != 0]` drops pairs whose salary *difference* is zero (identical offers) and keeps pairs
+  where one side was withheld ($0), which produce diffs of tens of thousands of dollars. It should
+  drop pairs where **either** candidate's salary is 0/null, and keep zero differences.
+  (My earlier computation with that rule: parent cue M − F salary ≈ DeepSeek +$81, Haiku −$170,
+  Luna −$134, Qwen −$436 [t ≈ −2.1] — different from the table.)
+- All rows are raw call-level means with no SE. Compute per-pair-cluster means for mothers and
+  fathers, take pair-matched differences, report t and Holm.
+- Units: the E1 interview row is a proportion (−.006) while the text uses pp elsewhere.
+
+## R4-MUST 3 — The "perception-asymmetric" claim is not supported by the table as shown
+
+The §4.4 table shows ≈ 0 mother − father differences for DeepSeek, Luna, and Qwen in every row
+(only Haiku is asymmetric), yet the text and abstract (4) say mothers' extra penalty appears in
+commitment/likability/salary "for three models". The evidence for that pattern was in **E1**, not E2
+(main run, résumé-clustered, from round-2 checks): DeepSeek commitment M − F −0.09 to −0.12
+(t ≈ −3 to −3.8) and salary −$607 (parent) / −$749 (gap, t −2.5); Qwen E1 salary −$833 (t −1.7).
+Either add E1 rows (commitment, competence, likability, salary; clustered by résumé, Holm) and
+state exactly which models show it, or soften the claim to "Haiku genders perception and choice;
+the others show little mother-specific penalty on any margin".
+
+## R4-MUST 4 — References are paraphrased, with wrong titles/authors
+
+Copy exact citations from `docs/proposal.md`:
+- An, J., Huang, D., Lin, C., & Tai, M. (2025). Measuring gender and racial biases in large
+  language models: Intersectional evidence from automated resume evaluation. *PNAS Nexus*, 4(3),
+  pgaf089. (Current entry has a wrong title and author initial.)
+- Armstrong, L., Liu, A., MacNeil, S., & Metaxa, D. (2024). The Silicon Ceiling: Auditing GPT's race
+  and gender biases in hiring. arXiv:2405.04412. (Current title is invented.)
+- Rozado, D. (2025). Gender and positional biases in LLM-based hiring decisions: Evidence from
+  comparative CV/résumé evaluations. arXiv:2505.17049.
+- Veldanda, A. K., et al. (2023). Investigating hiring bias in large language models /
+  algorithmic hiring bias in the era of ChatGPT. arXiv:2310.05135 (check exact title).
+- Wilson, K., & Caliskan, A. (2024). Gender, race, and intersectional bias in resume screening via
+  language model retrieval. AIES. (Current entry: wrong initial and title.)
+- Yin, L., Alba, D., & Nicoletti, L. (2024). OpenAI's GPT is a recruiter's dream tool. Tests show
+  there's racial bias. *Bloomberg*.
+- Frermann, L., Njoto, S., Cheong, M., & Ruppanner, L. (2023) — first name is Lea; title still to verify.
+Rule for the agent: never paraphrase a title; if unknown, write "[title to verify]".
+
+## R4-SHOULD
+
+- §4.6 "No model exceeds 3.1% withholding in any non-pregnancy cell" — main-run Qwen is 4.2%
+  (none and married), and Haiku itself is 7.3% for married women. Restate precisely.
+- §4.10 "pre-registered ±.03 flag" → "pre-specified" (consistent with §3: not OSF-registered).
+- §5.1 says the bundle adds ".09–.24"; the table says −.08 to −.24.
+- Abstract (3) "Holm-surviving in all 24 model×set tests" — recheck after R4-MUST 1.
+
+---
+
+# Round 5 — academic review along seven dimensions (Draft 4.1; report.md unchanged since 10:05 UTC)
+
+R4 technical items are still open (see R4-MUST 1–4). This round is about the paper as research.
+
+## 1. Key question
+
+- The title asks "Do LLM hiring tools penalize mothers?" but the answer the data give is
+  "they penalize caregivers and employment gaps, largely regardless of gender". The title and
+  abstract are framed around the hypothesis the paper ends up rejecting.
+- Six numbered findings in the abstract dilute the message. Proposed core claim:
+  *LLM screeners do not reproduce the gendered motherhood penalty; they impose a gender-neutral
+  caregiver penalty, visible only when candidates are compared, with thin vendor-specific
+  gendered behaviors layered on top.*
+- Suggested title direction: "From Motherhood Penalty to Caregiver Penalty: How LLM Résumé
+  Screeners Treat Family Signals" (or similar). Q1/Q2 stay; Q3 becomes supporting evidence.
+
+## 2. Situating the question
+
+Missing literatures that change how readers interpret the findings:
+- **Gender-neutral penalties with gendered impact.** Acker (1990) ideal/disembodied worker;
+  disparate impact / indirect discrimination (Title VII; EU law). A caregiver-general penalty is
+  not benign: caregiving gaps and PTA-type signals are carried mostly by women, so a
+  gender-neutral rule produces a gendered outcome. The discussion must say this explicitly or
+  readers will conclude "no gender problem".
+- **Fathers who signal caregiving are penalized in human studies too** (flexibility stigma):
+  Rudman & Mescher (2013); Williams, Blair-Loy & Berdahl (2013). The "no fatherhood bonus;
+  fathers penalized" result is consistent with this literature for the leave cue, and differs
+  from Correll et al. only for the plain PTA cue. Position it that way.
+- **Employment-gap audits.** Weisshaar (2018, ASR) on re-entry after family-related lapses;
+  Kroft, Lange & Notowidigdo (2013) on duration dependence. These are the human benchmarks for
+  the gap/label decomposition — far more direct than Correll for this component.
+- Statistical vs normative discrimination (Phelps 1972; Benard & Correll 2010) is used; good.
+- AI side: alignment/over-correction and format sensitivity of LLM evaluations; algorithmic
+  monoculture (Kleinberg & Raghavan 2021 — cited in references but not used in text).
+(Verify every citation against the source before adding; no paraphrased titles.)
+
+## 3. Does the method address the question?
+
+- **Task dependence may partly be a forced-choice amplification.** When two candidates are
+  near-equivalent, a small consistent preference becomes a large choice share (a tie-breaker).
+  "The penalty lives in the comparison, not the score" needs two checks:
+  (a) relate the E2 penalty to the pretest quality gap between the two résumés in each pair —
+      if it is concentrated in near-tie pairs, say so;
+  (b) translate E1 score differences into the choice probability they would imply under a
+      simple noise model (e.g. probit on E1 fit with its residual SD) and show E2 exceeds it.
+  Without this, a reviewer can argue the scoring scale (integer, ceiling) is simply too coarse.
+- **The travel placebo may carry its own stigma** (leisure, low seriousness). "Parental leave
+  costs the same as travel" supports "the label adds nothing" only if travel is a neutral reason.
+  Add one or two neutral gap labels (e.g. "company closure — job search", "full-time
+  certification program") at L0 on O20, DeepSeek + Haiku (~$5–10), or state this as a limitation
+  and soften "availability inference".
+- **Ecological validity of the cue.** US applicants rarely write "married with two children" in a
+  cover note; say the cue is a strong, explicit disclosure by design, and that real-world
+  signals (gaps, volunteer lines, references) are weaker. The leave gap is the most realistic cue —
+  emphasize it.
+- **Model scope.** Four low-cost tiers, no system prompt, reasoning off. Real HR tools use system
+  prompts (often with fairness instructions) and sometimes larger models. State the population
+  of inference: high-volume, low-cost screening configurations.
+
+## 4. Measurement validity and robustness
+
+- Open from R4: ordered-pair clustering in round3.py (n doubled); salary filter bug in the
+  mother–father table; no inference in that table; reference errors.
+- The decomposition table reports ranges across six matched sets — hard to read and not an
+  estimate. Choose a primary estimand (e.g. O20 at L1/L2 pooled, 40 pairs) with a CI; put the
+  six sets in an appendix as robustness.
+- Report the gap's own effect (`gap_travel` − `none`) with a CI; the text says "costs 10–20pp"
+  without a table entry.
+- Main tables still lack uncertainty (E2 table: "every cell |t| ≥ 5" only). Add CIs.
+- Main-run vs phase-3 tables use different prompt versions; label each table's source run.
+
+## 5. Presentation of results
+
+- Abstract: cut to 3–4 findings; one unit system (pp of choice probability; % of salary). Avoid
+  mixing proportions (.107), pp, t-values and dollars in one sentence.
+- Figures: the listed figures are main-run only. Phase-3 results (the paper's center now) have
+  none. Minimum set:
+  1. Same cue across scoring / choice / ranking on a common scale (task dependence)
+  2. Decomposition waterfall: none → disclosure → gap → label → family bundle
+  3. L0–L3 lines per model (gender-information invariance)
+  4. Direct gender preference by cue level (vendor divergence)
+  5. Haiku abstention and its interview consequence
+- Each results subsection should open with its one-sentence answer, then the evidence.
+
+## 6. Interpretation for readers
+
+- "Chosen 23% of the time against an otherwise-identical childless candidate": the paired
+  résumés are *different* (comparable, roles counterbalanced). Say "a comparably qualified
+  childless candidate, with résumé roles counterbalanced".
+- Explain what P = .23 means in plain terms (the parent loses about 3 of 4 head-to-head finals;
+  50/50 would be no penalty).
+- The human-benchmark comparison ("models reduce the human penalty") compares a forced-choice
+  share with a 2007 student-lab hire rate. Keep it out of the abstract; in the text, present it as
+  context, not a finding, or readers will take away "LLMs are less biased than humans".
+- "Single-résumé audits would certify all four models as fair": E1 effects are small but some are
+  significant. Say "would detect only small effects".
+- State the disparate-impact implication of the gender-neutral penalty (see §2).
+
+## 7. Coherent framework
+
+The pieces fit a two-layer account that the discussion almost states:
+- **Layer 1 — a caregiving / ideal-worker layer.** Common to all four vendors in sign; invariant
+  to gender information; driven by the gap and overt family signals; amplified when the job ad
+  makes the ideal-worker norm salient (E4 greedy wording); hidden in single scores and exposed in
+  comparisons. This is Acker's gender-neutral-in-form, gendered-in-effect ideal worker.
+- **Layer 2 — a thin, vendor-specific gender layer.** Appears mainly when gender is made
+  salient: Luna's pro-woman shift, Haiku's mother-specific penalty, refusal to state gender, and
+  pregnancy abstention. Consistent with alignment shaping overt gender behavior while leaving
+  layer 1 intact.
+- Task dependence explains why audits miss layer 1; cue-level manipulation explains layer 2.
+- Occupation results (weak) and E4 (greedy wording) then slot in as "what activates layer 1".
+Rewrite the introduction's questions and the discussion around this structure.

@@ -3,624 +3,624 @@
   "deepseek|o8_L0": {
    "parenthood": {
     "diff": -0.1,
-    "se": 0.018,
-    "t": -5.5,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "se": 0.021,
+    "t": -4.7,
+    "p": 0.0003,
+    "n_pairs": 16,
+    "holm": 0.003
    },
    "label": {
     "diff": 0.008,
     "se": 0.013,
     "t": 0.6,
-    "p": 0.5506,
-    "n_pairs": 32,
+    "p": 0.5579,
+    "n_pairs": 16,
     "holm": 1.0
    },
    "bundle": {
     "diff": -0.108,
     "se": 0.017,
-    "t": -6.4,
+    "t": -6.3,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "deepseek|o8_L1": {
    "parenthood": {
     "diff": -0.118,
-    "se": 0.018,
-    "t": -6.5,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "se": 0.021,
+    "t": -5.5,
+    "p": 0.0001,
+    "n_pairs": 16,
+    "holm": 0.0012
    },
    "label": {
     "diff": 0.031,
-    "se": 0.018,
-    "t": 1.7,
-    "p": 0.0972,
-    "n_pairs": 32,
-    "holm": 0.3888
+    "se": 0.019,
+    "t": 1.6,
+    "p": 0.127,
+    "n_pairs": 16,
+    "holm": 0.508
    },
    "bundle": {
     "diff": -0.104,
-    "se": 0.021,
-    "t": -5.0,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "se": 0.019,
+    "t": -5.5,
+    "p": 0.0001,
+    "n_pairs": 16,
+    "holm": 0.0012
    }
   },
   "deepseek|o8_L2": {
    "parenthood": {
-    "diff": -0.111,
-    "se": 0.022,
-    "t": -5.1,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "diff": -0.112,
+    "se": 0.027,
+    "t": -4.1,
+    "p": 0.001,
+    "n_pairs": 16,
+    "holm": 0.009
    },
    "label": {
     "diff": -0.007,
-    "se": 0.017,
-    "t": -0.4,
-    "p": 0.708,
-    "n_pairs": 32,
+    "se": 0.014,
+    "t": -0.5,
+    "p": 0.6391,
+    "n_pairs": 16,
     "holm": 1.0
    },
    "bundle": {
-    "diff": -0.115,
-    "se": 0.018,
-    "t": -6.3,
+    "diff": -0.114,
+    "se": 0.016,
+    "t": -7.1,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "deepseek|o8_L3": {
    "parenthood": {
     "diff": -0.107,
-    "se": 0.026,
-    "t": -4.2,
-    "p": 0.0002,
-    "n_pairs": 32,
-    "holm": 0.0016
+    "se": 0.028,
+    "t": -3.8,
+    "p": 0.0017,
+    "n_pairs": 16,
+    "holm": 0.0136
    },
    "label": {
-    "diff": 0.03,
-    "se": 0.016,
-    "t": 1.9,
-    "p": 0.0737,
-    "n_pairs": 32,
-    "holm": 0.3685
+    "diff": 0.029,
+    "se": 0.013,
+    "t": 2.2,
+    "p": 0.048,
+    "n_pairs": 16,
+    "holm": 0.2628
    },
    "bundle": {
-    "diff": -0.075,
-    "se": 0.025,
-    "t": -3.0,
-    "p": 0.0051,
-    "n_pairs": 32,
-    "holm": 0.0357
+    "diff": -0.074,
+    "se": 0.024,
+    "t": -3.1,
+    "p": 0.0073,
+    "n_pairs": 16,
+    "holm": 0.0511
    }
   },
   "deepseek|o20_L1": {
    "parenthood": {
     "diff": -0.106,
     "se": 0.013,
-    "t": -8.2,
+    "t": -7.9,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
     "diff": 0.021,
     "se": 0.01,
-    "t": 2.0,
-    "p": 0.0445,
-    "n_pairs": 80,
-    "holm": 0.267
+    "t": 2.1,
+    "p": 0.0438,
+    "n_pairs": 40,
+    "holm": 0.2628
    },
    "bundle": {
-    "diff": -0.097,
+    "diff": -0.095,
     "se": 0.014,
-    "t": -7.0,
+    "t": -6.6,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "deepseek|o20_L2": {
    "parenthood": {
-    "diff": -0.103,
-    "se": 0.013,
-    "t": -8.1,
+    "diff": -0.102,
+    "se": 0.014,
+    "t": -7.1,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
-    "diff": 0.012,
-    "se": 0.01,
-    "t": 1.3,
-    "p": 0.2144,
-    "n_pairs": 80,
-    "holm": 0.6432
+    "diff": 0.013,
+    "se": 0.009,
+    "t": 1.4,
+    "p": 0.1785,
+    "n_pairs": 40,
+    "holm": 0.5355
    },
    "bundle": {
     "diff": -0.114,
-    "se": 0.012,
-    "t": -9.6,
+    "se": 0.011,
+    "t": -10.1,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "haiku|o8_L0": {
    "parenthood": {
-    "diff": -0.229,
-    "se": 0.036,
-    "t": -6.3,
+    "diff": -0.23,
+    "se": 0.032,
+    "t": -7.3,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    },
    "label": {
     "diff": 0.001,
     "se": 0.016,
-    "t": 0.1,
-    "p": 0.934,
-    "n_pairs": 32,
+    "t": 0.0,
+    "p": 0.9695,
+    "n_pairs": 16,
     "holm": 1.0
    },
    "bundle": {
-    "diff": -0.243,
-    "se": 0.046,
-    "t": -5.3,
+    "diff": -0.242,
+    "se": 0.022,
+    "t": -11.0,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "haiku|o8_L1": {
    "parenthood": {
-    "diff": -0.163,
+    "diff": -0.161,
     "se": 0.031,
-    "t": -5.3,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "t": -5.2,
+    "p": 0.0001,
+    "n_pairs": 16,
+    "holm": 0.0008
    },
    "label": {
     "diff": 0.001,
-    "se": 0.013,
+    "se": 0.014,
     "t": 0.1,
-    "p": 0.9148,
-    "n_pairs": 32,
+    "p": 0.922,
+    "n_pairs": 16,
     "holm": 1.0
    },
    "bundle": {
-    "diff": -0.186,
-    "se": 0.037,
-    "t": -5.0,
+    "diff": -0.185,
+    "se": 0.024,
+    "t": -7.9,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "haiku|o8_L2": {
    "parenthood": {
-    "diff": -0.172,
-    "se": 0.029,
-    "t": -6.0,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "diff": -0.17,
+    "se": 0.034,
+    "t": -4.9,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0014
    },
    "label": {
-    "diff": 0.015,
-    "se": 0.014,
+    "diff": 0.016,
+    "se": 0.015,
     "t": 1.1,
-    "p": 0.2826,
-    "n_pairs": 32,
+    "p": 0.3009,
+    "n_pairs": 16,
     "holm": 1.0
    },
    "bundle": {
-    "diff": -0.202,
-    "se": 0.039,
-    "t": -5.2,
+    "diff": -0.201,
+    "se": 0.022,
+    "t": -9.1,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "haiku|o8_L3": {
    "parenthood": {
-    "diff": -0.219,
-    "se": 0.038,
-    "t": -5.7,
+    "diff": -0.22,
+    "se": 0.033,
+    "t": -6.6,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    },
    "label": {
     "diff": -0.027,
     "se": 0.018,
     "t": -1.4,
-    "p": 0.1599,
-    "n_pairs": 32,
-    "holm": 0.7995
+    "p": 0.1681,
+    "n_pairs": 16,
+    "holm": 0.8405
    },
    "bundle": {
     "diff": -0.227,
-    "se": 0.044,
-    "t": -5.2,
+    "se": 0.025,
+    "t": -8.9,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "haiku|o20_L1": {
    "parenthood": {
-    "diff": -0.197,
-    "se": 0.023,
-    "t": -8.7,
+    "diff": -0.195,
+    "se": 0.024,
+    "t": -8.2,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
     "diff": -0.023,
-    "se": 0.013,
-    "t": -1.7,
-    "p": 0.087,
-    "n_pairs": 80,
-    "holm": 0.522
+    "se": 0.012,
+    "t": -1.9,
+    "p": 0.0641,
+    "n_pairs": 40,
+    "holm": 0.3846
    },
    "bundle": {
-    "diff": -0.177,
-    "se": 0.021,
-    "t": -8.2,
+    "diff": -0.176,
+    "se": 0.018,
+    "t": -10.0,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "haiku|o20_L2": {
    "parenthood": {
-    "diff": -0.183,
-    "se": 0.021,
-    "t": -8.7,
+    "diff": -0.189,
+    "se": 0.023,
+    "t": -8.4,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
     "diff": 0.0,
     "se": 0.013,
     "t": 0.0,
-    "p": 0.9807,
-    "n_pairs": 80,
+    "p": 0.9965,
+    "n_pairs": 40,
     "holm": 1.0
    },
    "bundle": {
     "diff": -0.171,
-    "se": 0.019,
-    "t": -8.8,
+    "se": 0.015,
+    "t": -11.4,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "luna|o8_L0": {
    "parenthood": {
     "diff": -0.129,
-    "se": 0.031,
-    "t": -4.2,
+    "se": 0.027,
+    "t": -4.8,
     "p": 0.0002,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0026
    },
    "label": {
     "diff": 0.034,
-    "se": 0.012,
-    "t": 2.7,
-    "p": 0.0107,
-    "n_pairs": 32,
-    "holm": 0.0214
+    "se": 0.011,
+    "t": 3.0,
+    "p": 0.0087,
+    "n_pairs": 16,
+    "holm": 0.0174
    },
    "bundle": {
     "diff": -0.13,
-    "se": 0.037,
-    "t": -3.6,
-    "p": 0.0012,
-    "n_pairs": 32,
-    "holm": 0.0084
+    "se": 0.029,
+    "t": -4.6,
+    "p": 0.0004,
+    "n_pairs": 16,
+    "holm": 0.0032
    }
   },
   "luna|o8_L1": {
    "parenthood": {
     "diff": -0.095,
-    "se": 0.025,
-    "t": -3.9,
-    "p": 0.0005,
-    "n_pairs": 32,
-    "holm": 0.005
+    "se": 0.02,
+    "t": -4.8,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0026
    },
    "label": {
     "diff": 0.068,
-    "se": 0.023,
-    "t": 2.9,
-    "p": 0.0068,
-    "n_pairs": 32,
-    "holm": 0.0204
+    "se": 0.02,
+    "t": 3.4,
+    "p": 0.0039,
+    "n_pairs": 16,
+    "holm": 0.0144
    },
    "bundle": {
     "diff": -0.158,
-    "se": 0.043,
-    "t": -3.7,
-    "p": 0.0009,
-    "n_pairs": 32,
-    "holm": 0.0072
+    "se": 0.033,
+    "t": -4.8,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0026
    }
   },
   "luna|o8_L2": {
    "parenthood": {
     "diff": -0.07,
-    "se": 0.022,
-    "t": -3.2,
-    "p": 0.0035,
-    "n_pairs": 32,
-    "holm": 0.0204
+    "se": 0.019,
+    "t": -3.6,
+    "p": 0.0026,
+    "n_pairs": 16,
+    "holm": 0.0144
    },
    "label": {
     "diff": 0.043,
-    "se": 0.014,
-    "t": 3.2,
-    "p": 0.0034,
-    "n_pairs": 32,
-    "holm": 0.0204
+    "se": 0.012,
+    "t": 3.6,
+    "p": 0.0024,
+    "n_pairs": 16,
+    "holm": 0.0144
    },
    "bundle": {
     "diff": -0.142,
-    "se": 0.038,
-    "t": -3.7,
-    "p": 0.0007,
-    "n_pairs": 32,
-    "holm": 0.0063
+    "se": 0.029,
+    "t": -4.9,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0026
    }
   },
   "luna|o8_L3": {
    "parenthood": {
     "diff": -0.117,
-    "se": 0.028,
-    "t": -4.2,
-    "p": 0.0002,
-    "n_pairs": 32,
-    "holm": 0.0026
+    "se": 0.03,
+    "t": -4.0,
+    "p": 0.0012,
+    "n_pairs": 16,
+    "holm": 0.0084
    },
    "label": {
-    "diff": 0.017,
-    "se": 0.012,
-    "t": 1.4,
-    "p": 0.1635,
-    "n_pairs": 32,
-    "holm": 0.1635
+    "diff": 0.016,
+    "se": 0.013,
+    "t": 1.3,
+    "p": 0.2195,
+    "n_pairs": 16,
+    "holm": 0.2195
    },
    "bundle": {
-    "diff": -0.116,
-    "se": 0.038,
-    "t": -3.0,
-    "p": 0.005,
-    "n_pairs": 32,
-    "holm": 0.0204
+    "diff": -0.115,
+    "se": 0.033,
+    "t": -3.5,
+    "p": 0.0033,
+    "n_pairs": 16,
+    "holm": 0.0144
    }
   },
   "luna|o20_L1": {
    "parenthood": {
     "diff": -0.122,
-    "se": 0.02,
-    "t": -6.0,
+    "se": 0.023,
+    "t": -5.4,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
     "diff": 0.066,
-    "se": 0.015,
-    "t": 4.5,
+    "se": 0.014,
+    "t": 4.8,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "bundle": {
     "diff": -0.104,
-    "se": 0.021,
-    "t": -4.8,
+    "se": 0.019,
+    "t": -5.3,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "luna|o20_L2": {
    "parenthood": {
-    "diff": -0.119,
+    "diff": -0.12,
     "se": 0.021,
-    "t": -5.8,
+    "t": -5.6,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "label": {
-    "diff": 0.063,
-    "se": 0.016,
-    "t": 3.9,
+    "diff": 0.065,
+    "se": 0.015,
+    "t": 4.2,
     "p": 0.0002,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0026
    },
    "bundle": {
-    "diff": -0.126,
-    "se": 0.024,
-    "t": -5.2,
+    "diff": -0.127,
+    "se": 0.021,
+    "t": -6.0,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "qwen|o8_L0": {
    "parenthood": {
-    "diff": -0.093,
-    "se": 0.022,
-    "t": -4.2,
-    "p": 0.0002,
-    "n_pairs": 32,
-    "holm": 0.0018
+    "diff": -0.076,
+    "se": 0.026,
+    "t": -2.9,
+    "p": 0.0102,
+    "n_pairs": 16,
+    "holm": 0.0306
    },
    "label": {
-    "diff": 0.076,
-    "se": 0.018,
-    "t": 4.2,
-    "p": 0.0002,
-    "n_pairs": 32,
-    "holm": 0.0018
+    "diff": 0.082,
+    "se": 0.019,
+    "t": 4.3,
+    "p": 0.0007,
+    "n_pairs": 16,
+    "holm": 0.0056
    },
    "bundle": {
-    "diff": -0.094,
-    "se": 0.024,
-    "t": -3.9,
-    "p": 0.0005,
-    "n_pairs": 32,
-    "holm": 0.002
+    "diff": -0.097,
+    "se": 0.02,
+    "t": -4.8,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0026
    }
   },
   "qwen|o8_L1": {
    "parenthood": {
-    "diff": -0.099,
-    "se": 0.021,
-    "t": -4.8,
-    "p": 0.0,
-    "n_pairs": 32,
-    "holm": 0.0
+    "diff": -0.097,
+    "se": 0.023,
+    "t": -4.2,
+    "p": 0.0007,
+    "n_pairs": 16,
+    "holm": 0.0056
    },
    "label": {
     "diff": 0.038,
-    "se": 0.013,
-    "t": 3.0,
-    "p": 0.0057,
-    "n_pairs": 32,
-    "holm": 0.0114
+    "se": 0.011,
+    "t": 3.3,
+    "p": 0.0047,
+    "n_pairs": 16,
+    "holm": 0.0264
    },
    "bundle": {
-    "diff": -0.084,
-    "se": 0.022,
-    "t": -3.7,
-    "p": 0.0007,
-    "n_pairs": 32,
-    "holm": 0.0021
+    "diff": -0.091,
+    "se": 0.018,
+    "t": -5.0,
+    "p": 0.0002,
+    "n_pairs": 16,
+    "holm": 0.0026
    }
   },
   "qwen|o8_L2": {
    "parenthood": {
-    "diff": -0.102,
-    "se": 0.025,
-    "t": -4.1,
-    "p": 0.0003,
-    "n_pairs": 32,
-    "holm": 0.0018
+    "diff": -0.075,
+    "se": 0.036,
+    "t": -2.1,
+    "p": 0.057,
+    "n_pairs": 16,
+    "holm": 0.057
    },
    "label": {
-    "diff": 0.058,
-    "se": 0.013,
-    "t": 4.5,
-    "p": 0.0001,
-    "n_pairs": 32,
-    "holm": 0.001
+    "diff": 0.055,
+    "se": 0.017,
+    "t": 3.3,
+    "p": 0.0044,
+    "n_pairs": 16,
+    "holm": 0.0264
    },
    "bundle": {
-    "diff": -0.092,
-    "se": 0.022,
-    "t": -4.1,
+    "diff": -0.101,
+    "se": 0.021,
+    "t": -4.8,
     "p": 0.0002,
-    "n_pairs": 32,
-    "holm": 0.0018
+    "n_pairs": 16,
+    "holm": 0.0026
    }
   },
   "qwen|o8_L3": {
    "parenthood": {
-    "diff": -0.09,
-    "se": 0.022,
-    "t": -4.0,
-    "p": 0.0003,
-    "n_pairs": 32,
-    "holm": 0.0018
+    "diff": -0.084,
+    "se": 0.029,
+    "t": -2.9,
+    "p": 0.0114,
+    "n_pairs": 16,
+    "holm": 0.0306
    },
    "label": {
-    "diff": 0.059,
-    "se": 0.022,
-    "t": 2.7,
-    "p": 0.0117,
-    "n_pairs": 32,
-    "holm": 0.0117
+    "diff": 0.066,
+    "se": 0.021,
+    "t": 3.1,
+    "p": 0.0072,
+    "n_pairs": 16,
+    "holm": 0.0288
    },
    "bundle": {
-    "diff": -0.103,
-    "se": 0.022,
-    "t": -4.8,
+    "diff": -0.097,
+    "se": 0.015,
+    "t": -6.6,
     "p": 0.0,
-    "n_pairs": 32,
+    "n_pairs": 16,
     "holm": 0.0
    }
   },
   "qwen|o20_L1": {
    "parenthood": {
-    "diff": -0.071,
-    "se": 0.014,
-    "t": -5.0,
-    "p": 0.0,
-    "n_pairs": 80,
-    "holm": 0.0
+    "diff": -0.065,
+    "se": 0.016,
+    "t": -3.9,
+    "p": 0.0003,
+    "n_pairs": 40,
+    "holm": 0.003
    },
    "label": {
-    "diff": 0.073,
-    "se": 0.012,
-    "t": 6.0,
+    "diff": 0.072,
+    "se": 0.013,
+    "t": 5.3,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "bundle": {
-    "diff": -0.12,
+    "diff": -0.116,
     "se": 0.016,
-    "t": -7.3,
+    "t": -7.4,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   },
   "qwen|o20_L2": {
    "parenthood": {
-    "diff": -0.083,
-    "se": 0.017,
-    "t": -4.7,
-    "p": 0.0,
-    "n_pairs": 80,
-    "holm": 0.0
+    "diff": -0.072,
+    "se": 0.019,
+    "t": -3.7,
+    "p": 0.0006,
+    "n_pairs": 40,
+    "holm": 0.0054
    },
    "label": {
-    "diff": 0.058,
-    "se": 0.012,
-    "t": 5.1,
+    "diff": 0.061,
+    "se": 0.008,
+    "t": 7.3,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    },
    "bundle": {
-    "diff": -0.123,
-    "se": 0.018,
-    "t": -6.8,
+    "diff": -0.127,
+    "se": 0.015,
+    "t": -8.2,
     "p": 0.0,
-    "n_pairs": 80,
+    "n_pairs": 40,
     "holm": 0.0
    }
   }
@@ -780,67 +780,67 @@
    "parity": {
     "gender_none@name": {
      "p_woman": 0.514,
-     "t_vs_half": 0.4,
-     "p": 0.6885,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 1.9,
+     "p": 0.0581,
+     "n_pairs": 56,
+     "holm": 0.0581
     },
     "gender_parent@name": {
      "p_woman": 0.536,
-     "t_vs_half": 1.0,
-     "p": 0.3357,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 5.2,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0
     },
     "gender_none@name_field": {
-     "p_woman": 0.541,
-     "t_vs_half": 1.2,
-     "p": 0.2379,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.54,
+     "t_vs_half": 4.6,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0001
     },
     "gender_parent@name_field": {
-     "p_woman": 0.54,
-     "t_vs_half": 1.1,
-     "p": 0.2692,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.541,
+     "t_vs_half": 4.5,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0001
     },
     "gender_none@initial_field": {
-     "p_woman": 0.537,
-     "t_vs_half": 1.1,
-     "p": 0.2952,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.538,
+     "t_vs_half": 3.9,
+     "p": 0.0002,
+     "n_pairs": 56,
+     "holm": 0.0005
     },
     "gender_parent@initial_field": {
      "p_woman": 0.548,
-     "t_vs_half": 1.3,
-     "p": 0.1993,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 4.6,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0001
     }
    },
    "level_diff": {
     "gender_none:L1-L0": {
-     "diff": 0.027,
-     "t": 2.3,
-     "p": 0.0234
+     "diff": 0.026,
+     "t": 2.2,
+     "p": 0.0341
     },
     "gender_none:L2-L1": {
-     "diff": -0.004,
-     "t": -0.3,
-     "p": 0.7714
+     "diff": -0.002,
+     "t": -0.2,
+     "p": 0.8569
     },
     "gender_parent:L1-L0": {
      "diff": 0.004,
      "t": 0.4,
-     "p": 0.6816
+     "p": 0.6671
     },
     "gender_parent:L2-L1": {
      "diff": 0.007,
-     "t": 0.7,
-     "p": 0.4937
+     "t": 0.8,
+     "p": 0.4266
     }
    }
   },
@@ -848,67 +848,67 @@
    "parity": {
     "gender_none@name": {
      "p_woman": 0.528,
-     "t_vs_half": 0.7,
-     "p": 0.4752,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 3.3,
+     "p": 0.0018,
+     "n_pairs": 56,
+     "holm": 0.0089
     },
     "gender_parent@name": {
-     "p_woman": 0.546,
-     "t_vs_half": 1.2,
-     "p": 0.2374,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.544,
+     "t_vs_half": 4.4,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0003
     },
     "gender_none@name_field": {
      "p_woman": 0.526,
-     "t_vs_half": 0.7,
-     "p": 0.4903,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 2.2,
+     "p": 0.0312,
+     "n_pairs": 56,
+     "holm": 0.1248
     },
     "gender_parent@name_field": {
-     "p_woman": 0.5,
-     "t_vs_half": -0.0,
-     "p": 0.9905,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.498,
+     "t_vs_half": -0.2,
+     "p": 0.8795,
+     "n_pairs": 56,
+     "holm": 0.8795
     },
     "gender_none@initial_field": {
      "p_woman": 0.513,
-     "t_vs_half": 0.4,
-     "p": 0.7192,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 1.1,
+     "p": 0.2751,
+     "n_pairs": 56,
+     "holm": 0.5503
     },
     "gender_parent@initial_field": {
-     "p_woman": 0.47,
-     "t_vs_half": -0.8,
-     "p": 0.4083,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.471,
+     "t_vs_half": -1.7,
+     "p": 0.1021,
+     "n_pairs": 56,
+     "holm": 0.3063
     }
    },
    "level_diff": {
     "gender_none:L1-L0": {
      "diff": -0.001,
      "t": -0.1,
-     "p": 0.8996
+     "p": 0.9142
     },
     "gender_none:L2-L1": {
      "diff": -0.013,
-     "t": -1.3,
-     "p": 0.1987
+     "t": -1.4,
+     "p": 0.157
     },
     "gender_parent:L1-L0": {
-     "diff": -0.046,
-     "t": -3.3,
-     "p": 0.0011
+     "diff": -0.045,
+     "t": -3.1,
+     "p": 0.0027
     },
     "gender_parent:L2-L1": {
-     "diff": -0.03,
-     "t": -2.3,
-     "p": 0.0249
+     "diff": -0.027,
+     "t": -2.0,
+     "p": 0.0549
     }
    }
   },
@@ -916,135 +916,135 @@
    "parity": {
     "gender_none@name": {
      "p_woman": 0.522,
-     "t_vs_half": 0.6,
-     "p": 0.5821,
-     "n_pairs": 112,
-     "holm": 0.5821
+     "t_vs_half": 2.7,
+     "p": 0.0099,
+     "n_pairs": 56,
+     "holm": 0.0099
     },
     "gender_parent@name": {
-     "p_woman": 0.577,
-     "t_vs_half": 2.1,
-     "p": 0.0337,
-     "n_pairs": 112,
-     "holm": 0.1109
+     "p_woman": 0.578,
+     "t_vs_half": 6.6,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0
     },
     "gender_none@name_field": {
      "p_woman": 0.587,
-     "t_vs_half": 2.2,
-     "p": 0.0277,
-     "n_pairs": 112,
-     "holm": 0.1109
+     "t_vs_half": 6.3,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0
     },
     "gender_parent@name_field": {
      "p_woman": 0.646,
-     "t_vs_half": 4.3,
+     "t_vs_half": 9.3,
      "p": 0.0,
-     "n_pairs": 112,
-     "holm": 0.0002
+     "n_pairs": 56,
+     "holm": 0.0
     },
     "gender_none@initial_field": {
      "p_woman": 0.575,
-     "t_vs_half": 1.9,
-     "p": 0.0578,
-     "n_pairs": 112,
-     "holm": 0.1155
+     "t_vs_half": 5.7,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0
     },
     "gender_parent@initial_field": {
      "p_woman": 0.634,
-     "t_vs_half": 3.8,
-     "p": 0.0002,
-     "n_pairs": 112,
-     "holm": 0.0012
+     "t_vs_half": 8.9,
+     "p": 0.0,
+     "n_pairs": 56,
+     "holm": 0.0
     }
    },
    "level_diff": {
     "gender_none:L1-L0": {
-     "diff": 0.065,
-     "t": 5.6,
+     "diff": 0.064,
+     "t": 5.7,
      "p": 0.0
     },
     "gender_none:L2-L1": {
      "diff": -0.012,
      "t": -1.3,
-     "p": 0.213
+     "p": 0.2153
     },
     "gender_parent:L1-L0": {
      "diff": 0.069,
-     "t": 6.6,
+     "t": 6.3,
      "p": 0.0
     },
     "gender_parent:L2-L1": {
      "diff": -0.013,
      "t": -1.1,
-     "p": 0.27
+     "p": 0.2685
     }
    }
   },
   "qwen": {
    "parity": {
     "gender_none@name": {
-     "p_woman": 0.503,
-     "t_vs_half": 0.1,
-     "p": 0.9461,
-     "n_pairs": 112,
+     "p_woman": 0.496,
+     "t_vs_half": -0.6,
+     "p": 0.5228,
+     "n_pairs": 56,
      "holm": 1.0
     },
     "gender_parent@name": {
-     "p_woman": 0.504,
-     "t_vs_half": 0.1,
-     "p": 0.9196,
-     "n_pairs": 112,
+     "p_woman": 0.502,
+     "t_vs_half": 0.3,
+     "p": 0.7322,
+     "n_pairs": 56,
      "holm": 1.0
     },
     "gender_none@name_field": {
-     "p_woman": 0.495,
-     "t_vs_half": -0.1,
-     "p": 0.9098,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.491,
+     "t_vs_half": -1.4,
+     "p": 0.1772,
+     "n_pairs": 56,
+     "holm": 0.5315
     },
     "gender_parent@name_field": {
      "p_woman": 0.513,
-     "t_vs_half": 0.3,
-     "p": 0.7523,
-     "n_pairs": 112,
-     "holm": 1.0
+     "t_vs_half": 1.8,
+     "p": 0.0802,
+     "n_pairs": 56,
+     "holm": 0.481
     },
     "gender_none@initial_field": {
-     "p_woman": 0.517,
-     "t_vs_half": 0.4,
-     "p": 0.6661,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.513,
+     "t_vs_half": 1.7,
+     "p": 0.0886,
+     "n_pairs": 56,
+     "holm": 0.481
     },
     "gender_parent@initial_field": {
-     "p_woman": 0.49,
-     "t_vs_half": -0.2,
-     "p": 0.804,
-     "n_pairs": 112,
-     "holm": 1.0
+     "p_woman": 0.488,
+     "t_vs_half": -1.6,
+     "p": 0.1075,
+     "n_pairs": 56,
+     "holm": 0.481
     }
    },
    "level_diff": {
     "gender_none:L1-L0": {
-     "diff": -0.007,
-     "t": -0.7,
-     "p": 0.4922
+     "diff": -0.005,
+     "t": -0.6,
+     "p": 0.5778
     },
     "gender_none:L2-L1": {
      "diff": 0.022,
-     "t": 2.1,
-     "p": 0.0398
+     "t": 2.3,
+     "p": 0.0227
     },
     "gender_parent:L1-L0": {
-     "diff": 0.008,
-     "t": 1.0,
-     "p": 0.3149
+     "diff": 0.011,
+     "t": 1.3,
+     "p": 0.1852
     },
     "gender_parent:L2-L1": {
-     "diff": -0.023,
-     "t": -2.1,
-     "p": 0.0347
+     "diff": -0.025,
+     "t": -2.7,
+     "p": 0.0088
     }
    }
   }
@@ -1054,152 +1054,152 @@
    "parent:name-blind": {
     "diff": 0.006,
     "t": 0.3,
-    "p": 0.7495,
-    "n_pairs": 32
+    "p": 0.755,
+    "n_pairs": 16
    },
    "parent:name_field-name": {
     "diff": -0.001,
     "t": -0.1,
-    "p": 0.9432,
-    "n_pairs": 32
+    "p": 0.9376,
+    "n_pairs": 16
    },
    "parent:initial_field-blind": {
     "diff": 0.006,
     "t": 0.3,
-    "p": 0.7628,
-    "n_pairs": 32
+    "p": 0.778,
+    "n_pairs": 16
    },
    "parent_gap:name-blind": {
     "diff": -0.028,
     "t": -1.8,
-    "p": 0.0791,
-    "n_pairs": 32
+    "p": 0.0979,
+    "n_pairs": 16
    },
    "parent_gap:name_field-name": {
-    "diff": 0.008,
+    "diff": 0.009,
     "t": 0.7,
-    "p": 0.514,
-    "n_pairs": 32
+    "p": 0.467,
+    "n_pairs": 16
    },
    "parent_gap:initial_field-blind": {
     "diff": -0.034,
     "t": -1.7,
-    "p": 0.0933,
-    "n_pairs": 32
+    "p": 0.1099,
+    "n_pairs": 16
    }
   },
   "haiku": {
    "parent:name-blind": {
-    "diff": -0.005,
-    "t": -0.3,
-    "p": 0.7433,
-    "n_pairs": 32
+    "diff": -0.006,
+    "t": -0.4,
+    "p": 0.707,
+    "n_pairs": 16
    },
    "parent:name_field-name": {
-    "diff": 0.071,
-    "t": 4.8,
+    "diff": 0.074,
+    "t": 7.7,
     "p": 0.0,
-    "n_pairs": 32
+    "n_pairs": 16
    },
    "parent:initial_field-blind": {
-    "diff": 0.089,
-    "t": 4.4,
+    "diff": 0.091,
+    "t": 5.4,
     "p": 0.0001,
-    "n_pairs": 32
+    "n_pairs": 16
    },
    "parent_gap:name-blind": {
-    "diff": -0.01,
+    "diff": -0.009,
     "t": -0.6,
-    "p": 0.5374,
-    "n_pairs": 32
+    "p": 0.5583,
+    "n_pairs": 16
    },
    "parent_gap:name_field-name": {
-    "diff": 0.038,
-    "t": 3.1,
-    "p": 0.0038,
-    "n_pairs": 32
+    "diff": 0.039,
+    "t": 3.7,
+    "p": 0.002,
+    "n_pairs": 16
    },
    "parent_gap:initial_field-blind": {
-    "diff": 0.031,
+    "diff": 0.033,
     "t": 1.4,
-    "p": 0.1688,
-    "n_pairs": 32
+    "p": 0.1722,
+    "n_pairs": 16
    }
   },
   "luna": {
    "parent:name-blind": {
     "diff": -0.013,
     "t": -1.2,
-    "p": 0.2513,
-    "n_pairs": 32
+    "p": 0.2369,
+    "n_pairs": 16
    },
    "parent:name_field-name": {
     "diff": 0.034,
-    "t": 2.6,
-    "p": 0.0142,
-    "n_pairs": 32
+    "t": 3.0,
+    "p": 0.0087,
+    "n_pairs": 16
    },
    "parent:initial_field-blind": {
-    "diff": 0.031,
-    "t": 1.8,
-    "p": 0.0882,
-    "n_pairs": 32
+    "diff": 0.032,
+    "t": 1.9,
+    "p": 0.0758,
+    "n_pairs": 16
    },
    "parent_gap:name-blind": {
     "diff": -0.007,
     "t": -0.5,
-    "p": 0.6265,
-    "n_pairs": 32
+    "p": 0.6343,
+    "n_pairs": 16
    },
    "parent_gap:name_field-name": {
     "diff": 0.003,
     "t": 0.2,
-    "p": 0.8332,
-    "n_pairs": 32
+    "p": 0.8291,
+    "n_pairs": 16
    },
    "parent_gap:initial_field-blind": {
     "diff": -0.01,
     "t": -0.7,
-    "p": 0.474,
-    "n_pairs": 32
+    "p": 0.4831,
+    "n_pairs": 16
    }
   },
   "qwen": {
    "parent:name-blind": {
-    "diff": 0.003,
-    "t": 0.2,
-    "p": 0.8669,
-    "n_pairs": 32
+    "diff": 0.019,
+    "t": 1.1,
+    "p": 0.2969,
+    "n_pairs": 16
    },
    "parent:name_field-name": {
-    "diff": 0.001,
-    "t": 0.1,
-    "p": 0.9032,
-    "n_pairs": 32
+    "diff": -0.009,
+    "t": -0.7,
+    "p": 0.5028,
+    "n_pairs": 16
    },
    "parent:initial_field-blind": {
-    "diff": 0.005,
-    "t": 0.4,
-    "p": 0.6983,
-    "n_pairs": 32
+    "diff": 0.02,
+    "t": 1.2,
+    "p": 0.2389,
+    "n_pairs": 16
    },
    "parent_gap:name-blind": {
-    "diff": 0.013,
-    "t": 0.9,
-    "p": 0.3915,
-    "n_pairs": 32
+    "diff": 0.005,
+    "t": 0.3,
+    "p": 0.7459,
+    "n_pairs": 16
    },
    "parent_gap:name_field-name": {
-    "diff": 0.004,
-    "t": 0.2,
-    "p": 0.8143,
-    "n_pairs": 32
+    "diff": -0.002,
+    "t": -0.1,
+    "p": 0.9256,
+    "n_pairs": 16
    },
    "parent_gap:initial_field-blind": {
-    "diff": 0.015,
-    "t": 0.8,
-    "p": 0.4268,
-    "n_pairs": 32
+    "diff": 0.0,
+    "t": 0.0,
+    "p": 0.99,
+    "n_pairs": 16
    }
   }
  },
@@ -1264,35 +1264,95 @@
  "mother_father_main": {
   "deepseek": {
    "parent": {
-    "choice": {
+    "choice_pp": {
      "mothers": 0.355,
      "fathers": 0.349,
-     "M_minus_F": 0.006
+     "M_minus_F": 0.006,
+     "t": 0.6,
+     "p": 0.5524,
+     "n_pairs": 40,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -1851.391,
-     "fathers": -1998.101,
-     "M_minus_F": 146.71
+    "salary_usd": {
+     "mothers": -1830.813,
+     "fathers": -1968.514,
+     "M_minus_F": 137.7,
+     "t": 1.0,
+     "p": 0.3073,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "commitment": {
      "mothers": -0.229,
      "fathers": -0.246,
-     "M_minus_F": 0.017
+     "M_minus_F": 0.017,
+     "t": 0.5,
+     "p": 0.5908,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "competence": {
-     "mothers": -0.251,
+     "mothers": -0.25,
      "fathers": -0.299,
-     "M_minus_F": 0.048
+     "M_minus_F": 0.048,
+     "t": 2.2,
+     "p": 0.0344,
+     "n_pairs": 40,
+     "holm": 0.3096
     },
     "likability": {
      "mothers": -0.411,
      "fathers": -0.446,
-     "M_minus_F": 0.035
+     "M_minus_F": 0.036,
+     "t": 1.4,
+     "p": 0.1592,
+     "n_pairs": 40,
+     "holm": 1.0
     },
-    "e1_interview_gap": {
-     "female": 0.011,
-     "male": 0.017,
-     "M_minus_F": -0.006
+    "e1_commitment": {
+     "mothers": -0.137,
+     "fathers": -0.047,
+     "M_minus_F": -0.09,
+     "t": -3.1,
+     "p": 0.0026,
+     "n_resumes": 80,
+     "holm": 0.026
+    },
+    "e1_competence": {
+     "mothers": -0.026,
+     "fathers": -0.05,
+     "M_minus_F": 0.024,
+     "t": 1.1,
+     "p": 0.256,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": -0.381,
+     "fathers": -0.375,
+     "M_minus_F": -0.006,
+     "t": -0.2,
+     "p": 0.8552,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_salary_usd": {
+     "mothers": -1015.0,
+     "fathers": -407.628,
+     "M_minus_F": -607.372,
+     "t": -1.6,
+     "p": 0.1221,
+     "n_resumes": 80,
+     "holm": 0.9768
+    },
+    "e1_fit": {
+     "mothers": -0.128,
+     "fathers": -0.112,
+     "M_minus_F": -0.017,
+     "t": -0.5,
+     "p": 0.6536,
+     "n_resumes": 80,
+     "holm": 1.0
     },
     "withholding_women": {
      "married": 0.022,
@@ -1303,35 +1363,95 @@
     }
    },
    "parent_gap": {
-    "choice": {
-     "mothers": 0.309,
-     "fathers": 0.307,
-     "M_minus_F": 0.002
+    "choice_pp": {
+     "mothers": 0.301,
+     "fathers": 0.299,
+     "M_minus_F": 0.002,
+     "t": 0.2,
+     "p": 0.8746,
+     "n_pairs": 41,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -2491.103,
-     "fathers": -2551.089,
-     "M_minus_F": 59.986
+    "salary_usd": {
+     "mothers": -2526.394,
+     "fathers": -2576.377,
+     "M_minus_F": 49.983,
+     "t": 0.2,
+     "p": 0.8232,
+     "n_pairs": 41,
+     "holm": 1.0
     },
     "commitment": {
-     "mothers": -0.859,
-     "fathers": -0.905,
-     "M_minus_F": 0.046
+     "mothers": -0.888,
+     "fathers": -0.931,
+     "M_minus_F": 0.043,
+     "t": 1.5,
+     "p": 0.1429,
+     "n_pairs": 41,
+     "holm": 1.0
     },
     "competence": {
-     "mothers": -0.305,
-     "fathers": -0.339,
-     "M_minus_F": 0.034
+     "mothers": -0.323,
+     "fathers": -0.355,
+     "M_minus_F": 0.032,
+     "t": 1.2,
+     "p": 0.2259,
+     "n_pairs": 41,
+     "holm": 1.0
     },
     "likability": {
-     "mothers": -0.523,
-     "fathers": -0.52,
-     "M_minus_F": -0.003
+     "mothers": -0.535,
+     "fathers": -0.556,
+     "M_minus_F": 0.021,
+     "t": 0.6,
+     "p": 0.5543,
+     "n_pairs": 41,
+     "holm": 1.0
     },
-    "e1_interview_gap": {
-     "female": -0.015,
-     "male": -0.002,
-     "M_minus_F": -0.013
+    "e1_commitment": {
+     "mothers": -0.425,
+     "fathers": -0.302,
+     "M_minus_F": -0.123,
+     "t": -3.8,
+     "p": 0.0003,
+     "n_resumes": 80,
+     "holm": 0.003
+    },
+    "e1_competence": {
+     "mothers": -0.109,
+     "fathers": -0.092,
+     "M_minus_F": -0.018,
+     "t": -0.7,
+     "p": 0.461,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": -0.289,
+     "fathers": -0.261,
+     "M_minus_F": -0.028,
+     "t": -0.9,
+     "p": 0.3595,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_salary_usd": {
+     "mothers": -172.345,
+     "fathers": 576.784,
+     "M_minus_F": -749.129,
+     "t": -2.5,
+     "p": 0.013,
+     "n_resumes": 79,
+     "holm": 0.1152
+    },
+    "e1_fit": {
+     "mothers": -0.348,
+     "fathers": -0.262,
+     "M_minus_F": -0.087,
+     "t": -2.5,
+     "p": 0.0128,
+     "n_resumes": 80,
+     "holm": 0.1152
     },
     "withholding_women": {
      "married": 0.022,
@@ -1344,35 +1464,95 @@
   },
   "haiku": {
    "parent": {
-    "choice": {
-     "mothers": 0.232,
+    "choice_pp": {
+     "mothers": 0.233,
      "fathers": 0.276,
-     "M_minus_F": -0.044
+     "M_minus_F": -0.044,
+     "t": -3.2,
+     "p": 0.0029,
+     "n_pairs": 40,
+     "holm": 0.0203
     },
-    "salary": {
-     "mothers": -1755.36,
-     "fathers": -1507.419,
-     "M_minus_F": -247.941
+    "salary_usd": {
+     "mothers": -1345.212,
+     "fathers": -1195.222,
+     "M_minus_F": -149.99,
+     "t": -1.4,
+     "p": 0.162,
+     "n_pairs": 40,
+     "holm": 0.81
     },
     "commitment": {
      "mothers": -0.326,
      "fathers": -0.188,
-     "M_minus_F": -0.138
+     "M_minus_F": -0.138,
+     "t": -4.3,
+     "p": 0.0001,
+     "n_pairs": 40,
+     "holm": 0.0009
     },
     "competence": {
      "mothers": -0.173,
-     "fathers": -0.163,
-     "M_minus_F": -0.01
+     "fathers": -0.164,
+     "M_minus_F": -0.009,
+     "t": -0.6,
+     "p": 0.5423,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "likability": {
      "mothers": -0.203,
      "fathers": -0.107,
-     "M_minus_F": -0.096
+     "M_minus_F": -0.096,
+     "t": -5.2,
+     "p": 0.0,
+     "n_pairs": 40,
+     "holm": 0.0
     },
-    "e1_interview_gap": {
-     "female": 0.012,
-     "male": 0.002,
-     "M_minus_F": 0.01
+    "e1_commitment": {
+     "mothers": 0.218,
+     "fathers": 0.279,
+     "M_minus_F": -0.061,
+     "t": -3.8,
+     "p": 0.0003,
+     "n_resumes": 80,
+     "holm": 0.0024
+    },
+    "e1_competence": {
+     "mothers": 0.124,
+     "fathers": 0.121,
+     "M_minus_F": 0.003,
+     "t": 0.2,
+     "p": 0.8184,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": 0.374,
+     "fathers": 0.327,
+     "M_minus_F": 0.048,
+     "t": 1.8,
+     "p": 0.0812,
+     "n_resumes": 80,
+     "holm": 0.4872
+    },
+    "e1_salary_usd": {
+     "mothers": -143.817,
+     "fathers": -226.763,
+     "M_minus_F": 82.946,
+     "t": 0.3,
+     "p": 0.7887,
+     "n_resumes": 79,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": 0.337,
+     "fathers": 0.31,
+     "M_minus_F": 0.027,
+     "t": 1.2,
+     "p": 0.2287,
+     "n_resumes": 80,
+     "holm": 0.9148
     },
     "withholding_women": {
      "married": 0.073,
@@ -1383,35 +1563,95 @@
     }
    },
    "parent_gap": {
-    "choice": {
-     "mothers": 0.111,
-     "fathers": 0.131,
-     "M_minus_F": -0.02
+    "choice_pp": {
+     "mothers": 0.11,
+     "fathers": 0.13,
+     "M_minus_F": -0.02,
+     "t": -2.1,
+     "p": 0.0415,
+     "n_pairs": 40,
+     "holm": 0.2096
     },
-    "salary": {
-     "mothers": -1369.753,
-     "fathers": -854.599,
-     "M_minus_F": -515.154
+    "salary_usd": {
+     "mothers": -902.733,
+     "fathers": -594.502,
+     "M_minus_F": -308.231,
+     "t": -2.2,
+     "p": 0.0349,
+     "n_pairs": 40,
+     "holm": 0.2096
     },
     "commitment": {
-     "mothers": -1.0,
-     "fathers": -0.895,
-     "M_minus_F": -0.105
+     "mothers": -1.001,
+     "fathers": -0.896,
+     "M_minus_F": -0.104,
+     "t": -3.5,
+     "p": 0.0011,
+     "n_pairs": 40,
+     "holm": 0.011
     },
     "competence": {
      "mothers": -0.151,
-     "fathers": -0.132,
-     "M_minus_F": -0.019
+     "fathers": -0.131,
+     "M_minus_F": -0.02,
+     "t": -1.1,
+     "p": 0.2613,
+     "n_pairs": 40,
+     "holm": 0.7839
     },
     "likability": {
      "mothers": -0.186,
-     "fathers": -0.139,
-     "M_minus_F": -0.047
+     "fathers": -0.14,
+     "M_minus_F": -0.046,
+     "t": -2.7,
+     "p": 0.0094,
+     "n_pairs": 40,
+     "holm": 0.0846
     },
-    "e1_interview_gap": {
-     "female": 0.0,
-     "male": 0.01,
-     "M_minus_F": -0.01
+    "e1_commitment": {
+     "mothers": 0.173,
+     "fathers": 0.223,
+     "M_minus_F": -0.051,
+     "t": -2.3,
+     "p": 0.0262,
+     "n_resumes": 80,
+     "holm": 0.2096
+    },
+    "e1_competence": {
+     "mothers": 0.126,
+     "fathers": 0.094,
+     "M_minus_F": 0.032,
+     "t": 1.7,
+     "p": 0.0927,
+     "n_resumes": 80,
+     "holm": 0.3708
+    },
+    "e1_likability": {
+     "mothers": 0.492,
+     "fathers": 0.426,
+     "M_minus_F": 0.066,
+     "t": 2.2,
+     "p": 0.0276,
+     "n_resumes": 80,
+     "holm": 0.2096
+    },
+    "e1_salary_usd": {
+     "mothers": 2546.756,
+     "fathers": 2441.277,
+     "M_minus_F": 105.479,
+     "t": 0.3,
+     "p": 0.7367,
+     "n_resumes": 78,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": 0.145,
+     "fathers": 0.134,
+     "M_minus_F": 0.011,
+     "t": 0.4,
+     "p": 0.7222,
+     "n_resumes": 80,
+     "holm": 1.0
     },
     "withholding_women": {
      "married": 0.073,
@@ -1424,35 +1664,95 @@
   },
   "luna": {
    "parent": {
-    "choice": {
-     "mothers": 0.299,
-     "fathers": 0.303,
-     "M_minus_F": -0.004
+    "choice_pp": {
+     "mothers": 0.298,
+     "fathers": 0.301,
+     "M_minus_F": -0.004,
+     "t": -0.4,
+     "p": 0.6663,
+     "n_pairs": 39,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -1746.706,
-     "fathers": -1350.12,
-     "M_minus_F": -396.586
+    "salary_usd": {
+     "mothers": -1369.022,
+     "fathers": -1260.129,
+     "M_minus_F": -108.893,
+     "t": -1.2,
+     "p": 0.2404,
+     "n_pairs": 39,
+     "holm": 1.0
     },
     "commitment": {
-     "mothers": -0.501,
-     "fathers": -0.496,
-     "M_minus_F": -0.005
+     "mothers": -0.504,
+     "fathers": -0.506,
+     "M_minus_F": 0.002,
+     "t": 0.1,
+     "p": 0.9174,
+     "n_pairs": 39,
+     "holm": 1.0
     },
     "competence": {
-     "mothers": -0.219,
-     "fathers": -0.206,
-     "M_minus_F": -0.013
+     "mothers": -0.218,
+     "fathers": -0.204,
+     "M_minus_F": -0.014,
+     "t": -0.9,
+     "p": 0.3789,
+     "n_pairs": 39,
+     "holm": 1.0
     },
     "likability": {
-     "mothers": -0.787,
-     "fathers": -0.829,
-     "M_minus_F": 0.042
+     "mothers": -0.79,
+     "fathers": -0.831,
+     "M_minus_F": 0.041,
+     "t": 2.5,
+     "p": 0.0157,
+     "n_pairs": 39,
+     "holm": 0.157
     },
-    "e1_interview_gap": {
-     "female": 0.003,
-     "male": 0.0,
-     "M_minus_F": 0.003
+    "e1_commitment": {
+     "mothers": -0.174,
+     "fathers": -0.205,
+     "M_minus_F": 0.031,
+     "t": 1.7,
+     "p": 0.1013,
+     "n_resumes": 80,
+     "holm": 0.9117
+    },
+    "e1_competence": {
+     "mothers": 0.01,
+     "fathers": 0.01,
+     "M_minus_F": -0.0,
+     "t": -0.0,
+     "p": 1.0,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": -0.494,
+     "fathers": -0.503,
+     "M_minus_F": 0.009,
+     "t": 0.4,
+     "p": 0.6792,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_salary_usd": {
+     "mothers": 101.079,
+     "fathers": 109.813,
+     "M_minus_F": -8.734,
+     "t": -0.0,
+     "p": 0.9712,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": -0.083,
+     "fathers": -0.082,
+     "M_minus_F": -0.002,
+     "t": -0.1,
+     "p": 0.9384,
+     "n_resumes": 80,
+     "holm": 1.0
     },
     "withholding_women": {
      "married": 0.013,
@@ -1463,35 +1763,95 @@
     }
    },
    "parent_gap": {
-    "choice": {
-     "mothers": 0.193,
-     "fathers": 0.19,
-     "M_minus_F": 0.003
+    "choice_pp": {
+     "mothers": 0.187,
+     "fathers": 0.185,
+     "M_minus_F": 0.002,
+     "t": 0.3,
+     "p": 0.7296,
+     "n_pairs": 40,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -2333.018,
-     "fathers": -2336.749,
-     "M_minus_F": 3.731
+    "salary_usd": {
+     "mothers": -2188.453,
+     "fathers": -2185.695,
+     "M_minus_F": -2.758,
+     "t": -0.0,
+     "p": 0.9784,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "commitment": {
-     "mothers": -0.561,
-     "fathers": -0.59,
-     "M_minus_F": 0.029
+     "mothers": -0.578,
+     "fathers": -0.6,
+     "M_minus_F": 0.022,
+     "t": 1.2,
+     "p": 0.247,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "competence": {
-     "mothers": -0.337,
-     "fathers": -0.352,
-     "M_minus_F": 0.015
+     "mothers": -0.35,
+     "fathers": -0.365,
+     "M_minus_F": 0.016,
+     "t": 1.1,
+     "p": 0.2621,
+     "n_pairs": 40,
+     "holm": 1.0
     },
     "likability": {
-     "mothers": -0.8,
-     "fathers": -0.84,
-     "M_minus_F": 0.04
+     "mothers": -0.815,
+     "fathers": -0.851,
+     "M_minus_F": 0.036,
+     "t": 2.5,
+     "p": 0.0175,
+     "n_pairs": 40,
+     "holm": 0.1575
     },
-    "e1_interview_gap": {
-     "female": 0.006,
-     "male": 0.004,
-     "M_minus_F": 0.002
+    "e1_commitment": {
+     "mothers": -0.207,
+     "fathers": -0.212,
+     "M_minus_F": 0.005,
+     "t": 0.2,
+     "p": 0.8151,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_competence": {
+     "mothers": -0.013,
+     "fathers": -0.065,
+     "M_minus_F": 0.052,
+     "t": 3.0,
+     "p": 0.0036,
+     "n_resumes": 80,
+     "holm": 0.036
+    },
+    "e1_likability": {
+     "mothers": -0.45,
+     "fathers": -0.507,
+     "M_minus_F": 0.058,
+     "t": 2.4,
+     "p": 0.0207,
+     "n_resumes": 80,
+     "holm": 0.1656
+    },
+    "e1_salary_usd": {
+     "mothers": 134.509,
+     "fathers": 269.292,
+     "M_minus_F": -134.784,
+     "t": -0.6,
+     "p": 0.557,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": -0.251,
+     "fathers": -0.296,
+     "M_minus_F": 0.045,
+     "t": 1.9,
+     "p": 0.0595,
+     "n_resumes": 80,
+     "holm": 0.4165
     },
     "withholding_women": {
      "married": 0.013,
@@ -1504,35 +1864,95 @@
   },
   "qwen": {
    "parent": {
-    "choice": {
-     "mothers": 0.386,
-     "fathers": 0.394,
-     "M_minus_F": -0.008
+    "choice_pp": {
+     "mothers": 0.392,
+     "fathers": 0.391,
+     "M_minus_F": 0.001,
+     "t": 0.0,
+     "p": 0.9682,
+     "n_pairs": 56,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -1524.289,
-     "fathers": -1486.896,
-     "M_minus_F": -37.393
+    "salary_usd": {
+     "mothers": -1225.913,
+     "fathers": -1209.898,
+     "M_minus_F": -16.014,
+     "t": -0.1,
+     "p": 0.952,
+     "n_pairs": 56,
+     "holm": 1.0
     },
     "commitment": {
-     "mothers": -1.089,
-     "fathers": -1.079,
-     "M_minus_F": -0.01
+     "mothers": -0.939,
+     "fathers": -1.056,
+     "M_minus_F": 0.116,
+     "t": 1.1,
+     "p": 0.2683,
+     "n_pairs": 56,
+     "holm": 1.0
     },
     "competence": {
-     "mothers": -0.246,
-     "fathers": -0.216,
-     "M_minus_F": -0.03
+     "mothers": -0.21,
+     "fathers": -0.219,
+     "M_minus_F": 0.009,
+     "t": 0.1,
+     "p": 0.9118,
+     "n_pairs": 56,
+     "holm": 1.0
     },
     "likability": {
-     "mothers": -1.744,
-     "fathers": -1.757,
-     "M_minus_F": 0.013
+     "mothers": -1.549,
+     "fathers": -1.692,
+     "M_minus_F": 0.143,
+     "t": 1.0,
+     "p": 0.3013,
+     "n_pairs": 56,
+     "holm": 1.0
     },
-    "e1_interview_gap": {
-     "female": 0.007,
-     "male": 0.025,
-     "M_minus_F": -0.018
+    "e1_commitment": {
+     "mothers": 0.184,
+     "fathers": 0.182,
+     "M_minus_F": 0.001,
+     "t": 0.0,
+     "p": 0.9763,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_competence": {
+     "mothers": 0.045,
+     "fathers": 0.063,
+     "M_minus_F": -0.018,
+     "t": -0.6,
+     "p": 0.5572,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": -0.18,
+     "fathers": -0.157,
+     "M_minus_F": -0.023,
+     "t": -0.4,
+     "p": 0.6864,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_salary_usd": {
+     "mothers": -1347.745,
+     "fathers": -559.834,
+     "M_minus_F": -787.911,
+     "t": -1.6,
+     "p": 0.1166,
+     "n_resumes": 78,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": -0.029,
+     "fathers": 0.02,
+     "M_minus_F": -0.048,
+     "t": -1.1,
+     "p": 0.2677,
+     "n_resumes": 80,
+     "holm": 1.0
     },
     "withholding_women": {
      "married": 0.042,
@@ -1543,35 +1963,95 @@
     }
    },
    "parent_gap": {
-    "choice": {
-     "mothers": 0.226,
-     "fathers": 0.246,
-     "M_minus_F": -0.02
+    "choice_pp": {
+     "mothers": 0.238,
+     "fathers": 0.233,
+     "M_minus_F": 0.005,
+     "t": 0.4,
+     "p": 0.7266,
+     "n_pairs": 56,
+     "holm": 1.0
     },
-    "salary": {
-     "mothers": -2915.752,
-     "fathers": -2504.518,
-     "M_minus_F": -411.234
+    "salary_usd": {
+     "mothers": -2374.456,
+     "fathers": -2384.08,
+     "M_minus_F": 9.625,
+     "t": 0.0,
+     "p": 0.9741,
+     "n_pairs": 56,
+     "holm": 1.0
     },
     "commitment": {
-     "mothers": -1.549,
-     "fathers": -1.576,
-     "M_minus_F": 0.027
+     "mothers": -1.497,
+     "fathers": -1.584,
+     "M_minus_F": 0.087,
+     "t": 1.9,
+     "p": 0.0642,
+     "n_pairs": 56,
+     "holm": 0.5778
     },
     "competence": {
-     "mothers": -0.572,
-     "fathers": -0.527,
-     "M_minus_F": -0.045
+     "mothers": -0.521,
+     "fathers": -0.516,
+     "M_minus_F": -0.005,
+     "t": -0.1,
+     "p": 0.8965,
+     "n_pairs": 56,
+     "holm": 1.0
     },
     "likability": {
-     "mothers": -2.136,
-     "fathers": -2.151,
-     "M_minus_F": 0.015
+     "mothers": -1.997,
+     "fathers": -2.084,
+     "M_minus_F": 0.087,
+     "t": 1.1,
+     "p": 0.2667,
+     "n_pairs": 56,
+     "holm": 1.0
     },
-    "e1_interview_gap": {
-     "female": -0.009,
-     "male": 0.003,
-     "M_minus_F": -0.012
+    "e1_commitment": {
+     "mothers": 0.184,
+     "fathers": 0.231,
+     "M_minus_F": -0.047,
+     "t": -1.0,
+     "p": 0.318,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_competence": {
+     "mothers": 0.001,
+     "fathers": 0.016,
+     "M_minus_F": -0.016,
+     "t": -0.5,
+     "p": 0.6026,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_likability": {
+     "mothers": 0.034,
+     "fathers": 0.066,
+     "M_minus_F": -0.032,
+     "t": -0.6,
+     "p": 0.56,
+     "n_resumes": 80,
+     "holm": 1.0
+    },
+    "e1_salary_usd": {
+     "mothers": 411.095,
+     "fathers": 1024.535,
+     "M_minus_F": -613.441,
+     "t": -1.2,
+     "p": 0.2356,
+     "n_resumes": 78,
+     "holm": 1.0
+    },
+    "e1_fit": {
+     "mothers": -0.142,
+     "fathers": -0.056,
+     "M_minus_F": -0.086,
+     "t": -2.1,
+     "p": 0.0396,
+     "n_resumes": 80,
+     "holm": 0.396
     },
     "withholding_women": {
      "married": 0.042,

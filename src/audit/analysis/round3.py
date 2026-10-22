@@ -35,22 +35,36 @@ def holm(pvals: dict) -> dict:
     return adj
 
 
+def _unordered_pair(e2: pd.DataFrame) -> pd.Series:
+    """Cluster id = occupation x UNORDERED résumé pair (R4-MUST 1: `resume_ids`
+    is role-ordered 'a+b' vs 'b+a' and would double the clusters)."""
+    import re
+
+    def pid(row):
+        idxs = sorted(re.search(r"_(\d+)$", r).group(1) for r in str(row["resume_ids"]).split("+"))
+        return f"{row['occupation_id']}|{'-'.join(idxs)}"
+    return e2.apply(pid, axis=1)
+
+
 def _pm(df, lvl, con):
     s = df[(df.cue_level == lvl) & (df.contrast == con)].copy()
     s["pc"] = pd.to_numeric(s["parent_chosen"], errors="coerce")
-    return s.groupby("resume_ids")["pc"].mean()
+    s["pair"] = _unordered_pair(s)
+    return s.groupby("pair")["pc"].mean()
 
 
 def _wm(df, lvl, con):
     s = df[(df.cue_level == lvl) & (df.contrast == con)].copy()
     s["wc"] = pd.to_numeric(s["woman_chosen"], errors="coerce")
-    return s.groupby("resume_ids")["wc"].mean()
+    s["pair"] = _unordered_pair(s)
+    return s.groupby("pair")["wc"].mean()
 
 
 def _pair_means(e2: pd.DataFrame, mask, contrast: str) -> pd.Series:
     sub = e2[mask & (e2.contrast == contrast)].copy()
     sub["pc"] = pd.to_numeric(sub["parent_chosen"], errors="coerce")
-    return sub.groupby("resume_ids")["pc"].mean()
+    sub["pair"] = _unordered_pair(sub)
+    return sub.groupby("pair")["pc"].mean()
 
 
 def _matched_t(e2, mask, c1, c2):
@@ -155,9 +169,7 @@ def direct_gender_inference() -> dict:
         fam = {}
         for lvl in ["name", "name_field", "initial_field"]:
             for con in ["gender_none", "gender_parent"]:
-                sub = d[(d.cue_level == lvl) & (d.contrast == con)].copy()
-                sub["wc"] = pd.to_numeric(sub["woman_chosen"], errors="coerce")
-                pm = sub.groupby("resume_ids")["wc"].mean()
+                pm = _wm(d, lvl, con)
                 t, p = sps.ttest_1samp(pm.values, 0.5)
                 cell = f"{con}@{lvl}"
                 entry["parity"][cell] = {"p_woman": round(float(pm.mean()), 3),
@@ -235,41 +247,79 @@ def e2_drift() -> dict:
     return res
 
 
-# ---------------- R3-S3: mother-father by outcome (main run) ----------------
+# ---------------- R4-2/3: mother-father by outcome (main run, with inference) ----------------
 def mother_father_main() -> dict:
+    """Mother-minus-father penalty differences by outcome, main run.
+
+    E2: per unordered-pair cluster means for each gender, matched across pairs,
+    t across pairs; Holm within each contrast's outcome family. Salary validity:
+    a pair enters only if BOTH sides' offers are present and non-zero (withheld
+    offers excluded); identical offers count as a zero difference.
+    E1: per-résumé (parent - none) differences by gender, mothers-minus-fathers
+    matched by résumé, t across résumés.
+    """
     res = {}
     for m in MODELS:
         tabs = build_tables(None, model_key=m)
         e2 = tabs["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")]
+        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        e2["pair"] = _unordered_pair(e2)
+        sal_ok = (pd.to_numeric(e2["A.starting_salary_usd"], errors="coerce").fillna(0) > 0) & \
+                 (pd.to_numeric(e2["B.starting_salary_usd"], errors="coerce").fillna(0) > 0)
         e1 = tabs["e1"]
-        e1 = e1[~e1.run_id.str.contains("phase3")]
+        e1 = e1[~e1.run_id.str.contains("phase3")].copy()
+        e1["sal"] = e1["starting_salary_usd"].where(e1["withheld"] == 0)
         entry = {}
         for con in ["parent", "parent_gap"]:
-            row = {}
-            for outcome, col in [("choice", "parent_chosen"), ("salary", "diff_starting_salary_usd"),
-                                 ("commitment", "diff_commitment"), ("competence", "diff_competence"),
+            fam: dict = {}
+            # --- E2 outcomes, pair-matched M - F ---
+            for outcome, col in [("choice_pp", "parent_chosen"),
+                                 ("salary_usd", "diff_starting_salary_usd"),
+                                 ("commitment", "diff_commitment"),
+                                 ("competence", "diff_competence"),
                                  ("likability", "diff_likability")]:
-                vals = {}
-                for g in ["female", "male"]:
-                    s = e2[(e2.contrast == con) & (e2.gender == g)][col].dropna()
-                    if outcome == "salary":
-                        s = s[s != 0]
-                    vals[g] = round(float(s.astype(float).mean()), 3) if len(s) else None
-                row[outcome] = {"mothers": vals["female"], "fathers": vals["male"],
-                                "M_minus_F": (round(vals["female"] - vals["male"], 3)
-                                              if vals["female"] is not None and vals["male"] is not None else None)}
-            # E1 interview gap (parent - none) by gender; withholding by family (women)
-            for g in ["female", "male"]:
-                gp = e1[(e1.gender == g) & (e1.family_code == con)]["interview"].astype(float).mean()
-                gn = e1[(e1.gender == g) & (e1.family_code == "none")]["interview"].astype(float).mean()
-                row.setdefault("e1_interview_gap", {})[g] = round(float(gp - gn), 3)
-            row["e1_interview_gap"]["M_minus_F"] = round(
-                row["e1_interview_gap"]["female"] - row["e1_interview_gap"]["male"], 3)
+                pm: dict = {}
+                for g in ("female", "male"):
+                    sub = e2[(e2.contrast == con) & (e2.gender == g)]
+                    if outcome == "salary_usd":
+                        sub = sub[sal_ok]
+                    pc = pd.to_numeric(sub[col], errors="coerce")
+                    pm[g] = pd.concat([sub["pair"], pc.rename("v")], axis=1).dropna().groupby("pair")["v"].mean()
+                common = pm["female"].index.intersection(pm["male"].index)
+                d = (pm["female"][common] - pm["male"][common]).values
+                t, p = sps.ttest_1samp(d, 0)
+                fam[outcome] = {"mothers": round(float(pm["female"][common].mean()), 3),
+                                "fathers": round(float(pm["male"][common].mean()), 3),
+                                "M_minus_F": round(float(d.mean()), 3),
+                                "t": round(float(t), 1), "p": round(float(p), 4),
+                                "n_pairs": int(len(common))}
+            # --- E1 perception outcomes, résumé-matched M - F ---
+            for outcome in ["e1_commitment", "e1_competence", "e1_likability", "e1_salary_usd", "e1_fit"]:
+                key = {"e1_commitment": "commitment", "e1_competence": "competence",
+                       "e1_likability": "likability", "e1_salary_usd": "sal",
+                       "e1_fit": "overall_fit"}[outcome]
+                gd = {}
+                for g in ("female", "male"):
+                    treat = e1[(e1.gender == g) & (e1.family_code == con)].groupby("resume_ids")[key].mean()
+                    base = e1[(e1.gender == g) & (e1.family_code == "none")].groupby("resume_ids")[key].mean()
+                    gd[g] = (treat - base).dropna()
+                common = gd["female"].index.intersection(gd["male"].index)
+                if len(common) >= 10:
+                    d = (gd["female"][common] - gd["male"][common]).values
+                    t, p = sps.ttest_1samp(d, 0)
+                    fam[outcome] = {"mothers": round(float(gd["female"][common].mean()), 3),
+                                    "fathers": round(float(gd["male"][common].mean()), 3),
+                                    "M_minus_F": round(float(d.mean()), 3),
+                                    "t": round(float(t), 1), "p": round(float(p), 4),
+                                    "n_resumes": int(len(common))}
+            adj = holm({k: v["p"] for k, v in fam.items() if "p" in v})
+            for k, v in adj.items():
+                fam[k]["holm"] = round(v, 4)
+            # withholding (women only; no male analogue)
             w = e1[e1.gender == "female"].groupby("family_code")["withheld"].mean()
-            row["withholding_women"] = {k: round(float(v), 3) for k, v in w.items() if k in
+            fam["withholding_women"] = {k: round(float(v), 3) for k, v in w.items() if k in
                                         ("none", "married", "parent", "parent_gap", "pregnant")}
-            entry[con] = row
+            entry[con] = fam
         res[SHORT[m]] = entry
     return res
 

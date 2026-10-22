@@ -363,8 +363,10 @@ def fig_moderator(tables, out=OUT):
     for gender, color, name in [("female", "#c25b4e", "mothers"), ("male", "#4e7fc2", "fathers")]:
         g = cell[cell["gender"] == gender]
         occs, gy = gap(g, "interview")
-        zx = [zlook["female_share"].loc[o] for o in occs]
-        ax.scatter(zx, gy, s=18, color=color, alpha=0.75, label=name)
+        zx, gy2 = zip(*[(x, y) for x, y in zip((zlook["female_share"].loc[o] for o in occs), gy)
+                        if np.isfinite(x) and np.isfinite(y)])
+        ax.scatter(zx, gy2, s=18, color=color, alpha=0.75, label=name)
+        zx, gy = list(zx), list(gy2)
         if len(zx) > 2:
             b, a = np.polyfit(zx, gy, 1)
             xs = np.linspace(min(zx), max(zx), 10)
@@ -379,8 +381,10 @@ def fig_moderator(tables, out=OUT):
     for gender, color, name in [("female", "#c25b4e", "mothers"), ("male", "#4e7fc2", "fathers")]:
         g = cell[cell["gender"] == gender]
         occs, gy = gap(g, "interview")
-        xt = [ztd.loc[o] for o in occs]
-        ax.scatter(xt, gy, s=18, color=color, alpha=0.75, label=name)
+        xt, gy2 = zip(*[(x, y) for x, y in zip((ztd.loc[o] for o in occs), gy)
+                        if np.isfinite(x) and np.isfinite(y)])
+        ax.scatter(xt, gy2, s=18, color=color, alpha=0.75, label=name)
+        xt, gy = list(xt), list(gy2)
         if len(xt) > 2:
             b, a = np.polyfit(xt, gy, 1)
             xs = np.linspace(min(xt), max(xt), 10)
@@ -431,6 +435,163 @@ def fig_design_schematic(out=OUT):
     plt.close(fig)
 
 
+P3 = {"deepseek": "#4e7fc2", "haiku": "#c25b4e", "luna": "#6aa84f", "qwen": "#b08a35"}
+P3N = {"deepseek": "DeepSeek", "haiku": "Haiku", "luna": "Luna", "qwen": "Qwen"}
+
+
+def fig_p3_task_dependence(out=OUT):
+    """fig9: same cue across scoring / choice / ranking (E1 fit gap, E2 P(parent),
+    E3 FE ratio; mothers, leave-gap cue, main run)."""
+    import json as _json
+
+    s = _json.load(open("docs/report/stats.json"))
+    fig, axes = plt.subplots(1, 3, figsize=(9.5, 3.2))
+    mk = list(SHORT)
+    for ax, (panel, title, ylab) in zip(axes, [
+        ("fit", "E1 scoring: fit gap (pts)", "cue − none (fit)"),
+        ("choice", "E2 choice: P(parent chosen)", "share vs childless"),
+        ("rank", "E3 ranking: FE impact ratio", "top-3 ratio"),
+    ]):
+        for i, m in enumerate(mk):
+            mm = s["models"][m]
+            if panel == "fit":
+                v = mm["e1_gaps_women"]["overall_fit"]["parent_gap_minus_none"]
+                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6)
+                ax.axhline(0, color="0.2", lw=0.8)
+            elif panel == "choice":
+                v = mm["e2_clustered"]["cells"]["parent_gap|female"]["p"]
+                se = mm["e2_clustered"]["cells"]["parent_gap|female"]["se"]
+                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6, yerr=1.96 * se, capsize=3)
+                ax.axhline(0.5, color="0.2", ls="--", lw=1, label="parity")
+            else:
+                v = mm["e3_fe"]["F"]["adjusted_ratio"]
+                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6)
+                ax.axhline(0.8, color="0.4", ls=":", lw=1.2, label="4/5 line")
+            ax.set_xticks(range(4))
+            ax.set_xticklabels(["DS", "Haiku", "Luna", "Qwen"])
+        ax.set_title(title, loc="left", fontsize=9)
+        ax.set_ylabel(ylab)
+    fig.suptitle("Figure 9. The same cue (mother, leave gap) across tasks — small in scores, large in comparison",
+                 y=1.03, fontsize=10)
+    fig.tight_layout()
+    fig.savefig(out / "fig9_task_dependence.pdf")
+    plt.close(fig)
+
+
+def fig_p3_decomposition(out=OUT):
+    """fig10: waterfall none → disclosure → gap(+label) → bundle (primary estimand)."""
+    import json as _json
+
+    s = _json.load(open("docs/phase3/round5_stats.json"))["primary_decomposition"]
+    stages = ["parity", "personal", "gap_travel", "gap_parental_only", "parent_gap"]
+    labels = ["parity\n(0.50)", "+ personal\ndisclosure", "+ 8-month gap\n(travel)", "label:\nparental", "+ family\nbundle"]
+    fig, ax = plt.subplots(figsize=(9.5, 3.4))
+    x = range(len(stages))
+    for j, mk in enumerate(P3N):
+        vals = [0.5] + [s[mk][f"cell_{c}"]["P"] for c in stages[1:]]
+        ax.plot(x, vals, "o-", color=P3[mk], label=P3N[mk], lw=1.6, ms=5)
+    ax.axhline(0.5, color="0.3", ls="--", lw=1)
+    ax.set_xticks(list(x))
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("P(candidate chosen) vs childless finalist")
+    ax.set_title("Figure 10. Placebo waterfall (O20, L1+L2 pooled): the interruption and the family bundle carry the penalty;\nthe 'parental' label adds nothing (or slightly helps)", loc="left", fontsize=9.5)
+    ax.legend(ncol=4, frameon=False, loc="lower left")
+    fig.tight_layout()
+    fig.savefig(out / "fig10_decomposition.pdf")
+    plt.close(fig)
+
+
+def fig_p3_invariance(out=OUT):
+    """fig11: P(parent chosen) by cue level L0-L3 per model (O8, both genders pooled)."""
+    import json as _json
+
+    s = _json.load(open("docs/phase3/phase3_key_stats.json"))["cue_level_o8_only"]
+    lv = ["name", "name_field", "initial_field", "blind"]
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.4), sharey=True)
+    for ax, cue in zip(axes, ["parent", "parent_gap"]):
+        for mk in P3N:
+            vals = [s[mk][cue][l] for l in lv]
+            ax.plot(range(4), vals, "o-", color=P3[mk], label=P3N[mk], lw=1.5, ms=4.5)
+        ax.axhline(0.5, color="0.3", ls="--", lw=1)
+        ax.set_xticks(range(4))
+        ax.set_xticklabels(["L0\nnames", "L1\n+field", "L2\ninitials\n+field", "L3\nblind"])
+        ax.set_title(f"{cue.replace('_', ' ')}", loc="left", fontsize=9.5)
+    axes[0].set_ylabel("P(parent chosen) vs childless")
+    axes[0].legend(frameon=False, loc="lower right")
+    fig.suptitle("Figure 11. Gender-information invariance: removing all gender information (L3) leaves the penalty unchanged",
+                 y=1.03, fontsize=10)
+    fig.tight_layout()
+    fig.savefig(out / "fig11_invariance.pdf")
+    plt.close(fig)
+
+
+def fig_p3_direct_gender(out=OUT):
+    """fig12: P(woman chosen) by cue level and contrast per model."""
+    import json as _json
+
+    dg = _json.load(open("docs/phase3/round3_stats.json"))["direct_gender"]
+    lv = [("name", "L0 names"), ("name_field", "L1 +field"), ("initial_field", "L2 initials+field")]
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.4), sharey=True)
+    for ax, con, title in zip(axes, ["gender_none", "gender_parent"],
+                              ["childless woman vs childless man", "mother vs father"]):
+        for mk in P3N:
+            cells = dg[mk]["parity"]
+            vals = [cells[f"{con}@{l}"]["p_woman"] for l, _ in lv]
+            ax.plot(range(3), vals, "o-", color=P3[mk], label=P3N[mk], lw=1.5, ms=4.5)
+        ax.axhline(0.5, color="0.3", ls="--", lw=1)
+        ax.set_xticks(range(3))
+        ax.set_xticklabels([lbl for _, lbl in lv])
+        ax.set_title(title, loc="left", fontsize=9.5)
+    axes[0].set_ylabel("P(woman chosen)")
+    axes[0].legend(frameon=False, loc="upper left")
+    fig.suptitle("Figure 12. Direct gender preference by cue level: vendor divergence when gender is explicit",
+                 y=1.03, fontsize=10)
+    fig.tight_layout()
+    fig.savefig(out / "fig12_direct_gender.pdf")
+    plt.close(fig)
+
+
+def fig_p3_abstention(out=OUT):
+    """fig13: Haiku pregnancy withholding + interview consequence."""
+    import json as _json
+
+    r3 = _json.load(open("docs/phase3/round3_stats.json"))
+    s = _json.load(open("docs/report/stats.json"))
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.2))
+    main_key = {"deepseek": "deepseek_v41_flash", "haiku": "claude_haiku_55",
+                "luna": "gpt6_luna", "qwen": "qwen38_flash"}
+    p3k = _json.load(open("docs/phase3/phase3_key_stats.json"))["abstention_pregnant_by_level"]
+    # (a) withholding by model: main run (names) vs phase-3 mean across levels
+    for x, mk in enumerate(P3N):
+        main_rate = s["models"][main_key[mk]]["withheld"]["rates"]["female|pregnant"]
+        ph3 = p3k[mk]
+        lv3 = [v for v in (ph3.get(l) for l in ("name", "name_field", "initial_field")) if v is not None]
+        axes[0].bar(x - 0.18, main_rate, width=0.32, color=P3[mk], alpha=0.5,
+                    label="names-only run" if x == 0 else "")
+        axes[0].bar(x + 0.18, float(np.mean(lv3)) if lv3 else 0, width=0.32, color=P3[mk],
+                    label="phase 3 (mean)" if x == 0 else "")
+    axes[0].set_xticks(range(4))
+    axes[0].set_xticklabels(list(P3N.values()))
+    axes[0].set_ylabel("salary withheld ($0), pregnant applicants")
+    axes[0].set_title("withholding by model (light: names-only run; solid: phase-3 mean)", loc="left", fontsize=9)
+    axes[0].legend(frameon=False, fontsize=7)
+    # (b) interview by withheld status (Haiku, main run)
+    pf = s["models"]["claude_haiku_55"]["pregnancy_full"]["interview_by_withheld"]
+    cats = ["pregnant|\noffered", "pregnant|\nwithheld"]
+    vals = [pf["pregnant|offered"]["rate"], pf["pregnant|withheld"]["rate"]]
+    axes[1].bar([0, 1], vals, color=["#8f9fc8", "#c25b4e"], width=0.55)
+    for i, v in enumerate(vals):
+        axes[1].text(i, v + 0.02, f"{v:.2f}", ha="center", fontsize=9)
+    axes[1].set_xticks([0, 1])
+    axes[1].set_xticklabels(cats)
+    axes[1].set_ylabel("P(advance to interview)")
+    axes[1].set_title("Haiku: withheld ⇒ no interview", loc="left", fontsize=9)
+    fig.suptitle("Figure 13. Abstention as a discrimination margin (pregnancy)", y=1.03, fontsize=10)
+    fig.tight_layout()
+    fig.savefig(out / "fig13_abstention.pdf")
+    plt.close(fig)
+
+
 def generate_all(out_dir: str | Path = OUT) -> list[Path]:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -443,6 +604,11 @@ def generate_all(out_dir: str | Path = OUT) -> list[Path]:
     fig_quality(tables, out)
     fig_benchmark(tables, out)
     fig_moderator(tables, out)
+    fig_p3_task_dependence(out)
+    fig_p3_decomposition(out)
+    fig_p3_invariance(out)
+    fig_p3_direct_gender(out)
+    fig_p3_abstention(out)
     pdfs = sorted(out.glob("*.pdf"))
     print(f"[figures] wrote {len(pdfs)} vector PDFs -> {out}")
     return pdfs
