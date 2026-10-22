@@ -192,3 +192,105 @@ it is not; say the interactions are all n.s.
   entry; scratch/ is not a durable home for the code behind every reported number.
 - Multiple comparisons: Table 2 runs 12 tests; note that Haiku's three survive Holm
   correction (check), Qwen's may not.
+
+---
+
+# Round 3 review (Draft 4.0, 2026-10-22)
+
+The integrated draft is a big step forward: a clear three-question structure, the cue-level
+invariance result, and the placebo design. The items below change or weaken specific claims.
+
+## R3-MUST 1 — Placebo decomposition compares different occupation sets
+
+In phase-3 E2 at L0, the contrasts were run on different occupations (DeepSeek counts from logs):
+
+| contrast at L0 | occupations | sampling |
+| --- | --- | --- |
+| `personal`, `gap_travel`, `gap_parental_only` | O20 + O8 | 2 samples |
+| `parent` | O20 (drift anchor, 1 sample) + O8 | mixed |
+| `parent_gap`, `parent_committed` | **O8 only** | 2 samples |
+
+`placebo_decomposition()` takes plain means within a cue level, so e.g. "family bundle on top
+of the gap" = mean(`parent_gap`, O8) − mean(`gap_parental_only`, O20+O8). The O8 occupations
+have different baseline penalties (e.g. Luna's O8 leave-gap .095 vs .186 in the main run), so the
+decomposition is confounded with occupation mix.
+
+Fix:
+- Compute every component on a **matched occupation set where all contrasts exist**:
+  (a) O8 at each of L0–L3; (b) O20 at L1 and L2. Report both; (b) is the larger sample.
+- Use pair-matched differences: for each résumé pair, difference of pair-cluster means between
+  the two contrasts; t-test across pairs; Holm within the decomposition family.
+- Report t / CI for every component. "Not significant for any model" (label effect) currently has
+  no test behind it.
+- Then re-check abstract point (3) and §4.3/§5.1 wording.
+
+## R3-MUST 2 — The manipulation check measures willingness to state gender, not inference
+
+Haiku answers "unknown" for 58% of name-only packets. But in the main-run E1 `none` condition,
+whenever Haiku's rationale uses a gendered pronoun it **always** matches the name:
+female names → "she/her" 103 times, "he" 0; male names → "he/his" 46 times, "she" 0.
+So Haiku infers gender from names; it declines to *label* it when asked directly.
+
+Fix:
+- Reframe §4.1: the direct question measures willingness to attribute gender (itself an
+  interesting alignment behavior), not legibility.
+- Add an implicit check: pronoun congruence in rationales by model and cue level.
+- Remove: "name-only audits under-treat the gender information actually available", the link
+  "Luna — which reads names correctly only 66% of the time", and "Haiku recognizes male names
+  better" (Haiku uses female pronouns more often than male ones).
+
+## R3-MUST 3 — Direct gender preference (§4.5) has no inference
+
+CROSS_MODEL.md gives point estimates only. With ~960 calls per cell over 40 pairs, an SE of
+~.02 is plausible, so Haiku's ".544 → .470" may not differ from parity or from L0.
+- Add pair-clustered t vs .50 for each cell, and level contrasts (L1 − L0, L2 − L1) with Holm.
+- Keep "Luna surges" / "Haiku flips against mothers" only if they survive.
+- Abstract point (5) mixes cells: ".52 → .65 for mother-vs-father" — .52 is Luna's *childless*
+  L0, .65 is mother-vs-father L1 (mother-vs-father L0 is .578).
+
+## R3-MUST 4 — Factual errors
+
+- §4.8 quotes the greedy wording as "must be willing to work long hours and be fully committed".
+  The actual text (config/jd_variants.yaml): "This is a fast-paced role. Candidates must be
+  available after hours and on weekends as needed, and travel up to 40% of the time."
+- §4.6 "No other model abstains … (≤ 1.8%)": phase-3 Qwen pregnant withholding is 2.9% (L2) and
+  2.6% (L1); main-run Qwen 5.8%, Luna 3.1%. State the actual ranges.
+- §4.6 "−9.4pp … consistent with 19.8% × 70% denial": 19.8% × 70% ≈ 13.9pp. The net gap reflects
+  *excess* withholding over the childless baseline (19.8% − 3.1%) and baseline interview rates.
+  Fix the arithmetic or drop the sentence.
+- References: Gaddis (2017) is "How Black Are Lakisha and Jamal? Racial Perceptions from Names
+  Used in Correspondence Audit Studies," *Sociological Science* 4: 469–489. The cited title and
+  pages do not match.
+
+## R3-MUST 5 — Missing prior literature; intro overclaims novelty
+
+The reference list has no prior LLM hiring audits. The intro says existing audits "mostly
+evaluate a single decision format", but pairwise choice (Rozado 2025) and ranking (Bloomberg /
+Yin et al. 2024) already exist, and parental-leave / pregnancy cues were tested (Veldanda et al.
+2023; Frermann et al. 2023). Add these plus An et al. (2025), Armstrong et al. (2024), Wilson &
+Caliskan (2024), Benard & Correll (2010), Kleinberg & Raghavan (2021); position the contribution
+as *crossing tasks, cues, and gender-information regimes on identical materials*, not as the
+first comparative audit. (Full list in docs/proposal.md.)
+
+## R3-SHOULD
+
+1. **Occupational moderation (§4.9).** Only DeepSeek's female-share coefficient is nominally
+   significant (p = .025, 24 tests across 4 models × 6 regressors, no correction); "for every
+   model" refers only to sign. The statistical-discrimination interpretation is speculative and
+   also applies to fathers, which does not fit a "where mothers are common" story. It also
+   contradicts the main-run null. Keep as exploratory, drop it from §5.1 as supporting evidence.
+2. **Theory (§5.1).** "Committability heuristic … closer to statistical discrimination" ignores
+   that (a) the family bundle is penalized beyond the gap, and (b) commitment evidence only
+   partly restores parity (and deepens the penalty for Luna). Present the gap component as
+   consistent with availability inference and the bundle/commitment results as a normative
+   component (Benard & Correll 2010).
+3. **Mother vs father by outcome** (SPEC_PHASE3 §8.4) is missing: choice, salary, commitment,
+   competence, likability, interview, withholding per model. From the main run, mothers' extra
+   penalty shows up mainly in salary and perceived commitment for DeepSeek, Qwen, and Haiku —
+   a "perception asymmetric, decision symmetric" result worth a table.
+4. **Position bias numbers** changed vs rev. 3 (DeepSeek P(A) .83 → .68). Say which run each
+   number comes from; delete "consistent with its opposite direction of asymmetry in other tasks".
+5. **Drift.** The anchor was specified on E2 choice (flag |Δ| > .03); report E2 anchor deltas, not
+   only interview. Note in §4 which tables are main-run vs phase-3, since prompt versions differ.
+6. **Abstract (2)** "statistically indistinguishable for two models" — add the test (O8 L0 vs L3,
+   pair-clustered) to the table.
