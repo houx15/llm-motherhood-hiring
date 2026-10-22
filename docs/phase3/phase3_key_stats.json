@@ -1,0 +1,530 @@
+{
+ "cue_level_o8_only": {
+  "deepseek": {
+   "parent": {
+    "name": 0.347,
+    "name_field": 0.348,
+    "initial_field": 0.347,
+    "blind": 0.343
+   },
+   "parent_committed": {
+    "name": 0.406,
+    "name_field": 0.458,
+    "initial_field": 0.434,
+    "blind": 0.439
+   },
+   "parent_gap": {
+    "name": 0.249,
+    "name_field": 0.258,
+    "initial_field": 0.243,
+    "blind": 0.277
+   },
+   "personal": {
+    "name": 0.447,
+    "name_field": 0.464,
+    "initial_field": 0.458,
+    "blind": 0.444
+   },
+   "gap_travel": {
+    "name": 0.35,
+    "name_field": 0.328,
+    "initial_field": 0.365,
+    "blind": 0.324
+   },
+   "gap_parental_only": {
+    "name": 0.357,
+    "name_field": 0.362,
+    "initial_field": 0.359,
+    "blind": 0.351
+   }
+  },
+  "haiku": {
+   "parent": {
+    "name": 0.277,
+    "name_field": 0.352,
+    "initial_field": 0.373,
+    "blind": 0.283
+   },
+   "parent_committed": {
+    "name": 0.329,
+    "name_field": 0.397,
+    "initial_field": 0.419,
+    "blind": 0.341
+   },
+   "parent_gap": {
+    "name": 0.09,
+    "name_field": 0.129,
+    "initial_field": 0.131,
+    "blind": 0.098
+   },
+   "personal": {
+    "name": 0.507,
+    "name_field": 0.512,
+    "initial_field": 0.544,
+    "blind": 0.503
+   },
+   "gap_travel": {
+    "name": 0.331,
+    "name_field": 0.312,
+    "initial_field": 0.317,
+    "blind": 0.352
+   },
+   "gap_parental_only": {
+    "name": 0.331,
+    "name_field": 0.314,
+    "initial_field": 0.332,
+    "blind": 0.326
+   }
+  },
+  "luna": {
+   "parent": {
+    "name": 0.344,
+    "name_field": 0.378,
+    "initial_field": 0.389,
+    "blind": 0.357
+   },
+   "parent_committed": {
+    "name": 0.259,
+    "name_field": 0.306,
+    "initial_field": 0.307,
+    "blind": 0.277
+   },
+   "parent_gap": {
+    "name": 0.095,
+    "name_field": 0.098,
+    "initial_field": 0.091,
+    "blind": 0.102
+   },
+   "personal": {
+    "name": 0.473,
+    "name_field": 0.473,
+    "initial_field": 0.458,
+    "blind": 0.474
+   },
+   "gap_travel": {
+    "name": 0.191,
+    "name_field": 0.188,
+    "initial_field": 0.19,
+    "blind": 0.201
+   },
+   "gap_parental_only": {
+    "name": 0.225,
+    "name_field": 0.255,
+    "initial_field": 0.233,
+    "blind": 0.217
+   }
+  },
+  "qwen": {
+   "parent": {
+    "name": 0.406,
+    "name_field": 0.396,
+    "initial_field": 0.406,
+    "blind": 0.384
+   },
+   "parent_committed": {
+    "name": 0.444,
+    "name_field": 0.477,
+    "initial_field": 0.449,
+    "blind": 0.424
+   },
+   "parent_gap": {
+    "name": 0.269,
+    "name_field": 0.268,
+    "initial_field": 0.263,
+    "blind": 0.263
+   },
+   "personal": {
+    "name": 0.48,
+    "name_field": 0.491,
+    "initial_field": 0.481,
+    "blind": 0.471
+   },
+   "gap_travel": {
+    "name": 0.281,
+    "name_field": 0.317,
+    "initial_field": 0.306,
+    "blind": 0.292
+   },
+   "gap_parental_only": {
+    "name": 0.364,
+    "name_field": 0.356,
+    "initial_field": 0.364,
+    "blind": 0.359
+   }
+  }
+ },
+ "e3v3_ratio_by_level": {
+  "deepseek": {
+   "name": {
+    "parent_top3": 0.34,
+    "childless_top3": 0.532,
+    "ratio": 0.639,
+    "n_pools": 1442
+   },
+   "name_field": {
+    "parent_top3": 0.347,
+    "childless_top3": 0.531,
+    "ratio": 0.655,
+    "n_pools": 1442
+   },
+   "initial_field": {
+    "parent_top3": 0.352,
+    "childless_top3": 0.53,
+    "ratio": 0.664,
+    "n_pools": 1438
+   },
+   "blind": {
+    "parent_top3": 0.345,
+    "childless_top3": 0.531,
+    "ratio": 0.65,
+    "n_pools": 719
+   }
+  },
+  "haiku": {
+   "name": {
+    "parent_top3": 0.086,
+    "childless_top3": 0.583,
+    "ratio": 0.148,
+    "n_pools": 1440
+   },
+   "name_field": {
+    "parent_top3": 0.11,
+    "childless_top3": 0.578,
+    "ratio": 0.19,
+    "n_pools": 1440
+   },
+   "initial_field": {
+    "parent_top3": 0.097,
+    "childless_top3": 0.581,
+    "ratio": 0.168,
+    "n_pools": 1439
+   },
+   "blind": {
+    "parent_top3": 0.093,
+    "childless_top3": 0.581,
+    "ratio": 0.16,
+    "n_pools": 720
+   }
+  },
+  "luna": {
+   "name": {
+    "parent_top3": 0.366,
+    "childless_top3": 0.527,
+    "ratio": 0.695,
+    "n_pools": 1440
+   },
+   "name_field": {
+    "parent_top3": 0.378,
+    "childless_top3": 0.524,
+    "ratio": 0.72,
+    "n_pools": 1440
+   },
+   "initial_field": {
+    "parent_top3": 0.366,
+    "childless_top3": 0.527,
+    "ratio": 0.695,
+    "n_pools": 1440
+   },
+   "blind": {
+    "parent_top3": 0.371,
+    "childless_top3": 0.526,
+    "ratio": 0.705,
+    "n_pools": 720
+   }
+  },
+  "qwen": {
+   "name": {
+    "parent_top3": 0.36,
+    "childless_top3": 0.528,
+    "ratio": 0.681,
+    "n_pools": 1438
+   },
+   "name_field": {
+    "parent_top3": 0.374,
+    "childless_top3": 0.525,
+    "ratio": 0.713,
+    "n_pools": 1437
+   },
+   "initial_field": {
+    "parent_top3": 0.389,
+    "childless_top3": 0.522,
+    "ratio": 0.744,
+    "n_pools": 1433
+   },
+   "blind": {
+    "parent_top3": 0.371,
+    "childless_top3": 0.526,
+    "ratio": 0.705,
+    "n_pools": 720
+   }
+  }
+ },
+ "occupation_regression_parent_gap_F": {
+  "deepseek": {
+   "n": 28,
+   "z_female_share": {
+    "coef": 0.057,
+    "p": 0.0254
+   },
+   "z_care": {
+    "coef": -0.029,
+    "p": 0.1846
+   }
+  },
+  "haiku": {
+   "n": 28,
+   "z_female_share": {
+    "coef": 0.018,
+    "p": 0.4666
+   },
+   "z_care": {
+    "coef": -0.027,
+    "p": 0.2326
+   }
+  },
+  "luna": {
+   "n": 28,
+   "z_female_share": {
+    "coef": 0.047,
+    "p": 0.1487
+   },
+   "z_care": {
+    "coef": -0.058,
+    "p": 0.0496
+   }
+  },
+  "qwen": {
+   "n": 28,
+   "z_female_share": {
+    "coef": 0.026,
+    "p": 0.3741
+   },
+   "z_care": {
+    "coef": 0.007,
+    "p": 0.7835
+   }
+  }
+ },
+ "decomposition_L0_mothers": {
+  "deepseek": {
+   "parenthood_net_of_disclosure": -0.107,
+   "caregiving_label_net_of_interruption": 0.01,
+   "family_bundle_on_top_of_gap": -0.156
+  },
+  "haiku": {
+   "parenthood_net_of_disclosure": -0.269,
+   "caregiving_label_net_of_interruption": 0.013,
+   "family_bundle_on_top_of_gap": -0.238
+  },
+  "luna": {
+   "parenthood_net_of_disclosure": -0.124,
+   "caregiving_label_net_of_interruption": 0.041,
+   "family_bundle_on_top_of_gap": -0.177
+  },
+  "qwen": {
+   "parenthood_net_of_disclosure": -0.095,
+   "caregiving_label_net_of_interruption": 0.074,
+   "family_bundle_on_top_of_gap": -0.108
+  }
+ },
+ "abstention_pregnant_by_level": {
+  "deepseek": {
+   "initial_field": 0.012,
+   "name": 0.013,
+   "name_field": 0.007
+  },
+  "haiku": {
+   "initial_field": 0.257,
+   "name": 0.182,
+   "name_field": 0.275
+  },
+  "luna": {
+   "initial_field": 0.004,
+   "name": 0.0,
+   "name_field": 0.003
+  },
+  "qwen": {
+   "initial_field": 0.029,
+   "name": 0.0,
+   "name_field": 0.026
+  }
+ },
+ "drift_mean_delta": {
+  "deepseek": 0.029,
+  "haiku": 0.025,
+  "luna": 0.03,
+  "qwen": 0.014
+ },
+ "manip": [
+  {
+   "model": "DeepSeek",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.494,
+   "pct_male": 0.473,
+   "pct_unknown": 0.033,
+   "pct_correct": 0.967
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L1 name+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L2 initial+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.0,
+   "pct_male": 0.018,
+   "pct_unknown": 0.982,
+   "pct_correct": null
+  },
+  {
+   "model": "Haiku",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.11,
+   "pct_male": 0.312,
+   "pct_unknown": 0.577,
+   "pct_correct": 0.423
+  },
+  {
+   "model": "Haiku",
+   "level": "L1 name+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Haiku",
+   "level": "L2 initial+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Haiku",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.0,
+   "pct_male": 0.0,
+   "pct_unknown": 1.0,
+   "pct_correct": null
+  },
+  {
+   "model": "Luna",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.259,
+   "pct_male": 0.402,
+   "pct_unknown": 0.339,
+   "pct_correct": 0.661
+  },
+  {
+   "model": "Luna",
+   "level": "L1 name+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Luna",
+   "level": "L2 initial+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Luna",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.0,
+   "pct_male": 0.006,
+   "pct_unknown": 0.994,
+   "pct_correct": null
+  },
+  {
+   "model": "Qwen",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.494,
+   "pct_male": 0.488,
+   "pct_unknown": 0.018,
+   "pct_correct": 0.982
+  },
+  {
+   "model": "Qwen",
+   "level": "L1 name+field",
+   "n": 334,
+   "pct_female": 0.503,
+   "pct_male": 0.497,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Qwen",
+   "level": "L2 initial+field",
+   "n": 335,
+   "pct_female": 0.499,
+   "pct_male": 0.501,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Qwen",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.024,
+   "pct_male": 0.0,
+   "pct_unknown": 0.976,
+   "pct_correct": null
+  }
+ ],
+ "main_e2_salary_mother": {
+  "deepseek": {
+   "parent_usd": -1854,
+   "parent_pct": -2.19,
+   "gap_usd": -2464,
+   "gap_pct": -2.89
+  },
+  "haiku": {
+   "parent_usd": -1332,
+   "parent_pct": -1.68,
+   "gap_usd": -942,
+   "gap_pct": -1.18
+  },
+  "luna": {
+   "parent_usd": -1548,
+   "parent_pct": -1.66,
+   "gap_usd": -2127,
+   "gap_pct": -2.27
+  },
+  "qwen": {
+   "parent_usd": -1775,
+   "parent_pct": -2.33,
+   "gap_usd": -3145,
+   "gap_pct": -4.1
+  }
+ }
+}
