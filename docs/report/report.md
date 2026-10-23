@@ -16,38 +16,46 @@ interruption, caregiving label, family bundle), and **gender-information regime*
 validated materials (28 occupations, 154 résumés, six rotating names per gender;
 602,093 logged calls; DeepSeek V4.1 Flash, Claude Haiku 5.5, GPT-6 Luna, Qwen
 3.8 Flash at pinned versions). **Finding 1 — the penalty appears only in
-comparison.** In isolated scoring, family cues move fit ratings by at most 0.35
-points (10-point scale) and interview recommendations by at most 1.5pp. In
-pairwise choice, the same cues cost parents 10–27 percentage points (pp) of
-choice probability: a parent with a parental-leave gap wins a head-to-head
-final against a comparably qualified childless candidate (résumé roles
-counterbalanced) only 11–31% of the time, where 50% means no penalty; the same
-résumé is shortlisted at 23–81% of its childless rate. A noise model fitted to
-the scoring data predicts choice shares 8–41pp fairer than observed — the
-comparison itself adds penalty that scores do not contain. **Finding 2 — the
-penalty is a caregiver penalty, not a gender penalty.** Removing all gender
-information (blind rendering) leaves the parent-choice penalty unchanged in
-every model (pair-matched tests, all p ≥ .08). A matched-occupation placebo
-decomposition shows the 8-month employment interruption and the explicit family
-bundle each cost 7–24pp (Holm-corrected, 23 of 24 model×set tests), while the
-*label* of the interruption never adds a penalty — for three models, "Parental
-leave" is modestly *less* costly than the identical dates labeled "Career
-break — extended travel." There is no fatherhood bonus anywhere. **Finding 3 —
-thin, vendor-specific gendered behaviors layer on top.** In direct
-woman-vs-man choices, Qwen is at parity at every gender-information level;
-DeepSeek shows a small robust pro-woman preference (+3.6 to +4.8pp,
-Holm-corrected); Luna's pro-woman preference activates only when gender is
-explicit (.58 → .65 for mother-vs-father); Haiku shifts the other way (−4.5pp,
-p = .003) and is the only model that penalizes mothers more than fathers in
-same-gender pairs — concentrated in perceived commitment. **Finding 4 —
-abstention is a discrimination margin.** Haiku withholds salary offers entirely
-for 19.8% of pregnant applicants (27.5% under an explicit gender field), and
-withheld applicants are interviewed only 30% of the time — a −9.4pp interview
-penalty (t = −4.8) that listwise deletion would misread as fairness. Because
+comparison, amplified far beyond its footprint in scores.** In isolated
+scoring, family cues move fit ratings by at most 0.35 points (10-point scale)
+and interview recommendations by at most 1.5pp. In pairwise choice the same
+cues cost parents 11–39pp of choice probability: a parent with a parental-leave
+gap wins a head-to-head final against a comparably qualified childless
+candidate (résumé roles counterbalanced) only 11–31% of the time, where 50%
+means no penalty; the same résumé is shortlisted at 23–81% of its childless
+rate. Choices track ordinary quality differences at 13–18pp per fit point, but
+the family cues act, in choice terms, like quality losses of 0.8–2.1 fit points
+— 4× to 31× their actual score effects — and in one model the sign reverses:
+Claude Haiku 5.5 *scores* parents higher (+0.34) yet chooses them 23% of the
+time. **Finding 2 — the penalty is a caregiver penalty, not a gender penalty.**
+Removing all gender information (blind rendering) leaves the parent-choice
+penalty statistically unchanged in every model (equivalence at ±5pp, TOST, 7 of
+8 model×cue cells). A matched-occupation placebo decomposition (primary
+estimand: 40 pairs, 95% CIs) shows two components: a **generic interruption
+penalty** (an 8-month gap labeled *travel* costs 10.6–26.0pp) and a
+**caregiver-specific family-signal penalty** (the family bundle adds 10.5–17.6pp
+on top of a labeled parental leave; parenthood net of a disclosure placebo
+6.8–19.2pp). The *label* of the interruption never adds a penalty — for three
+models "Parental leave" is modestly *less* costly than the identical dates
+labeled "Career break — extended travel" — and disclosure alone costs a small
+but significant 3–4pp. There is no fatherhood bonus anywhere. Because
 caregiving gaps and family signals are carried disproportionately by women in
 real applicant pools, a gender-neutral-in-form rule is not gender-neutral in
-effect. Single-résumé audits would detect only the small effects; the
-decision-relevant penalties are comparative. Effective sample sizes reflect
+effect. **Finding 3 — thin, vendor-specific gendered behaviors layer on top.**
+In direct woman-vs-man choices, Qwen is at parity at every level (equivalence
+at ±5pp confirmed); DeepSeek shows a small robust pro-woman preference (+3.6
+to +4.8pp, Holm-corrected); Luna's pro-woman preference activates only when
+gender is explicit (.58 → .65 for mother-vs-father; its field response exceeds
+Qwen's and DeepSeek's by 5.8–7.0pp, pair-matched); Haiku moves the opposite way
+(−4.5pp, p = .003) and is the only model whose mother-father choice gap differs
+from the others (tested directly) — concentrated in perceived commitment.
+**Finding 4 — abstention is a discrimination margin.** Haiku withholds salary
+offers entirely for 19.8% of pregnant applicants (27.5% under an explicit
+gender field), and withheld applicants are interviewed only 30% of the time —
+a −9.4pp interview penalty (t = −4.8) that listwise deletion would misread as
+fairness. Haiku's abstention and its interview consequence are shown in
+Figure 13. Single-résumé audits would detect only the small scoring effects;
+the decision-relevant penalties are comparative. Effective sample sizes reflect
 design clustering (40 or 16 résumé pairs per E2 cell), not call counts.
 
 ## 1. Introduction
@@ -83,12 +91,15 @@ requires. We ask:
 - **Q2.** Is it about being a woman, being a parent, or having interrupted employment?
 
 The answer that emerges is a two-layer account. **Layer 1** is a
-caregiving/ideal-worker penalty shared by all four vendors in sign: gender-blind,
-driven by the employment interruption and overt family signals, hidden in
-single scores and exposed in comparisons, and amplified when a job ad makes the
-ideal-worker norm salient. **Layer 2** is a thin, vendor-specific gender layer
-that surfaces mainly when gender is made explicit — one model's pro-woman
-preference, another's mother-specific penalty and pregnancy abstention.
+caregiving/ideal-worker penalty shared by all four vendors in sign, with two
+distinguishable parts: a *generic interruption penalty* — anyone returning from
+an 8-month employment gap is penalized, and caregivers carry most gaps — and a
+*caregiver-specific family-signal penalty* attached to overt parenting signals.
+It is gender-blind, hidden in single scores, exposed in comparisons, and
+amplified when a job ad makes the ideal-worker norm salient. **Layer 2** is a
+thin, vendor-specific gender layer that surfaces mainly when gender is made
+explicit — one model's pro-woman preference, another's mother-specific penalty
+and pregnancy abstention.
 
 ## 2. Design
 
@@ -131,8 +142,8 @@ condition.
 | --- | --- | --- |
 | `none` (baseline) | "excited to be applying" | — |
 | `parent` | "married with two children" | PTA volunteer line |
-| `parent_gap` | " + leave | 8-month *Parental leave* entry; later dates shifted |
-| `parent_committed` | " + objective commitment bullets |
+| `parent_gap` | " + cover note of `parent` | 8-month *Parental leave* entry inserted; later dates shifted |
+| `parent_committed` | " + cover note of `parent` | `parent` + objective commitment bullets |
 | `pregnant` (women only) | "currently pregnant" | — |
 | `personal` *placebo* | marathon/hobby line | shelter-volunteer line (length-matched) |
 | `gap_travel` *placebo* | neutral | 8-month *Career break — extended travel*, same dates |
@@ -181,6 +192,20 @@ passes (final validity: main run 99.91/98.99/98.95/99.83%; phase 3
 100/100/100/99.98%), and headline estimates are re-computed on strict-validity
 samples. Refusals and withholding are outcomes. Prompt versions differ between
 main-run and phase-3 tables; each table below states its source.
+
+**Confirmatory tests** (specified in SPEC.md / SPEC_PHASE3.md before the runs):
+parent-cue penalties in E1/E2/E3 per model and gender; mother-minus-father
+differences; E3 impact ratios; E4 wording contrasts; phase-3 cue-level
+penalties, placebo decomposition, direct gender contrasts, abstention rates,
+drift anchors. **Equivalence**: "no difference" claims use TOST at a
+pre-stated smallest effect of interest of ±5pp with 90% CIs. **Small-cluster
+robustness**: O8 tests (16 pairs) and E4 (32 résumé clusters) are re-checked
+with wild cluster bootstrap p-values. **Regression check**: cluster-mean
+t-tests are re-estimated as LPMs with position, paraphrase, and name controls.
+Everything else is exploratory and labeled. **Scope of inference**: these are
+four pinned model versions in high-volume, low-cost screening configurations
+(consumer default, no system prompt), tested on résumés like ours;
+cross-model comparisons are descriptive (n = 4 models).
 
 ## 3. Preregistration status
 
@@ -237,18 +262,25 @@ résumé-FE adjusted impact ratios; four-fifths line .80): DeepSeek .71 mothers 
 .70 fathers; Haiku **.25 / .23**; Luna .78 / .81; Qwen .75 / .80 — the same
 résumés shortlisted at 23–81% of their childless rate.
 
-Two checks address the possibility that forced choice merely *amplifies* small
-score differences (a tie-breaker) or that the integer scoring scale is too
-coarse. **(a) Noise model.** Converting each model's E1 fit gap into a
-predicted choice share via a probit with the E1 within-cell fit SD (σ =
-0.94–1.23) predicts choice shares 8–41pp *fairer* than observed — e.g.,
-DeepSeek parent .46 predicted vs .36 actual; Luna leave-gap .41 vs .19; Haiku,
-whose E1 fit gap is *positive* (+.34), would be predicted to win 64% of finals
-but wins 23%. **(b) Tie-breaker split.** The choice penalty is larger when the
-two résumés' pretest qualities are near-ties (all eight model×cue cells,
-t = −0.9 to −4.0), consistent with tie-breaking — but remains 9–32pp in
-clear-gap pairs. Scoring differences, thresholded or not, do not explain the
-comparative penalties.
+Three checks address the possibility that forced choice merely *amplifies*
+small score differences (a tie-breaker) or that the integer scoring scale is
+too coarse. **(a) Cue amplification vs. quality amplification.** E2 choices
+track ordinary quality differences (the two résumés' E1 `none` fit gap, roles
+counterbalanced) at 13–18pp of choice probability per fit point. The family
+cues, in choice terms, act like quality losses of 0.8–2.1 fit points — 4× to
+31× their actual score effects — and for Haiku the sign reverses: it *scores*
+parents higher (+0.34) yet chooses them 23% of the time. No amplification of
+scores can produce a sign reversal (Figure 9). **(b) Noise model.** Converting
+each model's E1 fit gap into a predicted choice share via a probit with the
+within-résumé fit SD (σ × √2 for a difference of draws) and bootstrapping over
+résumé pairs: choices are significantly *below* prediction in 7 of 8 model×cue
+cells (observed − predicted −5 to −52pp, bootstrap 95% CIs excluding zero);
+the one exception is DeepSeek's leave-gap cue, whose choice penalty is
+consistent with score amplification (−0.2pp [−3.6, +3.1]). **(c) Tie-breaker
+split.** The choice penalty is larger when the two résumés' pretest qualities
+are near-ties (all eight model×cue cells, t = −0.9 to −4.0), consistent with
+tie-breaking — but remains 9–32pp in clear-gap pairs. Scoring differences,
+thresholded or amplified, do not explain the comparative penalties.
 
 ### 4.3 What the penalty is about (Q2): interruption + family bundle, not gender
 
@@ -258,27 +290,34 @@ pooled, 40 pairs, mothers) with the six-set robustness in the appendix:**
 | component (comparator) | DeepSeek | Haiku | Luna | Qwen |
 | --- | --- | --- | --- | --- |
 | interruption itself (P(`gap_travel`) vs .50) | −10.6pp (t −8.2) | **−25.6pp** (t −9.9) | **−26.0pp** (t −7.4) | −22.6pp (t −9.1) |
-| parenthood net of disclosure (`parent` − `personal`) | −10.4pp [−12.8, −8.0] (t −8.4) | −19.2pp [−23.4, −15.0] (t −8.9) | −12.1pp (t −5.7) | −6.8pp (t −4.1) |
-| caregiving label (`gap_parental_only` − `gap_travel`) | +1.7pp [.5, 2.9] (t 2.8) | −1.1pp [−3.2, +.9] (t −1.1) | +6.5pp (t 4.6) | +6.7pp (t 7.5) |
-| family bundle (`parent_gap` − `gap_parental_only`) | −10.5pp [−12.5, −8.4] (t −9.8) | −17.6pp (t −8.2) | −11.5pp (t −5.7) | −12.2pp (t −8.5) |
+| parenthood net of disclosure (`parent` − `personal`) | −10.4pp [−12.8, −8.0] (t −8.4) | −19.2pp [−23.4, −15.0] (t −8.9) | −12.1pp [−16.3, −7.9] (t −5.7) | −6.8pp [−10.1, −3.6] (t −4.1) |
+| caregiving label (`gap_parental_only` − `gap_travel`) | +1.7pp [+0.5, +2.9] (t 2.8) | −1.1pp [−3.2, +0.9] (t −1.1) | +6.5pp [+3.8, +9.3] (t 4.6) | +6.7pp [+4.9, +8.4] (t 7.5) |
+| family bundle (`parent_gap` − `gap_parental_only`) | −10.5pp [−12.5, −8.4] (t −9.8) | −17.6pp [−20.2, −14.5] (t −8.2) | −11.5pp [−15.5, −7.6] (t −5.7) | −12.2pp [−15.0, −9.4] (t −8.5) |
 
-(95% CIs shown where the six matched-set ranges in Appendix C are summarized;
-brackets are the primary-estimand CIs.) Disclosure alone is nearly free
-(`personal` −3 to −4pp vs parity, t −4.1 to −4.6). The interruption itself —
-an 8-month break labeled *travel* — costs 11–26pp. The *label* never adds a
-penalty: Haiku is indifferent; DeepSeek shows a tiny positive (+1.7pp);
-Luna and Qwen treat *Parental leave* as 6–7pp *less* costly than the same
-dates labeled travel. The family bundle adds a further 10–18pp *on top of* a
-labeled parental leave. In the six-set robustness (O8 at L0–L3, O20 at L1/L2
+(Every cell [95% CI] on the primary estimand.) Disclosure alone costs a small
+but significant 3–4pp (`personal` vs parity, t −4.1 to −4.6). The interruption
+itself — an 8-month break labeled *travel* — costs 10.6–26.0pp. The *label*
+never adds a penalty: Haiku's estimate is statistically equivalent to zero at
+±5pp (90% CI [−3.2, +0.9]); DeepSeek shows a tiny positive (+1.7pp); Luna and
+Qwen treat *Parental leave* as 6–7pp *less* costly than the same dates labeled
+travel. The family bundle adds a further 10.5–17.6pp *on top of* a labeled
+parental leave. In the six-set robustness (O8 at L0–L3, O20 at L1/L2
 separately), parenthood and bundle survive Holm in 23 of 24 tests each; the
-label is null for Haiku and positive for Luna (5/6 sets) and Qwen (6/6).
+label is null for Haiku and positive for Luna (5/6 sets) and Qwen (6/6)
+(Figure 10).
 
 **Removing gender information changes nothing.** Pair-matched tests on O8
 (16 pairs): P(parent chosen), names (L0) minus blind (L3): DeepSeek +.006
 (t 0.3), Haiku −.005 (t −0.3), Luna −.013 (t −1.2), Qwen +.003 (t 0.2); the
-leave-gap cue likewise (all |t| ≤ 1.8, p ≥ .08). Explicit gender *fields*
-partially offset the plain-parent penalty for Haiku (+7.4pp, t 7.7) and Luna
-(+3.4pp, t 3.0), with no effect on DeepSeek or Qwen. E3 ranking replicates the
+leave-gap cue likewise. Because non-rejection is not evidence of absence, we
+pre-state ±5pp as the smallest effect of interest and run TOST: the blind-names
+difference is statistically equivalent to zero at ±5pp in **7 of 8 model×cue
+cells** (90% CIs all within ±5pp; the eighth, DeepSeek's leave-gap, grazes it
+at [0.0, +5.6]); minimum detectable effects are 3.0–5.4pp (Figure 11).
+Wild-cluster bootstrap (Rademacher, by occupation) does not change any
+conclusion. Explicit gender *fields* partially offset the plain-parent penalty
+for Haiku (+7.4pp, t 7.7; wild p = .006) and Luna (+3.4pp, t 3.0; wild
+p = .015), with no effect on DeepSeek or Qwen. E3 ranking replicates the
 invariance (top-3 ratios across L0–L3: .64/.66/.66/.65 DeepSeek;
 .15/.19/.17/.16 Haiku; .70/.72/.70/.71 Luna; .68/.71/.74/.71 Qwen).
 
@@ -300,6 +339,10 @@ résumé-matched; Holm within each contrast's family; parent cue):
 The pattern is *perception-asymmetric, decision-symmetric*: DeepSeek's only
 mother-specific penalty is perceived commitment; Haiku's spans commitment,
 likability, and choice; Luna and Qwen show none that survives correction.
+Tested directly across the same pairs, Haiku's mother-father choice gap
+differs from all three other models (−2.6 to −4.4pp, t −2.1 to −2.9,
+p < .05) — "only Haiku" is a tested difference, not an asymmetry of
+significance.
 
 ### 4.5 Explicit gender: vendor-specific preferences
 
@@ -315,12 +358,17 @@ parity .50; 56 unordered pairs; Holm over six cells per model; phase 3):
 | Luna | childless / parent | **.522 / .578** | **.587 / .646** | **.575 / .634** |
 | Haiku | childless / parent | **.528 / .544** | .526 / .498 | .513 / .471 |
 
-(bold = Holm-corrected difference from parity.) Level contrasts: Luna jumps
-+6.4 to +6.9pp when the field is added (t 5.7–6.6); Haiku moves −4.5pp on the
-mother-vs-father contrast (t −3.1, p = .003), from a significant pro-mother
-tilt at L0 (.544) to parity (.498) and below (.471). Explicit gender fields —
-standard in many markets — are not neutral: they activate vendor-specific
-preferences that name-only screening conceals.
+(bold = Holm-corrected difference from parity; Figure 12.) Qwen's parity is
+not merely non-rejection: TOST confirms equivalence at ±5pp in every cell
+(e.g., 90% CI [−1.4, +0.6]). The vendor differences are tested directly,
+pair-matched across the same 56 résumé pairs: Luna's field response exceeds
+Qwen's by +7.0pp (childless) and +5.8pp (parent-vs-father) and DeepSeek's by
++3.9 to +6.4pp (t 2.5–4.5); Haiku's field response on the parent contrast is
+−5.0 to −5.6pp *below* both (t −3.0 to −3.7) — the two vendors move in
+opposite directions. Haiku's L0 tilt (.544 pro-mother) falls to .498 and .471
+with explicit gender. Explicit gender fields — standard in many markets — are
+not neutral: they activate vendor-specific preferences that name-only
+screening conceals.
 
 ### 4.6 Abstention: withholding offers as a discrimination margin
 
@@ -384,38 +432,44 @@ converted near-arbitrary lawyer-pair choices into measurable penalties.
 DeepSeek .68 first-slot preference; Haiku prefers the second slot (.39); all
 positions counterbalanced. **Names**: six per gender rotated within cells;
 name-frequency sensitivity documented by Wilson & Caliskan (2024).
-**Table sources**: §§4.2–4.4 and 4.6–4.9 main run (phase-1/2 prompts);
-§§4.3 (decomposition, invariance) and 4.5 phase 3.
+**Regression check**: LPMs with pair-clustered SEs and position, paraphrase,
+and name controls reproduce the cluster-mean tests (e.g., leave-gap
+coefficient −.047/−.125/−.106/−.161, t −3.7 to −9.4; gender interactions ≈ 0).
+**Table sources**: §§4.2, 4.4, 4.6–4.9 and the E2/E3 tables of §4.2 use the
+main run (phase-1/2 prompts); the decomposition, invariance, and direct-gender
+analyses (§§4.3, 4.5) use phase 3.
 
 ## 5. Discussion
 
 ### 5.1 A two-layer account
 
-**Layer 1: a caregiving / ideal-worker penalty, common to all four vendors in
-sign.** It is invariant to gender information (blind = names-only, everywhere);
-it is carried by the employment interruption and by overt family signals
-rather than the word "parental"; it is hidden in single scores and exposed in
-comparisons; and it is amplified when the job ad makes the ideal-worker norm
-salient (E4). This is Acker's (1990) ideal worker rendered as a selection
-rule: gender-neutral in form, but gendered in effect, because caregiving gaps
-and PTA-type signals are carried overwhelmingly by women in real applicant
-pools — a textbook disparate-impact / indirect-discrimination structure. That
-fathers who *signal* caregiving are also penalized matches the human
-flexibility-stigma literature (Rudman & Mescher 2013; Williams et al. 2013);
-what differs from the human benchmark is the absence of the plain-cue
-fatherhood bonus. Within Layer 1, the interruption component behaves like
-availability inference (Phelps 1972; Kroft et al. 2013; Weisshaar 2018), while
-the bundle component — penalized on top of a labeled leave, resistant to
-commitment evidence that only partly restores parity — behaves like the
-normative discrimination Benard & Correll (2010) describe.
+**Layer 1: a caregiving/ideal-worker penalty, common to all four vendors in
+sign, with two parts.** The *generic interruption penalty* (10.6–26.0pp for an
+8-month gap regardless of label or gender) behaves like availability inference
+(Phelps 1972; Kroft et al. 2013; Weisshaar 2018) — anyone with a gap is
+treated as a availability risk, and caregivers carry most gaps. The
+*caregiver-specific family-signal penalty* (6.8–19.2pp net of disclosure, plus
+10.5–17.6pp for the bundle on top of a labeled leave) attaches to overt
+parenting signals as such, is resistant to commitment evidence that only
+partly restores parity, and behaves like the normative discrimination Benard &
+Correll (2010) describe. Both parts are invariant to gender information,
+hidden in single scores, exposed in comparisons, and amplified when the job ad
+makes the ideal-worker norm salient (E4). Together they are Acker's (1990)
+ideal worker rendered as a selection rule: gender-neutral in form, but
+gendered in effect, because caregiving gaps and PTA-type signals are carried
+overwhelmingly by women in real applicant pools — a textbook disparate-impact
+/ indirect-discrimination structure. That fathers who *signal* caregiving are
+also penalized matches the human flexibility-stigma literature (Rudman &
+Mescher 2013; Williams et al. 2013); what differs from the human benchmark is
+the absence of the plain-cue fatherhood bonus.
 
-**Layer 2: a thin, vendor-specific gender layer.** It appears when gender is
+**Layer 2: a thin, vendor-specific gender layer** (Figures 12–13). It appears when gender is
 made salient: Luna's pro-woman preference switching on with explicit fields;
 Haiku's mother-specific penalty in same-gender comparisons, its refusal to
-*state* gender while demonstrably using it, and its pregnancy abstention. The
-pattern is consistent with alignment shaping overt gender behavior while
-leaving Layer 1 intact — vendors differ in exactly the behaviors most trained
-against. Because four vendors realize four different preference structures
+*state* gender while demonstrably using it, and its pregnancy abstention. We
+conjecture — this study has no unaligned models to compare against — that
+alignment training shapes overt gender behavior while leaving Layer 1 intact:
+vendors differ precisely in the behaviors most directly trained against. Because four vendors realize four different preference structures
 over identical materials, vendor concentration in screening infrastructure
 would convert vendor idiosyncrasy into market-wide correlation (Kleinberg &
 Raghavan 2021).
@@ -434,8 +488,9 @@ audits must also compare caregiving-signal holders.
 
 For deployment: EEO boilerplate does nothing; greedy availability language
 amplifies the penalty; explicit gender fields change two of four vendors in
-opposite directions; vendor choice moves the penalty by a factor of two to
-eight.
+opposite directions; and vendor choice matters — the same leave-gap cue costs
+19.0pp (DeepSeek) to 39.0pp (Haiku) of choice probability (≈2×), and the
+shortlist shortfall ranges from .22 (Luna) to .75 (Haiku) (≈3.4×).
 
 ### 5.3 Limitations
 
@@ -496,23 +551,24 @@ against the source document before journal submission.)*
   welfare. *PNAS*, 118(22), e2018340118.
 - Kroft, K., Lange, F., & Notowidigdo, M. J. (2013). Duration dependence and
   labor market conditions: Evidence from a field experiment. *Quarterly
-  Journal of Economics*, 128(3), 1123–1167. ◆
+  Journal of Economics*, 128(3), 1123–1167.
 - Phelps, E. (1972). The statistical theory of racism and sexism. *American
   Economic Review*, 62(4), 659–661. ◆
 - Rozado, D. (2025). Gender and positional biases in LLM-based hiring
   decisions. arXiv:2505.17049.
 - Rudman, L. A., & Mescher, K. (2013). Penalizing men who request a family
-  leave: Is flexibility stigma a femininity norm? *Journal of Social Issues*,
-  69(2), 322–340. ◆
+  leave: Is flexibility stigma a femininity stigma? *Journal of Social
+  Issues*, 69(2), 322–340.
 - Veldanda, A. K., et al. (2023). Investigating algorithmic hiring bias in
   the era of ChatGPT. arXiv:2310.05135. ◆
-- Weisshaar, K. (2018). From opt out to blocked out: The consequences of
-  employment interruptions for mothers' career advancement. *American
-  Sociological Review*, 83(6), 1054–1093. ◆
+- Weisshaar, K. (2018). From opt out to blocked out: The challenges for
+  labor market re-entry after family-related employment lapses. *American
+  Sociological Review*, 83(1), 34–60.
 - Williams, J. C. (2000). *Unbending Gender: Why Family and Work Conflict and
   What to Do About It*. Oxford University Press.
 - Williams, J. C., Blair-Loy, M., & Berdahl, J. L. (2013). Cultural schemas,
-  social class, and the flexible workplace. *Social Problems*, 60(3). ◆
+  social class, and the flexibility stigma. *Journal of Social Issues*,
+  69(2), 209–234.
 - Wilson, K., & Caliskan, A. (2024). Gender, race, and intersectional bias in
   resume screening via language model retrieval. AIES.
 - Yin, L., Alba, D., & Nicoletti, L. (2024). OpenAI's GPT is a recruiter's

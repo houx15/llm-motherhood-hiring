@@ -480,3 +480,111 @@ The pieces fit a two-layer account that the discussion almost states:
 - Task dependence explains why audits miss layer 1; cue-level manipulation explains layer 2.
 - Occupation results (weak) and E4 (greedy wording) then slot in as "what activates layer 1".
 Rewrite the introduction's questions and the discussion around this structure.
+
+---
+
+# Round 6 review (Draft 5.0, commit 3e540f8)
+
+R4 technical fixes are in (unordered-pair clustering, salary filter, inference on the
+mother–father table, references from the proposal). The paper now has a clear question, a
+coherent two-layer framework, and phase-3 figures. Remaining items, by the seven dimensions.
+
+## 1. Key question — precise the central concept
+The decomposition shows Layer 1 has two parts: a **generic interruption penalty** (an 8-month
+*travel* gap alone costs 11–26pp) and a **caregiver-specific family-signal penalty** (parent −
+personal; bundle on top of a labeled leave). "Caregiver penalty" fits the second part only.
+State in the abstract, §1 and §5.1: Layer 1 = interruption penalty (anyone with a gap; caregivers
+carry most gaps) + family-signal penalty (caregiver-specific). Keep the title, define the term.
+
+## 2. Situating — good; two citation errors (my earlier suggestions, from memory)
+- Weisshaar (2018) is "From opt out to blocked out: The challenges for labor market re-entry
+  after family-related employment lapses," *ASR* 83(1), 34–60 (check). Current title/issue/pages
+  look wrong.
+- Rudman & Mescher (2013): "…Is flexibility stigma a femininity stigma?" (not "norm").
+- Williams, Blair-Loy & Berdahl (2013): "Cultural schemas, social class, and the flexibility
+  stigma," *Journal of Social Issues* 69(2), 209–234 (not *Social Problems*).
+Verify all ◆ entries against the source before submission.
+
+## 3. Method vs question — the amplification test needs one more step
+- Forced choice amplifies *any* difference, including ordinary quality differences. To claim "the
+  comparison itself adds penalty that scores do not contain", show that **family cues are
+  amplified more than quality differences**. Use the pairs themselves: the two résumés in each
+  pair differ in E1 fit; with roles counterbalanced you can estimate how strongly E2 choice tracks
+  the E1 quality gap. Compare that amplification with the amplification of the family-cue gap.
+- `round5.py` uses P = Φ(gap / σ) with σ = SD within family×gender×occupation. That σ mixes
+  between-résumé variation with sampling noise, and a difference of two draws has SD σ√2.
+  Use within-résumé SD (same résumé, same condition) and report sensitivity to σ.
+- Lead with the strongest piece of evidence: Haiku's E1 fit gap for parents is *positive* (+.34)
+  but it chooses parents 23% of the time — a sign reversal, which no amplification account produces.
+- The "label" conclusion rests on travel as the reference gap. The neutral-label arm is designed;
+  fielding it (company closure / certification program; L0, O20, DeepSeek + Haiku; ~$5–10) would
+  turn the main limitation into a result. Otherwise keep the current caveat.
+
+## 4. Measurement and consistency
+- Abstract Finding 2: "the 8-month interruption and the explicit family bundle each cost 7–24pp"
+  — the primary table gives interruption 10.6–26.0pp and bundle 10.5–17.6pp. Use primary-estimand
+  numbers in the abstract.
+- "Disclosure alone is nearly free": `personal` is −3 to −4pp with t −4.1 to −4.6 — small but
+  significant. Say so.
+- Decomposition table: CIs shown for some cells only, and the caption ("95% CIs shown where the
+  six matched-set ranges … are summarized; brackets are the primary-estimand CIs") is confusing.
+  Give every cell estimate [95% CI].
+- §2.3 cue table is broken (`parent_gap` row has an unclosed quote; `parent_committed` row has
+  two columns).
+- §5.2 "vendor choice moves the penalty by a factor of two to eight" — not derived anywhere.
+  Compute it or delete it.
+- §4.10 "Table sources" lists §4.3 under both main run and phase 3.
+
+## 5. Presentation — figures
+- None of the figures is referenced in the text. Add "(Figure 9)" etc. at each claim.
+- Fig 9: three panels in three units (fit points, choice share, ratio), and no CIs for E1/E3.
+  The headline is better shown as *predicted choice share from scores vs observed choice share*,
+  per model and cue — that is exactly the claim.
+- Fig 10 ("waterfall") draws a cumulative path parity → +personal → +gap → label → +bundle, but the
+  conditions are not nested that way (`gap_travel` does not contain the personal disclosure;
+  `parent` is not on the path). Either plot the truly nested chain
+  (none → gap_travel → gap_parental_only → parent_gap) plus `personal` and `parent` separately,
+  or show the four components as a dot plot with CIs.
+- Figs 10–12 have no CIs. Fig 12's y-axis starts at .475, which visually exaggerates small
+  differences; add CIs and mark Holm-significant cells.
+- Fig 13 right panel title "withheld ⇒ no interview" overstates — 30% are interviewed.
+
+## 6. Interpretation
+- §6 still says audits "will certify as fair systems that are not"; §5.2 correctly says
+  single-résumé audits "detect only small effects". Use the softer, accurate wording throughout.
+- Layer 2 "consistent with alignment shaping overt gender behavior" is an interpretation without a
+  test in this study (no unaligned comparison). Label it as a conjecture.
+
+## 7. Framework — coherent
+The two-layer account now organizes the paper. With the Layer-1 split (interruption +
+family signal) made explicit, every result has a place: task dependence (why audits miss Layer 1),
+decomposition (what Layer 1 is), invariance (Layer 1 is not gender-based), E4 (what activates
+Layer 1), direct gender + abstention (Layer 2).
+
+## Round 6b — statistical inference checklist (Draft 5.0)
+
+Done well: within-résumé contrasts; clustering at design units (E2 unordered pairs, E1 résumés,
+E3 occupations with résumé/position FE, E4 résumés); Holm within test families; strict-validity
+re-estimates; cross-model pooling with I².
+
+To add:
+1. **Equivalence tests for "no change" claims.** "Blind = names" (p ≥ .08, 16 pairs) is absence of
+   evidence. Pre-state a smallest effect of interest (e.g. ±5pp) and run TOST; report the 90% CI.
+   Same for "label adds nothing" (Haiku) and "Qwen at parity".
+2. **Test differences between models/levels directly** (Gelman & Stern 2006: a significant vs a
+   non-significant result is not a significant difference). E.g. Luna vs Qwen response to the
+   field; Haiku vs others in mother − father gap: model × condition interaction, clustered.
+3. **Small-cluster corrections.** O8 (16 pairs), E3 (20 occupations), E4 (32 résumés): use CR2
+   with Satterthwaite df or wild cluster bootstrap; check that conclusions hold.
+4. **Regression version of the cluster-mean t-tests** (LPM or logit with pair/résumé FE and
+   clustered SEs, or crossed random effects for pair, name, occupation) as a robustness check,
+   so position, paraphrase and name enter as controls.
+5. **Uncertainty on the noise-model test** (bootstrap over résumé pairs: CI for observed −
+   predicted).
+6. **CIs in every table and figure**; one decimal convention.
+7. **Confirmatory vs exploratory.** List the confirmatory tests (from SPEC/SPEC_PHASE3) in §2.6;
+   everything else exploratory.
+8. **Sensitivity / minimum detectable effects** for every null (invariance, occupational
+   moderation, EEO wording).
+9. **Scope of inference** stated: conclusions are about these four pinned model versions and
+   résumés like ours; cross-model comparisons are descriptive (n = 4 models).

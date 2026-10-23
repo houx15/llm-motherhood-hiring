@@ -440,112 +440,145 @@ P3N = {"deepseek": "DeepSeek", "haiku": "Haiku", "luna": "Luna", "qwen": "Qwen"}
 
 
 def fig_p3_task_dependence(out=OUT):
-    """fig9: same cue across scoring / choice / ranking (E1 fit gap, E2 P(parent),
-    E3 FE ratio; mothers, leave-gap cue, main run)."""
+    """fig9: predicted choice share from E1 scores (probit, within-resume sigma*sqrt2)
+    vs observed E2 choice share, per model x cue (mothers)."""
     import json as _json
 
-    s = _json.load(open("docs/report/stats.json"))
-    fig, axes = plt.subplots(1, 3, figsize=(9.5, 3.2))
-    mk = list(SHORT)
-    for ax, (panel, title, ylab) in zip(axes, [
-        ("fit", "E1 scoring: fit gap (pts)", "cue − none (fit)"),
-        ("choice", "E2 choice: P(parent chosen)", "share vs childless"),
-        ("rank", "E3 ranking: FE impact ratio", "top-3 ratio"),
-    ]):
-        for i, m in enumerate(mk):
-            mm = s["models"][m]
-            if panel == "fit":
-                v = mm["e1_gaps_women"]["overall_fit"]["parent_gap_minus_none"]
-                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6)
-                ax.axhline(0, color="0.2", lw=0.8)
-            elif panel == "choice":
-                v = mm["e2_clustered"]["cells"]["parent_gap|female"]["p"]
-                se = mm["e2_clustered"]["cells"]["parent_gap|female"]["se"]
-                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6, yerr=1.96 * se, capsize=3)
-                ax.axhline(0.5, color="0.2", ls="--", lw=1, label="parity")
-            else:
-                v = mm["e3_fe"]["F"]["adjusted_ratio"]
-                ax.bar(i, v, color=P3[list(P3N)[i]], width=0.6)
-                ax.axhline(0.8, color="0.4", ls=":", lw=1.2, label="4/5 line")
-            ax.set_xticks(range(4))
-            ax.set_xticklabels(["DS", "Haiku", "Luna", "Qwen"])
-        ax.set_title(title, loc="left", fontsize=9)
-        ax.set_ylabel(ylab)
-    fig.suptitle("Figure 9. The same cue (mother, leave gap) across tasks — small in scores, large in comparison",
-                 y=1.03, fontsize=10)
+    r6 = _json.load(open("docs/phase3/round6_stats.json"))["noise_model2"]
+    fig, ax = plt.subplots(figsize=(5.6, 4.0))
+    xs = {"parent": 0, "parent_gap": 1}
+    for mk in P3N:
+        for i, con in enumerate(["parent", "parent_gap"]):
+            r = r6[mk][con]
+            x = xs[con] + (list(P3N).index(mk) - 1.5) * 0.12
+            ax.scatter(x, r["predicted_P"], marker="o", facecolors="none", edgecolors=P3[mk], s=42, zorder=3)
+            ax.scatter(x, r["observed_P"], marker="o", color=P3[mk], s=42, zorder=4)
+            ax.plot([x, x], [r["predicted_P"], r["observed_P"]], color=P3[mk], lw=0.9, alpha=0.7, zorder=2)
+            lo = max(0.0, r["observed_P"] - r["boot_ci95"][0])
+            hi = max(0.0, r["boot_ci95"][1] - r["observed_P"])
+            ax.errorbar(x, r["observed_P"], yerr=[[lo], [hi]],
+                        color=P3[mk], capsize=2, lw=1, zorder=2)
+    ax.axhline(0.5, color="0.3", ls="--", lw=1)
+    handles = [plt.Line2D([], [], marker="o", color="0.3", ls="", mfc="none", label="predicted from E1 scores"),
+               plt.Line2D([], [], marker="o", color="0.3", ls="", label="observed in E2 choice (95% CI)")]
+    for mk in P3N:
+        handles.append(plt.Line2D([], [], marker="o", ls="", color=P3[mk], label=P3N[mk]))
+    ax.legend(handles=handles, frameon=False, fontsize=7, loc="lower left")
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(["parent cue", "parent + leave gap"])
+    ax.set_ylabel("P(parent chosen) vs childless woman")
+    ax.set_ylim(0, 0.85)
+    ax.set_title("Figure 9. Scores cannot explain choices (mothers): predicted vs observed", loc="left", fontsize=9.5)
     fig.tight_layout()
     fig.savefig(out / "fig9_task_dependence.pdf")
     plt.close(fig)
 
 
 def fig_p3_decomposition(out=OUT):
-    """fig10: waterfall none → disclosure → gap(+label) → bundle (primary estimand)."""
+    """fig10: component dot plot with 95% CIs (primary estimand: O20 L1+L2, 40 pairs)."""
     import json as _json
 
-    s = _json.load(open("docs/phase3/round5_stats.json"))["primary_decomposition"]
-    stages = ["parity", "personal", "gap_travel", "gap_parental_only", "parent_gap"]
-    labels = ["parity\n(0.50)", "+ personal\ndisclosure", "+ 8-month gap\n(travel)", "label:\nparental", "+ family\nbundle"]
-    fig, ax = plt.subplots(figsize=(9.5, 3.4))
-    x = range(len(stages))
-    for j, mk in enumerate(P3N):
-        vals = [0.5] + [s[mk][f"cell_{c}"]["P"] for c in stages[1:]]
-        ax.plot(x, vals, "o-", color=P3[mk], label=P3N[mk], lw=1.6, ms=5)
-    ax.axhline(0.5, color="0.3", ls="--", lw=1)
-    ax.set_xticks(list(x))
-    ax.set_xticklabels(labels)
-    ax.set_ylabel("P(candidate chosen) vs childless finalist")
-    ax.set_title("Figure 10. Placebo waterfall (O20, L1+L2 pooled): the interruption and the family bundle carry the penalty;\nthe 'parental' label adds nothing (or slightly helps)", loc="left", fontsize=9.5)
-    ax.legend(ncol=4, frameon=False, loc="lower left")
+    r5 = _json.load(open("docs/phase3/round5_stats.json"))["primary_decomposition"]
+    comps = ["parenthood", "label", "bundle"]
+    labels = ["parenthood net\nof disclosure", "caregiving label\n(parental vs travel)", "family bundle\non top of leave"]
+    fig, ax = plt.subplots(figsize=(6.2, 3.6))
+    for yi, comp in enumerate(comps):
+        for mk in P3N:
+            r = r5[mk][comp]
+            y = yi + (list(P3N).index(mk) - 1.5) * 0.13
+            ax.errorbar(r["diff"], y, xerr=[[r["diff"] - r["ci95"][0]], [r["ci95"][1] - r["diff"]]],
+                        color=P3[mk], capsize=2.5, lw=1.3, marker="o", ms=5)
+    ax.axvline(0, color="0.3", lw=1)
+    ax.set_yticks(range(3))
+    ax.set_yticklabels(labels)
+    ax.set_xlabel("difference in P(candidate chosen) between conditions (95% CI)")
+    handles = [plt.Line2D([], [], marker="o", ls="", color=P3[mk], label=P3N[mk]) for mk in P3N]
+    ax.legend(handles=handles, frameon=False, fontsize=7.5, ncol=4, loc="upper center")
+    ax.set_title("Figure 10. Placebo decomposition: interruption + family bundle carry the penalty;\nthe 'parental' label adds nothing (or slightly helps)", loc="left", fontsize=9)
     fig.tight_layout()
     fig.savefig(out / "fig10_decomposition.pdf")
     plt.close(fig)
 
 
 def fig_p3_invariance(out=OUT):
-    """fig11: P(parent chosen) by cue level L0-L3 per model (O8, both genders pooled)."""
+    """fig11: P(parent chosen) by cue level per model (O8, pooled genders), with
+    pair-cluster 95% CIs."""
     import json as _json
+    import numpy as _np
+    from scipy import stats as _sps
 
-    s = _json.load(open("docs/phase3/phase3_key_stats.json"))["cue_level_o8_only"]
+    from audit.analysis.phase3_stats import _tables_for
+    from audit.analysis.round3 import _pm
+    from audit.config import load_occupations_built
+
+    o8 = {o.id for o in load_occupations_built().occupations if o.cohort == "o8"}
     lv = ["name", "name_field", "initial_field", "blind"]
-    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.4), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.5), sharey=True)
     for ax, cue in zip(axes, ["parent", "parent_gap"]):
         for mk in P3N:
-            vals = [s[mk][cue][l] for l in lv]
-            ax.plot(range(4), vals, "o-", color=P3[mk], label=P3N[mk], lw=1.5, ms=4.5)
+            e2 = _tables_for({"deepseek": "deepseek_v41_flash", "haiku": "claude_haiku_55",
+                              "luna": "gpt6_luna", "qwen": "qwen38_flash"}[mk])["e2"]
+            sub = e2[e2.occupation_id.isin(o8)]
+            vals, errs = [], []
+            for l in lv:
+                pm = _pm(sub, l, cue)
+                vals.append(pm.mean())
+                errs.append(1.96 * pm.std(ddof=1) / _np.sqrt(len(pm)))
+            ax.errorbar(range(4), vals, yerr=errs, marker="o", color=P3[mk], label=P3N[mk],
+                        lw=1.5, ms=4.5, capsize=2.5)
         ax.axhline(0.5, color="0.3", ls="--", lw=1)
         ax.set_xticks(range(4))
         ax.set_xticklabels(["L0\nnames", "L1\n+field", "L2\ninitials\n+field", "L3\nblind"])
-        ax.set_title(f"{cue.replace('_', ' ')}", loc="left", fontsize=9.5)
+        ax.set_title(cue.replace("_", " "), loc="left", fontsize=9.5)
     axes[0].set_ylabel("P(parent chosen) vs childless")
-    axes[0].legend(frameon=False, loc="lower right")
-    fig.suptitle("Figure 11. Gender-information invariance: removing all gender information (L3) leaves the penalty unchanged",
-                 y=1.03, fontsize=10)
+    axes[0].legend(frameon=False, fontsize=7.5, loc="lower right")
+    fig.suptitle("Figure 11. Gender-information invariance: removing all gender information (L3) leaves the penalty unchanged", y=1.03, fontsize=10)
     fig.tight_layout()
     fig.savefig(out / "fig11_invariance.pdf")
     plt.close(fig)
 
 
 def fig_p3_direct_gender(out=OUT):
-    """fig12: P(woman chosen) by cue level and contrast per model."""
+    """fig12: P(woman chosen) by cue level and contrast per model, with 95% CIs;
+    filled markers = Holm-significant vs parity."""
     import json as _json
+    import numpy as _np
+    from scipy import stats as _sps
+
+    from audit.analysis.phase3_stats import _tables_for
+    from audit.analysis.round3 import _wm, _unordered_pair
+    import pandas as _pd
 
     dg = _json.load(open("docs/phase3/round3_stats.json"))["direct_gender"]
-    lv = [("name", "L0 names"), ("name_field", "L1 +field"), ("initial_field", "L2 initials+field")]
-    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.4), sharey=True)
+    lv = ["name", "name_field", "initial_field"]
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.5), sharey=True)
+    mk2full = {"deepseek": "deepseek_v41_flash", "haiku": "claude_haiku_55",
+               "luna": "gpt6_luna", "qwen": "qwen38_flash"}
     for ax, con, title in zip(axes, ["gender_none", "gender_parent"],
                               ["childless woman vs childless man", "mother vs father"]):
         for mk in P3N:
-            cells = dg[mk]["parity"]
-            vals = [cells[f"{con}@{l}"]["p_woman"] for l, _ in lv]
-            ax.plot(range(3), vals, "o-", color=P3[mk], label=P3N[mk], lw=1.5, ms=4.5)
+            e2 = _tables_for(mk2full[mk])["e2"]
+            d = e2[e2.direct]
+            vals, errs, sig = [], [], []
+            for l in lv:
+                pm = _wm(d, l, con)
+                vals.append(pm.mean())
+                errs.append(1.96 * pm.std(ddof=1) / _np.sqrt(len(pm)))
+                sig.append(dg[mk]["parity"][f"{con}@{l}"]["holm"] < 0.05)
+            x = list(range(3))
+            ax.errorbar(x, vals, yerr=errs, color=P3[mk], lw=1.3, capsize=2.5,
+                        marker="o", ms=4.5, mfc="white", mec=P3[mk], label=P3N[mk])
+            xs_sig = [xi for xi, s in zip(x, sig) if s]
+            if xs_sig:
+                ax.scatter(xs_sig, [vals[xi] for xi in xs_sig], s=26, color=P3[mk], zorder=5)
         ax.axhline(0.5, color="0.3", ls="--", lw=1)
+        ax.set_ylim(0.40, 0.72)
         ax.set_xticks(range(3))
-        ax.set_xticklabels([lbl for _, lbl in lv])
+        ax.set_xticklabels(["L0\nnames", "L1\n+field", "L2\ninitials\n+field"])
         ax.set_title(title, loc="left", fontsize=9.5)
     axes[0].set_ylabel("P(woman chosen)")
-    axes[0].legend(frameon=False, loc="upper left")
-    fig.suptitle("Figure 12. Direct gender preference by cue level: vendor divergence when gender is explicit",
-                 y=1.03, fontsize=10)
+    axes[0].legend(frameon=False, fontsize=7.5, loc="upper left")
+    fig.suptitle("Figure 12. Direct gender preference by cue level (filled = Holm-significant vs parity; 95% CIs)", y=1.03, fontsize=9.5)
     fig.tight_layout()
     fig.savefig(out / "fig12_direct_gender.pdf")
     plt.close(fig)
@@ -585,7 +618,7 @@ def fig_p3_abstention(out=OUT):
     axes[1].set_xticks([0, 1])
     axes[1].set_xticklabels(cats)
     axes[1].set_ylabel("P(advance to interview)")
-    axes[1].set_title("Haiku: withheld ⇒ no interview", loc="left", fontsize=9)
+    axes[1].set_title("Haiku: withheld ⇒ rarely interviewed (30%)", loc="left", fontsize=9)
     fig.suptitle("Figure 13. Abstention as a discrimination margin (pregnancy)", y=1.03, fontsize=10)
     fig.tight_layout()
     fig.savefig(out / "fig13_abstention.pdf")
