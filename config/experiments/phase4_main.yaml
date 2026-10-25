@@ -1,0 +1,10 @@
+# Phase 4 (SPEC_PHASE4): fairness system prompts (Part B) + neutral gap labels
+# (Part C) in one E2 run per model. 12,000 calls per model:
+#   B: 3 arms x [L0 parent/parent_gap/gap_travel x 2g + L1 gender_parent] x 480
+#   C: sp_none arm only: gap_closure / gap_cert x 2g x 480
+name: phase4_main
+phase: phase4
+models: [deepseek_v41_flash, claude_haiku_55, gpt6_luna, qwen38_flash]
+occupations: all
+experiments:
+  phase4: {}

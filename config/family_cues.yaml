@@ -54,3 +54,16 @@ resume_changes:
       label: "Parental leave"
       start_month: 2024-01
       end_month: 2024-09
+  # --- phase-4 neutral gap labels (SPEC_PHASE4 §C; length-matched to
+  # gap_travel within ±15%: 33/32 vs 31 chars; same date arithmetic;
+  # PENDING researcher approval, QUESTIONS.md §12) ---
+  gap_closure:
+    leave:
+      label: "Job search after company closure"
+      start_month: 2024-01
+      end_month: 2024-09
+  gap_cert:
+    leave:
+      label: "Full-time certification program"
+      start_month: 2024-01
+      end_month: 2024-09

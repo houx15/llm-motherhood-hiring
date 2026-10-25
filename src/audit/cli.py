@@ -266,7 +266,11 @@ def plan(
     if not cfg.enabled:
         raise typer.Exit(f"experiment config {experiment!r} is disabled (enabled: false)")
     phase3_keys = {"e1v3", "e2v3", "e3v3", "manip", "lawyer_fix"}
-    if phase3_keys & set(cfg.experiments):
+    if "phase4" in cfg.experiments:
+        from .plan_phase4 import expand_phase4
+
+        df = expand_phase4(cfg)
+    elif phase3_keys & set(cfg.experiments):
         from .plan_phase3 import expand_phase3
 
         df = expand_phase3(cfg)

@@ -354,3 +354,21 @@ abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
 
 
 
+
+## 12. Phase 4 (SPEC_PHASE4) — wording gate
+
+1. **System prompts (§B.1)**: exact spec text in `config/phase4_system_prompts.yaml`
+   (sp_fair generic EEO instruction; sp_gap adds the targeted no-gap-penalty
+   sentence). sp_none = no system prompt.
+2. **Neutral gap labels (§C)**: the spec's example entries "Job search following
+   company closure" / "Full-time professional certification program" exceed the
+   spec's own ±15% length match to "Career break — extended travel" (+19%/+42%).
+   Proposed (within ±6%/+3%): **"Job search after company closure"** and
+   **"Full-time certification program"**. Same dates (Jan–Sep 2024), neutral
+   cover note, no family content; validator + tests pass.
+3. Plan verified: 12,000 calls/model (B 10,080 + C 1,920), 48,000 total,
+   estimate ≈ $16 peak / ~$11 actual; phase4 cap $18; $19.52 usable remains.
+
+> **APPROVED: phase4 wording — researcher, 2026-10-24** (chat approval; scope:
+> system prompts as in §B.1, the two adjusted neutral labels above. Run order:
+> DeepSeek first, parse/refusal check, then the other three.)

@@ -146,6 +146,11 @@ def load_cue_levels() -> dict:
 
 
 @lru_cache(maxsize=None)
+def load_phase4_arms() -> dict:
+    return _load_yaml(CONFIG_DIR / "phase4_system_prompts.yaml")
+
+
+@lru_cache(maxsize=None)
 def load_family_cues() -> dict:
     return _load_yaml(CONFIG_DIR / "family_cues.yaml")
 

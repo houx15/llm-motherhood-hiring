@@ -53,6 +53,16 @@ def _tpl(name: str):
     return tpl
 
 
+def _sysarm(row: dict) -> str | None:
+    """Phase-4 system prompt (None outside phase 4 / sp_none arm)."""
+    arm = row.get("sysarm")
+    if not arm or arm == "sp_none":
+        return None
+    from .config import load_phase4_arms
+
+    return load_phase4_arms()["arms"][arm]
+
+
 def build_prompt(row: dict) -> tuple[str, str]:
     """Returns (prompt_text, system_prompt). system=None (consumer default)."""
     exp = row["experiment"]
@@ -116,7 +126,7 @@ def build_prompt(row: dict) -> tuple[str, str]:
         text = _tpl("manip_check").render(jd=jd, candidate=cand)
     else:
         raise ValueError(f"unknown experiment {exp}")
-    return text, None
+    return text, _sysarm(row)
 
 
 def prompt_hash(text: str) -> str:
