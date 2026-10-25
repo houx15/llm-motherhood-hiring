@@ -8,6 +8,7 @@ phase_caps:
   phase3_manip: 4.00
   phase3_pilot: 4.00
   phase3_main: 135.00
+  phase4: 18.00
 assume_peak_pricing: true     # estimates use peak price unless run scheduled off-peak
 estimate_safety_factor: 1.15  # buffer on output tokens for repairs/overruns
 kill_switch:

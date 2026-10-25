@@ -588,3 +588,30 @@ To add:
    moderation, EEO wording).
 9. **Scope of inference** stated: conclusions are about these four pinned model versions and
    résumés like ours; cross-model comparisons are descriptive (n = 4 models).
+
+---
+
+# Round 7 review (Draft 5.1, commit 68355a5)
+
+Round 6/6b is done well: cue-vs-quality amplification (with the Haiku sign reversal up front),
+corrected noise model with bootstrap CIs and an honest DeepSeek exception, TOST at ±5pp, direct
+model contrasts, wild bootstrap, LPM checks, MDEs, confirmatory list, scope statement, CIs in
+Figs 9–12. Remaining small fixes:
+
+1. Header still says "Draft 5.0 … 2026-10-22".
+2. "We pre-state ±5pp as the smallest effect of interest": it was chosen after data collection
+   (round 6b). Say "chosen before running the equivalence tests, after data collection".
+3. §4.3 heading "Removing gender information changes nothing" → "…leaves the penalty unchanged"
+   (7/8 equivalent; explicit fields *do* change Haiku and Luna).
+4. Haiku label: text says "90% CI [−3.2, +0.9]" but the table gives that as the 95% CI. Report the
+   90% CI for TOST and the 95% CI in the table, labeled.
+5. Abstract is ~600 words. Journals expect 150–250. Keep this as an extended summary and write a
+   short abstract with the three findings.
+6. Fig 10: legend sits on top of the "family bundle" row's markers; move it outside the axes.
+   Fig 9: legend overlaps the parent-cue markers; add CIs to the predicted points if available.
+
+Open by design decision (not yet done; see the "complete story" discussion):
+- Rationale coding (mechanism evidence from existing logs; ~no API cost)
+- Fairness-instruction system-prompt arm (does a standard fairness prompt remove Layer 1?)
+- Disparate-impact quantification (gap prevalence by gender × measured penalties)
+- Neutral gap-label arm (company closure / certification)
