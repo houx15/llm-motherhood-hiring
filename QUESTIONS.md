@@ -371,4 +371,5 @@ abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
 
 > **APPROVED: phase4 wording — researcher, 2026-10-24** (chat approval; scope:
 > system prompts as in §B.1, the two adjusted neutral labels above. Run order:
-> DeepSeek first, parse/refusal check, then the other three.)
+> DeepSeek first, parse/refusal check, then the other three.) — APPROVED via
+> question form same day.
