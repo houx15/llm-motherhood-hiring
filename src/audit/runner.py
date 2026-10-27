@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import hashlib
 import json
+import re
 import os
 import time
 from datetime import datetime, timezone
@@ -134,14 +135,24 @@ def prompt_hash(text: str) -> str:
 
 
 class PromptStore:
-    """prompt_text_hash -> text, deduped across runs (runs/prompts.parquet)."""
+    """prompt_text_hash -> text, deduped across runs.
+
+    Memory-bounded: only the 64-char hash column is loaded (the full prompt
+    texts, 134MB+ parquet, would be GBs as pandas objects); new prompts are
+    flushed to per-run shard files under runs/prompts_shards/ instead of
+    rewriting the monolith. Hash->text readers should glob
+    runs/prompts.parquet + runs/prompts_shards/*.parquet.
+    """
 
     def __init__(self):
         self.path = RUNS_DIR / "prompts.parquet"
-        self.df = pd.read_parquet(self.path) if self.path.exists() else pd.DataFrame(
-            {"prompt_text_hash": [], "prompt_text": []}
-        )
-        self._known = set(self.df["prompt_text_hash"])
+        self.shard_dir = RUNS_DIR / "prompts_shards"
+        self._known: set[str] = set()
+        if self.path.exists():
+            self._known.update(pd.read_parquet(self.path, columns=["prompt_text_hash"])["prompt_text_hash"])
+        if self.shard_dir.exists():
+            for f in sorted(self.shard_dir.glob("*.parquet")):
+                self._known.update(pd.read_parquet(f, columns=["prompt_text_hash"])["prompt_text_hash"])
         self._new: list[dict] = []
 
     def add(self, text: str) -> str:
@@ -155,25 +166,30 @@ class PromptStore:
         if not self._new:
             return
         add = pd.DataFrame(self._new).drop_duplicates("prompt_text_hash")
-        self.df = (
-            pd.concat([self.df, add]).drop_duplicates("prompt_text_hash").reset_index(drop=True)
-        )
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.df.to_parquet(self.path, index=False)
+        self.shard_dir.mkdir(parents=True, exist_ok=True)
+        n = len(list(self.shard_dir.glob("*.parquet"))) + 1
+        add.to_parquet(self.shard_dir / f"prompts_{n:05d}_{datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')}.parquet", index=False)
         self._new = []
 
 
+_CALLID_RE = re.compile(r'"call_id":\s*"([0-9a-f]{64})"')
+
+
 def completed_call_ids(runs_dir: Path = RUNS_DIR) -> set[str]:
-    """call_ids with a FINAL outcome (valid parse or refusal) — not retried."""
+    """call_ids with a FINAL outcome (valid parse or refusal) — not retried.
+
+    Memory-bounded: line-scan with substring checks + regex extraction; no
+    json.loads of full payloads (each line carries up to 4KB of raw_response).
+    """
     done: set[str] = set()
     for f in runs_dir.glob("*/logs.jsonl"):
-        for line in f.read_text().splitlines():
-            try:
-                r = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if r.get("parse_ok") or r.get("refusal_flag"):
-                done.add(r["call_id"])
+        with open(f) as fh:
+            for line in fh:
+                if '"parse_ok": true' not in line and '"refusal_flag": true' not in line:
+                    continue
+                m = _CALLID_RE.search(line)
+                if m:
+                    done.add(m.group(1))
     return done
 
 
