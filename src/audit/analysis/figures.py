@@ -463,7 +463,8 @@ def fig_p3_task_dependence(out=OUT):
                plt.Line2D([], [], marker="o", color="0.3", ls="", label="observed in E2 choice (95% CI)")]
     for mk in P3N:
         handles.append(plt.Line2D([], [], marker="o", ls="", color=P3[mk], label=P3N[mk]))
-    ax.legend(handles=handles, frameon=False, fontsize=7, loc="lower left")
+    ax.legend(handles=handles, frameon=False, fontsize=7, loc="upper center",
+              bbox_to_anchor=(0.5, -0.12), ncol=3)
     ax.set_xticks([0, 1])
     ax.set_xticklabels(["parent cue", "parent + leave gap"])
     ax.set_ylabel("P(parent chosen) vs childless woman")
@@ -493,7 +494,8 @@ def fig_p3_decomposition(out=OUT):
     ax.set_yticklabels(labels)
     ax.set_xlabel("difference in P(candidate chosen) between conditions (95% CI)")
     handles = [plt.Line2D([], [], marker="o", ls="", color=P3[mk], label=P3N[mk]) for mk in P3N]
-    ax.legend(handles=handles, frameon=False, fontsize=7.5, ncol=4, loc="upper center")
+    ax.legend(handles=handles, frameon=False, fontsize=7.5, ncol=4,
+              loc="lower center", bbox_to_anchor=(0.5, 1.06))
     ax.set_title("Figure 10. Placebo decomposition: interruption + family bundle carry the penalty;\nthe 'parental' label adds nothing (or slightly helps)", loc="left", fontsize=9)
     fig.tight_layout()
     fig.savefig(out / "fig10_decomposition.pdf")

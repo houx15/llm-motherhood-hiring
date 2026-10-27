@@ -1,12 +1,32 @@
 # From Motherhood Penalty to Caregiver Penalty: How LLM Résumé Screeners Treat Family Signals
 
-*Draft 5.0 (rounds 4–5 revisions), 2026-10-22. Every statistic is generated from
+*Draft 5.2 (rounds 4–7 + phase-4 in progress), 2026-10-27. Every statistic is generated from
 run logs — main run: `uv run audit stats` → `stats.json`, `tables.md`; phase 3:
 `audit.analysis.{phase3_key_stats,cross_model,round3,round5}` →
 `phase3_key_stats.json`, `CROSS_MODEL.md`, `round3_stats.json`,
 `round5_stats.json`. No hand-typed numbers.*
 
-## Abstract
+## Abstract (short)
+
+Deployed LLM résumé screeners were audited across decision tasks, family-cue
+components, and gender-information regimes (4 pinned models; 28 occupations;
+602,093 logged calls). Family cues barely move isolated scores but cost
+parents 11–39pp in pairwise choice and up to 77% of shortlist probability:
+choices amplify the cues 4–31× beyond their score effects, with one model
+scoring parents *higher* yet choosing them 23% of the time. The penalty is a
+caregiver penalty, not a gender penalty: it is statistically unchanged when
+all gender information is removed (TOST ±5pp), and decomposes into a generic
+interruption penalty (10.6–26.0pp) plus a family-signal penalty (10.5–17.6pp);
+the "parental" label itself never adds a penalty. No fatherhood bonus exists.
+Vendor-specific gendered behaviors layer on top — pro-woman preference
+activating under explicit gender in one model, an anti-mother shift and
+pregnancy salary-withholding (19.8%, denying interviews) in another, exact
+parity in a third. Because caregiving gaps are carried mostly by women, a
+gender-neutral-in-form rule is not gender-neutral in effect. Comparative-task
+testing, abstention as an outcome, and implicit gender-knowledge checks are
+required to see any of this; single-résumé audits would not.
+
+## Extended summary
 
 Language models increasingly assist résumé screening, but audits typically vary
 one design dimension at a time. We cross three — **decision task** (scoring,
@@ -298,7 +318,7 @@ pooled, 40 pairs, mothers) with the six-set robustness in the appendix:**
 but significant 3–4pp (`personal` vs parity, t −4.1 to −4.6). The interruption
 itself — an 8-month break labeled *travel* — costs 10.6–26.0pp. The *label*
 never adds a penalty: Haiku's estimate is statistically equivalent to zero at
-±5pp (90% CI [−3.2, +0.9]); DeepSeek shows a tiny positive (+1.7pp); Luna and
+±5pp (TOST 90% CI [−2.9, +0.7]pp; the table shows the 95% CI); DeepSeek shows a tiny positive (+1.7pp); Luna and
 Qwen treat *Parental leave* as 6–7pp *less* costly than the same dates labeled
 travel. The family bundle adds a further 10.5–17.6pp *on top of* a labeled
 parental leave. In the six-set robustness (O8 at L0–L3, O20 at L1/L2
@@ -306,11 +326,13 @@ separately), parenthood and bundle survive Holm in 23 of 24 tests each; the
 label is null for Haiku and positive for Luna (5/6 sets) and Qwen (6/6)
 (Figure 10).
 
-**Removing gender information changes nothing.** Pair-matched tests on O8
+**Removing gender information leaves the penalty unchanged.** Pair-matched tests on O8
 (16 pairs): P(parent chosen), names (L0) minus blind (L3): DeepSeek +.006
 (t 0.3), Haiku −.005 (t −0.3), Luna −.013 (t −1.2), Qwen +.003 (t 0.2); the
-leave-gap cue likewise. Because non-rejection is not evidence of absence, we
-pre-state ±5pp as the smallest effect of interest and run TOST: the blind-names
+leave-gap cue likewise. Because non-rejection is not evidence of absence, we run
+TOST at a ±5pp smallest effect of interest (chosen after data collection but
+before running the equivalence tests; phase-4 hypotheses pre-specify it
+prospectively): the blind-names
 difference is statistically equivalent to zero at ±5pp in **7 of 8 model×cue
 cells** (90% CIs all within ±5pp; the eighth, DeepSeek's leave-gap, grazes it
 at [0.0, +5.6]); minimum detectable effects are 3.0–5.4pp (Figure 11).

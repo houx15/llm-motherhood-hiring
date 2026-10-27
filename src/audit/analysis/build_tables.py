@@ -9,6 +9,19 @@ import pandas as pd
 from ..config import MATERIALS_DIR, PLANS_DIR, RUNS_DIR, load_occupations_built
 
 
+# Columns retained by load_run_logs. Everything else in the JSONL lines
+# (raw_response up to 4KB, prompt hashes, token counts, headers) is dropped at
+# parse time — with 650k+ logged calls the full history no longer fits in
+# memory (10GB+); this subset keeps the analysis layer at a few hundred MB.
+LOAD_COLUMNS = {
+    "run_id", "call_id", "experiment", "model_key", "slug", "occupation_id",
+    "resume_ids", "gender", "family_code", "name_idx", "jd_variant", "position",
+    "cue_level", "draw", "name_pair", "contrast", "sample_idx", "paraphrase_id",
+    "request_ts", "finish_reason", "parse_ok", "refusal_flag", "sysarm",
+    "parsed_json", "render_ctx", "error",
+}
+
+
 def load_run_logs(run_id: str | None = None, model_key: str | None = None) -> pd.DataFrame:
     rows = []
     files = [RUNS_DIR / run_id / "logs.jsonl"] if run_id else sorted(RUNS_DIR.glob("*/logs.jsonl"))
@@ -17,9 +30,10 @@ def load_run_logs(run_id: str | None = None, model_key: str | None = None) -> pd
             continue
         for line in f.read_text().splitlines():
             try:
-                rows.append(json.loads(line))
+                r = json.loads(line)
             except json.JSONDecodeError:
                 continue
+            rows.append({k: r[k] for k in LOAD_COLUMNS if k in r})
     df = pd.DataFrame(rows)
     if df.empty:
         return df
@@ -65,7 +79,25 @@ def _ctx_from_plan(run_id: str | None) -> pd.Series:
     return plan.set_index("call_id")["render_ctx"]
 
 
-def build_tables(run_id: str | None, model_key: str | None = None) -> dict[str, pd.DataFrame]:
+def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bool = True) -> dict[str, pd.DataFrame]:
+    """Pooled mode (run_id=None) reads the clean parquet cache when fresh
+    (see etl.py); pass use_cache=False to force raw-log parsing. Single-run
+    mode always reads raw logs."""
+    if run_id is None and use_cache:
+        from . import etl
+
+        if etl.cache_fresh():
+            out = {}
+            for t in etl.TABLES:
+                p = etl.CLEAN_DIR / f"{t}.parquet"
+                if p.exists():
+                    df = pd.read_parquet(p)
+                    if model_key and "model_key" in df.columns:
+                        df = df[df["model_key"] == model_key]
+                    if not df.empty:
+                        out[t] = df
+            if out:
+                return out
     logs = load_run_logs(run_id, model_key=model_key)
     logs = logs[logs["experiment"].isin(["e1", "e2", "e3", "e4", "manip"])]
     if "render_ctx" not in logs.columns:

@@ -86,6 +86,15 @@ def materials_phase3(
     print("[phase3-materials] all phase-3 resumes present and valid")
 
 
+@app.command()
+def etl(force: bool = typer.Option(False, help="rebuild even if the cache is fresh")):
+    """Build the clean data layer (tidy parquet tables) from raw logs."""
+    from .analysis.etl import build_clean
+
+    summary = build_clean(force=force)
+    print(f"[etl] {summary['status']}: {summary.get('tables', {})}")
+
+
 @app.command("phase3-samples")
 def phase3_samples(out: Path = typer.Option("docs/phase3/samples.md")):
     """Render one full prompt per new cell type for researcher wording approval
