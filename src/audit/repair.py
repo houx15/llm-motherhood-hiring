@@ -148,7 +148,10 @@ async def _run(run_glob: str, model_key: str, max_calls: int | None) -> dict:
                     n_fail += 1
 
         await asyncio.gather(*(one(r) for r in todo))
-    Ledger().flush(pd.DataFrame([_ledger_row(json.loads(l)) for l in log_path.read_text().splitlines()]))
+    try:
+        Ledger().flush(pd.DataFrame([_ledger_row(json.loads(l)) for l in log_path.read_text().splitlines()]))
+    except Exception as e:  # noqa: BLE001 — raw JSONL is canonical
+        print(f"[repair] WARNING ledger flush failed: {e}")
     summary = {"run_id": run_id, "attempted": len(todo), "repaired": n_ok, "still_bad": n_fail,
                "cost_usd": round(cost, 4)}
     (run_dir / "manifest.json").write_text(json.dumps(summary, indent=2))

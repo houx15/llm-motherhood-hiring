@@ -289,7 +289,10 @@ async def run_plan(
                     text, _ = build_prompt(r)
                     (samples_dir / f"{exp}_{i}.txt").write_text(text)
                     store.add(text)
-            store.flush()
+            try:
+                store.flush()
+            except Exception as e:  # noqa: BLE001 — never kill a run over the prompt store
+                print(f"[run] WARNING prompt-store flush failed: {e}")
             print(f"[run] dry-run complete: 5 sample prompts/experiment in {samples_dir}; ZERO API calls")
             return {"run_id": run_id, "dry_run": True, "estimate_usd": estimate}
 
@@ -448,8 +451,14 @@ async def run_plan(
             )
             ledger_rows = []
 
-        store.flush()
-        Ledger().flush(pd.DataFrame(ledger_rows))
+        try:
+            store.flush()
+        except Exception as e:  # noqa: BLE001
+            print(f"[run] WARNING prompt-store flush failed: {e}")
+        try:
+            Ledger().flush(pd.DataFrame(ledger_rows))
+        except Exception as e:  # noqa: BLE001 — raw JSONL is canonical
+            print(f"[run] WARNING ledger flush failed: {e}")
         spent_total = budget.ledger.spent_total()
         summary = {
             **manifest,

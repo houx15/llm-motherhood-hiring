@@ -82,14 +82,39 @@ class Ledger:
         return float(df.loc[mask, "cost_usd"].sum())
 
     def flush(self, df: pd.DataFrame) -> None:
-        """Write consolidated ledger parquet (safe to rewrite; raw JSONL is canonical)."""
+        """Write consolidated ledger parquet.
+
+        Concurrency-safe: inter-process file lock + atomic temp-file replace.
+        Corrupt-tolerant: if the existing parquet is unreadable (torn write from
+        an older unlocked version), it is quarantined and rebuilt from the new
+        frame — raw JSONL logs remain the canonical record.
+        """
         if df.empty:
             return
-        if self.parquet.exists():
-            old = pd.read_parquet(self.parquet)
-            df = pd.concat([old, df]).drop_duplicates(subset=["run_id", "call_id"])
+        import fcntl
+        import os
+        import tempfile
+        import time
+
         self.parquet.parent.mkdir(parents=True, exist_ok=True)
-        df.to_parquet(self.parquet, index=False)
+        lock_path = self.parquet.with_suffix(".lock")
+        with open(lock_path, "w") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            try:
+                if self.parquet.exists():
+                    try:
+                        old = pd.read_parquet(self.parquet)
+                        df = pd.concat([old, df]).drop_duplicates(subset=["run_id", "call_id"])
+                    except Exception:  # noqa: BLE001 — torn write: quarantine, rebuild
+                        q = self.parquet.with_suffix(f".corrupt-{int(time.time())}")
+                        os.replace(self.parquet, q)
+                        print(f"[ledger] WARNING existing parquet unreadable; quarantined -> {q.name}; "
+                              "rebuilding from this run (raw JSONL remains canonical)")
+                fd, tmp = tempfile.mkstemp(dir=self.parquet.parent, suffix=".parquet")
+                df.to_parquet(tmp, index=False)
+                os.replace(tmp, self.parquet)
+            finally:
+                fcntl.flock(lock, fcntl.LOCK_UN)
 
 
 def deepseek_off_peak(now: datetime | None = None) -> bool:
