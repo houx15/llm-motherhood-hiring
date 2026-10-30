@@ -18,6 +18,9 @@ config/prevalence.yaml (sourced values with citations).
 from __future__ import annotations
 
 import json
+import os
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1761840000")  # deterministic PDFs
 
 import matplotlib
 import matplotlib.pyplot as plt
