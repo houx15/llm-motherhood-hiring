@@ -29,6 +29,7 @@ def find_invalid(run_glob: str, model_key: str) -> list[dict]:
     """
     invalid: dict[str, dict] = {}
     repaired: set[str] = set()
+    valid: set[str] = set()
     for f in sorted(RUNS_DIR.glob(run_glob)):
         if not f.is_file():
             continue
@@ -42,13 +43,15 @@ def find_invalid(run_glob: str, model_key: str) -> list[dict]:
             if r.get("repair_of"):
                 if r.get("parse_ok"):
                     repaired.add(r["repair_of"])
+            elif r.get("parse_ok") or r.get("refusal_flag"):
+                valid.add(r["call_id"])  # succeeded somewhere: never repair
             elif (
                 r.get("experiment") in ("e1", "e2", "e3", "e4")
                 and not r.get("parse_ok")
                 and not r.get("refusal_flag")
             ):
                 invalid[r["call_id"]] = r
-    return [r for cid, r in invalid.items() if cid not in repaired]
+    return [r for cid, r in invalid.items() if cid not in repaired and cid not in valid]
 
 
 REPAIR_TMPL = """Your previous answer was invalid JSON for a hiring evaluation.

@@ -1,0 +1,1118 @@
+{
+ "validity": {
+  "deepseek": {
+   "valid_by_arm": {
+    "sp_gap": 3303,
+    "sp_none": 5248,
+    "sp_fair": 3328
+   },
+   "refusals_by_arm": {},
+   "n_by_arm": {
+    "sp_none": 5280,
+    "sp_fair": 3360,
+    "sp_gap": 3360
+   }
+  },
+  "haiku": {
+   "valid_by_arm": {
+    "sp_none": 5203,
+    "sp_fair": 3164,
+    "sp_gap": 3271
+   },
+   "refusals_by_arm": {
+    "sp_none": 57,
+    "sp_fair": 187,
+    "sp_gap": 75
+   },
+   "n_by_arm": {
+    "sp_none": 5280,
+    "sp_fair": 3360,
+    "sp_gap": 3360
+   }
+  },
+  "luna": {
+   "valid_by_arm": {
+    "sp_gap": 3335,
+    "sp_none": 5210,
+    "sp_fair": 3326
+   },
+   "refusals_by_arm": {},
+   "n_by_arm": {
+    "sp_none": 5280,
+    "sp_fair": 3360,
+    "sp_gap": 3360
+   }
+  },
+  "qwen": {
+   "valid_by_arm": {
+    "sp_none": 5212,
+    "sp_fair": 3337,
+    "sp_gap": 3345
+   },
+   "refusals_by_arm": {},
+   "n_by_arm": {
+    "sp_none": 5280,
+    "sp_fair": 3360,
+    "sp_gap": 3360
+   }
+  }
+ },
+ "hb1_hb3": {
+  "deepseek": {
+   "parent|female|sp_fair": {
+    "contrast": "fair-none parent f",
+    "mean": -0.036,
+    "ci90": [
+     -0.073,
+     0.001
+    ],
+    "t": -1.6,
+    "p": 0.1096,
+    "tost_p": 0.2644,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.8768
+   },
+   "parent|female|sp_gap": {
+    "contrast": "gap-none parent f",
+    "mean": 0.008,
+    "ci90": [
+     -0.026,
+     0.042
+    ],
+    "t": 0.4,
+    "p": 0.7034,
+    "tost_p": 0.0221,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "parent|male|sp_fair": {
+    "contrast": "fair-none parent m",
+    "mean": -0.017,
+    "ci90": [
+     -0.057,
+     0.023
+    ],
+    "t": -0.7,
+    "p": 0.4749,
+    "tost_p": 0.0848,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "parent|male|sp_gap": {
+    "contrast": "gap-none parent m",
+    "mean": 0.027,
+    "ci90": [
+     -0.007,
+     0.062
+    ],
+    "t": 1.3,
+    "p": 0.1892,
+    "tost_p": 0.1378,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "parent_gap|female|sp_fair": {
+    "contrast": "fair-none parent_gap f",
+    "mean": -0.016,
+    "ci90": [
+     -0.047,
+     0.014
+    ],
+    "t": -0.9,
+    "p": 0.3754,
+    "tost_p": 0.0355,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "parent_gap|female|sp_gap": {
+    "contrast": "gap-none parent_gap f",
+    "mean": 0.069,
+    "ci90": [
+     0.024,
+     0.114
+    ],
+    "t": 2.6,
+    "p": 0.014,
+    "tost_p": 0.7585,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.14
+   },
+   "parent_gap|male|sp_fair": {
+    "contrast": "fair-none parent_gap m",
+    "mean": -0.023,
+    "ci90": [
+     -0.063,
+     0.017
+    ],
+    "t": -1.0,
+    "p": 0.3421,
+    "tost_p": 0.1277,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "parent_gap|male|sp_gap": {
+    "contrast": "gap-none parent_gap m",
+    "mean": 0.114,
+    "ci90": [
+     0.07,
+     0.158
+    ],
+    "t": 4.4,
+    "p": 0.0001,
+    "tost_p": 0.9906,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0012
+   },
+   "gap_travel|female|sp_fair": {
+    "contrast": "fair-none gap_travel f",
+    "mean": -0.002,
+    "ci90": [
+     -0.033,
+     0.029
+    ],
+    "t": -0.1,
+    "p": 0.9095,
+    "tost_p": 0.0061,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_travel|female|sp_gap": {
+    "contrast": "gap-none gap_travel f",
+    "mean": 0.029,
+    "ci90": [
+     -0.003,
+     0.061
+    ],
+    "t": 1.5,
+    "p": 0.135,
+    "tost_p": 0.1362,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.945
+   },
+   "gap_travel|male|sp_fair": {
+    "contrast": "fair-none gap_travel m",
+    "mean": 0.053,
+    "ci90": [
+     0.021,
+     0.084
+    ],
+    "t": 2.8,
+    "p": 0.0071,
+    "tost_p": 0.5565,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0781
+   },
+   "gap_travel|male|sp_gap": {
+    "contrast": "gap-none gap_travel m",
+    "mean": 0.055,
+    "ci90": [
+     0.013,
+     0.097
+    ],
+    "t": 2.2,
+    "p": 0.033,
+    "tost_p": 0.5789,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.297
+   }
+  },
+  "haiku": {
+   "parent|female|sp_fair": {
+    "contrast": "fair-none parent f",
+    "mean": 0.066,
+    "ci90": [
+     0.028,
+     0.104
+    ],
+    "t": 2.9,
+    "p": 0.0058,
+    "tost_p": 0.7606,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0464
+   },
+   "parent|female|sp_gap": {
+    "contrast": "gap-none parent f",
+    "mean": 0.076,
+    "ci90": [
+     0.035,
+     0.118
+    ],
+    "t": 3.1,
+    "p": 0.0035,
+    "tost_p": 0.8553,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0315
+   },
+   "parent|male|sp_fair": {
+    "contrast": "fair-none parent m",
+    "mean": 0.086,
+    "ci90": [
+     0.044,
+     0.128
+    ],
+    "t": 3.4,
+    "p": 0.0015,
+    "tost_p": 0.9196,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.015
+   },
+   "parent|male|sp_gap": {
+    "contrast": "gap-none parent m",
+    "mean": 0.058,
+    "ci90": [
+     0.01,
+     0.106
+    ],
+    "t": 2.0,
+    "p": 0.0476,
+    "tost_p": 0.6116,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.238
+   },
+   "parent_gap|female|sp_fair": {
+    "contrast": "fair-none parent_gap f",
+    "mean": 0.122,
+    "ci90": [
+     0.085,
+     0.158
+    ],
+    "t": 5.6,
+    "p": 0.0,
+    "tost_p": 0.999,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0
+   },
+   "parent_gap|female|sp_gap": {
+    "contrast": "gap-none parent_gap f",
+    "mean": 0.143,
+    "ci90": [
+     0.106,
+     0.18
+    ],
+    "t": 6.5,
+    "p": 0.0,
+    "tost_p": 0.9999,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0
+   },
+   "parent_gap|male|sp_fair": {
+    "contrast": "fair-none parent_gap m",
+    "mean": 0.042,
+    "ci90": [
+     0.013,
+     0.072
+    ],
+    "t": 2.4,
+    "p": 0.02,
+    "tost_p": 0.3349,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.12
+   },
+   "parent_gap|male|sp_gap": {
+    "contrast": "gap-none parent_gap m",
+    "mean": 0.049,
+    "ci90": [
+     0.017,
+     0.081
+    ],
+    "t": 2.6,
+    "p": 0.0134,
+    "tost_p": 0.4748,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0938
+   },
+   "gap_travel|female|sp_fair": {
+    "contrast": "fair-none gap_travel f",
+    "mean": 0.012,
+    "ci90": [
+     -0.031,
+     0.055
+    ],
+    "t": 0.5,
+    "p": 0.6397,
+    "tost_p": 0.0701,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_travel|female|sp_gap": {
+    "contrast": "gap-none gap_travel f",
+    "mean": 0.004,
+    "ci90": [
+     -0.035,
+     0.044
+    ],
+    "t": 0.2,
+    "p": 0.8621,
+    "tost_p": 0.0284,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_travel|male|sp_fair": {
+    "contrast": "fair-none gap_travel m",
+    "mean": -0.001,
+    "ci90": [
+     -0.045,
+     0.043
+    ],
+    "t": -0.0,
+    "p": 0.9621,
+    "tost_p": 0.0349,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_travel|male|sp_gap": {
+    "contrast": "gap-none gap_travel m",
+    "mean": -0.022,
+    "ci90": [
+     -0.063,
+     0.019
+    ],
+    "t": -0.9,
+    "p": 0.369,
+    "tost_p": 0.1262,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "luna": {
+   "parent|female|sp_fair": {
+    "contrast": "fair-none parent f",
+    "mean": 0.05,
+    "ci90": [
+     0.011,
+     0.089
+    ],
+    "t": 2.2,
+    "p": 0.0365,
+    "tost_p": 0.5028,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1275
+   },
+   "parent|female|sp_gap": {
+    "contrast": "gap-none parent f",
+    "mean": 0.069,
+    "ci90": [
+     0.027,
+     0.112
+    ],
+    "t": 2.8,
+    "p": 0.0089,
+    "tost_p": 0.7773,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0623
+   },
+   "parent|male|sp_fair": {
+    "contrast": "fair-none parent m",
+    "mean": 0.036,
+    "ci90": [
+     -0.007,
+     0.079
+    ],
+    "t": 1.4,
+    "p": 0.1658,
+    "tost_p": 0.2962,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.3316
+   },
+   "parent|male|sp_gap": {
+    "contrast": "gap-none parent m",
+    "mean": 0.064,
+    "ci90": [
+     0.016,
+     0.111
+    ],
+    "t": 2.3,
+    "p": 0.0291,
+    "tost_p": 0.6869,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1275
+   },
+   "parent_gap|female|sp_fair": {
+    "contrast": "fair-none parent_gap f",
+    "mean": -0.007,
+    "ci90": [
+     -0.032,
+     0.017
+    ],
+    "t": -0.5,
+    "p": 0.6203,
+    "tost_p": 0.0028,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 0.6203
+   },
+   "parent_gap|female|sp_gap": {
+    "contrast": "gap-none parent_gap f",
+    "mean": 0.091,
+    "ci90": [
+     0.052,
+     0.131
+    ],
+    "t": 3.9,
+    "p": 0.0004,
+    "tost_p": 0.9562,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0044
+   },
+   "parent_gap|male|sp_fair": {
+    "contrast": "fair-none parent_gap m",
+    "mean": 0.04,
+    "ci90": [
+     0.011,
+     0.069
+    ],
+    "t": 2.3,
+    "p": 0.0255,
+    "tost_p": 0.2769,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1275
+   },
+   "parent_gap|male|sp_gap": {
+    "contrast": "gap-none parent_gap m",
+    "mean": 0.124,
+    "ci90": [
+     0.081,
+     0.166
+    ],
+    "t": 4.9,
+    "p": 0.0,
+    "tost_p": 0.9971,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0
+   },
+   "gap_travel|female|sp_fair": {
+    "contrast": "fair-none gap_travel f",
+    "mean": 0.045,
+    "ci90": [
+     0.015,
+     0.075
+    ],
+    "t": 2.5,
+    "p": 0.0167,
+    "tost_p": 0.3826,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1002
+   },
+   "gap_travel|female|sp_gap": {
+    "contrast": "gap-none gap_travel f",
+    "mean": 0.069,
+    "ci90": [
+     0.037,
+     0.101
+    ],
+    "t": 3.6,
+    "p": 0.0009,
+    "tost_p": 0.8348,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.009
+   },
+   "gap_travel|male|sp_fair": {
+    "contrast": "fair-none gap_travel m",
+    "mean": 0.055,
+    "ci90": [
+     0.025,
+     0.086
+    ],
+    "t": 3.1,
+    "p": 0.0038,
+    "tost_p": 0.619,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0304
+   },
+   "gap_travel|male|sp_gap": {
+    "contrast": "gap-none gap_travel m",
+    "mean": 0.085,
+    "ci90": [
+     0.043,
+     0.127
+    ],
+    "t": 3.4,
+    "p": 0.0016,
+    "tost_p": 0.9132,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0144
+   }
+  },
+  "qwen": {
+   "parent|female|sp_fair": {
+    "contrast": "fair-none parent f",
+    "mean": -0.047,
+    "ci90": [
+     -0.082,
+     -0.013
+    ],
+    "t": -2.3,
+    "p": 0.0267,
+    "tost_p": 0.4452,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1602
+   },
+   "parent|female|sp_gap": {
+    "contrast": "gap-none parent f",
+    "mean": -0.03,
+    "ci90": [
+     -0.063,
+     0.004
+    ],
+    "t": -1.5,
+    "p": 0.149,
+    "tost_p": 0.158,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.447
+   },
+   "parent|male|sp_fair": {
+    "contrast": "fair-none parent m",
+    "mean": -0.08,
+    "ci90": [
+     -0.112,
+     -0.049
+    ],
+    "t": -4.3,
+    "p": 0.0001,
+    "tost_p": 0.9422,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0011
+   },
+   "parent|male|sp_gap": {
+    "contrast": "gap-none parent m",
+    "mean": -0.038,
+    "ci90": [
+     -0.064,
+     -0.012
+    ],
+    "t": -2.5,
+    "p": 0.018,
+    "tost_p": 0.2234,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.126
+   },
+   "parent_gap|female|sp_fair": {
+    "contrast": "fair-none parent_gap f",
+    "mean": -0.053,
+    "ci90": [
+     -0.079,
+     -0.027
+    ],
+    "t": -3.4,
+    "p": 0.0016,
+    "tost_p": 0.5762,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0128
+   },
+   "parent_gap|female|sp_gap": {
+    "contrast": "gap-none parent_gap f",
+    "mean": 0.045,
+    "ci90": [
+     0.009,
+     0.082
+    ],
+    "t": 2.1,
+    "p": 0.0443,
+    "tost_p": 0.4145,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.2215
+   },
+   "parent_gap|male|sp_fair": {
+    "contrast": "fair-none parent_gap m",
+    "mean": -0.078,
+    "ci90": [
+     -0.105,
+     -0.051
+    ],
+    "t": -4.9,
+    "p": 0.0,
+    "tost_p": 0.9554,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0
+   },
+   "parent_gap|male|sp_gap": {
+    "contrast": "gap-none parent_gap m",
+    "mean": 0.039,
+    "ci90": [
+     0.007,
+     0.071
+    ],
+    "t": 2.1,
+    "p": 0.045,
+    "tost_p": 0.285,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.2215
+   },
+   "gap_travel|female|sp_fair": {
+    "contrast": "fair-none gap_travel f",
+    "mean": 0.013,
+    "ci90": [
+     -0.017,
+     0.042
+    ],
+    "t": 0.7,
+    "p": 0.4723,
+    "tost_p": 0.0178,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 0.9446
+   },
+   "gap_travel|female|sp_gap": {
+    "contrast": "gap-none gap_travel f",
+    "mean": 0.065,
+    "ci90": [
+     0.038,
+     0.091
+    ],
+    "t": 4.1,
+    "p": 0.0002,
+    "tost_p": 0.8237,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.002
+   },
+   "gap_travel|male|sp_fair": {
+    "contrast": "fair-none gap_travel m",
+    "mean": 0.008,
+    "ci90": [
+     -0.021,
+     0.036
+    ],
+    "t": 0.5,
+    "p": 0.6409,
+    "tost_p": 0.0087,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 0.9446
+   },
+   "gap_travel|male|sp_gap": {
+    "contrast": "gap-none gap_travel m",
+    "mean": 0.084,
+    "ci90": [
+     0.049,
+     0.12
+    ],
+    "t": 4.0,
+    "p": 0.0003,
+    "tost_p": 0.9452,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0027
+   }
+  }
+ },
+ "hb2": {
+  "deepseek": {
+   "gender_parent|sp_none": {
+    "p_woman": 0.584,
+    "t_vs_half": 5.5,
+    "p": 0.0
+   },
+   "gender_parent|sp_fair": {
+    "p_woman": 0.528,
+    "t_vs_half": 2.1,
+    "p": 0.044
+   },
+   "gender_parent|sp_gap": {
+    "p_woman": 0.518,
+    "t_vs_half": 0.9,
+    "p": 0.3629
+   },
+   "MF_gap|sp_none": {
+    "diff": 0.018,
+    "t": 0.9,
+    "p": 0.3867,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_fair": {
+    "diff": -0.001,
+    "t": -0.1,
+    "p": 0.9526,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_gap": {
+    "diff": -0.002,
+    "t": -0.1,
+    "p": 0.9305,
+    "n_pairs": 40
+   }
+  },
+  "haiku": {
+   "gender_parent|sp_none": {
+    "p_woman": 0.498,
+    "t_vs_half": -0.1,
+    "p": 0.9199
+   },
+   "gender_parent|sp_fair": {
+    "p_woman": 0.457,
+    "t_vs_half": -2.2,
+    "p": 0.0351
+   },
+   "gender_parent|sp_gap": {
+    "p_woman": 0.418,
+    "t_vs_half": -3.9,
+    "p": 0.0004
+   },
+   "MF_gap|sp_none": {
+    "diff": -0.024,
+    "t": -1.2,
+    "p": 0.2293,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_fair": {
+    "diff": -0.043,
+    "t": -2.2,
+    "p": 0.0322,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_gap": {
+    "diff": -0.006,
+    "t": -0.3,
+    "p": 0.781,
+    "n_pairs": 40
+   }
+  },
+  "luna": {
+   "gender_parent|sp_none": {
+    "p_woman": 0.64,
+    "t_vs_half": 6.1,
+    "p": 0.0
+   },
+   "gender_parent|sp_fair": {
+    "p_woman": 0.557,
+    "t_vs_half": 3.3,
+    "p": 0.0018
+   },
+   "gender_parent|sp_gap": {
+    "p_woman": 0.557,
+    "t_vs_half": 3.9,
+    "p": 0.0004
+   },
+   "MF_gap|sp_none": {
+    "diff": -0.013,
+    "t": -0.7,
+    "p": 0.5152,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_fair": {
+    "diff": 0.001,
+    "t": 0.1,
+    "p": 0.9406,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_gap": {
+    "diff": -0.007,
+    "t": -0.4,
+    "p": 0.6715,
+    "n_pairs": 40
+   }
+  },
+  "qwen": {
+   "gender_parent|sp_none": {
+    "p_woman": 0.521,
+    "t_vs_half": 1.7,
+    "p": 0.0973
+   },
+   "gender_parent|sp_fair": {
+    "p_woman": 0.501,
+    "t_vs_half": 0.1,
+    "p": 0.904
+   },
+   "gender_parent|sp_gap": {
+    "p_woman": 0.501,
+    "t_vs_half": 0.1,
+    "p": 0.9418
+   },
+   "MF_gap|sp_none": {
+    "diff": -0.027,
+    "t": -1.9,
+    "p": 0.0698,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_fair": {
+    "diff": 0.006,
+    "t": 0.4,
+    "p": 0.674,
+    "n_pairs": 40
+   },
+   "MF_gap|sp_gap": {
+    "diff": -0.018,
+    "t": -1.1,
+    "p": 0.2823,
+    "n_pairs": 40
+   }
+  }
+ },
+ "hc1": {
+  "deepseek": {
+   "gap_closure|female": {
+    "contrast": "gap_closure-travel f",
+    "mean": -0.006,
+    "ci90": [
+     -0.043,
+     0.03
+    ],
+    "t": -0.3,
+    "p": 0.7751,
+    "tost_p": 0.0247,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_closure|male": {
+    "contrast": "gap_closure-travel m",
+    "mean": 0.044,
+    "ci90": [
+     0.012,
+     0.077
+    ],
+    "t": 2.3,
+    "p": 0.0271,
+    "tost_p": 0.3808,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1084
+   },
+   "gap_cert|female": {
+    "contrast": "gap_cert-travel f",
+    "mean": -0.04,
+    "ci90": [
+     -0.072,
+     -0.007
+    ],
+    "t": -2.1,
+    "p": 0.045,
+    "tost_p": 0.3029,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.135
+   },
+   "gap_cert|male": {
+    "contrast": "gap_cert-travel m",
+    "mean": -0.004,
+    "ci90": [
+     -0.039,
+     0.031
+    ],
+    "t": -0.2,
+    "p": 0.8502,
+    "tost_p": 0.016,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "haiku": {
+   "gap_closure|female": {
+    "contrast": "gap_closure-travel f",
+    "mean": 0.023,
+    "ci90": [
+     -0.006,
+     0.053
+    ],
+    "t": 1.3,
+    "p": 0.189,
+    "tost_p": 0.0667,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.756
+   },
+   "gap_closure|male": {
+    "contrast": "gap_closure-travel m",
+    "mean": 0.003,
+    "ci90": [
+     -0.021,
+     0.028
+    ],
+    "t": 0.2,
+    "p": 0.8157,
+    "tost_p": 0.0015,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_cert|female": {
+    "contrast": "gap_cert-travel f",
+    "mean": 0.01,
+    "ci90": [
+     -0.033,
+     0.052
+    ],
+    "t": 0.4,
+    "p": 0.7028,
+    "tost_p": 0.0583,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_cert|male": {
+    "contrast": "gap_cert-travel m",
+    "mean": 0.011,
+    "ci90": [
+     -0.018,
+     0.04
+    ],
+    "t": 0.6,
+    "p": 0.5334,
+    "tost_p": 0.0143,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "luna": {
+   "gap_closure|female": {
+    "contrast": "gap_closure-travel f",
+    "mean": -0.013,
+    "ci90": [
+     -0.038,
+     0.012
+    ],
+    "t": -0.9,
+    "p": 0.3965,
+    "tost_p": 0.0082,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_closure|male": {
+    "contrast": "gap_closure-travel m",
+    "mean": 0.03,
+    "ci90": [
+     0.006,
+     0.054
+    ],
+    "t": 2.1,
+    "p": 0.0406,
+    "tost_p": 0.0849,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.1624
+   },
+   "gap_cert|female": {
+    "contrast": "gap_cert-travel f",
+    "mean": -0.006,
+    "ci90": [
+     -0.034,
+     0.023
+    ],
+    "t": -0.3,
+    "p": 0.7491,
+    "tost_p": 0.0067,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   },
+   "gap_cert|male": {
+    "contrast": "gap_cert-travel m",
+    "mean": -0.006,
+    "ci90": [
+     -0.028,
+     0.016
+    ],
+    "t": -0.5,
+    "p": 0.636,
+    "tost_p": 0.0009,
+    "equivalent_5pp": true,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "qwen": {
+   "gap_closure|female": {
+    "contrast": "gap_closure-travel f",
+    "mean": 0.047,
+    "ci90": [
+     0.023,
+     0.072
+    ],
+    "t": 3.3,
+    "p": 0.0022,
+    "tost_p": 0.4276,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0066
+   },
+   "gap_closure|male": {
+    "contrast": "gap_closure-travel m",
+    "mean": 0.046,
+    "ci90": [
+     0.023,
+     0.068
+    ],
+    "t": 3.4,
+    "p": 0.0014,
+    "tost_p": 0.372,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0056
+   },
+   "gap_cert|female": {
+    "contrast": "gap_cert-travel f",
+    "mean": 0.054,
+    "ci90": [
+     0.023,
+     0.085
+    ],
+    "t": 2.9,
+    "p": 0.0055,
+    "tost_p": 0.5806,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0066
+   },
+   "gap_cert|male": {
+    "contrast": "gap_cert-travel m",
+    "mean": 0.043,
+    "ci90": [
+     0.02,
+     0.066
+    ],
+    "t": 3.1,
+    "p": 0.0032,
+    "tost_p": 0.3,
+    "equivalent_5pp": false,
+    "n_pairs": 40,
+    "holm": 0.0066
+   }
+  }
+ }
+}

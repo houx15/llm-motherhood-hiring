@@ -385,3 +385,18 @@ abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
 > CANCELLED (total_cap raised to non-binding, reserve set to 0). Only the
 > weekly cap (enforced on the OpenRouter key) and the per-run kill switch
 > remain.
+
+## 13. Phase 4 complete (2026-10-30) — confirmatory results
+
+48,000/48,000 calls; results in docs/phase4/PHASE4_RESULTS.md. Headlines:
+H-B1 supported (generic fairness prompt does NOT remove Layer 1; backfires
+on Qwen −5pp, helps Haiku +7–12pp); H-B2 supported (Luna pro-woman .64→.56);
+H-B3 supported (targeted no-gap instruction cuts interruption penalty 4–14pp,
+family-signal penalty untouched except Haiku); H-C1 supported (travel not
+stigmatized; Qwen penalizes travel ~5pp MORE than neutral labels).
+
+**Data-integrity incident + fix**: repair passes had two bugs (repaired
+already-valid calls; repair template lacks original prompt → unconstrained
+`chosen`). Fixed in repair.py + loader (original-beats-repair dedup,
+`from_repair` flag); analyses exclude repair-saved rows. Historical impact
+quantified: Qwen E2 cells shift ≤ .8pp; published conclusions unchanged.

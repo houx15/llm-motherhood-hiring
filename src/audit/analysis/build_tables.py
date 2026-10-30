@@ -18,7 +18,7 @@ LOAD_COLUMNS = {
     "resume_ids", "gender", "family_code", "name_idx", "jd_variant", "position",
     "cue_level", "draw", "name_pair", "contrast", "sample_idx", "paraphrase_id",
     "request_ts", "finish_reason", "parse_ok", "refusal_flag", "sysarm",
-    "parsed_json", "render_ctx", "error",
+    "parsed_json", "render_ctx", "error", "repair_of",
 }
 
 
@@ -43,8 +43,13 @@ def load_run_logs(run_id: str | None = None, model_key: str | None = None) -> pd
     # re-runs) and the latest attempt
     if run_id is None and "call_id" in df.columns:
         df["_ok"] = df.get("parse_ok", False).fillna(False).astype(int)
-        df = df.sort_values(["_ok", "request_ts"], ascending=[False, False])
-        df = df.drop_duplicates("call_id", keep="first").drop(columns=["_ok"])
+        # a valid ORIGINAL attempt beats a valid repair attempt: the repair
+        # template carries the prior response, not the original prompt, so
+        # repaired `chosen` fields are not experimental responses
+        df["_repair"] = df.get("repair_of").notna().astype(int)
+        df = df.sort_values(["_ok", "_repair", "request_ts"], ascending=[False, True, False])
+        df = df.drop_duplicates("call_id", keep="first").drop(columns=["_ok", "_repair"])
+    df["from_repair"] = df["repair_of"].notna() if "repair_of" in df.columns else False
     return df
 
 
