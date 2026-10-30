@@ -5,6 +5,12 @@ Output: docs/report/figures/*.pdf (matplotlib PDF backend, vector).
 """
 from __future__ import annotations
 
+import os
+
+# Deterministic PDFs: matplotlib embeds creation timestamps unless
+# SOURCE_DATE_EPOCH is pinned (audit reproduce requires byte-identical output).
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1761840000")
+
 from pathlib import Path
 
 import matplotlib
