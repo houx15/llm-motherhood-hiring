@@ -1,0 +1,26 @@
+{
+ "DeepSeek": {
+  "crossing_womens_prevalence": 0.587,
+  "ratio_women": 0.633,
+  "ratio_men": 0.653,
+  "scenario_20_5": 0.943
+ },
+ "Haiku": {
+  "crossing_womens_prevalence": 0.587,
+  "ratio_women": 0.633,
+  "ratio_men": 0.653,
+  "scenario_20_5": 0.943
+ },
+ "Luna": {
+  "crossing_womens_prevalence": 0.587,
+  "ratio_women": 0.633,
+  "ratio_men": 0.653,
+  "scenario_20_5": 0.943
+ },
+ "Qwen": {
+  "crossing_womens_prevalence": 0.587,
+  "ratio_women": 0.633,
+  "ratio_men": 0.653,
+  "scenario_20_5": 0.943
+ }
+}

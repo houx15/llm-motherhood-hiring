@@ -4,7 +4,7 @@
    "parent": {
     "name": 0.347,
     "name_field": 0.348,
-    "initial_field": 0.347,
+    "initial_field": 0.348,
     "blind": 0.343
    },
    "parent_committed": {
@@ -14,8 +14,8 @@
     "blind": 0.439
    },
    "parent_gap": {
-    "name": 0.249,
-    "name_field": 0.258,
+    "name": 0.25,
+    "name_field": 0.257,
     "initial_field": 0.243,
     "blind": 0.277
    },
@@ -35,7 +35,7 @@
     "name": 0.357,
     "name_field": 0.362,
     "initial_field": 0.359,
-    "blind": 0.351
+    "blind": 0.35
    }
   },
   "haiku": {
@@ -80,14 +80,14 @@
    "parent": {
     "name": 0.344,
     "name_field": 0.378,
-    "initial_field": 0.389,
+    "initial_field": 0.388,
     "blind": 0.357
    },
    "parent_committed": {
     "name": 0.259,
     "name_field": 0.306,
     "initial_field": 0.307,
-    "blind": 0.277
+    "blind": 0.276
    },
    "parent_gap": {
     "name": 0.095,
@@ -111,44 +111,44 @@
     "name": 0.225,
     "name_field": 0.255,
     "initial_field": 0.233,
-    "blind": 0.217
+    "blind": 0.219
    }
   },
   "qwen": {
    "parent": {
-    "name": 0.406,
-    "name_field": 0.396,
-    "initial_field": 0.406,
-    "blind": 0.384
+    "name": 0.402,
+    "name_field": 0.403,
+    "initial_field": 0.401,
+    "blind": 0.393
    },
    "parent_committed": {
-    "name": 0.444,
-    "name_field": 0.477,
+    "name": 0.433,
+    "name_field": 0.458,
     "initial_field": 0.449,
-    "blind": 0.424
+    "blind": 0.418
    },
    "parent_gap": {
-    "name": 0.269,
-    "name_field": 0.268,
-    "initial_field": 0.263,
-    "blind": 0.263
+    "name": 0.267,
+    "name_field": 0.27,
+    "initial_field": 0.265,
+    "blind": 0.255
    },
    "personal": {
-    "name": 0.48,
-    "name_field": 0.491,
-    "initial_field": 0.481,
-    "blind": 0.471
+    "name": 0.489,
+    "name_field": 0.501,
+    "initial_field": 0.495,
+    "blind": 0.486
    },
    "gap_travel": {
-    "name": 0.281,
-    "name_field": 0.317,
-    "initial_field": 0.306,
-    "blind": 0.292
+    "name": 0.285,
+    "name_field": 0.321,
+    "initial_field": 0.304,
+    "blind": 0.298
    },
    "gap_parental_only": {
-    "name": 0.364,
-    "name_field": 0.356,
-    "initial_field": 0.364,
+    "name": 0.369,
+    "name_field": 0.358,
+    "initial_field": 0.366,
     "blind": 0.359
    }
   }
@@ -156,106 +156,106 @@
  "e3v3_ratio_by_level": {
   "deepseek": {
    "name": {
-    "parent_top3": 0.34,
-    "childless_top3": 0.532,
-    "ratio": 0.639,
-    "n_pools": 1442
+    "parent_top3": 0.288,
+    "childless_top3": 0.542,
+    "ratio": 0.531,
+    "n_pools": 5762
    },
    "name_field": {
-    "parent_top3": 0.347,
-    "childless_top3": 0.531,
-    "ratio": 0.655,
-    "n_pools": 1442
+    "parent_top3": 0.302,
+    "childless_top3": 0.54,
+    "ratio": 0.561,
+    "n_pools": 5762
    },
    "initial_field": {
-    "parent_top3": 0.352,
-    "childless_top3": 0.53,
-    "ratio": 0.664,
-    "n_pools": 1438
+    "parent_top3": 0.301,
+    "childless_top3": 0.54,
+    "ratio": 0.558,
+    "n_pools": 5761
    },
    "blind": {
-    "parent_top3": 0.345,
-    "childless_top3": 0.531,
-    "ratio": 0.65,
-    "n_pools": 719
+    "parent_top3": 0.295,
+    "childless_top3": 0.541,
+    "ratio": 0.546,
+    "n_pools": 2881
    }
   },
   "haiku": {
    "name": {
-    "parent_top3": 0.086,
-    "childless_top3": 0.583,
-    "ratio": 0.148,
-    "n_pools": 1440
+    "parent_top3": 0.288,
+    "childless_top3": 0.542,
+    "ratio": 0.531,
+    "n_pools": 5762
    },
    "name_field": {
-    "parent_top3": 0.11,
-    "childless_top3": 0.578,
-    "ratio": 0.19,
-    "n_pools": 1440
+    "parent_top3": 0.302,
+    "childless_top3": 0.54,
+    "ratio": 0.561,
+    "n_pools": 5762
    },
    "initial_field": {
-    "parent_top3": 0.097,
-    "childless_top3": 0.581,
-    "ratio": 0.168,
-    "n_pools": 1439
+    "parent_top3": 0.301,
+    "childless_top3": 0.54,
+    "ratio": 0.558,
+    "n_pools": 5761
    },
    "blind": {
-    "parent_top3": 0.093,
-    "childless_top3": 0.581,
-    "ratio": 0.16,
-    "n_pools": 720
+    "parent_top3": 0.295,
+    "childless_top3": 0.541,
+    "ratio": 0.546,
+    "n_pools": 2881
    }
   },
   "luna": {
    "name": {
-    "parent_top3": 0.366,
-    "childless_top3": 0.527,
-    "ratio": 0.695,
-    "n_pools": 1440
+    "parent_top3": 0.288,
+    "childless_top3": 0.542,
+    "ratio": 0.531,
+    "n_pools": 5762
    },
    "name_field": {
-    "parent_top3": 0.378,
-    "childless_top3": 0.524,
-    "ratio": 0.72,
-    "n_pools": 1440
+    "parent_top3": 0.302,
+    "childless_top3": 0.54,
+    "ratio": 0.561,
+    "n_pools": 5762
    },
    "initial_field": {
-    "parent_top3": 0.366,
-    "childless_top3": 0.527,
-    "ratio": 0.695,
-    "n_pools": 1440
+    "parent_top3": 0.301,
+    "childless_top3": 0.54,
+    "ratio": 0.558,
+    "n_pools": 5761
    },
    "blind": {
-    "parent_top3": 0.371,
-    "childless_top3": 0.526,
-    "ratio": 0.705,
-    "n_pools": 720
+    "parent_top3": 0.295,
+    "childless_top3": 0.541,
+    "ratio": 0.546,
+    "n_pools": 2881
    }
   },
   "qwen": {
    "name": {
-    "parent_top3": 0.36,
-    "childless_top3": 0.528,
-    "ratio": 0.681,
-    "n_pools": 1438
+    "parent_top3": 0.288,
+    "childless_top3": 0.542,
+    "ratio": 0.531,
+    "n_pools": 5762
    },
    "name_field": {
-    "parent_top3": 0.374,
-    "childless_top3": 0.525,
-    "ratio": 0.713,
-    "n_pools": 1437
+    "parent_top3": 0.302,
+    "childless_top3": 0.54,
+    "ratio": 0.561,
+    "n_pools": 5762
    },
    "initial_field": {
-    "parent_top3": 0.389,
-    "childless_top3": 0.522,
-    "ratio": 0.744,
-    "n_pools": 1433
+    "parent_top3": 0.301,
+    "childless_top3": 0.54,
+    "ratio": 0.558,
+    "n_pools": 5761
    },
    "blind": {
-    "parent_top3": 0.371,
-    "childless_top3": 0.526,
-    "ratio": 0.705,
-    "n_pools": 720
+    "parent_top3": 0.295,
+    "childless_top3": 0.541,
+    "ratio": 0.546,
+    "n_pools": 2881
    }
   }
  },
@@ -264,11 +264,11 @@
    "n": 28,
    "z_female_share": {
     "coef": 0.057,
-    "p": 0.0254
+    "p": 0.0242
    },
    "z_care": {
     "coef": -0.029,
-    "p": 0.1846
+    "p": 0.1781
    }
   },
   "haiku": {
@@ -285,31 +285,31 @@
   "luna": {
    "n": 28,
    "z_female_share": {
-    "coef": 0.047,
-    "p": 0.1487
+    "coef": 0.048,
+    "p": 0.1476
    },
    "z_care": {
     "coef": -0.058,
-    "p": 0.0496
+    "p": 0.0499
    }
   },
   "qwen": {
    "n": 28,
    "z_female_share": {
-    "coef": 0.026,
-    "p": 0.3741
+    "coef": 0.027,
+    "p": 0.3373
    },
    "z_care": {
-    "coef": 0.007,
-    "p": 0.7835
+    "coef": 0.013,
+    "p": 0.6103
    }
   }
  },
  "decomposition_L0_mothers": {
   "deepseek": {
-   "parenthood_net_of_disclosure": -0.107,
-   "caregiving_label_net_of_interruption": 0.01,
-   "family_bundle_on_top_of_gap": -0.156
+   "parenthood_net_of_disclosure": -0.108,
+   "caregiving_label_net_of_interruption": 0.011,
+   "family_bundle_on_top_of_gap": -0.157
   },
   "haiku": {
    "parenthood_net_of_disclosure": -0.269,
@@ -317,13 +317,13 @@
    "family_bundle_on_top_of_gap": -0.238
   },
   "luna": {
-   "parenthood_net_of_disclosure": -0.124,
+   "parenthood_net_of_disclosure": -0.125,
    "caregiving_label_net_of_interruption": 0.041,
    "family_bundle_on_top_of_gap": -0.177
   },
   "qwen": {
-   "parenthood_net_of_disclosure": -0.095,
-   "caregiving_label_net_of_interruption": 0.074,
+   "parenthood_net_of_disclosure": -0.103,
+   "caregiving_label_net_of_interruption": 0.075,
    "family_bundle_on_top_of_gap": -0.108
   }
  },
@@ -334,7 +334,7 @@
    "name_field": 0.007
   },
   "haiku": {
-   "initial_field": 0.257,
+   "initial_field": 0.258,
    "name": 0.182,
    "name_field": 0.275
   },
@@ -344,9 +344,9 @@
    "name_field": 0.003
   },
   "qwen": {
-   "initial_field": 0.029,
+   "initial_field": 0.028,
    "name": 0.0,
-   "name_field": 0.026
+   "name_field": 0.025
   }
  },
  "drift_mean_delta": {
@@ -509,9 +509,9 @@
    "gap_pct": -2.89
   },
   "haiku": {
-   "parent_usd": -1332,
-   "parent_pct": -1.68,
-   "gap_usd": -942,
+   "parent_usd": -1338,
+   "parent_pct": -1.69,
+   "gap_usd": -938,
    "gap_pct": -1.18
   },
   "luna": {
@@ -521,10 +521,10 @@
    "gap_pct": -2.27
   },
   "qwen": {
-   "parent_usd": -1775,
-   "parent_pct": -2.33,
-   "gap_usd": -3145,
-   "gap_pct": -4.1
+   "parent_usd": -1666,
+   "parent_pct": -2.2,
+   "gap_usd": -3017,
+   "gap_pct": -3.94
   }
  }
 }

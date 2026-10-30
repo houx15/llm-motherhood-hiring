@@ -1,0 +1,82 @@
+{
+ "phases": {
+  "phase 3 main": {
+   "calls": 367552,
+   "valid_original": 364075,
+   "refusal": 1126,
+   "valid_incl_repair": 367547,
+   "cost_usd": 123.76,
+   "log_rows": 383629
+  },
+  "main_run (phase 2, other models)": {
+   "calls": 143280,
+   "valid_original": 137933,
+   "refusal": 194,
+   "valid_incl_repair": 142219,
+   "cost_usd": 32.18,
+   "log_rows": 147236
+  },
+  "phase 4 experiment": {
+   "calls": 48000,
+   "valid_original": 47601,
+   "refusal": 319,
+   "valid_incl_repair": 48000,
+   "cost_usd": 16.64,
+   "log_rows": 150917
+  },
+  "main_run (phase 1)": {
+   "calls": 43344,
+   "valid_original": 43241,
+   "refusal": 0,
+   "valid_incl_repair": 43303,
+   "cost_usd": 5.76,
+   "log_rows": 43449
+  },
+  "pilot": {
+   "calls": 6929,
+   "valid_original": 6916,
+   "refusal": 0,
+   "valid_incl_repair": 6929,
+   "cost_usd": 1.22,
+   "log_rows": 6962
+  },
+  "phase 3 manipulation check": {
+   "calls": 4704,
+   "valid_original": 4701,
+   "refusal": 0,
+   "valid_incl_repair": 4701,
+   "cost_usd": 0.56,
+   "log_rows": 4707
+  },
+  "phase 3 lawyer rerun": {
+   "calls": 1896,
+   "valid_original": 1878,
+   "refusal": 3,
+   "valid_incl_repair": 1882,
+   "cost_usd": 0.33,
+   "log_rows": 1914
+  },
+  "materials": {
+   "calls": 154,
+   "valid_original": 154,
+   "refusal": 0,
+   "valid_incl_repair": 154,
+   "cost_usd": 0.31,
+   "log_rows": 901
+  },
+  "pretest": {
+   "calls": 560,
+   "valid_original": 560,
+   "refusal": 0,
+   "valid_incl_repair": 560,
+   "cost_usd": 0.1,
+   "log_rows": 960
+  }
+ },
+ "grand_total": {
+  "calls": 616419,
+  "log_rows": 855829,
+  "cost_usd": 189.03,
+  "valid_original": 607059
+ }
+}

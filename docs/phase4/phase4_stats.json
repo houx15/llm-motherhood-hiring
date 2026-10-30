@@ -1,4 +1,50 @@
 {
+ "levels_women": {
+  "deepseek": {
+   "parent|sp_none": 0.361,
+   "parent|sp_fair": 0.325,
+   "parent|sp_gap": 0.369,
+   "parent_gap|sp_none": 0.317,
+   "parent_gap|sp_fair": 0.301,
+   "parent_gap|sp_gap": 0.386,
+   "gap_travel|sp_none": 0.422,
+   "gap_travel|sp_fair": 0.42,
+   "gap_travel|sp_gap": 0.451
+  },
+  "haiku": {
+   "parent|sp_none": 0.266,
+   "parent|sp_fair": 0.332,
+   "parent|sp_gap": 0.342,
+   "parent_gap|sp_none": 0.074,
+   "parent_gap|sp_fair": 0.195,
+   "parent_gap|sp_gap": 0.217,
+   "gap_travel|sp_none": 0.296,
+   "gap_travel|sp_fair": 0.308,
+   "gap_travel|sp_gap": 0.3
+  },
+  "luna": {
+   "parent|sp_none": 0.307,
+   "parent|sp_fair": 0.357,
+   "parent|sp_gap": 0.376,
+   "parent_gap|sp_none": 0.195,
+   "parent_gap|sp_fair": 0.188,
+   "parent_gap|sp_gap": 0.286,
+   "gap_travel|sp_none": 0.238,
+   "gap_travel|sp_fair": 0.283,
+   "gap_travel|sp_gap": 0.307
+  },
+  "qwen": {
+   "parent|sp_none": 0.381,
+   "parent|sp_fair": 0.333,
+   "parent|sp_gap": 0.351,
+   "parent_gap|sp_none": 0.234,
+   "parent_gap|sp_fair": 0.181,
+   "parent_gap|sp_gap": 0.279,
+   "gap_travel|sp_none": 0.274,
+   "gap_travel|sp_fair": 0.286,
+   "gap_travel|sp_gap": 0.339
+  }
+ },
  "validity": {
   "deepseek": {
    "valid_by_arm": {

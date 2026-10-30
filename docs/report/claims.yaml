@@ -1,0 +1,125 @@
+# Claims registry: every number in the short abstract, extended-summary
+# Findings 1-5, and the §4.10/4.11 tables. Each entry: the rendered string as
+# it must appear in docs/report/report.md, and its machine source.
+# rules: raw (=source value), pct100 (share->pp), range_minmax (over a set)
+claims:
+  # ---- short abstract + finding 1 ----
+  - id: abs_calls
+    section: abstract
+    rendered: "602,093 logged calls"
+    source: {file: docs/final/study_totals.json, key: grand_total.calls}
+    rule: thousands_int
+  - id: abs_fit_max
+    section: abstract
+    rendered: "at most 0.35 points"
+    source: {file: docs/report/stats.json, key: "models.*.e1_gaps_women.overall_fit.parent_gap_minus_none"}
+    rule: max_abs_2dp
+  - id: abs_interview_max
+    section: abstract
+    rendered: "at most 1.5pp"
+    source: {file: docs/report/stats.json, key: "models.*.e1_gaps_women.interview.parent_gap_minus_none"}
+    rule: max_abs_pp_1dp
+  - id: abs_share_min
+    section: abstract
+    rendered: "only 11–31% of the time"
+    source: {file: docs/report/stats.json, key: "models.*.e2_clustered.cells.parent_gap|*.p"}
+    rule: min_2dp_pct
+  - id: abs_share_max
+    section: abstract
+    rendered: "up to 77% of shortlist probability"
+    source: {file: docs/report/stats.json, key: "models.*.e3_fe.*.adjusted_ratio"}
+    rule: one_minus_min_pct
+  - id: abs_amplification
+    section: abstract
+    rendered: "4× to 31×"
+    source: {file: docs/phase3/round6_stats.json, key: "amplification.*.parent*.amplification_ratio"}
+    rule: minmax_int
+  - id: abs_haiku_fit
+    section: abstract
+    rendered: "*scores* parents higher (+0.34) yet chooses them 23% of the time"
+    source: {file: docs/report/stats.json, key: models.claude_haiku_55.e1_gaps_women.overall_fit.parent_minus_none}
+    rule: signed_2dp
+  - id: abs_haiku_choice
+    section: abstract
+    rendered: "chooses them 23% of the time"
+    source: {file: docs/report/stats.json, key: "models.claude_haiku_55.e2_clustered.cells.parent|female.p"}
+    rule: pct_int
+  # ---- finding 2 (decomposition) ----
+  - id: f2_interruption
+    section: "extended summary, finding 2"
+    rendered: "costs 10.6–26.0pp"
+    source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.cell_gap_travel.P"}
+    rule: penalty_range_pp_1dp
+  - id: f2_bundle
+    section: "extended summary, finding 2"
+    rendered: "family bundle adds 10.5–17.6pp"
+    source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.bundle.diff"}
+    rule: range_abs_pp_1dp
+  - id: f2_parenthood
+    section: "extended summary, finding 2"
+    rendered: "parenthood net of a disclosure placebo 6.8–19.2pp"
+    source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.parenthood.diff"}
+    rule: range_abs_pp_1dp
+  - id: f2_tost
+    section: "extended summary, finding 2"
+    rendered: "7 of 8 model×cue"
+    source: {file: docs/phase3/round6_stats.json, key: "equivalence.*"}
+    rule: tost_count_7_of_8
+  # ---- finding 5 (abstention) ----
+  - id: f5_withhold_main
+    section: "finding 5"
+    rendered: "19.8% of pregnant applicants"
+    source: {file: docs/report/stats.json, key: models.claude_haiku_55.withheld.rates.female|pregnant}
+    rule: pct_1dp
+  - id: f5_interview_gap
+    section: "finding 5"
+    rendered: "a −9.4pp interview penalty"
+    source: {file: docs/report/stats.json, key: models.claude_haiku_55.pregnancy_full.interview.t}
+    rule: pregnancy_interview_pp
+  # ---- §4.10 table (phase-4 levels, women) ----
+  - id: p4_haiku_gap_none
+    section: "§4.10"
+    rendered: "**.074"
+    source: {file: docs/phase4/phase4_stats.json, key: levels_women.haiku.parent_gap|sp_none}
+    rule: lead3
+  - id: p4_haiku_gap_fair
+    section: "§4.10"
+    rendered: ".195"
+    source: {file: docs/phase4/phase4_stats.json, key: levels_women.haiku.parent_gap|sp_fair}
+    rule: lead3
+  - id: p4_qwen_gap_fair
+    section: "§4.10"
+    rendered: ".181"
+    source: {file: docs/phase4/phase4_stats.json, key: levels_women.qwen.parent_gap|sp_fair}
+    rule: lead3
+  - id: p4_ds_gap_gap_arm
+    section: "§4.10"
+    rendered: ".386"
+    source: {file: docs/phase4/phase4_stats.json, key: levels_women.deepseek.parent_gap|sp_gap}
+    rule: lead3
+  - id: p4_luna_direct_none
+    section: "§4.10 (H-B2)"
+    rendered: "replicates (.640"
+    source: {file: docs/phase4/phase4_stats.json, key: hb2.luna.gender_parent|sp_none.p_woman}
+    rule: lead3
+  - id: p4_luna_direct_fair
+    section: "§4.10 (H-B2)"
+    rendered: "falls to .557"
+    source: {file: docs/phase4/phase4_stats.json, key: hb2.luna.gender_parent|sp_fair.p_woman}
+    rule: lead3
+  - id: p4_sp_gap_range
+    section: "§4.10 (H-B3)"
+    rendered: "cuts the interruption penalty by 4–14pp"
+    source: {file: docs/phase4/phase4_stats.json, key: "hb1_hb3.*.parent_gap|*|sp_gap.mean"}
+    rule: range_pp_0dp
+  # ---- §4.11 (disparate impact) ----
+  - id: di_haiku_cross
+    section: "§4.11"
+    rendered: "exceeds **31%**"
+    source: {file: docs/final/disparate_impact_stats.json, key: Haiku.crossing_womens_prevalence}
+    rule: pct_int
+  - id: di_scenario_low
+    section: "§4.11"
+    rendered: ".88–.96"
+    source: {file: docs/final/disparate_impact_stats.json, key: "*.scenario_20_5"}
+    rule: minmax_lead2

@@ -2,106 +2,106 @@
  "tiebreaker": {
   "deepseek": {
    "parent": {
-    "median_qgap_fit": 0.4,
+    "median_qgap_fit": 0.3,
     "near_tie": {
-     "penalty_pp": 18.3,
-     "n": 42
+     "penalty_pp": 18.2,
+     "n": 40
     },
     "clear_gap": {
-     "penalty_pp": 11.8,
-     "n": 39
+     "penalty_pp": 11.6,
+     "n": 40
     },
-    "t_near_vs_far": -3.2
+    "t_near_vs_far": -3.8
    },
    "parent_gap": {
-    "median_qgap_fit": 0.4,
+    "median_qgap_fit": 0.3,
     "near_tie": {
-     "penalty_pp": 21.7,
-     "n": 43
+     "penalty_pp": 21.9,
+     "n": 40
     },
     "clear_gap": {
-     "penalty_pp": 19.6,
-     "n": 41
+     "penalty_pp": 15.2,
+     "n": 40
     },
-    "t_near_vs_far": -0.9
+    "t_near_vs_far": -3.3
    }
   },
   "haiku": {
    "parent": {
     "median_qgap_fit": 0.3,
     "near_tie": {
-     "penalty_pp": 30.4,
+     "penalty_pp": 27.1,
      "n": 40
     },
     "clear_gap": {
-     "penalty_pp": 18.7,
+     "penalty_pp": 16.8,
      "n": 40
     },
-    "t_near_vs_far": -4.0
+    "t_near_vs_far": -3.9
    },
    "parent_gap": {
     "median_qgap_fit": 0.2,
     "near_tie": {
-     "penalty_pp": 41.4,
+     "penalty_pp": 39.6,
      "n": 41
     },
     "clear_gap": {
-     "penalty_pp": 32.2,
+     "penalty_pp": 31.2,
      "n": 40
     },
-    "t_near_vs_far": -2.6
+    "t_near_vs_far": -2.5
    }
   },
   "luna": {
    "parent": {
     "median_qgap_fit": 0.3,
     "near_tie": {
-     "penalty_pp": 24.6,
+     "penalty_pp": 21.0,
      "n": 40
     },
     "clear_gap": {
-     "penalty_pp": 17.0,
+     "penalty_pp": 14.9,
      "n": 40
     },
-    "t_near_vs_far": -2.0
+    "t_near_vs_far": -1.8
    },
    "parent_gap": {
-    "median_qgap_fit": 0.2,
+    "median_qgap_fit": 0.3,
     "near_tie": {
-     "penalty_pp": 40.4,
-     "n": 41
-    },
-    "clear_gap": {
-     "penalty_pp": 22.6,
+     "penalty_pp": 38.7,
      "n": 40
     },
-    "t_near_vs_far": -3.7
+    "clear_gap": {
+     "penalty_pp": 20.0,
+     "n": 40
+    },
+    "t_near_vs_far": -4.3
    }
   },
   "qwen": {
    "parent": {
-    "median_qgap_fit": 0.3,
+    "median_qgap_fit": 0.2,
     "near_tie": {
-     "penalty_pp": 12.9,
-     "n": 56
+     "penalty_pp": 15.0,
+     "n": 52
     },
     "clear_gap": {
-     "penalty_pp": 8.8,
-     "n": 56
+     "penalty_pp": 8.1,
+     "n": 49
     },
-    "t_near_vs_far": -1.4
+    "t_near_vs_far": -1.6
    },
    "parent_gap": {
-    "median_qgap_fit": 0.3,
+    "median_qgap_fit": 0.2,
     "near_tie": {
-     "penalty_pp": 29.8,
+     "penalty_pp": 28.0,
      "n": 56
     },
     "clear_gap": {
-     "penalty_pp": 23.1,
-     "n": 56
+     "penalty_pp": 25.9,
+     "n": 52
     },
-    "t_near_vs_far": -2.3
+    "t_near_vs_far": -0.6
    }
   }
  },
@@ -111,12 +111,12 @@
    "parent": {
     "e1_fit_gap": -0.128,
     "predicted_P_parent": 0.455,
-    "actual_P_parent": 0.355
+    "actual_P_parent": 0.354
    },
    "parent_gap": {
     "e1_fit_gap": -0.348,
     "predicted_P_parent": 0.381,
-    "actual_P_parent": 0.309
+    "actual_P_parent": 0.32
    }
   },
   "haiku": {
@@ -124,12 +124,12 @@
    "parent": {
     "e1_fit_gap": 0.337,
     "predicted_P_parent": 0.64,
-    "actual_P_parent": 0.232
+    "actual_P_parent": 0.262
    },
    "parent_gap": {
     "e1_fit_gap": 0.145,
     "predicted_P_parent": 0.561,
-    "actual_P_parent": 0.111
+    "actual_P_parent": 0.131
    }
   },
   "luna": {
@@ -137,25 +137,25 @@
    "parent": {
     "e1_fit_gap": -0.083,
     "predicted_P_parent": 0.47,
-    "actual_P_parent": 0.299
+    "actual_P_parent": 0.317
    },
    "parent_gap": {
     "e1_fit_gap": -0.251,
     "predicted_P_parent": 0.409,
-    "actual_P_parent": 0.193
+    "actual_P_parent": 0.205
    }
   },
   "qwen": {
-   "sigma_within_fit": 1.23,
+   "sigma_within_fit": 1.27,
    "parent": {
-    "e1_fit_gap": -0.026,
+    "e1_fit_gap": -0.024,
     "predicted_P_parent": 0.492,
-    "actual_P_parent": 0.386
+    "actual_P_parent": 0.374
    },
    "parent_gap": {
-    "e1_fit_gap": -0.125,
-    "predicted_P_parent": 0.46,
-    "actual_P_parent": 0.226
+    "e1_fit_gap": -0.137,
+    "predicted_P_parent": 0.457,
+    "actual_P_parent": 0.23
    }
   }
  },
@@ -167,7 +167,7 @@
      -0.128,
      -0.08
     ],
-    "t": -8.4,
+    "t": -8.5,
     "p": 0.0,
     "n_pairs": 40
    },
@@ -177,28 +177,28 @@
      0.005,
      0.029
     ],
-    "t": 2.8,
-    "p": 0.0088,
+    "t": 2.7,
+    "p": 0.0095,
     "n_pairs": 40
    },
    "bundle": {
-    "diff": -0.105,
+    "diff": -0.106,
     "ci95": [
-     -0.125,
-     -0.084
+     -0.127,
+     -0.086
     ],
-    "t": -9.8,
+    "t": -10.0,
     "p": 0.0,
     "n_pairs": 40
    },
    "cell_gap_travel": {
-    "P": 0.394,
-    "t_vs_half": -8.2,
+    "P": 0.395,
+    "t_vs_half": -8.0,
     "p": 0.0
    },
    "cell_gap_parental_only": {
     "P": 0.411,
-    "t_vs_half": -7.6,
+    "t_vs_half": -7.5,
     "p": 0.0
    },
    "cell_personal": {
@@ -212,8 +212,8 @@
     "p": 0.0
    },
    "cell_parent_gap": {
-    "P": 0.306,
-    "t_vs_half": -11.8,
+    "P": 0.305,
+    "t_vs_half": -12.0,
     "p": 0.0
    }
   },
@@ -281,25 +281,25 @@
      -0.163,
      -0.079
     ],
-    "t": -5.7,
+    "t": -5.6,
     "p": 0.0,
     "n_pairs": 40
    },
    "label": {
     "diff": 0.065,
     "ci95": [
-     0.038,
-     0.093
+     0.037,
+     0.092
     ],
     "t": 4.6,
-    "p": 0.0,
+    "p": 0.0001,
     "n_pairs": 40
    },
    "bundle": {
     "diff": -0.115,
     "ci95": [
-     -0.155,
-     -0.076
+     -0.154,
+     -0.075
     ],
     "t": -5.7,
     "p": 0.0,
@@ -307,7 +307,7 @@
    },
    "cell_gap_travel": {
     "P": 0.24,
-    "t_vs_half": -7.4,
+    "t_vs_half": -7.3,
     "p": 0.0
    },
    "cell_gap_parental_only": {
@@ -317,11 +317,11 @@
    },
    "cell_personal": {
     "P": 0.465,
-    "t_vs_half": -4.1,
+    "t_vs_half": -4.2,
     "p": 0.0002
    },
    "cell_parent": {
-    "P": 0.344,
+    "P": 0.345,
     "t_vs_half": -6.5,
     "p": 0.0
    },
@@ -333,57 +333,57 @@
   },
   "qwen": {
    "parenthood": {
-    "diff": -0.068,
+    "diff": -0.073,
     "ci95": [
-     -0.101,
-     -0.036
+     -0.103,
+     -0.043
     ],
-    "t": -4.1,
-    "p": 0.0002,
+    "t": -4.7,
+    "p": 0.0,
     "n_pairs": 40
    },
    "label": {
     "diff": 0.067,
     "ci95": [
      0.049,
-     0.084
+     0.085
     ],
-    "t": 7.5,
+    "t": 7.3,
     "p": 0.0,
     "n_pairs": 40
    },
    "bundle": {
-    "diff": -0.122,
+    "diff": -0.121,
     "ci95": [
-     -0.15,
-     -0.094
+     -0.147,
+     -0.095
     ],
-    "t": -8.5,
+    "t": -9.2,
     "p": 0.0,
     "n_pairs": 40
    },
    "cell_gap_travel": {
-    "P": 0.274,
-    "t_vs_half": -9.1,
+    "P": 0.276,
+    "t_vs_half": -8.9,
     "p": 0.0
    },
    "cell_gap_parental_only": {
-    "P": 0.341,
-    "t_vs_half": -7.8,
+    "P": 0.343,
+    "t_vs_half": -7.9,
     "p": 0.0
    },
    "cell_personal": {
-    "P": 0.46,
-    "t_vs_half": -4.6,
-    "p": 0.0
+    "P": 0.467,
+    "t_vs_half": -4.2,
+    "p": 0.0002
    },
    "cell_parent": {
-    "P": 0.391,
-    "t_vs_half": -5.0,
+    "P": 0.394,
+    "t_vs_half": -5.1,
     "p": 0.0
    },
    "cell_parent_gap": {
-    "P": 0.219,
+    "P": 0.222,
     "t_vs_half": -11.3,
     "p": 0.0
    }

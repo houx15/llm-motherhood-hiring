@@ -124,6 +124,21 @@ def main() -> None:
               "", "Regenerate: `uv run python -m audit.analysis.disparate_impact`.", ""]
     out = ROOT / "docs" / "phase4" / "disparate_impact.md"
     out.parent.mkdir(parents=True, exist_ok=True)
+    thresholds = {}
+    for m in MODELS:
+        rw, rm = inputs[m]["ratio_women"], inputs[m]["ratio_men"]
+        cross = None
+        for pw in np.linspace(0.01, 1.0, 200):
+            if implied_selection_ratio(pw, 0.05, rw, rm) < 0.80:
+                cross = round(float(pw), 3)
+                break
+        thresholds[SHORT[m]] = {"crossing_womens_prevalence": cross,
+                                "ratio_women": rw, "ratio_men": rm,
+                                "scenario_20_5": round(implied_selection_ratio(0.20, 0.05, rw, rm), 3)}
+    import json as _j
+    fdir = ROOT / "docs" / "final"
+    fdir.mkdir(parents=True, exist_ok=True)
+    (fdir / "disparate_impact_stats.json").write_text(_j.dumps(thresholds, indent=1))
     out.write_text("\n".join(lines))
 
     # heatmap figure (2x2 per model)

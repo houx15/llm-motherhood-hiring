@@ -1,0 +1,3441 @@
+{
+ "f1a_self_coding": {
+  "overall": {
+   "gap": 0.9,
+   "availability": 0.86,
+   "family": 0.72,
+   "disclosure_irrelevant": 0.75,
+   "gap_reason_quality": 0.84,
+   "protected_mention": 0.84,
+   "qualifications": 0.01,
+   "gender": 0.2
+  },
+  "deepseek_written": {
+   "gap": {
+    "kappa": 0.9,
+    "n": 256
+   },
+   "availability": {
+    "kappa": 0.85,
+    "n": 256
+   },
+   "family": {
+    "kappa": 0.86,
+    "n": 256
+   },
+   "disclosure_irrelevant": {
+    "kappa": 0.84,
+    "n": 256
+   },
+   "gap_reason_quality": {
+    "kappa": 0.83,
+    "n": 256
+   },
+   "protected_mention": {
+    "kappa": 0.44,
+    "n": 256
+   },
+   "qualifications": {
+    "kappa": 0.03,
+    "n": 256
+   }
+  },
+  "other_written": {
+   "gap": {
+    "kappa": 0.9,
+    "n": 544
+   },
+   "availability": {
+    "kappa": 0.84,
+    "n": 544
+   },
+   "family": {
+    "kappa": 0.67,
+    "n": 544
+   },
+   "disclosure_irrelevant": {
+    "kappa": 0.72,
+    "n": 544
+   },
+   "gap_reason_quality": {
+    "kappa": 0.84,
+    "n": 544
+   },
+   "protected_mention": {
+    "kappa": 0.82,
+    "n": 544
+   },
+   "qualifications": {
+    "kappa": 0.0,
+    "n": 544
+   },
+   "gender": {
+    "kappa": 0.19,
+    "n": 544
+   }
+  },
+  "flag": [
+   "family",
+   "disclosure_irrelevant",
+   "protected_mention"
+  ]
+ },
+ "retained_codes": [
+  "gap",
+  "availability",
+  "family",
+  "disclosure_irrelevant",
+  "gap_reason_quality",
+  "protected_mention"
+ ],
+ "shares_losing": {
+  "claude": {
+   "gap_parental_only": {
+    "gap": {
+     "share": 0.762,
+     "ci95": [
+      0.647,
+      0.878
+     ],
+     "n": 160,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.094,
+     "ci95": [
+      0.047,
+      0.14
+     ],
+     "n": 160,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.087,
+     "ci95": [
+      0.025,
+      0.15
+     ],
+     "n": 160,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.006,
+     "ci95": [
+      -0.007,
+      0.019
+     ],
+     "n": 160,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.106,
+     "ci95": [
+      0.053,
+      0.16
+     ],
+     "n": 160,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.375,
+     "ci95": [
+      0.264,
+      0.486
+     ],
+     "n": 160,
+     "n_pairs": 39
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "share": 0.91,
+     "ci95": [
+      0.835,
+      0.985
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.151,
+     "ci95": [
+      0.1,
+      0.201
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.361,
+     "ci95": [
+      0.259,
+      0.464
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.066,
+     "ci95": [
+      0.029,
+      0.103
+     ],
+     "n": 166,
+     "n_pairs": 39
+    }
+   },
+   "parent": {
+    "gap": {
+     "share": 0.036,
+     "ci95": [
+      -0.032,
+      0.104
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "availability": {
+     "share": 0.012,
+     "ci95": [
+      -0.031,
+      0.055
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "family": {
+     "share": 0.605,
+     "ci95": [
+      0.506,
+      0.703
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "disclosure_irrelevant": {
+     "share": 0.844,
+     "ci95": [
+      0.785,
+      0.904
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "protected_mention": {
+     "share": 0.599,
+     "ci95": [
+      0.499,
+      0.699
+     ],
+     "n": 167,
+     "n_pairs": 52
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "share": 0.032,
+     "ci95": [
+      0.001,
+      0.063
+     ],
+     "n": 157,
+     "n_pairs": 49
+    },
+    "availability": {
+     "share": 0.006,
+     "ci95": [
+      -0.007,
+      0.02
+     ],
+     "n": 157,
+     "n_pairs": 49
+    },
+    "family": {
+     "share": 0.592,
+     "ci95": [
+      0.488,
+      0.697
+     ],
+     "n": 157,
+     "n_pairs": 49
+    },
+    "disclosure_irrelevant": {
+     "share": 0.815,
+     "ci95": [
+      0.747,
+      0.884
+     ],
+     "n": 157,
+     "n_pairs": 49
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 157,
+     "n_pairs": 49
+    },
+    "protected_mention": {
+     "share": 0.656,
+     "ci95": [
+      0.564,
+      0.748
+     ],
+     "n": 157,
+     "n_pairs": 49
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "share": 0.707,
+     "ci95": [
+      0.61,
+      0.803
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "availability": {
+     "share": 0.024,
+     "ci95": [
+      0.008,
+      0.04
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "family": {
+     "share": 0.707,
+     "ci95": [
+      0.608,
+      0.805
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "disclosure_irrelevant": {
+     "share": 0.826,
+     "ci95": [
+      0.748,
+      0.904
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "gap_reason_quality": {
+     "share": 0.042,
+     "ci95": [
+      0.007,
+      0.077
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "protected_mention": {
+     "share": 0.814,
+     "ci95": [
+      0.735,
+      0.894
+     ],
+     "n": 167,
+     "n_pairs": 53
+    }
+   },
+   "personal": {
+    "gap": {
+     "share": 0.024,
+     "ci95": [
+      -0.003,
+      0.051
+     ],
+     "n": 168,
+     "n_pairs": 40
+    },
+    "availability": {
+     "share": 0.048,
+     "ci95": [
+      0.018,
+      0.077
+     ],
+     "n": 168,
+     "n_pairs": 40
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 168,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "share": 0.095,
+     "ci95": [
+      0.031,
+      0.159
+     ],
+     "n": 168,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 168,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "share": 0.071,
+     "ci95": [
+      0.037,
+      0.106
+     ],
+     "n": 168,
+     "n_pairs": 40
+    }
+   }
+  },
+  "deepseek": {
+   "gap_parental_only": {
+    "gap": {
+     "share": 0.83,
+     "ci95": [
+      0.735,
+      0.925
+     ],
+     "n": 165,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.394,
+     "ci95": [
+      0.299,
+      0.489
+     ],
+     "n": 165,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.406,
+     "ci95": [
+      0.308,
+      0.504
+     ],
+     "n": 165,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 165,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.042,
+     "ci95": [
+      0.014,
+      0.071
+     ],
+     "n": 165,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.012,
+     "ci95": [
+      0.0,
+      0.024
+     ],
+     "n": 165,
+     "n_pairs": 39
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "share": 0.849,
+     "ci95": [
+      0.752,
+      0.947
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.416,
+     "ci95": [
+      0.309,
+      0.522
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.024,
+     "ci95": [
+      -0.007,
+      0.055
+     ],
+     "n": 166,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 166,
+     "n_pairs": 39
+    }
+   },
+   "parent": {
+    "gap": {
+     "share": 0.042,
+     "ci95": [
+      -0.012,
+      0.096
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "availability": {
+     "share": 0.072,
+     "ci95": [
+      0.036,
+      0.108
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "family": {
+     "share": 0.192,
+     "ci95": [
+      0.117,
+      0.266
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "disclosure_irrelevant": {
+     "share": 0.509,
+     "ci95": [
+      0.399,
+      0.619
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "gap_reason_quality": {
+     "share": 0.006,
+     "ci95": [
+      -0.003,
+      0.015
+     ],
+     "n": 167,
+     "n_pairs": 53
+    },
+    "protected_mention": {
+     "share": 0.06,
+     "ci95": [
+      0.029,
+      0.09
+     ],
+     "n": 167,
+     "n_pairs": 53
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "share": 0.031,
+     "ci95": [
+      0.003,
+      0.059
+     ],
+     "n": 163,
+     "n_pairs": 50
+    },
+    "availability": {
+     "share": 0.129,
+     "ci95": [
+      0.067,
+      0.19
+     ],
+     "n": 163,
+     "n_pairs": 50
+    },
+    "family": {
+     "share": 0.123,
+     "ci95": [
+      0.062,
+      0.183
+     ],
+     "n": 163,
+     "n_pairs": 50
+    },
+    "disclosure_irrelevant": {
+     "share": 0.466,
+     "ci95": [
+      0.364,
+      0.569
+     ],
+     "n": 163,
+     "n_pairs": 50
+    },
+    "gap_reason_quality": {
+     "share": 0.006,
+     "ci95": [
+      -0.014,
+      0.026
+     ],
+     "n": 163,
+     "n_pairs": 50
+    },
+    "protected_mention": {
+     "share": 0.043,
+     "ci95": [
+      0.004,
+      0.082
+     ],
+     "n": 163,
+     "n_pairs": 50
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "share": 0.81,
+     "ci95": [
+      0.729,
+      0.89
+     ],
+     "n": 168,
+     "n_pairs": 52
+    },
+    "availability": {
+     "share": 0.339,
+     "ci95": [
+      0.237,
+      0.441
+     ],
+     "n": 168,
+     "n_pairs": 52
+    },
+    "family": {
+     "share": 0.536,
+     "ci95": [
+      0.427,
+      0.644
+     ],
+     "n": 168,
+     "n_pairs": 52
+    },
+    "disclosure_irrelevant": {
+     "share": 0.208,
+     "ci95": [
+      0.137,
+      0.279
+     ],
+     "n": 168,
+     "n_pairs": 52
+    },
+    "gap_reason_quality": {
+     "share": 0.083,
+     "ci95": [
+      0.034,
+      0.132
+     ],
+     "n": 168,
+     "n_pairs": 52
+    },
+    "protected_mention": {
+     "share": 0.065,
+     "ci95": [
+      0.017,
+      0.114
+     ],
+     "n": 168,
+     "n_pairs": 52
+    }
+   },
+   "personal": {
+    "gap": {
+     "share": 0.018,
+     "ci95": [
+      0.003,
+      0.033
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.084,
+     "ci95": [
+      0.003,
+      0.165
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.072,
+     "ci95": [
+      0.03,
+      0.114
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 39
+    }
+   }
+  },
+  "gpt6": {
+   "gap_parental_only": {
+    "gap": {
+     "share": 0.383,
+     "ci95": [
+      0.271,
+      0.496
+     ],
+     "n": 167,
+     "n_pairs": 38
+    },
+    "availability": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 38
+    },
+    "family": {
+     "share": 0.054,
+     "ci95": [
+      0.015,
+      0.092
+     ],
+     "n": 167,
+     "n_pairs": 38
+    },
+    "disclosure_irrelevant": {
+     "share": 0.018,
+     "ci95": [
+      -0.003,
+      0.039
+     ],
+     "n": 167,
+     "n_pairs": 38
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 38
+    },
+    "protected_mention": {
+     "share": 0.359,
+     "ci95": [
+      0.266,
+      0.452
+     ],
+     "n": 167,
+     "n_pairs": 38
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "share": 0.701,
+     "ci95": [
+      0.563,
+      0.838
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.03,
+     "ci95": [
+      0.009,
+      0.051
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.006,
+     "ci95": [
+      -0.007,
+      0.019
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.018,
+     "ci95": [
+      0.003,
+      0.032
+     ],
+     "n": 167,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.234,
+     "ci95": [
+      0.142,
+      0.326
+     ],
+     "n": 167,
+     "n_pairs": 39
+    }
+   },
+   "parent": {
+    "gap": {
+     "share": 0.006,
+     "ci95": [
+      -0.007,
+      0.019
+     ],
+     "n": 162,
+     "n_pairs": 51
+    },
+    "availability": {
+     "share": 0.006,
+     "ci95": [
+      -0.007,
+      0.019
+     ],
+     "n": 162,
+     "n_pairs": 51
+    },
+    "family": {
+     "share": 0.154,
+     "ci95": [
+      0.086,
+      0.223
+     ],
+     "n": 162,
+     "n_pairs": 51
+    },
+    "disclosure_irrelevant": {
+     "share": 0.617,
+     "ci95": [
+      0.522,
+      0.713
+     ],
+     "n": 162,
+     "n_pairs": 51
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 162,
+     "n_pairs": 51
+    },
+    "protected_mention": {
+     "share": 0.92,
+     "ci95": [
+      0.855,
+      0.985
+     ],
+     "n": 162,
+     "n_pairs": 51
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "availability": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "family": {
+     "share": 0.263,
+     "ci95": [
+      0.172,
+      0.355
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "disclosure_irrelevant": {
+     "share": 0.647,
+     "ci95": [
+      0.564,
+      0.729
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 167,
+     "n_pairs": 52
+    },
+    "protected_mention": {
+     "share": 0.922,
+     "ci95": [
+      0.879,
+      0.965
+     ],
+     "n": 167,
+     "n_pairs": 52
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "share": 0.325,
+     "ci95": [
+      0.226,
+      0.425
+     ],
+     "n": 169,
+     "n_pairs": 49
+    },
+    "availability": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 169,
+     "n_pairs": 49
+    },
+    "family": {
+     "share": 0.278,
+     "ci95": [
+      0.184,
+      0.372
+     ],
+     "n": 169,
+     "n_pairs": 49
+    },
+    "disclosure_irrelevant": {
+     "share": 0.544,
+     "ci95": [
+      0.442,
+      0.647
+     ],
+     "n": 169,
+     "n_pairs": 49
+    },
+    "gap_reason_quality": {
+     "share": 0.012,
+     "ci95": [
+      0.003,
+      0.021
+     ],
+     "n": 169,
+     "n_pairs": 49
+    },
+    "protected_mention": {
+     "share": 0.893,
+     "ci95": [
+      0.812,
+      0.975
+     ],
+     "n": 169,
+     "n_pairs": 49
+    }
+   },
+   "personal": {
+    "gap": {
+     "share": 0.012,
+     "ci95": [
+      -0.004,
+      0.028
+     ],
+     "n": 162,
+     "n_pairs": 40
+    },
+    "availability": {
+     "share": 0.012,
+     "ci95": [
+      -0.007,
+      0.032
+     ],
+     "n": 162,
+     "n_pairs": 40
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 162,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "share": 0.284,
+     "ci95": [
+      0.186,
+      0.382
+     ],
+     "n": 162,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 162,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "share": 0.358,
+     "ci95": [
+      0.267,
+      0.449
+     ],
+     "n": 162,
+     "n_pairs": 40
+    }
+   }
+  },
+  "qwen38": {
+   "gap_parental_only": {
+    "gap": {
+     "share": 0.68,
+     "ci95": [
+      0.541,
+      0.82
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "availability": {
+     "share": 0.467,
+     "ci95": [
+      0.356,
+      0.579
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "family": {
+     "share": 0.308,
+     "ci95": [
+      0.216,
+      0.399
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "share": 0.047,
+     "ci95": [
+      0.014,
+      0.081
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "share": 0.006,
+     "ci95": [
+      -0.004,
+      0.016
+     ],
+     "n": 169,
+     "n_pairs": 40
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "share": 0.852,
+     "ci95": [
+      0.742,
+      0.963
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "availability": {
+     "share": 0.515,
+     "ci95": [
+      0.389,
+      0.64
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "share": 0.03,
+     "ci95": [
+      0.011,
+      0.048
+     ],
+     "n": 169,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 169,
+     "n_pairs": 40
+    }
+   },
+   "parent": {
+    "gap": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 170,
+     "n_pairs": 52
+    },
+    "availability": {
+     "share": 0.106,
+     "ci95": [
+      0.034,
+      0.177
+     ],
+     "n": 170,
+     "n_pairs": 52
+    },
+    "family": {
+     "share": 0.335,
+     "ci95": [
+      0.245,
+      0.425
+     ],
+     "n": 170,
+     "n_pairs": 52
+    },
+    "disclosure_irrelevant": {
+     "share": 0.882,
+     "ci95": [
+      0.823,
+      0.942
+     ],
+     "n": 170,
+     "n_pairs": 52
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 170,
+     "n_pairs": 52
+    },
+    "protected_mention": {
+     "share": 0.029,
+     "ci95": [
+      0.011,
+      0.047
+     ],
+     "n": 170,
+     "n_pairs": 52
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 165,
+     "n_pairs": 51
+    },
+    "availability": {
+     "share": 0.103,
+     "ci95": [
+      0.055,
+      0.151
+     ],
+     "n": 165,
+     "n_pairs": 51
+    },
+    "family": {
+     "share": 0.261,
+     "ci95": [
+      0.175,
+      0.346
+     ],
+     "n": 165,
+     "n_pairs": 51
+    },
+    "disclosure_irrelevant": {
+     "share": 0.897,
+     "ci95": [
+      0.861,
+      0.933
+     ],
+     "n": 165,
+     "n_pairs": 51
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 165,
+     "n_pairs": 51
+    },
+    "protected_mention": {
+     "share": 0.048,
+     "ci95": [
+      0.003,
+      0.094
+     ],
+     "n": 165,
+     "n_pairs": 51
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "share": 0.369,
+     "ci95": [
+      0.274,
+      0.464
+     ],
+     "n": 176,
+     "n_pairs": 48
+    },
+    "availability": {
+     "share": 0.318,
+     "ci95": [
+      0.222,
+      0.415
+     ],
+     "n": 176,
+     "n_pairs": 48
+    },
+    "family": {
+     "share": 0.341,
+     "ci95": [
+      0.26,
+      0.422
+     ],
+     "n": 176,
+     "n_pairs": 48
+    },
+    "disclosure_irrelevant": {
+     "share": 0.841,
+     "ci95": [
+      0.743,
+      0.939
+     ],
+     "n": 176,
+     "n_pairs": 48
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 176,
+     "n_pairs": 48
+    },
+    "protected_mention": {
+     "share": 0.04,
+     "ci95": [
+      0.009,
+      0.07
+     ],
+     "n": 176,
+     "n_pairs": 48
+    }
+   },
+   "personal": {
+    "gap": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 172,
+     "n_pairs": 39
+    },
+    "availability": {
+     "share": 0.035,
+     "ci95": [
+      -0.001,
+      0.071
+     ],
+     "n": 172,
+     "n_pairs": 39
+    },
+    "family": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 172,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "share": 0.407,
+     "ci95": [
+      0.31,
+      0.504
+     ],
+     "n": 172,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 172,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "share": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "n": 172,
+     "n_pairs": 39
+    }
+   }
+  }
+ },
+ "diff_losing_minus_won": {
+  "claude": {
+   "gap_parental_only": {
+    "gap": {
+     "diff": 0.146,
+     "ci95": [
+      0.01,
+      0.282
+     ],
+     "t": 2.2,
+     "p": 0.0365,
+     "n_pairs": 37
+    },
+    "availability": {
+     "diff": 0.096,
+     "ci95": [
+      0.048,
+      0.145
+     ],
+     "t": 4.0,
+     "p": 0.0003,
+     "n_pairs": 37
+    },
+    "family": {
+     "diff": 0.035,
+     "ci95": [
+      -0.041,
+      0.112
+     ],
+     "t": 0.9,
+     "p": 0.3568,
+     "n_pairs": 37
+    },
+    "disclosure_irrelevant": {
+     "diff": -0.008,
+     "ci95": [
+      -0.033,
+      0.018
+     ],
+     "t": -0.6,
+     "p": 0.5471,
+     "n_pairs": 37
+    },
+    "gap_reason_quality": {
+     "diff": -0.089,
+     "ci95": [
+      -0.169,
+      -0.009
+     ],
+     "t": -2.2,
+     "p": 0.0311,
+     "n_pairs": 37
+    },
+    "protected_mention": {
+     "diff": -0.158,
+     "ci95": [
+      -0.322,
+      0.006
+     ],
+     "t": -2.0,
+     "p": 0.0589,
+     "n_pairs": 37
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "diff": 0.027,
+     "ci95": [
+      -0.064,
+      0.118
+     ],
+     "t": 0.6,
+     "p": 0.5472,
+     "n_pairs": 36
+    },
+    "availability": {
+     "diff": 0.052,
+     "ci95": [
+      -0.003,
+      0.108
+     ],
+     "t": 1.9,
+     "p": 0.063,
+     "n_pairs": 36
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 36
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 36
+    },
+    "gap_reason_quality": {
+     "diff": 0.051,
+     "ci95": [
+      -0.08,
+      0.183
+     ],
+     "t": 0.8,
+     "p": 0.4333,
+     "n_pairs": 36
+    },
+    "protected_mention": {
+     "diff": -0.054,
+     "ci95": [
+      -0.116,
+      0.008
+     ],
+     "t": -1.8,
+     "p": 0.0837,
+     "n_pairs": 36
+    }
+   },
+   "parent": {
+    "gap": {
+     "diff": 0.056,
+     "ci95": [
+      -0.013,
+      0.125
+     ],
+     "t": 1.6,
+     "p": 0.107,
+     "n_pairs": 42
+    },
+    "availability": {
+     "diff": 0.024,
+     "ci95": [
+      -0.01,
+      0.057
+     ],
+     "t": 1.4,
+     "p": 0.1598,
+     "n_pairs": 42
+    },
+    "family": {
+     "diff": 0.106,
+     "ci95": [
+      -0.052,
+      0.264
+     ],
+     "t": 1.4,
+     "p": 0.1824,
+     "n_pairs": 42
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.1,
+     "ci95": [
+      -0.032,
+      0.233
+     ],
+     "t": 1.5,
+     "p": 0.1348,
+     "n_pairs": 42
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 42
+    },
+    "protected_mention": {
+     "diff": 0.072,
+     "ci95": [
+      -0.082,
+      0.226
+     ],
+     "t": 0.9,
+     "p": 0.3491,
+     "n_pairs": 42
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "diff": -0.005,
+     "ci95": [
+      -0.057,
+      0.047
+     ],
+     "t": -0.2,
+     "p": 0.8551,
+     "n_pairs": 45
+    },
+    "availability": {
+     "diff": -0.011,
+     "ci95": [
+      -0.041,
+      0.018
+     ],
+     "t": -0.8,
+     "p": 0.4388,
+     "n_pairs": 45
+    },
+    "family": {
+     "diff": 0.052,
+     "ci95": [
+      -0.096,
+      0.199
+     ],
+     "t": 0.7,
+     "p": 0.4857,
+     "n_pairs": 45
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.222,
+     "ci95": [
+      0.109,
+      0.335
+     ],
+     "t": 4.0,
+     "p": 0.0003,
+     "n_pairs": 45
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 45
+    },
+    "protected_mention": {
+     "diff": 0.177,
+     "ci95": [
+      0.048,
+      0.306
+     ],
+     "t": 2.8,
+     "p": 0.0082,
+     "n_pairs": 45
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "diff": 0.444,
+     "ci95": [
+      0.289,
+      0.599
+     ],
+     "t": 5.8,
+     "p": 0.0,
+     "n_pairs": 31
+    },
+    "availability": {
+     "diff": 0.006,
+     "ci95": [
+      -0.007,
+      0.02
+     ],
+     "t": 1.0,
+     "p": 0.3253,
+     "n_pairs": 31
+    },
+    "family": {
+     "diff": 0.208,
+     "ci95": [
+      0.022,
+      0.394
+     ],
+     "t": 2.3,
+     "p": 0.0299,
+     "n_pairs": 31
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.161,
+     "ci95": [
+      -0.016,
+      0.338
+     ],
+     "t": 1.9,
+     "p": 0.0727,
+     "n_pairs": 31
+    },
+    "gap_reason_quality": {
+     "diff": 0.033,
+     "ci95": [
+      -0.02,
+      0.086
+     ],
+     "t": 1.3,
+     "p": 0.2135,
+     "n_pairs": 31
+    },
+    "protected_mention": {
+     "diff": -0.074,
+     "ci95": [
+      -0.198,
+      0.051
+     ],
+     "t": -1.2,
+     "p": 0.2367,
+     "n_pairs": 31
+    }
+   },
+   "personal": {
+    "gap": {
+     "diff": -0.006,
+     "ci95": [
+      -0.043,
+      0.031
+     ],
+     "t": -0.3,
+     "p": 0.7321,
+     "n_pairs": 40
+    },
+    "availability": {
+     "diff": -0.069,
+     "ci95": [
+      -0.13,
+      -0.008
+     ],
+     "t": -2.3,
+     "p": 0.0281,
+     "n_pairs": 40
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.058,
+     "ci95": [
+      -0.012,
+      0.128
+     ],
+     "t": 1.7,
+     "p": 0.1027,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "diff": -0.055,
+     "ci95": [
+      -0.119,
+      0.009
+     ],
+     "t": -1.7,
+     "p": 0.0887,
+     "n_pairs": 40
+    }
+   }
+  },
+  "deepseek": {
+   "gap_parental_only": {
+    "gap": {
+     "diff": 0.493,
+     "ci95": [
+      0.386,
+      0.6
+     ],
+     "t": 9.3,
+     "p": 0.0,
+     "n_pairs": 39
+    },
+    "availability": {
+     "diff": 0.275,
+     "ci95": [
+      0.178,
+      0.372
+     ],
+     "t": 5.7,
+     "p": 0.0,
+     "n_pairs": 39
+    },
+    "family": {
+     "diff": 0.24,
+     "ci95": [
+      0.134,
+      0.347
+     ],
+     "t": 4.6,
+     "p": 0.0,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "diff": -0.057,
+     "ci95": [
+      -0.131,
+      0.016
+     ],
+     "t": -1.6,
+     "p": 0.1228,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "diff": -0.087,
+     "ci95": [
+      -0.154,
+      -0.021
+     ],
+     "t": -2.7,
+     "p": 0.0112,
+     "n_pairs": 39
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "diff": 0.434,
+     "ci95": [
+      0.312,
+      0.556
+     ],
+     "t": 7.2,
+     "p": 0.0,
+     "n_pairs": 37
+    },
+    "availability": {
+     "diff": 0.411,
+     "ci95": [
+      0.301,
+      0.521
+     ],
+     "t": 7.6,
+     "p": 0.0,
+     "n_pairs": 37
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "gap_reason_quality": {
+     "diff": -0.019,
+     "ci95": [
+      -0.07,
+      0.033
+     ],
+     "t": -0.7,
+     "p": 0.4689,
+     "n_pairs": 37
+    },
+    "protected_mention": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    }
+   },
+   "parent": {
+    "gap": {
+     "diff": 0.011,
+     "ci95": [
+      -0.047,
+      0.07
+     ],
+     "t": 0.4,
+     "p": 0.6995,
+     "n_pairs": 45
+    },
+    "availability": {
+     "diff": -0.095,
+     "ci95": [
+      -0.176,
+      -0.014
+     ],
+     "t": -2.4,
+     "p": 0.023,
+     "n_pairs": 45
+    },
+    "family": {
+     "diff": -0.011,
+     "ci95": [
+      -0.115,
+      0.094
+     ],
+     "t": -0.2,
+     "p": 0.8403,
+     "n_pairs": 45
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.322,
+     "ci95": [
+      0.172,
+      0.472
+     ],
+     "t": 4.3,
+     "p": 0.0001,
+     "n_pairs": 45
+    },
+    "gap_reason_quality": {
+     "diff": 0.006,
+     "ci95": [
+      -0.006,
+      0.017
+     ],
+     "t": 1.0,
+     "p": 0.3228,
+     "n_pairs": 45
+    },
+    "protected_mention": {
+     "diff": 0.044,
+     "ci95": [
+      0.008,
+      0.081
+     ],
+     "t": 2.4,
+     "p": 0.0191,
+     "n_pairs": 45
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "diff": -0.023,
+     "ci95": [
+      -0.084,
+      0.037
+     ],
+     "t": -0.8,
+     "p": 0.4378,
+     "n_pairs": 47
+    },
+    "availability": {
+     "diff": -0.041,
+     "ci95": [
+      -0.122,
+      0.041
+     ],
+     "t": -1.0,
+     "p": 0.3189,
+     "n_pairs": 47
+    },
+    "family": {
+     "diff": -0.093,
+     "ci95": [
+      -0.214,
+      0.027
+     ],
+     "t": -1.6,
+     "p": 0.127,
+     "n_pairs": 47
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.361,
+     "ci95": [
+      0.248,
+      0.473
+     ],
+     "t": 6.4,
+     "p": 0.0,
+     "n_pairs": 47
+    },
+    "gap_reason_quality": {
+     "diff": 0.011,
+     "ci95": [
+      -0.011,
+      0.032
+     ],
+     "t": 1.0,
+     "p": 0.3225,
+     "n_pairs": 47
+    },
+    "protected_mention": {
+     "diff": 0.053,
+     "ci95": [
+      0.012,
+      0.094
+     ],
+     "t": 2.6,
+     "p": 0.0123,
+     "n_pairs": 47
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "diff": 0.519,
+     "ci95": [
+      0.375,
+      0.662
+     ],
+     "t": 7.3,
+     "p": 0.0,
+     "n_pairs": 46
+    },
+    "availability": {
+     "diff": 0.292,
+     "ci95": [
+      0.18,
+      0.404
+     ],
+     "t": 5.3,
+     "p": 0.0,
+     "n_pairs": 46
+    },
+    "family": {
+     "diff": 0.362,
+     "ci95": [
+      0.207,
+      0.517
+     ],
+     "t": 4.7,
+     "p": 0.0,
+     "n_pairs": 46
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.066,
+     "ci95": [
+      -0.035,
+      0.167
+     ],
+     "t": 1.3,
+     "p": 0.1963,
+     "n_pairs": 46
+    },
+    "gap_reason_quality": {
+     "diff": 0.039,
+     "ci95": [
+      -0.025,
+      0.102
+     ],
+     "t": 1.2,
+     "p": 0.2269,
+     "n_pairs": 46
+    },
+    "protected_mention": {
+     "diff": -0.015,
+     "ci95": [
+      -0.076,
+      0.047
+     ],
+     "t": -0.5,
+     "p": 0.632,
+     "n_pairs": 46
+    }
+   },
+   "personal": {
+    "gap": {
+     "diff": -0.017,
+     "ci95": [
+      -0.052,
+      0.017
+     ],
+     "t": -1.0,
+     "p": 0.3176,
+     "n_pairs": 39
+    },
+    "availability": {
+     "diff": -0.081,
+     "ci95": [
+      -0.205,
+      0.043
+     ],
+     "t": -1.3,
+     "p": 0.1963,
+     "n_pairs": 39
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.054,
+     "ci95": [
+      0.001,
+      0.107
+     ],
+     "t": 2.1,
+     "p": 0.0472,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    }
+   }
+  },
+  "gpt6": {
+   "gap_parental_only": {
+    "gap": {
+     "diff": 0.284,
+     "ci95": [
+      0.153,
+      0.414
+     ],
+     "t": 4.5,
+     "p": 0.0001,
+     "n_pairs": 28
+    },
+    "availability": {
+     "diff": -0.005,
+     "ci95": [
+      -0.016,
+      0.005
+     ],
+     "t": -1.0,
+     "p": 0.3262,
+     "n_pairs": 28
+    },
+    "family": {
+     "diff": 0.028,
+     "ci95": [
+      -0.006,
+      0.063
+     ],
+     "t": 1.7,
+     "p": 0.1055,
+     "n_pairs": 28
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.005,
+     "ci95": [
+      -0.026,
+      0.036
+     ],
+     "t": 0.3,
+     "p": 0.7568,
+     "n_pairs": 28
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 28
+    },
+    "protected_mention": {
+     "diff": 0.091,
+     "ci95": [
+      -0.034,
+      0.216
+     ],
+     "t": 1.5,
+     "p": 0.1488,
+     "n_pairs": 28
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "diff": 0.451,
+     "ci95": [
+      0.269,
+      0.632
+     ],
+     "t": 5.1,
+     "p": 0.0,
+     "n_pairs": 25
+    },
+    "availability": {
+     "diff": 0.0,
+     "ci95": [
+      -0.042,
+      0.042
+     ],
+     "t": 0.0,
+     "p": 0.9889,
+     "n_pairs": 25
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 25
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.01,
+     "ci95": [
+      -0.011,
+      0.031
+     ],
+     "t": 1.0,
+     "p": 0.3273,
+     "n_pairs": 25
+    },
+    "gap_reason_quality": {
+     "diff": 0.003,
+     "ci95": [
+      -0.034,
+      0.039
+     ],
+     "t": 0.1,
+     "p": 0.8824,
+     "n_pairs": 25
+    },
+    "protected_mention": {
+     "diff": 0.085,
+     "ci95": [
+      -0.055,
+      0.225
+     ],
+     "t": 1.3,
+     "p": 0.2226,
+     "n_pairs": 25
+    }
+   },
+   "parent": {
+    "gap": {
+     "diff": 0.001,
+     "ci95": [
+      -0.021,
+      0.023
+     ],
+     "t": 0.1,
+     "p": 0.9351,
+     "n_pairs": 38
+    },
+    "availability": {
+     "diff": 0.009,
+     "ci95": [
+      -0.009,
+      0.027
+     ],
+     "t": 1.0,
+     "p": 0.3238,
+     "n_pairs": 38
+    },
+    "family": {
+     "diff": 0.026,
+     "ci95": [
+      -0.059,
+      0.112
+     ],
+     "t": 0.6,
+     "p": 0.5346,
+     "n_pairs": 38
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.015,
+     "ci95": [
+      -0.148,
+      0.177
+     ],
+     "t": 0.2,
+     "p": 0.857,
+     "n_pairs": 38
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 38
+    },
+    "protected_mention": {
+     "diff": -0.023,
+     "ci95": [
+      -0.105,
+      0.058
+     ],
+     "t": -0.6,
+     "p": 0.5642,
+     "n_pairs": 38
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "diff": -0.008,
+     "ci95": [
+      -0.023,
+      0.008
+     ],
+     "t": -1.0,
+     "p": 0.324,
+     "n_pairs": 37
+    },
+    "availability": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "family": {
+     "diff": 0.121,
+     "ci95": [
+      -0.016,
+      0.258
+     ],
+     "t": 1.8,
+     "p": 0.082,
+     "n_pairs": 37
+    },
+    "disclosure_irrelevant": {
+     "diff": -0.004,
+     "ci95": [
+      -0.148,
+      0.14
+     ],
+     "t": -0.1,
+     "p": 0.9545,
+     "n_pairs": 37
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "protected_mention": {
+     "diff": -0.011,
+     "ci95": [
+      -0.084,
+      0.062
+     ],
+     "t": -0.3,
+     "p": 0.7626,
+     "n_pairs": 37
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "diff": 0.231,
+     "ci95": [
+      0.078,
+      0.384
+     ],
+     "t": 3.1,
+     "p": 0.0048,
+     "n_pairs": 25
+    },
+    "availability": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 25
+    },
+    "family": {
+     "diff": 0.166,
+     "ci95": [
+      0.016,
+      0.315
+     ],
+     "t": 2.3,
+     "p": 0.0315,
+     "n_pairs": 25
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.052,
+     "ci95": [
+      -0.163,
+      0.267
+     ],
+     "t": 0.5,
+     "p": 0.6243,
+     "n_pairs": 25
+    },
+    "gap_reason_quality": {
+     "diff": 0.008,
+     "ci95": [
+      -0.009,
+      0.025
+     ],
+     "t": 1.0,
+     "p": 0.3273,
+     "n_pairs": 25
+    },
+    "protected_mention": {
+     "diff": -0.014,
+     "ci95": [
+      -0.178,
+      0.15
+     ],
+     "t": -0.2,
+     "p": 0.8639,
+     "n_pairs": 25
+    }
+   },
+   "personal": {
+    "gap": {
+     "diff": -0.012,
+     "ci95": [
+      -0.053,
+      0.029
+     ],
+     "t": -0.6,
+     "p": 0.5568,
+     "n_pairs": 39
+    },
+    "availability": {
+     "diff": 0.002,
+     "ci95": [
+      -0.02,
+      0.024
+     ],
+     "t": 0.2,
+     "p": 0.8445,
+     "n_pairs": 39
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.017,
+     "ci95": [
+      -0.082,
+      0.117
+     ],
+     "t": 0.4,
+     "p": 0.7237,
+     "n_pairs": 39
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 39
+    },
+    "protected_mention": {
+     "diff": -0.052,
+     "ci95": [
+      -0.181,
+      0.076
+     ],
+     "t": -0.8,
+     "p": 0.4141,
+     "n_pairs": 39
+    }
+   }
+  },
+  "qwen38": {
+   "gap_parental_only": {
+    "gap": {
+     "diff": 0.415,
+     "ci95": [
+      0.277,
+      0.552
+     ],
+     "t": 6.1,
+     "p": 0.0,
+     "n_pairs": 38
+    },
+    "availability": {
+     "diff": 0.316,
+     "ci95": [
+      0.187,
+      0.444
+     ],
+     "t": 5.0,
+     "p": 0.0,
+     "n_pairs": 38
+    },
+    "family": {
+     "diff": 0.191,
+     "ci95": [
+      0.093,
+      0.289
+     ],
+     "t": 3.9,
+     "p": 0.0003,
+     "n_pairs": 38
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 38
+    },
+    "gap_reason_quality": {
+     "diff": 0.038,
+     "ci95": [
+      0.0,
+      0.075
+     ],
+     "t": 2.0,
+     "p": 0.0476,
+     "n_pairs": 38
+    },
+    "protected_mention": {
+     "diff": -0.026,
+     "ci95": [
+      -0.058,
+      0.006
+     ],
+     "t": -1.7,
+     "p": 0.1031,
+     "n_pairs": 38
+    }
+   },
+   "gap_travel": {
+    "gap": {
+     "diff": 0.443,
+     "ci95": [
+      0.308,
+      0.579
+     ],
+     "t": 6.6,
+     "p": 0.0,
+     "n_pairs": 36
+    },
+    "availability": {
+     "diff": 0.345,
+     "ci95": [
+      0.204,
+      0.486
+     ],
+     "t": 5.0,
+     "p": 0.0,
+     "n_pairs": 36
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 36
+    },
+    "disclosure_irrelevant": {
+     "diff": -0.003,
+     "ci95": [
+      -0.009,
+      0.003
+     ],
+     "t": -1.0,
+     "p": 0.3242,
+     "n_pairs": 36
+    },
+    "gap_reason_quality": {
+     "diff": 0.009,
+     "ci95": [
+      -0.018,
+      0.037
+     ],
+     "t": 0.7,
+     "p": 0.4926,
+     "n_pairs": 36
+    },
+    "protected_mention": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 36
+    }
+   },
+   "parent": {
+    "gap": {
+     "diff": -0.01,
+     "ci95": [
+      -0.026,
+      0.005
+     ],
+     "t": -1.4,
+     "p": 0.1825,
+     "n_pairs": 48
+    },
+    "availability": {
+     "diff": 0.087,
+     "ci95": [
+      0.006,
+      0.168
+     ],
+     "t": 2.2,
+     "p": 0.0348,
+     "n_pairs": 48
+    },
+    "family": {
+     "diff": 0.248,
+     "ci95": [
+      0.149,
+      0.347
+     ],
+     "t": 5.0,
+     "p": 0.0,
+     "n_pairs": 48
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.504,
+     "ci95": [
+      0.392,
+      0.616
+     ],
+     "t": 9.0,
+     "p": 0.0,
+     "n_pairs": 48
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 48
+    },
+    "protected_mention": {
+     "diff": 0.018,
+     "ci95": [
+      -0.0,
+      0.037
+     ],
+     "t": 2.0,
+     "p": 0.0557,
+     "n_pairs": 48
+    }
+   },
+   "parent_committed": {
+    "gap": {
+     "diff": -0.008,
+     "ci95": [
+      -0.02,
+      0.004
+     ],
+     "t": -1.4,
+     "p": 0.1826,
+     "n_pairs": 46
+    },
+    "availability": {
+     "diff": -0.054,
+     "ci95": [
+      -0.144,
+      0.035
+     ],
+     "t": -1.2,
+     "p": 0.2288,
+     "n_pairs": 46
+    },
+    "family": {
+     "diff": 0.204,
+     "ci95": [
+      0.115,
+      0.292
+     ],
+     "t": 4.6,
+     "p": 0.0,
+     "n_pairs": 46
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.564,
+     "ci95": [
+      0.457,
+      0.671
+     ],
+     "t": 10.6,
+     "p": 0.0,
+     "n_pairs": 46
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 46
+    },
+    "protected_mention": {
+     "diff": 0.055,
+     "ci95": [
+      0.005,
+      0.104
+     ],
+     "t": 2.2,
+     "p": 0.0328,
+     "n_pairs": 46
+    }
+   },
+   "parent_gap": {
+    "gap": {
+     "diff": 0.335,
+     "ci95": [
+      0.227,
+      0.443
+     ],
+     "t": 6.3,
+     "p": 0.0,
+     "n_pairs": 40
+    },
+    "availability": {
+     "diff": 0.247,
+     "ci95": [
+      0.135,
+      0.359
+     ],
+     "t": 4.5,
+     "p": 0.0001,
+     "n_pairs": 40
+    },
+    "family": {
+     "diff": 0.226,
+     "ci95": [
+      0.104,
+      0.348
+     ],
+     "t": 3.8,
+     "p": 0.0006,
+     "n_pairs": 40
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.456,
+     "ci95": [
+      0.296,
+      0.616
+     ],
+     "t": 5.8,
+     "p": 0.0,
+     "n_pairs": 40
+    },
+    "gap_reason_quality": {
+     "diff": -0.008,
+     "ci95": [
+      -0.025,
+      0.009
+     ],
+     "t": -1.0,
+     "p": 0.3235,
+     "n_pairs": 40
+    },
+    "protected_mention": {
+     "diff": -0.028,
+     "ci95": [
+      -0.11,
+      0.053
+     ],
+     "t": -0.7,
+     "p": 0.4876,
+     "n_pairs": 40
+    }
+   },
+   "personal": {
+    "gap": {
+     "diff": -0.023,
+     "ci95": [
+      -0.06,
+      0.015
+     ],
+     "t": -1.2,
+     "p": 0.2301,
+     "n_pairs": 37
+    },
+    "availability": {
+     "diff": -0.219,
+     "ci95": [
+      -0.314,
+      -0.123
+     ],
+     "t": -4.7,
+     "p": 0.0,
+     "n_pairs": 37
+    },
+    "family": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "disclosure_irrelevant": {
+     "diff": 0.381,
+     "ci95": [
+      0.274,
+      0.488
+     ],
+     "t": 7.2,
+     "p": 0.0,
+     "n_pairs": 37
+    },
+    "gap_reason_quality": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    },
+    "protected_mention": {
+     "diff": 0.0,
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "t": NaN,
+     "p": NaN,
+     "n_pairs": 37
+    }
+   }
+  }
+ },
+ "f1e_alignment": {
+  "claude": {
+   "gap_interruption_minus_parent": {
+    "diff": 0.713,
+    "ci95": [
+     0.634,
+     0.792
+    ],
+    "t": 18.1,
+    "p": 0.0,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "availability_interruption_minus_parent": {
+    "diff": 0.06,
+    "ci95": [
+     0.031,
+     0.088
+    ],
+    "t": 4.2,
+    "p": 0.0001,
+    "n_pairs": 55,
+    "holm": 0.0012
+   },
+   "family_family_minus_nonfamily": {
+    "diff": 0.605,
+    "ci95": [
+     0.529,
+     0.681
+    ],
+    "t": 16.2,
+    "p": 0.0,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "deepseek": {
+   "gap_interruption_minus_parent": {
+    "diff": 0.822,
+    "ci95": [
+     0.756,
+     0.889
+    ],
+    "t": 24.8,
+    "p": 0.0,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "availability_interruption_minus_parent": {
+    "diff": 0.295,
+    "ci95": [
+     0.208,
+     0.382
+    ],
+    "t": 6.8,
+    "p": 0.0,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "family_family_minus_nonfamily": {
+    "diff": 0.275,
+    "ci95": [
+     0.212,
+     0.338
+    ],
+    "t": 8.8,
+    "p": 0.0,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "gpt6": {
+   "gap_interruption_minus_parent": {
+    "diff": 0.421,
+    "ci95": [
+     0.323,
+     0.518
+    ],
+    "t": 8.7,
+    "p": 0.0,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "availability_interruption_minus_parent": {
+    "diff": 0.007,
+    "ci95": [
+     0.001,
+     0.013
+    ],
+    "t": 2.2,
+    "p": 0.0298,
+    "n_pairs": 51,
+    "holm": 0.3278
+   },
+   "family_family_minus_nonfamily": {
+    "diff": 0.209,
+    "ci95": [
+     0.154,
+     0.265
+    ],
+    "t": 7.6,
+    "p": 0.0,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  },
+  "qwen38": {
+   "gap_interruption_minus_parent": {
+    "diff": 0.573,
+    "ci95": [
+     0.48,
+     0.666
+    ],
+    "t": 12.3,
+    "p": 0.0,
+    "n_pairs": 54,
+    "holm": 1.0
+   },
+   "availability_interruption_minus_parent": {
+    "diff": 0.262,
+    "ci95": [
+     0.185,
+     0.339
+    ],
+    "t": 6.9,
+    "p": 0.0,
+    "n_pairs": 54,
+    "holm": 1.0
+   },
+   "family_family_minus_nonfamily": {
+    "diff": 0.328,
+    "ci95": [
+     0.26,
+     0.396
+    ],
+    "t": 9.7,
+    "p": 0.0,
+    "n_pairs": 40,
+    "holm": 1.0
+   }
+  }
+ },
+ "f1f_irrelevant": {
+  "claude": {
+   "losing": {
+    "share": 0.83,
+    "ci95": [
+     0.782,
+     0.878
+    ],
+    "n": 324,
+    "n_pairs": 55
+   },
+   "won": {
+    "share": 0.701,
+    "ci95": [
+     0.624,
+     0.779
+    ],
+    "n": 328,
+    "n_pairs": 53
+   }
+  },
+  "deepseek": {
+   "losing": {
+    "share": 0.488,
+    "ci95": [
+     0.41,
+     0.566
+    ],
+    "n": 330,
+    "n_pairs": 55
+   },
+   "won": {
+    "share": 0.164,
+    "ci95": [
+     0.117,
+     0.211
+    ],
+    "n": 329,
+    "n_pairs": 54
+   }
+  },
+  "gpt6": {
+   "losing": {
+    "share": 0.632,
+    "ci95": [
+     0.563,
+     0.702
+    ],
+    "n": 329,
+    "n_pairs": 55
+   },
+   "won": {
+    "share": 0.562,
+    "ci95": [
+     0.47,
+     0.655
+    ],
+    "n": 336,
+    "n_pairs": 48
+   }
+  },
+  "qwen38": {
+   "losing": {
+    "share": 0.89,
+    "ci95": [
+     0.85,
+     0.929
+    ],
+    "n": 335,
+    "n_pairs": 56
+   },
+   "won": {
+    "share": 0.378,
+    "ci95": [
+     0.305,
+     0.451
+    ],
+    "n": 333,
+    "n_pairs": 54
+   }
+  }
+ },
+ "f1g_gender": {
+  "claude": {
+   "gap": {
+    "diff": 0.018,
+    "ci95": [
+     -0.065,
+     0.102
+    ],
+    "t": 0.4,
+    "p": 0.6603,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "availability": {
+    "diff": -0.019,
+    "ci95": [
+     -0.058,
+     0.02
+    ],
+    "t": -1.0,
+    "p": 0.3235,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "family": {
+    "diff": 0.034,
+    "ci95": [
+     -0.039,
+     0.108
+    ],
+    "t": 0.9,
+    "p": 0.3543,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "disclosure_irrelevant": {
+    "diff": 0.029,
+    "ci95": [
+     -0.024,
+     0.081
+    ],
+    "t": 1.1,
+    "p": 0.2764,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "gap_reason_quality": {
+    "diff": -0.022,
+    "ci95": [
+     -0.056,
+     0.013
+    ],
+    "t": -1.2,
+    "p": 0.2202,
+    "n_pairs": 51,
+    "holm": 1.0
+   },
+   "protected_mention": {
+    "diff": 0.081,
+    "ci95": [
+     0.003,
+     0.159
+    ],
+    "t": 2.1,
+    "p": 0.043,
+    "n_pairs": 51,
+    "holm": 0.989
+   }
+  },
+  "deepseek": {
+   "gap": {
+    "diff": -0.002,
+    "ci95": [
+     -0.09,
+     0.085
+    ],
+    "t": -0.1,
+    "p": 0.9549,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "availability": {
+    "diff": -0.009,
+    "ci95": [
+     -0.094,
+     0.076
+    ],
+    "t": -0.2,
+    "p": 0.8304,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "family": {
+    "diff": 0.022,
+    "ci95": [
+     -0.068,
+     0.111
+    ],
+    "t": 0.5,
+    "p": 0.6262,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "disclosure_irrelevant": {
+    "diff": -0.023,
+    "ci95": [
+     -0.108,
+     0.062
+    ],
+    "t": -0.5,
+    "p": 0.5967,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "gap_reason_quality": {
+    "diff": -0.002,
+    "ci95": [
+     -0.021,
+     0.018
+    ],
+    "t": -0.2,
+    "p": 0.8725,
+    "n_pairs": 53,
+    "holm": 1.0
+   },
+   "protected_mention": {
+    "diff": 0.066,
+    "ci95": [
+     0.015,
+     0.118
+    ],
+    "t": 2.6,
+    "p": 0.0117,
+    "n_pairs": 53,
+    "holm": 0.2808
+   }
+  },
+  "gpt6": {
+   "gap": {
+    "diff": -0.009,
+    "ci95": [
+     -0.075,
+     0.056
+    ],
+    "t": -0.3,
+    "p": 0.7811,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "availability": {
+    "diff": 0.003,
+    "ci95": [
+     -0.01,
+     0.016
+    ],
+    "t": 0.5,
+    "p": 0.6233,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "family": {
+    "diff": 0.004,
+    "ci95": [
+     -0.066,
+     0.073
+    ],
+    "t": 0.1,
+    "p": 0.9171,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "disclosure_irrelevant": {
+    "diff": -0.021,
+    "ci95": [
+     -0.09,
+     0.047
+    ],
+    "t": -0.6,
+    "p": 0.5333,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "gap_reason_quality": {
+    "diff": 0.001,
+    "ci95": [
+     -0.006,
+     0.008
+    ],
+    "t": 0.4,
+    "p": 0.6765,
+    "n_pairs": 55,
+    "holm": 1.0
+   },
+   "protected_mention": {
+    "diff": -0.026,
+    "ci95": [
+     -0.093,
+     0.04
+    ],
+    "t": -0.8,
+    "p": 0.4286,
+    "n_pairs": 55,
+    "holm": 1.0
+   }
+  },
+  "qwen38": {
+   "gap": {
+    "diff": -0.013,
+    "ci95": [
+     -0.094,
+     0.068
+    ],
+    "t": -0.3,
+    "p": 0.7508,
+    "n_pairs": 56,
+    "holm": 1.0
+   },
+   "availability": {
+    "diff": 0.023,
+    "ci95": [
+     -0.032,
+     0.078
+    ],
+    "t": 0.8,
+    "p": 0.4127,
+    "n_pairs": 56,
+    "holm": 1.0
+   },
+   "family": {
+    "diff": -0.028,
+    "ci95": [
+     -0.093,
+     0.037
+    ],
+    "t": -0.9,
+    "p": 0.3927,
+    "n_pairs": 56,
+    "holm": 1.0
+   },
+   "disclosure_irrelevant": {
+    "diff": -0.033,
+    "ci95": [
+     -0.093,
+     0.026
+    ],
+    "t": -1.1,
+    "p": 0.2644,
+    "n_pairs": 56,
+    "holm": 1.0
+   },
+   "gap_reason_quality": {
+    "diff": 0.002,
+    "ci95": [
+     -0.007,
+     0.012
+    ],
+    "t": 0.5,
+    "p": 0.646,
+    "n_pairs": 56,
+    "holm": 1.0
+   },
+   "protected_mention": {
+    "diff": 0.005,
+    "ci95": [
+     -0.024,
+     0.035
+    ],
+    "t": 0.4,
+    "p": 0.7213,
+    "n_pairs": 56,
+    "holm": 1.0
+   }
+  }
+ }
+}

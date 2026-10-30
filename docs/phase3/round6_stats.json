@@ -1,63 +1,63 @@
 {
  "amplification": {
   "deepseek": {
-   "quality_slope_per_fit_point": 0.151,
+   "quality_slope_per_fit_point": 0.153,
    "parent": {
-    "choice_gap_pp": 14.8,
-    "implied_quality_equivalent_fit_pts": 0.98,
+    "choice_gap_pp": 14.9,
+    "implied_quality_equivalent_fit_pts": 0.97,
     "actual_e1_fit_effect": -0.13,
     "amplification_ratio": 7.6
    },
    "parent_gap": {
-    "choice_gap_pp": 19.2,
-    "implied_quality_equivalent_fit_pts": 1.27,
+    "choice_gap_pp": 18.6,
+    "implied_quality_equivalent_fit_pts": 1.21,
     "actual_e1_fit_effect": -0.35,
-    "amplification_ratio": 3.7
+    "amplification_ratio": 3.5
    }
   },
   "haiku": {
-   "quality_slope_per_fit_point": 0.178,
+   "quality_slope_per_fit_point": 0.185,
    "parent": {
-    "choice_gap_pp": 24.6,
-    "implied_quality_equivalent_fit_pts": 1.39,
+    "choice_gap_pp": 21.9,
+    "implied_quality_equivalent_fit_pts": 1.19,
     "actual_e1_fit_effect": 0.34,
-    "amplification_ratio": 4.1
+    "amplification_ratio": 3.5
    },
    "parent_gap": {
-    "choice_gap_pp": 37.9,
-    "implied_quality_equivalent_fit_pts": 2.14,
+    "choice_gap_pp": 36.4,
+    "implied_quality_equivalent_fit_pts": 1.97,
     "actual_e1_fit_effect": 0.15,
-    "amplification_ratio": 14.7
+    "amplification_ratio": 13.6
    }
   },
   "luna": {
-   "quality_slope_per_fit_point": 0.175,
+   "quality_slope_per_fit_point": 0.174,
    "parent": {
-    "choice_gap_pp": 19.8,
-    "implied_quality_equivalent_fit_pts": 1.13,
+    "choice_gap_pp": 18.0,
+    "implied_quality_equivalent_fit_pts": 1.04,
     "actual_e1_fit_effect": -0.08,
-    "amplification_ratio": 13.6
+    "amplification_ratio": 12.4
    },
    "parent_gap": {
-    "choice_gap_pp": 30.8,
-    "implied_quality_equivalent_fit_pts": 1.76,
+    "choice_gap_pp": 29.3,
+    "implied_quality_equivalent_fit_pts": 1.68,
     "actual_e1_fit_effect": -0.25,
-    "amplification_ratio": 7.0
+    "amplification_ratio": 6.7
    }
   },
   "qwen": {
-   "quality_slope_per_fit_point": 0.132,
+   "quality_slope_per_fit_point": 0.129,
    "parent": {
-    "choice_gap_pp": 10.9,
-    "implied_quality_equivalent_fit_pts": 0.82,
-    "actual_e1_fit_effect": -0.03,
-    "amplification_ratio": 31.3
+    "choice_gap_pp": 11.9,
+    "implied_quality_equivalent_fit_pts": 0.92,
+    "actual_e1_fit_effect": -0.02,
+    "amplification_ratio": 38.2
    },
    "parent_gap": {
-    "choice_gap_pp": 26.3,
-    "implied_quality_equivalent_fit_pts": 1.98,
-    "actual_e1_fit_effect": -0.13,
-    "amplification_ratio": 15.8
+    "choice_gap_pp": 26.1,
+    "implied_quality_equivalent_fit_pts": 2.02,
+    "actual_e1_fit_effect": -0.14,
+    "amplification_ratio": 14.7
    }
   }
  },
@@ -67,11 +67,11 @@
    "parent": {
     "e1_fit_gap": -0.13,
     "predicted_P": 0.425,
-    "observed_P": 0.347,
-    "obs_minus_pred": -0.078,
+    "observed_P": 0.354,
+    "obs_minus_pred": -0.07,
     "boot_ci95": [
-     -0.109,
-     -0.05
+     -0.093,
+     -0.048
     ],
     "sigma_sensitivity": {
      "0.5": 0.428,
@@ -82,11 +82,11 @@
    "parent_gap": {
     "e1_fit_gap": -0.35,
     "predicted_P": 0.303,
-    "observed_P": 0.301,
-    "obs_minus_pred": -0.002,
+    "observed_P": 0.319,
+    "obs_minus_pred": 0.016,
     "boot_ci95": [
-     -0.036,
-     0.031
+     -0.015,
+     0.047
     ],
     "sigma_sensitivity": {
      "0.5": 0.311,
@@ -100,11 +100,11 @@
    "parent": {
     "e1_fit_gap": 0.34,
     "predicted_P": 0.752,
-    "observed_P": 0.233,
-    "obs_minus_pred": -0.519,
+    "observed_P": 0.262,
+    "obs_minus_pred": -0.49,
     "boot_ci95": [
-     -0.564,
-     -0.476
+     -0.53,
+     -0.45
     ],
     "sigma_sensitivity": {
      "0.5": 0.683,
@@ -115,11 +115,11 @@
    "parent_gap": {
     "e1_fit_gap": 0.15,
     "predicted_P": 0.615,
-    "observed_P": 0.11,
-    "obs_minus_pred": -0.505,
+    "observed_P": 0.13,
+    "obs_minus_pred": -0.486,
     "boot_ci95": [
-     -0.543,
-     -0.463
+     -0.521,
+     -0.447
     ],
     "sigma_sensitivity": {
      "0.5": 0.581,
@@ -133,11 +133,11 @@
    "parent": {
     "e1_fit_gap": -0.08,
     "predicted_P": 0.421,
-    "observed_P": 0.298,
-    "obs_minus_pred": -0.123,
+    "observed_P": 0.319,
+    "obs_minus_pred": -0.102,
     "boot_ci95": [
-     -0.174,
-     -0.075
+     -0.146,
+     -0.056
     ],
     "sigma_sensitivity": {
      "0.5": 0.453,
@@ -148,11 +148,11 @@
    "parent_gap": {
     "e1_fit_gap": -0.25,
     "predicted_P": 0.274,
-    "observed_P": 0.187,
-    "obs_minus_pred": -0.087,
+    "observed_P": 0.204,
+    "obs_minus_pred": -0.071,
     "boot_ci95": [
-     -0.161,
-     -0.016
+     -0.139,
+     -0.003
     ],
     "sigma_sensitivity": {
      "0.5": 0.361,
@@ -162,35 +162,35 @@
    }
   },
   "qwen": {
-   "sigma_within_resume": 0.47,
+   "sigma_within_resume": 0.45,
    "parent": {
-    "e1_fit_gap": -0.03,
-    "predicted_P": 0.484,
-    "observed_P": 0.392,
-    "obs_minus_pred": -0.092,
+    "e1_fit_gap": -0.02,
+    "predicted_P": 0.485,
+    "observed_P": 0.381,
+    "obs_minus_pred": -0.103,
     "boot_ci95": [
-     -0.129,
-     -0.055
+     -0.166,
+     -0.039
     ],
     "sigma_sensitivity": {
-     "0.5": 0.485,
+     "0.5": 0.486,
      "1.0": 0.493,
-     "2.0": 0.496
+     "2.0": 0.497
     }
    },
    "parent_gap": {
-    "e1_fit_gap": -0.13,
-    "predicted_P": 0.424,
-    "observed_P": 0.238,
-    "obs_minus_pred": -0.186,
+    "e1_fit_gap": -0.14,
+    "predicted_P": 0.415,
+    "observed_P": 0.248,
+    "obs_minus_pred": -0.167,
     "boot_ci95": [
-     -0.225,
-     -0.145
+     -0.223,
+     -0.106
     ],
     "sigma_sensitivity": {
-     "0.5": 0.43,
-     "1.0": 0.465,
-     "2.0": 0.482
+     "0.5": 0.423,
+     "1.0": 0.461,
+     "2.0": 0.481
     }
    }
   }
@@ -209,14 +209,14 @@
     "equivalent_at_delta": true
    },
    "blind_minus_names_parent_gap": {
-    "mean": 0.028,
+    "mean": 0.027,
     "n": 16,
     "ci90": [
-     0.0,
-     0.056
+     -0.0,
+     0.055
     ],
     "delta": 0.05,
-    "tost_p": 0.094,
+    "tost_p": 0.0848,
     "equivalent_at_delta": false
    },
    "direct_parity": {
@@ -232,17 +232,28 @@
      "equivalent_at_delta": true
     },
     "gender_parent@name": {
-     "mean": 0.036,
+     "mean": 0.035,
      "n": 56,
      "ci90": [
-      0.025,
-      0.048
+      0.024,
+      0.047
      ],
      "delta": 0.05,
-     "tost_p": 0.0263,
+     "tost_p": 0.0212,
      "equivalent_at_delta": true
     },
     "gender_none@name_field": {
+     "mean": 0.04,
+     "n": 56,
+     "ci90": [
+      0.026,
+      0.055
+     ],
+     "delta": 0.05,
+     "tost_p": 0.1378,
+     "equivalent_at_delta": false
+    },
+    "gender_parent@name_field": {
      "mean": 0.04,
      "n": 56,
      "ci90": [
@@ -250,18 +261,7 @@
       0.055
      ],
      "delta": 0.05,
-     "tost_p": 0.1303,
-     "equivalent_at_delta": false
-    },
-    "gender_parent@name_field": {
-     "mean": 0.041,
-     "n": 56,
-     "ci90": [
-      0.026,
-      0.056
-     ],
-     "delta": 0.05,
-     "tost_p": 0.1492,
+     "tost_p": 0.1385,
      "equivalent_at_delta": false
     },
     "gender_none@initial_field": {
@@ -272,18 +272,18 @@
       0.054
      ],
      "delta": 0.05,
-     "tost_p": 0.1053,
+     "tost_p": 0.1094,
      "equivalent_at_delta": false
     },
     "gender_parent@initial_field": {
      "mean": 0.048,
      "n": 56,
      "ci90": [
-      0.031,
+      0.03,
       0.065
      ],
      "delta": 0.05,
-     "tost_p": 0.4246,
+     "tost_p": 0.4103,
      "equivalent_at_delta": false
     }
    }
@@ -416,14 +416,14 @@
      "equivalent_at_delta": true
     },
     "gender_parent@name": {
-     "mean": 0.078,
+     "mean": 0.077,
      "n": 56,
      "ci90": [
       0.058,
-      0.098
+      0.097
      ],
      "delta": 0.05,
-     "tost_p": 0.9889,
+     "tost_p": 0.9877,
      "equivalent_at_delta": false
     },
     "gender_none@name_field": {
@@ -434,15 +434,15 @@
       0.11
      ],
      "delta": 0.05,
-     "tost_p": 0.9949,
+     "tost_p": 0.9954,
      "equivalent_at_delta": false
     },
     "gender_parent@name_field": {
-     "mean": 0.146,
+     "mean": 0.147,
      "n": 56,
      "ci90": [
-      0.12,
-      0.173
+      0.121,
+      0.174
      ],
      "delta": 0.05,
      "tost_p": 1.0,
@@ -456,7 +456,7 @@
       0.097
      ],
      "delta": 0.05,
-     "tost_p": 0.9675,
+     "tost_p": 0.9699,
      "equivalent_at_delta": false
     },
     "gender_parent@initial_field": {
@@ -474,56 +474,56 @@
   },
   "qwen": {
    "blind_minus_names_parent": {
-    "mean": -0.019,
+    "mean": -0.008,
     "n": 16,
     "ci90": [
-     -0.049,
-     0.012
-    ],
-    "delta": 0.05,
-    "tost_p": 0.0435,
-    "equivalent_at_delta": true
-   },
-   "blind_minus_names_parent_gap": {
-    "mean": -0.005,
-    "n": 16,
-    "ci90": [
-     -0.031,
+     -0.037,
      0.021
     ],
     "delta": 0.05,
-    "tost_p": 0.0039,
+    "tost_p": 0.012,
+    "equivalent_at_delta": true
+   },
+   "blind_minus_names_parent_gap": {
+    "mean": -0.01,
+    "n": 16,
+    "ci90": [
+     -0.029,
+     0.009
+    ],
+    "delta": 0.05,
+    "tost_p": 0.0012,
     "equivalent_at_delta": true
    },
    "direct_parity": {
     "gender_none@name": {
-     "mean": -0.004,
+     "mean": 0.005,
      "n": 56,
      "ci90": [
-      -0.014,
-      0.006
+      -0.005,
+      0.015
      ],
      "delta": 0.05,
      "tost_p": 0.0,
      "equivalent_at_delta": true
     },
     "gender_parent@name": {
-     "mean": 0.002,
+     "mean": 0.003,
      "n": 56,
      "ci90": [
-      -0.007,
-      0.01
+      -0.006,
+      0.012
      ],
      "delta": 0.05,
      "tost_p": 0.0,
      "equivalent_at_delta": true
     },
     "gender_none@name_field": {
-     "mean": -0.009,
+     "mean": -0.007,
      "n": 56,
      "ci90": [
-      -0.02,
-      0.002
+      -0.017,
+      0.003
      ],
      "delta": 0.05,
      "tost_p": 0.0,
@@ -533,30 +533,30 @@
      "mean": 0.013,
      "n": 56,
      "ci90": [
-      0.001,
-      0.025
+      0.002,
+      0.024
      ],
      "delta": 0.05,
      "tost_p": 0.0,
      "equivalent_at_delta": true
     },
     "gender_none@initial_field": {
-     "mean": 0.013,
+     "mean": 0.018,
      "n": 56,
      "ci90": [
-      0.0,
-      0.025
+      0.008,
+      0.029
      ],
      "delta": 0.05,
      "tost_p": 0.0,
      "equivalent_at_delta": true
     },
     "gender_parent@initial_field": {
-     "mean": -0.012,
+     "mean": -0.009,
      "n": 56,
      "ci90": [
-      -0.025,
-      0.0
+      -0.022,
+      0.004
      ],
      "delta": 0.05,
      "tost_p": 0.0,
@@ -568,74 +568,74 @@
  "model_contrasts": {
   "field_response_gender_none": {
    "luna-qwen": {
-    "diff": 0.07,
-    "t": 4.5,
+    "diff": 0.077,
+    "t": 5.2,
     "p": 0.0,
     "n_pairs": 56
    },
    "luna-deepseek": {
-    "diff": 0.039,
+    "diff": 0.038,
     "t": 2.5,
-    "p": 0.0144,
+    "p": 0.0158,
     "n_pairs": 56
    },
    "haiku-qwen": {
-    "diff": 0.004,
-    "t": 0.2,
-    "p": 0.8141,
+    "diff": 0.011,
+    "t": 0.7,
+    "p": 0.4983,
     "n_pairs": 56
    },
    "haiku-deepseek": {
-    "diff": -0.027,
+    "diff": -0.028,
     "t": -1.6,
-    "p": 0.1238,
+    "p": 0.1137,
     "n_pairs": 56
    }
   },
   "field_response_gender_parent": {
    "luna-qwen": {
-    "diff": 0.058,
+    "diff": 0.059,
     "t": 4.2,
     "p": 0.0001,
     "n_pairs": 56
    },
    "luna-deepseek": {
-    "diff": 0.064,
+    "diff": 0.065,
     "t": 4.1,
-    "p": 0.0002,
+    "p": 0.0001,
     "n_pairs": 56
    },
    "haiku-qwen": {
     "diff": -0.056,
     "t": -3.7,
-    "p": 0.0005,
+    "p": 0.0006,
     "n_pairs": 56
    },
    "haiku-deepseek": {
     "diff": -0.05,
     "t": -3.0,
-    "p": 0.0038,
+    "p": 0.0036,
     "n_pairs": 56
    }
   },
   "mother_father_gap_haiku_vs": {
    "haiku-deepseek": {
-    "diff": -0.044,
-    "t": -2.9,
-    "p": 0.0068,
-    "n_pairs": 39
+    "diff": -0.043,
+    "t": -3.0,
+    "p": 0.0043,
+    "n_pairs": 40
    },
    "haiku-luna": {
-    "diff": -0.034,
-    "t": -2.1,
-    "p": 0.0453,
-    "n_pairs": 39
+    "diff": -0.035,
+    "t": -2.3,
+    "p": 0.0255,
+    "n_pairs": 40
    },
    "haiku-qwen": {
-    "diff": -0.026,
-    "t": -2.2,
-    "p": 0.0369,
-    "n_pairs": 39
+    "diff": -0.024,
+    "t": -2.1,
+    "p": 0.038,
+    "n_pairs": 40
    }
   }
  },
@@ -646,8 +646,8 @@
     "wild_p": 0.699
    },
    "invariance_gap": {
-    "t": -1.8,
-    "wild_p": 0.1345
+    "t": -1.7,
+    "wild_p": 0.1
    },
    "field_parent": {
     "t": -0.1,
@@ -684,73 +684,73 @@
   },
   "qwen": {
    "invariance_parent": {
-    "t": 1.1,
-    "wild_p": 0.129
+    "t": 0.5,
+    "wild_p": 0.439
    },
    "invariance_gap": {
-    "t": 0.3,
-    "wild_p": 0.806
+    "t": 0.9,
+    "wild_p": 0.4185
    },
    "field_parent": {
-    "t": -0.7,
-    "wild_p": 0.4235
+    "t": 0.1,
+    "wild_p": 0.8985
    }
   }
  },
  "lpm_robustness": {
   "deepseek": {
    "C(contrast)[T.parent_gap]": {
-    "coef": -0.047,
-    "se": 0.013,
-    "t": -3.7
+    "coef": -0.036,
+    "se": 0.01,
+    "t": -3.6
    },
    "C(contrast)[T.parent_gap]:C(gender)[T.male]": {
-    "coef": 0.004,
-    "se": 0.014,
-    "t": 0.2
+    "coef": -0.004,
+    "se": 0.011,
+    "t": -0.4
    }
   },
   "haiku": {
    "C(contrast)[T.parent_gap]": {
-    "coef": -0.125,
-    "se": 0.017,
-    "t": -7.4
+    "coef": -0.135,
+    "se": 0.013,
+    "t": -10.1
    },
    "C(contrast)[T.parent_gap]:C(gender)[T.male]": {
-    "coef": -0.023,
-    "se": 0.017,
-    "t": -1.3
+    "coef": -0.027,
+    "se": 0.013,
+    "t": -2.1
    }
   },
   "luna": {
    "C(contrast)[T.parent_gap]": {
-    "coef": -0.106,
-    "se": 0.026,
-    "t": -4.0
+    "coef": -0.112,
+    "se": 0.025,
+    "t": -4.4
    },
    "C(contrast)[T.parent_gap]:C(gender)[T.male]": {
-    "coef": -0.006,
+    "coef": -0.0,
     "se": 0.009,
-    "t": -0.7
+    "t": -0.0
    }
   },
   "qwen": {
    "C(contrast)[T.parent_gap]": {
-    "coef": -0.161,
-    "se": 0.017,
-    "t": -9.4
+    "coef": -0.146,
+    "se": 0.015,
+    "t": -9.5
    },
    "C(contrast)[T.parent_gap]:C(gender)[T.male]": {
-    "coef": 0.012,
-    "se": 0.012,
-    "t": 1.0
+    "coef": 0.006,
+    "se": 0.009,
+    "t": 0.6
    }
   }
  },
  "mdes": {
   "deepseek": {
    "blind_minus_names_parent": 0.054,
-   "blind_minus_names_parent_gap": 0.045
+   "blind_minus_names_parent_gap": 0.044
   },
   "haiku": {
    "blind_minus_names_parent": 0.043,
@@ -761,8 +761,8 @@
    "blind_minus_names_parent_gap": 0.038
   },
   "qwen": {
-   "blind_minus_names_parent": 0.049,
-   "blind_minus_names_parent_gap": 0.042
+   "blind_minus_names_parent": 0.046,
+   "blind_minus_names_parent_gap": 0.03
   }
  }
 }

@@ -90,6 +90,8 @@ def fig_design(tables, out=OUT, stats_path="docs/report/stats.json"):
     fig.suptitle("Figure 2. Paired comparison (E2): probability the parent candidate is chosen\n"
                  "marginal means ± 95% CI, SEs clustered by résumé pair (40 clusters); * |z|>2, ** >2.6, *** >3.3",
                  y=1.04, fontsize=9.5)
+    fig.text(0.01, 0.005, "Share = P(cued candidate chosen) vs the childless finalist in the same prompt; 50% = no penalty.",
+             fontsize=6.5, color="0.3")
     fig.savefig(out / "fig2_e2_forest.pdf")
     plt.close(fig)
 
@@ -127,6 +129,8 @@ def fig_e1_cells(tables, out=OUT):
             ax.set_ylabel("Mean salary ($1,000)\n(withheld $0 excluded)")
     fig.suptitle("Figure 3. E1 independent scoring: interview rate and recommended salary by condition", y=1.01)
     fig.tight_layout()
+    fig.text(0.01, 0.005, "Cell mean minus the childless (`none`) mean of the same résumé; isolated scoring only.",
+             fontsize=6.5, color="0.3")
     fig.savefig(out / "fig3_e1_cells.pdf")
     plt.close(fig)
 
@@ -177,6 +181,8 @@ def fig_e3_impact(tables, out=OUT, stats_path="docs/report/stats.json"):
     ax.grid(axis="y", alpha=0.25)
     fig.suptitle("Figure 4. Ranking pools (E3): token parents vs childless candidates", y=1.03)
     fig.tight_layout()
+    fig.text(0.01, 0.005, "Ratio = token-parent top-3 rate vs the same résumés shown childless (résumé-FE adjusted); 0.80 = four-fifths line.",
+             fontsize=6.5, color="0.3")
     fig.savefig(out / "fig4_e3_impact.pdf")
     plt.close(fig)
 
@@ -209,6 +215,8 @@ def fig_e4_context(tables, out=OUT):
     axes[1].legend(fontsize=6.5)
     fig.suptitle("Figure 5. Job-description context (E4): leave-gap interview penalty by JD wording", y=1.03)
     fig.tight_layout()
+    fig.text(0.01, 0.005, "Leave-gap interview penalty by job-ad wording; only the JD closing paragraph varies.",
+             fontsize=6.5, color="0.3")
     fig.savefig(out / "fig5_e4_context.pdf")
     plt.close(fig)
 
@@ -396,6 +404,8 @@ def fig_moderator(tables, out=OUT):
     ax.grid(alpha=0.25)
     fig.suptitle("Figure 8. Occupational moderation of the leave-gap interview penalty (DeepSeek, E1)", y=1.03)
     fig.tight_layout()
+    fig.text(0.01, 0.005, "Occupation-level leave-gap penalty (pp) vs occupation traits; exploratory.",
+             fontsize=6.5, color="0.3")
     fig.savefig(out / "fig8_moderators.pdf")
     plt.close(fig)
 

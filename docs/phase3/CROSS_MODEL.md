@@ -39,11 +39,11 @@ Both genders pooled. Parity = .50.
 
 | contrast          |   ('L0 name', 'DeepSeek') |   ('L0 name', 'Haiku') |   ('L0 name', 'Luna') |   ('L0 name', 'Qwen') |   ('L1 name+field', 'DeepSeek') |   ('L1 name+field', 'Haiku') |   ('L1 name+field', 'Luna') |   ('L1 name+field', 'Qwen') |   ('L2 initial+field', 'DeepSeek') |   ('L2 initial+field', 'Haiku') |   ('L2 initial+field', 'Luna') |   ('L2 initial+field', 'Qwen') |   ('L3 blind', 'DeepSeek') |   ('L3 blind', 'Haiku') |   ('L3 blind', 'Luna') |   ('L3 blind', 'Qwen') |
 |:------------------|--------------------------:|-----------------------:|----------------------:|----------------------:|--------------------------------:|-----------------------------:|----------------------------:|----------------------------:|-----------------------------------:|--------------------------------:|-------------------------------:|-------------------------------:|---------------------------:|------------------------:|-----------------------:|-----------------------:|
-| gap_parental_only |                     0.402 |                  0.319 |                 0.271 |                 0.353 |                           0.397 |                        0.299 |                       0.289 |                       0.35  |                              0.397 |                           0.321 |                          0.285 |                          0.341 |                      0.405 |                   0.327 |                  0.269 |                  0.332 |
-| gap_travel        |                     0.385 |                  0.305 |                 0.228 |                 0.278 |                           0.372 |                        0.316 |                       0.223 |                       0.286 |                              0.39  |                           0.316 |                          0.227 |                          0.281 |                      0.388 |                   0.32  |                  0.226 |                  0.273 |
-| parent            |                     0.353 |                  0.275 |                 0.329 |                 0.383 |                           0.357 |                        0.335 |                       0.352 |                       0.396 |                              0.364 |                           0.365 |                          0.358 |                          0.392 |                      0.354 |                   0.281 |                  0.326 |                  0.372 |
-| parent_gap        |                     0.241 |                  0.086 |                 0.096 |                 0.254 |                           0.297 |                        0.121 |                       0.17  |                       0.244 |                              0.282 |                           0.141 |                          0.154 |                          0.224 |                      0.295 |                   0.112 |                  0.163 |                  0.223 |
-| personal          |                     0.458 |                  0.53  |                 0.459 |                 0.464 |                           0.466 |                        0.52  |                       0.466 |                       0.472 |                              0.469 |                           0.548 |                          0.465 |                          0.466 |                      0.463 |                   0.521 |                  0.456 |                  0.476 |
+| gap_parental_only |                     0.402 |                  0.319 |                 0.271 |                 0.358 |                           0.397 |                        0.299 |                       0.289 |                       0.352 |                              0.398 |                           0.321 |                          0.285 |                          0.344 |                      0.405 |                   0.327 |                  0.271 |                  0.333 |
+| gap_travel        |                     0.385 |                  0.305 |                 0.228 |                 0.281 |                           0.372 |                        0.316 |                       0.223 |                       0.29  |                              0.391 |                           0.316 |                          0.228 |                          0.282 |                      0.387 |                   0.32  |                  0.226 |                  0.279 |
+| parent            |                     0.353 |                  0.275 |                 0.329 |                 0.382 |                           0.357 |                        0.335 |                       0.352 |                       0.402 |                              0.364 |                           0.365 |                          0.359 |                          0.391 |                      0.354 |                   0.281 |                  0.327 |                  0.373 |
+| parent_gap        |                     0.241 |                  0.086 |                 0.096 |                 0.254 |                           0.295 |                        0.121 |                       0.171 |                       0.244 |                              0.281 |                           0.141 |                          0.154 |                          0.228 |                      0.295 |                   0.112 |                  0.163 |                  0.227 |
+| personal          |                     0.458 |                  0.53  |                 0.46  |                 0.472 |                           0.466 |                        0.52  |                       0.467 |                       0.479 |                              0.47  |                           0.548 |                          0.465 |                          0.474 |                      0.462 |                   0.521 |                  0.456 |                  0.479 |
 
 ## §8.3 Placebo decomposition (L0, mothers)
 
@@ -52,10 +52,10 @@ bundle = `parent_gap` − `gap_parental_only`.
 
 | model | parenthood net of disclosure | caregiving label net of interruption | family bundle on top of gap |
 | --- | --- | --- | --- |
-| DeepSeek | -0.107 | +0.010 | -0.156 |
+| DeepSeek | -0.108 | +0.011 | -0.157 |
 | Haiku | -0.269 | +0.013 | -0.238 |
-| Luna | -0.124 | +0.041 | -0.177 |
-| Qwen | -0.095 | +0.074 | -0.108 |
+| Luna | -0.125 | +0.041 | -0.177 |
+| Qwen | -0.103 | +0.075 | -0.108 |
 
 ## §8.1 Direct gender contrasts — P(woman chosen) vs the man in the same prompt
 
@@ -63,12 +63,12 @@ parity = .50. `gender_none` = childless woman vs childless man; `gender_parent` 
 
 |                                       |   ('P(woman)', 'DeepSeek') |   ('P(woman)', 'Haiku') |   ('P(woman)', 'Luna') |   ('P(woman)', 'Qwen') |
 |:--------------------------------------|---------------------------:|------------------------:|-----------------------:|-----------------------:|
-| ('gender_none', 'L0 name')            |                      0.515 |                   0.528 |                  0.522 |                  0.497 |
-| ('gender_none', 'L1 name+field')      |                      0.54  |                   0.526 |                  0.587 |                  0.492 |
-| ('gender_none', 'L2 initial+field')   |                      0.538 |                   0.513 |                  0.575 |                  0.514 |
-| ('gender_parent', 'L0 name')          |                      0.536 |                   0.544 |                  0.578 |                  0.503 |
+| ('gender_none', 'L0 name')            |                      0.515 |                   0.528 |                  0.522 |                  0.505 |
+| ('gender_none', 'L1 name+field')      |                      0.54  |                   0.526 |                  0.587 |                  0.493 |
+| ('gender_none', 'L2 initial+field')   |                      0.538 |                   0.513 |                  0.575 |                  0.518 |
+| ('gender_parent', 'L0 name')          |                      0.535 |                   0.544 |                  0.577 |                  0.503 |
 | ('gender_parent', 'L1 name+field')    |                      0.54  |                   0.498 |                  0.647 |                  0.514 |
-| ('gender_parent', 'L2 initial+field') |                      0.547 |                   0.47  |                  0.634 |                  0.488 |
+| ('gender_parent', 'L2 initial+field') |                      0.547 |                   0.47  |                  0.634 |                  0.491 |
 
 ## §8.6 Abstention — salary withholding (E1 women), by cue level
 
@@ -96,7 +96,7 @@ parity = .50. `gender_none` = childless woman vs childless man; `gender_parent` 
 | parent_committed |         nan     |  0     |      nan     |
 | parent_gap       |           0.018 |  0     |        0.016 |
 | personal         |           0.004 |  0.004 |        0.007 |
-| pregnant         |           0.257 |  0.182 |        0.275 |
+| pregnant         |           0.258 |  0.182 |        0.275 |
 
 **Luna**
 
@@ -120,9 +120,9 @@ parity = .50. `gender_none` = childless woman vs childless man; `gender_parent` 
 | none             |           0.016 |  0.008 |        0.019 |
 | parent           |           0.028 |  0.016 |        0.022 |
 | parent_committed |         nan     |  0     |      nan     |
-| parent_gap       |           0.024 |  0.005 |        0.023 |
+| parent_gap       |           0.024 |  0.005 |        0.022 |
 | personal         |           0.013 |  0.016 |        0.018 |
-| pregnant         |           0.029 |  0     |        0.026 |
+| pregnant         |           0.028 |  0     |        0.025 |
 
 ## §8.7 Drift anchors (phase-3 L0 minus main-run interview rate, O20)
 
@@ -131,7 +131,7 @@ parity = .50. `gender_none` = childless woman vs childless man; `gender_parent` 
 | DeepSeek | +0.029 | [+0.024, +0.035] |
 | Haiku | +0.025 | [+0.021, +0.033] |
 | Luna | +0.030 | [+0.029, +0.032] |
-| Qwen | +0.014 | [+0.011, +0.017] |
+| Qwen | +0.014 | [+0.012, +0.018] |
 
 ## Headline cross-model findings
 

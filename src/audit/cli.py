@@ -87,7 +87,46 @@ def materials_phase3(
 
 
 @app.command()
+def reproduce() -> None:
+    """SPEC_FINALIZE F6: rebuild every generated artifact in fixed order, then
+    fail if any tracked file under docs/ changed (non-reproducibility signal)."""
+    import subprocess
+    import sys
+
+    steps = [
+        ["uv", "run", "audit", "etl"],
+        ["uv", "run", "audit", "stats"],
+        ["uv", "run", "python", "-m", "audit.analysis.cross_model"],
+        ["uv", "run", "python", "-m", "audit.analysis.phase3_key_stats"],
+        ["uv", "run", "python", "-m", "audit.analysis.round3"],
+        ["uv", "run", "python", "-m", "audit.analysis.round5"],
+        ["uv", "run", "python", "-m", "audit.analysis.round6"],
+        ["uv", "run", "python", "-m", "audit.analysis.phase4_stats"],
+        ["uv", "run", "python", "-m", "audit.analysis.finalize_coding"],
+        ["uv", "run", "python", "-m", "audit.analysis.study_totals"],
+        ["uv", "run", "python", "-m", "audit.analysis.disparate_impact"],
+        ["uv", "run", "python", "-m", "audit.analysis.claims_check"],
+        ["uv", "run", "audit", "figures"],
+    ]
+    for step in steps:
+        print(f"[reproduce] {' '.join(step[2:])}")
+        r = subprocess.run(step)
+        if r.returncode != 0:
+            raise SystemExit(f"[reproduce] FAILED at: {' '.join(step)}")
+    diff = subprocess.run(["git", "diff", "--stat", "docs/"], capture_output=True, text=True)
+    print(diff.stdout)
+    if diff.stdout.strip():
+        raise SystemExit("[reproduce] NON-DETERMINISTIC OUTPUT: docs/ changed after full rebuild")
+    print("[reproduce] all artifacts reproduce byte-identically")
+
+
+@app.command()
 def etl(force: bool = typer.Option(False, help="rebuild even if the cache is fresh")):
+    """Build the clean data layer (tidy parquet tables) from raw logs."""
+    from .analysis.etl import build_clean
+
+    summary = build_clean(force=force)
+    print(f"[etl] {summary['status']}: {summary.get('tables', {})}")
     """Build the clean data layer (tidy parquet tables) from raw logs."""
     from .analysis.etl import build_clean
 

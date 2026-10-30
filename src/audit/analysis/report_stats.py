@@ -44,7 +44,9 @@ def e2_clustered(e2: pd.DataFrame) -> dict:
     degeneracy with few clusters). Gender differences via pair-matched t-tests."""
     from scipy import stats as sps
 
-    d = e2.dropna(subset=["parent_chosen"]).copy()
+    d = e2[~e2.run_id.str.contains("phase3|phase4")].copy()  # main run only
+    d["parent_chosen"] = pd.to_numeric(d["parent_chosen"], errors="coerce")
+    d = d.dropna(subset=["parent_chosen"])
     d["cell"] = d["contrast"].astype(str) + "|" + d["gender"].astype(str)
     d["cluster"] = pair_cluster(d)
     cells = {}
@@ -419,6 +421,14 @@ def emit_tables(out: dict) -> str:
 
 def main():
     tables = {m: build_tables(None, model_key=m) for m in MODELS}
+    # report_stats computes MAIN-RUN statistics (its charter); phase-3/4 have
+    # their own modules (cross_model, phase3_key_stats, round3/5/6, phase4_stats)
+    for m in MODELS:
+        for k in ("e1", "e2", "e3", "e4", "e1_e4"):
+            if k in tables[m] and "run_id" in tables[m][k].columns:
+                tables[m][k] = tables[m][k][~tables[m][k].run_id.str.contains("phase3|phase4")].copy()
+        if "e2" in tables[m]:
+            tables[m]["e2"]["parent_chosen"] = pd.to_numeric(tables[m]["e2"]["parent_chosen"], errors="coerce")
     per_model = {}
     for m in MODELS:
         t = tables[m]

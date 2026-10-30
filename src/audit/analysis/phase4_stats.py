@@ -170,7 +170,23 @@ def hc1() -> dict:
     return res
 
 
+def levels() -> dict:
+    """P(cued chosen) per arm x contrast (women) for the report table."""
+    res = {}
+    for m, k in zip(MODELS, KEYS):
+        e2 = phase4_tables(m)
+        entry = {}
+        for con in ["parent", "parent_gap", "gap_travel"]:
+            for arm in ARMS:
+                s = e2[(e2.sysarm == arm) & (e2.contrast == con) & (e2.gender == "female")]
+                pm = s.groupby("pair")["pc"].mean()
+                entry[f"{con}|{arm}"] = round(float(pm.mean()), 3)
+        res[k] = entry
+    return res
+
+
 if __name__ == "__main__":
+    OUT["levels_women"] = levels()
     OUT["validity"] = validity_by_arm()
     OUT["hb1_hb3"] = hb1_hb3()
     OUT["hb2"] = hb2()

@@ -615,3 +615,11 @@ Open by design decision (not yet done; see the "complete story" discussion):
 - Fairness-instruction system-prompt arm (does a standard fairness prompt remove Layer 1?)
 - Disparate-impact quantification (gap prevalence by gender × measured penalties)
 - Neutral gap-label arm (company closure / certification)
+
+## Round 8 (2026-10-30) — organization pass
+
+See docs/SPEC_FINALIZE.md (Part 1 analysis for opencode; Part 2 writing). Key items: rationale-coding mechanism
+paragraph is not actually in report.md (despite commit fea0faf message); drop
+`qualifications` (κ .01) and `gender` (κ .20) codes from claims; human-validation
+CSV exposes machine codes (blind it); spend/call totals and §3 omit phase 4;
+Figures 1–8 uncited.
