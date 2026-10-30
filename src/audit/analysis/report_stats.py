@@ -15,6 +15,7 @@ Round-2 additions:
   - named-résumé sensitivity incl. registered_nurse_01 / medical_assistant_01
 """
 import json
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -419,14 +420,55 @@ def emit_tables(out: dict) -> str:
     return "\n".join(L) + "\n"
 
 
+def _main_run_call_ids() -> set[str]:
+    """Call ids of the main-run EXPERIMENTS, from the logs themselves.
+
+    Plan files cannot be used: rebuilding them recomputes PROMPT_VERSION (a
+    hash of the whole prompts/ dir, which gained manip_check.j2 in phase 3),
+    so rebuilt main-run plans carry call_ids that match no historical log row.
+
+    Log-level name matching is safe here because (a) non-repair rows are
+    filtered first (the phase-3 repair runs named repair2-* were the only
+    naming leak), and (b) main-run dirs are a fixed, known list.
+    """
+    import json as _json
+
+    # run dirs are TIMESTAMP-prefixed, so match on "-stem-" substrings.
+    # The PILOT is part of the main-run data: phase-1 e2_paired reused the
+    # pilot's completed call_ids for 2 occupations (its own logs hold 1 admin
+    # row), so the published main-run DS E2 cells include pilot rows.
+    stems = ("pilot", "e1_scoring", "e2_paired", "e3_ranking", "e4_jd_context",
+             "phase2_e123", "phase2_e4")
+    ids: set[str] = set()
+    for f in Path("runs").glob("*/logs.jsonl"):
+        rid = f.parent.name
+        if not any(f"-{s}-" in rid for s in stems):
+            continue
+        for line in open(f):
+            if '"repair_of":' in line and '"repair_of": null' not in line:
+                continue
+            if '"call_id"' not in line:
+                continue
+            try:
+                r = _json.loads(line)
+            except _json.JSONDecodeError:
+                continue
+            if r.get("repair_of"):
+                continue
+            ids.add(r["call_id"])
+    return ids
+
+
 def main():
     tables = {m: build_tables(None, model_key=m) for m in MODELS}
     # report_stats computes MAIN-RUN statistics (its charter); phase-3/4 have
-    # their own modules (cross_model, phase3_key_stats, round3/5/6, phase4_stats)
+    # their own modules. Filter by plan MEMBERSHIP (run names are unreliable:
+    # phase-3 repair runs are named repair2-*).
+    main_ids = _main_run_call_ids()
     for m in MODELS:
         for k in ("e1", "e2", "e3", "e4", "e1_e4"):
-            if k in tables[m] and "run_id" in tables[m][k].columns:
-                tables[m][k] = tables[m][k][~tables[m][k].run_id.str.contains("phase3|phase4")].copy()
+            if k in tables[m] and "call_id" in tables[m][k].columns:
+                tables[m][k] = tables[m][k][tables[m][k].call_id.isin(main_ids)].copy()
         if "e2" in tables[m]:
             tables[m]["e2"]["parent_chosen"] = pd.to_numeric(tables[m]["e2"]["parent_chosen"], errors="coerce")
     per_model = {}

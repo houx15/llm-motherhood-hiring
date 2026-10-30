@@ -1,26 +1,26 @@
 {
  "DeepSeek": {
-  "crossing_womens_prevalence": 0.587,
-  "ratio_women": 0.633,
-  "ratio_men": 0.653,
-  "scenario_20_5": 0.943
+  "crossing_womens_prevalence": 0.726,
+  "ratio_women": 0.708,
+  "ratio_men": 0.704,
+  "scenario_20_5": 0.956
  },
  "Haiku": {
-  "crossing_womens_prevalence": 0.587,
-  "ratio_women": 0.633,
-  "ratio_men": 0.653,
-  "scenario_20_5": 0.943
+  "crossing_womens_prevalence": 0.308,
+  "ratio_women": 0.248,
+  "ratio_men": 0.231,
+  "scenario_20_5": 0.884
  },
  "Luna": {
-  "crossing_womens_prevalence": 0.587,
-  "ratio_women": 0.633,
-  "ratio_men": 0.653,
-  "scenario_20_5": 0.943
+  "crossing_womens_prevalence": 0.93,
+  "ratio_women": 0.776,
+  "ratio_men": 0.809,
+  "scenario_20_5": 0.964
  },
  "Qwen": {
-  "crossing_womens_prevalence": 0.587,
-  "ratio_women": 0.633,
-  "ratio_men": 0.653,
-  "scenario_20_5": 0.943
+  "crossing_womens_prevalence": 0.841,
+  "ratio_women": 0.752,
+  "ratio_men": 0.798,
+  "scenario_20_5": 0.96
  }
 }

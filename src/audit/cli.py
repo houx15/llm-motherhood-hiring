@@ -93,7 +93,10 @@ def reproduce() -> None:
     import subprocess
     import sys
 
-    steps = [
+    plan_configs = ["pilot", "e1_scoring", "e2_paired", "e3_ranking", "e4_jd_context",
+                    "phase2_e123", "phase2_e4", "phase3_main", "phase3_manip",
+                    "phase3_lawyer", "phase3_pilot", "phase4_main"]
+    steps = [["uv", "run", "audit", "plan", "--experiment", c] for c in plan_configs] + [
         ["uv", "run", "audit", "etl"],
         ["uv", "run", "audit", "stats"],
         ["uv", "run", "python", "-m", "audit.analysis.cross_model"],

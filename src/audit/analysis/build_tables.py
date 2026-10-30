@@ -205,6 +205,7 @@ def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bo
                 recs.append(
                     {
                         "run_id": row["run_id"], "call_id": row["call_id"],
+                        "model_key": row["model_key"],
                         "occupation_id": row["occupation_id"], "composition": row["contrast"],
                         "draw": row.get("draw"), "rotation": row["position"], "sample_idx": row["sample_idx"],
                         "cue_level": lvl,

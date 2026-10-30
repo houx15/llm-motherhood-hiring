@@ -623,3 +623,8 @@ paragraph is not actually in report.md (despite commit fea0faf message); drop
 `qualifications` (κ .01) and `gender` (κ .20) codes from claims; human-validation
 CSV exposes machine codes (blind it); spend/call totals and §3 omit phase 4;
 Figures 1–8 uncited.
+
+## Round 9 (2026-10-30) — finalize F1–F6 review
+See docs/SPEC_FINALIZE.md "Round 9". MUST: main-run stats.json regression (E3 identical
+across models; Haiku/Qwen E2 contaminated by repair runs of phase-3 calls);
+disparate impact inherits it; Holm `p or 1` bug inverts F1e significance.

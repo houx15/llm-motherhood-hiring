@@ -85,6 +85,11 @@ def self_coding_check(df: pd.DataFrame) -> dict:
     return out
 
 
+def _fmt_p(p) -> str:
+    """'<.001' for tiny p-values (JSON keeps the number; displays don't show 0.0)."""
+    return "<.001" if p is not None and p < 0.001 else (f"{p:.3f}" if p is not None else "—")
+
+
 def _share_ci(df: pd.DataFrame, code: str) -> dict:
     """Share of rationales invoking `code`, clustered by résumé pair."""
     d = df.copy()
@@ -95,7 +100,8 @@ def _share_ci(df: pd.DataFrame, code: str) -> dict:
     se = pm.std(ddof=1) / np.sqrt(len(pm))
     t = sps.t.ppf(0.975, len(pm) - 1)
     return {"share": round(float(d["x"].mean()), 3),
-            "ci95": [round(float(d["x"].mean() - t * se), 3), round(float(d["x"].mean() + t * se), 3)],
+            "ci95": [round(max(0.0, float(d["x"].mean() - t * se)), 3),
+                     round(min(1.0, float(d["x"].mean() + t * se)), 3)],
             "n": int(len(d)), "n_pairs": int(len(pm))}
 
 
@@ -114,8 +120,11 @@ def _diff_ci(df_a: pd.DataFrame, df_b: pd.DataFrame, code: str) -> dict:
     se = d.std(ddof=1) / np.sqrt(len(d))
     tq = sps.t.ppf(0.975, len(d) - 1)
     return {"diff": round(float(d.mean()), 3),
-            "ci95": [round(float(d.mean() - tq * se), 3), round(float(d.mean() + tq * se), 3)],
-            "t": round(float(t), 1), "p": round(float(p), 4), "n_pairs": int(len(common))}
+            "ci95": [round(max(-1.0, float(d.mean() - tq * se)), 3),
+                     round(min(1.0, float(d.mean() + tq * se)), 3)],
+            "t": round(float(t), 1),
+            "p": max(float(p), 1e-6),  # storage floor; displays use _fmt_p
+            "n_pairs": int(len(common))}
 
 
 def main() -> None:
@@ -156,16 +165,18 @@ def main() -> None:
         row = {}
         for c in ["gap", "availability"]:
             row[f"{c}_interruption_minus_parent"] = _diff_ci(inter, plain, c)
-            fam_p[f"{mkey}:{c}"] = row[f"{c}_interruption_minus_parent"]["p"] or 1
+            _pv = row[f"{c}_interruption_minus_parent"]["p"]
+            fam_p[f"{mkey}:{c}"] = 1.0 if _pv is None else _pv
         row["family_family_minus_nonfamily"] = _diff_ci(famc, nonfam, "family")
-        fam_p[f"{mkey}:family"] = row["family_family_minus_nonfamily"]["p"] or 1
+        _pv = row["family_family_minus_nonfamily"]["p"]
+        fam_p[f"{mkey}:family"] = 1.0 if _pv is None else _pv
         align[mkey] = row
     adj = holm(fam_p)
     for k, v in adj.items():
         mkey, c = k.split(":")
         key = {"gap": "gap_interruption_minus_parent", "availability": "availability_interruption_minus_parent",
                "family": "family_family_minus_nonfamily"}[c]
-        align[mkey][key]["holm"] = round(v, 4)
+        align[mkey][key]["holm"] = round(v, 6)
     res["f1e_alignment"] = align
 
     # f) disclosure_irrelevant for parent contrasts
@@ -188,11 +199,11 @@ def main() -> None:
             r = _diff_ci(lose[lose.gender == "female"], lose[lose.gender == "male"], c)
             g[mkey][c] = r
             if r.get("p") is not None:
-                gp[f"{mkey}:{c}"] = r["p"]
+                gp[f"{mkey}:{c}"] = r["p"]  # p=0.0 is a VALID p (never `or`)
     adjg = holm(gp)
     for k, v in adjg.items():
         mkey, c = k.split(":")
-        g[mkey][c]["holm"] = round(v, 4)
+        g[mkey][c]["holm"] = round(v, 6)
     res["f1g_gender"] = g
 
     (out_dir / "coding_stats.json").write_text(json.dumps(res, indent=1))
@@ -221,7 +232,8 @@ def main() -> None:
     L.append("| --- | --- | --- | --- |")
     for mkey, row in align.items():
         def fmt(r):
-            return f"{r['diff']:+.3f} (H {r.get('holm', '—')})" if r.get("diff") is not None else "—"
+            return (f"{r['diff']:+.3f} (H {_fmt_p(r.get('holm'))})"
+                    if r.get("diff") is not None else "—")
         L.append(f"| {mkey} | {fmt(row['gap_interruption_minus_parent'])} | "
                  f"{fmt(row['availability_interruption_minus_parent'])} | {fmt(row['family_family_minus_nonfamily'])} |")
     (out_dir / "coding_tables.md").write_text("\n".join(L) + "\n")

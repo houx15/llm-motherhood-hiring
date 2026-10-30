@@ -16,17 +16,17 @@ parameter unless sourced. Current inputs: scenario parameters (no sourced value)
 
 | model | mothers' ratio | fathers' ratio | implied W/M selection ratio | four-fifths |
 | --- | --- | --- | --- | --- |
-| DeepSeek | 0.63 | 0.65 | **0.943** | pass |
-| Haiku | 0.63 | 0.65 | **0.943** | pass |
-| Luna | 0.63 | 0.65 | **0.943** | pass |
-| Qwen | 0.63 | 0.65 | **0.943** | pass |
+| DeepSeek | 0.71 | 0.70 | **0.956** | pass |
+| Haiku | 0.25 | 0.23 | **0.884** | pass |
+| Luna | 0.78 | 0.81 | **0.964** | pass |
+| Qwen | 0.75 | 0.80 | **0.960** | pass |
 
 ## Women's signal prevalence at which the four-fifths line is crossed (men at 5%)
 
-- DeepSeek: crosses at women's prevalence ≥ 59%
-- Haiku: crosses at women's prevalence ≥ 59%
-- Luna: crosses at women's prevalence ≥ 59%
-- Qwen: crosses at women's prevalence ≥ 59%
+- DeepSeek: crosses at women's prevalence ≥ 73%
+- Haiku: crosses at women's prevalence ≥ 31%
+- Luna: crosses at women's prevalence ≥ 93%
+- Qwen: crosses at women's prevalence ≥ 84%
 
 Interpretation: because Haiku's Layer-1 penalty is severe, even modest
 gender asymmetry in signal prevalence produces a disparate-impact violation

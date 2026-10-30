@@ -156,106 +156,106 @@
  "e3v3_ratio_by_level": {
   "deepseek": {
    "name": {
-    "parent_top3": 0.288,
-    "childless_top3": 0.542,
-    "ratio": 0.531,
-    "n_pools": 5762
+    "parent_top3": 0.34,
+    "childless_top3": 0.532,
+    "ratio": 0.639,
+    "n_pools": 1442
    },
    "name_field": {
-    "parent_top3": 0.302,
-    "childless_top3": 0.54,
-    "ratio": 0.561,
-    "n_pools": 5762
+    "parent_top3": 0.347,
+    "childless_top3": 0.531,
+    "ratio": 0.655,
+    "n_pools": 1442
    },
    "initial_field": {
-    "parent_top3": 0.301,
-    "childless_top3": 0.54,
-    "ratio": 0.558,
-    "n_pools": 5761
+    "parent_top3": 0.352,
+    "childless_top3": 0.53,
+    "ratio": 0.664,
+    "n_pools": 1442
    },
    "blind": {
-    "parent_top3": 0.295,
-    "childless_top3": 0.541,
-    "ratio": 0.546,
-    "n_pools": 2881
+    "parent_top3": 0.347,
+    "childless_top3": 0.531,
+    "ratio": 0.653,
+    "n_pools": 721
    }
   },
   "haiku": {
    "name": {
-    "parent_top3": 0.288,
-    "childless_top3": 0.542,
-    "ratio": 0.531,
-    "n_pools": 5762
+    "parent_top3": 0.086,
+    "childless_top3": 0.583,
+    "ratio": 0.148,
+    "n_pools": 1440
    },
    "name_field": {
-    "parent_top3": 0.302,
-    "childless_top3": 0.54,
-    "ratio": 0.561,
-    "n_pools": 5762
+    "parent_top3": 0.11,
+    "childless_top3": 0.578,
+    "ratio": 0.19,
+    "n_pools": 1440
    },
    "initial_field": {
-    "parent_top3": 0.301,
-    "childless_top3": 0.54,
-    "ratio": 0.558,
-    "n_pools": 5761
+    "parent_top3": 0.097,
+    "childless_top3": 0.581,
+    "ratio": 0.167,
+    "n_pools": 1440
    },
    "blind": {
-    "parent_top3": 0.295,
-    "childless_top3": 0.541,
-    "ratio": 0.546,
-    "n_pools": 2881
+    "parent_top3": 0.093,
+    "childless_top3": 0.581,
+    "ratio": 0.16,
+    "n_pools": 720
    }
   },
   "luna": {
    "name": {
-    "parent_top3": 0.288,
-    "childless_top3": 0.542,
-    "ratio": 0.531,
-    "n_pools": 5762
+    "parent_top3": 0.366,
+    "childless_top3": 0.527,
+    "ratio": 0.695,
+    "n_pools": 1440
    },
    "name_field": {
-    "parent_top3": 0.302,
-    "childless_top3": 0.54,
-    "ratio": 0.561,
-    "n_pools": 5762
+    "parent_top3": 0.378,
+    "childless_top3": 0.524,
+    "ratio": 0.72,
+    "n_pools": 1440
    },
    "initial_field": {
-    "parent_top3": 0.301,
-    "childless_top3": 0.54,
-    "ratio": 0.558,
-    "n_pools": 5761
+    "parent_top3": 0.366,
+    "childless_top3": 0.527,
+    "ratio": 0.695,
+    "n_pools": 1440
    },
    "blind": {
-    "parent_top3": 0.295,
-    "childless_top3": 0.541,
-    "ratio": 0.546,
-    "n_pools": 2881
+    "parent_top3": 0.371,
+    "childless_top3": 0.526,
+    "ratio": 0.705,
+    "n_pools": 720
    }
   },
   "qwen": {
    "name": {
-    "parent_top3": 0.288,
-    "childless_top3": 0.542,
-    "ratio": 0.531,
-    "n_pools": 5762
+    "parent_top3": 0.36,
+    "childless_top3": 0.528,
+    "ratio": 0.683,
+    "n_pools": 1440
    },
    "name_field": {
-    "parent_top3": 0.302,
-    "childless_top3": 0.54,
-    "ratio": 0.561,
-    "n_pools": 5762
+    "parent_top3": 0.375,
+    "childless_top3": 0.525,
+    "ratio": 0.714,
+    "n_pools": 1440
    },
    "initial_field": {
-    "parent_top3": 0.301,
-    "childless_top3": 0.54,
-    "ratio": 0.558,
-    "n_pools": 5761
+    "parent_top3": 0.389,
+    "childless_top3": 0.522,
+    "ratio": 0.745,
+    "n_pools": 1439
    },
    "blind": {
-    "parent_top3": 0.295,
-    "childless_top3": 0.541,
-    "ratio": 0.546,
-    "n_pools": 2881
+    "parent_top3": 0.371,
+    "childless_top3": 0.526,
+    "ratio": 0.705,
+    "n_pools": 720
    }
   }
  },
@@ -509,9 +509,9 @@
    "gap_pct": -2.89
   },
   "haiku": {
-   "parent_usd": -1338,
-   "parent_pct": -1.69,
-   "gap_usd": -938,
+   "parent_usd": -1332,
+   "parent_pct": -1.68,
+   "gap_usd": -942,
    "gap_pct": -1.18
   },
   "luna": {
@@ -521,10 +521,10 @@
    "gap_pct": -2.27
   },
   "qwen": {
-   "parent_usd": -1666,
-   "parent_pct": -2.2,
-   "gap_usd": -3017,
-   "gap_pct": -3.94
+   "parent_usd": -1775,
+   "parent_pct": -2.33,
+   "gap_usd": -3145,
+   "gap_pct": -4.1
   }
  }
 }

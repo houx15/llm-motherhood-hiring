@@ -94,3 +94,72 @@ stats, study totals, CLAIMS.md, all figures in fixed order; then
   the current human_coding.csv shows machine codes.
 - Verify ◆ references (Frermann et al. 2023; Phelps 1972; Veldanda et al. 2023).
 - Choose venue (affects figure count) and release platform.
+
+---
+
+## Round 9 review of da5eeec–b2b7741 (2026-10-30) — fix before Part 2
+
+**R9-1 (MUST) Main-run stats regression in `report_stats.py`.** The new
+`run_id.str.contains("phase3|phase4")` filter corrupted `docs/report/stats.json`:
+- `e3_fe` is now **identical for all four models** (F .633 / M .653) — Table 3 shows
+  the same numbers in every column. Old (fea0faf) values differed (Haiku .248/.231,
+  DeepSeek .708/.704, Luna .776/.809, Qwen .752/.798).
+- Haiku and Qwen E2 now use **more clusters than exist in O20** (Haiku 43, Qwen 56 vs
+  40): rows from other runs leak in — almost certainly `repair2-*` runs that repaired
+  phase-3 calls (run_id has no "phase3"; 40 + 16 O8 pairs = 56). Qwen's
+  parent_committed mother–father gap jumps −.023 → −.085, leave-gap −.026 → +.024.
+Fix: select main-run rows by the original call's plan/experiment (or call_id ∈ main
+plans), never by run_id substring; apply the repair-saved exclusion via the
+`from_repair` flag. Then show a diff of every stats.json leaf vs fea0faf; the only
+allowed changes are repair-exclusion shifts (expected ≤ ~1pp, Qwen largest). Assert in
+a test that per-model e3_fe values are not all equal and n_clusters ≤ 40 (E2, O20).
+
+**R9-2 (MUST) Disparate impact inherits R9-1.** `docs/phase4/disparate_impact.md`,
+`disparate_impact_stats.json` and fig14 now report one set of numbers for all models
+(crossing 59% everywhere). Regenerate after R9-1. The claims checker's "mismatches"
+`abs_share_max` (77% vs 37%), `di_haiku_cross` (31% vs 59%), `di_scenario_low`
+are artifacts of this bug, not stale report text — re-run the checker after R9-1.
+
+**R9-3 (MUST) Holm bug in `finalize_coding.py` (F1e).** `fam_p[...] = r["p"] or 1`
+turns p = 0.0 into 1.0, so the strongest results (t = 16–25) get Holm p = 1.0 and the
+weakest one (Claude availability, t = 4.2) is reported as the only survivor — the
+commit message's "Haiku availability survives Holm" is inverted. Use
+`1.0 if p is None else p`, and pass unrounded p-values (compute from t, don't round
+to 4 dp before Holm). Re-generate tables; all alignment tests with |t| ≥ 4 should
+survive.
+
+**R9-4 (SHOULD) Share CIs below 0.** Several share CIs have negative lower bounds
+(e.g. −0.03). Clip to [0,1] or use a cluster-bootstrap percentile CI; note in the
+table that [0.00, 0.00] means no occurrences in the sample.
+
+**R9-5 (SHOULD) Phase-3 stats regenerated.** round3/5/6, phase3_key_stats and
+CROSS_MODEL changed in da5eeec. Provide a one-table diff (key, old, new) and confirm
+every change is from the repair-saved exclusion (e.g. Qwen parenthood −.068 → −.073).
+Then the checker's remaining phase-3 mismatches (`f2_*`, `abs_amplification` 31× →
+38×) are genuine text updates for Part 2.
+
+**R9-6 (process).** `audit reproduce` exists to catch unintended diffs; the run that
+changed 27 generated files was committed without inspecting them. After R9-1–R9-5,
+run `audit reproduce` from a clean tree and include its `--stat` output in the commit
+message.
+
+### Notes for Part 2 (no action for opencode)
+- Self-coding: protected_mention κ .44 on DeepSeek-written items; family κ .67 on
+  other-written items (below .70). Mechanism text must say family-code reliability is
+  lower for non-DeepSeek rationales and avoid resting claims on protected_mention.
+- F1f: "irrelevant" is also common when the parent *wins* (Claude .70, Luna .56), so
+  for those two it is boilerplate; the losing-vs-won gap is large only for DeepSeek
+  (.49 vs .16) and Qwen (.89 vs .38). Phrase accordingly.
+
+## Round 10 check (2026-10-30) — R9 fixes verified
+Verified in the working tree: main-run stats.json matches fea0faf exactly (E3 per
+model restored; E2 n_clusters = 40 for all models); disparate impact back to
+DeepSeek 73% / Haiku 31% / Luna 93% / Qwen 84%; Holm fixed (all alignment tests
+survive); phase-3 old-vs-new table shows max |Δ| = .005 (repair exclusion only).
+Remaining small items before committing:
+1. Commit (nothing since b2b7741 is committed); include `audit reproduce` --stat.
+2. Add the R9-1 guard test (per-model e3_fe not all equal; main-run E2
+   n_clusters ≤ 40) — no test references e3_fe/n_clusters yet.
+3. Display Holm p < .001 as "<.001", not "0.0"; clip share CI upper bound at 1.
+4. `_main_run_call_ids()` reads data/plans/*.parquet, which is git-ignored: make
+   `audit reproduce` regenerate plans first (deterministic) or fail loudly if missing.
