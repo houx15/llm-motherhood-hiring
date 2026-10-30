@@ -1,6 +1,10 @@
-total_cap_usd: 200.00
+# Researcher decision (QUESTIONS.md §12.1, 2026-10-29): the OPERATIVE budget is
+# the weekly OpenRouter key cap ($200/wk, enforced on the key itself). The
+# lifetime total-cap + reserve guard is CANCELLED and set non-binding; the
+# per-run kill switch below remains active.
+total_cap_usd: 1000.00        # non-binding (lifetime guard cancelled by researcher)
 weekly_cap_usd: 200.00        # OpenRouter key weekly cap set by researcher
-reserve_usd: 20.00            # never spend into the reserve without --allow-reserve
+reserve_usd: 0.00             # reserve rule cancelled by researcher
 phase_caps:
   pilot: 5.00
   phase1_deepseek: 35.00

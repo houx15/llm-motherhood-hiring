@@ -373,3 +373,15 @@ abstention, drift ≤ +3.5pp. Spend $66.85/$180; remaining three models est $85.
 > system prompts as in §B.1, the two adjusted neutral labels above. Run order:
 > DeepSeek first, parse/refusal check, then the other three.) — APPROVED via
 > question form same day.
+
+### 12.1 Budget clarification — researcher, 2026-10-29
+
+> The operative budget cap is the **weekly** OpenRouter cap ($200/wk; current
+> week ≈ $13). The $20 reserve line in budget.yaml is not a spending stop for
+> phase 4. Researcher explicitly approved `--allow-reserve` for the remaining
+> ~8,700 phase-4 calls (est. $2–6; lifetime total stays ≈ $182–186 < $200).
+
+> Addendum (same day): per researcher instruction the lifetime budget guard is
+> CANCELLED (total_cap raised to non-binding, reserve set to 0). Only the
+> weekly cap (enforced on the OpenRouter key) and the per-run kill switch
+> remain.
