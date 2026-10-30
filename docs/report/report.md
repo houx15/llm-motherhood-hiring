@@ -69,7 +69,12 @@ gender is explicit (.58 → .65 for mother-vs-father; its field response exceeds
 Qwen's and DeepSeek's by 5.8–7.0pp, pair-matched); Haiku moves the opposite way
 (−4.5pp, p = .003) and is the only model whose mother-father choice gap differs
 from the others (tested directly) — concentrated in perceived commitment.
-**Finding 4 — abstention is a discrimination margin.** Haiku withholds salary
+**Finding 4 — standard mitigation does not remove it.** A
+deployed-style EEO system prompt leaves the caregiver penalty in place for
+two models, reduces it for one, and *deepens* it for one; a targeted
+"do not penalize caregiving gaps" instruction cuts the interruption penalty
+(4–14pp) but leaves the family-signal penalty untouched; nothing reaches
+parity. **Finding 5 — abstention is a discrimination margin.** Haiku withholds salary
 offers entirely for 19.8% of pregnant applicants (27.5% under an explicit
 gender field), and withheld applicants are interviewed only 30% of the time —
 a −9.4pp interview penalty (t = −4.8) that listwise deletion would misread as
@@ -217,7 +222,8 @@ main-run and phase-3 tables; each table below states its source.
 parent-cue penalties in E1/E2/E3 per model and gender; mother-minus-father
 differences; E3 impact ratios; E4 wording contrasts; phase-3 cue-level
 penalties, placebo decomposition, direct gender contrasts, abstention rates,
-drift anchors. **Equivalence**: "no difference" claims use TOST at a
+drift anchors; phase-4 H-B1/H-B2/H-B3 system-prompt arms and H-C1 neutral
+gap labels (pre-specified in SPEC_PHASE4.md §6 before the runs). **Equivalence**: "no difference" claims use TOST at a
 pre-stated smallest effect of interest of ±5pp with 90% CIs. **Small-cluster
 robustness**: O8 tests (16 pairs) and E4 (32 résumé clusters) are re-checked
 with wild cluster bootstrap p-values. **Regression check**: cluster-mean
@@ -441,7 +447,59 @@ positive sign in all four models but is nominally significant only for
 DeepSeek (+.057, p = .025); nothing else approaches correction. Hypothesis-
 generating only.
 
-### 4.10 Robustness
+### 4.10 Does a fairness instruction remove it? (phase 4, confirmatory)
+
+**No — a generic EEO system prompt leaves the caregiver penalty in place,
+with vendor-signed effects: one vendor improves, one backfires; a targeted
+no-gap-penalty instruction reduces the interruption penalty but not the
+family-signal penalty.** Three system-prompt arms (none / generic EEO /
+EEO + "do not penalize caregiving gaps"; user prompts identical; pre-specified
+H-B1–H-B3), 48,000 calls. P(cued chosen), women (none → fair → gap):
+
+| model | parent | parent + leave gap |
+| --- | --- | --- |
+| DeepSeek | .361 → .325 → .369 | .317 → .301 → **.386** |
+| Haiku | .266 → .332 → .342 | **.074 → .195 → .217** |
+| Luna | .307 → .357 → .376 | .195 → .188 → **.286** |
+| Qwen | .381 → **.333 → .351** | .234 → **.181 → .279** |
+
+**(H-B1) Generic fairness prompt.** Effects on the penalty: DeepSeek ≈ 0;
+Luna +5.0pp (parent) / −0.7pp (gap); **Haiku +6.6/+12.2pp** (reduced, t = 2.9/
+5.6); **Qwen −4.7/−5.3pp** (deepened, t = −2.3/−3.4). Layer 1 survives the
+standard mitigation everywhere — and the direction is vendor-specific,
+including a fairness *backfire*. **(H-B2) Layer 2 responds.** Luna's
+mother-vs-father preference replicates (.640 vs phase-3's .646) and falls to
+.557 under the fairness prompt; Haiku's moves from .498 to .457. **(H-B3)
+Targeted instruction.** Adding "do not penalize employment gaps taken for
+caregiving" cuts the interruption penalty by 4–14pp in all four models —
+while the family-*signal* penalty is essentially untouched (DeepSeek +0.8pp
+n.s., Qwen −3.0pp n.s.), and no arm approaches parity. Instructions can
+reach the availability-inference component; the normative bundle resists.
+
+**Neutral gap labels (H-C1).** "Job search after company closure" and
+"Full-time certification program" (same dates) cost the same as or *less*
+than "Career break — extended travel" (DeepSeek/Luna equivalent at ±5pp;
+Qwen penalizes travel ~5pp *more* than the neutral labels; Haiku's point
+estimates tiny, CIs wide). Travel was not a stigmatized reference; the
+label conclusion of §4.3 stands and strengthens.
+
+### 4.11 From caregiver penalty back to a gender gap (scenario)
+
+Layer 1 is gender-blind, but caregiving gaps and family signals are not
+gender-neutrally distributed among real applicants. Applying each model's
+measured penalties (E3 résumé-FE ratios) to simulated pools with
+gender-specific signal prevalence: at the 20%-women / 5%-men scenario no
+model crosses the four-fifths line (implied women/men selection ratios
+.88–.96), but the **crossing thresholds** are the result: Haiku's gender-
+blind penalty produces a four-fifths violation once women's signal
+prevalence exceeds **31%** (men at 5%); DeepSeek 73%, Qwen 84%, Luna 93%
+(Figure 14). Prevalence inputs are scenario parameters (public
+gender-specific gap-prevalence estimates were not sourceable within the
+study); the thresholds are prevalence-free. A formally gender-neutral rule
+reproduces a gendered outcome at plausible prevalence asymmetries — exactly
+the disparate-impact structure §5.1 describes.
+
+### 4.12 Robustness
 
 **Drift** (pre-specified flag |Δ| > .03 on E2 choice): the phase-3 anchor
 (parent cue, L0, O20 minus the re-run lawyer occupation) moves +.008 to +.024
@@ -459,7 +517,12 @@ and name controls reproduce the cluster-mean tests (e.g., leave-gap
 coefficient −.047/−.125/−.106/−.161, t −3.7 to −9.4; gender interactions ≈ 0).
 **Table sources**: §§4.2, 4.4, 4.6–4.9 and the E2/E3 tables of §4.2 use the
 main run (phase-1/2 prompts); the decomposition, invariance, and direct-gender
-analyses (§§4.3, 4.5) use phase 3.
+analyses (§§4.3, 4.5) use phase 3; §4.10 uses phase 4. **Repair-saved
+responses** are excluded from all choice-based analyses: the repair template
+carries the prior response, not the original candidates, so repaired `chosen`
+fields are not experimental responses (impact quantified: historical Qwen E2
+cells shift ≤ 0.8pp, within the previously reported strict-validity bounds;
+phase-4 exclusion ≈ 1% of rows).
 
 ## 5. Discussion
 
@@ -611,4 +674,5 @@ against the source document before journal submission.)*
   figures`. Decisions and deviations: QUESTIONS.md.
 - **F. Figures**: `docs/report/figures/fig1–fig8` (main run); fig9–fig13
   (phase 3): task dependence, decomposition waterfall, cue-level invariance,
-  direct-gender divergence, abstention.
+  direct-gender divergence, abstention; fig14 (phase 4): disparate-impact
+  thresholds. Phase-4 results: `docs/phase4/PHASE4_RESULTS.md`.
