@@ -13,7 +13,6 @@ import asyncio
 import json
 import os
 import random
-from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -105,7 +104,7 @@ def build_sample() -> pd.DataFrame:
 async def code_all(df: pd.DataFrame, coder_key: str, exclude_self: bool) -> pd.DataFrame:
     models = load_models()
     base = next(m for m in models.models if m.key == coder_key)
-    coder = replace(base, temperature=0.0)  # deterministic coding
+    coder = base.model_copy(update={"temperature": 0.0})  # deterministic coding
     budget = BudgetGuard()
     pin, pout = price_for(base, True)
     run_id = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S") + f"-rationale_coding-{coder_key}"
@@ -173,15 +172,21 @@ async def code_all(df: pd.DataFrame, coder_key: str, exclude_self: bool) -> pd.D
 
 
 def kappa(df: pd.DataFrame, primary: dict, second: dict) -> dict:
-    from sklearn.metrics import cohen_kappa_score
+    """Cohen's kappa for two raters, per code (binary)."""
+
+    def _ck(a, b):
+        n = len(a)
+        po = sum(x == y for x, y in zip(a, b)) / n
+        pe = (sum(a) / n) * (sum(b) / n) + (1 - sum(a) / n) * (1 - sum(b) / n)
+        return (po - pe) / (1 - pe) if pe < 1 else 1.0
 
     out = {}
     sub = df[df.call_id.isin(primary) & df.call_id.isin(second)]
     for c in CODES:
         a = [int(c in primary[r.call_id]["codes"]) for _, r in sub.iterrows()]
         b = [int(c in second[r.call_id]["codes"]) for _, r in sub.iterrows()]
-        if len(set(a) + set(b)) > 1:
-            out[c] = round(float(cohen_kappa_score(a, b)), 2)
+        if len(set(a) | set(b)) > 1:
+            out[c] = round(float(_ck(a, b)), 2)
     return out
 
 
@@ -216,10 +221,8 @@ def main() -> None:
     print(share[["gap", "availability", "family", "gap_reason_quality", "qualifications"]].to_string())
 
     # human validation export: 200 stratified items
-    hv = an.sample(n=min(200, len(an)), random_state=7)
-    hv_export = df[df.call_id.isin(hv.call_id)][
-        ["call_id", "model_key", "contrast", "gender"]].copy()
-    hv_export["rationale"] = df[df.call_id.isin(hv.call_id)].rationale.values
+    hv = df[df.call_id.isin(primary)].sample(n=min(200, len(df)), random_state=7)
+    hv_export = hv[["call_id", "model_key", "contrast", "gender", "rationale"]].copy()
     hv_export["codes"] = hv_export.call_id.map(lambda c: primary.get(c, {}).get("codes"))
     hv_export.to_csv(ROOT / "docs" / "phase4" / "human_coding.csv", index=False)
     json.dump({"kappa": k, "n": len(df), "n_coded": len(primary)},

@@ -1,0 +1,14 @@
+{
+ "kappa": {
+  "gap": 0.9,
+  "availability": 0.86,
+  "family": 0.72,
+  "disclosure_irrelevant": 0.75,
+  "gap_reason_quality": 0.84,
+  "protected_mention": 0.84,
+  "qualifications": 0.01,
+  "gender": 0.2
+ },
+ "n": 8000,
+ "n_coded": 8000
+}
