@@ -196,6 +196,7 @@ def main() -> None:
     res["f1g_gender"] = g
 
     (out_dir / "coding_stats.json").write_text(json.dumps(res, indent=1))
+    make_figure(res)
 
     # markdown tables
     L = ["# F1: rationale coding (reportable)", "",
@@ -228,6 +229,43 @@ def main() -> None:
     print("self-coding flag:", res["f1a_self_coding"]["flag"] or "none")
     for mkey, row in align.items():
         print(mkey, {k: (v.get("diff"), v.get("holm")) for k, v in row.items()})
+
+
+def make_figure(res: dict) -> None:
+    import os
+
+    os.environ.setdefault("SOURCE_DATE_EPOCH", "1761840000")
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    P3 = {"deepseek": "#4e7fc2", "haiku": "#c25b4e", "luna": "#6aa84f", "qwen": "#b08a35"}
+    retained = res["retained_codes"]
+    show = [c for c in ["gap", "availability", "family", "disclosure_irrelevant"] if c in retained]
+    cons = ["personal", "gap_travel", "gap_parental_only", "parent", "parent_committed", "parent_gap"]
+    fig, axes = plt.subplots(1, len(show), figsize=(3.2 * len(show), 3.6), sharey=True)
+    for ax, code in zip(axes, show):
+        for mk, consd in res["shares_losing"].items():
+            xs, ys, los, his = [], [], [], []
+            for con in cons:
+                s = consd.get(con, {}).get(code)
+                if s and s.get("share") is not None:
+                    xs.append(cons.index(con)); ys.append(s["share"])
+                    los.append(s["share"] - s["ci95"][0]); his.append(s["ci95"][1] - s["share"])
+            ax.errorbar(xs, ys, yerr=[los, his], marker="o", ms=4, lw=1.2, capsize=2.5,
+                        color=P3.get(mk, "0.4"), label=mk)
+        ax.set_xticks(range(len(cons)))
+        ax.set_xticklabels([c.replace("_", "\n") for c in cons], fontsize=6.5)
+        ax.set_title(code, fontsize=9)
+        ax.set_ylim(-0.05, 1.0)
+    axes[0].set_ylabel("share of losing-cued rationales invoking the code")
+    axes[0].legend(frameon=False, fontsize=7)
+    fig.text(0.01, 0.003, "Share = fraction of rationales that rejected the cued candidate which invoke the code; 95% CIs clustered by résumé pair.",
+             fontsize=6.5, color="0.3")
+    fig.suptitle("Figure 15. What the models say when they reject: code shares by cue and model", fontsize=10)
+    fig.tight_layout(rect=(0, 0.04, 1, 0.96))
+    fig.savefig(ROOT / "docs/report/figures/fig15_coding.pdf")
+    plt.close(fig)
 
 
 if __name__ == "__main__":
