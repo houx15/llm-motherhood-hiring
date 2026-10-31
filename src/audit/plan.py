@@ -35,6 +35,28 @@ assert PROMPT_VERSION == "456c3e289a4c", (
 FAMILY_BOTH = ["none", "married", "parent", "parent_gap", "parent_committed"]
 
 
+def historical_prompt_version(plan_stem: str) -> str | None:
+    """The prompt_version this plan's runs were actually logged with (or None
+    if never run). `audit plan` pins regeneration to this value so rebuilt
+    plans mint the ORIGINAL call_ids; different phases legitimately differ
+    (phases 1-3: 456c3e289a4c, core templates; phase 4: fa9927cf4177, when
+    manip_check.j2 had joined the directory)."""
+    import json as _json
+
+    from .config import RUNS_DIR as _RD
+
+    for f in sorted(_RD.glob(f"*-{plan_stem}-*/logs.jsonl")):
+        try:
+            with open(f) as fh:
+                r = _json.loads(fh.readline())
+            v = r.get("prompt_version")
+            if v:
+                return str(v)
+        except (json.JSONDecodeError, OSError):
+            continue
+    return None
+
+
 def _hash_int(*parts) -> int:
     h = hashlib.sha256("|".join(str(p) for p in parts).encode()).digest()
     return int.from_bytes(h[:8], "big")

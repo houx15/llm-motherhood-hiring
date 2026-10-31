@@ -158,26 +158,26 @@
    "name": {
     "parent_top3": 0.34,
     "childless_top3": 0.532,
-    "ratio": 0.64,
-    "n_pools": 1447
+    "ratio": 0.639,
+    "n_pools": 1442
    },
    "name_field": {
-    "parent_top3": 0.348,
-    "childless_top3": 0.53,
-    "ratio": 0.656,
-    "n_pools": 1440
+    "parent_top3": 0.347,
+    "childless_top3": 0.531,
+    "ratio": 0.655,
+    "n_pools": 1442
    },
    "initial_field": {
     "parent_top3": 0.352,
     "childless_top3": 0.53,
-    "ratio": 0.665,
-    "n_pools": 1440
+    "ratio": 0.664,
+    "n_pools": 1442
    },
    "blind": {
     "parent_top3": 0.347,
     "childless_top3": 0.531,
-    "ratio": 0.654,
-    "n_pools": 720
+    "ratio": 0.653,
+    "n_pools": 721
    }
   },
   "haiku": {
@@ -357,13 +357,85 @@
  },
  "manip": [
   {
+   "model": "DeepSeek",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.494,
+   "pct_male": 0.473,
+   "pct_unknown": 0.033,
+   "pct_correct": 0.967
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L1 name+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L2 initial+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "DeepSeek",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.0,
+   "pct_male": 0.018,
+   "pct_unknown": 0.982,
+   "pct_correct": null
+  },
+  {
+   "model": "Haiku",
+   "level": "L0 name",
+   "n": 336,
+   "pct_female": 0.11,
+   "pct_male": 0.312,
+   "pct_unknown": 0.577,
+   "pct_correct": 0.423
+  },
+  {
+   "model": "Haiku",
+   "level": "L1 name+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Haiku",
+   "level": "L2 initial+field",
+   "n": 336,
+   "pct_female": 0.5,
+   "pct_male": 0.5,
+   "pct_unknown": 0.0,
+   "pct_correct": 1.0
+  },
+  {
+   "model": "Haiku",
+   "level": "L3 blind",
+   "n": 168,
+   "pct_female": 0.0,
+   "pct_male": 0.0,
+   "pct_unknown": 1.0,
+   "pct_correct": null
+  },
+  {
    "model": "Luna",
    "level": "L0 name",
    "n": 336,
    "pct_female": 0.259,
    "pct_male": 0.402,
    "pct_unknown": 0.339,
-   "pct_correct": 0.0
+   "pct_correct": 0.661
   },
   {
    "model": "Luna",
@@ -372,7 +444,7 @@
    "pct_female": 0.5,
    "pct_male": 0.5,
    "pct_unknown": 0.0,
-   "pct_correct": 0.0
+   "pct_correct": 1.0
   },
   {
    "model": "Luna",
@@ -381,7 +453,7 @@
    "pct_female": 0.5,
    "pct_male": 0.5,
    "pct_unknown": 0.0,
-   "pct_correct": 0.0
+   "pct_correct": 1.0
   },
   {
    "model": "Luna",
@@ -399,7 +471,7 @@
    "pct_female": 0.494,
    "pct_male": 0.488,
    "pct_unknown": 0.018,
-   "pct_correct": 0.0
+   "pct_correct": 0.982
   },
   {
    "model": "Qwen",
@@ -408,7 +480,7 @@
    "pct_female": 0.503,
    "pct_male": 0.497,
    "pct_unknown": 0.0,
-   "pct_correct": 0.0
+   "pct_correct": 1.0
   },
   {
    "model": "Qwen",
@@ -417,7 +489,7 @@
    "pct_female": 0.499,
    "pct_male": 0.501,
    "pct_unknown": 0.0,
-   "pct_correct": 0.0
+   "pct_correct": 1.0
   },
   {
    "model": "Qwen",

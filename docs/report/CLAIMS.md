@@ -3,7 +3,7 @@
 | id | section | rendered | source | expected | in report | matches | status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | abs_calls | abstract | `616,419` | `docs/final/study_totals.json::grand_total.calls_excl_coding` | 616,419 | ✓ | | OK |
-| abs_amplification | abstract | `3.5–38×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✓ | | MISMATCH |
+| abs_amplification | abstract | `3.5–38×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.5–38× | ✓ | | OK |
 | abs_share_max | abstract | `up to 77% of shortlist probability` | `docs/report/stats.json::models.*.e3_fe.*.adjusted_ratio` | 77% | ✓ | | OK |
 | abs_haiku_fit | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e1_gaps_women.overall_fit.parent_minus_none` | None | ✓ | | OK |
 | abs_haiku_choice | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e2_clustered.cells.parent|female.p` | 23% | ✓ | | OK |
@@ -37,7 +37,4 @@
 | di_haiku_cross | §4.7 | `exceeds **31%**` | `docs/final/disparate_impact_stats.json::Haiku.crossing_womens_prevalence` | 31% | ✓ | | OK |
 | di_scenario_low | §4.7 | `.88–.96` | `docs/final/disparate_impact_stats.json::*.scenario_20_5` | .88–.96 | ✓ | | OK |
 
-**33/34 claims verified.**
-
-## Mismatches (for Part 2; report.md NOT edited)
-- `abs_amplification`: rendered `3.5–38×` (present; source says 3.6–34×)
+**34/34 claims verified.**

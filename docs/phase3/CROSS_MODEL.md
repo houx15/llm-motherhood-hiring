@@ -14,16 +14,24 @@ comparators as in the main report. Main-run numbers: docs/report/stats.json.
 
 ## Manipulation check (§2.2)
 
-| model   | level            |   n |   pct_female |   pct_male |   pct_unknown |   pct_correct |
-|:--------|:-----------------|----:|-------------:|-----------:|--------------:|--------------:|
-| Luna    | L0 name          | 336 |        0.259 |      0.402 |         0.339 |             0 |
-| Luna    | L1 name+field    | 336 |        0.5   |      0.5   |         0     |             0 |
-| Luna    | L2 initial+field | 336 |        0.5   |      0.5   |         0     |             0 |
-| Luna    | L3 blind         | 168 |        0     |      0.006 |         0.994 |           nan |
-| Qwen    | L0 name          | 336 |        0.494 |      0.488 |         0.018 |             0 |
-| Qwen    | L1 name+field    | 334 |        0.503 |      0.497 |         0     |             0 |
-| Qwen    | L2 initial+field | 335 |        0.499 |      0.501 |         0     |             0 |
-| Qwen    | L3 blind         | 168 |        0.024 |      0     |         0.976 |           nan |
+| model    | level            |   n |   pct_female |   pct_male |   pct_unknown |   pct_correct |
+|:---------|:-----------------|----:|-------------:|-----------:|--------------:|--------------:|
+| DeepSeek | L0 name          | 336 |        0.494 |      0.473 |         0.033 |         0.967 |
+| DeepSeek | L1 name+field    | 336 |        0.5   |      0.5   |         0     |         1     |
+| DeepSeek | L2 initial+field | 336 |        0.5   |      0.5   |         0     |         1     |
+| DeepSeek | L3 blind         | 168 |        0     |      0.018 |         0.982 |       nan     |
+| Haiku    | L0 name          | 336 |        0.11  |      0.312 |         0.577 |         0.423 |
+| Haiku    | L1 name+field    | 336 |        0.5   |      0.5   |         0     |         1     |
+| Haiku    | L2 initial+field | 336 |        0.5   |      0.5   |         0     |         1     |
+| Haiku    | L3 blind         | 168 |        0     |      0     |         1     |       nan     |
+| Luna     | L0 name          | 336 |        0.259 |      0.402 |         0.339 |         0.661 |
+| Luna     | L1 name+field    | 336 |        0.5   |      0.5   |         0     |         1     |
+| Luna     | L2 initial+field | 336 |        0.5   |      0.5   |         0     |         1     |
+| Luna     | L3 blind         | 168 |        0     |      0.006 |         0.994 |       nan     |
+| Qwen     | L0 name          | 336 |        0.494 |      0.488 |         0.018 |         0.982 |
+| Qwen     | L1 name+field    | 334 |        0.503 |      0.497 |         0     |         1     |
+| Qwen     | L2 initial+field | 335 |        0.499 |      0.501 |         0     |         1     |
+| Qwen     | L3 blind         | 168 |        0.024 |      0     |         0.976 |       nan     |
 
 ## §8.2 Parent penalty by cue level — P(treatment chosen) vs the paired childless candidate
 

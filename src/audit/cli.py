@@ -316,17 +316,28 @@ def plan(
     cfg = load_experiment(experiment)
     if not cfg.enabled:
         raise typer.Exit(f"experiment config {experiment!r} is disabled (enabled: false)")
-    phase3_keys = {"e1v3", "e2v3", "e3v3", "manip", "lawyer_fix"}
-    if "phase4" in cfg.experiments:
-        from .plan_phase4 import expand_phase4
+    from . import plan as plan_mod
+    from .plan import historical_prompt_version
 
-        df = expand_phase4(cfg)
-    elif phase3_keys & set(cfg.experiments):
-        from .plan_phase3 import expand_phase3
+    hist = historical_prompt_version(experiment)
+    _saved = plan_mod.PROMPT_VERSION
+    if hist and hist != plan_mod.PROMPT_VERSION:
+        print(f"[plan] pinning prompt_version to historical {hist} (computed {plan_mod.PROMPT_VERSION})")
+        plan_mod.PROMPT_VERSION = hist
+    try:
+        phase3_keys = {"e1v3", "e2v3", "e3v3", "manip", "lawyer_fix"}
+        if "phase4" in cfg.experiments:
+            from .plan_phase4 import expand_phase4
 
-        df = expand_phase3(cfg)
-    else:
-        df = expand_plan(cfg)
+            df = expand_phase4(cfg)
+        elif phase3_keys & set(cfg.experiments):
+            from .plan_phase3 import expand_phase3
+
+            df = expand_phase3(cfg)
+        else:
+            df = expand_plan(cfg)
+    finally:
+        plan_mod.PROMPT_VERSION = _saved
     path = write_plan(df, experiment)
     models = load_models()
     counts = df.groupby(["experiment", "model_key"]).size()
