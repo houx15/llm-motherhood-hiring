@@ -95,9 +95,21 @@ def main() -> None:
         lines.append(f"| {ph} | {v['calls']:,} | {v['valid_original']:,} | {v['refusal']:,} "
                      f"| {pct:.2f}% | {log_rows.get(ph, 0):,} | ${cost.get(ph, 0):.2f} |")
     g = out["grand_total"]
+    # R11-4: rationale-coding runs as their own row. Their calls RE-USE the
+    # experiment call_ids (they re-request the same rationales), so they add
+    # log rows and cost but not unique calls; report both views.
+    coding_cost = cost.get("phase 4 rationale coding", 0.0)
+    coding_rows = log_rows.get("phase 4 rationale coding", 0)
+    out["grand_total"]["calls_excl_coding"] = g["calls"]  # coding adds no unique ids
+    out["grand_total"]["cost_excl_coding"] = round(g["cost_usd"] - coding_cost, 2)
+    out["grand_total"]["coding_log_rows"] = coding_rows
+    out["grand_total"]["coding_cost"] = coding_cost
     lines += ["", f"**Grand total: {g['calls']:,} unique calls, {g['log_rows']:,} log rows, "
               f"${g['cost_usd']:.2f}, {g['valid_original']:,} valid-original responses "
-              f"({100 * g['valid_original'] / g['calls']:.2f}%).**", ""]
+              f"({100 * g['valid_original'] / g['calls']:.2f}%).**", "",
+              f"Rationale-coding runs (re-use experiment call_ids): {coding_rows:,} log rows, "
+              f"${coding_cost:.2f}. Experiment spend excluding coding: "
+              f"${g['cost_usd'] - coding_cost:.2f}.", ""]
     d = ROOT / "docs" / "final"
     d.mkdir(exist_ok=True)
     (d / "study_totals.json").write_text(json.dumps(out, indent=1))

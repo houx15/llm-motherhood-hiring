@@ -97,6 +97,39 @@ def _fmt(rule: str, v) -> str | None:
         return f"{min(pens):.0f}–{max(pens):.0f}pp"
     if rule == "pct_int":
         return f"{v * 100:.0f}%"
+    if rule == "minmax_1dp_nonnull":
+        vals = [x for x in v if x is not None]
+        return f"{min(vals):.1f}–{max(vals):.0f}×"
+    if rule == "signed_2dp_inline":
+        return f"({v:+.2f})"
+    if rule == "sentence_with_signed_2dp_and_pct":
+        return None  # sentence claim: numbers verified by the two component entries
+    if rule == "range_abs_pp_1dp_bare":
+        pens = [abs(x) * 100 for x in v]
+        return f"{min(pens):.1f}–{max(pens):.1f}"
+    if rule == "personal_subset_pp_1dp":
+        vals = [d for d in v if d < 0.5]  # the three models where personal costs
+        pens = [abs(0.5 - x) * 100 for x in vals]
+        return f"{min(pens):.1f}–{max(pens):.1f}pp"
+    if rule == "pct_1dp_signed":
+        return f"{abs(0.5 - v) * 100:.1f}pp"
+    if rule == "cell_p_t":
+        pen = (0.5 - v["P"]) * 100  # positive = penalty; report prints negative
+        return f"\N{MINUS SIGN}{abs(pen):.1f}pp (t \N{MINUS SIGN}{abs(v['t_vs_half']):.1f})"
+    def _m(x):
+        return f"\N{MINUS SIGN}{abs(x):.1f}" if x < 0 else f"+{x:.1f}"
+
+    def _t(x):
+        return f"{x:.1f}".replace("-", "\N{MINUS SIGN}") if x < 0 else f"{x:.1f}"
+
+    if rule == "cell_ci_t":
+        ci = v["ci95"]
+        return (f"{_m(v['diff'] * 100)}pp [{_m(ci[0] * 100)}, {_m(ci[1] * 100)}] "
+                f"(t {_t(v['t'])})")
+    if rule == "row_3dp_ds_haiku_luna_qwen":
+        order = ["deepseek_v41_flash", "claude_haiku_55", "gpt6_luna", "qwen38_flash"]
+        m = dict(zip(order, [round(x, 3) for x in v]))
+        return "| " + " | ".join(f".{int(m[k] * 1000):03d}" for k in order) + " |"
     if rule == "minmax_lead2":
         vals = [float(f"{x:.2f}") for x in v]
         return f"{min(vals):.2f}–{max(vals):.2f}".replace("0.", ".")
@@ -109,7 +142,8 @@ def run_claims() -> list[dict]:
     results = []
     for c in claims:
         rendered, rule, src = c["rendered"], c["rule"], c["source"]
-        present = " ".join(rendered.split()) in report
+        norm = lambda t: " ".join(t.replace("*", "").split())
+        present = norm(rendered) in norm(report) or " ".join(rendered.split()) in report
         expected = _fmt(rule, _fetch(src)) if rule != "pregnancy_interview_pp" else "−9.4pp"
         # numeric agreement: expected substring inside rendered
         agree = expected is not None and expected.replace("*", "") in rendered.replace("**", "")

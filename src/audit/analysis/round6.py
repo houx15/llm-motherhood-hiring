@@ -47,7 +47,7 @@ def amplification() -> dict:
             ctx = r.get("render_ctx")
             import json as _j
 
-            ctx = _j.loads(ctx) if isinstance(ctx, str) else (ctx or {})
+            ctx = _j.loads(ctx) if isinstance(ctx, str) else (ctx if isinstance(ctx, dict) else {})
             pr, ch = ctx.get("parent_resume"), ctx.get("childless_resume")
             if not pr or not ch:
                 continue
@@ -73,11 +73,16 @@ def amplification() -> dict:
                 e1[(e1.family_code == con) & (e1.gender == "female")]["overall_fit"].mean()
                 - e1[(e1.family_code == "none") & (e1.gender == "female")]["overall_fit"].mean()
             )
+            # R11-2: a ratio of choice-loss to a score GAIN is undefined —
+            # report null when score and choice effects point in opposite ways
+            opposite = (cue_choice_gap > 0) != (e1_fit_effect < 0)
             entry[con] = {
                 "choice_gap_pp": round(100 * cue_choice_gap, 1),
                 "implied_quality_equivalent_fit_pts": round(implied_fit_points, 2) if implied_fit_points else None,
                 "actual_e1_fit_effect": round(e1_fit_effect, 2),
-                "amplification_ratio": round(abs(implied_fit_points / e1_fit_effect), 1) if implied_fit_points and e1_fit_effect else None,
+                "amplification_ratio": (round(abs(implied_fit_points / e1_fit_effect), 1)
+                                        if (implied_fit_points and e1_fit_effect and not opposite) else None),
+                "ratio_undefined_opposite_signs": bool(opposite),
             }
         res[k] = entry
     return res

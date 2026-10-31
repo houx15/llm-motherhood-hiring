@@ -33,10 +33,21 @@ INTERRUPTION = ["gap_travel", "gap_parental_only", "parent_gap"]
 FAMILY = ["parent", "parent_committed", "parent_gap"]
 
 
-def load_coded() -> pd.DataFrame:
-    """Join the coding-sample frame with both coders' outputs (from logs)."""
+def load_coded(topup: bool = False) -> pd.DataFrame:
+    """Join the coding-sample frame with both coders' outputs (from logs).
+
+    R11-1: with topup=True the frame is the HARMONIZED sample — original cells
+    for placebo contrasts plus the parent-family top-up at L1/L2 on O20 (the
+    same rendering regime as the placebos). The original mixed-regime sample's
+    results are kept for comparison via topup=False."""
     sample = pd.read_parquet(ROOT / "docs/phase4/coding/sample.parquet")
     sample = sample.rename(columns={"model_key": "model_coded"})
+    if topup:
+        tu = pd.read_parquet(ROOT / "docs/phase4/coding/sample_topup.parquet")
+        tu = tu.rename(columns={"model_key": "model_coded"})
+        # replace the original parent-family cells with the harmonized top-up
+        sample = sample[~sample.contrast.isin(["parent", "parent_committed", "parent_gap"])]
+        sample = pd.concat([sample, tu], ignore_index=True)
     coded: dict[str, dict[str, dict]] = {"primary": {}, "second": {}}
     for f in sorted(ROOT.glob("runs/*rationale_coding-*/logs.jsonl")):
         for l in open(f):
@@ -127,10 +138,7 @@ def _diff_ci(df_a: pd.DataFrame, df_b: pd.DataFrame, code: str) -> dict:
             "n_pairs": int(len(common))}
 
 
-def main() -> None:
-    out_dir = ROOT / "docs" / "final"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    df = load_coded()
+def _analyze(df: pd.DataFrame) -> dict:
     res: dict = {}
     res["f1a_self_coding"] = self_coding_check(df)
     retained = [c for c in ["gap", "availability", "family", "disclosure_irrelevant",
@@ -206,11 +214,26 @@ def main() -> None:
         g[mkey][c]["holm"] = round(v, 6)
     res["f1g_gender"] = g
 
+    return res
+
+
+def main() -> None:
+    out_dir = ROOT / "docs" / "final"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    res = _analyze(load_coded(topup=True))          # harmonized (primary)
+    res_old = _analyze(load_coded(topup=False))     # original mixed-regime (appendix)
+    res["appendix_original_sample"] = {
+        "shares_losing": res_old.get("shares_losing", {}),
+        "f1e_alignment": res_old.get("f1e_alignment", {}),
+    }
     (out_dir / "coding_stats.json").write_text(json.dumps(res, indent=1))
     make_figure(res)
 
     # markdown tables
-    L = ["# F1: rationale coding (reportable)", "",
+    retained = res["retained_codes"]
+    tables = res["shares_losing"]
+    align = res["f1e_alignment"]
+    L = ["# F1: rationale coding (reportable — harmonized sample: placebo cells + parent-family top-up at L1/L2 on O20)", "",
          f"Retained codes (κ ≥ .70 overall): {', '.join(retained)}. "
          f"Self-coding flag (> .10 κ gap): {res['f1a_self_coding']['flag'] or 'none'}.", "",
          "## Losing-cued code shares by model × contrast (95% CI, pair-clustered)", ""]

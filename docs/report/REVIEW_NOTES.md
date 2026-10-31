@@ -628,3 +628,9 @@ Figures 1–8 uncited.
 See docs/SPEC_FINALIZE.md "Round 9". MUST: main-run stats.json regression (E3 identical
 across models; Haiku/Qwen E2 contaminated by repair runs of phase-3 calls);
 disparate impact inherits it; Holm `p or 1` bug inverts F1e significance.
+
+## Round 11 (2026-10-31)
+Part 2 report edits (Draft 6). Found pre-existing errors: Haiku interruption −25.6pp
+(source −18.4pp); disclosure "3–4pp" ignored Haiku +3.7pp. Coding sample mixes
+system-prompt arms and rendering regimes (R11-1); amplification ratio defined for
+opposite-sign Haiku (R11-2); claims check upgraded to cell level (R11-3).

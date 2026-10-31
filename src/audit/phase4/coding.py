@@ -65,6 +65,40 @@ N_PER_CELL = 90  # 4 models x 6 contrasts x 2 outcomes x 2 genders x 90 ≈ 8,60
 TOTAL_TARGET = 8000
 
 
+O8_IDS = {"childcare_worker", "electrician", "emt_paramedic", "health_services_manager",
+          "housekeeper", "police_officer", "security_guard", "veterinarian"}
+
+
+def build_topup_sample(n_per_cell: int = 50) -> pd.DataFrame:
+    """R11-1: parent-family contrasts at L1/L2 on O20 (phase 3) — the same
+    rendering regime as the placebo cells — to harmonize the coding sample."""
+    rng = random.Random(20261031)
+    e2 = load_clean("e2")
+    e2 = e2[e2.rationale.notna() & (e2.rationale.astype(str).str.len() > 20)].copy()
+    sub = e2[
+        e2.run_id.str.contains("phase3")
+        & ~e2.occupation_id.isin(O8_IDS)
+        & e2.cue_level.isin(["name_field", "initial_field"])
+        & e2.contrast.isin(["parent", "parent_committed", "parent_gap"])
+    ].copy()
+    if "from_repair" in sub.columns:
+        sub = sub[~sub.from_repair.astype(bool)]
+    sub["cued_won"] = pd.to_numeric(sub.parent_chosen, errors="coerce") == 1
+    rows = []
+    for model in ["deepseek_v41_flash", "claude_haiku_55", "gpt6_luna", "qwen38_flash"]:
+        m = sub[sub.model_key == model]
+        for con in ["parent", "parent_committed", "parent_gap"]:
+            for gender in ("female", "male"):
+                for won in (True, False):
+                    cell = m[(m.contrast == con) & (m.gender == gender) & (m.cued_won == won)]
+                    if cell.empty:
+                        continue
+                    n = min(n_per_cell, len(cell))
+                    rows.append(cell.sample(n=n, random_state=rng.randint(0, 10**9)))
+    df = pd.concat(rows, ignore_index=True)
+    return df
+
+
 def build_sample() -> pd.DataFrame:
     rng = random.Random(20261030)
     e2 = load_clean("e2")
@@ -190,9 +224,18 @@ def kappa(df: pd.DataFrame, primary: dict, second: dict) -> dict:
     return out
 
 
-def main() -> None:
+def main(mode: str = "full") -> None:
     out_dir = ROOT / "docs" / "phase4" / "coding"
     out_dir.mkdir(parents=True, exist_ok=True)
+    if mode == "topup":  # R11-1: code the harmonizing top-up only
+        df = build_topup_sample()
+        df.to_parquet(out_dir / "sample_topup.parquet", index=False)
+        print(f"[coding] topup sample: {len(df)} rationales")
+        asyncio.run(code_all(df, "deepseek_v41_flash", exclude_self=False))
+        sub = df[df.model_key != "qwen38_flash"].sample(n=min(240, len(df)), random_state=20261031)
+        asyncio.run(code_all(sub, "qwen38_flash", exclude_self=True))
+        print("[coding] topup complete; run finalize_coding to re-analyze")
+        return
     df = build_sample()
     df.to_parquet(out_dir / "sample.parquet", index=False)
     print(f"[coding] sample: {len(df)} rationales | by model {df.model_key.value_counts().to_dict()}")
@@ -231,4 +274,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    main(mode=sys.argv[1] if len(sys.argv) > 1 else "full")

@@ -1,63 +1,71 @@
 {
  "amplification": {
   "deepseek": {
-   "quality_slope_per_fit_point": 0.153,
+   "quality_slope_per_fit_point": 0.151,
    "parent": {
-    "choice_gap_pp": 14.9,
-    "implied_quality_equivalent_fit_pts": 0.97,
+    "choice_gap_pp": 14.7,
+    "implied_quality_equivalent_fit_pts": 0.98,
     "actual_e1_fit_effect": -0.13,
-    "amplification_ratio": 7.6
+    "amplification_ratio": 7.6,
+    "ratio_undefined_opposite_signs": false
    },
    "parent_gap": {
-    "choice_gap_pp": 18.6,
-    "implied_quality_equivalent_fit_pts": 1.21,
+    "choice_gap_pp": 19.1,
+    "implied_quality_equivalent_fit_pts": 1.27,
     "actual_e1_fit_effect": -0.35,
-    "amplification_ratio": 3.5
+    "amplification_ratio": 3.6,
+    "ratio_undefined_opposite_signs": false
    }
   },
   "haiku": {
-   "quality_slope_per_fit_point": 0.185,
+   "quality_slope_per_fit_point": 0.178,
    "parent": {
-    "choice_gap_pp": 21.9,
-    "implied_quality_equivalent_fit_pts": 1.19,
+    "choice_gap_pp": 24.6,
+    "implied_quality_equivalent_fit_pts": 1.39,
     "actual_e1_fit_effect": 0.34,
-    "amplification_ratio": 3.5
+    "amplification_ratio": null,
+    "ratio_undefined_opposite_signs": true
    },
    "parent_gap": {
-    "choice_gap_pp": 36.4,
-    "implied_quality_equivalent_fit_pts": 1.97,
+    "choice_gap_pp": 37.9,
+    "implied_quality_equivalent_fit_pts": 2.14,
     "actual_e1_fit_effect": 0.15,
-    "amplification_ratio": 13.6
+    "amplification_ratio": null,
+    "ratio_undefined_opposite_signs": true
    }
   },
   "luna": {
-   "quality_slope_per_fit_point": 0.174,
+   "quality_slope_per_fit_point": 0.175,
    "parent": {
-    "choice_gap_pp": 18.0,
-    "implied_quality_equivalent_fit_pts": 1.04,
+    "choice_gap_pp": 19.9,
+    "implied_quality_equivalent_fit_pts": 1.14,
     "actual_e1_fit_effect": -0.08,
-    "amplification_ratio": 12.4
+    "amplification_ratio": 13.6,
+    "ratio_undefined_opposite_signs": false
    },
    "parent_gap": {
-    "choice_gap_pp": 29.3,
-    "implied_quality_equivalent_fit_pts": 1.68,
+    "choice_gap_pp": 30.9,
+    "implied_quality_equivalent_fit_pts": 1.76,
     "actual_e1_fit_effect": -0.25,
-    "amplification_ratio": 6.7
+    "amplification_ratio": 7.0,
+    "ratio_undefined_opposite_signs": false
    }
   },
   "qwen": {
-   "quality_slope_per_fit_point": 0.129,
+   "quality_slope_per_fit_point": 0.131,
    "parent": {
-    "choice_gap_pp": 11.9,
-    "implied_quality_equivalent_fit_pts": 0.92,
+    "choice_gap_pp": 10.8,
+    "implied_quality_equivalent_fit_pts": 0.82,
     "actual_e1_fit_effect": -0.02,
-    "amplification_ratio": 38.2
+    "amplification_ratio": 33.9,
+    "ratio_undefined_opposite_signs": false
    },
    "parent_gap": {
-    "choice_gap_pp": 26.1,
-    "implied_quality_equivalent_fit_pts": 2.02,
+    "choice_gap_pp": 25.9,
+    "implied_quality_equivalent_fit_pts": 1.97,
     "actual_e1_fit_effect": -0.14,
-    "amplification_ratio": 14.7
+    "amplification_ratio": 14.4,
+    "ratio_undefined_opposite_signs": false
    }
   }
  },

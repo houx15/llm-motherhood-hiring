@@ -116,7 +116,7 @@ def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bo
         parsed = pd.json_normalize(manip["parsed_json"])
         manip = pd.concat([manip.drop(columns=["parsed_json"]).reset_index(drop=True),
                            parsed.reset_index(drop=True)], axis=1)
-        ctx = manip["render_ctx"].apply(lambda c: json.loads(c) if isinstance(c, str) else (c or {}))
+        ctx = manip["render_ctx"].apply(lambda c: json.loads(c) if isinstance(c, str) else (c if isinstance(c, dict) else {}))
         manip["true_gender"] = ctx.apply(lambda c: c.get("gender"))
         manip["correct"] = (manip["perceived_gender"] == manip["true_gender"]).astype(int)
         if "cue_level" not in manip.columns:
@@ -133,7 +133,7 @@ def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bo
         e14["parent"] = e14["family_code"].isin(["parent", "parent_gap", "parent_committed"]).astype(int)
         if "cue_level" not in e14.columns:
             e14["cue_level"] = None
-        _c = e14["render_ctx"].apply(lambda c: (json.loads(c) if isinstance(c, str) else (c or {})).get("cue_level"))
+        _c = e14["render_ctx"].apply(lambda c: (json.loads(c) if isinstance(c, str) else (c if isinstance(c, dict) else {})).get("cue_level"))
         e14["cue_level"] = e14["cue_level"].fillna(_c)
         e14["cue_level"] = e14["cue_level"].fillna("name")
         e14["withheld"] = (e14["starting_salary_usd"].fillna(0) == 0).astype(int)
@@ -150,10 +150,25 @@ def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bo
         parsed = pd.json_normalize(e2["parsed_json"])
         e2 = pd.concat([e2.drop(columns=["parsed_json"]).reset_index(drop=True), parsed.reset_index(drop=True)], axis=1)
         # resolve which screen slot is the parent / the woman from render_ctx
-        ctx = e2["render_ctx"].apply(lambda c: json.loads(c) if isinstance(c, str) else (c or {}))
+        ctx = e2["render_ctx"].apply(lambda c: json.loads(c) if isinstance(c, str) else (c if isinstance(c, dict) else {}))
         e2["childless_position"] = ctx.apply(lambda c: c.get("childless_position"))
+        # Fallback for runs whose render_ctx is missing from logs AND whose
+        # plan parquet can no longer be reconstructed with matching call_ids
+        # (main run: rebuilt plans hash a later prompt version). The runner
+        # has always logged `position` = screen slot of the childless
+        # candidate (0->A, 1->B), which is exactly childless_position.
+        need = e2["childless_position"].isna() & e2["position"].notna()
+        if need.any():
+            e2.loc[need, "childless_position"] = e2.loc[need, "position"].map({0: "A", 1: "B"})
         e2["parent_position"] = e2["childless_position"].map({"A": "B", "B": "A"})
         e2["woman_position"] = ctx.apply(lambda c: c.get("woman_position"))
+        # Direct gender contrasts: `position` (logged since phase 3) IS the
+        # woman's screen slot — fallback when ctx is unrecoverable (the
+        # original phase-3 plan parquets were overwritten; regenerated direct
+        # cells hash a later name-pair scheme).
+        needw = e2["woman_position"].isna() & e2["contrast"].astype(str).str.startswith("gender_") & e2["position"].notna()
+        if needw.any():
+            e2.loc[needw, "woman_position"] = e2.loc[needw, "position"].map({0: "A", 1: "B"})
         e2["direct"] = e2["contrast"].isin(["gender_none", "gender_parent"])
         # same-gender contrasts: outcome = parent(treatment) chosen
         e2["parent_chosen"] = [
@@ -197,7 +212,7 @@ def build_tables(run_id: str | None, model_key: str | None = None, use_cache: bo
         recs = []
         for _, row in e3.iterrows():
             ctx = row.get("render_ctx")
-            ctx = json.loads(ctx) if isinstance(ctx, str) else (ctx or {})
+            ctx = json.loads(ctx) if isinstance(ctx, str) else (ctx if isinstance(ctx, dict) else {})
             pool = {c["label"]: c for c in ctx.get("pool", [])}
             lvl = ctx.get("cue_level") or "name"
             for rank, label in enumerate(row["parsed_json"]["ranking"], start=1):

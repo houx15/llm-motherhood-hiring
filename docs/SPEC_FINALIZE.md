@@ -163,3 +163,44 @@ Remaining small items before committing:
 3. Display Holm p < .001 as "<.001", not "0.0"; clip share CI upper bound at 1.
 4. `_main_run_call_ids()` reads data/plans/*.parquet, which is git-ignored: make
    `audit reproduce` regenerate plans first (deterministic) or fail loudly if missing.
+
+## Round 11 (2026-10-31) — after f9aabb6; Part 2 report edits started
+
+Reviewer edited report.md (Draft 6): stale numbers, header, §3, limitations,
+results reordered (old 4.1 → §2.4 perception check; fairness and disparate impact
+moved to 4.6–4.7; secondary outcomes 4.8–4.10; robustness 4.11), Appendix F.
+Two **pre-existing report errors** were found that the claims check missed
+because it checks only ranges: Haiku interruption was printed −25.6pp (source
+−18.4pp, P = .316), and "disclosure costs 3–4pp" ignored Haiku's +3.7pp. The
+rationale-coding paragraph is held until R11-1. Items for opencode:
+
+**R11-1 (MUST) Coding sample mixes conditions.** `coding.build_sample()` draws
+placebo/gap contrasts from `p4 | phase3` rows at L1/L2 — the phase-4 rows include
+the *fair* and *gap* system-prompt arms, whose instructions change what rationales
+say about gaps. Parent contrasts come from name-only rows (cue_level "name"),
+placebos from explicit-field rows, so contrast comparisons (F1e) also compare
+rendering regimes. Fix: (a) drop phase-4 rows not in the no-system-prompt arm;
+report n dropped per cell; (b) top up the parent, parent_committed and parent_gap
+cells with phase-3 L1/L2 O20 rationales (same regime as the primary estimand),
+coded by the same DeepSeek coder (temp 0) + Qwen on 10% non-Qwen items; the
+budget guard applies (expected < $1). Re-run F1 on the harmonized sample; keep the
+old sample's results in an appendix table for comparison.
+
+**R11-2 (MUST) Amplification ratio sign.** `round6` reports ratios for Haiku
+(3.5, 13.6) although Haiku's score effects are *positive* — a ratio of choice
+loss to a score gain is undefined. Set to null when the score effect and the
+choice effect have opposite signs; the claims rule should skip nulls. Report
+text now says "3.5× to 38× in DeepSeek, Luna, and Qwen".
+
+**R11-3 (MUST) Claims registry → cell level.** Update `rendered` strings to
+Draft 6 text (abs_amplification "3.5–38×", f2 ranges 10.5–26.0 / 10.6–17.4 /
+7.3–19.2, abs_calls 616,419) and section labels to the new numbering. Add one
+claim per cell of the §4.2 decomposition table (16 cells, value + t) and the
+`personal` sentence (2.9–3.5pp; Haiku +3.7pp), plus §4.1 E2 table cells. Range
+claims check min *and* max and which model holds each.
+
+**R11-4 (SHOULD) Study totals.** Add the rationale-coding runs as their own row
+(calls, cost) and report grand totals with and without them; report.md currently
+says coding calls are excluded.
+
+**R11-5** Run `audit reproduce` + `pytest`; list remaining claim mismatches.

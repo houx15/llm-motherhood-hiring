@@ -19,9 +19,18 @@ from .config import (
 )
 from .budget import TOKEN_EST
 
+# Hash ONLY the five core experiment templates. Historical runs (phases 1-4)
+# all logged 456c3e289a4c, computed from exactly this set; later auxiliary
+# templates (e.g. manip_check.j2) must NOT enter the hash, or regenerated
+# plans mint new call_ids that match no logged call (_ctx_from_plan breaks).
+# If a template's CONTENT changes, all plans change by design.
+_CORE_TEMPLATES = ["e1_scoring", "e2_paired", "e3_ranking", "e4_jd_context", "e5_advice"]
 PROMPT_VERSION = hashlib.sha256(
-    b"".join(sorted(p.read_bytes() for p in PROMPTS_DIR.glob("*.j2")))
+    b"".join((PROMPTS_DIR / f"{t}.j2").read_bytes() for t in _CORE_TEMPLATES if (PROMPTS_DIR / f"{t}.j2").exists())
 ).hexdigest()[:12]
+assert PROMPT_VERSION == "456c3e289a4c", (
+    f"core-template hash drifted from the historical value ({PROMPT_VERSION}); "
+    "regenerated plans would not match logged call_ids")
 
 FAMILY_BOTH = ["none", "married", "parent", "parent_gap", "parent_committed"]
 

@@ -2,35 +2,42 @@
 
 | id | section | rendered | source | expected | in report | matches | status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| abs_calls | abstract | `602,093 logged calls` | `docs/final/study_totals.json::grand_total.calls` | 616,419 | ✓ | | MISMATCH |
-| abs_fit_max | abstract | `at most 0.35 points` | `docs/report/stats.json::models.*.e1_gaps_women.overall_fit.parent_gap_minus_none` | 0.35 | ✓ | | OK |
-| abs_interview_max | abstract | `at most 1.5pp` | `docs/report/stats.json::models.*.e1_gaps_women.interview.parent_gap_minus_none` | 1.5 | ✓ | | OK |
-| abs_share_min | abstract | `only 11–31% of the time` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_gap|*.p` | 11 | ✓ | | OK |
+| abs_calls | abstract | `616,419` | `docs/final/study_totals.json::grand_total.calls_excl_coding` | 616,419 | ✓ | | OK |
+| abs_amplification | abstract | `3.5–38×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✓ | | MISMATCH |
 | abs_share_max | abstract | `up to 77% of shortlist probability` | `docs/report/stats.json::models.*.e3_fe.*.adjusted_ratio` | 77% | ✓ | | OK |
-| abs_amplification | abstract | `4× to 31×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 4× to 38× | ✓ | | MISMATCH |
-| abs_haiku_fit | abstract | `*scores* parents higher (+0.34) yet chooses them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e1_gaps_women.overall_fit.parent_minus_none` | +0.34 | ✓ | | OK |
-| abs_haiku_choice | abstract | `chooses them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e2_clustered.cells.parent|female.p` | 23% | ✓ | | OK |
-| f2_interruption | extended summary, finding 2 | `costs 10.6–26.0pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_gap_travel.P` | 10.5–26.0pp | ✓ | | MISMATCH |
-| f2_bundle | extended summary, finding 2 | `family bundle adds 10.5–17.6pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.bundle.diff` | 10.6–17.4pp | ✓ | | MISMATCH |
-| f2_parenthood | extended summary, finding 2 | `parenthood net of a disclosure placebo 6.8–19.2pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.parenthood.diff` | 7.3–19.2pp | ✓ | | MISMATCH |
-| f2_tost | extended summary, finding 2 | `7 of 8 model×cue` | `docs/phase3/round6_stats.json::equivalence.*` | 7 of 8 | ✓ | | OK |
-| f5_withhold_main | finding 5 | `19.8% of pregnant applicants` | `docs/report/stats.json::models.claude_haiku_55.withheld.rates.female|pregnant` | 19.8% | ✓ | | OK |
-| f5_interview_gap | finding 5 | `a −9.4pp interview penalty` | `docs/report/stats.json::models.claude_haiku_55.pregnancy_full.interview.t` | −9.4pp | ✓ | | OK |
-| p4_haiku_gap_none | §4.10 | `**.074` | `docs/phase4/phase4_stats.json::levels_women.haiku.parent_gap|sp_none` | .074 | ✓ | | OK |
-| p4_haiku_gap_fair | §4.10 | `.195` | `docs/phase4/phase4_stats.json::levels_women.haiku.parent_gap|sp_fair` | .195 | ✓ | | OK |
-| p4_qwen_gap_fair | §4.10 | `.181` | `docs/phase4/phase4_stats.json::levels_women.qwen.parent_gap|sp_fair` | .181 | ✓ | | OK |
-| p4_ds_gap_gap_arm | §4.10 | `.386` | `docs/phase4/phase4_stats.json::levels_women.deepseek.parent_gap|sp_gap` | .386 | ✓ | | OK |
-| p4_luna_direct_none | §4.10 (H-B2) | `replicates (.640` | `docs/phase4/phase4_stats.json::hb2.luna.gender_parent|sp_none.p_woman` | .640 | ✓ | | OK |
-| p4_luna_direct_fair | §4.10 (H-B2) | `falls to .557` | `docs/phase4/phase4_stats.json::hb2.luna.gender_parent|sp_fair.p_woman` | .557 | ✓ | | OK |
-| p4_sp_gap_range | §4.10 (H-B3) | `cuts the interruption penalty by 4–14pp` | `docs/phase4/phase4_stats.json::hb1_hb3.*.parent_gap|*|sp_gap.mean` | 4–14pp | ✓ | | OK |
-| di_haiku_cross | §4.11 | `exceeds **31%**` | `docs/final/disparate_impact_stats.json::Haiku.crossing_womens_prevalence` | 31% | ✓ | | OK |
-| di_scenario_low | §4.11 | `.88–.96` | `docs/final/disparate_impact_stats.json::*.scenario_20_5` | .88–.96 | ✓ | | OK |
+| abs_haiku_fit | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e1_gaps_women.overall_fit.parent_minus_none` | None | ✓ | | OK |
+| abs_haiku_choice | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e2_clustered.cells.parent|female.p` | 23% | ✓ | | OK |
+| f2_interruption | §4.2 | `costs 10.5–26.0pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_gap_travel.P` | 10.5–26.0pp | ✓ | | OK |
+| f2_bundle | §4.2 | `adds a further 10.6–17.4pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.bundle.diff` | 10.6–17.4pp | ✓ | | OK |
+| f2_parenthood | §4.2 | `7.3–19.2` | `docs/phase3/round5_stats.json::primary_decomposition.*.parenthood.diff` | 7.3–19.2 | ✓ | | OK |
+| f2_personal | §4.2 | `costs 2.9–3.5pp in DeepSeek, Luna, and Qwen` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_personal.P` | 2.9–3.5pp | ✓ | | OK |
+| f2_personal_haiku | §4.2 | `raises Haiku's choice share by 3.7pp` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.cell_personal.P` | 3.7pp | ✓ | | OK |
+| f2_tost | §4.2 | `7 of 8 model×cue` | `docs/phase3/round6_stats.json::equivalence.*` | 7 of 8 | ✓ | | OK |
+| dec_int_ds | §4.2 table | `−10.5pp (t −8.0)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.cell_gap_travel` | −10.5pp (t −8.0) | ✓ | | OK |
+| dec_int_haiku | §4.2 table | `−18.4pp (t −8.5)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.cell_gap_travel` | −18.4pp (t −8.5) | ✓ | | OK |
+| dec_int_luna | §4.2 table | `−26.0pp (t −7.3)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.cell_gap_travel` | −26.0pp (t −7.3) | ✓ | | OK |
+| dec_int_qwen | §4.2 table | `−22.4pp (t −8.9)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.cell_gap_travel` | −22.4pp (t −8.9) | ✓ | | OK |
+| dec_par_ds | §4.2 table | `−10.4pp [−12.8, −8.0] (t −8.5)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.parenthood` | −10.4pp [−12.8, −8.0] (t −8.5) | ✓ | | OK |
+| dec_par_haiku | §4.2 table | `−19.2pp [−23.4, −15.0] (t −8.9)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.parenthood` | −19.2pp [−23.4, −15.0] (t −8.9) | ✓ | | OK |
+| dec_par_luna | §4.2 table | `−12.1pp [−16.3, −7.9] (t −5.6)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.parenthood` | −12.1pp [−16.3, −7.9] (t −5.6) | ✓ | | OK |
+| dec_par_qwen | §4.2 table | `−7.3pp [−10.3, −4.3] (t −4.7)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.parenthood` | −7.3pp [−10.3, −4.3] (t −4.7) | ✓ | | OK |
+| dec_lab_ds | §4.2 table | `+1.7pp [+0.5, +2.9] (t 2.7)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.label` | +1.7pp [+0.5, +2.9] (t 2.7) | ✓ | | OK |
+| dec_lab_haiku | §4.2 table | `−1.1pp [−3.2, +0.9] (t −1.1)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.label` | −1.1pp [−3.2, +0.9] (t −1.1) | ✓ | | OK |
+| dec_lab_luna | §4.2 table | `+6.5pp [+3.7, +9.2] (t 4.6)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.label` | +6.5pp [+3.7, +9.2] (t 4.6) | ✓ | | OK |
+| dec_lab_qwen | §4.2 table | `+6.7pp [+4.9, +8.5] (t 7.3)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.label` | +6.7pp [+4.9, +8.5] (t 7.3) | ✓ | | OK |
+| dec_bun_ds | §4.2 table | `−10.6pp [−12.7, −8.6] (t −10.0)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.bundle` | −10.6pp [−12.7, −8.6] (t −10.0) | ✓ | | OK |
+| dec_bun_haiku | §4.2 table | `−17.4pp [−20.2, −14.5] (t −11.8)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.bundle` | −17.4pp [−20.2, −14.5] (t −11.8) | ✓ | | OK |
+| dec_bun_luna | §4.2 table | `−11.5pp [−15.4, −7.5] (t −5.7)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.bundle` | −11.5pp [−15.4, −7.5] (t −5.7) | ✓ | | OK |
+| dec_bun_qwen | §4.2 table | `−12.1pp [−14.7, −9.5] (t −9.2)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.bundle` | −12.1pp [−14.7, −9.5] (t −9.2) | ✓ | | OK |
+| e2_pm_ds | §4.1 table | `| .357 | .233 | .297 | .387 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent|female.p` | | .357 | .233 | .297 | .387 | | ✓ | | OK |
+| e2_pf_ds | §4.1 table | `| .349 | .276 | .294 | .398 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent|male.p` | | .349 | .276 | .294 | .398 | | ✓ | | OK |
+| e2_cm_ds | §4.1 table | `| .419 | .266 | .228 | .407 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_committed|female.p` | | .419 | .266 | .228 | .407 | | ✓ | | OK |
+| e2_gm_ds | §4.1 table | `| .310 | **.110** | .186 | .230 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_gap|female.p` | | .310 | .110 | .186 | .230 | | ✓ | | OK |
+| e2_gf_ds | §4.1 table | `| .308 | .130 | .184 | .256 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_gap|male.p` | | .308 | .130 | .184 | .256 | | ✓ | | OK |
+| di_haiku_cross | §4.7 | `exceeds **31%**` | `docs/final/disparate_impact_stats.json::Haiku.crossing_womens_prevalence` | 31% | ✓ | | OK |
+| di_scenario_low | §4.7 | `.88–.96` | `docs/final/disparate_impact_stats.json::*.scenario_20_5` | .88–.96 | ✓ | | OK |
 
-**18/23 claims verified.**
+**33/34 claims verified.**
 
 ## Mismatches (for Part 2; report.md NOT edited)
-- `abs_calls`: rendered `602,093 logged calls` (present; source says 616,419)
-- `abs_amplification`: rendered `4× to 31×` (present; source says 4× to 38×)
-- `f2_interruption`: rendered `costs 10.6–26.0pp` (present; source says 10.5–26.0pp)
-- `f2_bundle`: rendered `family bundle adds 10.5–17.6pp` (present; source says 10.6–17.4pp)
-- `f2_parenthood`: rendered `parenthood net of a disclosure placebo 6.8–19.2pp` (present; source says 7.3–19.2pp)
+- `abs_amplification`: rendered `3.5–38×` (present; source says 3.6–34×)

@@ -28,7 +28,11 @@ env/
 
 # === Data: large / raw / regenerable ===
 data/raw/
-data/plans/*.parquet
+# Plan parquets ARE tracked: they carry the original call_ids + render_ctx that
+# historical logs depend on (_ctx_from_plan). Regenerated plans hash a later
+# prompt version and do NOT match logged call_ids — never regenerate over these.
+# Only the materials staging dir stays ignored.
+data/materials/base_resumes/.staging/
 
 # === Kaggle ===
 .kaggle/

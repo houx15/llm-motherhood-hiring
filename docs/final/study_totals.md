@@ -12,5 +12,7 @@
 | materials | 154 | 154 | 0 | 100.00% | 901 | $0.31 |
 | pretest | 560 | 560 | 0 | 100.00% | 960 | $0.10 |
 
-**Grand total: 616,419 unique calls, 855,829 log rows, $189.03, 607,059 valid-original responses (98.48%).**
+**Grand total: 616,419 unique calls, 858,469 log rows, $189.18, 607,059 valid-original responses (98.48%).**
+
+Rationale-coding runs (re-use experiment call_ids): 11,442 log rows, $0.66. Experiment spend excluding coding: $188.52.
 

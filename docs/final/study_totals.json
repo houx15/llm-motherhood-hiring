@@ -75,8 +75,12 @@
  },
  "grand_total": {
   "calls": 616419,
-  "log_rows": 855829,
-  "cost_usd": 189.03,
-  "valid_original": 607059
+  "log_rows": 858469,
+  "cost_usd": 189.18,
+  "valid_original": 607059,
+  "calls_excl_coding": 616419,
+  "cost_excl_coding": 188.52,
+  "coding_log_rows": 11442,
+  "coding_cost": 0.66
  }
 }
