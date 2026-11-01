@@ -11,15 +11,14 @@ def fig(file, cap, label, w="1.0", pos="tbp"):
     return FIG % (pos, w, file, cap, label)
 
 FIGS = {
- "fig1": fig("fig1_framework.pdf", "Analytical framework. The motherhood signal is unbundled into three components (left), each added to or removed from the same résumé; competing accounts disagree about which components an LLM screener penalizes (center); the result is observed at four decision margins (right) and traced to remedies and group outcomes (bottom). Section numbers locate each test.", "framework", pos="t"),
- "fig2": fig("fig2_scores_vs_choices.pdf", "Where: scores do not account for choices. Hollow markers: probability that a mother is chosen over an equally qualified childless woman, predicted from the model's own scores; filled markers: observed.", "scores"),
- "fig3": fig("fig3_decomposition.pdf", "What: decomposition of the parent-with-leave penalty into interruption, caregiving label, family signals, and parenthood without a gap.", "decomp"),
- "fig4": fig("fig4_reasons.pdf", "What the models say: reasons cited in explanations when the applicant with the signal lost (exploratory).", "reasons"),
- "fig5": fig("fig5_invariance.pdf", "The gender component: removing all gender information leaves the penalty unchanged.", "invariance", w="0.85"),
- "fig6": fig("fig6_direct_gender.pdf", "The gender layer: direct woman-versus-man choices by gender information.", "direct"),
- "fig7": fig("fig7_withholding.pdf", "The gender layer at the fourth margin: salary offers withheld (a) and interview recommendations for Haiku's pregnant applicants by whether an offer was made (b).", "withhold"),
- "fig8": fig("fig8_disparate_impact.pdf", "Consequences: implied ratio of women's to men's shortlist rates as women's prevalence of caregiving signals rises (men fixed at 5\\%).", "di", w="0.9"),
- "fig9": fig("fig9_findings.pdf", "The framework revisited with the findings in place: a gender-blind caregiver penalty (Layer 1) carried by the interruption and family components, a thin vendor-specific gender layer (Layer 2), visible at the comparative margins.", "findings"),
+ "fig1": fig("fig1_framework.pdf", "Framework: protection follows the label. Components of the motherhood signal are ordered by how directly they refer to a protected category, from named gender to correlated caregiving signals. Each column states the Study 1 test and what the label account expects; bands show where outcomes are measured, how remedies are tested, and the planned Study 2. Section numbers locate each test.", "framework", pos="t"),
+ "fig2": fig("fig2_scores_vs_choices.pdf", "The caregiver penalty appears where selection happens. Hollow markers: probability that a mother is chosen over an equally qualified childless woman, predicted from the model's own scores; filled markers: observed.", "scores"),
+ "fig3": fig("fig3_decomposition.pdf", "Decomposition of the parent-with-leave penalty: the interruption and family signals carry it; the caregiving label adds nothing.", "decomp"),
+ "fig4": fig("fig5_invariance.pdf", "Removing all gender information leaves the penalty unchanged.", "invariance", w="0.85"),
+ "fig5": fig("fig6_direct_gender.pdf", "Named gender: direct woman-versus-man choices by how gender is conveyed.", "direct"),
+ "fig6": fig("fig7_withholding.pdf", "Caution as declining to decide: salary offers withheld (a) and interview recommendations for Haiku's pregnant applicants by whether an offer was made (b).", "withhold"),
+ "fig7": fig("fig9_findings.pdf", "The framework revisited with Study 1's findings in place.", "findings"),
+ "fig8": fig("fig8_disparate_impact.pdf", "Gender-neutral in form, gendered in effect: implied ratio of women's to men's shortlist rates as women's prevalence of caregiving signals rises (men fixed at 5\\%).", "di", w="0.9"),
 }
 
 T1 = r"""

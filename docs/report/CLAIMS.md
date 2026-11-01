@@ -57,8 +57,13 @@
 | ms_dg_qwen_name | manuscript 4.4 table | `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` | `docs/phase3/round3_stats.json::direct_gender.qwen.parity` | | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 | | ✗ | | MISMATCH |
 | ms_dg_ds_name | manuscript 4.4 table | `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` | `docs/phase3/round3_stats.json::direct_gender.deepseek.parity` | | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 | | ✗ | | MISMATCH |
 | ms_dg_luna_name | manuscript 4.4 table | `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` | `docs/phase3/round3_stats.json::direct_gender.luna.parity` | | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 | | ✗ | | MISMATCH |
+| r15_qwen_gap_missing | R15 | `20.77%` | `docs/final/missingness.json::missingness.table` | 20.77% | ✗ | | MISMATCH |
+| r15_haiku_ref_gap_p3 | R15 | `4.91` | `docs/final/missingness.json::missingness.table` | 4.9 | ✗ | | MISMATCH |
+| r15_bounds_span | R15 | `0` | `docs/final/missingness.json::manski.cells_whose_bounds_span_50` | 0 | ✓ | | OK |
+| r15_excl_haiku_parent | R15 | `.350` | `docs/final/missingness.json::headline_excl_haiku.excl_haiku.parent` | .350 | ✗ | | MISMATCH |
+| r15_excl_haiku_gap | R15 | `.245` | `docs/final/missingness.json::headline_excl_haiku.excl_haiku.parent_gap` | .245 | ✗ | | MISMATCH |
 
-**40/55 claims verified.**
+**41/60 claims verified.**
 
 ## Mismatches (for Part 2; report.md NOT edited)
 - `abs_amplification`: rendered `3.5–38×` (present; source says 3.6–34×)
@@ -76,3 +81,7 @@
 - `ms_dg_qwen_name`: rendered `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` (missing from report; source says | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 |)
 - `ms_dg_ds_name`: rendered `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` (missing from report; source says | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 |)
 - `ms_dg_luna_name`: rendered `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` (missing from report; source says | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 |)
+- `r15_qwen_gap_missing`: rendered `20.77%` (missing from report; source says 20.77%)
+- `r15_haiku_ref_gap_p3`: rendered `4.91` (missing from report; source says 4.9)
+- `r15_excl_haiku_parent`: rendered `.350` (missing from report; source says .350)
+- `r15_excl_haiku_gap`: rendered `.245` (missing from report; source says .245)

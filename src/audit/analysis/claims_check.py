@@ -189,6 +189,16 @@ def _fmt(rule: str, v) -> str | None:
         return (f"| Luna | childless / parent | {get('gender_none@name')} / {get('gender_parent@name')} | "
                 f"{get('gender_none@name_field')} / {get('gender_parent@name_field')} | "
                 f"{get('gender_none@initial_field')} / {get('gender_parent@initial_field')} |")
+    if rule == "r15_qwen_gap":
+        for r in v:
+            if r["model"] == "qwen38_flash" and r["phase"] == "main" and r["contrast"] == "parent_gap":
+                return f"{r['no_valid_choice_pct']:.2f}%"
+    if rule == "r15_haiku_ref_p3":
+        for r in v:
+            if r["model"] == "claude_haiku_55" and r["phase"] == "phase3" and r["contrast"] == "parent_gap":
+                return f"{r['refusal_pct']:.2f}".rstrip("0").rstrip(".")
+    if rule == "r15_count_list":
+        return f"{len(v)}"
     if rule == "minmax_lead2":
         vals = [float(f"{x:.2f}") for x in v]
         return f"{min(vals):.2f}–{max(vals):.2f}".replace("0.", ".")

@@ -11,19 +11,16 @@ body = body.replace("\n---\n", "\n")
 body = re.sub(r"^(#{2,3}) \d+(\.\d+)?\.? ", r"\1 ", body, flags=re.M)
 
 anchors = [
-    ("Figure 1 lays out the framework", ["fig1"]),
+    ("We propose that in aligned models *protection follows the label*.", ["fig1"]),
     ("Table 1 lists the signals.", ["tab1"]),
-    ("The same signals are costly when applicants compete", ["tab2"]),
-    ("Comparison does not merely magnify", ["fig2"]),
-    ("Table 3 and Figure 3 decompose", ["tab3", "fig3"]),
-    ("*What the models say (exploratory).*", ["fig4"]),
-    ("*Removing gender.*", ["fig5"]),
-    ("*Fathers.*", ["tab4"]),
-    ("What remains of gender is", ["tab5", "fig6"]),
-    ("One vendor's gender layer also appears", ["fig7"]),
-    ("Deployers often add fairness instructions", ["tab6"]),
-    ("The caregiver penalty is blind to gender, but", ["fig8"]),
-    ("Figure 9 returns to the framework", ["fig9"]),
+    ("*It appears where selection happens.*", ["tab2", "fig2"]),
+    ("*It consists of the interruption and the family signals", ["tab3", "fig3"]),
+    ("*It does not depend on gender.*", ["fig4", "tab4"]),
+    ("At the named end, the label account expects", ["tab5", "fig5"]),
+    ("Caution also takes the form of declining to decide", ["fig6"]),
+    ("The label account also predicts how remedies work.", ["tab6"]),
+    ("Figure 7 returns to the framework", ["fig7"]),
+    ("Protection that follows the label leaves", ["fig8"]),
 ]
 paras = body.split("\n\n")
 out = []
@@ -35,7 +32,7 @@ for p in paras:
                 raw = FIGS.get(k) or TABLES[k]
                 out.append("```{=latex}\n" + raw.strip() + "\n```")
 used = sum(1 for p in out if p.startswith("```{=latex}"))
-assert used == 15, used
+assert used == 14, used
 body = "\n\n".join(out)
 open("body.md", "w").write(body)
 subprocess.run(["pandoc", "body.md", "-f", "markdown+raw_attribute", "-t", "latex",

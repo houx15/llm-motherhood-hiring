@@ -1,34 +1,37 @@
-# From Motherhood Penalty to Caregiver Penalty: How Large Language Model Résumé Screeners Treat Family Signals
+# Protection Follows the Label: How Large Language Model Résumé Screeners Turn the Motherhood Penalty into a Caregiver Penalty
 
 Yuxin Hou, Princeton University
 
-*Manuscript draft 2 (2026-10-31). Numbers are taken from the claim-checked report;
-values in Section 4.1 that depend on the amplification and noise-model analyses are
-pending a code fix (SPEC_FINALIZE Round 14).*
+*Working paper, draft 3 (2026-11-01). Study 1 is complete; Study 2 is planned. Numbers
+come from the claim-checked report. Values in Section 4.1 from the amplification and
+noise-model analyses and the refusal rates in Section 4.2 are pending code fixes
+(SPEC_FINALIZE Rounds 14–15).*
 
 ---
 
 ## Abstract
 
-Large language models (LLMs) now screen job applicants. We ask whether they
-reproduce the motherhood penalty and, if so, what they penalize. On a résumé,
-motherhood is a bundle of three signals that human hiring cannot pull apart: the
-applicant is a woman, she has family responsibilities, and she has often been out of
-work. We unbundle these signals in an audit of four widely used models (616,419
-decisions, 28 occupations), adding and removing each one from otherwise identical
-résumés, removing all gender information, and observing four decision margins:
-scoring one applicant, choosing between two, shortlisting from a pool, and declining
-to decide. The models do not penalize being a woman. They penalize caregiving. The
-penalty is invisible when applicants are scored one at a time but large when they are
-compared: a mother returning from parental leave wins a head-to-head choice against
-an equally qualified childless woman 11 to 31 percent of the time. It is unchanged
-when gender information is removed, falls on fathers as much as on mothers, and
-consists of a penalty for interrupted employment plus a further penalty for family
-signals. Gender-specific behavior exists only as a thin layer that differs by vendor.
-Fairness instructions reduce the interruption penalty but not the family-signal
-penalty. We interpret the pattern as the ideal-worker norm rendered as a formally
-gender-neutral rule, which can reproduce a gendered outcome because women carry
-caregiving signals more often than men.
+Large language models (LLMs) now screen job applicants, and their developers train
+them not to treat people differently by gender. We ask what such systems do with the
+signals that make up the motherhood penalty. On a résumé, motherhood bundles a
+protected category (being a woman) with signals that are correlated with gender but
+not protected as such: an interruption in employment and visible family
+responsibilities. We propose that in aligned models, *protection follows the label*:
+the more directly a signal names a protected category, the more carefully models
+handle it, while correlated signals are penalized freely. Study 1, an audit of four
+widely used models (616,419 decisions, 28 occupations), unbundles the signal on
+otherwise identical résumés and places each component along this gradient. Signals
+of caregiving carry a large penalty, for mothers and fathers alike, visible only when
+applicants are compared: a parent returning from leave wins a head-to-head choice
+against an equally qualified childless applicant 11 to 31 percent of the time. The
+penalty is unchanged when all gender information is removed. Explicitly named gender
+elicits small, vendor-specific behavior—correction toward women, parity, or
+refusal—rather than a penalty. An instruction that names caregiving gaps reduces the
+gap penalty but not the penalty on family signals it leaves unnamed. Study 2, planned,
+tests whether the gradient emerges with alignment by comparing the same open-weight
+model before and after post-training. Because women carry caregiving signals more
+often than men, a screener that protects the label can reproduce the motherhood
+penalty in effect.
 
 ---
 
@@ -42,499 +45,465 @@ Benard, and Paik 2007). The penalty persists when mothers present direct evidenc
 commitment, which suggests that it rests on norms about what mothers should do as
 well as on inferences about what they can do (Benard and Correll 2010).
 
-Hiring is now partly delegated to software. Résumé screening is among the most common
-commercial uses of large language models, and among the most regulated: US selection
-procedures are judged by their disparate impact on protected groups, and the European
-Union classifies AI systems used in recruitment as high-risk (EEOC 1978; European
-Union 2024). Whether these systems reproduce the motherhood penalty is therefore a
-pressing question. This paper argues that it is also an opportunity to answer an older
-one: *what, exactly, is penalized when mothers are penalized?*
+Hiring is now partly delegated to large language models, and these are not neutral
+copies of the texts they learned from. Developers train them, through instruction
+tuning and preference optimization, to avoid treating people differently by protected
+characteristics such as gender, and evaluate them on whether outputs change when a
+protected attribute changes. This raises a question that audits of human employers
+could not pose: what happens to a form of discrimination when the decision-maker has
+been trained against its category but not against its correlates?
 
-On a résumé, motherhood is not a single signal. It bundles three: the applicant is a
-woman; she has family responsibilities, which applications reveal through mentions of
-children, parenting activities, or caregiving leave; and she has often been out of
-work. Each component corresponds to a distinct explanation of the penalty. If
-employers penalize women as presumed caregivers, the gender component matters. If
-they penalize anyone who departs from the norm of the fully available "ideal worker"
-(Acker 1990; Williams 2000), the family and interruption components matter, whoever
-carries them. In human hiring the components travel together, and they are hard to
-separate: an employer who sees a mother's name sees her gender, and audits cannot
-remove gender while keeping the family situation visible. An LLM screener can be shown
-the same résumé thousands of times with one component added or removed at a time,
-including with every trace of gender removed. That makes it possible to unbundle the
-motherhood signal.
+The motherhood penalty is a natural case, because on a résumé motherhood is a bundle.
+It combines a protected category—the applicant is a woman—with signals that are
+correlated with gender but not protected as such: time out of work, and visible family
+responsibilities such as children, parenting activities, or a caregiving leave. In
+human hiring these components travel together, and audits cannot remove gender while
+keeping the family situation visible. An LLM screener can be shown the same résumé
+thousands of times with one component added or removed, including with every trace of
+gender removed, so the bundle can be taken apart.
 
-Figure 1 lays out the framework that organizes the paper. We treat the motherhood
-signal as three separable components (left), ask which of them an LLM screener
-penalizes and whether it needs to know the applicant's gender to do so (center), and
-observe the result at four decision margins (right): scoring a single applicant,
-choosing between two finalists, shortlisting from a pool, and declining to decide.
-Three questions follow. *Where* does a family-status penalty appear? *What* part of
-the signal is penalized? And *with what consequences*—for remedies that developers
-and employers rely on, and for women and men as groups?
+We propose that in aligned models *protection follows the label*. Signals differ in
+how directly they refer to a protected category (Figure 1): an explicit statement of
+gender names it; a gendered first name implies it; a caregiving gap or a line about
+children is merely correlated with it. If alignment teaches models to handle named
+categories carefully, behavior should differ along this gradient: careful,
+developer-specific treatment where gender is named, weaker effects where it is only
+implied, and unchecked penalties where the signal is a correlate that no one has
+trained against. The same logic predicts how remedies work: an instruction should
+protect what it names and leave untouched what it does not.
 
-Our answers are as follows. The penalty appears only when applicants are compared;
-single-applicant scores barely move. It is a penalty on caregiving rather than on
-gender: it is unchanged when the model cannot know the applicant's gender, it falls on
-fathers as much as on mothers, and it has two parts—a penalty for any interruption in
-employment and a further penalty for overt family signals. Gender-specific behavior
-does exist, but as a thin layer that differs from vendor to vendor. Fairness
-instructions reach the interruption penalty but not the family-signal penalty. And
-because women carry caregiving signals more often than men, a rule that is
-gender-blind in form can produce a gendered outcome.
+Study 1 tests these expectations in an audit of four widely used models. It unbundles
+the motherhood signal on identical résumés, varies how directly gender is conveyed,
+observes the result at the decision margins where selection happens, and tests the
+fairness instructions that deployers commonly add. The findings line up with the
+gradient. Caregiving signals carry a large penalty that falls on fathers as much as on
+mothers, is unchanged when gender information is removed, and appears only when
+applicants are compared. Explicitly named gender elicits small and vendor-specific
+behavior—correction toward women in one model, parity in another, refusal in a
+third—rather than a penalty. An instruction that names caregiving gaps reduces the
+gap penalty but not the penalty on family signals. Study 2, which we describe as a
+planned design, asks where the gradient comes from by comparing the same open-weight
+model before and after post-training.
 
-The paper makes three contributions. Substantively, it separates components of the
-motherhood penalty that human hiring confounds and shows which survive in automated
-screening. Theoretically, it suggests that when gender is the category developers
-train against, discrimination may persist through correlated signals that are not
-protected as such, consistent with the ideal-worker account. Methodologically, it
-shows that audit design determines what is found: audits that score single
-applicants, discard non-answers, or manipulate gender only through names would certify
-these systems as fair.
+The argument contributes to three conversations. For the sociology of gender and work,
+it separates components of the motherhood penalty that human hiring confounds and shows
+that, in these systems, the ideal-worker components survive while the gendered one does
+not (Acker 1990; Williams 2000). For research on discrimination and its regulation, it
+identifies a mechanism—protection that attaches to labels rather than consequences—by
+which discrimination can persist through correlated signals once a category is
+policed, a pattern with parallels in studies of employers who lose access to a signal
+(Agan and Starr 2018). For algorithmic auditing, it shows that audits organized
+around protected categories, single-applicant scores, or answered questions only would
+certify these systems as fair.
 
 ## 2. Background
 
-### 2.1 Three components, three accounts
+### 2.1 The motherhood bundle
 
-Explanations of the motherhood penalty can be read as claims about which component of
-the signal does the work (Figure 1, center).
-
-*Gender-statistical accounts* hold that employers treat motherhood as a proxy for
-lower expected availability and productivity, and that the inference is gendered:
+Explanations of the motherhood penalty can be read as claims about which part of the
+bundle does the work. *Gender-statistical accounts* hold that employers treat
+motherhood as a proxy for lower availability and that the inference is gendered:
 mothers, not fathers, are expected to reduce their commitment (Phelps 1972; Correll,
-Benard, and Paik 2007). A normative variant holds that mothers violate expectations
-of devotion to family, so that evidence of commitment does not erase the penalty
-(Benard and Correll 2010). Both predict a penalty specific to mothers, which requires
-the evaluator to know the applicant's gender.
+Benard, and Paik 2007), and a normative variant holds that mothers violate expectations
+of devotion to family (Benard and Correll 2010). Both predict a penalty specific to
+mothers, which requires the evaluator to know the applicant's gender. *Ideal-worker
+accounts* locate the penalty in the organization of work around an abstract worker
+who is fully available and free of outside obligations (Acker 1990; Williams 2000;
+Blair-Loy 2003). On this view the penalty attaches to departures from continuous
+employment and to signs of competing obligations, whoever shows them. Men who signal
+caregiving are penalized too (Rudman and Mescher 2013; Williams, Blair-Loy, and
+Berdahl 2013), and employment gaps are penalized whatever their reason (Kroft, Lange,
+and Notowidigdo 2013; Weisshaar 2018). Because women take most caregiving leaves
+(Goldin 2014), such a penalty is gendered in its consequences even when it is not
+gendered in its application.
 
-*Ideal-worker accounts* locate the penalty in the organization of work. Organizations
-are built around an abstract worker who is fully available and free of outside
-obligations (Acker 1990); the norm is gender-neutral in wording but was modeled on men
-whose care work was done by others (Williams 2000; Blair-Loy 2003). On this view the
-penalty attaches to signs of competing obligations and to departures from continuous
-employment, whoever shows them. Two strands of evidence support the distinction. Men
-who signal caregiving are penalized too (Rudman and Mescher 2013; Williams, Blair-Loy,
-and Berdahl 2013), and employment gaps are penalized whatever their reason (Kroft,
-Lange, and Notowidigdo 2013; Weisshaar 2018). Because women take most caregiving
-leaves (Goldin 2014), such a penalty is gendered in its consequences even when it is
-not gendered in its application.
+### 2.2 Alignment and the label
 
-*An alignment account* is specific to the machine setting. Commercial LLMs are
-trained and evaluated to avoid differential treatment of protected groups, and audits
-of automated hiring have mostly asked whether outcomes differ by protected attributes
-signaled through names (An et al. 2025; Armstrong et al. 2024; Rozado 2025; Wilson
-and Caliskan 2024), following the logic of anti-discrimination law (Barocas and
-Selbst 2016). Systems may therefore be scrutinized and corrected along the gender
-dimension while correlated signals that are not themselves protected go unexamined.
-This account predicts little direct gender bias, bias that varies with each
-developer's choices, and untouched penalties on unprotected correlates.
+Commercial LLMs are trained after pretraining to follow instructions and to produce
+outputs that raters and written principles prefer, including outputs that do not
+treat people differently by protected attributes. Audits of automated hiring have
+likewise asked mostly whether outcomes differ by protected attributes signaled through
+names (An et al. 2025; Armstrong et al. 2024; Rozado 2025; Wilson and Caliskan 2024),
+following the logic of anti-discrimination law, which asks whether outcomes differ
+across protected categories (Barocas and Selbst 2016). Both practices are organized
+around the category. Neither directly targets signals that are correlated with a
+category but not named by it. If models learn from this kind of training to recognize
+and handle protected categories when they are named, their behavior toward a signal
+should depend on how directly it names one. Training against a category could produce
+caution—equal treatment, correction in favor of the protected group, or refusal—where
+the category is explicit, while leaving judgments about correlated signals as
+pretraining left them.
 
-### 2.2 Expectations
+### 2.3 Expectations along the gradient
 
-Mapped onto the framework, the accounts make distinguishable predictions. The
-gender-statistical account predicts that the gender component carries the penalty:
-mothers are penalized more than fathers, and the penalty shrinks when gender
-information is removed. The ideal-worker account predicts that the family and
-interruption components carry it: fathers are penalized as much as mothers, removing
-gender information changes nothing, and both an unexplained gap and overt family
-signals are costly. The alignment account predicts a weak and vendor-specific gender
-component that responds to instructions. The last two can hold together. We state
-these as orienting expectations; the confirmatory tests specified before data
-collection are listed in Section 3.5.
+Figure 1 arranges the components of the motherhood signal by how directly they refer
+to gender and states what the label account expects at each position.
 
-The framework also implies where to look. Selection decisions are comparative, and a
-penalty that reflects relative judgments about availability may surface only when
-applicants compete. If audits measure only single-applicant scores, they may miss it.
+- *Named gender* (an explicit "Gender: Female/Male" line): careful, developer-specific
+  handling—parity, correction toward women, or refusal—rather than a penalty.
+- *Implied gender* (a gendered first name): read, but acted on weakly; removing it
+  should change little.
+- *Correlated signals* (an employment gap; children and parenting activities):
+  penalized, for anyone who carries them, as the ideal-worker account predicts.
+- *Remedies*: an instruction protects the signal it names and not the ones it leaves
+  unnamed.
 
-## 3. Design
+The gender-statistical account makes contrary predictions: a penalty for mothers but
+not fathers, which shrinks when gender is removed. The framework also says where to
+look. Selection is comparative, and a penalty that reflects relative judgments about
+availability may surface only when applicants compete, so the expectations are tested
+at several decision margins. We state these as orienting expectations; the tests
+specified before data collection are listed in Section 3.4.
 
-The study is a correspondence-style audit (Bertrand and Mullainathan 2004) carried out
-on LLMs rather than employers. Its design follows Figure 1: one set of manipulations
-unbundles the signal, a second controls what the model knows about gender, a third
-varies the decision margin, and a fourth tests remedies. Every estimate compares a
-résumé with itself, with and without a component, so that applicant quality is held
-constant by construction.
+## 3. Study 1: Design
 
-### 3.1 Unbundling the signal
+Study 1 is a correspondence-style audit (Bertrand and Mullainathan 2004) of LLM
+screeners. Every estimate compares a résumé with itself, with and without a signal,
+so applicant quality is held constant by construction.
 
-Table 1 lists the signals. Every application includes a short cover note, so that
-conditions differ only in what the note and the résumé say. The *parent* signal adds
+### 3.1 Unbundling the correlated signals
+
+Table 1 lists the signals. Every application includes a short cover note, so
+conditions differ only in what the note and résumé say. The *parent* signal adds
 "married with two children" to the note and a parent-teacher association line to the
-résumé. *Parent with leave* adds an eight-month "Parental leave" entry to the work
-history. Three placebo signals separate the components. A *travel gap* inserts an
-eight-month "Career break—extended travel" with the same dates, isolating the
-interruption from any family content. *Parental leave only* inserts the leave entry
-without children or parenting activity, isolating the caregiving label. A *personal*
-placebo adds a length-matched non-family line, isolating the cost of disclosing
-anything personal. Comparing these conditions yields four components: the
-interruption (travel gap against equal treatment), its caregiving label (parental
-leave only minus travel gap), family signals on top of a labeled leave (parent with
-leave minus parental leave only), and parenthood without a gap net of disclosure
-(parent minus personal). Because "extended travel" may itself be stigmatized, a later
-phase replaces it with two neutral labels for the same dates—"Job search after company
-closure" and "Full-time certification program." Two further signals probe the normative
-account: *parent with commitment evidence* adds objective commitment bullets, and a
-*pregnancy* signal, for women only, states that the applicant is pregnant.
+résumé; *parent with leave* adds an eight-month "Parental leave" entry. Three placebos
+separate the components: a *travel gap* with the same dates isolates the interruption;
+*parental leave only*, without children, isolates the caregiving label; and a
+length-matched *personal* line isolates disclosure. The comparisons yield four
+components: the interruption (travel gap against equal treatment), its caregiving
+label (parental leave only minus travel gap), family signals on top of a labeled
+leave (parent with leave minus parental leave only), and parenthood without a gap
+net of disclosure (parent minus personal). Because travel might itself be stigmatized,
+a later phase substitutes two neutral labels with the same dates ("Job search after
+company closure," "Full-time certification program"). *Parent with commitment
+evidence* and a *pregnancy* signal, for women only, complete the set. The signals are
+deliberately explicit; the parental-leave gap is the most realistic and anchors the
+decomposition.
 
-The signals are deliberately explicit, which favors identification over realism. The
-parental-leave gap is the most realistic of them and anchors the decomposition.
+### 3.2 Moving along the gradient: how gender is conveyed
 
-### 3.2 Controlling gender information
-
-In the main run, gender is conveyed by first names: six per gender from Bertrand and
+Gender information is varied at four levels that correspond to positions in Figure 1:
+the first name alone (implied); the name plus a header line stating "Gender:
+Female/Male" (named); a gender-neutral initial plus that line (named, without the name);
+and initials only (gender removed). Names are six per gender from Bertrand and
 Mullainathan (2004), all coded as White to hold race constant (Gaddis 2017), rotated
-within every condition. A second phase varies gender information at four levels: the
-name alone; the name plus a header line stating "Gender: Female/Male"; a gender-neutral
-initial plus that line; and initials only, which removes gender entirely. If the
-penalty is about gender, it should change across these levels. The same phase includes
-direct choices between a woman and a man with the same family status, which measure
-gender preference as such. A perception check confirms that the manipulation works.
-Asked directly, models stated the gender in explicit header lines correctly in every
-case but often answered "unknown" for names (Luna 34 percent, Haiku 58 percent); yet
-whenever a model used a gendered pronoun in an explanation, it matched the name or
-header in every case, and gendered pronouns all but disappeared under initials only.
-The models read gender from names; the direct question measures their willingness to
-say so.
+within every condition. Direct choices between a woman and a man with the same family
+status measure gender preference as such. A perception check confirms that models read
+implied gender: whenever a model used a gendered pronoun in an explanation, it matched
+the name or header in every case, and gendered pronouns all but disappeared under
+initials only. Asked directly, however, models often answered "unknown" for names
+(Luna 34 percent, Haiku 58 percent) while stating explicit headers correctly in every
+case—an early sign that what models *say* about gender is itself a trained behavior.
 
-### 3.3 Observing decision margins
+### 3.3 Decision margins and remedies
 
-Each signal is evaluated at four margins. In *scoring*, the model evaluates one
-applicant: fit on a ten-point scale, an interview recommendation, a salary, and
-ratings of competence, commitment, likability, and promotability. In *pairwise
-choice*, it picks one of two finalists of the same gender, one with the signal and one
-without, with résumé roles and screen positions counterbalanced; under equal treatment
-the applicant with the signal is chosen half the time. In *shortlisting*, it selects
-three of six applicants, one of whom carries the signal; the outcome is that
-applicant's shortlisting rate relative to the same résumé without the signal, an
-impact ratio comparable to the four-fifths rule. *Declining to decide*—withholding a
-salary offer or refusing to answer—is recorded as an outcome rather than discarded.
+Signals are evaluated at four margins: *scoring* one applicant (fit on a ten-point
+scale, interview recommendation, salary, four ratings); *choosing* between two
+finalists of the same gender, one with the signal and one without (counterbalanced;
+equal treatment = 50 percent); *shortlisting* three of six applicants, one with the
+signal (impact ratio relative to the same résumé without it, comparable to the
+four-fifths rule); and *declining to decide*—refusing or withholding a salary—recorded
+as an outcome. A remedies phase repeats the pairwise tasks under three system prompts:
+none, a generic equal-employment-opportunity prompt, and that prompt plus "do not
+penalize employment gaps taken for caregiving," which names the gap but not the family
+signals.
 
-### 3.4 Testing remedies
+### 3.4 Models, materials, and inference
 
-A final phase asks whether the instructions that deployers typically add remove the
-penalty. The same pairwise tasks are run under three system prompts: none (the default
-elsewhere in the study), a generic equal-employment-opportunity prompt, and the same
-prompt plus "do not penalize employment gaps taken for caregiving." The second prompt
-names the interruption but not the family signals, which lets us ask whether the two
-components respond differently. A further analysis translates each model's measured
-penalty into group outcomes for women and men under different prevalences of
-caregiving signals.
+We audit four widely available, low-cost models—DeepSeek V4.1 Flash, Claude Haiku 5.5,
+GPT-6 Luna, and Qwen 3.8 Flash—pinned to dated versions and single endpoints, with
+reasoning disabled, structured output, and no system prompt except in the remedies
+phase. The materials are 154 résumés validated as qualified for 28 occupations, 20
+spanning occupational female share (4.7 to 97.1 percent) and wages and 8 chosen to
+weaken the correlation between female share and care work. Data were collected in
+four phases between October 14 and 30, 2026 (616,419 logged calls).
 
-### 3.5 Models, materials, and inference
+Standard errors are clustered at the design's units: pairwise choices by the unordered
+pair of résumés (40 pairs in the main occupations, 16 in the added ones), scores by
+résumé, shortlists by occupation with résumé and position fixed effects. Effective
+sample sizes are set by résumé pairs, not calls. Tests use the Holm correction within
+families; claims of no difference are tested for equivalence at ±5 percentage points;
+few-cluster tests are checked with wild cluster bootstrap; and main tests are
+re-estimated as linear probability models with controls. Responses produced by repair
+passes are excluded from choice analyses, and refusals and unusable answers are
+analyzed as outcomes and bounded (Section 4.4). Designs and confirmatory tests were
+specified in analysis plans committed before each paid run; the ±5-point bound for the
+second phase was chosen after its data were collected but before the tests were run,
+and was specified in advance for the remedies phase. The study was not registered
+externally; other analyses are labeled exploratory, and cross-model comparisons are
+descriptive.
 
-We audit four widely available, low-cost models—DeepSeek V4.1 Flash, Claude Haiku
-5.5, GPT-6 Luna, and Qwen 3.8 Flash—pinned to dated versions and single provider
-endpoints, with extended reasoning disabled, structured output, and no system prompt
-except in the remedies phase. They stand for high-volume screening configurations;
-larger models are not tested. The materials comprise 154 résumés validated as
-qualified for 28 occupations: 20 spanning the joint distribution of occupational
-female share (4.7 to 97.1 percent) and median wage, and 8 selected to weaken the
-correlation between female share and care work (from .53 to .32). Résumés have
-continuous eight-to-twelve-year histories and no gender or family wording. Data were
-collected in four phases between October 14 and 30, 2026 (616,419 logged calls; total
-cost $188.52 plus $0.66 for coding model explanations).
+## 4. Study 1: Results
 
-Standard errors are clustered at the units of the design: pairwise choices by the
-unordered pair of résumés compared (40 pairs in the main occupations, 16 in the added
-ones), with cluster-level degrees of freedom; scores by résumé; shortlists by
-occupation with résumé and position fixed effects. Effective sample sizes are thus set
-by résumé pairs, not by calls. We apply the Holm correction within each family of
-tests, test claims of no difference for equivalence against a smallest effect of
-interest of five percentage points (two one-sided tests), check few-cluster tests with
-wild cluster bootstrap p-values, and re-estimate the main tests as linear probability
-models with controls for position, prompt wording, and name. Responses produced by
-repair passes after invalid output are excluded from choice analyses; validity was
-99 to 100 percent.
-
-The designs and confirmatory tests—penalties by margin, model, and gender;
-mother–father differences; impact ratios; the placebo decomposition; gender-information
-contrasts; direct gender choices; withholding; and the remedy and gap-label
-hypotheses—were specified in analysis plans committed before each paid run. The
-five-point equivalence bound for the second phase was chosen after its data were
-collected but before the tests were run; it was specified in advance for the remedies
-phase. The study was not registered externally. Other analyses are labeled
-exploratory, and cross-model comparisons are descriptive.
-
-## 4. Results
-
-The results follow the three questions of Figure 1. Section 4.1 asks where the
-penalty appears. Sections 4.2 to 4.4 ask what is penalized: the interruption and
-family components (4.2), the gender component (4.3), and the gender-specific behaviors
-that remain (4.4). Sections 4.5 and 4.6 ask about consequences. Differences are in
+We begin at the correlated end of the gradient, where the label account expects the
+largest effects, then move to named gender and to remedies. Differences are in
 percentage points ("points").
 
-### 4.1 Where: the penalty appears when applicants are compared
+### 4.1 Correlated signals: a caregiver penalty
 
-If a screener penalized family signals the way a human rater might, the penalty should
-be visible in the scores it assigns. It is not. Relative to the same résumé without the
-signal, the parent signals change women's fit ratings by at most 0.35 points on a
-ten-point scale and interview recommendations by at most 1.5 percentage points. Claude
-Haiku even rates mothers 0.34 points *higher* than the same applicants without
-children.
+*It appears where selection happens.* Family signals barely move the scores models give
+a single applicant: relative to the same résumé without the signal, the parent signals
+change women's fit ratings by at most 0.35 points on a ten-point scale and interview
+recommendations by at most 1.5 percentage points, and Haiku rates mothers 0.34 points
+*higher*. When applicants compete, the same signals are costly (Table 2). A mother
+returning from parental leave is chosen against an equally qualified childless woman
+31 percent of the time by DeepSeek, 23 by Qwen, 19 by Luna, and 11 by Haiku—the model
+that scores her higher. In shortlisting, mothers reach the shortlist at 71, 75, and 78
+percent of their childless rate with DeepSeek, Qwen, and Luna, each below the
+four-fifths threshold, and at 25 percent with Haiku. Choices are not magnified scores:
+a noise model built from each model's own rating variability predicts far smaller
+penalties than observed in seven of eight model-signal combinations (Figure 2), and
+the penalty remains 9 to 32 points among résumé pairs with clear quality differences.
 
-The same signals are costly when applicants compete (Table 2). In pairwise choice,
-parents are chosen less than half the time in every model and every condition. A
-mother returning from parental leave is chosen against an equally qualified childless
-woman 31 percent of the time by DeepSeek, 23 percent by Qwen, 19 percent by Luna, and
-11 percent by Haiku—the model that scores her higher. In shortlisting, the same mothers
-reach the shortlist at 71 (DeepSeek), 75 (Qwen), and 78 (Luna) percent of the rate
-they achieve without the signal, each below the four-fifths threshold, and at 25
-percent with Haiku.
+*It consists of the interruption and the family signals, not the label.* Table 3 and
+Figure 3 decompose the parent-with-leave penalty (mothers, explicit gender, 40 résumé
+pairs). An eight-month gap labeled travel costs 10.5 to 26.0 points. Calling it
+parental leave adds nothing—the label is equivalent to zero for Haiku and 1.7 to 6.7
+points *less* costly than travel for the other models—and travel was not unusually
+stigmatized: no neutral label was significantly more costly than travel after
+correction, Qwen penalized travel 4.3 to 5.4 points more than either neutral label,
+and the largest estimate in the other direction was DeepSeek's certification label for
+women (4.0 points, Holm p = .14). Adding children and parenting activity to a résumé
+that already carries a labeled leave costs a further 10.6 to 17.4 points, and
+parenthood without a gap, net of the personal placebo, costs 7.3 to 19.2 points.
+Commitment evidence does not restore equal treatment (Table 2). The family-signal and
+parenthood contrasts survive Holm correction in 23 of 24 tests across six alternative
+samples, and "greedy" availability language in job ads deepens the leave penalty for
+some model–gender combinations, as an availability norm would imply (Section 4.4).
 
-Comparison does not merely magnify small score differences. Choices respond to
-ordinary differences in résumé quality at 13 to 18 points of choice probability per
-fit point; by that yardstick the family signals act like quality losses of 0.9 to 2.0
-fit points, many times their effect on scores. A noise model that converts each model's
-score gap into a predicted choice probability predicts far smaller penalties than
-observed in seven of eight model-signal combinations (Figure 2); the exception is
-DeepSeek's leave signal. The penalty is larger when résumés are close in quality, as
-tie-breaking would imply, but remains 9 to 32 points among pairs with clear quality
-differences. For Haiku, whose score effect is positive, no magnification of scores can
-produce the observed choice penalty.
+*It does not depend on gender.* Moving from implied gender to no gender at all changes
+nothing. In the added occupations, the parent penalty with gendered names differs from
+the penalty under initials only by +0.6 (DeepSeek), −0.5 (Haiku), −1.3 (Luna), and
++0.3 points (Qwen); in seven of eight model-signal combinations the difference is
+statistically equivalent to zero within ±5 points, and in the eighth (DeepSeek's leave
+signal) the interval reaches 5.6 (Figure 4). Shortlisting ratios likewise barely move
+across the four levels of gender information. Fathers are chosen below equal treatment
+in every cell of every model—a father returning from leave is chosen 31, 26, 18, and
+13 percent of the time by DeepSeek, Qwen, Luna, and Haiku—and there is no fatherhood
+bonus. Mother–father differences are small and not significant after correction in
+three models (Table 4); Haiku chooses mothers 4.4 points less often than fathers
+(Holm p = .02).
 
-The first answer, then, is that the penalty lives at the comparative margins where
-selection actually happens. The remaining analyses measure it there.
+*The models' explanations follow the decomposition (exploratory).* In LLM-coded
+explanations of pairwise choices (DeepSeek V4.1 Flash coder, Qwen 3.8 Flash second
+coder; κ = .71 to .93 for the six codes used, lower for availability and family on
+non-DeepSeek explanations), the gap was cited in 24 to 91 percent of losses for the gap
+signals and at most 4 percent for parent signals without a gap, and family was cited
+for parent signals but never for the travel gap or the personal placebo; all twelve
+pre-stated contrasts survived Holm correction (Supplementary Figure S1). Explanations
+for losing parents often called family information irrelevant—for DeepSeek and Qwen
+much more often when the parent lost than when the parent won (53 vs. 19 and 90 vs. 42
+percent). These are stated justifications, coded without human validation, not causes.
 
-### 4.2 What: interruptions and family signals
+At the correlated end of the gradient, then, the models apply a caregiver penalty: a
+penalty on time out of work and on visible family responsibility, shared by all four
+vendors in sign, borne by women and men alike.
 
-Table 3 and Figure 3 decompose the parent-with-leave penalty in pairwise choice, for
-mothers in the main occupations with gender stated explicitly (40 résumé pairs). The
-decomposition answers the ideal-worker account's two claims in turn.
+### 4.2 Named gender: careful, vendor-specific handling
 
-*Interruption.* An eight-month gap labeled as travel, with no family content, costs
-10.5 (DeepSeek) to 26.0 points (Luna). Calling the same gap parental leave adds
-nothing: the label is statistically equivalent to zero for Haiku and is 1.7 to 6.7
-points *less* costly than travel for the other three models. Travel was not an unusually
-stigmatized reference. When it was replaced by company closure or certification, no
-neutral label was significantly more costly than travel after correction; Qwen
-penalized travel 4.3 to 5.4 points more than either neutral label, and seven of the
-other twelve comparisons were statistically equivalent (the largest estimate in the
-other direction was DeepSeek's certification label for women, 4.0 points, Holm
-p = .14). What is penalized is time out of work, not its stated reason.
+At the named end, the label account expects caution rather than a penalty, and
+behavior shaped by each developer. That is what we observe (Table 5, Figure 5). In
+direct choices between a woman and a man with the same family status, naming gender
+explicitly moves models in different directions. Luna's mild preference for women under
+names (.522 childless, .577 parents) grows with an explicit gender line (.587 and
+.647). Haiku's slight preference for mothers under names (.544) disappears with an
+explicit line (.498; .471 with initials). DeepSeek shows a small, stable preference
+for women (.535 to .548 for mothers). Qwen stays within five points of parity at every
+level, as equivalence tests confirm (its largest deviation, a 1.8-point tilt toward
+childless women under initials, is significant after correction). None of these is a
+penalty on women; two are corrections toward or past parity.
 
-*Family signals.* Adding children and parenting activity to a résumé that already
-carries a labeled parental leave costs a further 10.6 to 17.4 points, and parenthood
-without any gap, net of the personal placebo, costs 7.3 to 19.2 points. Disclosure as
-such is not the issue: the placebo costs about 3 points in three models and slightly
-helps applicants with Haiku (3.7 points). Commitment evidence does not restore equal treatment:
-it raises mothers' choice share modestly in three models and lowers it in Luna (Table
-2), in line with the normative account of the human penalty. The family-signal and parenthood contrasts survive Holm correction in 23 of
-24 tests each across six alternative samples of occupations and gender information.
+Caution also takes the form of declining to decide, concentrated in one vendor and in
+the cells where gender or family is salient. Haiku refused to choose in roughly 5
+percent of mother-versus-father and parent-with-leave comparisons, against about 0.1
+percent for the placebo signals. It withheld any salary for 19.8 percent of pregnant
+applicants (3.1 percent for childless women), and for 27.5 percent when gender was
+stated explicitly (Figure 6). Haiku's explanations frame withholding as protective,
+but it has a cost: pregnant applicants without an offer were recommended for interview
+29.9 percent of the time, against every time when an offer was made, a net interview
+penalty of 9.4 points relative to childless women. Caution, in other words, does not
+guarantee equal treatment; it relocates the decision.
 
-*Norm salience.* If the interruption penalty reflects an availability norm, making the
-norm salient should deepen it. Job descriptions with "greedy" availability language
-("must be available after hours and on weekends as needed, and travel up to 40% of the
-time") add to the leave penalty for DeepSeek mothers (2.7 points) and, combined with
-family-friendly language, for DeepSeek applicants of both genders and Haiku mothers
-(5.2 to 8.0 points); family-friendly language alone never significantly helps.
+### 4.3 Remedies: an instruction protects what it names
 
-*What the models say (exploratory).* Model explanations follow the decomposition. An
-LLM coder (DeepSeek V4.1 Flash, temperature zero) classified the reasons given in
-pairwise-choice explanations; a second coder (Qwen 3.8 Flash) re-coded 638 explanations
-not written by Qwen. Six codes reached acceptable agreement (κ = .71 to .93); agreement
-was lower for availability (.68) and family (.63) on explanations not written by
-DeepSeek. When the applicant with the signal lost, the gap was cited in 24 to 91
-percent of explanations for the three gap signals and in at most 4 percent for parent
-signals without a gap; family was cited in 12 to 64 percent for parent signals and
-never for the travel gap or the personal placebo (Figure 4). All twelve pre-stated
-contrasts went in the predicted direction and survived Holm correction. Availability
-concerns were common for DeepSeek and Qwen (39 to 52 percent of gap-signal losses) but
-rare for Haiku and Luna (15 percent or less). Explanations for losing parents often
-called family information irrelevant (Qwen 90 percent, Haiku 69, Luna 56, DeepSeek
-53); for DeepSeek and Qwen such statements were concentrated in losses (19 and 42
-percent when the parent won), for Haiku and Luna they were about as common either way
-(64 and 50 percent). These are stated reasons, conditional on the outcome and coded
-without human validation; they describe justifications, not causes.
-
-### 4.3 What: the gender component
-
-The gender-statistical account makes two predictions: the penalty should shrink when
-the model cannot know the applicant's gender, and mothers should be penalized more
-than fathers. Neither holds.
-
-*Removing gender.* In the added occupations, the parent penalty with gendered names
-differs from the penalty under initials only by +0.6 (DeepSeek), −0.5 (Haiku), −1.3
-(Luna), and +0.3 points (Qwen), and the leave penalty likewise. In seven of eight
-model-signal combinations the difference is statistically equivalent to zero within
-±5 points; in the eighth, DeepSeek's leave signal, the interval reaches 5.6 points
-(Figure 5). The design could detect differences of 3.0 to 5.4 points. Shortlisting
-replicates the result: ratios barely move across the four levels of gender information
-(for example, .64/.66/.66/.65 for DeepSeek and .15/.19/.17/.16 for Haiku).
-
-*Fathers.* Fathers are chosen below equal treatment in every cell of every model; a
-father returning from parental leave is chosen 31 (DeepSeek), 26 (Qwen), 18 (Luna),
-and 13 percent (Haiku) of the time against a childless man (Table 2). There is no
-fatherhood bonus. Mother–father differences on the same résumé pairs are small and,
-in three models, not significant after correction (Table 4). Haiku is the exception: it
-chooses mothers 4.4 points less often than fathers (Holm p = .02) and rates them lower
-on commitment, and its mother–father gap differs significantly from each of the other
-models.
-
-The penalty, in short, does not require the model to know that the applicant is a
-woman. It falls on caregivers.
-
-### 4.4 The gender layer: thin and vendor-specific
-
-What remains of gender is a set of behaviors that differ by vendor and surface mainly
-when gender is made explicit. In direct choices between a woman and a man with the
-same family status (Table 5, Figure 6), Qwen stays within five points of parity at
-every level, as equivalence tests confirm (its largest deviation is a 1.8-point tilt
-toward childless women under initials). DeepSeek shows a small preference for women
-(.535 to .548 for mothers). Luna's preference for women is modest under names (.522
-childless, .577 parents) and grows when gender is stated explicitly (.587 and .647).
-Haiku moves the other way: its slight preference for mothers under names (.544)
-disappears with an explicit gender line (.498; .471 with initials). Explicit gender
-fields are therefore not neutral; they activate preferences that differ in direction
-across vendors.
-
-One vendor's gender layer also appears at the fourth margin. Asked for a salary, Haiku
-proposes none for 19.8 percent of pregnant applicants in the main run—against 3.1
-percent of childless women and 7.3 percent of married women—and for 27.5 percent when
-gender is stated explicitly; other models withhold for pregnancy far less often (at
-most 5.8 percent) (Figure 7). Haiku's explanations frame withholding as protective.
-Its consequence is not: pregnant applicants without an offer are recommended for
-interview 29.9 percent of the time, against every time when an offer is made, a net
-interview penalty of 9.4 points relative to childless women. Among the offers that are
-made, no model shows a meaningful pregnancy salary penalty. An audit that drops missing
-salaries would conclude that pregnancy is not penalized.
-
-### 4.5 Consequences: remedies reach one component, not the other
-
-Deployers often add fairness instructions to a screener's system prompt. Table 6
-reports the remedies phase (48,000 calls). The generic equal-opportunity prompt left
-the caregiver penalty in place in every model, and its effect depended on the vendor:
-none for DeepSeek, a reduction of the plain parent penalty for Luna (5.0 points) but not
-of the leave penalty, substantial reductions for Haiku (6.6 and 12.2 points), and a
-*deepening* of both penalties for Qwen (4.7 and 5.3 points). The targeted instruction
-not to penalize caregiving gaps reduced the interruption penalty by 4 to 14 points in
-all four models but left the family-signal penalty essentially unchanged except in
-Haiku. No arm brought any model to equal treatment. The gender layer responded more
+The label account also predicts how remedies work. Table 6 reports the remedies phase
+(48,000 calls). A generic equal-opportunity prompt, which names gender but not
+caregiving, left the caregiver penalty in place in every model, with effects that
+depended on the vendor: none for DeepSeek, a reduction of the plain parent penalty
+for Luna (5.0 points), substantial reductions for Haiku (6.6 and 12.2 points), and a
+*deepening* for Qwen (4.7 and 5.3 points). Adding "do not penalize employment gaps
+taken for caregiving" reduced the interruption penalty—the signal it names—by 4 to 14
+points in all four models, but left the family-signal penalty essentially unchanged
+except in Haiku. No arm reached equal treatment. Named gender behavior responded more
 readily: Luna's preference for mothers over fathers fell from .640 to .557 under the
-generic prompt.
+generic prompt. Naming a signal moved it toward protection; leaving it unnamed did not.
 
-The two components of the caregiver penalty thus behave differently. The interruption
-penalty, which resembles an inference about availability, responds when an
-instruction names it. The family-signal penalty, which no instruction names and which
-resembles a norm, does not.
+### 4.4 Robustness and supplementary results
 
-### 4.6 Consequences: a gender-blind rule, a gendered outcome
+Refusals and unusable answers cannot explain the caregiver penalty. Even if every
+missing choice had gone to the parent, the share of mothers with leave chosen in the
+main run could rise at most to about .32 (DeepSeek), .13 (Haiku), .22 (Luna), and .39
+(Qwen); Qwen's wider bound reflects its higher rate of unusable output, which is also
+higher in parent cells (Round 15 formalizes these bounds). Linear probability models
+with controls reproduce the main tests; wild cluster bootstrap p-values change no
+conclusion; estimates drifted 0.8 to 2.4 points between phases, within tolerance.
+Supplementary results: paired salary offers are 1.7 to 2.3 percent lower for mothers;
+greedy availability language in job ads adds to the leave penalty for DeepSeek
+mothers (2.7 points) and, combined with family-friendly language, for DeepSeek
+applicants and Haiku mothers (5.2 to 8.0 points), while family-friendly language alone
+never helps; and the penalty shows no robust association with occupational female
+share, wages, or task composition.
 
-The caregiver penalty is blind to gender, but caregiving signals are not evenly
-distributed. Applying each model's measured shortlisting penalty to applicant pools in
-which more women than men carry a caregiving signal shows how the two combine (Figure
-8). With men's prevalence fixed at 5 percent, Haiku produces an aggregate
-women-to-men shortlisting ratio below the four-fifths line once more than 31 percent
-of women carry the signal; the thresholds are 73 percent for DeepSeek, 84 for Qwen,
-and 93 for Luna. At a prevalence of 20 percent among women, no model crosses the line
-(ratios .88 to .96). We could not source gender-specific estimates of how many
-applicants carry such signals, so prevalence is a scenario parameter; the thresholds
-do not depend on it. The analysis illustrates the mechanism and shows how much the
-answer depends on the vendor.
+## 5. Study 2 (planned): Where does the gradient come from?
 
-### 4.7 Additional analyses
+Study 1 shows that behavior lines up with the gradient; it cannot show that alignment
+produced it. The four audited models are aligned commercial systems without
+unaligned counterparts, and their developers' training choices are not observed.
+Study 2 tests the mechanism directly by holding the model fixed and varying only its
+stage of training.
 
-In paired salary recommendations, models offer mothers 1.7 to 2.3 percent less than
-otherwise identical childless women (1.2 to 4.1 percent after a leave)—smaller than
-the roughly 7 percent gap among human evaluators in Correll, Benard, and Paik (2007),
-although the designs are not comparable. Across 28 occupations, the penalty shows no
-robust association with occupational female share, wages, or task composition. Linear
-probability models with controls reproduce the main tests (leave coefficients −.047 to
-−.161); wild cluster bootstrap p-values change no conclusion; estimates on a repeated
-anchor condition drifted by 0.8 to 2.4 points between phases, within the pre-specified
-tolerance; and screen-position preferences are balanced by design.
+*Models.* Open-weight model families that release checkpoints from successive training
+stages—a pretrained base model, an instruction-tuned model, and a preference-tuned
+model—allow the same network to be compared before and after each stage (for example,
+the OLMo family, which publishes its post-training checkpoints and data). We will use
+two or more such families, at sizes that run on a single 80GB GPU, so that conclusions
+do not rest on one developer.
 
-## 5. Discussion
+*Measurement.* Base models do not reliably follow instructions or produce structured
+output. We therefore measure choices from the models' probabilities rather than their
+text: for each pairwise prompt, the log-probability of answering "A" versus "B,"
+averaged over both orderings of the candidates. The same quantity is computed for
+every checkpoint, so stages are compared on one scale. The Study 1 materials and
+conditions are reused: the placebo ladder at the correlated end, names versus initials
+at the implied position, and explicit gender lines and direct woman-versus-man pairs at
+the named end.
 
-### 5.1 The framework revisited
+*Predictions.* If protection follows the label because of alignment, then (1) named
+gender effects should be present in base models and shrink, or reverse toward women,
+after instruction and preference tuning; (2) the caregiver penalty should be present at
+every stage and change little; and (3) the gap between the named and correlated ends
+should widen across stages. Evidence against the account would be a caregiver penalty
+that emerges only after alignment, or named-gender effects that are already absent in
+base models.
 
-Figure 9 returns to the framework with the findings in place. Of the three components
-of the motherhood signal, the two that the ideal-worker account emphasizes—time out of
-work and visible family responsibility—carry the penalty, for women and men alike. The
-component the gender-statistical account emphasizes—being a woman—carries little, and
-what it carries differs by vendor, as the alignment account would lead one to expect.
-The penalty appears at the comparative margins where selection happens and is
-invisible in single-applicant scores.
+*Extension.* Because the models are open, Study 2 can also ask what changes inside
+them: whether the representation of gender that a model forms from a résumé differs
+across training stages, and whether caregiving signals activate that representation.
+Steering experiments that suppress or amplify a gender direction would test whether
+the caregiver penalty depends on it.
 
-We therefore describe the screeners' behavior as two layers. The first is a caregiver
-penalty, shared by all four models in sign, with two parts. The *interruption penalty*
-behaves like an inference about availability (Phelps 1972; Kroft, Lange, and
-Notowidigdo 2013; Weisshaar 2018): any eight-month gap is costly whatever it is called,
-availability language in a job ad deepens it, and an instruction that names it reduces
-it. The *family-signal penalty* behaves like a norm. It attaches to children and
-parenting activity, persists on top of a gap already labeled as parental leave, is
-only partly offset by evidence of commitment, and does not respond to instructions. In
-these respects it resembles the normative component of the human motherhood penalty
-(Benard and Correll 2010), except that it is applied to fathers too. The second layer
-consists of gender-specific behaviors that appear mainly when gender is made salient
-and differ in direction across vendors.
+## 6. Discussion
 
-A plausible reading, which our design cannot test directly, is that alignment training
-reshapes the behaviors it targets—overt differential treatment by gender—and leaves
-untouched the correlated judgments it does not target. Two models' explanations are
-suggestive: they declare family information irrelevant precisely in the decisions in
-which the parent loses. Without unaligned versions of these models, this remains a
-conjecture.
+### 6.1 The framework revisited
 
-### 5.2 Gender-neutral in form, gendered in effect
+Figure 7 returns to the framework with Study 1's findings in place. At the correlated
+end, caregiving signals carry a large penalty for anyone who shows them. At the
+implied position, models read gender but act on it little: removing it changes nothing.
+At the named end, gender elicits small and vendor-specific handling—correction, parity,
+or refusal—rather than a penalty. And an instruction protects what it names. The
+gender-statistical account, which places the penalty on mothers as women, does not fit;
+the ideal-worker account describes the penalty that remains; and the label account
+describes why the remaining penalty takes the form it does.
 
-The first layer is formally gender-neutral, but that does not make it neutral for
-gender equality. Caregiving interruptions and visible family responsibilities are
-carried disproportionately by women (Goldin 2014), so a rule that penalizes them
-reproduces a gender gap through the distribution of signals rather than the treatment
-of individuals—the structure that disparate-impact doctrine was designed to capture,
-and the long-standing argument that the ideal-worker norm disadvantages women without
-naming them (Acker 1990; Williams 2000). What is new here is the norm in its most
-abstract form: applied by systems that can read gender, have been trained not to use
-it, and penalize caregiving anyway.
+The caregiver penalty itself has two parts with different characters. The
+interruption penalty behaves like an inference about availability (Phelps 1972; Kroft,
+Lange, and Notowidigdo 2013; Weisshaar 2018): any gap is costly whatever it is called,
+availability language deepens it, and naming it in an instruction reduces it. The
+family-signal penalty behaves like a norm: it attaches to children and parenting
+activity, persists on top of a gap already labeled as parental leave, is not offset by
+evidence of commitment, and does not respond to instructions—like the normative
+component of the human motherhood penalty (Benard and Correll 2010), except that it is
+applied to fathers too.
 
-The finding speaks to a broader question about how discrimination responds to its own
-regulation. When a protected category is policed, decisions can shift toward
-correlated signals that are not protected as such, as research on bans of
-criminal-record questions has shown (Agan and Starr 2018). The present case differs—the
-models are not substituting a proxy for a gender judgment they would otherwise
-make—but the consequence is similar: scrutiny organized around the protected category
-leaves the penalty on caregivers in place.
+### 6.2 Gender-neutral in form, gendered in effect
 
-### 5.3 Implications for auditing
+Protection that follows the label leaves the consequences of correlated signals
+unprotected. Caregiving interruptions and visible family responsibilities are carried
+disproportionately by women (Goldin 2014), so a rule that penalizes them reproduces a
+gender gap through the distribution of signals rather than the treatment of
+individuals. Figure 8 shows how quickly this can happen: applying each model's
+measured shortlisting penalty to pools in which more women than men carry a caregiving
+signal, Haiku's gender-blind penalty produces a women-to-men shortlisting ratio below
+the four-fifths line once more than 31 percent of women carry the signal (men at 5
+percent); the thresholds are 73, 84, and 93 percent for DeepSeek, Qwen, and Luna.
+Prevalence is a scenario parameter here, but the structure is the one disparate-impact
+doctrine was designed to capture, and the one the ideal-worker literature has long
+described: a norm that disadvantages women without naming them (Acker 1990; Williams
+2000).
 
-The framework also explains why standard audits would miss these patterns. Audits
-must be *comparative*, because the penalty lives in choices and shortlists, not in
-scores. They must *count non-answers*, because the largest pregnancy effect is a refusal
-to price that carries a denial of interviews. They should *measure gender knowledge
-implicitly*, because direct questions measure a model's willingness to state gender,
-not its ability to read it. And they must *look beyond protected categories*: a
-four-fifths comparison of women and men will miss a penalty that is gender-neutral in
-form, so audits need to compare applicants with and without caregiving signals.
-Because vendors differ widely—the same leave signal costs about twice as much choice
-probability with Haiku as with DeepSeek—an audit of one model says little about
-another, and the remedies phase cautions against relying on instructions: a generic
-fairness prompt moved the penalty in different directions for different vendors, and
-a targeted one removed only the component it named.
+The broader implication concerns how discrimination responds to its regulation. When
+a protected category is policed, decisions can continue through correlated signals
+that are not protected as such, as research on bans of criminal-record questions has
+shown (Agan and Starr 2018). Alignment adds a twist: here the system itself has been
+trained around the category, and that training appears to make it attentive to how a
+signal is labeled rather than to what the signal does.
 
-### 5.4 Limitations
+### 6.3 Implications for auditing
 
-The family signals are explicit, and real résumés carry weaker ones; the
-parental-leave gap is the most realistic. The materials are US-oriented, in English,
-text-only, and hold race constant, so the study is silent on how caregiver penalties
-intersect with race or class. Pregnancy has no male counterpart. Salary and interview
-outcomes are recommendations, not offers or callbacks. The models are four low-cost
-versions at fixed dates, used without system prompts except in the remedies phase;
-larger models and commercial products may behave differently, and versions change.
+The framework explains why standard audits would miss these patterns. Audits keyed to
+protected categories compare women and men and find little; they need to compare
+applicants with and without caregiving signals. Audits that score single applicants
+find small effects; the penalty lives in choices and shortlists. Audits that drop
+non-answers miss the largest pregnancy effect, a refusal to price that carries a denial
+of interviews. And audits that ask models about gender measure what models are willing
+to say, not what they use. For deployers, the remedies phase cautions that fairness
+instructions protect what they name and can backfire for some vendors.
+
+### 6.4 Limitations
+
+The family signals are explicit, and real résumés carry weaker ones. The materials are
+US-oriented, English, text-only, and hold race constant. Pregnancy has no male
+counterpart. Outcomes are recommendations, not offers or callbacks. The models are four
+low-cost versions at fixed dates; larger models and commercial products may differ.
 Pools and pairs are constructed, so the design identifies the effect of a signal, not
-hiring rates. Group outcomes rest on scenario values for signal prevalence. The coding
+hiring rates. The disparate-impact analysis uses scenario prevalence values. The coding
 of explanations relies on LLM coders without human validation. Effective sample sizes
-are set by résumé pairs (40 or 16 per comparison), not by the number of calls.
+are set by résumé pairs (40 or 16 per comparison). Above all, Study 1 shows that
+behavior is consistent with the label account; Study 2 is needed to show that alignment
+produces it.
 
-## 6. Conclusion
+## 7. A Research Agenda
 
-Asked whether LLM résumé screeners penalize mothers, our answer is that the models we
-studied penalize caregivers. Unbundling the motherhood signal shows that they penalize
-time out of work and visible family responsibility, regardless of the applicant's
-gender, and that they do so only when applicants are compared. On this the four
-vendors agree. What differs among them is a thin gender layer and one vendor's
-practice of withholding decisions about pregnant applicants. Because the caregiver
-penalty is gender-neutral in form, it can pass fairness checks organized around gender
-while reproducing the motherhood penalty in effect.
+The label account generates questions beyond this paper. We list those we consider most
+informative, roughly in order of how directly they test the account.
+
+1. *Rewording the signal.* If protection follows the label, wording that names a
+   protected category should be treated differently from wording that does not, even
+   when the underlying fact is the same. Candidate contrasts: "maternity leave" and
+   "paternity leave" versus "parental leave"; "pregnancy leave" versus "medical leave";
+   gender-coded activities (a women's sports team, a sorority) versus neutral ones.
+2. *Other protected categories along the same gradient.* Age offers a clean test:
+   stated age (named) versus graduation year (correlated); disability: "disability
+   leave" versus "medical leave" versus an unexplained gap; race: stated race versus
+   names versus neighborhoods or institutions. The account predicts the same ordering
+   in each case.
+3. *Refusal as an outcome.* Where and why models decline to decide—by category, by
+   explicitness, and by vendor—and what happens to applicants they decline.
+4. *Representations and steering.* In open models, whether caregiving signals activate
+   internal gender representations, how alignment changes those representations, and
+   whether steering them changes decisions (Study 2 extension).
+5. *Human comparison.* The same unbundling design with human evaluators, to compare
+   which components humans and models penalize on identical materials—the clearest way
+   to say whether models reproduce, transform, or exceed the human penalty.
+6. *Realistic signals and deployed systems.* Weaker, naturally phrased caregiving
+   signals; larger models; commercial screening products with their own system prompts;
+   and other labor markets and languages, including markets in which explicit gender
+   and age fields are standard.
+7. *Group consequences with real prevalence.* Estimates of how often women and men
+   applicants carry caregiving signals, from household surveys, to turn the
+   disparate-impact scenario into an estimate.
+
+## 8. Conclusion
+
+Asked whether LLM résumé screeners penalize mothers, Study 1's answer is that the models
+we studied penalize caregivers. They penalize time out of work and visible family
+responsibility regardless of gender, and only when applicants are compared, while
+handling explicitly named gender with care that differs from vendor to vendor. We have
+argued that this is what protection that follows the label looks like: systems trained
+around a protected category treat the category carefully and its correlates freely.
+Because the correlates of motherhood are carried mostly by women, such systems can pass
+fairness checks organized around gender while reproducing the motherhood penalty in
+effect. Whether alignment is the cause is the question Study 2 is designed to answer.
 
 ---
 
@@ -568,5 +537,3 @@ Items marked ◆ are to be checked against the source before submission; items m
 - Williams, Joan C., Mary Blair-Loy, and Jennifer L. Berdahl. 2013. "Cultural Schemas, Social Class, and the Flexibility Stigma." *Journal of Social Issues* 69(2):209–234.
 - Wilson, Kyra, and Aylin Caliskan. 2024. "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval." AIES.
 - Yin, Leon, Davey Alba, and Leonardo Nicoletti. 2024. "OpenAI's GPT Is a Recruiter's Dream Tool. Tests Show There's Racial Bias." *Bloomberg*.
-
----

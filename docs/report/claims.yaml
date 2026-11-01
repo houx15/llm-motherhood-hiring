@@ -108,3 +108,9 @@ claims:
   - {id: ms_dg_qwen_name, section: "manuscript 4.4 table", rendered: "| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.qwen.parity"}, rule: ms_dg_row_qwen, target: docs/paper/manuscript.md}
   - {id: ms_dg_ds_name, section: "manuscript 4.4 table", rendered: "| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.deepseek.parity"}, rule: ms_dg_row_ds, target: docs/paper/manuscript.md}
   - {id: ms_dg_luna_name, section: "manuscript 4.4 table", rendered: "| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.luna.parity"}, rule: ms_dg_row_luna, target: docs/paper/manuscript.md}
+  # ---- Round 15: missingness outcomes ----
+  - {id: r15_qwen_gap_missing, section: "R15", rendered: "20.77%", source: {file: docs/final/missingness.json, key: "missingness.table"}, rule: r15_qwen_gap}
+  - {id: r15_haiku_ref_gap_p3, section: "R15", rendered: "4.91", source: {file: docs/final/missingness.json, key: "missingness.table"}, rule: r15_haiku_ref_p3}
+  - {id: r15_bounds_span, section: "R15", rendered: "0", source: {file: docs/final/missingness.json, key: "manski.cells_whose_bounds_span_50"}, rule: r15_count_list}
+  - {id: r15_excl_haiku_parent, section: "R15", rendered: ".350", source: {file: docs/final/missingness.json, key: headline_excl_haiku.excl_haiku.parent}, rule: lead3}
+  - {id: r15_excl_haiku_gap, section: "R15", rendered: ".245", source: {file: docs/final/missingness.json, key: headline_excl_haiku.excl_haiku.parent_gap}, rule: lead3}
