@@ -84,3 +84,21 @@ claims:
   # ---- §4.7 disparate impact ----
   - {id: di_haiku_cross, section: "§4.7", rendered: "exceeds **31%**", source: {file: docs/final/disparate_impact_stats.json, key: Haiku.crossing_womens_prevalence}, rule: pct_int}
   - {id: di_scenario_low, section: "§4.7", rendered: ".88–.96", source: {file: docs/final/disparate_impact_stats.json, key: "*.scenario_20_5"}, rule: minmax_lead2}
+  # ---- Round 12: §4.2 "What the models say" paragraph (sources: report_summary) ----
+  - {id: cod_kappa_retained, section: "§4.2 mechanism", rendered: "Six codes reach κ ≥ .70 overall (.71–.93)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_kappa_retained}
+  - {id: cod_kappa_dropped, section: "§4.2 mechanism", rendered: "(qualifications, κ .02; gender, κ .31)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_kappa_dropped}
+  - {id: cod_kappa_other, section: "§4.2 mechanism", rendered: "availability (κ .68) and family (κ .63)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_kappa_other}
+  - {id: cod_gap_int, section: "§4.2 mechanism", rendered: "the employment gap is cited in 24–91% of losses for the three interruption cues", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_gap_int}
+  - {id: cod_gap_par, section: "§4.2 mechanism", rendered: "in at most 4% for parent cues without a gap", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_gap_par}
+  - {id: cod_fam_fam, section: "§4.2 mechanism", rendered: "family is cited in 12–64% of losses for parent cues", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_fam_fam}
+  - {id: cod_fam_nonfam, section: "§4.2 mechanism", rendered: "never for the travel gap or the disclosure placebo", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_fam_nonfam}
+  - {id: cod_avail_dsq, section: "§4.2 mechanism", rendered: "(39–52% of interruption losses)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_avail_dsq}
+  - {id: cod_avail_hl, section: "§4.2 mechanism", rendered: "(≤ 15%)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_avail_hl}
+  - {id: cod_irr_losing, section: "§4.2 mechanism", rendered: "Qwen 90%, Haiku 69%, Luna 56%, DeepSeek 53%", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_irr_losing}
+  - {id: cod_irr_won_hl, section: "§4.2 mechanism", rendered: "(64%, 50%)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_irr_won_hl}
+  - {id: cod_irr_won_dsq, section: "§4.2 mechanism", rendered: "(19% and 42% when the parent wins)", source: {file: docs/final/coding_stats.json, key: report_summary}, rule: rs_irr_won_dsq}
+  - {id: cod_haiku_protected, section: "§4.2 mechanism", rendered: "protected characteristics 12pp more often for mothers, Holm", source: {file: docs/final/coding_stats.json, key: report_summary.haiku_protected_diff_pp}, rule: rs_pp_int}
+  # ---- §2.1 / Appendix E spend ----
+  - {id: spend_experiments, section: "§2.1", rendered: "$188.52", source: {file: docs/final/study_totals.json, key: grand_total.cost_excl_coding}, rule: usd_2dp}
+  - {id: spend_coding, section: "§2.1", rendered: "$0.66 for rationale coding", source: {file: docs/final/study_totals.json, key: grand_total.coding_cost}, rule: usd_2dp_int}
+  - {id: spend_total, section: "Appendix E", rendered: "$189.18 incl. coding", source: {file: docs/final/study_totals.json, key: grand_total.cost_usd}, rule: usd_2dp_incl}

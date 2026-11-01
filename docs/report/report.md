@@ -142,8 +142,8 @@ high-volume, low-cost screening configurations; real HR tools typically add
 system prompts (often with fairness instructions) and may use larger models —
 phase 4 tests two fairness system prompts (§4.6); larger models are untested. Every call is logged with provider attribution; plans
 are deterministic and resumable; the ledger is append-only under a hard $200
-budget (reserve $20). Total across all phases: 616,419 logged calls, $189.03
-(rationale-coding calls, §4.2, excluded).
+budget (reserve $20). Total across all phases: 616,419 logged calls, $188.52,
+plus $0.66 for rationale coding (§4.2).
 
 ### 2.2 Materials
 
@@ -366,6 +366,33 @@ for Haiku (+7.4pp, t 7.7; wild p = .006) and Luna (+3.4pp, t 3.0; wild
 p = .015), with no effect on DeepSeek or Qwen. E3 ranking replicates the
 invariance (top-3 ratios across L0–L3: .64/.66/.66/.65 DeepSeek;
 .15/.19/.17/.16 Haiku; .70/.72/.70/.71 Luna; .68/.71/.74/.71 Qwen).
+
+**What the models say (exploratory).** To see whether the reasons models
+give track this decomposition, an LLM coder (DeepSeek V4.1 Flash, temperature
+0) coded E2 rationales for eight reason codes; a second coder (Qwen 3.8 Flash)
+re-coded 638 rationales not written by Qwen. All rationales come from the
+primary-estimand condition (O20, explicit gender field, no system prompt).
+Six codes reach κ ≥ .70 overall (.71–.93) and are used; two (qualifications,
+κ .02; gender, κ .31) are not. Agreement is lower on rationales written by
+models other than DeepSeek for availability (κ .68) and family (κ .63), so
+those two codes are noisier for Haiku, Luna, and Qwen. Among rationales in
+which the cued candidate lost, the employment gap is cited in 24–91% of losses
+for the three interruption cues and in at most 4% for parent cues without a
+gap; family is cited in 12–64% of losses for parent cues and never for the
+travel gap or the disclosure placebo; availability concerns are common for
+DeepSeek and Qwen (39–52% of interruption losses) but rare for Haiku and Luna
+(≤ 15%). All twelve pre-stated alignment contrasts (gap and availability:
+interruption vs parent cues; family: family vs non-family cues) go in the
+predicted direction and survive Holm (Figure 15). Rationales for losing
+parents often call family information irrelevant to the decision (parent and
+committed cues: Qwen 90%, Haiku 69%, Luna 56%, DeepSeek 53%). For Haiku and
+Luna such statements are about as common when the parent wins (64%, 50%); for
+DeepSeek and Qwen they are concentrated in losses (19% and 42% when the parent
+wins). Code shares do not differ by candidate gender, with one exception
+(Haiku mentions protected characteristics 12pp more often for mothers, Holm
+p = .02). These are stated reasons, conditional on the outcome and coded by an
+LLM without human validation; they describe how the models justify choices,
+not why they make them (Appendix E′).
 
 ### 4.3 No fatherhood bonus; where a mother-specific penalty exists
 
@@ -686,15 +713,17 @@ against the source document before journal submission.)*
   Holm — `round3_stats.json`; primary estimand with CIs — `round5_stats.json`.
 - **D. Main-run tables**: `docs/report/tables.md` (programmatic).
 - **E. Reproducibility**: pinned slugs/configs, frozen materials,
-  deterministic plans, append-only logs and ledger ($189.03; per-phase totals in `docs/final/study_totals.md`); regenerate with
-  `uv run audit stats`, `uv run python -m
-  audit.analysis.{cross_model,phase3_key_stats,round3,round5}`, `uv run audit
-  figures`. Decisions and deviations: QUESTIONS.md.
+  deterministic plans, append-only logs and ledger ($189.18 incl. coding; per-phase totals in `docs/final/study_totals.md`); regenerate with
+  `uv run audit reproduce` (all statistics, tables, figures, claims check).
+  Decisions and deviations: QUESTIONS.md.
+- **E′. Rationale coding**: per-cell shares with pair-clustered CIs,
+  losing-vs-won and gender contrasts, coder agreement (overall and by
+  rationale author), and the original (unharmonized) sample for comparison —
+  `docs/final/coding_tables.md`, `coding_stats.json`.
 - **F. Figures** (`docs/report/figures/`). Main text: fig9 task dependence
   (§4.1), fig10 decomposition (§4.2), fig11 cue-level invariance (§4.2), fig12
   direct-gender divergence (§4.4), fig13 abstention (§4.5), fig14
-  disparate-impact thresholds (§4.7); fig15 rationale-code shares (§4.2,
-  pending). Appendix figures (main run, supporting §§4.1, 4.3, 4.8–4.10): fig1
+  disparate-impact thresholds (§4.7); fig15 rationale-code shares (§4.2). Appendix figures (main run, supporting §§4.1, 4.3, 4.8–4.10): fig1
   design, fig2 E2 forest plot, fig3 E1 cells, fig4 E3 impact ratios, fig5 E4
   job-ad contexts, fig6 quality slopes, fig7 human benchmark, fig8 moderators.
   Figures are renumbered in order of appearance for the typeset version.

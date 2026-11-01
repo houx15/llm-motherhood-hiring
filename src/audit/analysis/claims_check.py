@@ -130,6 +130,43 @@ def _fmt(rule: str, v) -> str | None:
         order = ["deepseek_v41_flash", "claude_haiku_55", "gpt6_luna", "qwen38_flash"]
         m = dict(zip(order, [round(x, 3) for x in v]))
         return "| " + " | ".join(f".{int(m[k] * 1000):03d}" for k in order) + " |"
+    if rule == "rs_kappa_retained":
+        return f"({v['kappa_retained_min']:.2f}\u2013{v['kappa_retained_max']:.2f})".replace("0.", ".")
+    if rule == "rs_kappa_dropped":
+        return (f"qualifications, \u03ba .{int(round(v['kappa_qualifications'] * 100)):02d}; "
+                f"gender, \u03ba .{int(round(v['kappa_gender'] * 100)):02d}")
+    if rule == "rs_kappa_other":
+        a = f"{v['kappa_other_availability']:.2f}".lstrip("0")
+        f_ = f"{v['kappa_other_family']:.2f}".lstrip("0")
+        return f"availability (\u03ba {a}) and family (\u03ba {f_})"
+    if rule == "rs_gap_int":
+        return f"{v['gap_interruption_min_pct']}\u2013{v['gap_interruption_max_pct']}%"
+    if rule == "rs_gap_par":
+        return f"at most {v['gap_parent_max_pct']}%"
+    if rule == "rs_fam_fam":
+        return f"{v['family_family_min_pct']}\u2013{v['family_family_max_pct']}%"
+    if rule == "rs_fam_nonfam":
+        return "never"
+    if rule == "rs_avail_dsq":
+        return f"{v['avail_ds_qwen_min_pct']}\u2013{v['avail_ds_qwen_max_pct']}%"
+    if rule == "rs_avail_hl":
+        return f"\u2264 {v['avail_haiku_luna_max_pct']}%"
+    if rule == "rs_irr_losing":
+        names = {"qwen38": "Qwen", "claude": "Haiku", "gpt6": "Luna", "deepseek": "DeepSeek"}
+        order = sorted(v["irr_losing_pct"], key=lambda k: -v["irr_losing_pct"][k])
+        return ", ".join(f"{names[k]} {v['irr_losing_pct'][k]}%" for k in order)
+    if rule == "rs_irr_won_hl":
+        return f"({v['irr_won_pct']['claude']}%, {v['irr_won_pct']['gpt6']}%)"
+    if rule == "rs_irr_won_dsq":
+        return f"({v['irr_won_pct']['deepseek']}% and {v['irr_won_pct']['qwen38']}% when the parent wins)"
+    if rule == "rs_pp_int":
+        return f"{v}pp more often for mothers, Holm"
+    if rule == "usd_2dp":
+        return f"${v:.2f}"
+    if rule == "usd_2dp_int":
+        return f"${v:.2f} for rationale coding"
+    if rule == "usd_2dp_incl":
+        return f"${v:.2f} incl. coding"
     if rule == "minmax_lead2":
         vals = [float(f"{x:.2f}") for x in v]
         return f"{min(vals):.2f}–{max(vals):.2f}".replace("0.", ".")

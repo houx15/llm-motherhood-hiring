@@ -36,5 +36,21 @@
 | e2_gf_ds | §4.1 table | `| .308 | .130 | .184 | .256 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_gap|male.p` | | .308 | .130 | .184 | .256 | | ✓ | | OK |
 | di_haiku_cross | §4.7 | `exceeds **31%**` | `docs/final/disparate_impact_stats.json::Haiku.crossing_womens_prevalence` | 31% | ✓ | | OK |
 | di_scenario_low | §4.7 | `.88–.96` | `docs/final/disparate_impact_stats.json::*.scenario_20_5` | .88–.96 | ✓ | | OK |
+| cod_kappa_retained | §4.2 mechanism | `Six codes reach κ ≥ .70 overall (.71–.93)` | `docs/final/coding_stats.json::report_summary` | (.71–.93) | ✓ | | OK |
+| cod_kappa_dropped | §4.2 mechanism | `(qualifications, κ .02; gender, κ .31)` | `docs/final/coding_stats.json::report_summary` | qualifications, κ .02; gender, κ .31 | ✓ | | OK |
+| cod_kappa_other | §4.2 mechanism | `availability (κ .68) and family (κ .63)` | `docs/final/coding_stats.json::report_summary` | availability (κ .68) and family (κ .63) | ✓ | | OK |
+| cod_gap_int | §4.2 mechanism | `the employment gap is cited in 24–91% of losses for the three interruption cues` | `docs/final/coding_stats.json::report_summary` | 24–91% | ✓ | | OK |
+| cod_gap_par | §4.2 mechanism | `in at most 4% for parent cues without a gap` | `docs/final/coding_stats.json::report_summary` | at most 4% | ✓ | | OK |
+| cod_fam_fam | §4.2 mechanism | `family is cited in 12–64% of losses for parent cues` | `docs/final/coding_stats.json::report_summary` | 12–64% | ✓ | | OK |
+| cod_fam_nonfam | §4.2 mechanism | `never for the travel gap or the disclosure placebo` | `docs/final/coding_stats.json::report_summary` | never | ✓ | | OK |
+| cod_avail_dsq | §4.2 mechanism | `(39–52% of interruption losses)` | `docs/final/coding_stats.json::report_summary` | 39–52% | ✓ | | OK |
+| cod_avail_hl | §4.2 mechanism | `(≤ 15%)` | `docs/final/coding_stats.json::report_summary` | ≤ 15% | ✓ | | OK |
+| cod_irr_losing | §4.2 mechanism | `Qwen 90%, Haiku 69%, Luna 56%, DeepSeek 53%` | `docs/final/coding_stats.json::report_summary` | Qwen 90%, Haiku 69%, Luna 56%, DeepSeek 53% | ✓ | | OK |
+| cod_irr_won_hl | §4.2 mechanism | `(64%, 50%)` | `docs/final/coding_stats.json::report_summary` | (64%, 50%) | ✓ | | OK |
+| cod_irr_won_dsq | §4.2 mechanism | `(19% and 42% when the parent wins)` | `docs/final/coding_stats.json::report_summary` | (19% and 42% when the parent wins) | ✓ | | OK |
+| cod_haiku_protected | §4.2 mechanism | `protected characteristics 12pp more often for mothers, Holm` | `docs/final/coding_stats.json::report_summary.haiku_protected_diff_pp` | 12pp more often for mothers, Holm | ✓ | | OK |
+| spend_experiments | §2.1 | `$188.52` | `docs/final/study_totals.json::grand_total.cost_excl_coding` | $188.52 | ✓ | | OK |
+| spend_coding | §2.1 | `$0.66 for rationale coding` | `docs/final/study_totals.json::grand_total.coding_cost` | $0.66 for rationale coding | ✓ | | OK |
+| spend_total | Appendix E | `$189.18 incl. coding` | `docs/final/study_totals.json::grand_total.cost_usd` | $189.18 incl. coding | ✓ | | OK |
 
-**34/34 claims verified.**
+**50/50 claims verified.**

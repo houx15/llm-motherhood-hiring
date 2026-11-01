@@ -222,6 +222,50 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     res = _analyze(load_coded(topup=True))          # harmonized (primary)
     res_old = _analyze(load_coded(topup=False))     # original mixed-regime (appendix)
+    # ---- Round 12: single-source scalars for the §4.2 mechanism paragraph ----
+    import math
+
+    def _r(x):
+        return int(math.floor(x * 100 + 0.5))  # round-half-up
+
+    INT3 = ["gap_travel", "gap_parental_only", "parent_gap"]
+    FAM3 = ["parent", "parent_committed", "parent_gap"]
+    summ = {}
+    ks = res["f1a_self_coding"]
+    retained = ["gap", "availability", "family", "disclosure_irrelevant",
+                "gap_reason_quality", "protected_mention"]
+    summ["kappa_retained_min"] = min(ks["overall"][c] for c in retained if c in ks["overall"])
+    summ["kappa_retained_max"] = max(ks["overall"][c] for c in retained if c in ks["overall"])
+    summ["kappa_qualifications"] = ks["overall"].get("qualifications")
+    summ["kappa_gender"] = ks["overall"].get("gender")
+    summ["kappa_other_availability"] = ks["other_written"]["availability"]["kappa"]
+    summ["kappa_other_family"] = ks["other_written"]["family"]["kappa"]
+    gap_int = [res["shares_losing"][mk][c]["gap"]["share"] for mk in res["shares_losing"] for c in INT3]
+    summ["gap_interruption_min_pct"] = _r(min(gap_int))
+    summ["gap_interruption_max_pct"] = _r(max(gap_int))
+    gap_par = [res["shares_losing"][mk][c]["gap"]["share"] for mk in res["shares_losing"]
+               for c in ["parent", "parent_committed"]]
+    summ["gap_parent_max_pct"] = _r(max(gap_par))
+    fam_fam = [res["shares_losing"][mk][c]["family"]["share"] for mk in res["shares_losing"] for c in FAM3]
+    summ["family_family_min_pct"] = _r(min(fam_fam))
+    summ["family_family_max_pct"] = _r(max(fam_fam))
+    fam_non = [res["shares_losing"][mk][c]["family"]["share"] for mk in res["shares_losing"]
+               for c in ["gap_travel", "personal"]]
+    summ["family_nonfamily_max_pct"] = _r(max(fam_non))
+    av_ds = [res["shares_losing"]["deepseek"][c]["availability"]["share"] for c in INT3]
+    av_qw = [res["shares_losing"]["qwen38"][c]["availability"]["share"] for c in INT3]
+    summ["avail_ds_qwen_min_pct"] = _r(min(av_ds + av_qw))
+    summ["avail_ds_qwen_max_pct"] = _r(max(av_ds + av_qw))
+    av_hl = [res["shares_losing"][mk][c]["availability"]["share"]
+             for mk in ["claude", "gpt6"] for c in INT3]
+    summ["avail_haiku_luna_max_pct"] = _r(max(av_hl))
+    summ["irr_losing_pct"] = {mk: _r(v["losing"]["share"]) for mk, v in res["f1f_irrelevant"].items()}
+    summ["irr_won_pct"] = {mk: _r(v["won"]["share"]) for mk, v in res["f1f_irrelevant"].items()}
+    pm = res["f1g_gender"]["claude"]["protected_mention"]
+    summ["haiku_protected_diff_pp"] = _r(pm["diff"])  # diff is a proportion
+    summ["haiku_protected_holm"] = pm.get("holm")
+    res["report_summary"] = summ
+
     res["appendix_original_sample"] = {
         "shares_losing": res_old.get("shares_losing", {}),
         "f1e_alignment": res_old.get("f1e_alignment", {}),

@@ -204,3 +204,13 @@ claims check min *and* max and which model holds each.
 says coding calls are excluded.
 
 **R11-5** Run `audit reproduce` + `pytest`; list remaining claim mismatches.
+
+## Round 12 (2026-10-31) — after 04084cd
+Verified: harmonized coding sample, amplification nulls, claims 34/34. Reviewer added
+the §4.2 "What the models say (exploratory)" paragraph, Appendix E′, and corrected
+§2.1/Appendix E spend ($188.52 experiments + $0.66 coding = $189.18). For opencode:
+1. Register claims for the new paragraph (κ values; 24–91%, ≤4%, 12–64%, 39–52%,
+   ≤15%; irrelevant shares 90/69/56/53 and 64/50/19/42; Haiku protected +12pp, Holm
+   .02) and for the §2.1/Appendix E spend figures; run the checker.
+2. Add the coder prompt's code definitions to `docs/final/coding_tables.md` as a
+   codebook section (currently absent).

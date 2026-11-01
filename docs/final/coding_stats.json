@@ -3439,6 +3439,37 @@
    }
   }
  },
+ "report_summary": {
+  "kappa_retained_min": 0.71,
+  "kappa_retained_max": 0.93,
+  "kappa_qualifications": 0.02,
+  "kappa_gender": 0.31,
+  "kappa_other_availability": 0.68,
+  "kappa_other_family": 0.63,
+  "gap_interruption_min_pct": 24,
+  "gap_interruption_max_pct": 91,
+  "gap_parent_max_pct": 4,
+  "family_family_min_pct": 12,
+  "family_family_max_pct": 64,
+  "family_nonfamily_max_pct": 0,
+  "avail_ds_qwen_min_pct": 39,
+  "avail_ds_qwen_max_pct": 52,
+  "avail_haiku_luna_max_pct": 15,
+  "irr_losing_pct": {
+   "claude": 69,
+   "deepseek": 53,
+   "gpt6": 56,
+   "qwen38": 90
+  },
+  "irr_won_pct": {
+   "claude": 64,
+   "deepseek": 19,
+   "gpt6": 50,
+   "qwen38": 42
+  },
+  "haiku_protected_diff_pp": 12,
+  "haiku_protected_holm": 0.020565
+ },
  "appendix_original_sample": {
   "shares_losing": {
    "claude": {
