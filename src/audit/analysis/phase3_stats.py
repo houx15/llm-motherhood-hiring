@@ -30,8 +30,8 @@ def _tables_for(model_key: str, phase3_only: bool = True) -> dict[str, pd.DataFr
         out = {}
         for k, df in tabs.items():
             if "run_id" in df.columns:
-                # keep only phase-3 runs (plan phase recorded in run dir name)
-                sub = df[df["run_id"].str.contains("phase3")]
+                from .select import phase3_ids
+                sub = df[df["call_id"].isin(phase3_ids())]
                 if len(sub):
                     out[k] = sub
         return out
@@ -322,9 +322,9 @@ def drift(model_key: str) -> pd.DataFrame:
     old = build_tables(None, model_key=model_key).get("e1")
     if new is None or old is None:
         return pd.DataFrame()
-    old = old[~old.run_id.str.contains("phase3")]
-    new = new[(new.run_id.str.contains("phase3")) & new.occupation_id.isin(o20)
-              & ~new.run_id.str.contains("phase3_pilot|phase3_lawyer")]
+    from .select import main_run_ids, phase3_ids
+    old = old[old.call_id.isin(main_run_ids())]
+    new = new[new.call_id.isin(phase3_ids()) & new.occupation_id.isin(o20)]
     rows = []
     for gender in ("female", "male"):
         for fam in ("none", "parent"):

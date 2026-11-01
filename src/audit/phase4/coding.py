@@ -19,6 +19,7 @@ from pathlib import Path
 import pandas as pd
 
 from audit.analysis.etl import load_clean
+from audit.analysis.select import phase3_ids as _phase3_ids
 from audit.budget import BudgetGuard, price_for
 from audit.client import OpenRouterClient
 from audit.config import ROOT, RUNS_DIR, load_models
@@ -76,7 +77,7 @@ def build_topup_sample(n_per_cell: int = 50) -> pd.DataFrame:
     e2 = load_clean("e2")
     e2 = e2[e2.rationale.notna() & (e2.rationale.astype(str).str.len() > 20)].copy()
     sub = e2[
-        e2.run_id.str.contains("phase3")
+        e2.call_id.isin(_phase3_ids())
         & ~e2.occupation_id.isin(O8_IDS)
         & e2.cue_level.isin(["name_field", "initial_field"])
         & e2.contrast.isin(["parent", "parent_committed", "parent_gap"])
@@ -103,7 +104,8 @@ def build_sample() -> pd.DataFrame:
     rng = random.Random(20261030)
     e2 = load_clean("e2")
     e2 = e2[e2.rationale.notna() & (e2.rationale.astype(str).str.len() > 20)].copy()
-    e2["p4"] = e2.run_id.str.contains("phase4")
+    from audit.analysis.select import phase4_ids as _p4ids
+    e2["p4"] = e2.call_id.isin(_p4ids())
     rows = []
     contrasts_main = ["parent", "parent_committed", "parent_gap"]
     contrasts_p3 = ["personal", "gap_travel", "gap_parental_only"]
@@ -114,7 +116,7 @@ def build_sample() -> pd.DataFrame:
             if con in contrasts_main:
                 sub = sub[~sub.p4 & (sub.cue_level == "name")]
             else:
-                sub = sub[sub.p4 | sub.run_id.str.contains("phase3")]
+                sub = sub[sub.call_id.isin(_phase3_ids()) | sub.p4]
                 sub = sub[sub.cue_level.isin(["name_field", "initial_field"])]
                 sub = sub[~sub.occupation_id.isin(
                     {"childcare_worker", "electrician", "emt_paramedic", "health_services_manager",

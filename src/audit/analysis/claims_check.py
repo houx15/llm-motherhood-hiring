@@ -167,6 +167,28 @@ def _fmt(rule: str, v) -> str | None:
         return f"${v:.2f} for rationale coding"
     if rule == "usd_2dp_incl":
         return f"${v:.2f} incl. coding"
+    if rule == "noise_pred_obs_lead2":
+        p_ = f"{v['predicted_P']:.2f}".lstrip("0")
+        o_ = f"{v['observed_P']:.2f}".lstrip("0")
+        return f"predicted .{p_.replace('.', '')}, observed .{o_.replace('.', '')}"
+    if rule == "ms_dg_row_qwen":
+        cells = v
+        get = lambda c: f"{cells[c]['p_woman']:.3f}".lstrip("0")
+        return (f"| Qwen | childless / parent | {get('gender_none@name')} / {get('gender_parent@name')} | "
+                f"{get('gender_none@name_field')} / {get('gender_parent@name_field')} | "
+                f"{get('gender_none@initial_field')} / {get('gender_parent@initial_field')} |")
+    if rule == "ms_dg_row_ds":
+        cells = v
+        get = lambda c: f"{cells[c]['p_woman']:.3f}".lstrip("0")
+        return (f"| DeepSeek | childless / parent | {get('gender_none@name')} / {get('gender_parent@name')} | "
+                f"{get('gender_none@name_field')} / {get('gender_parent@name_field')} | "
+                f"{get('gender_none@initial_field')} / {get('gender_parent@initial_field')} |")
+    if rule == "ms_dg_row_luna":
+        cells = v
+        get = lambda c: f"{cells[c]['p_woman']:.3f}".lstrip("0")
+        return (f"| Luna | childless / parent | {get('gender_none@name')} / {get('gender_parent@name')} | "
+                f"{get('gender_none@name_field')} / {get('gender_parent@name_field')} | "
+                f"{get('gender_none@initial_field')} / {get('gender_parent@initial_field')} |")
     if rule == "minmax_lead2":
         vals = [float(f"{x:.2f}") for x in v]
         return f"{min(vals):.2f}–{max(vals):.2f}".replace("0.", ".")
@@ -176,11 +198,19 @@ def _fmt(rule: str, v) -> str | None:
 def run_claims() -> list[dict]:
     claims = yaml.safe_load((ROOT / "docs/report/claims.yaml").read_text())["claims"]
     report = " ".join(REPORT.read_text().split())  # wrap-insensitive
+    manuscripts = {}
     results = []
     for c in claims:
         rendered, rule, src = c["rendered"], c["rule"], c["source"]
         norm = lambda t: " ".join(t.replace("*", "").split())
+        target = c.get("target")
         present = norm(rendered) in norm(report) or " ".join(rendered.split()) in report
+        if target and present:
+            # also require presence in the target file (manuscript)
+            if target not in manuscripts:
+                tp = Path(target)
+                manuscripts[target] = " ".join(tp.read_text().split()) if tp.exists() else ""
+            present = norm(rendered) in norm(manuscripts[target])
         expected = _fmt(rule, _fetch(src)) if rule != "pregnancy_interview_pp" else "−9.4pp"
         # numeric agreement: expected substring inside rendered
         agree = expected is not None and expected.replace("*", "") in rendered.replace("**", "")

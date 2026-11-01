@@ -634,3 +634,9 @@ Part 2 report edits (Draft 6). Found pre-existing errors: Haiku interruption −
 (source −18.4pp); disclosure "3–4pp" ignored Haiku +3.7pp. Coding sample mixes
 system-prompt arms and rendering regimes (R11-1); amplification ratio defined for
 opposite-sign Haiku (R11-2); claims check upgraded to cell level (R11-3).
+
+## Round 13 (2026-10-31) — manuscript draft 1
+docs/paper/manuscript.md drafted (sociology framing). Report fix: H-C1 wording
+overclaimed ("DeepSeek/Luna equivalent at ±5pp"); DeepSeek cert/women −4.0pp is not
+equivalent (Holm p .14) — §4.6 and §5.3 reworded. For opencode: register manuscript
+numbers in claims.yaml (second target file) and generate Tables 1–6 for the manuscript.

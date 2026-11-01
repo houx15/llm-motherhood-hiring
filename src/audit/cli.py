@@ -110,6 +110,7 @@ def reproduce() -> None:
         ["uv", "run", "python", "-m", "audit.analysis.disparate_impact"],
         ["uv", "run", "python", "-m", "audit.analysis.claims_check"],
         ["uv", "run", "audit", "figures"],
+        ["uv", "run", "python", "docs/paper/make_figures.py"],
     ]
     for step in steps:
         print(f"[reproduce] {' '.join(step[2:])}")

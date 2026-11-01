@@ -214,3 +214,44 @@ the §4.2 "What the models say (exploratory)" paragraph, Appendix E′, and corr
    .02) and for the §2.1/Appendix E spend figures; run the checker.
 2. Add the coder prompt's code definitions to `docs/final/coding_tables.md` as a
    codebook section (currently absent).
+
+## Round 14 (2026-10-31) — MUST: run_id substring filters remain in phase-3 modules
+
+The R9-1 bug pattern survives outside report_stats. `round3.py`, `round5.py`,
+`round6.py`, `phase3_stats.py`, `phase4/coding.py` select the main run with
+`~run_id.str.contains("phase3")`, which now also admits **phase-4 rows (all three
+system-prompt arms)** and phase-3 repair runs (`repair2-*`). Evidence: round6
+`noise_model2` gives Haiku observed P(parent) = .262 vs main-run .233 (phase-4
+Haiku parent/no-prompt is .266). Affected: amplification + noise model + tie-breaker
+(report §4.1, manuscript §4.1, Fig 2), mother–father main (§4.3 table), drift,
+possibly occupation regression and E3 phase-3 comparisons.
+1. Add `audit.analysis.select` with `main_run(df)`, `phase3(df)`, `phase4(df, arm=None)`
+   based on plan/call-id membership (as report_stats does) and replace every
+   `run_id.str.contains(...)` selection in src/audit (grep must return nothing).
+2. Add a test that fails if `str.contains("phase` appears in src/audit/analysis.
+3. Re-run `audit reproduce`; produce `docs/final/r14_old_vs_new.md` (key, old, new)
+   for round3/5/6 and phase3 stats; flag |Δ| ≥ .01.
+4. Re-run claims check; list changed report/manuscript numbers (do not edit prose).
+5. Manuscript figures: `docs/paper/make_figures.py` (reviewer) reads only JSON; add it
+   to `audit reproduce` so Fig 2 refreshes after the fix.
+6. Register manuscript numbers in claims.yaml (second target `docs/paper/manuscript.md`),
+   and the corrected §4.4 direct-gender table (report Qwen/DeepSeek/Luna cells were
+   stale vs round3_stats.json; reviewer updated them 2026-10-31).
+
+## Round 15 (2026-11-01) — refusals and missing choices as outcomes (no new calls)
+
+Reviewer tally of first-attempt E2 rows (repairs excluded): Haiku refusals are rare
+overall but concentrated in family/gender cells (phase 3: parent_gap 4.9%,
+gender_parent 5.4%, parent 2.7% vs placebos ≈0.1%; main run 0.8–1.5%). Qwen's
+unparseable/no-choice rate is larger and also condition-correlated (main run
+parent_gap 20.8% vs phase-3 travel 8.4%). Because repair-saved rows are excluded,
+choice estimates condition on answering. Required:
+1. Table per model × contrast × phase: n, refusal %, parse-fail %, no-valid-choice %,
+   with pair-clustered CIs; test whether rates differ between cued and placebo cells.
+2. Worst-case (Manski) bounds for each headline E2 cell: P_lo = P·(1−m),
+   P_hi = P·(1−m) + m (m = missing share), and the same for the decomposition
+   contrasts. Report whether any bound crosses .50 or changes a sign/conclusion.
+3. Treat refusal as an outcome: P(refuse) by cue and gender level for Haiku,
+   alongside salary withholding.
+4. Sensitivity: headline estimates with Haiku excluded (pooled statements only).
+Outputs: docs/final/missingness.md + .json; claims registered.

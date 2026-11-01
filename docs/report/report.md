@@ -21,7 +21,7 @@ interruption penalty (10.5–26.0pp) plus a family-signal penalty (10.6–17.4pp
 the "parental" label itself never adds a penalty. No fatherhood bonus exists.
 Vendor-specific gendered behaviors layer on top — pro-woman preference
 activating under explicit gender in one model, an anti-mother shift and
-pregnancy salary-withholding (19.8%, denying interviews) in another, exact
+pregnancy salary-withholding (19.8%, denying interviews) in another, near
 parity in a third. Because caregiving gaps are carried mostly by women, a
 gender-neutral-in-form rule is not gender-neutral in effect. Comparative-task
 testing, abstention as an outcome, and implicit gender-knowledge checks are
@@ -65,8 +65,8 @@ Haiku slightly favors it (+3.7pp). There is no fatherhood bonus anywhere. Becaus
 caregiving gaps and family signals are carried disproportionately by women in
 real applicant pools, a gender-neutral-in-form rule is not gender-neutral in
 effect. **Finding 3 — thin, vendor-specific gendered behaviors layer on top.**
-In direct woman-vs-man choices, Qwen is at parity at every level (equivalence
-at ±5pp confirmed); DeepSeek shows a small robust pro-woman preference (+3.6
+In direct woman-vs-man choices, Qwen is within ±5pp of parity at every level
+(equivalence confirmed; one cell shows a 1.8pp tilt to women); DeepSeek shows a small robust pro-woman preference (+3.5
 to +4.8pp, Holm-corrected); Luna's pro-woman preference activates only when
 gender is explicit (.58 → .65 for mother-vs-father; its field response exceeds
 Qwen's and DeepSeek's by 5.8–7.0pp, pair-matched); Haiku moves the opposite way
@@ -419,21 +419,21 @@ significance.
 
 ### 4.4 Explicit gender: vendor-specific preferences
 
-**Qwen is at parity everywhere; DeepSeek has a small robust pro-woman tilt;
+**Qwen is within ±5pp of parity everywhere; DeepSeek has a small robust pro-woman tilt;
 Luna's pro-woman preference appears only when gender is explicit; Haiku's
 disappears.** Direct woman-vs-man choices (same family status both sides;
 parity .50; 56 unordered pairs; Holm over six cells per model; phase 3):
 
 | model | cell | names (L0) | field (L1) | initials+field (L2) |
 | --- | --- | --- | --- | --- |
-| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |
-| DeepSeek | childless / parent | .514 / **.536** | **.540 / .541** | **.538 / .548** |
-| Luna | childless / parent | **.522 / .578** | **.587 / .646** | **.575 / .634** |
+| Qwen | childless / parent | .505 / .503 | .493 / .513 | **.518** / .491 |
+| DeepSeek | childless / parent | .514 / **.535** | **.540 / .540** | **.538 / .548** |
+| Luna | childless / parent | **.522 / .577** | **.587 / .647** | **.575 / .634** |
 | Haiku | childless / parent | **.528 / .544** | .526 / .498 | .513 / .471 |
 
-(bold = Holm-corrected difference from parity; Figure 12.) Qwen's parity is
+(bold = Holm-corrected difference from parity; Figure 12.) Qwen's near-parity is
 not merely non-rejection: TOST confirms equivalence at ±5pp in every cell
-(e.g., 90% CI [−1.4, +0.6]). The vendor differences are tested directly,
+(largest 90% CI [+0.8, +2.9]pp, childless at L2, the one Holm-significant cell). The vendor differences are tested directly,
 pair-matched across the same 56 résumé pairs: Luna's field response exceeds
 Qwen's by +7.0pp (childless) and +5.8pp (parent-vs-father) and DeepSeek's by
 +3.9 to +6.4pp (t 2.5–4.5); Haiku's field response on the parent contrast is
@@ -479,7 +479,7 @@ Luna +5.0pp (parent) / −0.7pp (gap); **Haiku +6.6/+12.2pp** (reduced, t = 2.9/
 5.6); **Qwen −4.7/−5.3pp** (deepened, t = −2.3/−3.4). Layer 1 survives the
 standard mitigation everywhere — and the direction is vendor-specific,
 including a fairness *backfire*. **(H-B2) Layer 2 responds.** Luna's
-mother-vs-father preference replicates (.640 vs phase-3's .646) and falls to
+mother-vs-father preference replicates (.640 vs phase-3's .647) and falls to
 .557 under the fairness prompt; Haiku's moves from .498 to .457. **(H-B3)
 Targeted instruction.** Adding "do not penalize employment gaps taken for
 caregiving" cuts the interruption penalty by 4–14pp in all four models —
@@ -488,10 +488,12 @@ n.s., Qwen −3.0pp n.s.), and no arm approaches parity. Instructions can
 reach the availability-inference component; the normative bundle resists.
 
 **Neutral gap labels (H-C1).** "Job search after company closure" and
-"Full-time certification program" (same dates) cost the same as or *less*
-than "Career break — extended travel" (DeepSeek/Luna equivalent at ±5pp;
-Qwen penalizes travel ~5pp *more* than the neutral labels; Haiku's point
-estimates tiny, CIs wide). Travel was not a stigmatized reference; the
+"Full-time certification program" (same dates) were not more costly
+than "Career break — extended travel": no neutral label is significantly
+more costly than travel after Holm; Qwen penalizes travel 4.3–5.4pp *more*
+than both neutral labels (Holm p < .01); 7 of the other 12 label × gender
+contrasts are equivalent at ±5pp; the largest opposite-direction estimate is
+DeepSeek's certification label for women (−4.0pp, Holm p = .14). Travel was not a stigmatized reference; the
 label conclusion of §4.2 stands and strengthens.
 
 ### 4.7 From caregiver penalty back to a gender gap (scenario)
@@ -626,8 +628,8 @@ shortlist shortfall ranges from .22 (Luna) to .75 (Haiku) (≈3.4×).
 
 The label contrast uses "extended travel" as its unrecognized-gap reference —
 a recognized but leisure-coded reason. Phase 4 fielded "job search after company
-closure" and "full-time certification program" with the same dates; they cost
-the same as or less than travel (§4.6), so travel is not a stigmatized
+closure" and "full-time certification program" with the same dates; neither
+was significantly more costly than travel (§4.6), so travel is not a stigmatized
 reference, but other gap reasons remain untested. Cues are deliberately strong and explicit; real-world signals
 (gaps, volunteer lines, references) are weaker, and the leave gap is the most
 ecologically valid. Materials are US-market, English, text-only, race held

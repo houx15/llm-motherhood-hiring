@@ -45,7 +45,8 @@ def e2_clustered(e2: pd.DataFrame) -> dict:
     degeneracy with few clusters). Gender differences via pair-matched t-tests."""
     from scipy import stats as sps
 
-    d = e2[~e2.run_id.str.contains("phase3|phase4")].copy()  # main run only
+    from .select import main_run
+    d = main_run(e2).copy()  # main run only (call-id membership)
     d["parent_chosen"] = pd.to_numeric(d["parent_chosen"], errors="coerce")
     d = d.dropna(subset=["parent_chosen"])
     d["cell"] = d["contrast"].astype(str) + "|" + d["gender"].astype(str)
@@ -464,7 +465,8 @@ def main():
     # report_stats computes MAIN-RUN statistics (its charter); phase-3/4 have
     # their own modules. Filter by plan MEMBERSHIP (run names are unreliable:
     # phase-3 repair runs are named repair2-*).
-    main_ids = _main_run_call_ids()
+    from .select import main_run_ids
+    main_ids = main_run_ids()
     for m in MODELS:
         for k in ("e1", "e2", "e3", "e4", "e1_e4"):
             if k in tables[m] and "call_id" in tables[m][k].columns:

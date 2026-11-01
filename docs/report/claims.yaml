@@ -102,3 +102,9 @@ claims:
   - {id: spend_experiments, section: "§2.1", rendered: "$188.52", source: {file: docs/final/study_totals.json, key: grand_total.cost_excl_coding}, rule: usd_2dp}
   - {id: spend_coding, section: "§2.1", rendered: "$0.66 for rationale coding", source: {file: docs/final/study_totals.json, key: grand_total.coding_cost}, rule: usd_2dp_int}
   - {id: spend_total, section: "Appendix E", rendered: "$189.18 incl. coding", source: {file: docs/final/study_totals.json, key: grand_total.cost_usd}, rule: usd_2dp_incl}
+  # ---- Round 14: manuscript targets (docs/paper/manuscript.md) ----
+  - {id: ms_amplification, section: "manuscript 4.1", rendered: "3.6–34×", source: {file: docs/phase3/round6_stats.json, key: "amplification.*.parent*.amplification_ratio"}, rule: minmax_1dp_nonnull, target: docs/paper/manuscript.md}
+  - {id: ms_haiku_noise_parent, section: "manuscript 4.1", rendered: "predicted .75, observed .23", source: {file: docs/phase3/round6_stats.json, key: noise_model2.haiku.parent}, rule: noise_pred_obs_lead2, target: docs/paper/manuscript.md}
+  - {id: ms_dg_qwen_name, section: "manuscript 4.4 table", rendered: "| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.qwen.parity"}, rule: ms_dg_row_qwen, target: docs/paper/manuscript.md}
+  - {id: ms_dg_ds_name, section: "manuscript 4.4 table", rendered: "| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.deepseek.parity"}, rule: ms_dg_row_ds, target: docs/paper/manuscript.md}
+  - {id: ms_dg_luna_name, section: "manuscript 4.4 table", rendered: "| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.luna.parity"}, rule: ms_dg_row_luna, target: docs/paper/manuscript.md}

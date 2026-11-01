@@ -3,32 +3,32 @@
 | id | section | rendered | source | expected | in report | matches | status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | abs_calls | abstract | `616,419` | `docs/final/study_totals.json::grand_total.calls_excl_coding` | 616,419 | ✓ | | OK |
-| abs_amplification | abstract | `3.5–38×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.5–38× | ✓ | | OK |
+| abs_amplification | abstract | `3.5–38×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✓ | | MISMATCH |
 | abs_share_max | abstract | `up to 77% of shortlist probability` | `docs/report/stats.json::models.*.e3_fe.*.adjusted_ratio` | 77% | ✓ | | OK |
 | abs_haiku_fit | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e1_gaps_women.overall_fit.parent_minus_none` | None | ✓ | | OK |
 | abs_haiku_choice | abstract | `scoring parents *higher* yet choosing them 23% of the time` | `docs/report/stats.json::models.claude_haiku_55.e2_clustered.cells.parent|female.p` | 23% | ✓ | | OK |
 | f2_interruption | §4.2 | `costs 10.5–26.0pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_gap_travel.P` | 10.5–26.0pp | ✓ | | OK |
-| f2_bundle | §4.2 | `adds a further 10.6–17.4pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.bundle.diff` | 10.6–17.4pp | ✓ | | OK |
-| f2_parenthood | §4.2 | `7.3–19.2` | `docs/phase3/round5_stats.json::primary_decomposition.*.parenthood.diff` | 7.3–19.2 | ✓ | | OK |
-| f2_personal | §4.2 | `costs 2.9–3.5pp in DeepSeek, Luna, and Qwen` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_personal.P` | 2.9–3.5pp | ✓ | | OK |
+| f2_bundle | §4.2 | `adds a further 10.6–17.4pp` | `docs/phase3/round5_stats.json::primary_decomposition.*.bundle.diff` | 10.7–17.4pp | ✓ | | MISMATCH |
+| f2_parenthood | §4.2 | `7.3–19.2` | `docs/phase3/round5_stats.json::primary_decomposition.*.parenthood.diff` | 8.0–19.2 | ✓ | | MISMATCH |
+| f2_personal | §4.2 | `costs 2.9–3.5pp in DeepSeek, Luna, and Qwen` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_personal.P` | 2.7–3.5pp | ✓ | | MISMATCH |
 | f2_personal_haiku | §4.2 | `raises Haiku's choice share by 3.7pp` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.cell_personal.P` | 3.7pp | ✓ | | OK |
 | f2_tost | §4.2 | `7 of 8 model×cue` | `docs/phase3/round6_stats.json::equivalence.*` | 7 of 8 | ✓ | | OK |
 | dec_int_ds | §4.2 table | `−10.5pp (t −8.0)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.cell_gap_travel` | −10.5pp (t −8.0) | ✓ | | OK |
 | dec_int_haiku | §4.2 table | `−18.4pp (t −8.5)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.cell_gap_travel` | −18.4pp (t −8.5) | ✓ | | OK |
 | dec_int_luna | §4.2 table | `−26.0pp (t −7.3)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.cell_gap_travel` | −26.0pp (t −7.3) | ✓ | | OK |
-| dec_int_qwen | §4.2 table | `−22.4pp (t −8.9)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.cell_gap_travel` | −22.4pp (t −8.9) | ✓ | | OK |
+| dec_int_qwen | §4.2 table | `−22.4pp (t −8.9)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.cell_gap_travel` | −22.1pp (t −8.8) | ✓ | | MISMATCH |
 | dec_par_ds | §4.2 table | `−10.4pp [−12.8, −8.0] (t −8.5)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.parenthood` | −10.4pp [−12.8, −8.0] (t −8.5) | ✓ | | OK |
 | dec_par_haiku | §4.2 table | `−19.2pp [−23.4, −15.0] (t −8.9)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.parenthood` | −19.2pp [−23.4, −15.0] (t −8.9) | ✓ | | OK |
 | dec_par_luna | §4.2 table | `−12.1pp [−16.3, −7.9] (t −5.6)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.parenthood` | −12.1pp [−16.3, −7.9] (t −5.6) | ✓ | | OK |
-| dec_par_qwen | §4.2 table | `−7.3pp [−10.3, −4.3] (t −4.7)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.parenthood` | −7.3pp [−10.3, −4.3] (t −4.7) | ✓ | | OK |
-| dec_lab_ds | §4.2 table | `+1.7pp [+0.5, +2.9] (t 2.7)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.label` | +1.7pp [+0.5, +2.9] (t 2.7) | ✓ | | OK |
+| dec_par_qwen | §4.2 table | `−7.3pp [−10.3, −4.3] (t −4.7)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.parenthood` | −8.0pp [−11.1, −4.9] (t −5.1) | ✓ | | MISMATCH |
+| dec_lab_ds | §4.2 table | `+1.7pp [+0.5, +2.9] (t 2.7)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.label` | +1.7pp [+0.5, +2.9] (t 2.8) | ✓ | | MISMATCH |
 | dec_lab_haiku | §4.2 table | `−1.1pp [−3.2, +0.9] (t −1.1)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.label` | −1.1pp [−3.2, +0.9] (t −1.1) | ✓ | | OK |
 | dec_lab_luna | §4.2 table | `+6.5pp [+3.7, +9.2] (t 4.6)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.label` | +6.5pp [+3.7, +9.2] (t 4.6) | ✓ | | OK |
-| dec_lab_qwen | §4.2 table | `+6.7pp [+4.9, +8.5] (t 7.3)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.label` | +6.7pp [+4.9, +8.5] (t 7.3) | ✓ | | OK |
-| dec_bun_ds | §4.2 table | `−10.6pp [−12.7, −8.6] (t −10.0)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.bundle` | −10.6pp [−12.7, −8.6] (t −10.0) | ✓ | | OK |
+| dec_lab_qwen | §4.2 table | `+6.7pp [+4.9, +8.5] (t 7.3)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.label` | +6.6pp [+4.8, +8.4] (t 7.2) | ✓ | | MISMATCH |
+| dec_bun_ds | §4.2 table | `−10.6pp [−12.7, −8.6] (t −10.0)` | `docs/phase3/round5_stats.json::primary_decomposition.deepseek.bundle` | −10.7pp [−12.7, −8.6] (t −10.0) | ✓ | | MISMATCH |
 | dec_bun_haiku | §4.2 table | `−17.4pp [−20.2, −14.5] (t −11.8)` | `docs/phase3/round5_stats.json::primary_decomposition.haiku.bundle` | −17.4pp [−20.2, −14.5] (t −11.8) | ✓ | | OK |
 | dec_bun_luna | §4.2 table | `−11.5pp [−15.4, −7.5] (t −5.7)` | `docs/phase3/round5_stats.json::primary_decomposition.luna.bundle` | −11.5pp [−15.4, −7.5] (t −5.7) | ✓ | | OK |
-| dec_bun_qwen | §4.2 table | `−12.1pp [−14.7, −9.5] (t −9.2)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.bundle` | −12.1pp [−14.7, −9.5] (t −9.2) | ✓ | | OK |
+| dec_bun_qwen | §4.2 table | `−12.1pp [−14.7, −9.5] (t −9.2)` | `docs/phase3/round5_stats.json::primary_decomposition.qwen.bundle` | −12.3pp [−14.8, −9.8] (t −9.7) | ✓ | | MISMATCH |
 | e2_pm_ds | §4.1 table | `| .357 | .233 | .297 | .387 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent|female.p` | | .357 | .233 | .297 | .387 | | ✓ | | OK |
 | e2_pf_ds | §4.1 table | `| .349 | .276 | .294 | .398 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent|male.p` | | .349 | .276 | .294 | .398 | | ✓ | | OK |
 | e2_cm_ds | §4.1 table | `| .419 | .266 | .228 | .407 |` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_committed|female.p` | | .419 | .266 | .228 | .407 | | ✓ | | OK |
@@ -52,5 +52,27 @@
 | spend_experiments | §2.1 | `$188.52` | `docs/final/study_totals.json::grand_total.cost_excl_coding` | $188.52 | ✓ | | OK |
 | spend_coding | §2.1 | `$0.66 for rationale coding` | `docs/final/study_totals.json::grand_total.coding_cost` | $0.66 for rationale coding | ✓ | | OK |
 | spend_total | Appendix E | `$189.18 incl. coding` | `docs/final/study_totals.json::grand_total.cost_usd` | $189.18 incl. coding | ✓ | | OK |
+| ms_amplification | manuscript 4.1 | `3.6–34×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✗ | | MISMATCH |
+| ms_haiku_noise_parent | manuscript 4.1 | `predicted .75, observed .23` | `docs/phase3/round6_stats.json::noise_model2.haiku.parent` | predicted .75, observed .23 | ✗ | | MISMATCH |
+| ms_dg_qwen_name | manuscript 4.4 table | `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` | `docs/phase3/round3_stats.json::direct_gender.qwen.parity` | | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 | | ✗ | | MISMATCH |
+| ms_dg_ds_name | manuscript 4.4 table | `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` | `docs/phase3/round3_stats.json::direct_gender.deepseek.parity` | | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 | | ✗ | | MISMATCH |
+| ms_dg_luna_name | manuscript 4.4 table | `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` | `docs/phase3/round3_stats.json::direct_gender.luna.parity` | | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 | | ✗ | | MISMATCH |
 
-**50/50 claims verified.**
+**40/55 claims verified.**
+
+## Mismatches (for Part 2; report.md NOT edited)
+- `abs_amplification`: rendered `3.5–38×` (present; source says 3.6–34×)
+- `f2_bundle`: rendered `adds a further 10.6–17.4pp` (present; source says 10.7–17.4pp)
+- `f2_parenthood`: rendered `7.3–19.2` (present; source says 8.0–19.2)
+- `f2_personal`: rendered `costs 2.9–3.5pp in DeepSeek, Luna, and Qwen` (present; source says 2.7–3.5pp)
+- `dec_int_qwen`: rendered `−22.4pp (t −8.9)` (present; source says −22.1pp (t −8.8))
+- `dec_par_qwen`: rendered `−7.3pp [−10.3, −4.3] (t −4.7)` (present; source says −8.0pp [−11.1, −4.9] (t −5.1))
+- `dec_lab_ds`: rendered `+1.7pp [+0.5, +2.9] (t 2.7)` (present; source says +1.7pp [+0.5, +2.9] (t 2.8))
+- `dec_lab_qwen`: rendered `+6.7pp [+4.9, +8.5] (t 7.3)` (present; source says +6.6pp [+4.8, +8.4] (t 7.2))
+- `dec_bun_ds`: rendered `−10.6pp [−12.7, −8.6] (t −10.0)` (present; source says −10.7pp [−12.7, −8.6] (t −10.0))
+- `dec_bun_qwen`: rendered `−12.1pp [−14.7, −9.5] (t −9.2)` (present; source says −12.3pp [−14.8, −9.8] (t −9.7))
+- `ms_amplification`: rendered `3.6–34×` (missing from report; source says 3.6–34×)
+- `ms_haiku_noise_parent`: rendered `predicted .75, observed .23` (missing from report; source says predicted .75, observed .23)
+- `ms_dg_qwen_name`: rendered `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` (missing from report; source says | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 |)
+- `ms_dg_ds_name`: rendered `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` (missing from report; source says | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 |)
+- `ms_dg_luna_name`: rendered `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` (missing from report; source says | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 |)

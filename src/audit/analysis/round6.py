@@ -37,9 +37,11 @@ def amplification() -> dict:
     for m, k in zip(MODELS, KEYS):
         tabs = build_tables(None, model_key=m)
         e1 = tabs["e1"]
-        e1 = e1[~e1.run_id.str.contains("phase3")]
+        from .select import main_run
+        e1 = main_run(e1)
         e2 = tabs["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         # resume quality from E1 none cells, per gender
         q = e1[e1.family_code == "none"].groupby(["resume_ids", "gender"])["overall_fit"].mean()
         rows = []
@@ -95,9 +97,11 @@ def noise_model2() -> dict:
     for m, k in zip(MODELS, KEYS):
         tabs = build_tables(None, model_key=m)
         e1 = tabs["e1"]
-        e1 = e1[~e1.run_id.str.contains("phase3")]
+        from .select import main_run
+        e1 = main_run(e1)
         e2 = tabs["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         e2["pair"] = _unordered_pair(e2)
         # within-résumé sigma: SD of fit across draws within resume x condition x gender
         sd = e1.groupby(["resume_ids", "family_code", "gender"])["overall_fit"].std()
@@ -211,7 +215,8 @@ def model_contrasts() -> dict:
     gaps = {}
     for k in KEYS:
         e2 = tabs[k]["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         e2["pair"] = _unordered_pair(e2)
         e2["pc"] = pd.to_numeric(e2["parent_chosen"], errors="coerce")
         f = e2[(e2.contrast == "parent") & (e2.gender == "female")].groupby("pair")["pc"].mean()
@@ -273,7 +278,8 @@ def lpm_robustness() -> dict:
     res = {}
     for m, k in zip(MODELS, KEYS):
         e2 = build_tables(None, model_key=m)["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         e2["pc"] = pd.to_numeric(e2["parent_chosen"], errors="coerce")
         e2["pair"] = _unordered_pair(e2)
         e2["pos_a_parent"] = ((e2["childless_position"] == "B")).astype(int)

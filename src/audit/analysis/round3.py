@@ -137,8 +137,9 @@ def pronoun_check() -> dict:
         e1 = tabs["e1"]
         e1 = e1[(e1.family_code == "none") & e1.rationale.notna()].copy()
         e1["cue_level"] = e1["cue_level"].fillna("name")
-        main = e1[~e1.run_id.str.contains("phase3")]
-        p3 = e1[e1.run_id.str.contains("phase3")]
+        from .select import main_run, phase3 as sel_p3
+        main = main_run(e1)
+        p3 = sel_p3(e1)
 
         def rows(df):
             out = []
@@ -231,9 +232,12 @@ def e2_drift() -> dict:
     res = {}
     for m in MODELS:
         e2 = build_tables(None, model_key=m)["e2"]
-        main = e2[~e2.run_id.str.contains("phase3") & (e2.occupation_id != "lawyer")]
-        p3 = e2[e2.run_id.str.contains("phase3") & (e2.cue_level == "name")
-                & (~e2.occupation_id.isin(O8)) & (e2.occupation_id != "lawyer")]
+        from .select import main_run, phase3 as sel_p3
+        main = main_run(e2)
+        main = main[main.occupation_id != "lawyer"]
+        p3 = sel_p3(e2)
+        p3 = p3[(p3.cue_level == "name")
+                & (~p3.occupation_id.isin(O8)) & (p3.occupation_id != "lawyer")]
         rows = {}
         o = main[(main.contrast == "parent")]
         n_ = p3[(p3.contrast == "parent")]
@@ -262,12 +266,14 @@ def mother_father_main() -> dict:
     for m in MODELS:
         tabs = build_tables(None, model_key=m)
         e2 = tabs["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         e2["pair"] = _unordered_pair(e2)
         sal_ok = (pd.to_numeric(e2["A.starting_salary_usd"], errors="coerce").fillna(0) > 0) & \
                  (pd.to_numeric(e2["B.starting_salary_usd"], errors="coerce").fillna(0) > 0)
         e1 = tabs["e1"]
-        e1 = e1[~e1.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e1 = main_run(e1).copy()
         e1["sal"] = e1["starting_salary_usd"].where(e1["withheld"] == 0)
         entry = {}
         for con in ["parent", "parent_gap"]:

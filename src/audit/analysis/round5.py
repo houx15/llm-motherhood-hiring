@@ -38,7 +38,8 @@ def tiebreaker() -> dict:
     res = {}
     for m in MODELS:
         e2 = build_tables(None, model_key=m)["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e2 = main_run(e2).copy()
         e2["pair"] = _unordered_pair(e2)
         entry = {}
         for con in ["parent", "parent_gap"]:
@@ -75,9 +76,10 @@ def noise_model() -> dict:
     for m in MODELS:
         tabs = build_tables(None, model_key=m)
         e1 = tabs["e1"]
-        e1 = e1[~e1.run_id.str.contains("phase3")].copy()
+        from .select import main_run
+        e1 = main_run(e1).copy()
         e2 = tabs["e2"]
-        e2 = e2[~e2.run_id.str.contains("phase3")]
+        e2 = main_run(e2)
         sigma = float(e1.groupby(["family_code", "gender", "occupation_id"])["overall_fit"].std().mean())
         entry = {"sigma_within_fit": round(sigma, 2)}
         for con in ["parent", "parent_gap"]:
