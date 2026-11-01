@@ -2,10 +2,9 @@
 
 Yuxin Hou, Princeton University
 
-*Working paper, draft 3 (2026-11-01). Study 1 is complete; Study 2 is planned. Numbers
-come from the claim-checked report. Values in Section 4.1 from the amplification and
-noise-model analyses and the refusal rates in Section 4.2 are pending code fixes
-(SPEC_FINALIZE Rounds 14–15).*
+*Working paper, draft 4 (2026-11-01). Study 1 is complete; Study 2 is planned. Numbers
+come from the claim-checked analysis outputs after the Round 14–15 fixes. Main text:
+DeepSeek, Luna, Qwen; Claude Haiku in Appendix A.*
 
 ---
 
@@ -18,15 +17,15 @@ protected category (being a woman) with signals that are correlated with gender 
 not protected as such: an interruption in employment and visible family
 responsibilities. We propose that in aligned models, *protection follows the label*:
 the more directly a signal names a protected category, the more carefully models
-handle it, while correlated signals are penalized freely. Study 1, an audit of four
-widely used models (616,419 decisions, 28 occupations), unbundles the signal on
-otherwise identical résumés and places each component along this gradient. Signals
-of caregiving carry a large penalty, for mothers and fathers alike, visible only when
+handle it, while correlated signals are penalized freely. Study 1, an audit of widely
+used models (616,419 decisions, 28 occupations), unbundles the signal on otherwise
+identical résumés and places each component along this gradient. Signals of
+caregiving carry a large penalty, for mothers and fathers alike, visible only when
 applicants are compared: a parent returning from leave wins a head-to-head choice
-against an equally qualified childless applicant 11 to 31 percent of the time. The
+against an equally qualified childless applicant 19 to 31 percent of the time. The
 penalty is unchanged when all gender information is removed. Explicitly named gender
-elicits small, vendor-specific behavior—correction toward women, parity, or
-refusal—rather than a penalty. An instruction that names caregiving gaps reduces the
+elicits small, vendor-specific behavior—correction toward women or parity—rather
+than a penalty. An instruction that names caregiving gaps reduces the
 gap penalty but not the penalty on family signals it leaves unnamed. Study 2, planned,
 tests whether the gradient emerges with alignment by comparing the same open-weight
 model before and after post-training. Because women carry caregiving signals more
@@ -72,15 +71,15 @@ implied, and unchecked penalties where the signal is a correlate that no one has
 trained against. The same logic predicts how remedies work: an instruction should
 protect what it names and leave untouched what it does not.
 
-Study 1 tests these expectations in an audit of four widely used models. It unbundles
+Study 1 tests these expectations in an audit of widely used models. It unbundles
 the motherhood signal on identical résumés, varies how directly gender is conveyed,
 observes the result at the decision margins where selection happens, and tests the
 fairness instructions that deployers commonly add. The findings line up with the
 gradient. Caregiving signals carry a large penalty that falls on fathers as much as on
 mothers, is unchanged when gender information is removed, and appears only when
 applicants are compared. Explicitly named gender elicits small and vendor-specific
-behavior—correction toward women in one model, parity in another, refusal in a
-third—rather than a penalty. An instruction that names caregiving gaps reduces the
+behavior—correction toward women in one model, parity in another—rather than a
+penalty; a fourth model, reported separately, responds with refusals. An instruction that names caregiving gaps reduces the
 gap penalty but not the penalty on family signals. Study 2, which we describe as a
 planned design, asks where the gradient comes from by comparing the same open-weight
 model before and after post-training.
@@ -210,10 +209,18 @@ signals.
 
 ### 3.4 Models, materials, and inference
 
-We audit four widely available, low-cost models—DeepSeek V4.1 Flash, Claude Haiku 5.5,
-GPT-6 Luna, and Qwen 3.8 Flash—pinned to dated versions and single endpoints, with
-reasoning disabled, structured output, and no system prompt except in the remedies
-phase. The materials are 154 résumés validated as qualified for 28 occupations, 20
+We audited four widely available, low-cost models—DeepSeek V4.1 Flash, GPT-6 Luna,
+Qwen 3.8 Flash, and Claude Haiku 5.5—pinned to dated versions and single endpoints,
+with reasoning disabled, structured output, and no system prompt except in the
+remedies phase. The main text reports the first three. Claude Haiku's behavior differs
+in ways that complicate comparison: it declines to choose or to propose a salary far
+more often than the others, and its refusals are concentrated in exactly the cells
+that carry family and gender signals, so its choice estimates condition on answering
+in a way the others' do not. We therefore report it separately and in full in Appendix
+A. This is a presentation decision made after data collection; all pre-specified tests
+including Haiku are in the replication report, and Haiku's penalties are larger than
+the other models', so excluding it from the main text makes the reported penalties
+conservative. The materials are 154 résumés validated as qualified for 28 occupations, 20
 spanning occupational female share (4.7 to 97.1 percent) and wages and 8 chosen to
 weaken the correlation between female share and care work. Data were collected in
 four phases between October 14 and 30, 2026 (616,419 logged calls).
@@ -235,124 +242,138 @@ descriptive.
 
 ## 4. Study 1: Results
 
-We begin at the correlated end of the gradient, where the label account expects the
-largest effects, then move to named gender and to remedies. Differences are in
+We report results for DeepSeek, Luna, and Qwen; Claude Haiku is reported separately
+in Appendix A (Section 3.4 explains why). We begin at the correlated end of the
+gradient, where the label account expects the largest effects, then move to named
+gender, to remedies, and to variation across occupations. Differences are in
 percentage points ("points").
 
 ### 4.1 Correlated signals: a caregiver penalty
 
-*It appears where selection happens.* Family signals barely move the scores models give
-a single applicant: relative to the same résumé without the signal, the parent signals
-change women's fit ratings by at most 0.35 points on a ten-point scale and interview
-recommendations by at most 1.5 percentage points, and Haiku rates mothers 0.34 points
-*higher*. When applicants compete, the same signals are costly (Table 2). A mother
-returning from parental leave is chosen against an equally qualified childless woman
-31 percent of the time by DeepSeek, 23 by Qwen, 19 by Luna, and 11 by Haiku—the model
-that scores her higher. In shortlisting, mothers reach the shortlist at 71, 75, and 78
-percent of their childless rate with DeepSeek, Qwen, and Luna, each below the
-four-fifths threshold, and at 25 percent with Haiku. Choices are not magnified scores:
-a noise model built from each model's own rating variability predicts far smaller
-penalties than observed in seven of eight model-signal combinations (Figure 2), and
-the penalty remains 9 to 32 points among résumé pairs with clear quality differences.
+*It appears where selection happens.* Family signals barely move the scores models
+give a single applicant: relative to the same résumé without the signal, the parent
+signals change women's fit ratings by at most 0.35 points on a ten-point scale and
+interview recommendations by at most 1.5 percentage points. When applicants compete,
+the same signals are costly (Table 2). A mother returning from parental leave is
+chosen against an equally qualified childless woman 31 percent of the time by
+DeepSeek, 23 by Qwen, and 19 by Luna, against 50 percent under equal treatment. In
+shortlisting, mothers reach the shortlist at 71, 75, and 78 percent of their childless
+rate, each below the four-fifths threshold. Choices are not magnified scores. Choices
+respond to ordinary differences in résumé quality at 13 to 18 points per fit point; by
+that yardstick the family signals act like quality losses of 0.8 to 2.0 fit points,
+3.6 to 34 times their actual effect on scores. A noise model built from each model's
+own rating variability predicts much smaller penalties than observed in five of six
+model-signal combinations, by 7 to 18 points (Figure 2); the exception is DeepSeek's
+leave signal, whose choice penalty matches its score penalty.
 
 *It consists of the interruption and the family signals, not the label.* Table 3 and
 Figure 3 decompose the parent-with-leave penalty (mothers, explicit gender, 40 résumé
-pairs). An eight-month gap labeled travel costs 10.5 to 26.0 points. Calling it
-parental leave adds nothing—the label is equivalent to zero for Haiku and 1.7 to 6.7
-points *less* costly than travel for the other models—and travel was not unusually
-stigmatized: no neutral label was significantly more costly than travel after
-correction, Qwen penalized travel 4.3 to 5.4 points more than either neutral label,
-and the largest estimate in the other direction was DeepSeek's certification label for
-women (4.0 points, Holm p = .14). Adding children and parenting activity to a résumé
-that already carries a labeled leave costs a further 10.6 to 17.4 points, and
-parenthood without a gap, net of the personal placebo, costs 7.3 to 19.2 points.
-Commitment evidence does not restore equal treatment (Table 2). The family-signal and
-parenthood contrasts survive Holm correction in 23 of 24 tests across six alternative
-samples, and "greedy" availability language in job ads deepens the leave penalty for
-some model–gender combinations, as an availability norm would imply (Section 4.4).
+pairs). An eight-month gap labeled travel costs 10.5 (DeepSeek) to 26.0 points (Luna).
+Calling the same gap parental leave adds nothing: it is 1.7 to 6.6 points *less*
+costly than travel. Travel was not unusually stigmatized. When it was replaced by
+company closure or certification, no neutral label was significantly more costly than
+travel after correction; Qwen penalized travel 4.3 to 5.4 points more than either
+neutral label; and the largest estimate in the other direction was DeepSeek's
+certification label for women (4.0 points, Holm p = .14). Adding children and
+parenting activity to a résumé that already carries a labeled leave costs a further
+10.7 to 12.3 points, and parenthood without a gap, net of the personal placebo, costs
+8.0 to 12.1 points. The personal placebo itself costs only 2.7 to 3.5 points.
+Commitment evidence does not restore equal treatment: it raises mothers' choice share
+modestly for DeepSeek and Qwen and lowers it for Luna (Table 2).
 
-*It does not depend on gender.* Moving from implied gender to no gender at all changes
-nothing. In the added occupations, the parent penalty with gendered names differs from
-the penalty under initials only by +0.6 (DeepSeek), −0.5 (Haiku), −1.3 (Luna), and
-+0.3 points (Qwen); in seven of eight model-signal combinations the difference is
-statistically equivalent to zero within ±5 points, and in the eighth (DeepSeek's leave
-signal) the interval reaches 5.6 (Figure 4). Shortlisting ratios likewise barely move
-across the four levels of gender information. Fathers are chosen below equal treatment
-in every cell of every model—a father returning from leave is chosen 31, 26, 18, and
-13 percent of the time by DeepSeek, Qwen, Luna, and Haiku—and there is no fatherhood
-bonus. Mother–father differences are small and not significant after correction in
-three models (Table 4); Haiku chooses mothers 4.4 points less often than fathers
-(Holm p = .02).
+*It does not depend on gender.* Figure 4 asks what happens when the model can no longer
+know the applicant's gender. In the added occupations, the parent penalty with
+gendered names and the penalty under initials only are almost identical (panel a):
+they differ by +0.6 (DeepSeek), −1.3 (Luna), and +0.7 points (Qwen). Because a
+nonsignificant difference could simply reflect low power, we test equivalence (panel b):
+in five of six model-signal combinations the 90 percent interval lies inside ±5 points,
+so the difference is statistically equivalent to zero; in the sixth, DeepSeek's leave
+signal, it reaches 5.6. The design could detect differences of 3.0 to 5.4 points. The
+absence of a difference is the result: removing gender leaves the penalty intact.
+Fathers tell the same story. They are chosen below equal treatment in every cell—a
+father returning from leave is chosen 31, 26, and 18 percent of the time by DeepSeek,
+Qwen, and Luna—and there is no fatherhood bonus. Mother–father differences in choice
+are within 2.6 points and not significant after correction in any of the three models
+(Table 4).
 
 *The models' explanations follow the decomposition (exploratory).* In LLM-coded
-explanations of pairwise choices (DeepSeek V4.1 Flash coder, Qwen 3.8 Flash second
+explanations of pairwise choices (DeepSeek V4.1 Flash coder; Qwen 3.8 Flash second
 coder; κ = .71 to .93 for the six codes used, lower for availability and family on
-non-DeepSeek explanations), the gap was cited in 24 to 91 percent of losses for the gap
-signals and at most 4 percent for parent signals without a gap, and family was cited
-for parent signals but never for the travel gap or the personal placebo; all twelve
-pre-stated contrasts survived Holm correction (Supplementary Figure S1). Explanations
-for losing parents often called family information irrelevant—for DeepSeek and Qwen
+explanations not written by DeepSeek), the gap was cited in 24 to 88 percent of losses
+for the gap signals and in at most 1 percent for parent signals without a gap; family
+was cited for parent signals (12 to 64 percent) but never for the travel gap or the
+personal placebo; and all pre-stated contrasts survived Holm correction (Supplementary
+Figure S1). For DeepSeek and Qwen, explanations called family information irrelevant
 much more often when the parent lost than when the parent won (53 vs. 19 and 90 vs. 42
 percent). These are stated justifications, coded without human validation, not causes.
 
 At the correlated end of the gradient, then, the models apply a caregiver penalty: a
-penalty on time out of work and on visible family responsibility, shared by all four
-vendors in sign, borne by women and men alike.
+penalty on time out of work and on visible family responsibility, shared by all three
+models, borne by women and men alike.
 
 ### 4.2 Named gender: careful, vendor-specific handling
 
-At the named end, the label account expects caution rather than a penalty, and
-behavior shaped by each developer. That is what we observe (Table 5, Figure 5). In
-direct choices between a woman and a man with the same family status, naming gender
-explicitly moves models in different directions. Luna's mild preference for women under
-names (.522 childless, .577 parents) grows with an explicit gender line (.587 and
-.647). Haiku's slight preference for mothers under names (.544) disappears with an
-explicit line (.498; .471 with initials). DeepSeek shows a small, stable preference
-for women (.535 to .548 for mothers). Qwen stays within five points of parity at every
-level, as equivalence tests confirm (its largest deviation, a 1.8-point tilt toward
-childless women under initials, is significant after correction). None of these is a
-penalty on women; two are corrections toward or past parity.
-
-Caution also takes the form of declining to decide, concentrated in one vendor and in
-the cells where gender or family is salient. Haiku refused to choose in roughly 5
-percent of mother-versus-father and parent-with-leave comparisons, against about 0.1
-percent for the placebo signals. It withheld any salary for 19.8 percent of pregnant
-applicants (3.1 percent for childless women), and for 27.5 percent when gender was
-stated explicitly (Figure 6). Haiku's explanations frame withholding as protective,
-but it has a cost: pregnant applicants without an offer were recommended for interview
-29.9 percent of the time, against every time when an offer was made, a net interview
-penalty of 9.4 points relative to childless women. Caution, in other words, does not
-guarantee equal treatment; it relocates the decision.
+At the named end, the label account expects careful handling rather than a penalty,
+shaped by each developer. In direct choices between a woman and a man with the same
+family status (Table 5, Figure 5), none of the three models penalizes women, and naming
+gender explicitly changes their behavior in model-specific ways. Luna's mild
+preference for women under names (.522 childless, .577 parents) grows with an explicit
+gender line (.587 and .647). DeepSeek shows a small, stable preference for women (.535
+to .548 for mothers). Qwen stays within five points of parity at every level, as
+equivalence tests confirm (its largest deviation is a 1.8-point tilt toward childless
+women under initials). Explicit gender fields are therefore not neutral: they activate
+corrections toward women in one model and leave another at parity. Refusals were
+almost absent in these three models (DeepSeek and Luna essentially never refused; Qwen's
+missing answers were formatting failures, not refusals). Caution expressed as refusal
+and withholding is concentrated in Claude Haiku (Appendix A).
 
 ### 4.3 Remedies: an instruction protects what it names
 
-The label account also predicts how remedies work. Table 6 reports the remedies phase
-(48,000 calls). A generic equal-opportunity prompt, which names gender but not
-caregiving, left the caregiver penalty in place in every model, with effects that
-depended on the vendor: none for DeepSeek, a reduction of the plain parent penalty
-for Luna (5.0 points), substantial reductions for Haiku (6.6 and 12.2 points), and a
-*deepening* for Qwen (4.7 and 5.3 points). Adding "do not penalize employment gaps
-taken for caregiving" reduced the interruption penalty—the signal it names—by 4 to 14
-points in all four models, but left the family-signal penalty essentially unchanged
-except in Haiku. No arm reached equal treatment. Named gender behavior responded more
-readily: Luna's preference for mothers over fathers fell from .640 to .557 under the
-generic prompt. Naming a signal moved it toward protection; leaving it unnamed did not.
+Table 6 reports the remedies phase (48,000 calls). A generic equal-opportunity prompt,
+which names gender but not caregiving, left the caregiver penalty in place, with
+effects that depended on the vendor: no significant change for DeepSeek, a reduction
+of the plain parent penalty for Luna (5.0 points) but not of the leave penalty, and a
+*deepening* of both penalties for Qwen (4.7 and 5.3 points). Adding "do not penalize
+employment gaps taken for caregiving" reduced the penalty for the parent with leave—
+the signal the sentence names—by 4.5 to 9.1 points relative to no system prompt, and
+the plain parent penalty, which carries no gap, did not change significantly after
+correction. Relative to the generic prompt, the added sentence raised the leave cell by
+8.5 to 9.8 points but the plain parent cell by only 1.8 to 4.4 (Table 6). No arm reached
+equal treatment. Named gender behavior responded readily: Luna's preference for mothers
+over fathers fell from .640 to .557 under the generic prompt. Naming a signal moved it
+toward protection; leaving it unnamed did not.
 
-### 4.4 Robustness and supplementary results
+### 4.4 Occupations: a penalty everywhere, weakly patterned
 
-Refusals and unusable answers cannot explain the caregiver penalty. Even if every
-missing choice had gone to the parent, the share of mothers with leave chosen in the
-main run could rise at most to about .32 (DeepSeek), .13 (Haiku), .22 (Luna), and .39
-(Qwen); Qwen's wider bound reflects its higher rate of unusable output, which is also
-higher in parent cells (Round 15 formalizes these bounds). Linear probability models
-with controls reproduce the main tests; wild cluster bootstrap p-values change no
-conclusion; estimates drifted 0.8 to 2.4 points between phases, within tolerance.
-Supplementary results: paired salary offers are 1.7 to 2.3 percent lower for mothers;
-greedy availability language in job ads adds to the leave penalty for DeepSeek
-mothers (2.7 points) and, combined with family-friendly language, for DeepSeek
-applicants and Haiku mothers (5.2 to 8.0 points), while family-friendly language alone
-never helps; and the penalty shows no robust association with occupational female
-share, wages, or task composition.
+Occupations differ in how gendered they are and in how much they involve care, and the
+design included both kinds of variation: 20 occupations spanning female share from
+4.7 to 97.1 percent, and 8 chosen to separate female share from care work. If models
+had learned occupation-specific stereotypes—mothers as less suited to male-dominated or
+demanding jobs—the penalty should vary systematically with these attributes. It does
+not vary much. Regressing the leave penalty for mothers on occupational female share and
+care intensity across the 28 occupations, the coefficient on female share is positive
+in all three models (mothers fare slightly better in more female-dominated
+occupations: +.057 for DeepSeek, +.048 for Luna, +.028 for Qwen, per standard
+deviation), but only DeepSeek's is nominally significant (p = .024), and none survives
+correction for the 18 tests in this family; care intensity is negative for DeepSeek
+and Luna and positive for Qwen, nominally significant only for Luna (p = .050). The
+caregiver penalty is thus a general feature of how the models evaluate applicants, not
+a product of occupational stereotyping. Occupation-level estimates are in Supplementary
+Figure S2 (pending).
+
+### 4.5 Robustness
+
+Missing answers cannot explain the penalty. Even if every missing choice had gone to
+the parent, worst-case bounds leave every headline cell below equal treatment (for the
+mother with leave in the main run, at most .32 for DeepSeek, .22 for Luna, and .39 for
+Qwen, whose wider bound reflects its higher rate of unparseable output, itself higher
+in parent cells). Linear probability models with controls reproduce the main tests;
+wild cluster bootstrap p-values change no conclusion; and estimates drifted little
+between phases. Supplementary results: paired salary offers are about 2 percent lower
+for mothers; "greedy" availability language in job ads adds to the leave penalty for
+DeepSeek mothers (2.7 points) and, combined with family-friendly language, for DeepSeek
+applicants of both genders (5.2 and 6.0 points), while family-friendly language alone
+never helps.
 
 ## 5. Study 2 (planned): Where does the gradient come from?
 
@@ -396,11 +417,11 @@ the caregiver penalty depends on it.
 
 ### 6.1 The framework revisited
 
-Figure 7 returns to the framework with Study 1's findings in place. At the correlated
+Figure 6 returns to the framework with Study 1's findings in place. At the correlated
 end, caregiving signals carry a large penalty for anyone who shows them. At the
 implied position, models read gender but act on it little: removing it changes nothing.
-At the named end, gender elicits small and vendor-specific handling—correction, parity,
-or refusal—rather than a penalty. And an instruction protects what it names. The
+At the named end, gender elicits small and vendor-specific handling—correction or
+parity, and in Claude Haiku refusal—rather than a penalty. And an instruction protects what it names. The
 gender-statistical account, which places the penalty on mothers as women, does not fit;
 the ideal-worker account describes the penalty that remains; and the label account
 describes why the remaining penalty takes the form it does.
@@ -421,11 +442,13 @@ Protection that follows the label leaves the consequences of correlated signals
 unprotected. Caregiving interruptions and visible family responsibilities are carried
 disproportionately by women (Goldin 2014), so a rule that penalizes them reproduces a
 gender gap through the distribution of signals rather than the treatment of
-individuals. Figure 8 shows how quickly this can happen: applying each model's
-measured shortlisting penalty to pools in which more women than men carry a caregiving
-signal, Haiku's gender-blind penalty produces a women-to-men shortlisting ratio below
-the four-fifths line once more than 31 percent of women carry the signal (men at 5
-percent); the thresholds are 73, 84, and 93 percent for DeepSeek, Qwen, and Luna.
+individuals. Figure 7 shows how this happens: applying each model's measured
+shortlisting penalty to pools in which more women than men carry a caregiving signal,
+the women-to-men shortlisting ratio falls below the four-fifths line once more than
+73 (DeepSeek), 84 (Qwen), or 93 percent (Luna) of women carry the signal, with men at
+5 percent. These thresholds are high because these three models' shortlisting
+penalties are moderate; for Claude Haiku, whose penalty is far larger, the threshold
+is 31 percent (Appendix A).
 Prevalence is a scenario parameter here, but the structure is the one disparate-impact
 doctrine was designed to capture, and the one the ideal-worker literature has long
 described: a norm that disadvantages women without naming them (Acker 1990; Williams
@@ -506,6 +529,56 @@ fairness checks organized around gender while reproducing the motherhood penalty
 effect. Whether alignment is the cause is the question Study 2 is designed to answer.
 
 ---
+
+## Appendix A. Claude Haiku
+
+```{=latex}
+\setcounter{figure}{0}\renewcommand{\thefigure}{A\arabic{figure}}\setcounter{table}{0}\renewcommand{\thetable}{A\arabic{table}}
+```
+
+Claude Haiku 5.5 was audited with the same materials and procedures as the other
+models. We report it separately because two features of its behavior complicate
+comparison. First, it declines to decide far more often, and selectively: in the
+second phase it refused to choose in 5.4 percent of mother-versus-father comparisons,
+4.9 percent of parent-with-leave comparisons, and 2.7 percent of plain parent
+comparisons, against about 0.1 percent for the placebo signals (refusals were more
+frequent for women than for men in every cell), and it withheld any salary for 19.8
+percent of pregnant applicants (3.1 percent for childless women), 27.5 percent when
+gender was stated explicitly (Figure A1). Second, its scores and choices point in
+opposite directions: it rates mothers 0.34 points *higher* than the same applicants
+without children, yet chooses them far less often.
+
+Selective refusal means Haiku's choice estimates condition on answering. Worst-case
+bounds show that refusals cannot explain its penalty: if every refused choice had gone
+to the parent, the mother with leave would still be chosen at most about 13 percent of
+the time in the main run. With that caveat, Haiku shows the caregiver penalty in its
+strongest form (Table A1). A mother returning from leave is chosen 11 percent of the
+time against a childless woman, a father 13 percent; mothers are shortlisted at 25
+percent of their childless rate. In the decomposition, the travel gap costs 18.4
+points; the parental label is statistically equivalent to zero; family signals on top
+of a labeled leave cost 17.4 points; parenthood net of disclosure costs 19.2 points;
+and the personal placebo slightly *helps* (3.7 points). Removing gender leaves the
+penalty unchanged (both differences equivalent to zero within ±5 points). Haiku is the
+only model with a mother-specific penalty: it chooses mothers 4.3 points less often
+than fathers (Holm p = .02) and rates them lower on commitment.
+
+At the named end, Haiku's slight preference for mothers under names (.544) disappears
+when gender is stated explicitly (.498; .471 with initials), and together with its
+refusals and its pregnancy withholding this is the clearest instance of caution around
+named gender in the data. Caution, however, is not equal treatment: pregnant
+applicants without a salary offer were recommended for interview 29.9 percent of the
+time, against every time when an offer was made, a net interview penalty of 9.4 points
+relative to childless women. Fairness instructions also worked differently for Haiku:
+the generic prompt reduced its penalties substantially (6.6 and 12.2 points), and it
+is the only model whose family-signal penalty fell under the targeted instruction.
+Because its shortlisting penalty is large, its gender-blind rule produces a
+four-fifths violation once more than 31 percent of women carry a caregiving signal.
+
+Haiku therefore strengthens rather than weakens the main conclusions: it shows the
+largest caregiver penalty, no dependence on gender information, and the most
+pronounced caution where gender is named. Whether its distinctive profile reflects its
+developer's training choices cannot be determined from these data; Study 2 is designed
+to address that kind of question.
 
 ## References
 

@@ -14,11 +14,11 @@ FIGS = {
  "fig1": fig("fig1_framework.pdf", "Framework: protection follows the label. Components of the motherhood signal are ordered by how directly they refer to a protected category, from named gender to correlated caregiving signals. Each column states the Study 1 test and what the label account expects; bands show where outcomes are measured, how remedies are tested, and the planned Study 2. Section numbers locate each test.", "framework", pos="t"),
  "fig2": fig("fig2_scores_vs_choices.pdf", "The caregiver penalty appears where selection happens. Hollow markers: probability that a mother is chosen over an equally qualified childless woman, predicted from the model's own scores; filled markers: observed.", "scores"),
  "fig3": fig("fig3_decomposition.pdf", "Decomposition of the parent-with-leave penalty: the interruption and family signals carry it; the caregiving label adds nothing.", "decomp"),
- "fig4": fig("fig5_invariance.pdf", "Removing all gender information leaves the penalty unchanged.", "invariance", w="0.85"),
- "fig5": fig("fig6_direct_gender.pdf", "Named gender: direct woman-versus-man choices by how gender is conveyed.", "direct"),
- "fig6": fig("fig7_withholding.pdf", "Caution as declining to decide: salary offers withheld (a) and interview recommendations for Haiku's pregnant applicants by whether an offer was made (b).", "withhold"),
+ "fig4": fig("fig5_invariance.pdf", "Removing all gender information leaves the penalty unchanged. (a) Probability the parent is chosen when gender is conveyed by name and when it is removed. (b) The difference with its 90\\% confidence interval; intervals inside the shaded band are statistically equivalent to zero. A null difference here is the finding.", "invariance"),
+ "fig5": fig("fig6_direct_gender.pdf", "Named gender: direct woman-versus-man choices by how gender is conveyed.", "direct", w="0.9"),
  "fig7": fig("fig9_findings.pdf", "The framework revisited with Study 1's findings in place.", "findings"),
  "fig8": fig("fig8_disparate_impact.pdf", "Gender-neutral in form, gendered in effect: implied ratio of women's to men's shortlist rates as women's prevalence of caregiving signals rises (men fixed at 5\\%).", "di", w="0.9"),
+ "figA1": fig("figA1_withholding.pdf", "Claude Haiku: salary offers withheld by model (a) and interview recommendations for Haiku's pregnant applicants by whether an offer was made (b).", "withhold"),
 }
 
 T1 = r"""
@@ -52,23 +52,23 @@ T2 = r"""
 \centering\small
 \begin{threeparttable}
 \caption{Probability that the applicant with the family signal is chosen in pairwise choice (main run)}\label{tab:choice}
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-Signal --- applicant & DeepSeek & Haiku & Luna & Qwen \\
+Signal --- applicant & DeepSeek & Luna & Qwen \\
 \midrule
-Parent --- mother & .357 & .233 & .297 & .387 \\
-Parent --- father & .349 & .276 & .294 & .398 \\
-Parent + commitment --- mother & .419 & .266 & .228 & .407 \\
-Parent + leave --- mother & .310 & .110 & .186 & .230 \\
-Parent + leave --- father & .308 & .130 & .184 & .256 \\
+Parent --- mother & .357 & .297 & .387 \\
+Parent --- father & .349 & .294 & .398 \\
+Parent + commitment --- mother & .419 & .228 & .407 \\
+Parent + leave --- mother & .310 & .186 & .230 \\
+Parent + leave --- father & .308 & .184 & .256 \\
 \midrule
-\multicolumn{5}{@{}l}{\emph{Ranking: shortlist rate relative to the same résumé without the signal}} \\
-Mothers & .71 & .25 & .78 & .75 \\
-Fathers & .70 & .23 & .81 & .80 \\
+\multicolumn{4}{@{}l}{\emph{Shortlisting: rate relative to the same résumé without the signal}} \\
+Mothers & .71 & .78 & .75 \\
+Fathers & .70 & .81 & .80 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}\footnotesize
-\item \emph{Note:} Pairwise choice against an equally qualified childless candidate of the same gender; .50 = equal treatment. Standard errors clustered by résumé pair (40 pairs) give 95\% confidence intervals of $\pm$.02--.07; no interval includes .50. Ranking ratios are résumé fixed-effect estimates from pools of six; .80 is the four-fifths threshold.
+\item \emph{Note:} Pairwise choice against an equally qualified childless candidate of the same gender; .50 = equal treatment. 95\% confidence intervals clustered by résumé pair (40 pairs) are $\pm$.02--.07; none includes .50. Shortlisting ratios are résumé fixed-effect estimates from pools of six; .80 is the four-fifths threshold. Claude Haiku: Table A1.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -79,22 +79,22 @@ T3 = r"""
 \centering\small
 \begin{threeparttable}
 \caption{Placebo decomposition of the parent-with-leave penalty (percentage points)}\label{tab:decomp}
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccc@{}}
 \toprule
-Component (comparison) & DeepSeek & Haiku & Luna & Qwen \\
+Component (comparison) & DeepSeek & Luna & Qwen \\
 \midrule
-Interruption & $-10.5$ & $-18.4$ & $-26.0$ & $-22.4$ \\
-\quad(travel gap vs.\ .50) & ($t=-8.0$) & ($t=-8.5$) & ($t=-7.3$) & ($t=-8.9$) \\
-Caregiving label & $+1.7$ & $-1.1$ & $+6.5$ & $+6.7$ \\
-\quad(parental leave only $-$ travel gap) & [$+0.5$, $+2.9$] & [$-3.2$, $+0.9$] & [$+3.7$, $+9.2$] & [$+4.9$, $+8.5$] \\
-Family signals on top of leave & $-10.6$ & $-17.4$ & $-11.5$ & $-12.1$ \\
-\quad(parent + leave $-$ parental leave only) & [$-12.7$, $-8.6$] & [$-20.2$, $-14.5$] & [$-15.4$, $-7.5$] & [$-14.7$, $-9.5$] \\
-Parenthood net of disclosure & $-10.4$ & $-19.2$ & $-12.1$ & $-7.3$ \\
-\quad(parent $-$ personal placebo) & [$-12.8$, $-8.0$] & [$-23.4$, $-15.0$] & [$-16.3$, $-7.9$] & [$-10.3$, $-4.3$] \\
+Interruption & $-10.5$ & $-26.0$ & $-22.1$ \\
+\quad(travel gap vs.\ .50) & ($t=-8.0$) & ($t=-7.3$) & ($t=-8.8$) \\
+Caregiving label & $+1.7$ & $+6.5$ & $+6.6$ \\
+\quad(parental leave only $-$ travel gap) & [$+0.5$, $+2.9$] & [$+3.7$, $+9.2$] & [$+4.8$, $+8.4$] \\
+Family signals on top of leave & $-10.7$ & $-11.5$ & $-12.3$ \\
+\quad(parent + leave $-$ parental leave only) & [$-12.7$, $-8.6$] & [$-15.4$, $-7.5$] & [$-14.8$, $-9.8$] \\
+Parenthood net of disclosure & $-10.4$ & $-12.1$ & $-8.0$ \\
+\quad(parent $-$ personal placebo) & [$-12.8$, $-8.0$] & [$-16.3$, $-7.9$] & [$-11.1$, $-4.9$] \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}\footnotesize
-\item \emph{Note:} Mothers; 20 main occupations; gender stated explicitly (levels L1 and L2 pooled); 40 résumé pairs. Brackets: 95\% confidence intervals clustered by résumé pair. The personal placebo itself costs 2.9--3.5 points for DeepSeek, Luna, and Qwen and raises Haiku's choice share by 3.7 points.
+\item \emph{Note:} Mothers; 20 main occupations; gender stated explicitly (levels L1 and L2 pooled); 40 résumé pairs. Brackets: 95\% confidence intervals clustered by résumé pair. The personal placebo itself costs 2.7--3.5 points.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -104,20 +104,21 @@ T4 = r"""
 \begin{table}[tbp]
 \centering\small
 \begin{threeparttable}
-\caption{Mother--father differences for the parent signal (main run)}\label{tab:mf}
-\begin{tabular}{@{}lcccc@{}}
+\caption{Mother--father differences (main run)}\label{tab:mf}
+\begin{tabular}{@{}llccc@{}}
 \toprule
-Outcome & DeepSeek & Haiku & Luna & Qwen \\
+Signal & Outcome & DeepSeek & Luna & Qwen \\
 \midrule
-Pairwise choice (points) & $+0.6$ & $\mathbf{-4.4}$ & $-0.4$ & $+0.1$ \\
- & ($t=0.6$) & ($t=-3.2$) & ($t=-0.4$) & ($t=0.0$) \\
-Paired salary (\$) & $+138$ & $-150$ & $-109$ & $-16$ \\
-Commitment rating, paired & $+.02$ & $\mathbf{-.14}$ & $+.00$ & $+.12$ \\
-Commitment rating, single applicant & $\mathbf{-.09}$ & $\mathbf{-.06}$ & $+.03$ & $+.00$ \\
+Parent & Pairwise choice (points) & $+0.8$ & $-0.4$ & $-1.1$ \\
+ & Paired salary (\$) & $+118$ & $-100$ & $-456$ \\
+ & Commitment, single applicant & $\mathbf{-.09}$ & $+.03$ & $-.00$ \\
+Parent + leave & Pairwise choice (points) & $+0.2$ & $+0.2$ & $-2.6$ \\
+ & Paired salary (\$) & $+72$ & $-9$ & $-543$ \\
+ & Commitment, single applicant & $\mathbf{-.12}$ & $+.01$ & $-.04$ \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}\footnotesize
-\item \emph{Note:} Mother minus father on the same résumé pairs (choice, paired ratings) or résumés (single-applicant ratings). Bold: significant after Holm correction within outcome.
+\item \emph{Note:} Mother minus father on the same résumé pairs (choice, salary) or résumés (single-applicant ratings, 1--7 scale). Bold: significant after Holm correction within outcome. No choice difference is significant.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
@@ -132,10 +133,9 @@ T5 = r"""
 \toprule
 Model & Pair & Names (L0) & Name + line (L1) & Initial + line (L2) \\
 \midrule
-Qwen & childless / parents & .505 / .503 & .493 / .513 & \textbf{.518} / .491 \\
 DeepSeek & childless / parents & .514 / \textbf{.535} & \textbf{.540} / \textbf{.540} & \textbf{.538} / \textbf{.548} \\
 Luna & childless / parents & \textbf{.522} / \textbf{.577} & \textbf{.587} / \textbf{.647} & \textbf{.575} / \textbf{.634} \\
-Haiku & childless / parents & \textbf{.528} / \textbf{.544} & .526 / .498 & .513 / .471 \\
+Qwen & childless / parents & .505 / .504 & .494 / .515 & \textbf{.518} / .493 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}\footnotesize
@@ -149,21 +149,54 @@ T6 = r"""
 \begin{table}[tbp]
 \centering\small
 \begin{threeparttable}
-\caption{Fairness instructions (phase 4): probability that a mother is chosen, by system prompt}\label{tab:fair}
+\caption{Fairness instructions (remedies phase): probability that a mother is chosen, by system prompt}\label{tab:fair}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 Model & Parent & Parent + leave & Travel gap \\
 \midrule
 DeepSeek & .361 / .325 / .369 & .317 / .301 / .386 & .422 / .420 / .451 \\
-Haiku & .266 / .332 / .342 & .074 / .195 / .217 & .296 / .308 / .300 \\
 Luna & .307 / .357 / .376 & .195 / .188 / .286 & .238 / .283 / .307 \\
 Qwen & .381 / .333 / .351 & .234 / .181 / .279 & .274 / .286 / .339 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}\footnotesize
-\item \emph{Note:} Entries: no system prompt / generic equal-opportunity prompt / generic prompt plus ``do not penalize employment gaps taken for caregiving.'' Women; 20 main occupations; 40 résumé pairs; 48,000 calls; .50 = equal treatment. Hypotheses and tests were specified before the run.
+\item \emph{Note:} Entries: no system prompt / generic equal-opportunity prompt / generic prompt plus ``do not penalize employment gaps taken for caregiving.'' Women; 20 main occupations; 40 résumé pairs; .50 = equal treatment. Hypotheses and tests were specified before the run. Claude Haiku: Table A1.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}
 """
-TABLES = {"tab1": T1, "tab2": T2, "tab3": T3, "tab4": T4, "tab5": T5, "tab6": T6}
+TA1 = r"""
+\begin{table}[tbp]
+\centering\small
+\begin{threeparttable}
+\caption{Claude Haiku: main results}\label{tab:haiku}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Estimate \\
+\midrule
+Pairwise choice, parent + leave: mother / father & .110 / .130 \\
+Pairwise choice, parent: mother / father & .233 / .276 \\
+Shortlisting ratio: mothers / fathers & .25 / .23 \\
+Fit rating, parent $-$ none (women; 10-point scale) & $+0.34$ \\
+Interruption (travel gap vs.\ .50), points & $-18.4$ ($t=-8.5$) \\
+Caregiving label, points & $-1.1$ [$-3.2$, $+0.9$] \\
+Family signals on top of leave, points & $-17.4$ [$-20.2$, $-14.5$] \\
+Parenthood net of disclosure, points & $-19.2$ [$-23.4$, $-15.0$] \\
+Personal placebo, points & $+3.7$ \\
+No gender $-$ names: parent / parent + leave, points & $+0.6$ / $+0.9$ (both equivalent) \\
+Mother $-$ father choice, parent, points & $-4.3$ (Holm $p=.02$) \\
+Direct choice, mother vs.\ father: L0 / L1 / L2 & .544 / .498 / .471 \\
+Refusal to choose: mother vs.\ father / parent + leave / placebos & 5.4\% / 4.9\% / $\approx$0.1\% \\
+Salary withheld: pregnant / childless women (L1: pregnant) & 19.8\% / 3.1\% (27.5\%) \\
+Interview if offer withheld vs.\ made (pregnant) & 29.9\% vs.\ 100\% \\
+Generic prompt: change in parent / leave penalty & $+6.6$ / $+12.2$ points \\
+Four-fifths threshold (women's signal prevalence; men 5\%) & 31\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \emph{Note:} Same designs and clustering as the main tables. Refusal rates from the second phase, first attempts.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+"""
+TABLES = {"tab1": T1, "tab2": T2, "tab3": T3, "tab4": T4, "tab5": T5, "tab6": T6, "tabA1": TA1}

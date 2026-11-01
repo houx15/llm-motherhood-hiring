@@ -1,0 +1,2354 @@
+[
+ {
+  "model": "deepseek",
+  "occupation_id": "accountant",
+  "mother_p": 0.317,
+  "mother_ci": [
+   -0.153,
+   0.786
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.309,
+  "father_ci": [
+   -0.142,
+   0.761
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.591,
+  "median_wage": 83680.0,
+  "care": -0.735,
+  "time_demands": 0.123,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "administrative_assistant",
+  "mother_p": 0.361,
+  "mother_ci": [
+   0.188,
+   0.533
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.386,
+  "father_ci": [
+   0.141,
+   0.631
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.919,
+  "median_wage": 47540.0,
+  "care": 0.116,
+  "time_demands": -0.465,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "childcare_worker",
+  "mother_p": 0.333,
+  "mother_ci": [
+   -0.086,
+   0.753
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.333,
+  "father_ci": [
+   -0.229,
+   0.896
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.932,
+  "median_wage": 34980.0,
+  "care": 0.636,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "construction_laborer",
+  "mother_p": 0.242,
+  "mother_ci": [
+   -0.089,
+   0.573
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.217,
+  "father_ci": [
+   -0.2,
+   0.633
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.047,
+  "median_wage": 47120.0,
+  "care": 0.075,
+  "time_demands": 1.024,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "customer_service_representative",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.092,
+   0.592
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.258,
+  "father_ci": [
+   -0.16,
+   0.677
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.648,
+  "median_wage": 44770.0,
+  "care": 0.47,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "electrician",
+  "mother_p": 0.208,
+  "mother_ci": [
+   -0.189,
+   0.606
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.188,
+  "father_ci": [
+   -0.237,
+   0.612
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.035,
+  "median_wage": 63190.0,
+  "care": -0.111,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "emt_paramedic",
+  "mother_p": 0.236,
+  "mother_ci": [
+   -0.211,
+   0.683
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.222,
+  "father_ci": [
+   -0.186,
+   0.631
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.351,
+  "median_wage": 48150.0,
+  "care": 1.961,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "financial_analyst",
+  "mother_p": 0.35,
+  "mother_ci": [
+   -0.281,
+   0.981
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.317,
+  "father_ci": [
+   -0.184,
+   0.819
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.418,
+  "median_wage": 102740.0,
+  "care": -1.602,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "health_services_manager",
+  "mother_p": 0.292,
+  "mother_ci": [
+   -0.106,
+   0.689
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.312,
+  "father_ci": [
+   -0.068,
+   0.693
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.753,
+  "median_wage": 123860.0,
+  "care": 0.532,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "heavy_truck_driver",
+  "mother_p": 0.25,
+  "mother_ci": [
+   0.0,
+   0.5
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.308,
+  "father_ci": [
+   0.095,
+   0.522
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.077,
+  "median_wage": 58640.0,
+  "care": -0.445,
+  "time_demands": 1.097,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "housekeeper",
+  "mother_p": 0.188,
+  "mother_ci": [
+   -0.193,
+   0.568
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.167,
+  "father_ci": [
+   -0.28,
+   0.613
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.864,
+  "median_wage": 35510.0,
+  "care": 0.482,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "hr_manager",
+  "mother_p": 0.369,
+  "mother_ci": [
+   -0.096,
+   0.833
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.328,
+  "father_ci": [
+   -0.204,
+   0.861
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.796,
+  "median_wage": 149280.0,
+  "care": 0.351,
+  "time_demands": 0.003,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "lawyer",
+  "mother_p": 0.271,
+  "mother_ci": [
+   -0.055,
+   0.596
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.293,
+  "father_ci": [
+   0.104,
+   0.482
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.429,
+  "median_wage": 159670.0,
+  "care": 0.259,
+  "time_demands": 0.072,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "marketing_manager",
+  "mother_p": 0.383,
+  "mother_ci": [
+   -0.365,
+   1.132
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.383,
+  "father_ci": [
+   -0.329,
+   1.096
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.594,
+  "median_wage": 166790.0,
+  "care": -0.075,
+  "time_demands": 0.411,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "mechanical_engineer",
+  "mother_p": 0.308,
+  "mother_ci": [
+   -0.409,
+   1.026
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.317,
+  "father_ci": [
+   -0.347,
+   0.98
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.112,
+  "median_wage": 104110.0,
+  "care": -1.025,
+  "time_demands": -0.16,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "medical_assistant",
+  "mother_p": 0.417,
+  "mother_ci": [
+   -0.379,
+   1.212
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.425,
+  "father_ci": [
+   -0.322,
+   1.172
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.908,
+  "median_wage": 45690.0,
+  "care": 1.325,
+  "time_demands": -0.549,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "pharmacist",
+  "mother_p": 0.283,
+  "mother_ci": [
+   -0.239,
+   0.806
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.292,
+  "father_ci": [
+   -0.216,
+   0.799
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.627,
+  "median_wage": 140910.0,
+  "care": 1.468,
+  "time_demands": -0.029,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "physician",
+  "mother_p": 0.16,
+  "mother_ci": [
+   -0.041,
+   0.362
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.15,
+  "father_ci": [
+   -0.046,
+   0.346
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.417,
+  "median_wage": 244180.0,
+  "care": 1.881,
+  "time_demands": 0.039,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "police_officer",
+  "mother_p": 0.208,
+  "mother_ci": [
+   -0.107,
+   0.524
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.209,
+   0.709
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.164,
+  "median_wage": 76210.0,
+  "care": 1.315,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "preschool_teacher",
+  "mother_p": 0.393,
+  "mother_ci": [
+   0.014,
+   0.771
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.437,
+  "father_ci": [
+   0.047,
+   0.827
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.971,
+  "median_wage": 38140.0,
+  "care": 0.685,
+  "time_demands": -1.44,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "receptionist",
+  "mother_p": 0.283,
+  "mother_ci": [
+   0.008,
+   0.559
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.283,
+  "father_ci": [
+   0.015,
+   0.552
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.896,
+  "median_wage": 38010.0,
+  "care": 1.161,
+  "time_demands": -1.147,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "registered_nurse",
+  "mother_p": 0.288,
+  "mother_ci": [
+   -0.14,
+   0.716
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.358,
+  "father_ci": [
+   -0.125,
+   0.841
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.873,
+  "median_wage": 97550.0,
+  "care": 1.563,
+  "time_demands": -0.036,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "restaurant_manager",
+  "mother_p": 0.348,
+  "mother_ci": [
+   -0.19,
+   0.886
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.262,
+  "father_ci": [
+   -0.102,
+   0.627
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.488,
+  "median_wage": 69390.0,
+  "care": 0.416,
+  "time_demands": -0.099,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "retail_store_manager",
+  "mother_p": 0.408,
+  "mother_ci": [
+   0.25,
+   0.567
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.275,
+  "father_ci": [
+   0.136,
+   0.414
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.439,
+  "median_wage": 48520.0,
+  "care": 0.722,
+  "time_demands": -0.091,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "security_guard",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.14,
+   0.64
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.292,
+  "father_ci": [
+   -0.174,
+   0.757
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.229,
+  "median_wage": 38020.0,
+  "care": 1.478,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "software_engineer",
+  "mother_p": 0.308,
+  "mother_ci": [
+   0.218,
+   0.399
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   0.085,
+   0.415
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.203,
+  "median_wage": 135980.0,
+  "care": -1.325,
+  "time_demands": -0.762,
+  "cohort": "o20"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "veterinarian",
+  "mother_p": 0.271,
+  "mother_ci": [
+   -0.094,
+   0.636
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.271,
+  "father_ci": [
+   -0.078,
+   0.62
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.709,
+  "median_wage": 130100.0,
+  "care": 1.14,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "deepseek",
+  "occupation_id": "warehouse_supervisor",
+  "mother_p": 0.18,
+  "mother_ci": [
+   -0.155,
+   0.516
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.242,
+  "father_ci": [
+   -0.211,
+   0.695
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.278,
+  "median_wage": 62890.0,
+  "care": 0.109,
+  "time_demands": 0.548,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "accountant",
+  "mother_p": 0.242,
+  "mother_ci": [
+   -0.527,
+   1.011
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.591,
+  "median_wage": 83680.0,
+  "care": -0.735,
+  "time_demands": 0.123,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "administrative_assistant",
+  "mother_p": 0.093,
+  "mother_ci": [
+   -0.08,
+   0.267
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.075,
+  "father_ci": [
+   -0.064,
+   0.214
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.919,
+  "median_wage": 47540.0,
+  "care": 0.116,
+  "time_demands": -0.465,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "childcare_worker",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.313,
+   0.813
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.188,
+  "father_ci": [
+   -0.251,
+   0.626
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.932,
+  "median_wage": 34980.0,
+  "care": 0.636,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "construction_laborer",
+  "mother_p": 0.133,
+  "mother_ci": [
+   -0.291,
+   0.558
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.117,
+  "father_ci": [
+   -0.159,
+   0.392
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.047,
+  "median_wage": 47120.0,
+  "care": 0.075,
+  "time_demands": 1.024,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "customer_service_representative",
+  "mother_p": 0.333,
+  "mother_ci": [
+   -0.356,
+   1.022
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.283,
+  "father_ci": [
+   -0.253,
+   0.82
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.648,
+  "median_wage": 44770.0,
+  "care": 0.47,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "electrician",
+  "mother_p": 0.045,
+  "mother_ci": [
+   -0.099,
+   0.19
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.114,
+  "father_ci": [
+   -0.248,
+   0.475
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.035,
+  "median_wage": 63190.0,
+  "care": -0.111,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "emt_paramedic",
+  "mother_p": 0.146,
+  "mother_ci": [
+   -0.128,
+   0.419
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.225,
+  "father_ci": [
+   -0.193,
+   0.643
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.351,
+  "median_wage": 48150.0,
+  "care": 1.961,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "financial_analyst",
+  "mother_p": 0.4,
+  "mother_ci": [
+   -0.38,
+   1.18
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.4,
+  "father_ci": [
+   -0.38,
+   1.18
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.418,
+  "median_wage": 102740.0,
+  "care": -1.602,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "health_services_manager",
+  "mother_p": 0.021,
+  "mother_ci": [
+   -0.045,
+   0.087
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.753,
+  "median_wage": 123860.0,
+  "care": 0.532,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "heavy_truck_driver",
+  "mother_p": 0.0,
+  "mother_ci": [
+   0.0,
+   0.0
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.0,
+  "father_ci": [
+   0.0,
+   0.0
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.077,
+  "median_wage": 58640.0,
+  "care": -0.445,
+  "time_demands": 1.097,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "housekeeper",
+  "mother_p": 0.104,
+  "mother_ci": [
+   -0.227,
+   0.436
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.068,
+  "father_ci": [
+   -0.149,
+   0.285
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.864,
+  "median_wage": 35510.0,
+  "care": 0.482,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "hr_manager",
+  "mother_p": 0.394,
+  "mother_ci": [
+   -0.268,
+   1.057
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.432,
+  "father_ci": [
+   -0.27,
+   1.134
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.796,
+  "median_wage": 149280.0,
+  "care": 0.351,
+  "time_demands": 0.003,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "lawyer",
+  "mother_p": 0.163,
+  "mother_ci": [
+   -0.321,
+   0.647
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.098,
+  "father_ci": [
+   -0.179,
+   0.374
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.429,
+  "median_wage": 159670.0,
+  "care": 0.259,
+  "time_demands": 0.072,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "marketing_manager",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.594,
+  "median_wage": 166790.0,
+  "care": -0.075,
+  "time_demands": 0.411,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "mechanical_engineer",
+  "mother_p": 0.258,
+  "mother_ci": [
+   -0.529,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.112,
+  "median_wage": 104110.0,
+  "care": -1.025,
+  "time_demands": -0.16,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "medical_assistant",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.259,
+  "father_ci": [
+   -0.528,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.908,
+  "median_wage": 45690.0,
+  "care": 1.325,
+  "time_demands": -0.549,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "pharmacist",
+  "mother_p": 0.025,
+  "mother_ci": [
+   -0.055,
+   0.105
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.008,
+  "father_ci": [
+   -0.018,
+   0.035
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.627,
+  "median_wage": 140910.0,
+  "care": 1.468,
+  "time_demands": -0.029,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "physician",
+  "mother_p": 0.008,
+  "mother_ci": [
+   -0.018,
+   0.035
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.017,
+  "father_ci": [
+   -0.036,
+   0.07
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.417,
+  "median_wage": 244180.0,
+  "care": 1.881,
+  "time_demands": 0.039,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "police_officer",
+  "mother_p": 0.021,
+  "mother_ci": [
+   -0.045,
+   0.087
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.021,
+  "father_ci": [
+   -0.045,
+   0.087
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.164,
+  "median_wage": 76210.0,
+  "care": 1.315,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "preschool_teacher",
+  "mother_p": 0.0,
+  "mother_ci": [
+   0.0,
+   0.0
+  ],
+  "mother_n_pairs": 2,
+  "father_p": 0.0,
+  "father_ci": [
+   0.0,
+   0.0
+  ],
+  "father_n_pairs": 2,
+  "female_share": 0.971,
+  "median_wage": 38140.0,
+  "care": 0.685,
+  "time_demands": -1.44,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "receptionist",
+  "mother_p": 0.025,
+  "mother_ci": [
+   -0.055,
+   0.105
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.058,
+  "father_ci": [
+   -0.094,
+   0.211
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.896,
+  "median_wage": 38010.0,
+  "care": 1.161,
+  "time_demands": -1.147,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "registered_nurse",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.873,
+  "median_wage": 97550.0,
+  "care": 1.563,
+  "time_demands": -0.036,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "restaurant_manager",
+  "mother_p": 0.274,
+  "mother_ci": [
+   -0.464,
+   1.013
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.283,
+  "father_ci": [
+   -0.483,
+   1.05
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.488,
+  "median_wage": 69390.0,
+  "care": 0.416,
+  "time_demands": -0.099,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "retail_store_manager",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.286,
+  "father_ci": [
+   -0.48,
+   1.051
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.439,
+  "median_wage": 48520.0,
+  "care": 0.722,
+  "time_demands": -0.091,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "security_guard",
+  "mother_p": 0.062,
+  "mother_ci": [
+   -0.136,
+   0.261
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.104,
+  "father_ci": [
+   -0.227,
+   0.436
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.229,
+  "median_wage": 38020.0,
+  "care": 1.478,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "software_engineer",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.203,
+  "median_wage": 135980.0,
+  "care": -1.325,
+  "time_demands": -0.762,
+  "cohort": "o20"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "veterinarian",
+  "mother_p": 0.083,
+  "mother_ci": [
+   -0.182,
+   0.349
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.045,
+  "father_ci": [
+   -0.099,
+   0.19
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.709,
+  "median_wage": 130100.0,
+  "care": 1.14,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "gpt6",
+  "occupation_id": "warehouse_supervisor",
+  "mother_p": 0.117,
+  "mother_ci": [
+   -0.255,
+   0.488
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.092,
+  "father_ci": [
+   -0.2,
+   0.383
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.278,
+  "median_wage": 62890.0,
+  "care": 0.109,
+  "time_demands": 0.548,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "accountant",
+  "mother_p": 0.208,
+  "mother_ci": [
+   -0.224,
+   0.64
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.193,
+  "father_ci": [
+   -0.213,
+   0.599
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.591,
+  "median_wage": 83680.0,
+  "care": -0.735,
+  "time_demands": 0.123,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "administrative_assistant",
+  "mother_p": 0.077,
+  "mother_ci": [
+   -0.065,
+   0.22
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.178,
+  "father_ci": [
+   -0.078,
+   0.433
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.919,
+  "median_wage": 47540.0,
+  "care": 0.116,
+  "time_demands": -0.465,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "childcare_worker",
+  "mother_p": 0.261,
+  "mother_ci": [
+   -0.22,
+   0.742
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.263,
+  "father_ci": [
+   -0.241,
+   0.768
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.932,
+  "median_wage": 34980.0,
+  "care": 0.636,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "construction_laborer",
+  "mother_p": 0.303,
+  "mother_ci": [
+   -0.255,
+   0.861
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.341,
+  "father_ci": [
+   -0.292,
+   0.975
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.047,
+  "median_wage": 47120.0,
+  "care": 0.075,
+  "time_demands": 1.024,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "customer_service_representative",
+  "mother_p": 0.188,
+  "mother_ci": [
+   0.002,
+   0.374
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.252,
+  "father_ci": [
+   -0.068,
+   0.573
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.648,
+  "median_wage": 44770.0,
+  "care": 0.47,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "electrician",
+  "mother_p": 0.218,
+  "mother_ci": [
+   -0.083,
+   0.519
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.235,
+  "father_ci": [
+   -0.098,
+   0.568
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.035,
+  "median_wage": 63190.0,
+  "care": -0.111,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "emt_paramedic",
+  "mother_p": 0.321,
+  "mother_ci": [
+   -0.274,
+   0.915
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.261,
+  "father_ci": [
+   -0.22,
+   0.742
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.351,
+  "median_wage": 48150.0,
+  "care": 1.961,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "financial_analyst",
+  "mother_p": 0.293,
+  "mother_ci": [
+   -0.436,
+   1.023
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.304,
+  "father_ci": [
+   -0.452,
+   1.06
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.418,
+  "median_wage": 102740.0,
+  "care": -1.602,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "health_services_manager",
+  "mother_p": 0.136,
+  "mother_ci": [
+   -0.298,
+   0.57
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.261,
+  "father_ci": [
+   -0.22,
+   0.742
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.753,
+  "median_wage": 123860.0,
+  "care": 0.532,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "heavy_truck_driver",
+  "mother_p": 0.207,
+  "mother_ci": [
+   -0.062,
+   0.477
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.216,
+  "father_ci": [
+   -0.09,
+   0.521
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.077,
+  "median_wage": 58640.0,
+  "care": -0.445,
+  "time_demands": 1.097,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "housekeeper",
+  "mother_p": 0.271,
+  "mother_ci": [
+   -0.18,
+   0.722
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.265,
+  "father_ci": [
+   -0.252,
+   0.783
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.864,
+  "median_wage": 35510.0,
+  "care": 0.482,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "hr_manager",
+  "mother_p": 0.255,
+  "mother_ci": [
+   -0.222,
+   0.732
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.272,
+  "father_ci": [
+   -0.231,
+   0.774
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.796,
+  "median_wage": 149280.0,
+  "care": 0.351,
+  "time_demands": 0.003,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "lawyer",
+  "mother_p": 0.12,
+  "mother_ci": [
+   -0.199,
+   0.438
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.133,
+  "father_ci": [
+   -0.256,
+   0.523
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.429,
+  "median_wage": 159670.0,
+  "care": 0.259,
+  "time_demands": 0.072,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "marketing_manager",
+  "mother_p": 0.279,
+  "mother_ci": [
+   -0.491,
+   1.049
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.33,
+  "father_ci": [
+   -0.42,
+   1.08
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.594,
+  "median_wage": 166790.0,
+  "care": -0.075,
+  "time_demands": 0.411,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "mechanical_engineer",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.546,
+   1.046
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.546,
+   1.046
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.112,
+  "median_wage": 104110.0,
+  "care": -1.025,
+  "time_demands": -0.16,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "medical_assistant",
+  "mother_p": 0.38,
+  "mother_ci": [
+   -0.385,
+   1.144
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.385,
+  "father_ci": [
+   -0.383,
+   1.152
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.908,
+  "median_wage": 45690.0,
+  "care": 1.325,
+  "time_demands": -0.549,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "pharmacist",
+  "mother_p": 0.292,
+  "mother_ci": [
+   -0.286,
+   0.87
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.28,
+  "father_ci": [
+   -0.296,
+   0.856
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.627,
+  "median_wage": 140910.0,
+  "care": 1.468,
+  "time_demands": -0.029,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "physician",
+  "mother_p": 0.111,
+  "mother_ci": [
+   -1.301,
+   1.523
+  ],
+  "mother_n_pairs": 2,
+  "father_p": 0.036,
+  "father_ci": [
+   -0.418,
+   0.49
+  ],
+  "father_n_pairs": 2,
+  "female_share": 0.417,
+  "median_wage": 244180.0,
+  "care": 1.881,
+  "time_demands": 0.039,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "police_officer",
+  "mother_p": 0.333,
+  "mother_ci": [
+   -0.289,
+   0.955
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.396,
+  "father_ci": [
+   -0.333,
+   1.125
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.164,
+  "median_wage": 76210.0,
+  "care": 1.315,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "preschool_teacher",
+  "mother_p": 0.203,
+  "mother_ci": [
+   -0.105,
+   0.511
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.166,
+  "father_ci": [
+   -0.07,
+   0.402
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.971,
+  "median_wage": 38140.0,
+  "care": 0.685,
+  "time_demands": -1.44,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "receptionist",
+  "mother_p": 0.239,
+  "mother_ci": [
+   -0.209,
+   0.686
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.265,
+  "father_ci": [
+   -0.188,
+   0.718
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.896,
+  "median_wage": 38010.0,
+  "care": 1.161,
+  "time_demands": -1.147,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "registered_nurse",
+  "mother_p": 0.31,
+  "mother_ci": [
+   -0.443,
+   1.064
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.312,
+  "father_ci": [
+   -0.441,
+   1.066
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.873,
+  "median_wage": 97550.0,
+  "care": 1.563,
+  "time_demands": -0.036,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "restaurant_manager",
+  "mother_p": 0.257,
+  "mother_ci": [
+   -0.482,
+   0.997
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.243,
+  "father_ci": [
+   -0.438,
+   0.925
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.488,
+  "median_wage": 69390.0,
+  "care": 0.416,
+  "time_demands": -0.099,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "retail_store_manager",
+  "mother_p": 0.123,
+  "mother_ci": [
+   -0.181,
+   0.426
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.216,
+  "father_ci": [
+   -0.183,
+   0.615
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.439,
+  "median_wage": 48520.0,
+  "care": 0.722,
+  "time_demands": -0.091,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "security_guard",
+  "mother_p": 0.354,
+  "mother_ci": [
+   -0.146,
+   0.855
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.333,
+  "father_ci": [
+   -0.289,
+   0.955
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.229,
+  "median_wage": 38020.0,
+  "care": 1.478,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "software_engineer",
+  "mother_p": 0.092,
+  "mother_ci": [
+   -0.066,
+   0.25
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.123,
+  "father_ci": [
+   -0.084,
+   0.329
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.203,
+  "median_wage": 135980.0,
+  "care": -1.325,
+  "time_demands": -0.762,
+  "cohort": "o20"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "veterinarian",
+  "mother_p": 0.136,
+  "mother_ci": [
+   -0.208,
+   0.481
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.173,
+  "father_ci": [
+   -0.286,
+   0.631
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.709,
+  "median_wage": 130100.0,
+  "care": 1.14,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "qwen38",
+  "occupation_id": "warehouse_supervisor",
+  "mother_p": 0.183,
+  "mother_ci": [
+   -0.174,
+   0.54
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.181,
+  "father_ci": [
+   -0.125,
+   0.488
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.278,
+  "median_wage": 62890.0,
+  "care": 0.109,
+  "time_demands": 0.548,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "accountant",
+  "mother_p": 0.05,
+  "mother_ci": [
+   -0.076,
+   0.176
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.067,
+  "father_ci": [
+   -0.063,
+   0.197
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.591,
+  "median_wage": 83680.0,
+  "care": -0.735,
+  "time_demands": 0.123,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "administrative_assistant",
+  "mother_p": 0.009,
+  "mother_ci": [
+   -0.019,
+   0.037
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.0,
+  "father_ci": [
+   0.0,
+   0.0
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.919,
+  "median_wage": 47540.0,
+  "care": 0.116,
+  "time_demands": -0.465,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "childcare_worker",
+  "mother_p": 0.106,
+  "mother_ci": [
+   -0.06,
+   0.272
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.146,
+  "father_ci": [
+   -0.167,
+   0.459
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.932,
+  "median_wage": 34980.0,
+  "care": 0.636,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "construction_laborer",
+  "mother_p": 0.058,
+  "mother_ci": [
+   -0.127,
+   0.244
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.108,
+  "father_ci": [
+   -0.236,
+   0.453
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.047,
+  "median_wage": 47120.0,
+  "care": 0.075,
+  "time_demands": 1.024,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "customer_service_representative",
+  "mother_p": 0.095,
+  "mother_ci": [
+   -0.049,
+   0.239
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.084,
+  "father_ci": [
+   -0.076,
+   0.245
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.648,
+  "median_wage": 44770.0,
+  "care": 0.47,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "electrician",
+  "mother_p": 0.083,
+  "mother_ci": [
+   -0.182,
+   0.349
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.035,
+  "median_wage": 63190.0,
+  "care": -0.111,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "emt_paramedic",
+  "mother_p": 0.083,
+  "mother_ci": [
+   -0.104,
+   0.271
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.131,
+  "father_ci": [
+   -0.11,
+   0.371
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.351,
+  "median_wage": 48150.0,
+  "care": 1.961,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "financial_analyst",
+  "mother_p": 0.25,
+  "mother_ci": [
+   -0.211,
+   0.711
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.308,
+  "father_ci": [
+   -0.278,
+   0.895
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.418,
+  "median_wage": 102740.0,
+  "care": -1.602,
+  "time_demands": -0.007,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "health_services_manager",
+  "mother_p": 0.021,
+  "mother_ci": [
+   -0.045,
+   0.087
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.068,
+  "father_ci": [
+   -0.07,
+   0.207
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.753,
+  "median_wage": 123860.0,
+  "care": 0.532,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "heavy_truck_driver",
+  "mother_p": 0.008,
+  "mother_ci": [
+   -0.018,
+   0.035
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.077,
+  "median_wage": 58640.0,
+  "care": -0.445,
+  "time_demands": 1.097,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "housekeeper",
+  "mother_p": 0.021,
+  "mother_ci": [
+   -0.045,
+   0.087
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.083,
+  "father_ci": [
+   -0.182,
+   0.349
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.864,
+  "median_wage": 35510.0,
+  "care": 0.482,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "hr_manager",
+  "mother_p": 0.133,
+  "mother_ci": [
+   -0.291,
+   0.558
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.204,
+  "father_ci": [
+   -0.132,
+   0.541
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.796,
+  "median_wage": 149280.0,
+  "care": 0.351,
+  "time_demands": 0.003,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "lawyer",
+  "mother_p": 0.094,
+  "mother_ci": [
+   -0.205,
+   0.392
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.104,
+  "father_ci": [
+   -0.192,
+   0.399
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.429,
+  "median_wage": 159670.0,
+  "care": 0.259,
+  "time_demands": 0.072,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "marketing_manager",
+  "mother_p": 0.292,
+  "mother_ci": [
+   -0.384,
+   0.967
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.25,
+  "father_ci": [
+   -0.325,
+   0.825
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.594,
+  "median_wage": 166790.0,
+  "care": -0.075,
+  "time_demands": 0.411,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "mechanical_engineer",
+  "mother_p": 0.208,
+  "mother_ci": [
+   -0.354,
+   0.77
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.292,
+  "father_ci": [
+   -0.358,
+   0.942
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.112,
+  "median_wage": 104110.0,
+  "care": -1.025,
+  "time_demands": -0.16,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "medical_assistant",
+  "mother_p": 0.167,
+  "mother_ci": [
+   -0.364,
+   0.697
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.242,
+  "father_ci": [
+   -0.308,
+   0.792
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.908,
+  "median_wage": 45690.0,
+  "care": 1.325,
+  "time_demands": -0.549,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "pharmacist",
+  "mother_p": 0.05,
+  "mother_ci": [
+   -0.109,
+   0.209
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.033,
+  "father_ci": [
+   -0.073,
+   0.139
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.627,
+  "median_wage": 140910.0,
+  "care": 1.468,
+  "time_demands": -0.029,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "physician",
+  "mother_p": 0.043,
+  "mother_ci": [
+   -0.094,
+   0.18
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.417,
+  "median_wage": 244180.0,
+  "care": 1.881,
+  "time_demands": 0.039,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "police_officer",
+  "mother_p": 0.042,
+  "mother_ci": [
+   -0.091,
+   0.174
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.125,
+  "father_ci": [
+   -0.273,
+   0.523
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.164,
+  "median_wage": 76210.0,
+  "care": 1.315,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "preschool_teacher",
+  "mother_p": 0.179,
+  "mother_ci": [
+   -0.198,
+   0.556
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.193,
+  "father_ci": [
+   -0.16,
+   0.546
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.971,
+  "median_wage": 38140.0,
+  "care": 0.685,
+  "time_demands": -1.44,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "receptionist",
+  "mother_p": 0.0,
+  "mother_ci": [
+   0.0,
+   0.0
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.896,
+  "median_wage": 38010.0,
+  "care": 1.161,
+  "time_demands": -1.147,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "registered_nurse",
+  "mother_p": 0.125,
+  "mother_ci": [
+   -0.273,
+   0.523
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.198,
+  "father_ci": [
+   -0.433,
+   0.829
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.873,
+  "median_wage": 97550.0,
+  "care": 1.563,
+  "time_demands": -0.036,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "restaurant_manager",
+  "mother_p": 0.075,
+  "mother_ci": [
+   -0.164,
+   0.314
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.034,
+  "father_ci": [
+   -0.075,
+   0.144
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.488,
+  "median_wage": 69390.0,
+  "care": 0.416,
+  "time_demands": -0.099,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "retail_store_manager",
+  "mother_p": 0.15,
+  "mother_ci": [
+   -0.229,
+   0.529
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.208,
+  "father_ci": [
+   -0.203,
+   0.62
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.439,
+  "median_wage": 48520.0,
+  "care": 0.722,
+  "time_demands": -0.091,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "security_guard",
+  "mother_p": 0.188,
+  "mother_ci": [
+   -0.193,
+   0.568
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.188,
+  "father_ci": [
+   -0.193,
+   0.568
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.229,
+  "median_wage": 38020.0,
+  "care": 1.478,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "software_engineer",
+  "mother_p": 0.108,
+  "mother_ci": [
+   -0.236,
+   0.453
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.103,
+  "father_ci": [
+   -0.226,
+   0.433
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.203,
+  "median_wage": 135980.0,
+  "care": -1.325,
+  "time_demands": -0.762,
+  "cohort": "o20"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "veterinarian",
+  "mother_p": 0.062,
+  "mother_ci": [
+   -0.136,
+   0.261
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.042,
+  "father_ci": [
+   -0.091,
+   0.174
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.709,
+  "median_wage": 130100.0,
+  "care": 1.14,
+  "time_demands": null,
+  "cohort": "o8"
+ },
+ {
+  "model": "claude",
+  "occupation_id": "warehouse_supervisor",
+  "mother_p": 0.062,
+  "mother_ci": [
+   -0.136,
+   0.261
+  ],
+  "mother_n_pairs": 4,
+  "father_p": 0.008,
+  "father_ci": [
+   -0.018,
+   0.035
+  ],
+  "father_n_pairs": 4,
+  "female_share": 0.278,
+  "median_wage": 62890.0,
+  "care": 0.109,
+  "time_demands": 0.548,
+  "cohort": "o20"
+ }
+]

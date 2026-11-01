@@ -255,3 +255,31 @@ choice estimates condition on answering. Required:
    alongside salary withholding.
 4. Sensitivity: headline estimates with Haiku excluded (pooled statements only).
 Outputs: docs/final/missingness.md + .json; claims registered.
+
+## Round 16 (2026-11-01) — after 50ada95; manuscript draft 4
+
+Reviewer: R14/R15 verified; manuscript draft 4 (main text = DeepSeek, Luna, Qwen;
+Claude Haiku in Appendix A — presentation decision after data collection, stated in
+§3.4). Items:
+1. **Phase-4 rows in missingness.md are wrong** (99% "parse-fail" for every phase-4
+   cell, all models). Study totals report 47,601/48,000 valid originals, so the R15
+   reader is mis-parsing phase-4 logs (retry/attempt rows or a different JSON shape).
+   Fix and regenerate; phase-4 conclusions must not cite the current table.
+2. **Per-occupation estimates** (needed for manuscript §4.4, Supplementary Fig. S2):
+   for each model × occupation (28): P(parent_gap chosen) for mothers and fathers with
+   pair-clustered CIs (main run for O20; phase-3 L0 for O8), plus female share, wage,
+   care and time-demand composites. Output docs/final/occupations.json. Then add to
+   docs/paper/make_figures.py a figure: x = female share, y = leave penalty (points),
+   one panel per model (DeepSeek, Luna, Qwen), dot + CI, O8 occupations marked, with
+   in-figure note; Haiku version for the appendix.
+3. **Remedies: targeted-sentence contrast.** The clean test of the added sentence is
+   sp_gap − sp_fair (not sp_gap − sp_none). Compute it for parent and parent_gap by
+   model × gender with CIs/Holm; manuscript §4.3 currently cites the point differences
+   (+8.5 to +9.8 leave vs +1.8 to +4.4 parent).
+4. Update manuscript claims in claims.yaml to draft-4 strings (3-model ranges: leave
+   mother 19–31%, shortlist 71–78%, interruption 10.5–26.0, label 1.7–6.6, family
+   signals 10.7–12.3, parenthood 8.0–12.1, personal 2.7–3.5, fit-point equivalents
+   0.8–2.0, amplification 3.6–34, noise 5 of 6 / 7–18 pts, gap-instruction 4.5–9.1)
+   and Appendix A / Table A1 values.
+5. Add Supplementary Figure S1 (fig4_reasons, 3 models) and S2 (occupations) to a
+   supplement build.

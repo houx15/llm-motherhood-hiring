@@ -51,6 +51,15 @@ def _first_attempts() -> pd.DataFrame:
                 ts = r.get("request_ts")
                 if not cid or not ts:
                     continue
+                # R16-1: transport failures (outages, 429/402, DNS) are
+                # infrastructure retries, not model responses; exclude them
+                # before choosing the first attempt.
+                err = str(r.get("error") or "")
+                if r.get("cost_usd") == 0 and (
+                    "TransportFailure" in err or "gave up" in err or "nodename" in err
+                    or "HTTP 402" in err or "HTTP 429" in err or err.startswith("http")
+                ):
+                    continue
                 cur = first.get(cid)
                 if cur is None or ts < cur["request_ts"]:
                     first[cid] = {"call_id": cid, "request_ts": ts,

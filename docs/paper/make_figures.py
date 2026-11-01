@@ -26,7 +26,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e4e3df"
 BLUE, ORANGE = "#2a78d6", "#eb6834"
-MODELS = ["deepseek", "haiku", "luna", "qwen"]
+MODELS_ALL = ["deepseek", "haiku", "luna", "qwen"]
+# Main text: three models; Claude Haiku is reported separately (Appendix A).
+MODELS = ["deepseek", "luna", "qwen"]
 NAME = {"deepseek": "DeepSeek", "haiku": "Haiku", "luna": "Luna", "qwen": "Qwen"}
 FULL = {"deepseek": "deepseek_v41_flash", "haiku": "claude_haiku_55",
         "luna": "gpt6_luna", "qwen": "qwen38_flash"}
@@ -166,30 +168,42 @@ def fig3_decomposition():
 
 # ---------------------------------------------------------------- Figure 4
 def fig4_invariance():
-    eq = R6["equivalence"]
-    fig, ax = plt.subplots(figsize=(6.0, 2.7))
+    eq = R6["equivalence"]; lv = load("docs/phase3/phase3_key_stats.json")["cue_level_o8_only"]
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.9), gridspec_kw={"width_ratios": [1.05, 1]})
+    ax = axes[0]
+    rows = [(m, c) for m in MODELS for c in ("parent", "parent_gap")]
+    for i, (m, c) in enumerate(rows):
+        y = len(rows) - 1 - i
+        a_, b_ = lv[m][c]["name"], lv[m][c]["blind"]
+        ax.plot([a_, b_], [y, y], color="#b9b8b2", lw=1.4)
+        ax.scatter(a_, y, s=34, color=BLUE, zorder=3)
+        ax.scatter(b_, y, s=34, marker="D", facecolor="white", edgecolor=INK, lw=1.2, zorder=4)
+    ax.axvline(0.5, color=INK2, ls=(0, (3, 2)), lw=0.8)
+    ax.text(0.495, len(rows) - 0.45, "equal treatment", fontsize=6.8, color=INK2, ha="right")
+    ax.set_yticks(range(len(rows)))
+    ax.set_yticklabels([f"{NAME[m]} · {'parent' if c == 'parent' else 'parent + leave'}" for m, c in reversed(rows)], fontsize=7.6)
+    ax.set_xlim(0, 0.55); ax.set_ylim(-0.6, len(rows) - 0.2); xgrid(ax)
+    ax.set_xlabel("probability the parent is chosen")
+    ax.set_title("a. With names vs. with no gender")
+    h = [plt.Line2D([], [], marker="o", ls="", color=BLUE, label="gendered names"),
+         plt.Line2D([], [], marker="D", ls="", mfc="white", mec=INK, label="initials only (no gender)")]
+    ax.legend(handles=h, fontsize=7, loc="lower left", bbox_to_anchor=(0.0, -0.02))
+    ax = axes[1]
     ax.axvspan(-5, 5, color="#eef3fb", zorder=0)
-    ax.text(0, len(MODELS) - 0.35, "equivalence region (±5 points)", fontsize=7, color=INK2, ha="center")
-    for i, m in enumerate(MODELS):
-        y = len(MODELS) - 1 - i
-        for cue, col, off in [("parent", BLUE, 0.13), ("parent_gap", ORANGE, -0.13)]:
-            r = eq[m][f"blind_minus_names_{cue}"]
-            d = r["mean"] * 100; lo, hi = (v * 100 for v in r["ci90"])
-            ax.plot([lo, hi], [y + off] * 2, color=col, lw=1.6, solid_capstyle="round")
-            ax.scatter(d, y + off, s=28, color=col, zorder=3,
-                       marker="o" if cue == "parent" else "s")
+    for i, (m, c) in enumerate(rows):
+        y = len(rows) - 1 - i
+        r = eq[m][f"blind_minus_names_{c}"]; d = r["mean"] * 100; lo, hi = (v * 100 for v in r["ci90"])
+        ax.plot([lo, hi], [y, y], color=INK, lw=1.4)
+        ax.scatter(d, y, s=26, color=INK, zorder=3)
     ax.axvline(0, color=INK2, lw=0.8)
-    ax.set_xlim(-8, 8); ax.set_ylim(-0.5, len(MODELS) - 0.15)
-    ax.set_yticks(range(len(MODELS))); ax.set_yticklabels([NAME[m] for m in reversed(MODELS)])
-    ax.set_xlabel("blind (initials only) − gendered names, percentage points (90% CI)")
-    xgrid(ax)
-    h = [plt.Line2D([], [], marker="o", color=BLUE, label="parent"),
-         plt.Line2D([], [], marker="s", color=ORANGE, label="parent + leave")]
-    ax.legend(handles=h, loc="upper left", fontsize=7.5, bbox_to_anchor=(1.0, 1.0))
-    note(fig, "Change in the parent's probability of being chosen when all gender information is removed "
-              "(8 added occupations, 16 résumé pairs). A CI inside the band means the difference is statistically "
-              "equivalent to zero.")
-    fig.subplots_adjust(left=0.15, right=0.78, top=0.97, bottom=0.33)
+    ax.set_xlim(-8, 8); ax.set_ylim(-0.6, len(rows) - 0.2); ax.set_yticks([])
+    ax.text(0, len(rows) - 0.45, "±5 points: practically no change", fontsize=6.8, color=INK2, ha="center")
+    ax.set_xlabel("no gender − names (points, 90% CI)"); xgrid(ax)
+    ax.set_title("b. Difference (equivalence test)")
+    note(fig, "Read (a): both markers sit far below 0.5 and almost on top of each other — the parent is penalized just as much when the "
+              "model cannot know the applicant's gender. Read (b): an interval inside the shaded band means the difference is statistically "
+              "equivalent to zero (two one-sided tests). 8 added occupations, 16 résumé pairs.")
+    fig.subplots_adjust(left=0.23, right=0.98, top=0.9, bottom=0.31, wspace=0.1)
     save(fig, "fig5_invariance.pdf")
 
 
@@ -197,7 +211,7 @@ def fig4_invariance():
 def fig5_direct_gender():
     eq = R6["equivalence"]; levels = ["name", "name_field", "initial_field"]
     lab = ["name", "name\n+ line", "initial\n+ line"]
-    fig, axes = plt.subplots(1, 4, figsize=(7.0, 2.6), sharey=True)
+    fig, axes = plt.subplots(1, len(MODELS), figsize=(6.2, 2.6), sharey=True)
     for ax, m in zip(axes, MODELS):
         for con, col, mk, off, ln in [("gender_none", BLUE, "o", -0.06, "childless woman vs. man"),
                                       ("gender_parent", ORANGE, "s", 0.06, "mother vs. father")]:
@@ -229,14 +243,14 @@ def fig5_direct_gender():
 # ---------------------------------------------------------------- Figure 6
 def fig6_withholding():
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.6), gridspec_kw={"width_ratios": [1.6, 1]})
-    ax = axes[0]; x = np.arange(len(MODELS)); w = 0.36
-    base = [S["models"][FULL[m]]["withheld"]["rates"]["female|none"] * 100 for m in MODELS]
-    preg = [S["models"][FULL[m]]["withheld"]["rates"]["female|pregnant"] * 100 for m in MODELS]
+    ax = axes[0]; x = np.arange(len(MODELS_ALL)); w = 0.36
+    base = [S["models"][FULL[m]]["withheld"]["rates"]["female|none"] * 100 for m in MODELS_ALL]
+    preg = [S["models"][FULL[m]]["withheld"]["rates"]["female|pregnant"] * 100 for m in MODELS_ALL]
     ax.bar(x - w / 2 - 0.01, base, w, color="#9fc3ee", label="childless women")
     ax.bar(x + w / 2 + 0.01, preg, w, color=BLUE, label="pregnant applicants")
     for xi, v in zip(x, preg):
         ax.text(xi + w / 2, v + 0.5, f"{v:.1f}", ha="center", fontsize=7, color=INK2)
-    ax.set_xticks(x); ax.set_xticklabels([NAME[m] for m in MODELS])
+    ax.set_xticks(x); ax.set_xticklabels([NAME[m] for m in MODELS_ALL])
     ax.set_ylabel("salary offer withheld (%)"); ax.set_ylim(0, 24)
     ax.set_title("a. Withheld salary offers"); ax.legend(fontsize=7.5, loc="upper right")
     ax.grid(axis="y", color=GRID, lw=0.6); ax.set_axisbelow(True)
@@ -254,7 +268,7 @@ def fig6_withholding():
     note(fig, "Main run, gender conveyed by name. Withholding is a refusal to propose any salary. With an explicit "
               "gender line, Haiku withholds for 27.5% of pregnant applicants.")
     fig.subplots_adjust(left=0.08, right=0.99, top=0.9, bottom=0.2, wspace=0.3)
-    save(fig, "fig7_withholding.pdf")
+    save(fig, "figA1_withholding.pdf")
 
 
 # ---------------------------------------------------------------- Figure 7
@@ -283,7 +297,7 @@ def fig7_disparate_impact():
     ax.axhline(0.8, color=INK2, lw=0.9, ls=(0, (3, 2)))
     ax.text(1, 0.808, "four-fifths line", fontsize=7, color=INK2)
     ax.axvline(20, color=GRID, lw=0.8); ax.text(20.5, 1.005, "scenario: 20% of women", fontsize=6.8, color=INK2, va="bottom")
-    ax.set_xlim(0, 100); ax.set_ylim(0.2, 1.04)
+    ax.set_xlim(0, 100); ax.set_ylim(0.6, 1.04)
     ax.set_xlabel("share of women applicants with a caregiving signal (%)  [men fixed at 5%]")
     ax.set_ylabel("women's / men's shortlist rate")
     ax.grid(axis="y", color=GRID, lw=0.6); ax.set_axisbelow(True)
@@ -301,7 +315,7 @@ def fig8_reasons():
             ("parent_committed", "parent + commitment"), ("parent_gap", "parent + leave")]
     codes = [("gap", "gap"), ("availability", "availability"), ("family", "family"),
              ("disclosure_irrelevant", "'irrelevant'")]
-    fig, axes = plt.subplots(1, 4, figsize=(7.0, 2.9), sharey=True)
+    fig, axes = plt.subplots(1, len(MODELS), figsize=(6.0, 2.9), sharey=True)
     for ax, m in zip(axes, MODELS):
         M = np.array([[sh[key[m]][c][k]["share"] for k, _ in codes] for c, _ in cues]) * 100
         ax.imshow(M, cmap="Blues", vmin=0, vmax=100, aspect="auto")
@@ -320,8 +334,55 @@ def fig8_reasons():
     save(fig, "fig4_reasons.pdf")
 
 
+
+# ---------------------------------------------------------------- Figure S2 (R16)
+def fig_s2_occupations():
+    """Per-occupation leave-gap penalty vs female share, one panel per model.
+    Main text: DeepSeek, Luna, Qwen. Appendix variant: Haiku."""
+    rows = load("docs/final/occupations.json")
+    import matplotlib.pyplot as plt
+
+    panels_main = ["deepseek", "luna", "qwen"]
+    for variant, models in [("S2", panels_main), ("S2a_haiku", ["haiku"])]:
+        fig, axes = plt.subplots(1, len(models), figsize=(4.6 * len(models), 3.8),
+                                 sharey=True, squeeze=False)
+        for ax, mk in zip(axes[0], models):
+            rs = [r for r in rows if r["model"] == mk and r.get("mother_p") is not None
+                  and r.get("female_share") is not None]
+            for r in rs:
+                x = r["female_share"]
+                y = r["mother_p"] - 0.5
+                lo = r["mother_ci"][0] - 0.5
+                hi = r["mother_ci"][1] - 0.5
+                color = "#b08a35" if r["cohort"] == "o8" else "#4e7fc2"
+                ax.errorbar(x, y, yerr=[[max(0.0, y - lo)], [max(0.0, hi - y)]],
+                            fmt="o", ms=4, color=color, ecolor=color, elinewidth=1, capsize=2)
+            ax.axhline(0, color="0.3", ls="--", lw=0.8)
+            ax.set_title({"deepseek": "DeepSeek", "luna": "GPT-6 Luna",
+                          "qwen": "Qwen3.8", "haiku": "Claude Haiku 5.5"}[mk], fontsize=10)
+            ax.set_xlabel("Occupation female share")
+            ax.set_ylim(-0.55, 0.15)
+        axes[0][0].set_ylabel("Leave-gap penalty, mothers (P chosen \u2212 .5)")
+        note(fig, "P(parent+leave gap chosen) vs childless finalist by occupation; 95% CIs clustered by "
+                  "r\u00e9sum\u00e9 pair. Blue = original 20 occupations; gold = phase-3 additions.")
+        save(fig, f"fig{variant}_occupations.pdf")
+
+
+# ---------------------------------------------------------------- Supplement S1
+def fig_s1_reasons():
+    """Supplementary Fig. S1: rationale code shares (fig4_reasons content,
+    3 models) for the supplement."""
+    import shutil
+    from pathlib import Path
+
+    src = Path("docs/report/figures/fig15_coding.pdf")
+    if src.exists():
+        shutil.copy(src, Path("docs/paper/figures/figS1_reasons.pdf"))
+        print("ok figS1_reasons (copied from fig15)")
+
 if __name__ == "__main__":
     # Figures 1 and 9 (framework) are TikZ: docs/paper/figures/tikz/framework.tex
     for f in [fig2_scores_vs_choices, fig3_decomposition, fig4_invariance,
-              fig5_direct_gender, fig6_withholding, fig7_disparate_impact, fig8_reasons]:
+              fig5_direct_gender, fig6_withholding, fig7_disparate_impact, fig8_reasons,
+              fig_s2_occupations, fig_s1_reasons]:
         f(); print("ok", f.__name__)

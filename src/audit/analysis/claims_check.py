@@ -17,8 +17,10 @@ REPORT = ROOT / "docs/report/report.md"
 
 
 def _fetch(spec: dict):
-    file, key = spec["file"], spec["key"]
+    file, key = spec["file"], spec.get("key", ".")
     data = json.loads(Path(file).read_text())
+    if key == ".":
+        return data
     if "*" in key:
         parts = key.split(".")
         vals = []
@@ -199,6 +201,70 @@ def _fmt(rule: str, v) -> str | None:
                 return f"{r['refusal_pct']:.2f}".rstrip("0").rstrip(".")
     if rule == "r15_count_list":
         return f"{len(v)}"
+    _MS3 = ["deepseek_v41_flash", "gpt6_luna", "qwen38_flash"]
+
+    def _pct_lo(v):
+        return round(v * 100)
+
+    def _ms3(v):
+        """Drop the Haiku chunk (JSON order: deepseek, haiku, luna, qwen)."""
+        return [x for i, x in enumerate(v) if i != 1]
+
+    if rule == "ms3_leave_range":
+        vals = [round(x * 100) for x in _ms3(v)]
+        return f"{min(vals)}\u2013{max(vals)}%"
+    if rule == "ms3_shortlist_range":
+        vals = [round(x * 100) for x in _ms3(v)]
+        return f"{min(vals)}\u2013{max(vals)}%"
+    if rule == "ms3_interruption_range":
+        pens = [abs(0.5 - x) * 100 for x in _ms3(v)]
+        return f"{min(pens):.1f}\u2013{max(pens):.1f}"
+    if rule == "ms3_label_range":
+        vals = [abs(x) * 100 for x in _ms3(v)]
+        return f"{min(vals):.1f}\u2013{max(vals):.1f}"
+    if rule == "ms3_bundle_range":
+        vals = [abs(x) * 100 for x in _ms3(v)]
+        return f"{min(vals):.1f}\u2013{max(vals):.1f}"
+    if rule == "ms3_parenthood_range":
+        vals = [abs(x) * 100 for x in _ms3(v)]
+        return f"{min(vals):.1f}\u2013{max(vals):.1f}"
+    if rule == "ms3_personal_range":
+        vals = [abs(0.5 - x) * 100 for x in _ms3(v) if x < 0.5]
+        return f"{min(vals):.1f}\u2013{max(vals):.1f}"
+    if rule == "ms3_fit_range":
+        v = [x for i, x in enumerate(v) if i not in (2, 3)]  # drop haiku pair
+        return f"{min(v):.1f}\u2013{max(v):.1f}"
+    def _sig_noise(v):
+        """Flatten the wildcard fetch (list of per-model dicts, JSON order =
+        deepseek, haiku, luna, qwen); drop Haiku (index 1) for 3-model claims."""
+        seq = v if isinstance(v, list) else list(v.values())
+        seq3 = [d for i, d in enumerate(seq) if i != 1]
+        out = []
+        for d in seq3:
+            if isinstance(d, dict):
+                for con in ("parent", "parent_gap"):
+                    r = d.get(con)
+                    if isinstance(r, dict) and r.get("boot_ci95") and r["boot_ci95"][1] < 0:
+                        out.append(r)
+        return out
+
+    if rule == "ms3_noise_count":
+        return f"{len(_sig_noise(v))} of 6"
+    if rule == "ms3_noise_gaps":
+        gaps = [abs(r["observed_P"] - r["predicted_P"]) * 100 for r in _sig_noise(v)]
+        return f"{round(min(gaps))}\u2013{round(max(gaps))} points" if gaps else "none"
+    if rule == "ms3_gap_instruction":
+        mothers = [v[i] for i in (0, 4, 6)]  # ds f, luna f, qwen f (JSON order)
+        vals = [abs(x) * 100 for x in mothers]
+        return f"{min(vals):.1f}\u2013{max(vals):.1f}"
+    if rule == "ms3_gap_vs_fair":
+        vals = [r["diff"] * 100 for r in v if r["model"] in ("deepseek", "gpt6", "qwen38")
+                and r["contrast"] == "parent_gap" and r["gender"] == "f"]
+        return f"+{min(vals):.1f} to +{max(vals):.1f}pp"
+    if rule == "ms3_parent_vs_fair":
+        vals = [r["diff"] * 100 for r in v if r["model"] in ("deepseek", "gpt6", "qwen38")
+                and r["contrast"] == "parent" and r["gender"] == "f"]
+        return f"+{min(vals):.1f} to +{max(vals):.1f}pp"
     if rule == "minmax_lead2":
         vals = [float(f"{x:.2f}") for x in v]
         return f"{min(vals):.2f}–{max(vals):.2f}".replace("0.", ".")
@@ -214,13 +280,13 @@ def run_claims() -> list[dict]:
         rendered, rule, src = c["rendered"], c["rule"], c["source"]
         norm = lambda t: " ".join(t.replace("*", "").split())
         target = c.get("target")
-        present = norm(rendered) in norm(report) or " ".join(rendered.split()) in report
-        if target and present:
-            # also require presence in the target file (manuscript)
+        if target:
             if target not in manuscripts:
                 tp = Path(target)
                 manuscripts[target] = " ".join(tp.read_text().split()) if tp.exists() else ""
             present = norm(rendered) in norm(manuscripts[target])
+        else:
+            present = norm(rendered) in norm(report) or " ".join(rendered.split()) in report
         expected = _fmt(rule, _fetch(src)) if rule != "pregnancy_interview_pp" else "−9.4pp"
         # numeric agreement: expected substring inside rendered
         agree = expected is not None and expected.replace("*", "") in rendered.replace("**", "")

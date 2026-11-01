@@ -17,10 +17,10 @@ anchors = [
     ("*It consists of the interruption and the family signals", ["tab3", "fig3"]),
     ("*It does not depend on gender.*", ["fig4", "tab4"]),
     ("At the named end, the label account expects", ["tab5", "fig5"]),
-    ("Caution also takes the form of declining to decide", ["fig6"]),
-    ("The label account also predicts how remedies work.", ["tab6"]),
-    ("Figure 7 returns to the framework", ["fig7"]),
+    ("Table 6 reports the remedies phase", ["tab6"]),
+    ("Figure 6 returns to the framework", ["fig7"]),
     ("Protection that follows the label leaves", ["fig8"]),
+    ("Claude Haiku 5.5 was audited with the same", ["tabA1", "figA1"]),
 ]
 paras = body.split("\n\n")
 out = []
@@ -32,7 +32,7 @@ for p in paras:
                 raw = FIGS.get(k) or TABLES[k]
                 out.append("```{=latex}\n" + raw.strip() + "\n```")
 used = sum(1 for p in out if p.startswith("```{=latex}"))
-assert used == 14, used
+assert used == 16, used
 body = "\n\n".join(out)
 open("body.md", "w").write(body)
 subprocess.run(["pandoc", "body.md", "-f", "markdown+raw_attribute", "-t", "latex",

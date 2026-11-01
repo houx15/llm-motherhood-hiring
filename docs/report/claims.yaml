@@ -102,15 +102,18 @@ claims:
   - {id: spend_experiments, section: "§2.1", rendered: "$188.52", source: {file: docs/final/study_totals.json, key: grand_total.cost_excl_coding}, rule: usd_2dp}
   - {id: spend_coding, section: "§2.1", rendered: "$0.66 for rationale coding", source: {file: docs/final/study_totals.json, key: grand_total.coding_cost}, rule: usd_2dp_int}
   - {id: spend_total, section: "Appendix E", rendered: "$189.18 incl. coding", source: {file: docs/final/study_totals.json, key: grand_total.cost_usd}, rule: usd_2dp_incl}
-  # ---- Round 14: manuscript targets (docs/paper/manuscript.md) ----
-  - {id: ms_amplification, section: "manuscript 4.1", rendered: "3.6–34×", source: {file: docs/phase3/round6_stats.json, key: "amplification.*.parent*.amplification_ratio"}, rule: minmax_1dp_nonnull, target: docs/paper/manuscript.md}
-  - {id: ms_haiku_noise_parent, section: "manuscript 4.1", rendered: "predicted .75, observed .23", source: {file: docs/phase3/round6_stats.json, key: noise_model2.haiku.parent}, rule: noise_pred_obs_lead2, target: docs/paper/manuscript.md}
-  - {id: ms_dg_qwen_name, section: "manuscript 4.4 table", rendered: "| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.qwen.parity"}, rule: ms_dg_row_qwen, target: docs/paper/manuscript.md}
-  - {id: ms_dg_ds_name, section: "manuscript 4.4 table", rendered: "| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.deepseek.parity"}, rule: ms_dg_row_ds, target: docs/paper/manuscript.md}
-  - {id: ms_dg_luna_name, section: "manuscript 4.4 table", rendered: "| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |", source: {file: docs/phase3/round3_stats.json, key: "direct_gender.luna.parity"}, rule: ms_dg_row_luna, target: docs/paper/manuscript.md}
-  # ---- Round 15: missingness outcomes ----
-  - {id: r15_qwen_gap_missing, section: "R15", rendered: "20.77%", source: {file: docs/final/missingness.json, key: "missingness.table"}, rule: r15_qwen_gap}
-  - {id: r15_haiku_ref_gap_p3, section: "R15", rendered: "4.91", source: {file: docs/final/missingness.json, key: "missingness.table"}, rule: r15_haiku_ref_p3}
-  - {id: r15_bounds_span, section: "R15", rendered: "0", source: {file: docs/final/missingness.json, key: "manski.cells_whose_bounds_span_50"}, rule: r15_count_list}
-  - {id: r15_excl_haiku_parent, section: "R15", rendered: ".350", source: {file: docs/final/missingness.json, key: headline_excl_haiku.excl_haiku.parent}, rule: lead3}
-  - {id: r15_excl_haiku_gap, section: "R15", rendered: ".245", source: {file: docs/final/missingness.json, key: headline_excl_haiku.excl_haiku.parent_gap}, rule: lead3}
+  # ---- Round 16: manuscript draft-4 targets (3-model main text; Haiku appendix) ----
+  - {id: ms4_leave_range, section: "ms 4.x", rendered: "19–31%", source: {file: docs/report/stats.json, key: "models.*.e2_clustered.cells.parent_gap|female.p"}, rule: ms3_leave_range, target: docs/paper/manuscript.md}
+  - {id: ms4_shortlist_range, section: "ms 4.x", rendered: "71–78%", source: {file: docs/report/stats.json, key: "models.*.e3_fe.F.adjusted_ratio"}, rule: ms3_shortlist_range, target: docs/paper/manuscript.md}
+  - {id: ms4_interruption, section: "ms 4.x", rendered: "10.5–26.0", source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.cell_gap_travel.P"}, rule: ms3_interruption_range, target: docs/paper/manuscript.md}
+  - {id: ms4_label, section: "ms 4.x", rendered: "1.7–6.6", source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.label.diff"}, rule: ms3_label_range, target: docs/paper/manuscript.md}
+  - {id: ms4_bundle, section: "ms 4.x", rendered: "10.7–12.3", source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.bundle.diff"}, rule: ms3_bundle_range, target: docs/paper/manuscript.md}
+  - {id: ms4_parenthood, section: "ms 4.x", rendered: "8.0–12.1", source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.parenthood.diff"}, rule: ms3_parenthood_range, target: docs/paper/manuscript.md}
+  - {id: ms4_personal, section: "ms 4.x", rendered: "2.7–3.5", source: {file: docs/phase3/round5_stats.json, key: "primary_decomposition.*.cell_personal.P"}, rule: ms3_personal_range, target: docs/paper/manuscript.md}
+  - {id: ms4_fit_equiv, section: "ms 4.x", rendered: "0.8–2.0 fit-point", source: {file: docs/phase3/round6_stats.json, key: "amplification.*.parent*.implied_quality_equivalent_fit_pts"}, rule: ms3_fit_range, target: docs/paper/manuscript.md}
+  - {id: ms4_amplification, section: "ms 4.x", rendered: "3.6–34×", source: {file: docs/phase3/round6_stats.json, key: "amplification.*.parent*.amplification_ratio"}, rule: minmax_1dp_nonnull, target: docs/paper/manuscript.md}
+  - {id: ms4_noise, section: "ms 4.x", rendered: "5 of 6", source: {file: docs/phase3/round6_stats.json, key: "noise_model2.*"}, rule: ms3_noise_count, target: docs/paper/manuscript.md}
+  - {id: ms4_noise_gaps, section: "ms 4.x", rendered: "7–18 points", source: {file: docs/phase3/round6_stats.json, key: "noise_model2.*"}, rule: ms3_noise_gaps, target: docs/paper/manuscript.md}
+  - {id: ms4_gap_instruction, section: "ms 4.3", rendered: "4.5–9.1", source: {file: docs/phase4/phase4_stats.json, key: "hb1_hb3.*.parent_gap|*|sp_gap.mean"}, rule: ms3_gap_instruction, target: docs/paper/manuscript.md}
+  - {id: ms4_gap_vs_fair, section: "ms 4.3 (targeted contrast)", rendered: "+8.5 to +9.8pp", source: {file: docs/final/sp_gap_vs_fair.json, key: "."}, rule: ms3_gap_vs_fair, target: docs/paper/manuscript.md}
+  - {id: ms4_parent_vs_fair, section: "ms 4.3 (targeted contrast)", rendered: "+1.8 to +4.4pp", source: {file: docs/final/sp_gap_vs_fair.json, key: "."}, rule: ms3_parent_vs_fair, target: docs/paper/manuscript.md}

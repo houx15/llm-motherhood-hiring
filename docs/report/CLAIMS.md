@@ -52,18 +52,22 @@
 | spend_experiments | §2.1 | `$188.52` | `docs/final/study_totals.json::grand_total.cost_excl_coding` | $188.52 | ✓ | | OK |
 | spend_coding | §2.1 | `$0.66 for rationale coding` | `docs/final/study_totals.json::grand_total.coding_cost` | $0.66 for rationale coding | ✓ | | OK |
 | spend_total | Appendix E | `$189.18 incl. coding` | `docs/final/study_totals.json::grand_total.cost_usd` | $189.18 incl. coding | ✓ | | OK |
-| ms_amplification | manuscript 4.1 | `3.6–34×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✗ | | MISMATCH |
-| ms_haiku_noise_parent | manuscript 4.1 | `predicted .75, observed .23` | `docs/phase3/round6_stats.json::noise_model2.haiku.parent` | predicted .75, observed .23 | ✗ | | MISMATCH |
-| ms_dg_qwen_name | manuscript 4.4 table | `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` | `docs/phase3/round3_stats.json::direct_gender.qwen.parity` | | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 | | ✗ | | MISMATCH |
-| ms_dg_ds_name | manuscript 4.4 table | `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` | `docs/phase3/round3_stats.json::direct_gender.deepseek.parity` | | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 | | ✗ | | MISMATCH |
-| ms_dg_luna_name | manuscript 4.4 table | `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` | `docs/phase3/round3_stats.json::direct_gender.luna.parity` | | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 | | ✗ | | MISMATCH |
-| r15_qwen_gap_missing | R15 | `20.77%` | `docs/final/missingness.json::missingness.table` | 20.77% | ✗ | | MISMATCH |
-| r15_haiku_ref_gap_p3 | R15 | `4.91` | `docs/final/missingness.json::missingness.table` | 4.9 | ✗ | | MISMATCH |
-| r15_bounds_span | R15 | `0` | `docs/final/missingness.json::manski.cells_whose_bounds_span_50` | 0 | ✓ | | OK |
-| r15_excl_haiku_parent | R15 | `.350` | `docs/final/missingness.json::headline_excl_haiku.excl_haiku.parent` | .350 | ✗ | | MISMATCH |
-| r15_excl_haiku_gap | R15 | `.245` | `docs/final/missingness.json::headline_excl_haiku.excl_haiku.parent_gap` | .245 | ✗ | | MISMATCH |
+| ms4_leave_range | ms 4.x | `19–31%` | `docs/report/stats.json::models.*.e2_clustered.cells.parent_gap|female.p` | 19–31% | ✗ | | MISMATCH |
+| ms4_shortlist_range | ms 4.x | `71–78%` | `docs/report/stats.json::models.*.e3_fe.F.adjusted_ratio` | 71–78% | ✗ | | MISMATCH |
+| ms4_interruption | ms 4.x | `10.5–26.0` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_gap_travel.P` | 10.5–26.0 | ✗ | | MISMATCH |
+| ms4_label | ms 4.x | `1.7–6.6` | `docs/phase3/round5_stats.json::primary_decomposition.*.label.diff` | 1.7–6.6 | ✗ | | MISMATCH |
+| ms4_bundle | ms 4.x | `10.7–12.3` | `docs/phase3/round5_stats.json::primary_decomposition.*.bundle.diff` | 10.7–12.3 | ✗ | | MISMATCH |
+| ms4_parenthood | ms 4.x | `8.0–12.1` | `docs/phase3/round5_stats.json::primary_decomposition.*.parenthood.diff` | 8.0–12.1 | ✗ | | MISMATCH |
+| ms4_personal | ms 4.x | `2.7–3.5` | `docs/phase3/round5_stats.json::primary_decomposition.*.cell_personal.P` | 2.7–3.5 | ✗ | | MISMATCH |
+| ms4_fit_equiv | ms 4.x | `0.8–2.0 fit-point` | `docs/phase3/round6_stats.json::amplification.*.parent*.implied_quality_equivalent_fit_pts` | 0.8–2.0 | ✗ | | MISMATCH |
+| ms4_amplification | ms 4.x | `3.6–34×` | `docs/phase3/round6_stats.json::amplification.*.parent*.amplification_ratio` | 3.6–34× | ✗ | | MISMATCH |
+| ms4_noise | ms 4.x | `5 of 6` | `docs/phase3/round6_stats.json::noise_model2.*` | 5 of 6 | ✗ | | MISMATCH |
+| ms4_noise_gaps | ms 4.x | `7–18 points` | `docs/phase3/round6_stats.json::noise_model2.*` | 7–18 points | ✗ | | MISMATCH |
+| ms4_gap_instruction | ms 4.3 | `4.5–9.1` | `docs/phase4/phase4_stats.json::hb1_hb3.*.parent_gap|*|sp_gap.mean` | 4.5–9.1 | ✗ | | MISMATCH |
+| ms4_gap_vs_fair | ms 4.3 (targeted contrast) | `+8.5 to +9.8pp` | `docs/final/sp_gap_vs_fair.json::.` | +8.5 to +9.8pp | ✗ | | MISMATCH |
+| ms4_parent_vs_fair | ms 4.3 (targeted contrast) | `+1.8 to +4.4pp` | `docs/final/sp_gap_vs_fair.json::.` | +1.8 to +4.4pp | ✗ | | MISMATCH |
 
-**41/60 claims verified.**
+**40/64 claims verified.**
 
 ## Mismatches (for Part 2; report.md NOT edited)
 - `abs_amplification`: rendered `3.5–38×` (present; source says 3.6–34×)
@@ -76,12 +80,17 @@
 - `dec_lab_qwen`: rendered `+6.7pp [+4.9, +8.5] (t 7.3)` (present; source says +6.6pp [+4.8, +8.4] (t 7.2))
 - `dec_bun_ds`: rendered `−10.6pp [−12.7, −8.6] (t −10.0)` (present; source says −10.7pp [−12.7, −8.6] (t −10.0))
 - `dec_bun_qwen`: rendered `−12.1pp [−14.7, −9.5] (t −9.2)` (present; source says −12.3pp [−14.8, −9.8] (t −9.7))
-- `ms_amplification`: rendered `3.6–34×` (missing from report; source says 3.6–34×)
-- `ms_haiku_noise_parent`: rendered `predicted .75, observed .23` (missing from report; source says predicted .75, observed .23)
-- `ms_dg_qwen_name`: rendered `| Qwen | childless / parent | .496 / .502 | .491 / .513 | .513 / .488 |` (missing from report; source says | Qwen | childless / parent | .505 / .504 | .494 / .515 | .518 / .493 |)
-- `ms_dg_ds_name`: rendered `| DeepSeek | childless / parent | .514 / .536 | .540 / .541 | .538 / .548 |` (missing from report; source says | DeepSeek | childless / parent | .514 / .535 | .540 / .540 | .538 / .548 |)
-- `ms_dg_luna_name`: rendered `| Luna | childless / parent | .522 / .577 | .587 / .646 | .575 / .634 |` (missing from report; source says | Luna | childless / parent | .522 / .577 | .587 / .647 | .575 / .634 |)
-- `r15_qwen_gap_missing`: rendered `20.77%` (missing from report; source says 20.77%)
-- `r15_haiku_ref_gap_p3`: rendered `4.91` (missing from report; source says 4.9)
-- `r15_excl_haiku_parent`: rendered `.350` (missing from report; source says .350)
-- `r15_excl_haiku_gap`: rendered `.245` (missing from report; source says .245)
+- `ms4_leave_range`: rendered `19–31%` (missing from report; source says 19–31%)
+- `ms4_shortlist_range`: rendered `71–78%` (missing from report; source says 71–78%)
+- `ms4_interruption`: rendered `10.5–26.0` (missing from report; source says 10.5–26.0)
+- `ms4_label`: rendered `1.7–6.6` (missing from report; source says 1.7–6.6)
+- `ms4_bundle`: rendered `10.7–12.3` (missing from report; source says 10.7–12.3)
+- `ms4_parenthood`: rendered `8.0–12.1` (missing from report; source says 8.0–12.1)
+- `ms4_personal`: rendered `2.7–3.5` (missing from report; source says 2.7–3.5)
+- `ms4_fit_equiv`: rendered `0.8–2.0 fit-point` (missing from report; source says 0.8–2.0)
+- `ms4_amplification`: rendered `3.6–34×` (missing from report; source says 3.6–34×)
+- `ms4_noise`: rendered `5 of 6` (missing from report; source says 5 of 6)
+- `ms4_noise_gaps`: rendered `7–18 points` (missing from report; source says 7–18 points)
+- `ms4_gap_instruction`: rendered `4.5–9.1` (missing from report; source says 4.5–9.1)
+- `ms4_gap_vs_fair`: rendered `+8.5 to +9.8pp` (missing from report; source says +8.5 to +9.8pp)
+- `ms4_parent_vs_fair`: rendered `+1.8 to +4.4pp` (missing from report; source says +1.8 to +4.4pp)
